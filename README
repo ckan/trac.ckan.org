@@ -1,0 +1,12 @@
+trac.ckan.org
+=============
+
+This repository contains a backup of CKAN's Trac issue tracker as it existed in
+22/Jan/2014. This serves only for historical purposes, as we're using GitHub
+Issues now.
+
+It was created by running our Trac instance in http://localhost and using:
+
+```
+wget -q --mirror --no-parent -p --adjust-extension -e robots=off --base=./ -k -P ./ http://localhost
+```
