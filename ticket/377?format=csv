@@ -1,0 +1,26 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+377,API Should return JSON in all cases,glen@…,,"When the API returns any response it should always retunr JSON. For example a 404 response should return something like
+
+{{{
+{'status': 404, 'message': 'package somename not found'}
+
+}}}
+
+When errors are encountered when creating a package: 
+
+
+{{{
+{'status': nnn, 'message': 'Validation Errors', 'errors':['description':'name cannot be
+blank', 'description':'license code must be an integer']}
+
+}}}
+
+Not authorised:
+
+{{{
+{'status': 503, 'message': 'You are not authorised to create this package.'}
+
+}}}
+
+The reason being that screeds of html coming back in the response just makes it harder to debug and understand. Having the proper error codes/messages means that you can see why your package was not created.
+",enhancement,closed,awaiting triage,ckan-future,ckan,wontfix,,,ckan,none

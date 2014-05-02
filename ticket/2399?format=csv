@@ -1,0 +1,24 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2399,Model cleanup in CKAN core has broken ckanext-spatial,seanh,amercader,"root@lucid32:/usr/local/feature-2375-demo-theme/pyenv/src/ckan# sudo -u www-data /usr/local/feature-2375-demo-theme/pyenv/bin/paster --plugin=ckanext-spatial spatial initdb 4326 --config=/usr/local/feature-2375-demo-theme/pyenv/src/ckan/development.ini 
+Traceback (most recent call last):
+  File ""/usr/local/feature-2375-demo-theme/pyenv/bin/paster"", line 9, in <module>
+    load_entry_point('PasteScript==1.7.3', 'console_scripts', 'paster')()
+  File ""/usr/local/feature-2375-demo-theme/pyenv/lib/python2.6/site-packages/paste/script/command.py"", line 84, in run
+    invoke(command, command_name, options, args[1:])
+  File ""/usr/local/feature-2375-demo-theme/pyenv/lib/python2.6/site-packages/paste/script/command.py"", line 123, in invoke
+    exit_code = runner.run(args)
+  File ""/usr/local/feature-2375-demo-theme/pyenv/lib/python2.6/site-packages/paste/script/command.py"", line 218, in run
+    result = self.command()
+  File ""/usr/local/feature-2375-demo-theme/pyenv/src/ckanext-spatial/ckanext/spatial/commands/spatial.py"", line 38, in command
+    self._load_config()
+  File ""/usr/local/feature-2375-demo-theme/pyenv/src/ckan/ckan/lib/cli.py"", line 53, in _load_config
+    load_environment(conf.global_conf, conf.local_conf)
+  File ""/usr/local/feature-2375-demo-theme/pyenv/src/ckan/ckan/config/environment.py"", line 204, in load_environment
+    plugin.configure(config)
+  File ""/usr/local/feature-2375-demo-theme/pyenv/src/ckanext-spatial/ckanext/spatial/plugin.py"", line 60, in configure
+    setup_model()
+  File ""/usr/local/feature-2375-demo-theme/pyenv/src/ckanext-spatial/ckanext/spatial/model.py"", line 20, in setup
+    define_spatial_tables(srid)
+  File ""/usr/local/feature-2375-demo-theme/pyenv/src/ckanext-spatial/ckanext/spatial/model.py"", line 66, in define_spatial_tables
+    package_extent_table = Table('package_extent', metadata,
+NameError: global name 'metadata' is not defined",defect,closed,awaiting triage,ckan-v1.8,ckan,fixed,,,ckan,none

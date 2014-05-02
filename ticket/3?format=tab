@@ -1,0 +1,18 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+3	Login to the service	johnbywater	somebody	"== As a ==
+
+Visitor
+
+== I want to ==
+
+Login to the service
+
+== So that ==
+
+I am now an authenticated user and may perform the actions that only authenticated users may perform
+
+== Notes ==
+  * Login by providing username and password
+  * Login screen should also include a link or information about registration
+  * If username do not match (or the username does not exist) a login failure is noted and the visitor is re-presented with the login screen as well as information on how to register
+"	enhancement	closed	major	milestone1	ckan	fixed				

@@ -1,0 +1,66 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1205,db upgrade problem on cz.ckan.net,dread,kindly,"When upgrading database for cz.ckan.net (psql.okfn.org/cz.okfn.org) an error occurred (see below).
+
+cz.ckan.net has been running on eu3 and this updrade was part of moving it to eu19, with a more recent version of ckan.
+
+In the meantime I've reverted the db to the old version (pre-upgrade). 
+
+cz.ckan.net is not working properly until this is fixed.
+
+{{{
+okfn@eu19:~$ paster --plugin ckan db upgrade --config=/etc/ckan/cz/cz.ini
+/usr/lib/pymodules/python2.6/ckan_deps/sqlalchemy/engine/url.py:105: SADeprecationWarning: The SQLAlchemy PostgreSQL dialect has been renamed from 'postgres' to 'postgresql'. The new URL format is postgresql[+driver]://<user>:<pass>@<host>/<dbname>
+  module = __import__('sqlalchemy.dialects.%s' % (dialect, )).dialects
+2011-06-29 09:07:41,294 INFO  [migrate.versioning.api] 28 -> 29... 
+/usr/lib/pymodules/python2.6/ckan_deps/sqlalchemy/engine/reflection.py:46: SAWarning: Skipped unsupported reflection of expression-based index idx_pkg_lname
+  ret = fn(self, con, *args, **kw)
+/usr/lib/pymodules/python2.6/ckan_deps/sqlalchemy/engine/reflection.py:46: SAWarning: Skipped unsupported reflection of expression-based index idx_pkg_slname
+  ret = fn(self, con, *args, **kw)
+/usr/lib/pymodules/python2.6/ckan_deps/sqlalchemy/engine/reflection.py:46: SAWarning: Skipped unsupported reflection of expression-based index idx_pkg_suname
+  ret = fn(self, con, *args, **kw)
+/usr/lib/pymodules/python2.6/ckan_deps/sqlalchemy/engine/reflection.py:46: SAWarning: Skipped unsupported reflection of expression-based index idx_pkg_uname
+  ret = fn(self, con, *args, **kw)
+Traceback (most recent call last):
+  File ""/usr/bin/paster"", line 18, in <module>
+    command.run()
+  File ""/usr/lib/pymodules/python2.6/paste/script/command.py"", line 84, in run
+    invoke(command, command_name, options, args[1:])
+  File ""/usr/lib/pymodules/python2.6/paste/script/command.py"", line 123, in invoke
+    exit_code = runner.run(args)
+  File ""/usr/lib/pymodules/python2.6/paste/script/command.py"", line 218, in run
+    result = self.command()
+  File ""/usr/lib/pymodules/python2.6/ckan/lib/cli.py"", line 84, in command
+    model.repo.upgrade_db()
+  File ""/usr/lib/pymodules/python2.6/ckan/model/__init__.py"", line 163, in upgrade_db
+    mig.upgrade(self.metadata.bind, self.migrate_repository, version=version)
+  File ""/usr/lib/pymodules/python2.6/ckan_deps/migrate/versioning/api.py"", line 185, in upgrade
+    return _migrate(url, repository, version, upgrade=True, err=err, **opts)
+  File ""<string>"", line 2, in _migrate
+  File ""/usr/lib/pymodules/python2.6/ckan_deps/migrate/versioning/util/__init__.py"", line 160, in with_engine
+    return f(*a, **kw)
+  File ""/usr/lib/pymodules/python2.6/ckan_deps/migrate/versioning/api.py"", line 364, in _migrate
+    schema.runchange(ver, change, changeset.step)
+  File ""/usr/lib/pymodules/python2.6/ckan_deps/migrate/versioning/schema.py"", line 83, in runchange
+    change.run(self.engine, step)
+  File ""/usr/lib/pymodules/python2.6/ckan_deps/migrate/versioning/script/py.py"", line 140, in run
+    script_func(engine)
+  File ""/usr/lib/pymodules/python2.6/ckan/migration/versions/029_version_groups.py"", line 152, in upgrade
+    migrate_engine.execute(q)
+  File ""/usr/lib/pymodules/python2.6/ckan_deps/sqlalchemy/engine/base.py"", line 1788, in execute
+    return connection.execute(statement, *multiparams, **params)
+  File ""/usr/lib/pymodules/python2.6/ckan_deps/sqlalchemy/engine/base.py"", line 1191, in execute
+    params)
+  File ""/usr/lib/pymodules/python2.6/ckan_deps/sqlalchemy/engine/base.py"", line 1271, in _execute_clauseelement
+    return self.__execute_context(context)
+  File ""/usr/lib/pymodules/python2.6/ckan_deps/sqlalchemy/engine/base.py"", line 1302, in __execute_context
+    context.parameters[0], context=context)
+  File ""/usr/lib/pymodules/python2.6/ckan_deps/sqlalchemy/engine/base.py"", line 1401, in _cursor_execute
+    context)
+  File ""/usr/lib/pymodules/python2.6/ckan_deps/sqlalchemy/engine/base.py"", line 1394, in _cursor_execute
+    context)
+  File ""/usr/lib/pymodules/python2.6/ckan_deps/sqlalchemy/engine/default.py"", line 299, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (IntegrityError) insert or update on table ""package_group_revision"" violates foreign key constraint ""package_group_revision_continuity_id_fkey""
+DETAIL:  Key (continuity_id)=(7f373978-40a0-4848-bdc9-018ad213aa0b) is not present in table ""package_group"".
+ 'INSERT INTO package_group_revision (id, package_id, group_id, state, revision_id, continuity_id) VALUES (%(id)s, %(package_id)s, %(group_id)s, %(state)s, %(revision_id)s, %(continuity_id)s)' {'state': u'active', 'package_id': u'14d76e9e-028c-49c1-955b-ef30d4abb970', 'continuity_id': u'7f373978-40a0-4848-bdc9-018ad213aa0b', 'revision_id': u'24a11f58-2ff9-46f3-b113-0bf7f0baf254', 'group_id': u'4b832199-b8e3-4989-9b5d-de8dd6322612', 'id': u'7a3863bd-3054-40c8-bb3d-68b73096c108'}
+}}}",defect,closed,blocker,,ckan,fixed,,mynarzjindrich@…,ckan,none

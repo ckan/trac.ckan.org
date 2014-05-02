@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2575,Inconsistent language on license dropdown,amercader,,"The license dropdown on the dataset form shows titles in Swedish by default. Changing the language seems to default to English, but after refreshing the page a couple of times it shows a wrong language again.
+
+Thanks to pudo for reporting.",enhancement,new,major,ckan-v1.8,ckan,,i18n,sean.hammond@… toby.dacre@…,ckan,none

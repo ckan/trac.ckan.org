@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1452: Offer detected browser language, rather than auto-switch</title>
+    <link>http://localhost/ticket/1452</link>
+    <description>&lt;p&gt;
+There are issues with setting the site's language according to the browser detection:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Many browsers have the language setting incorrectly set. e.g. people who download US versions of Mozilla, pirated US copies in the far east.
+&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;Although thedatahub.org has a worldwide audience, many CKAN instances are designed for a particular country's citizens. So Open Berlin should probably be in German as default for all.
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+I suggest the site should have a default language saved in the config. The browser language *should* be detected, and that prompts a flash message offering to change to that language. And if you change language that is saved in the cookie (as we currently do).
+&lt;/p&gt;
+&lt;p&gt;
+Then do some testing to see if this suits people.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1452</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Mon, 14 Nov 2011 13:09:49 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1452#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1452#comment:1</guid>
+      <description>
+        &lt;p&gt;
+Seb Bacon:
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;p&gt;
+I agree.  It is quite standard for people to have their browser
+language as en-US in many countries.
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote class="citation"&gt;
+&lt;p&gt;
+Yes, geo-location is likely to be better if you want to automate it.
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a class="ext-link" href="http://www.maxmind.com/app/geoip_country"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://www.maxmind.com/app/geoip_country&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+But I wouldn't automatically detect it at all.  Just have a default
+language for each site, as you suggest.
+&lt;/p&gt;
+&lt;/blockquote&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>ross</dc:creator>
+
+      <pubDate>Wed, 20 Jun 2012 11:09:47 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/1452#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/1452#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;wontfix&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+I believe this has been addressed by Toby.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

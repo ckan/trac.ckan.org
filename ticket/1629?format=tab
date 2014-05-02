@@ -1,0 +1,2 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1629	permissions changed during upgrade to 1.5.1	dread	dread	This was seen on datacatalogs. When we upgraded it 1.5 to 1.5.1 we saw some permissions being reset so that it could be spammed. Anonymous and logged in users were given anon_editor and editor permissions. I don't know what the previous config was. Permissions for sysadmins remain unaffected. 	defect	closed	critical	ckan-sprint-2012-01-23	ckan	fixed		johnglover	ckan	none

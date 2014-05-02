@@ -1,0 +1,4 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2573	package_search does not allow solr's per-field facet parameters	icmurray		"Solr allows its facet parameters to be specified on a per-field basis, eg. `facet.limit` applies to ''all'' facet fields, but solr allows it to be overriden for a specific field, eg. `facet.tags.limit`.
+
+We don't support this at the moment because we have a whitelist of valid solr query parameters that we accept.  See `ckan.lib.search.query.VALID_SOLR_PARAMETERS`."	enhancement	new	awaiting triage	ckan-future	ckan		[?d]	rgrp	ckan	none

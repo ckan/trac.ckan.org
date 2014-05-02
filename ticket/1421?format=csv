@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1421,Tag cloud recipe broken,dread,dread,"home page doesn't have c.facets setup.
+
+Only affects 1.5 branch - ok 1.4.3.1. Was broken in cset:05f60f2d26e8.",defect,closed,minor,ckan-sprint-2011-10-28,ckan,fixed,,,ckan,none

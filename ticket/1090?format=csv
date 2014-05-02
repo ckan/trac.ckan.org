@@ -1,0 +1,8 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1090,Visitor can't create packages on new CKAN install,dread,dread,"Default visitor roles in default config is reader, not anon_editor. 
+
+Problem caused by changes in #1066 (released in 1.3.3)
+
+New installs will be affected, although simple to just increase permissions when the installer realises a visitor can't create packages.
+
+The solution to the config getting out of sync with the code like this is to not have the default_roles in the config - refer to the code in the configuration instructions.",defect,closed,minor,ckan-v1.4-sprint-6,ckan,fixed,,,ckan,none

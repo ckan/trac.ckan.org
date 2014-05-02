@@ -1,0 +1,6 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2388,"Update ""out of the box"" settings for CKAN",amercader,amercader,"
+* Only logged in users able to create
+* Creation permissions have only creators able to update a dataset
+* Synchronous search is enabled (#1678)
+",enhancement,new,major,current-ckan-sprint-2012-05-29,ckan,,,,ckan,none

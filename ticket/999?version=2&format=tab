@@ -1,0 +1,2 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+999	Factor out ckan.net theme changes to a separate theme repo and apply	dread	rgrp	Rather than polluting the ckan core code base on ckan.net install with ckan.net specific changes these adaptations should be moved out into a dedicated ckan.net theme.	enhancement	new	minor	ckan-v1.4-sprint-3	ckan					

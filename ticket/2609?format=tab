@@ -1,0 +1,58 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2609	Demo theme errors when creating a dataset without a resource	aron.carroll	toby	"1. Complete step one of add dataset
+2. Click next without adding any resource data.
+
+Page errors.
+
+{{{
+URL: http://localhost:5000/dataset/new_resource/asdasd
+File '/Users/Aron/.virtualenvs/ckan/lib/python2.7/site-packages/weberror/evalexception.py', line 431 in respond
+  app_iter = self.application(environ, detect_start_response)
+File '/Users/Aron/.virtualenvs/ckan/lib/python2.7/site-packages/webob/dec.py', line 147 in __call__
+  resp = self.call_func(req, *args, **self.kwargs)
+File '/Users/Aron/.virtualenvs/ckan/lib/python2.7/site-packages/webob/dec.py', line 208 in call_func
+  return self.func(req, *args, **kwargs)
+File '/Users/Aron/.virtualenvs/ckan/lib/python2.7/site-packages/fanstatic/publisher.py', line 234 in __call__
+  return request.get_response(self.app)
+File '/Users/Aron/.virtualenvs/ckan/lib/python2.7/site-packages/webob/request.py', line 1053 in get_response
+  application, catch_exc_info=False)
+File '/Users/Aron/.virtualenvs/ckan/lib/python2.7/site-packages/webob/request.py', line 1022 in call_application
+  app_iter = application(self.environ, start_response)
+File '/Users/Aron/.virtualenvs/ckan/lib/python2.7/site-packages/webob/dec.py', line 147 in __call__
+  resp = self.call_func(req, *args, **self.kwargs)
+File '/Users/Aron/.virtualenvs/ckan/lib/python2.7/site-packages/webob/dec.py', line 208 in call_func
+  return self.func(req, *args, **kwargs)
+File '/Users/Aron/.virtualenvs/ckan/lib/python2.7/site-packages/fanstatic/injector.py', line 52 in __call__
+  response = request.get_response(self.app)
+File '/Users/Aron/.virtualenvs/ckan/lib/python2.7/site-packages/webob/request.py', line 1053 in get_response
+  application, catch_exc_info=False)
+File '/Users/Aron/.virtualenvs/ckan/lib/python2.7/site-packages/webob/request.py', line 1022 in call_application
+  app_iter = application(self.environ, start_response)
+File '/Users/Aron/.virtualenvs/ckan/lib/python2.7/site-packages/beaker/middleware.py', line 73 in __call__
+  return self.app(environ, start_response)
+File '/Users/Aron/.virtualenvs/ckan/lib/python2.7/site-packages/beaker/middleware.py', line 152 in __call__
+  return self.wrap_app(environ, session_start_response)
+File '/Users/Aron/.virtualenvs/ckan/lib/python2.7/site-packages/routes/middleware.py', line 130 in __call__
+  response = self.app(environ, start_response)
+File '/Users/Aron/.virtualenvs/ckan/lib/python2.7/site-packages/pylons/wsgiapp.py', line 125 in __call__
+  response = self.dispatch(controller, environ, start_response)
+File '/Users/Aron/.virtualenvs/ckan/lib/python2.7/site-packages/pylons/wsgiapp.py', line 324 in dispatch
+  return controller(environ, start_response)
+File '/Users/Aron/.virtualenvs/ckan/src/ckan/ckan/lib/base.py', line 258 in __call__
+  res = WSGIController.__call__(self, environ, start_response)
+File '/Users/Aron/.virtualenvs/ckan/lib/python2.7/site-packages/pylons/controllers/core.py', line 221 in __call__
+  response = self._dispatch_call()
+File '/Users/Aron/.virtualenvs/ckan/lib/python2.7/site-packages/pylons/controllers/core.py', line 172 in _dispatch_call
+  response = self._inspect_call(func)
+File '/Users/Aron/.virtualenvs/ckan/lib/python2.7/site-packages/pylons/controllers/core.py', line 107 in _inspect_call
+  result = self._perform_call(func, args)
+File '/Users/Aron/.virtualenvs/ckan/lib/python2.7/site-packages/pylons/controllers/core.py', line 60 in _perform_call
+  return func(**args)
+File '/Users/Aron/.virtualenvs/ckan/src/ckan/ckan/controllers/package.py', line 495 in new_resource
+  get_action('resource_create')(context, data)
+File '/Users/Aron/.virtualenvs/ckan/src/ckan/ckan/logic/action/create.py', line 240 in resource_create
+  raise ValidationError(errors, _error_summary(errors))
+ValidationError: {u'URL': u'Missing value'}
+}}}
+
+http://localhost:5000/dataset/new_resource/asdasd"	enhancement	closed	major	opendatasuite 1	ckan	fixed	demo-theme		ckan	none

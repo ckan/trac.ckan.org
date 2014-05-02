@@ -1,0 +1,180 @@
+Proposal for JSON-P Proxy
+=========================
+
+Motivation
+----------
+
+At the moment there is no way for a client-side developer to build an
+application which accesses the data on data.gov.uk without first setting up and
+installing a server to fetch the data to send it to the browser.
+
+.. note ::
+
+    The reason for this is that the *same origin policy* prevents a browser
+    fetching data from multiple different domains unless it is in JSON-P format.
+    Since the data associated with a package be hosted anywhere, 
+
+My thinking is that:
+
+* A JSON-P feed of the data would lower the barrier to entry to app builders:
+    * Every web developer knows how to build services with JavaScript, regardless of their main language so giving 
+    * Even non-developers should be to hack together charts etc
+* The more people that try to consume the data, the more feedback data publishers will get about how to publish their data in a useful way
+* By concentrating on the browser as a platform more useful oppurtunites may emerge (eg package previews, SQLite distribution format etc)
+
+
+Proposal
+--------
+
+The proposal is not to implement everything in one go but to start with a common format and look at a way of building a useful feed. I propose starting with spreadsheet-like data for two reasons:
+
+* This is most easily understood by the type of developer who would build a broweser-side mashup or plot a graph
+* There are already solutions for handling XML, rdf data etc not least the SPARQL feeds
+
+We therefore want an API for proxying spreadsheet data via JSON-P.
+
+There will be a new API at ``/api/spreadsheet?callback=jsonpcallback&url=``
+
+The URL to fetch will be URL-encoded and passed with the ``url`` parameter. On
+the server the URL will be decoded and checked to see if it really is a URL
+linked to via a package resource and that it is an ``.xls`` or ``.csv`` file.
+
+The API will allow the following:
+
+* Downloading the entire spreadsheet
+* Downloading a single sheet (add ``sheet=1`` to the URL)
+* Downloading a range in a single sheet (add ``range=A1:K3`` to the URL) [a bit nasty for CSV files but will do I think]
+* Choosing a limited set of rows within the sheet (add ``row=5&row=7&row_range=10:100000:5000`` - rowrange format would be give me a row between 10 and 100000 every 5000 rows)
+
+The result will look like this with only the appropriate bits populated. For ``.xls`` files:
+
+::
+
+    {
+        url = http://...file.xls
+        option = 'row=5&row=7&row_range=10:100000:5000',
+        name = ['Sheet 1', 'Sheet 2'],
+        sheet: {
+            'Sheet 1': [
+                [...],
+                [...],
+                [...],
+            ]
+        }
+    }
+
+For ``.csv`` files:
+
+::
+
+    {
+        url = http://...file.csv
+        option = 'row=5&row=7&row_range=10:100000:5000',
+        'data': [
+            [...],
+            [...],
+            [...],
+        ]
+    }
+
+
+Hurdles
+-------
+
+* Some data sets are not in text-based formats => Don't handle them at this stage
+* Excel spreadhseets have formatting and different types => Ignore it, turn everything into a string for now
+* Some data sets are huge => don't proxy more than 100K of data - up to the user to filter it down if needed
+* We don't want to re-download data sets => Need a way to cache data -> storage API
+* Some applications might be wildly popular and put strain on the system -> perhaps API keys and rate limiting are needed so that individual apps/feeds can be disabled. How can we have read API keys on data.gov.uk? 
+
+
+Next Steps
+----------
+
+* Investigate how this could be integrated with the proposed storage API
+* Investigate rate limiting in Squid
+
+
+Links for me to investigate
+---------------------------
+
+* http://www.faqs.org/docs/Linux-HOWTO/Bandwidth-Limiting-HOWTO.html
+* http://www.scribd.com/doc/8622975/Use-Squid-to-reduce-bandwidth
+
+Appendix 1
+----------
+
+The start of a prrof of concept:
+
+::
+
+    ubuntu@ckan-dev:~/env/src/ckan$ hg diff
+    diff -r 79260056ec71 ckan/config/routing.py
+    --- a/ckan/config/routing.py	Mon Oct 04 14:21:50 2010 +0000
+    +++ b/ckan/config/routing.py	Mon Oct 11 08:45:16 2010 +0000
+    @@ -210,6 +210,8 @@
+         map.connect('/api/2/qos/throughput/',
+             controller='rest', action='throughput',
+             conditions=dict(method=['GET']))
+    +    # James's experimental proxy code.
+    +    map.connect('/api/2/data', controller='data', action='index')
+     
+         map.redirect("/packages", "/package")
+         map.redirect("/packages/{url:.*}", "/package/{url}")
+    diff -r 79260056ec71 ckan/controllers/data.py
+    --- /dev/null	Thu Jan 01 00:00:00 1970 +0000
+    +++ b/ckan/controllers/data.py	Mon Oct 11 08:45:16 2010 +0000
+    @@ -0,0 +1,66 @@
+    +import logging
+    +import urllib2
+    +import xlrd
+    +import csv
+    +import ckan.authz
+    +import ckan.model as model
+    +import ckan
+    +from StringIO import StringIO
+    +from ckan.lib.base import BaseController, render, abort
+    +from ckan import model
+    +from ckan.model import meta
+    +from sqlalchemy.sql import select, and_
+    +from ckan.lib.base import _, request, response
+    +from ckan.lib.cache import ckan_cache
+    +from ckan.lib.helpers import json
+    +from ckan.controllers.apiv1.package import PackageController as _PackageV1Controller
+    +from ckan.controllers.apiv2.package import Rest2Controller
+    +
+    +log = logging.getLogger(__name__)
+    +
+    +class DataController(Rest2Controller, _PackageV1Controller):
+    +    def _last_modified(self, id):
+    +        """
+    +        Return most recent timestamp for this package
+    +        """
+    +        return model.Package.last_modified(model.package_table.c.id == id)
+    +
+    +    #@ckan_cache(test=_last_modified, query_args=True)
+    +    def index(self):
+    +        """
+    +        Return the specified package
+    +        """
+    +        url = request.params['url']
+    +        fp = urllib2.urlopen(url)
+    +        raw = fp.read()
+    +        fp.close()
+    +        book = xlrd.open_workbook('file', file_contents=raw, verbosity=0)
+    +        names = []
+    +        sheets = []
+    +        for sheet_name in book.sheet_names():
+    +            names.append(sheet_name)
+    +            sheet_ = book.sheet_by_name(sheet_name)
+    +            rows = []
+    +            for rownum in range(sheet_.nrows):
+    +                vals = sheet_.row_values(rownum)
+    +                rows.append(vals)
+    +            sheets.append(rows)
+    +        csvs = []
+    +        for i, sheet in enumerate(sheets):
+    +            csvs.append(dict(name=names[i], content=sheet))
+    +        return self._finish_ok(json.dumps(csvs))
+    +    
+

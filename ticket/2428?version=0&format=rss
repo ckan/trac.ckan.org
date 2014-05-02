@@ -1,0 +1,176 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2428: Reduce/sort out CKAN's dependencies</title>
+    <link>http://localhost/ticket/2428</link>
+    <description>&lt;p&gt;
+This ticket depends on &lt;a class="closed ticket" href="http://localhost/ticket/2423" title="enhancement: Get rid of CKAN's lxml dependency (closed: duplicate)"&gt;#2423&lt;/a&gt;, &lt;a class="closed ticket" href="http://localhost/ticket/2424" title="enhancement: Get rid of CKAN's autoneg dependency (closed: duplicate)"&gt;#2424&lt;/a&gt;, &lt;a class="closed ticket" href="http://localhost/ticket/2425" title="enhancement: Get rid of CKAN's flup dependency (closed: fixed)"&gt;#2425&lt;/a&gt;, &lt;a class="new ticket" href="http://localhost/ticket/2426" title="enhancement: Get rid of CKAN's formalchemy dependency (new)"&gt;#2426&lt;/a&gt; and &lt;a class="new ticket" href="http://localhost/ticket/2427" title="enhancement: Reduce cruft installed into CKAN's virtualenv due to Pylons (new)"&gt;#2427&lt;/a&gt;.
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Try to remove as many of CKAN's dependencies as possible
+&lt;/li&gt;&lt;li&gt;Try to update as many of the remaining ones as possible
+&lt;/li&gt;&lt;li&gt;Try to get rid of some dependencies that are fetched from random
+hg or git servers instead of pypi
+&lt;/li&gt;&lt;li&gt;Then try to get the order of deps in the requirements files right
+so that you end up with the right versions of everything
+&lt;/li&gt;&lt;li&gt;Each module in the dependencies file should specify the exact
+version, to protect us from changes due to them upgrading versions
+under us and breaking things or changing their own deps
+&lt;/li&gt;&lt;li&gt;Consider shipping dependencies with ckan instead of pip installing
+them?
+&lt;/li&gt;&lt;li&gt;This is related to moving CKAN to Ubuntu 12.04
+&lt;/li&gt;&lt;li&gt;Add a test case that runs pip freeze and tests that all the right
+versions of deps are installed?
+&lt;/li&gt;&lt;/ul&gt;</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2428</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>seanh</dc:creator>
+
+      <pubDate>Fri, 25 May 2012 11:55:23 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/2428#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/2428#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/2428?action=diff&amp;amp;version=1"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>seanh</dc:creator>
+
+      <pubDate>Fri, 25 May 2012 11:56:29 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/2428#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/2428#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/2428?action=diff&amp;amp;version=2"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>seanh</dc:creator>
+
+      <pubDate>Mon, 28 May 2012 11:53:01 GMT</pubDate>
+      <title>milestone changed</title>
+      <link>http://localhost/ticket/2428#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/2428#comment:3</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;current-ckan-sprint-2012-05-29&lt;/em&gt; to &lt;em&gt;current-ckan-sprint-2012-06-25&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>seanh</dc:creator>
+
+      <pubDate>Mon, 18 Jun 2012 17:38:15 GMT</pubDate>
+      <title>milestone changed</title>
+      <link>http://localhost/ticket/2428#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/2428#comment:4</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;current-ckan-sprint-2012-06-25&lt;/em&gt; to &lt;em&gt;ckan-v1.8&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>seanh</dc:creator>
+
+      <pubDate>Mon, 25 Jun 2012 14:50:41 GMT</pubDate>
+      <title>milestone changed</title>
+      <link>http://localhost/ticket/2428#comment:5</link>
+      <guid isPermaLink="false">http://localhost/ticket/2428#comment:5</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan-v1.8&lt;/em&gt; to &lt;em&gt;ckan-v1.9&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>seanh</dc:creator>
+
+      <pubDate>Mon, 25 Jun 2012 15:56:38 GMT</pubDate>
+      <title>status, milestone changed</title>
+      <link>http://localhost/ticket/2428#comment:6</link>
+      <guid isPermaLink="false">http://localhost/ticket/2428#comment:6</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;accepted&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan-v1.9&lt;/em&gt; to &lt;em&gt;ckanbuild&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>seanh</dc:creator>
+
+      <pubDate>Mon, 02 Jul 2012 13:15:33 GMT</pubDate>
+      <title>priority, milestone changed</title>
+      <link>http://localhost/ticket/2428#comment:7</link>
+      <guid isPermaLink="false">http://localhost/ticket/2428#comment:7</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;priority&lt;/strong&gt;
+                changed from &lt;em&gt;awaiting triage&lt;/em&gt; to &lt;em&gt;awaiting merge&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckanbuild&lt;/em&gt; to &lt;em&gt;ckan-v1.8&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+This awaiting merge, pull request: &lt;a class="ext-link" href="https://github.com/okfn/ckan/pull/46"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;https://github.com/okfn/ckan/pull/46&lt;/a&gt;
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>seanh</dc:creator>
+
+      <pubDate>Tue, 03 Jul 2012 11:21:15 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/2428#comment:8</link>
+      <guid isPermaLink="false">http://localhost/ticket/2428#comment:8</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;accepted&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Merged. The only thing I didn't do was add a test case that runs pip freeze and tests that all the right versions of deps are installed.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

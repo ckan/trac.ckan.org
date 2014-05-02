@@ -1,0 +1,2 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2335,Unicode characters don't work in CKAN ini files,seanh,seanh,"You get a UnicodeDecodeError, looks like it tries to decode the ini file as ascii. This is a problem because someone might try to set their site description to something with an umlaut in it, for example.",defect,assigned,awaiting triage,ckan-v1.9,ckan,,,,ckan,none

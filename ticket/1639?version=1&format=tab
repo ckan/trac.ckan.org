@@ -1,0 +1,4 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1639	Move activity streams CSS into external file	seanh	seanh	"The HTML and CSS for the activity streams templates needs to be tidied up. Currently the CSS is inlined in the templates themselves, and there is much unnecessary repetition of CSS.
+
+Perhaps put this one in hold until there has been some design discussion about how the activity streams and the user, dataset and group pages with activity streams should look?"	enhancement	new	awaiting triage	ckan-v1.6	ckan		activity_streams		ckan	none

@@ -1,0 +1,466 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      #937 (Record download stats for resources (extension))
+     – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="prev" href="936.html" title="Ticket #936" />
+        <link rel="last" href="3030.html" title="Ticket #3030" />
+        <link rel="help" href="../wiki/TracGuide.html" />
+        <link rel="alternate" href="937%3Fformat=csv" type="text/csv" class="csv" title="Comma-delimited Text" /><link rel="alternate" href="937%3Fformat=tab" type="text/tab-separated-values" class="tab" title="Tab-delimited Text" /><link rel="alternate" href="937%3Fformat=rss" type="application/rss+xml" class="rss" title="RSS Feed" />
+        <link rel="next" href="938.html" title="Ticket #938" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/ticket.css" type="text/css" />
+        <link rel="first" href="1.html" title="Ticket #1" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript">
+      var auto_preview_timeout=2.0;
+      var form_token="93d81ccf9a7bb1c456462f62";
+    </script>
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script><script type="text/javascript" src="../chrome/common/js/wikitoolbar.js"></script><script type="text/javascript" src="../chrome/common/js/resizer.js"></script><script type="text/javascript" src="../chrome/common/js/auto_preview.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("div.description").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $(".foldable").enableFolding(false, true);
+        var args = {realm: "ticket", id: 937, escape_newlines: 0}
+        $("#comment").autoPreview("/wiki_render", args, function(textarea, text, rendered) {
+            $("#ticketchange div.comment").html(rendered);
+            if (rendered)
+              $("#ticketchange").show();
+            else if ($("#ticketchange ul.changes").length == 0)
+              $("#ticketchange").hide();
+        });
+        $("#trac-comment-editor textarea").autoPreview("/wiki_render", args,
+                                                       function(textarea, text, rendered) {
+          var comment = $("#trac-comment-editor").next("div.comment");
+          comment.html(rendered);
+          if (rendered)
+            comment.show();
+          else
+            comment.hide();
+        });
+        $("#modify").parent().toggleClass("collapsed");
+        $(".trac-topnav a").click(function() { $("#modify").parent().removeClass("collapsed"); });
+        /* only enable control elements for the currently selected action */
+        var actions = $("#action input[name='action']");
+        function updateActionFields() {
+          actions.each(function () {
+            $(this).siblings().find("*[id]").enable($(this).checked());
+            $(this).siblings().filter("*[id]").enable($(this).checked());
+          });
+        }
+        actions.click(updateActionFields);
+        updateActionFields();
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="../wiki/TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li class="active"><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="936.html" title="Ticket #936">Previous Ticket</a></span></li><li class="last"><span><a class="next" href="938.html" title="Ticket #938">Next Ticket</a> &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="ticket">
+      <h1 id="trac-ticket-title">
+          <a href="937.html">Ticket #937</a>
+          <span class="status">(closed enhancement: fixed)</span>
+      </h1>
+      <div id="ticket">
+  <div class="date">
+    <p>Opened <a class="timeline" href="../timeline%3Ffrom=2011-01-29T22:31:13Z&amp;precision=second.html" title="2011-01-29T22:31:13Z in Timeline">3 years</a> ago</p>
+    <p>Last modified <a class="timeline" href="../timeline%3Ffrom=2011-04-11T09:23:51Z&amp;precision=second.html" title="2011-04-11T09:23:51Z in Timeline">3 years</a> ago</p>
+  </div>
+  <h2 class="summary searchable">Record download stats for resources (extension)</h2>
+  <table class="properties">
+    <tr>
+      <th id="h_reporter">Reported by:</th>
+      <td headers="h_reporter" class="searchable">
+        <a href="../query%3Fstatus=!closed&amp;reporter=rgrp.html">rgrp</a>
+      </td>
+      <th id="h_owner">Owned by:</th>
+      <td headers="h_owner">
+        <a href="../query%3Fstatus=!closed&amp;owner=sebbacon.html">sebbacon</a>
+      </td>
+    </tr>
+    <tr>
+        <th id="h_priority">
+          Priority:
+        </th>
+        <td headers="h_priority">
+              <a href="../query%3Fstatus=!closed&amp;priority=major.html">major</a>
+        </td>
+        <th id="h_milestone">
+          Milestone:
+        </th>
+        <td headers="h_milestone">
+              <a class="closed milestone" href="../milestone/ckan-v1.4-sprint-5.html">ckan-v1.4-sprint-5</a>
+        </td>
+    </tr><tr>
+        <th id="h_component">
+          Component:
+        </th>
+        <td headers="h_component">
+              <a href="../query%3Fstatus=!closed&amp;component=ckan.html">ckan</a>
+        </td>
+        <th id="h_keywords">
+          Keywords:
+        </th>
+        <td headers="h_keywords" class="searchable">
+              <a href="../query%3Fstatus=!closed&amp;keywords=~extension.html">extension</a> <a href="../query%3Fstatus=!closed&amp;keywords=~contributor.html">contributor</a> <a href="../query%3Fstatus=!closed&amp;keywords=~simple.html">simple</a> <a href="../query%3Fstatus=!closed&amp;keywords=~js.html">js</a>
+        </td>
+    </tr><tr>
+        <th id="h_cc">
+          Cc:
+        </th>
+        <td headers="h_cc" class="searchable">
+        </td>
+        <th id="h_repo">
+          Repository:
+        </th>
+        <td headers="h_repo">
+              <a href="../query%3Fstatus=!closed&amp;repo=ckan.html">ckan</a>
+        </td>
+    </tr><tr>
+        <th id="h_theme">
+          Theme:
+        </th>
+        <td headers="h_theme">
+              <a href="../query%3Fstatus=!closed&amp;theme=none.html">none</a>
+        </td>
+        <th>
+        </th>
+        <td>
+        </td>
+    </tr>
+  </table>
+  <div class="description">
+    <h3 id="comment:description">
+      Description
+      <span class="lastmod" title="2011-02-14 10:37:40+00:00">
+        (last modified by rgrp)
+        (<a href="937%3Faction=diff&amp;version=2.html">diff</a>)
+      </span>
+    </h3>
+    <div class="searchable">
+      <p>
+As a User (especially as a Package <a class="missing wiki">Owner/Maintainer?</a>) I want to know how many times a resource has been downloaded (and when).
+</p>
+<p>
+So let's record download stats (as in clicks on the link for a resource).
+</p>
+<h2 id="Implementation">Implementation</h2>
+<ul><li>Use the existing support for this feature in google analytics or piwiki
+</li><li>For google analytics see:
+<ul><li>Integrate to record: <a class="ext-link" href="http://www.google.com/support/analytics/bin/answer.py?answer=55529"><span class="icon">​</span>http://www.google.com/support/analytics/bin/answer.py?answer=55529</a>
+</li><li>Accessing analytics data via API (for showing download counts): <a class="ext-link" href="http://code.google.com/apis/analytics/docs/gdata/gdataDeveloperGuide.html"><span class="icon">​</span>http://code.google.com/apis/analytics/docs/gdata/gdataDeveloperGuide.html</a>
+</li></ul></li><li>Limitations only record downloads by browsers with js turned on.
+<ul><li>This is OK I think (in any case machine download via e.g. datapkg does not get downloaded)
+</li></ul></li></ul><h3 id="OldSpecdoitinCKAN">Old Spec (do it in CKAN)</h3>
+<ul><li>Record info of form: resource id (or url?), timestamp
+</li><li>Do this via javascript capturing of onclick event talking to an api
+</li><li>API: /api/resource/{id}/download
+<ul><li>POST to increment (how do we stop spamming -- could use a nonce setup with a random string set on each page load for the js)
+</li><li>GET to get data back { total: X, day_count: [ [yyyy-mm-dd, count], ... ] }
+</li></ul></li></ul><h2 id="Questions">Questions</h2>
+<ul><li>Do we record ip addresses (to handle de-botting etc)?
+</li><li>Do we count preview clicks as well?
+</li></ul>
+    </div>
+  </div>
+</div>
+          
+
+        <div>
+          <h2 class="foldable">Change History</h2>
+          <div id="changelog">
+              <div class="change" id="trac-change-1">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:1" class="cnum">
+      <a href="937.html#comment:1">comment:1</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-01-30T10:57:22Z&amp;precision=second.html" title="2011-01-30T10:57:22Z in Timeline">3 years</a> ago by sebbacon
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+Could consider using third-party analytics tracking here, which will also give referrer etc data for free?
+</p>
+<p>
+Would probably be bes provided in the form of optional piwik or google analytics integration.  Being able to say in the UI how many downloads there have been would need piwik.
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-2">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:2" class="cnum">
+      <a href="937.html#comment:2">comment:2</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-02-14T10:37:40Z&amp;precision=second.html" title="2011-02-14T10:37:40Z in Timeline">3 years</a> ago by rgrp
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Keywords</strong>
+        <em>extension</em> <em>contributor</em> <em>simple</em> <em>js</em> added
+    </li><li>
+      <strong>Owner</strong>
+        set to <em>rgrp</em>
+    </li><li>
+      <strong>Description</strong>
+        modified (<a href="937%3Faction=diff&amp;version=2.html">diff</a>)
+    </li><li>
+      <strong>Milestone</strong>
+        changed from <em>ckan-v1.4</em> to <em>ckan-v1.4-sprint-2</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-3">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:3" class="cnum">
+      <a href="937.html#comment:3">comment:3</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-02-14T13:23:01Z&amp;precision=second.html" title="2011-02-14T13:23:01Z in Timeline">3 years</a> ago by sebbacon
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+I did a very quick hacky thing at the end of last week on top of the "insert google analytics code" extension we discussed, to work out "most popular packages" based off data harvested from the Google Analytics API.  Needs making generic, tests etc but could be a starting point:
+<a class="ext-link" href="https://bitbucket.org/sebbacon/ckanext-googleanalytics/src"><span class="icon">​</span>https://bitbucket.org/sebbacon/ckanext-googleanalytics/src</a>
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-4">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:4" class="cnum">
+      <a href="937.html#comment:4">comment:4</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-02-14T13:24:19Z&amp;precision=second.html" title="2011-02-14T13:24:19Z in Timeline">3 years</a> ago by sebbacon
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+(and it would also need some proper caching as the GA API is very slow)
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-5">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:5" class="cnum">
+      <a href="937.html#comment:5">comment:5</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-02-28T11:08:15Z&amp;precision=second.html" title="2011-02-28T11:08:15Z in Timeline">3 years</a> ago by sebbacon
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Owner</strong>
+        changed from <em>rgrp</em> to <em>sebbacon</em>
+    </li><li>
+      <strong>Status</strong>
+        changed from <em>new</em> to <em>assigned</em>
+    </li><li>
+      <strong>Milestone</strong>
+        changed from <em>ckan-v1.4-sprint-2</em> to <em>ckan-v1.4-sprint-3</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-6">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:6" class="cnum">
+      <a href="937.html#comment:6">comment:6</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-02-28T11:29:07Z&amp;precision=second.html" title="2011-02-28T11:29:07Z in Timeline">3 years</a> ago by sebbacon
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+The current implementation I referenced above will be a good starting point.
+</p>
+<p>
+Work that remains:
+</p>
+<ul><li>Add download click tracking to individual download links (currently we just record page views for packages, not downloads)
+</li><li>Somehow cache the download stats against each package (the Google API is very slow); package reddis or sqlite or similar as a local storage for the extension
+</li><li>Expose download information in the relevant places in the UI (all users? package owners? where?)
+</li></ul><p>
+This is about 2 days' work.  Unlikely to get it done in this sprint.
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-7">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:7" class="cnum">
+      <a href="937.html#comment:7">comment:7</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-03-21T10:34:39Z&amp;precision=second.html" title="2011-03-21T10:34:39Z in Timeline">3 years</a> ago by sebbacon
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Repository</strong>
+        set to <em>ckan</em>
+    </li><li>
+      <strong>Theme</strong>
+        set to <em>none</em>
+    </li><li>
+      <strong>Milestone</strong>
+        changed from <em>ckan-v1.4-sprint-3</em> to <em>ckan-v1.4-sprint-4</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-8">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:8" class="cnum">
+      <a href="937.html#comment:8">comment:8</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-03-28T09:40:24Z&amp;precision=second.html" title="2011-03-28T09:40:24Z in Timeline">3 years</a> ago by sebbacon
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Milestone</strong>
+        changed from <em>ckan-v1.4-sprint-4</em> to <em>ckan-v1.4-sprint-5</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-9">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:9" class="cnum">
+      <a href="937.html#comment:9">comment:9</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-04-11T09:23:51Z&amp;precision=second.html" title="2011-04-11T09:23:51Z in Timeline">3 years</a> ago by sebbacon
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Status</strong>
+        changed from <em>assigned</em> to <em>closed</em>
+    </li><li>
+      <strong>Resolution</strong>
+        set to <em>fixed</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+Completed; software at <a class="ext-link" href="https://bitbucket.org/okfn/ckanext-googleanalytics/src"><span class="icon">​</span>https://bitbucket.org/okfn/ckanext-googleanalytics/src</a>
+</p>
+
+    </div>
+
+              </div>
+          </div>
+        </div>
+      <div id="help"><strong>Note:</strong> See
+        <a href="../wiki/TracTickets.html">TracTickets</a> for help on using
+        tickets.</div>
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="first">
+          <a rel="nofollow" href="937%3Fformat=csv" class="csv">Comma-delimited Text</a>
+        </li><li>
+          <a rel="nofollow" href="937%3Fformat=tab" class="tab">Tab-delimited Text</a>
+        </li><li class="last">
+          <a rel="nofollow" href="937%3Fformat=rss" class="rss">RSS Feed</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

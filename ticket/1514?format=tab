@@ -1,0 +1,7 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1514	Modifying user name loses connection with revisions	dread		"If you edit your user name, the number of revisions you made returns to 0. This is because in the Revision object, the user's name is stored, rather than the user's ID.
+
+rgrp:  We can reconnect that pretty easily (and have a
+longer term solution that involves not using the usernames but the
+userids in in the Revision objects so we don't hvae this problem in
+future!)"	defect	closed	awaiting triage	ckan-v1.6	ckan	duplicate			ckan	none

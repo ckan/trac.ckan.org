@@ -1,0 +1,432 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      #908 (Issues deploying extensions with modwsgi / uwsgi)
+     – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="prev" href="907.html" title="Ticket #907" />
+        <link rel="last" href="3030.html" title="Ticket #3030" />
+        <link rel="help" href="../wiki/TracGuide.html" />
+        <link rel="alternate" href="908%3Fformat=csv" type="text/csv" class="csv" title="Comma-delimited Text" /><link rel="alternate" href="908%3Fformat=tab" type="text/tab-separated-values" class="tab" title="Tab-delimited Text" /><link rel="alternate" href="908%3Fformat=rss" type="application/rss+xml" class="rss" title="RSS Feed" />
+        <link rel="next" href="909.html" title="Ticket #909" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/ticket.css" type="text/css" />
+        <link rel="first" href="1.html" title="Ticket #1" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript">
+      var auto_preview_timeout=2.0;
+      var form_token="93d81ccf9a7bb1c456462f62";
+    </script>
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script><script type="text/javascript" src="../chrome/common/js/wikitoolbar.js"></script><script type="text/javascript" src="../chrome/common/js/resizer.js"></script><script type="text/javascript" src="../chrome/common/js/auto_preview.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("div.description").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $(".foldable").enableFolding(false, true);
+        var args = {realm: "ticket", id: 908, escape_newlines: 0}
+        $("#comment").autoPreview("/wiki_render", args, function(textarea, text, rendered) {
+            $("#ticketchange div.comment").html(rendered);
+            if (rendered)
+              $("#ticketchange").show();
+            else if ($("#ticketchange ul.changes").length == 0)
+              $("#ticketchange").hide();
+        });
+        $("#trac-comment-editor textarea").autoPreview("/wiki_render", args,
+                                                       function(textarea, text, rendered) {
+          var comment = $("#trac-comment-editor").next("div.comment");
+          comment.html(rendered);
+          if (rendered)
+            comment.show();
+          else
+            comment.hide();
+        });
+        $("#modify").parent().toggleClass("collapsed");
+        $(".trac-topnav a").click(function() { $("#modify").parent().removeClass("collapsed"); });
+        /* only enable control elements for the currently selected action */
+        var actions = $("#action input[name='action']");
+        function updateActionFields() {
+          actions.each(function () {
+            $(this).siblings().find("*[id]").enable($(this).checked());
+            $(this).siblings().filter("*[id]").enable($(this).checked());
+          });
+        }
+        actions.click(updateActionFields);
+        updateActionFields();
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="../wiki/TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li class="active"><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="907.html" title="Ticket #907">Previous Ticket</a></span></li><li class="last"><span><a class="next" href="909.html" title="Ticket #909">Next Ticket</a> &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="ticket">
+      <h1 id="trac-ticket-title">
+          <a href="908.html">Ticket #908</a>
+          <span class="status">(closed defect: fixed)</span>
+      </h1>
+      <div id="ticket">
+  <div class="date">
+    <p>Opened <a class="timeline" href="../timeline%3Ffrom=2011-01-17T11:43:44Z&amp;precision=second.html" title="2011-01-17T11:43:44Z in Timeline">3 years</a> ago</p>
+    <p>Last modified <a class="timeline" href="../timeline%3Ffrom=2011-02-03T10:56:18Z&amp;precision=second.html" title="2011-02-03T10:56:18Z in Timeline">3 years</a> ago</p>
+  </div>
+  <h2 class="summary searchable">Issues deploying extensions with modwsgi / uwsgi</h2>
+  <table class="properties">
+    <tr>
+      <th id="h_reporter">Reported by:</th>
+      <td headers="h_reporter" class="searchable">
+        <a href="../query%3Fstatus=!closed&amp;reporter=rgrp.html">rgrp</a>
+      </td>
+      <th id="h_owner">Owned by:</th>
+      <td headers="h_owner">
+        <a href="../query%3Fstatus=!closed&amp;owner=pudo.html">pudo</a>
+      </td>
+    </tr>
+    <tr>
+        <th id="h_priority">
+          Priority:
+        </th>
+        <td headers="h_priority">
+              <a href="../query%3Fstatus=!closed&amp;priority=critical.html">critical</a>
+        </td>
+        <th id="h_milestone">
+          Milestone:
+        </th>
+        <td headers="h_milestone">
+              <a class="closed milestone" href="../milestone/ckan-v1.4-sprint-1.html">ckan-v1.4-sprint-1</a>
+        </td>
+    </tr><tr>
+        <th id="h_component">
+          Component:
+        </th>
+        <td headers="h_component">
+              <a href="../query%3Fstatus=!closed&amp;component=ckan.html">ckan</a>
+        </td>
+        <th id="h_keywords">
+          Keywords:
+        </th>
+        <td headers="h_keywords" class="searchable">
+        </td>
+    </tr><tr>
+        <th id="h_cc">
+          Cc:
+        </th>
+        <td headers="h_cc" class="searchable">
+        </td>
+        <th id="h_repo">
+          Repository:
+        </th>
+        <td headers="h_repo">
+              <a href="../query%3Fstatus=!closed.html"></a>
+        </td>
+    </tr><tr>
+        <th id="h_theme">
+          Theme:
+        </th>
+        <td headers="h_theme">
+              <a href="../query%3Fstatus=!closed.html"></a>
+        </td>
+        <th>
+        </th>
+        <td>
+        </td>
+    </tr>
+  </table>
+  <div class="description">
+    <h3 id="comment:description">
+      Description
+      <span class="lastmod" title="2011-01-19 19:50:10+00:00">
+        (last modified by rgrp)
+        (<a href="908%3Faction=diff&amp;version=1.html">diff</a>)
+      </span>
+    </h3>
+    <div class="searchable">
+      <p>
+Some extensions import pylons features (such as request) at root.
+</p>
+<p>
+Have encountered following issues:
+</p>
+<ol><li>You need to import ckanext before any ckan stuff in your wsgi script (extension stats and dataapi)
+</li></ol><ol start="2"><li>Running under wsgi daemon mode (normal mode is fine!) the front page (front page only) will not work (does not occur with disqus or synchronous_search but does with stats and dataapi extensions). You get errors like this in the log:
+</li></ol><pre class="wiki">[Mon Jan 17 09:01:19 2011] [error] Exception KeyError: KeyError(-1218594160,) in &lt;module 'threading' from '/usr/lib/python2.6/threading.pyc'&gt; ignored
+[Mon Jan 17 09:01:20 2011] [error] Exception AttributeError: "'NoneType' object has no attribute 'clearing'" in &lt;bound method PluginEnvironment.__del__ of  Services for Environment '&lt;default&gt;'
+</pre>
+    </div>
+  </div>
+</div>
+          
+
+        <div>
+          <h2 class="foldable">Change History</h2>
+          <div id="changelog">
+              <div class="change" id="trac-change-1">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:1" class="cnum">
+      <a href="908.html#comment:1">comment:1</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-01-19T19:50:10Z&amp;precision=second.html" title="2011-01-19T19:50:10Z in Timeline">3 years</a> ago by rgrp
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Description</strong>
+        modified (<a href="908%3Faction=diff&amp;version=1.html">diff</a>)
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-2">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:2" class="cnum">
+      <a href="908.html#comment:2">comment:2</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-01-30T16:08:15Z&amp;precision=second.html" title="2011-01-30T16:08:15Z in Timeline">3 years</a> ago by wwaites
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+see also from <a class="ext-link" href="http://knowledgeforge.net/okfn/tasks/ticket/485"><span class="icon">​</span>http://knowledgeforge.net/okfn/tasks/ticket/485</a>
+</p>
+<pre class="wiki">(pyenv)okfn@eu7:~/var/srvc/ckan.net$ sudo uwsgi -C -iH /home/okfn/var/srvc/ckan.net/pyenv --paste config:ckan.net.ini --uid www-data -s 10.48.162.201:9001
+*** Starting uWSGI 0.9.6.6 (32bit) on [Sun Jan 30 16:00:13 2011] ***
+compiled with version: 4.4.3
+Python version: 2.6.5 (r265:79063, Apr 16 2010, 13:28:26)
+[GCC 4.4.3]
+uWSGI running as root, you can use --uid/--gid/--chroot options
+setuid() to 33
+ *** WARNING: you are running uWSGI without its master process manager ***
+your memory page size is 4096 bytes
+allocated 412 bytes (0 KB) for 1 request's buffer.
+Setting PythonHome to /home/okfn/var/srvc/ckan.net/pyenv...
+binding on TCP port: 9001
+your server socket listen backlog is limited to 64 connections
+initializing hooks...done.
+Loading paste environment: config:ckan.net.ini
+Traceback (most recent call last):
+  File "/home/okfn/var/srvc/ckan.net/pyenv/lib/python2.6/site-packages/paste/deploy/__init__.py", line 3, in &lt;module&gt;
+    from loadwsgi import *
+  File "/home/okfn/var/srvc/ckan.net/pyenv/lib/python2.6/site-packages/paste/deploy/loadwsgi.py", line 8, in &lt;module&gt;
+    import pkg_resources
+  File "/home/okfn/var/srvc/ckan.net/pyenv/lib/python2.6/site-packages/pkg_resources.py", line 2691, in &lt;module&gt;
+    add_activation_listener(lambda dist: dist.activate())
+  File "/home/okfn/var/srvc/ckan.net/pyenv/lib/python2.6/site-packages/pkg_resources.py", line 668, in subscribe
+    callback(dist)
+  File "/home/okfn/var/srvc/ckan.net/pyenv/lib/python2.6/site-packages/pkg_resources.py", line 2691, in &lt;lambda&gt;
+    add_activation_listener(lambda dist: dist.activate())
+  File "/home/okfn/var/srvc/ckan.net/pyenv/lib/python2.6/site-packages/pkg_resources.py", line 2195, in activate
+    map(declare_namespace, self._get_metadata('namespace_packages.txt'))
+  File "/home/okfn/var/srvc/ckan.net/pyenv/lib/python2.6/site-packages/pkg_resources.py", line 1790, in declare_namespace
+    _handle_ns(packageName, path_item)
+  File "/home/okfn/var/srvc/ckan.net/pyenv/lib/python2.6/site-packages/pkg_resources.py", line 1761, in _handle_ns
+    loader.load_module(packageName); module.__path__ = path
+  File "/usr/lib/python2.6/pkgutil.py", line 238, in load_module
+    mod = imp.load_module(fullname, self.file, self.filename, self.etc)
+  File "/home/okfn/var/srvc/ckan.net/pyenv/src/ckanext-dataapi/ckanext/dataapi/__init__.py", line 36, in &lt;module&gt;    from pylons import config
+  File "/home/okfn/var/srvc/ckan.net/pyenv/lib/python2.6/site-packages/pylons/__init__.py", line 4, in &lt;module&gt;
+    from pylons.config import config
+  File "/home/okfn/var/srvc/ckan.net/pyenv/lib/python2.6/site-packages/pylons/config.py", line 2, in &lt;module&gt;
+    from pylons.configuration import *
+  File "/home/okfn/var/srvc/ckan.net/pyenv/lib/python2.6/site-packages/pylons/configuration.py", line 25, in &lt;module&gt;
+    import pylons.legacy
+  File "/home/okfn/var/srvc/ckan.net/pyenv/lib/python2.6/site-packages/pylons/legacy.py", line 11, in &lt;module&gt;
+    from pylons.util import deprecated, func_move
+  File "/home/okfn/var/srvc/ckan.net/pyenv/lib/python2.6/site-packages/pylons/util.py", line 18, in &lt;module&gt;
+    from paste.script.appinstall import Installer
+  File "/home/okfn/var/srvc/ckan.net/pyenv/lib/python2.6/site-packages/paste/script/appinstall.py", line 23, in &lt;module&gt;
+    from paste.deploy import appconfig
+ImportError: cannot import name appconfig
+</pre>
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-3">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:3" class="cnum">
+      <a href="908.html#comment:3">comment:3</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-02-02T11:06:43Z&amp;precision=second.html" title="2011-02-02T11:06:43Z in Timeline">3 years</a> ago by pudo
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Owner</strong>
+        changed from <em>rgrp</em> to <em>pudo</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-4">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:4" class="cnum">
+      <a href="908.html#comment:4">comment:4</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-02-02T15:04:16Z&amp;precision=second.html" title="2011-02-02T15:04:16Z in Timeline">3 years</a> ago by pudo
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Status</strong>
+        changed from <em>new</em> to <em>closed</em>
+    </li><li>
+      <strong>Resolution</strong>
+        set to <em>fixed</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+fixed in <a class="ext-link" href="https://bitbucket.org/okfn/ckan/changeset/08c0e1a819e4"><span class="icon">​</span>https://bitbucket.org/okfn/ckan/changeset/08c0e1a819e4</a> and <a class="ext-link" href="https://bitbucket.org/okfn/ckanext-stats/changeset/6e86c071db99"><span class="icon">​</span>https://bitbucket.org/okfn/ckanext-stats/changeset/6e86c071db99</a>
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-5">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:5" class="cnum">
+      <a href="908.html#comment:5">comment:5</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-02-02T15:20:52Z&amp;precision=second.html" title="2011-02-02T15:20:52Z in Timeline">3 years</a> ago by wwaites
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Status</strong>
+        changed from <em>closed</em> to <em>reopened</em>
+    </li><li>
+      <strong>Resolution</strong>
+        <em>fixed</em> deleted
+    </li><li>
+      <strong>Summary</strong>
+        changed from <em>Issues deploying extensions with modwsgi</em> to <em>Issues deploying extensions with modwsgi / uwsgi</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+Not fixed. Try running with:
+</p>
+<pre class="wiki">uwsgi -C -iH /path/to/your/pyenv --paste config:ckan.net.ini -s 127.0.0.1:9000
+</pre><p>
+Still get giant traceback relating to a circular import centered on an arbitrary plugin
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-6">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:6" class="cnum">
+      <a href="908.html#comment:6">comment:6</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-02-03T10:56:18Z&amp;precision=second.html" title="2011-02-03T10:56:18Z in Timeline">3 years</a> ago by pudo
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Status</strong>
+        changed from <em>reopened</em> to <em>closed</em>
+    </li><li>
+      <strong>Resolution</strong>
+        set to <em>fixed</em>
+    </li><li>
+      <strong>Milestone</strong>
+        changed from <em>ckan-v1.3</em> to <em>ckan-v1.4-sprint-1</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+I've moved the uswgi/nginx part to <a class="closed ticket" href="952.html" title="task: CKAN should run under nginx/uswgi (closed: invalid)">#952</a>, closing this issue since the problem it describes has been fixed. 
+</p>
+
+    </div>
+
+              </div>
+          </div>
+        </div>
+      <div id="help"><strong>Note:</strong> See
+        <a href="../wiki/TracTickets.html">TracTickets</a> for help on using
+        tickets.</div>
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="first">
+          <a rel="nofollow" href="908%3Fformat=csv" class="csv">Comma-delimited Text</a>
+        </li><li>
+          <a rel="nofollow" href="908%3Fformat=tab" class="tab">Tab-delimited Text</a>
+        </li><li class="last">
+          <a rel="nofollow" href="908%3Fformat=rss" class="rss">RSS Feed</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

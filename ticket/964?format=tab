@@ -1,0 +1,2 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+964	Create Resource Downloader and make it pluggable	rgrp	rgrp	In downloading packages we need to download resources and we need a ResourceDownloader object for this. these should be pluggable so that we can add support for different types of resources.	enhancement	closed	major	datapkg-0.8	dpm	fixed				

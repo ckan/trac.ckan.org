@@ -1,0 +1,14 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2877	Bugs with datastore v2	rgrp		"In progress
+
+ 1 [major] q does not seem to work reliably. e.g. using the setup from this gist https://gist.github.com/1930806 and doing a ?q=DE yields no results (does not work with ""q=de"" either)
+  * q=second does work ...
+ 2 Query on search with limit 0 results in total of 0 (should either be null or correct total). Queries with other limits yield correct total AFAICT
+  3 Also weird fact that limit is returned but as as as string - should it not be an integer
+ * Types on fields: could these not be canonical and as per recline (or is it important to allow exact sql types ...)
+
+### Suggestions
+
+Filter support: should think in more detail about this (may want to follow recline style)
+
+Simple filters in query parameters would be nice too ..."	enhancement	new	awaiting triage		ckan				ckan	none

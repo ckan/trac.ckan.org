@@ -1,0 +1,2 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2524,If there are no translation files for selected language fall back to default lang.,kindly,kindly,If a user selects a language there are no mo files for then an error is raised.  Revert to default language instead.,enhancement,new,awaiting triage,ckan-ecportal,ckan,,,,ckan,none

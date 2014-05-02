@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #129: Secure db access by centralising query generation through authz module</title>
+    <link>http://localhost/ticket/129</link>
+    <description>&lt;p&gt;
+Controllers and templates should not access db objects directly - they should do all access via authz module giving username. They are handed by a query that has already been filtered by the packages they are authorized to read.
+&lt;/p&gt;
+&lt;p&gt;
+When they request a package object, they are handed an copy of the db object - disconnected from the database - so it the db object can't be changed.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/129</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Tue, 29 Sep 2009 13:36:28 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/129#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/129#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/129?action=diff&amp;amp;version=1"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Mon, 05 Oct 2009 09:47:02 GMT</pubDate>
+      <title>summary, description, milestone changed</title>
+      <link>http://localhost/ticket/129#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/129#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;summary&lt;/strong&gt;
+                changed from &lt;em&gt;Secure db access by centralising query generation through authz module&lt;/em&gt; to &lt;em&gt;Secure db access by channelling query generation through authz module&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/129?action=diff&amp;amp;version=2"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;v0.10&lt;/em&gt; to &lt;em&gt;v0.11&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Mon, 07 Dec 2009 09:48:12 GMT</pubDate>
+      <title>priority changed</title>
+      <link>http://localhost/ticket/129#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/129#comment:3</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;priority&lt;/strong&gt;
+                changed from &lt;em&gt;major&lt;/em&gt; to &lt;em&gt;awaiting triage&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Not needed at the moment (minor security issue since only for read actions).
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Mon, 08 Feb 2010 10:32:23 GMT</pubDate>
+      <title>milestone changed</title>
+      <link>http://localhost/ticket/129#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/129#comment:4</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;v0.11&lt;/em&gt; to &lt;em&gt;longterm&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Thu, 04 Mar 2010 16:12:42 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/129#comment:5</link>
+      <guid isPermaLink="false">http://localhost/ticket/129#comment:5</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;invalid&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Implementing this would make it less likely that new code would be written to be insecure. But it would also make a lot of things harder. Decided not to do it.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2682: CKAN's internal tracking counts each view twice, needs unit tests</title>
+    <link>http://localhost/ticket/2682</link>
+    <description>&lt;p&gt;
+CKAN's internal tracking seems to count each page view twice, the problem appears to be with the SQL in the update_tracking() method in ckan/lib/cli.py.
+&lt;/p&gt;
+&lt;p&gt;
+The internal tracking feature needs some tests, and some of the code could maybe do with some more explanatory comments, e.g. what is the intended difference between count and running_total?
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2682</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>seanh</dc:creator>
+
+      <pubDate>Mon, 16 Jul 2012 13:49:58 GMT</pubDate>
+      <title>type changed</title>
+      <link>http://localhost/ticket/2682#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/2682#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;type&lt;/strong&gt;
+                changed from &lt;em&gt;enhancement&lt;/em&gt; to &lt;em&gt;defect&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>seanh</dc:creator>
+
+      <pubDate>Mon, 16 Jul 2012 14:02:44 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/2682#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/2682#comment:2</guid>
+      <description>
+        &lt;p&gt;
+Note that this commit fixes the double-counting for page views:
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a class="ext-link" href="https://github.com/okfn/ckan/commit/5739818a528bb16748f67b6d57a16f575ae78144"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;https://github.com/okfn/ckan/commit/5739818a528bb16748f67b6d57a16f575ae78144&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+but not for resource downloads (which look like they could have the exact same fix) but I'm not particularly happy about the fix because I don't fully understand the SQL.
+&lt;/p&gt;
+&lt;p&gt;
+It still needs unit tests and to be fixed properly, for both pages and resources
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>seanh</dc:creator>
+
+      <pubDate>Tue, 17 Jul 2012 17:19:33 GMT</pubDate>
+      <title>status changed; owner set</title>
+      <link>http://localhost/ticket/2682#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/2682#comment:3</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;owner&lt;/strong&gt;
+              set to &lt;em&gt;seanh&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;assigned&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Talked with kindly, seems the above fix is correct and should be applied to resources as well
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>seanh</dc:creator>
+
+      <pubDate>Tue, 24 Jul 2012 16:46:13 GMT</pubDate>
+      <title>priority changed</title>
+      <link>http://localhost/ticket/2682#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/2682#comment:4</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;priority&lt;/strong&gt;
+                changed from &lt;em&gt;awaiting triage&lt;/em&gt; to &lt;em&gt;awaiting merge&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>seanh</dc:creator>
+
+      <pubDate>Wed, 25 Jul 2012 14:13:56 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/2682#comment:5</link>
+      <guid isPermaLink="false">http://localhost/ticket/2682#comment:5</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;assigned&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

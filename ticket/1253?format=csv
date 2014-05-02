@@ -1,0 +1,2 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1253,Authz refactor,amercader,amercader,"We agreed on a system that allows overriding the authz checks at a logic function level (e.g. package_create, user_show) and supports the old (current) authz system.",enhancement,closed,major,ckan-sprint-2011-10-28,ckan,fixed,authz,,ckan,none

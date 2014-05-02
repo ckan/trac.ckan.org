@@ -1,0 +1,48 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+114	Access Control - model	dread	dread	"Create in the model basic operation of Access Control.
+
+roles table
+{{{
+name | context | action
+-----------------------
+admin| package | edit
+admin| package | edit-permissions
+admin| package | read
+editor| package | update
+editor| package | read
+reader| package | read
+This data is set-up on db init and will have no interface.
+}}}
+user-roles table:
+{{{
+username | context_type | objectid | role
+rgrp     | system  | n/a | admin
+visitor  | package | * | reader
+bob      | package | geonames | admin
+visitor  | package | geonames | editor
+visitor  | package | geonames | reader
+john     | group | ukgov | admin
+dread    | group | ukgov | editor
+visitor  | group | ukgov | reader
+This data will be added when someone is given permissions for the system, a package or a group.
+}}}
+Pseudo code:
+
+class Package
+    def is_allowed(name, action):
+        is_allowed(name, action, context=self)
+
+class Group
+    def is_allowed(name, action):
+        is_allowed(name, action, context=self)
+
+def is_allowed(name, action, context=None):
+''' name: string - a username or IP for 'visitor'
+    action: string - 'read', 'edit', 'delete', 'edit-permissions'
+    context: object - a Group or a Package or None (which means system)
+'''
+    # look up user from name.
+    # look up in user-roles table what roles this user has for this context.
+    # for each roles, look up in roles table what actions are allowed.
+    # return True if action is allowed, else False.
+"	enhancement	new	major	v0.10	ckan					

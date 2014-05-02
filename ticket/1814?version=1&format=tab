@@ -1,0 +1,8 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1814	Check publicadata.eu harvesters	amercader	amercader	"Estimate 2d
+
+Once ckanext-pdeu is running on CKAN 1.6, upgrade ckanext-harvest to be able to update the CKAN harvesters (default tags and extras).
+
+Also check non-CKAN harvesters (specially scrappers) to see if they are still working.
+
+Make a list of current harvesters with status and potential ones."	enhancement	new	awaiting triage	ckan-v1.7	pdeu		pdeu [2d]		ckan	none

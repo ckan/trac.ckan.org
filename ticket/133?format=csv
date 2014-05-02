@@ -1,0 +1,7 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+133,Security hole - search package/group (WUI & REST),dread,rgrp,"Using WUI or REST interface you can search packages and groups without authorization being checked. 
+
+On the REST interface you can also read all the attributes of the packages using the 'all-fields' option.
+
+Can be fixed using more advanced query to check authz.
+",defect,closed,major,,ckan,fixed,,,,

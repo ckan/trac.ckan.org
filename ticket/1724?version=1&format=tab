@@ -1,0 +1,12 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1724	Update logic action functions	seanh		"{{{ckan/logic/action/get.py:tag_list()}}}
+Currently (I think) just returns all tags in the CKAN instance that the user has access to.
+Needs an optional argument to get only tags from a particular vocabulary?
+When called with no argument, should only return free tags?
+Also add an optional dataset argument, so you can get tags for a given dataset and/or vocabulary?
+
+{{{ckan/logic/action/get.py:tag_autocomplete()}}}
+Add optional argument to get only tags for a given vocab? When called with no argument, should get only free tags?
+
+{{{ckan/logic/action/get.py:tag_search()}}}
+Again, optional arguments for restricting by vocabulary and/or dataset."	enhancement	new	awaiting triage	ckan-v1.6	ckan		taxonomies		ckan	none

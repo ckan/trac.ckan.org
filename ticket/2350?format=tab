@@ -1,0 +1,9 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2350	Hooks  in package controller for validating form data	icmurray	icmurray	"When the validation schema was moved from the package controller into the logic layer, the schema's role was changed from that of processing a form and validating data; to just validating data.  Whilst is makes sense to have a schema for validating data as it comes in and leaves the logic layer; there's no longer the hook available to PackageController subclasses to do form validation/processing.
+
+Add a hook into _save_new() and save_edit() prior to the logic-layer call which subclasses can then override.
+
+NB - form processing/validation *is* different to validating data.  For example, many data can be inferred from a user's input; or there may be aspects of the form that need to be filled in, but do not make sense to pass as data into the logic-layer, eg. agreeing to T&Cs.
+
+ - [ ] Add hooks
+ - [ ] Use in ckanext-example"	enhancement	new	minor	ckan-v1.9	ckan		[0.5d]		ckan	none

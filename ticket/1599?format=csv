@@ -1,0 +1,9 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1599,[contrib] Simple embeddable dataset count widget (esp for group count),rgrp,rgrp,"Simple embeddable widget for use on 3rd party sites showing dataset counts for a given search query. Have a specific version just for groups.
+
+ * Simple group count widget in JS for embedding in wordpress and elsewhere
+  * Requested by several people (e.g Guo Xu from Econ working group). Already have something like this in CKAN JS for doing an embeddable search box.
+ * All you need to do is do a dataset query over the API e.g. http://thedatahub.org/api/search/dataset?groups=economics and then embed in some html! 
+
+Estimate: 30m (for someone who knows their jquery).
+",enhancement,closed,minor,ckan-sprint-2012-01-09,contrib,fixed,volunteers contrib,,ckan,none

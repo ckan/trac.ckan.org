@@ -1,0 +1,6 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1709	Simple_search fails with all packages	dread	dread	"The home page always shows the total number of packages as 0, because the query is '*:*' and SQL search doesn't know how to handle it.
+
+Also, simple_search configuration is not documented.
+
+Also, no tests for sql search."	defect	new	major	ckan-sprint-2012-01-23	ckan				ckan	none

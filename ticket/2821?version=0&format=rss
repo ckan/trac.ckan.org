@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2821: Featured Items on Filter</title>
+    <link>http://localhost/ticket/2821</link>
+    <description>&lt;p&gt;
+Problem: On /apps page in the Filter Results box there is a "Only show featured items" checkbox, on selection it comes up with 0 solutions.
+Expected: Presumably an admin can create "featured items" so that they can be randomly selected on front page (is this correct)? If there are no "featured items" in the whole database can this check box be hidden?
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2821</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>danieljohnlewis</dc:creator>
+
+      <pubDate>Thu, 09 Aug 2012 09:44:52 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/2821#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/2821#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/2821?action=diff&amp;amp;version=1"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

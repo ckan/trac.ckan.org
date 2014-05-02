@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2973: Move new_authz.py into logic/auth/__init__.py</title>
+    <link>http://localhost/ticket/2973</link>
+    <description>&lt;p&gt;
+Makes sense to keep all auth stuff under logic/auth.
+&lt;/p&gt;
+&lt;p&gt;
+Also decide which functions from new_authz.pu should be marked private with _.
+&lt;/p&gt;
+&lt;p&gt;
+Also decide which functions from new_authz.py are really helpers for the auth functions in get.py, update.py and delete.py, and should maybe moved to another file, e.g. logic/auth/helpers.py
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2973</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+ </channel>
+</rss>

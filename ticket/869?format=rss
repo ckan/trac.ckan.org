@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #869: Add plugin interface to allow editing and extending of config by extensions</title>
+    <link>http://localhost/ticket/869</link>
+    <description>&lt;p&gt;
+Use case: extensions need to add to template and public search paths if they wish to have templates or extra static files (such as js etc).
+&lt;/p&gt;
+&lt;p&gt;
+Allowing plugins to edit the config dictionary on load would allow this (and more!).
+&lt;/p&gt;
+&lt;p&gt;
+Are there any security considerations here? (Is is bad to allow extensions to make arbitrary changes to the config information?)
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/869</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Sat, 11 Dec 2010 09:27:42 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/869#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/869#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Closed by cset:83734b5e251c which implements an IConfigurer interface.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Mon, 13 Dec 2010 10:14:22 GMT</pubDate>
+      <title>milestone changed</title>
+      <link>http://localhost/ticket/869#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/869#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan-v1.3&lt;/em&gt; to &lt;em&gt;ckan-v1.3-sprint-1&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

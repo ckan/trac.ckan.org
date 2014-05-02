@@ -1,0 +1,9 @@
+= Access Control - Extension Proposal =
+
+(Based on existing functionality detailed at AccessControl)
+
+== New Requirements ==
+
+ * Assigning rights by user groups (not just by user).
+ * Lock down of the an 'extra' field, so that only authorized users can make it a particular value. 
+ e.g. Only 'FCO editors' and 'admins' can set the 'department' field to the value 'Foreign and Commenwealth Office'.

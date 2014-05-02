@@ -1,0 +1,15 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+184	Stats page	rgrp	dread	"Create /stats/ page displaying main statistics, e.g:
+
+  * Most highly rated packages
+  * Most edited packages
+  * Largest groups
+  * Top tags (by packages)
+  * Package addition rate
+  * Users with most packages
+
+Related to ticket:181 - Stats side-bar
+
+== Details ==
+
+  * Should create a stats module and then use some/all of these features on stats page (likely over time that stats features much more extensive than what we display)"	enhancement	new	critical		ckan					

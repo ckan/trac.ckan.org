@@ -1,0 +1,6 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+370,Use better email encryption for author_email and maintainer_email,shudson@…,,"The JavaScript email encryption used is not very reassuring. Google's MailHide is a much better solution that is easily implemented.
+
+http://www.google.com/recaptcha/mailhide/
+
+Check on the Mailhide API where there are even some Python libraries already built.",enhancement,new,awaiting triage,ckan-backlog,ckan,,,,ckan,none

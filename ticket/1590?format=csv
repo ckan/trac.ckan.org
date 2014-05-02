@@ -1,0 +1,21 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1590,Create customized feeds for the IATI Registry,amercader,amercader,"We need a way to track changes on the registry (datasets edited or updated), globally and on a per country/publisher/etc. basis. RSS and Atom feeds are really popular, and after closing #191 and #1498 crating them from the search results should be fairly easy.
+
+The following URLs are pretty self-explanatory:
+
+{{{
+http://localhost:5000/feed/registry.rss
+
+http://localhost:5000/feed/country/AF.rss
+http://localhost:5000/feed/publisher/worldbank.rss
+http://localhost:5000/feed/organisation_type/10.rss
+}}}
+
+As we need to implement custom wrappers for countries, publishers, etc, we might as well offer a fully customizable feed, e.g.:
+{{{
+http://localhost:5000/feed/custom.rss?q=activity_count:[* TO 100]
+http://localhost:5000/feed/custom.rss?publishertype=primary_source
+}}}
+
+Apart from the actual feeds, there will be a small amount of work at  the template level to add the links to the suitable pages (and maybe a generic page showing all available feeds)
+",enhancement,closed,major,,iati,fixed,feeds,,ckan,none

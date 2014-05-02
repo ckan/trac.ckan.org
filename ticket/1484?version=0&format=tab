@@ -1,0 +1,8 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1484	Creating package with duplicate tags causes exception	dread	dread	"e.g.
+{{{curl http://localhost:5000/api/action/package_create -d '{""name"":""test5"", ""tags"":[{""name"": ""tag6""}, {""name"": ""tag6""}]}' -H 'Authorization:tester'
+}}}
+
+Also broken in Web UI (adding a package).
+
+Affects API and Web UI from 1.4.1 to 1.5."	defect	new	minor	ckan-sprint-2011-12-05	ckan				ckan	none

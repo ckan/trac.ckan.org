@@ -1,0 +1,6 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+975,Placeholder attribute not displayed in some browsers leading to poor UX,rgrp,rgrp,"Currently placeholder text like 'Search ...' is not shown in some browsers (e.g. FF and IE).
+
+This leads to poor UX, for example in top bar search where it unclear whether that box is for login or search.
+
+We should fix this by finding a way to display placeholder attribute in all browsers.",defect,closed,minor,ckan-v1.4-sprint-1,ckan,fixed,ux,,,

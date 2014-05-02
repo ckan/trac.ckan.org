@@ -1,0 +1,9 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2897	db_to_form_package_schema() crashes historical dataset page	seanh		"If there's an IDatasetForm plugin active with a db_to_form_schema() method based on db_to_form_package_schema(), then viewing historical versions of datasets (e.g. http://127.0.0.1:5000/dataset/dasd%402012-08-30T12%3A26%3A18.524191) crashes.
+
+Reason is that revison_id and revision_timestamp need to be added to db_to_form_package_schema(), something like:
+
+        schema.update({'revision_id': [validators.ignore_missing, unicode]})
+        schema.update({'revision_timestamp':
+            [validators.ignore_missing, unicode]})
+"	defect	new	awaiting triage	ckan-v1.8.1	ckan				ckan	none

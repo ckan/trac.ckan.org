@@ -1,0 +1,12 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2858,Harvester tweaks,toby,toby,"I've had a look at the new harvesting theme, it looks great, thanks. I
+did some minor changes and reworded the errors as per tickets #2852
+and #2853, but I kept the messages red, as the only other ones
+available (""flash_notice"") are blue and are not very prominent.
+
+Toby, on the old form there was a list of descriptions for all
+available harvesters which could be nice to have back. I couldn't find
+an easy way with the new form macro, so I don't know how easy would be
+to implement
+
+http://i.imgur.com/pzS8z.png",enhancement,closed,awaiting triage,demo phase 3,ckan,fixed,,,ckan,none

@@ -1,0 +1,21 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+4,Find a package,johnbywater,somebody,"== As a ==
+
+Visitor
+
+== I want to ==
+
+Locate packages that I am, or might be, interested in
+
+== So that ==
+
+I know what packages exist and can read the information associated with those packages
+
+== Notes ==
+
+Find a package by searching by (or some combination thereof):
+    1. tag
+    2. string contained in title or description
+    3. license
+
+",enhancement,closed,major,v0.7,ckan,fixed,,,,

@@ -1,0 +1,426 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      #2812 (Groups description needs improving)
+     – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="prev" href="2811.html" title="Ticket #2811" />
+        <link rel="last" href="3030.html" title="Ticket #3030" />
+        <link rel="help" href="../wiki/TracGuide.html" />
+        <link rel="alternate" href="2812%3Fformat=csv" type="text/csv" class="csv" title="Comma-delimited Text" /><link rel="alternate" href="2812%3Fformat=tab" type="text/tab-separated-values" class="tab" title="Tab-delimited Text" /><link rel="alternate" href="2812%3Fformat=rss" type="application/rss+xml" class="rss" title="RSS Feed" />
+        <link rel="next" href="2813.html" title="Ticket #2813" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/ticket.css" type="text/css" />
+        <link rel="first" href="1.html" title="Ticket #1" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript">
+      var auto_preview_timeout=2.0;
+      var form_token="93d81ccf9a7bb1c456462f62";
+    </script>
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script><script type="text/javascript" src="../chrome/common/js/wikitoolbar.js"></script><script type="text/javascript" src="../chrome/common/js/resizer.js"></script><script type="text/javascript" src="../chrome/common/js/auto_preview.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("div.description").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $(".foldable").enableFolding(false, true);
+        var args = {realm: "ticket", id: 2812, escape_newlines: 0}
+        $("#comment").autoPreview("/wiki_render", args, function(textarea, text, rendered) {
+            $("#ticketchange div.comment").html(rendered);
+            if (rendered)
+              $("#ticketchange").show();
+            else if ($("#ticketchange ul.changes").length == 0)
+              $("#ticketchange").hide();
+        });
+        $("#trac-comment-editor textarea").autoPreview("/wiki_render", args,
+                                                       function(textarea, text, rendered) {
+          var comment = $("#trac-comment-editor").next("div.comment");
+          comment.html(rendered);
+          if (rendered)
+            comment.show();
+          else
+            comment.hide();
+        });
+        $("#modify").parent().toggleClass("collapsed");
+        $(".trac-topnav a").click(function() { $("#modify").parent().removeClass("collapsed"); });
+        /* only enable control elements for the currently selected action */
+        var actions = $("#action input[name='action']");
+        function updateActionFields() {
+          actions.each(function () {
+            $(this).siblings().find("*[id]").enable($(this).checked());
+            $(this).siblings().filter("*[id]").enable($(this).checked());
+          });
+        }
+        actions.click(updateActionFields);
+        updateActionFields();
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="../wiki/TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li class="active"><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="2811.html" title="Ticket #2811">Previous Ticket</a></span></li><li class="last"><span><a class="next" href="2813.html" title="Ticket #2813">Next Ticket</a> &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="ticket">
+      <h1 id="trac-ticket-title">
+          <a href="2812.html">Ticket #2812</a>
+          <span class="status">(closed enhancement: invalid)</span>
+      </h1>
+      <div id="ticket">
+  <div class="date">
+    <p>Opened <a class="timeline" href="../timeline%3Ffrom=2012-08-08T09:59:13Z&amp;precision=second.html" title="2012-08-08T09:59:13Z in Timeline">21 months</a> ago</p>
+    <p>Last modified <a class="timeline" href="../timeline%3Ffrom=2012-08-09T14:58:10Z&amp;precision=second.html" title="2012-08-09T14:58:10Z in Timeline">21 months</a> ago</p>
+  </div>
+  <h2 class="summary searchable">Groups description needs improving</h2>
+  <table class="properties">
+    <tr>
+      <th id="h_reporter">Reported by:</th>
+      <td headers="h_reporter" class="searchable">
+        <a href="../query%3Fstatus=!closed&amp;reporter=markw.html">markw</a>
+      </td>
+      <th id="h_owner">Owned by:</th>
+      <td headers="h_owner">
+        <a href="../query%3Fstatus=!closed&amp;owner=toby.html">toby</a>
+      </td>
+    </tr>
+    <tr>
+        <th id="h_priority">
+          Priority:
+        </th>
+        <td headers="h_priority">
+              <a href="../query%3Fstatus=!closed&amp;priority=awaiting+triage.html">awaiting triage</a>
+        </td>
+        <th id="h_milestone">
+          Milestone:
+        </th>
+        <td headers="h_milestone">
+              <a class="closed milestone" href="../milestone/demo&#32;phase&#32;3.html">demo phase 3</a>
+        </td>
+    </tr><tr>
+        <th id="h_component">
+          Component:
+        </th>
+        <td headers="h_component">
+              <a href="../query%3Fstatus=!closed&amp;component=ckan.html">ckan</a>
+        </td>
+        <th id="h_keywords">
+          Keywords:
+        </th>
+        <td headers="h_keywords" class="searchable">
+        </td>
+    </tr><tr>
+        <th id="h_cc">
+          Cc:
+        </th>
+        <td headers="h_cc" class="searchable">
+        </td>
+        <th id="h_repo">
+          Repository:
+        </th>
+        <td headers="h_repo">
+              <a href="../query%3Fstatus=!closed&amp;repo=ckan.html">ckan</a>
+        </td>
+    </tr><tr>
+        <th id="h_theme">
+          Theme:
+        </th>
+        <td headers="h_theme">
+              <a href="../query%3Fstatus=!closed&amp;theme=none.html">none</a>
+        </td>
+        <th>
+        </th>
+        <td>
+        </td>
+    </tr>
+  </table>
+  <div class="description">
+    <h3 id="comment:description">
+      Description
+    </h3>
+    <div class="searchable">
+      <p>
+The 'What are Groups?' text at &lt;<a class="ext-link" href="http://demo.ckan.org/group"><span class="icon">​</span>http://demo.ckan.org/group</a>&gt; is a
+bit naff. Here is a suggested replacement:
+</p>
+<p>
+What are groups?
+</p>
+<p>
+Groups allow you to group users and data together so that they are
+easier to manage. For example datasets in a group could be visible
+only to group members, or publicly visible but only editable by group
+members.
+</p>
+<p>
+Groups can be used to collect together datasets from a single
+publisher, or related to a particular project, for example.
+</p>
+
+    </div>
+  </div>
+</div>
+          
+
+        <div>
+          <h2 class="foldable">Change History</h2>
+          <div id="changelog">
+              <div class="change" id="trac-change-1">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:1" class="cnum">
+      <a href="2812.html#comment:1">comment:1</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-08-08T17:00:00Z&amp;precision=second.html" title="2012-08-08T17:00:00Z in Timeline">21 months</a> ago by toby
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Owner</strong>
+        changed from <em>toby</em> to <em>shevski</em>
+    </li><li>
+      <strong>Status</strong>
+        changed from <em>new</em> to <em>assigned</em>
+    </li><li>
+      <strong>Milestone</strong>
+        changed from <em>demo phase 4</em> to <em>demo phase 3</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+@ira,
+</p>
+<p>
+do you want this change?
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-2">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:2" class="cnum">
+      <a href="2812.html#comment:2">comment:2</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-08-09T10:14:00Z&amp;precision=second.html" title="2012-08-09T10:14:00Z in Timeline">21 months</a> ago by shevski
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Owner</strong>
+        changed from <em>shevski</em> to <em>toby</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+Current text does need updating, but I think we need an explanation along the lines of:
+</p>
+<p>
+"Groups allow you to group together datasets under a organisation (for example, the Department of Health) or topic (e.g. Transport, Health) so make it easier for users to browse datasets by theme.
+</p>
+<p>
+Groups also enable you to assign roles and authorisation to members of the group - i.e. individuals can be given the right to publish datasets from a particular organisation."
+</p>
+<p>
+But even that could be clearer. 
+</p>
+<p>
+Mark's text could be misleading since we haven't currently implemented private datasets or the right auth settings.
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-3">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:3" class="cnum">
+      <a href="2812.html#comment:3">comment:3</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-08-09T10:45:56Z&amp;precision=second.html" title="2012-08-09T10:45:56Z in Timeline">21 months</a> ago by toby
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Status</strong>
+        changed from <em>assigned</em> to <em>closed</em>
+    </li><li>
+      <strong>Resolution</strong>
+        set to <em>fixed</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+changed
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-4">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:4" class="cnum">
+      <a href="2812.html#comment:4">comment:4</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-08-09T14:05:02Z&amp;precision=second.html" title="2012-08-09T14:05:02Z in Timeline">21 months</a> ago by markw
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Status</strong>
+        changed from <em>closed</em> to <em>reopened</em>
+    </li><li>
+      <strong>Resolution</strong>
+        <em>fixed</em> deleted
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+That's still fairly terrible. Also surely the auth stuff is part of Ross's Organizations stuff? It doesn't matter much if it's implemented yet, that's why this is a demo. But anyway, here is a more generic but readable version based on Ira's text above:
+</p>
+<p>
+Groups allow you to group users and data together so that they are easier to manage. Group owners can assign roles and authorisations, giving each project or department control of its own data publishing.
+</p>
+<p>
+Users can browse or search by group, making it easier to find the data they are looking for.
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-5">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:5" class="cnum">
+      <a href="2812.html#comment:5">comment:5</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-08-09T14:49:45Z&amp;precision=second.html" title="2012-08-09T14:49:45Z in Timeline">21 months</a> ago by toby
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Status</strong>
+        changed from <em>reopened</em> to <em>closed</em>
+    </li><li>
+      <strong>Resolution</strong>
+        set to <em>invalid</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+@markw
+</p>
+<p>
+I think you are talking about a different ticket
+closing 
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-6">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:6" class="cnum">
+      <a href="2812.html#comment:6">comment:6</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-08-09T14:58:10Z&amp;precision=second.html" title="2012-08-09T14:58:10Z in Timeline">21 months</a> ago by toby
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+@markw,
+</p>
+<p>
+Actually I see you also want some text changes
+</p>
+<p>
+please don't add unrelated discussions to tickets as it causes noise is disruptive and I just end up closing tickets as won't fix etc.
+</p>
+<p>
+I have updated the text as it was assigned to me and so i am still keeping this closed as I did as requested. Can you an ira sort this out between yourselves and create a new ticket when you have agreement
+</p>
+<p>
+Thanks
+</p>
+
+    </div>
+
+              </div>
+          </div>
+        </div>
+      <div id="help"><strong>Note:</strong> See
+        <a href="../wiki/TracTickets.html">TracTickets</a> for help on using
+        tickets.</div>
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="first">
+          <a rel="nofollow" href="2812%3Fformat=csv" class="csv">Comma-delimited Text</a>
+        </li><li>
+          <a rel="nofollow" href="2812%3Fformat=tab" class="tab">Tab-delimited Text</a>
+        </li><li class="last">
+          <a rel="nofollow" href="2812%3Fformat=rss" class="rss">RSS Feed</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

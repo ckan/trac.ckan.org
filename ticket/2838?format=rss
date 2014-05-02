@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2838: Context variables accepted by action functions need to be documented</title>
+    <link>http://localhost/ticket/2838</link>
+    <description>&lt;p&gt;
+I was doing this:
+&lt;/p&gt;
+&lt;pre class="wiki"&gt;context = {'model': base.model, 'session': base.model.Session,
+                    'user': toolkit.c.user or toolkit.c.author,
+                    'extras_as_string': True}
+group_dict = logic.get_action('group_show')(context,
+                    {'id': group_id})
+&lt;/pre&gt;&lt;p&gt;
+in an extension and one of the group_dicts fields, one that uses convert_to/from_extras, was coming out with the wrong value. It took me ages to realise that I had to pass &lt;tt&gt;'extras_as_string': True&lt;/tt&gt; in the context. I don't think this or other context variables are documented anywhere.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2838</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+ </channel>
+</rss>

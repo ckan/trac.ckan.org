@@ -1,0 +1,19 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1242,thedatahub.org's login page,timmcnamara,,"The right hand side of [http://thedatahub.org/user/login thedatahub.org login screen] is a little confusing: 
+
+{{{
+    Not a member?
+
+    Join CKAN to contribute packages under your own name.
+
+     - Register
+     - Reset your password
+     - Privacy Policy
+}}}
+
+Suggested improvements to make:
+
+ - replace CKAN with thedatahub.org
+ - in general, edit the copy to be more inviting
+ - remove ""Reset your password"" from that bubble
+ - move the privacy policy link to somewhere less prominent ",enhancement,closed,awaiting triage,,ckan,fixed,,,ckan,none

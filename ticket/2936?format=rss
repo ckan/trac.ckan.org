@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2936: Updating a group via the API clears its packages</title>
+    <link>http://localhost/ticket/2936</link>
+    <description>&lt;p&gt;
+If the group dict that you post to the API does not have any 'packages' key then all the group's packages get removed. I think it would be better if you could just update e.g. the group's description without having to also post the list of packages, and apparently this is how other update API actions work.
+&lt;/p&gt;
+&lt;p&gt;
+Might be worth checking all the update API actions for this behaviour, and making sure they're all consistent
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2936</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+ </channel>
+</rss>

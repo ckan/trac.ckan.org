@@ -1,0 +1,6 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2472	clean up datastore controller to get rid of datastore_url enables checks	kindly	amercader	"Datastore_url enabled checks are useless.
+
+We should probably change this to datastore_url = 'active' and only update the flag to when a attempt at a post is made. 
+
+This will need to be removed from the form at some point."	enhancement	closed	minor	ckan-v1.8	ckan	fixed	datastore		ckan	none

@@ -1,0 +1,2 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+455,SOLR - suggest 1 pager about how system would work,johnbywater,,"Either CKAN writes to SOLR and Drupal reads from SOLR, or CKAN writes to SOLR and Drupal reads SOLR via CKAN API (so search resource locations are unaffected).",task,closed,awaiting triage,,ckan,invalid,,,,

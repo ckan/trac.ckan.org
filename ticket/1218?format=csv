@@ -1,0 +1,14 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1218,Colour the History tab icon,minspamboks@…,dread,"Change the color of the ""History"" tab icon to yellowish, like the rest of the icons in the other tabs (""View"" and ""Edit"", ""Authorization"").
+
+== Reasoning ==
+
+When you view a data package, for instance
+http://ckan.net/package/thesaurus-w, you will see ""View"", ""Edit"",
+""History"" tabs on the top. ""History"" tab has a black-and-white icon
+which makes it look like an inactive/disabled tab (since the text is
+also grayed out when the tab is not selected). This is not a major
+issue, but it is a little bit confusing for the users. This icon
+exists in v1.3.2 and also in v1.4.1a (that runs on ckan.net).
+
+The simple solution would be to change the color of the ""History"" tab icon and give it the same yellowish color like the rest of the icons in the other tabs (e.g. ""View"" and ""Edit"").",enhancement,closed,minor,ckan-sprint-2011-10-28,ckan,fixed,,,ckan,none

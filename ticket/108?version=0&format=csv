@@ -1,0 +1,17 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+108,Package search in the REST API,rgrp,dread,"Add package search facility in the rest api at /api/rest/search
+
+Queries can be provided as for the normal package search either by posting to that url or by performing a get with a query string.
+
+E.g. .../api/rest/search?q=xyz
+
+Additional parameters in addition to query (""q"") are:
+  * limit
+  * offset
+  * full
+
+Return value is json encoded dictionary with keys:
+  * 'packages': value is list of package names
+
+TODO?: provide query parameters as key value pairs or as json-encoded dictionary?
+",enhancement,new,critical,v0.10,ckan,,,,,

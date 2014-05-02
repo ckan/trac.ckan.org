@@ -1,0 +1,14 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1668	repoze version discrepency	dread		"There's a discrepency in repoze.who versions between the source and package installs:
+
+ * repoze.who - package 1.0.18 vs source 1.0.19
+ * repoze.who-friendlyform - package 1.0b3 vs source 1.0.8
+
+We get a test failure [1] with the 1.0b3 version (from the ubuntu 10.04 python-repoze.who-plugins package). But we've not noticed any problems on s057 instances (br, no, ie etc) which have the package versions of repoze.who.
+
+The reason the package install uses the earlier packaged versions rather than the ones we'd like is that repoze uses all sorts of horrendous import hacks, making it too difficult to put into our 'ckan-conflict' source package.
+
+James suggests we 'do something horrible like dynamically patch repoze on CKAN import'.
+
+[1] http://buildbot.okfn.org/builders/builder-ckan/builds/1371/steps/shell/logs/stdio
+ERROR: ckan.tests.functional.test_user.TestUserController.test_user_create_unicode"	defect	new	awaiting triage	ckan-backlog	ckan			thejimmyg	ckan	none

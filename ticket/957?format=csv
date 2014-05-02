@@ -1,0 +1,8 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+957,"new ""kind "" field added to resources",kindly,kindly,"The new field was outlined in 
+
+http://lists.okfn.org/pipermail/ckan-discuss/2011-February/000887.html
+
+it says
+
+'''Can be ""data"", ""metadata"", ""service"", NULL. There is a need to do this for UKLP where some of the data associated with a   package is metadata, some is data and some could be a service.'''",enhancement,closed,minor,,ckan,wontfix,,,ckan,none

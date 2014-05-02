@@ -1,0 +1,25 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+852	Dataset upload feature (master ticket)	wwaites	wwaites	"2 (4) use cases: (With and without access to auth keys.)
+
+ 1. upload form on ckan (by default local system has auth key for storage)
+ 2. datapkg upload (client) (by default without key) (plumbing done)
+
+Most important are:
+
+1. Upload form on ckan.net (with access to keys)
+2. API for getting credentials for upload from ckan.net api (without access to keys).
+
+Aside: Once 2 was done we could deprecate storage.ckan.net
+
+=== Sub-tickets ===
+
+ * #853 - plumbing for credential-less rest upload
+ * #879 - Storage auth API
+ * #877 - File upload in WUI
+ * #878 - Integrate file upload with workflow around package resources
+
+=== More Info ===
+
+ * Upload/storage discussion: http://ckan.okfnpad.org/storage
+  * For api to generate upload key (for e.g. datapkg usage) suggest locating at ckan.net/api/utils/
+"	enhancement	assigned	critical	ckan-v1.3-sprint-1	DGU					

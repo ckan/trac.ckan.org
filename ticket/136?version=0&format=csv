@@ -1,0 +1,14 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+136,User has publicly viewable page,dread,rgrp,"A user's 'home page' is at:
+user/<user.id>
+e.g. user/28394723982-03849472
+
+Step 1:
+* Current user home page with recent edits
+
+Step 2:
+Readonly
+* Number of edits
+* Number of Packages they are admin of
+
+How do we do a nicer URL for the home page - can we use their openid login?",enhancement,new,critical,v0.11,ckan,,,,,

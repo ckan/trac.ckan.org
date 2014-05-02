@@ -1,0 +1,12 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1658	Implement proxy caching	ross	ross	"Implement proxy caching for performance gains
+
+* Analysis of best solution and what we can deliver in a reasonable time [2d]
+
+* Checks for presence of cookie 'auth_tkt' and appropriate setup for media  [2d]
+
+* Remove session requirements for user who isn't logged in [3d]
+   
+* Document the configuration and setup so that it can be easily modified and replicated [1d]
+
+"	enhancement	closed	awaiting triage		ckan	wontfix	[8d]		ckan	none

@@ -1,0 +1,17 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+220,UI Review - Package read,dread,nickstenning,"Package page [/package/mypackagename]
+ * Design
+  * In general: a huge amount of visual and typographic noise: ""Package:"" is redundant.
+  * ""{edit}"", ""{history}"" -- ugly, and it's not clear that these are primary actions on this page. Notably, why on earth is ""make an enquiry with Is It Open?"" bigger than these?
+  * Openness/downloadability icons: need help, as discussed earlier
+  * ""Rating:"" redundant, as is the second set of stars -- why can't both the display and rate widget
+    * Rating - alternative to GET on set_rating.
+  * ""Metadata:"" technospeak, probably redundant.
+  * <li> bullets add nothing.
+  * Title, Version, URL can probably go in one line.
+  * Resources can be made more prominent.
+  * Author, author email and Maintainer, maintainer email can be merged.
+  * Groups, tags in little boxes?
+  * Notes made more delineated -- Markdown has the capacity to look like other parts of the page: perhaps monospace the typeface?
+  * Don't show extras unless there are any.
+",enhancement,closed,critical,v0.11,ckan,fixed,,,,

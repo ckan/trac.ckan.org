@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+331,Timezone of CKAN timestamps should be configurable,rgrp,,"Revisions are timestamped using the server's clock, which may not relate to the expected timezone for the site. e.g. the Norway site has a server on GMT. No timezone info is displayed either.
+
+Would like to set timezone for a CKAN instance to use in rendering revision timestamps. For example, use CET or EST timezone.",enhancement,new,awaiting triage,ckan-backlog,ckan,,,,ckan,none

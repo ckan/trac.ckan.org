@@ -1,0 +1,11 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1388	etags caching on home page	dread		"Needs to update on:
+ 1. language - It's broken on thedatahub.org if you change to German and then click on the CKAN icon top-left to go to thedatahub.org again.
+AND
+ 2. whether signed in or not - #1373
+BUT not latest revisions (which is what it was)
+
+Or get rid of etag caching on this page and others?
+
+
+"	defect	closed	major	ckan-backlog	ckan	fixed		kindly	ckan	none

@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1171: Citation instructions on dataset and resource view pages</title>
+    <link>http://localhost/ticket/1171</link>
+    <description>&lt;p&gt;
+Some sort of citation helper. Something small on the dataset and resource page that would show how to cite.
+&lt;/p&gt;
+&lt;p&gt;
+wwaites: Some related thoughts on this from opb: &lt;a class="ext-link" href="http://homepages.inf.ed.ac.uk/opb/papers/ssdbm2006.pdf"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://homepages.inf.ed.ac.uk/opb/papers/ssdbm2006.pdf&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+timclicks: I'm looking at Dataverse for the first time&lt;a class="missing changeset" title="No default repository defined"&gt;[0]&lt;/a&gt;. It seems very popular in the social sciences. I noticed that there is a recommended citation for each dataset. For example, &lt;a class="missing changeset" title="No default repository defined"&gt;[1]&lt;/a&gt; is has this one: "Targeted Input Programme (TIP) 2000-01", &lt;a class="ext-link" href="http://hdl.handle.net/1902.1/SSC-MWI-TIP2000-01-M1"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://hdl.handle.net/1902.1/SSC-MWI-TIP2000-01-M1&lt;/a&gt; V1 [Version]"
+&lt;/p&gt;
+&lt;h2 id="Implementation"&gt;Implementation&lt;/h2&gt;
+&lt;p&gt;
+Add a small box at bottom of dataset / resource page (or in sidebar on dataset page) with title "Cite this" with contents like:
+&lt;/p&gt;
+&lt;p&gt;
+%title. %author. Retrieved %date. %site_title.
+&lt;/p&gt;
+&lt;p&gt;
+For resource: %title = %dataset_title. %resource_name.
+&lt;/p&gt;
+&lt;p&gt;
+Could also add export to ref managers (e.g. to bibtex) but that is for later.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1171</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Sat, 03 Mar 2012 09:01:37 GMT</pubDate>
+      <title>summary, description changed; keywords, milestone set</title>
+      <link>http://localhost/ticket/1171#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1171#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;keywords&lt;/strong&gt;
+              &lt;em&gt;[0.25d]&lt;/em&gt; &lt;em&gt;academia&lt;/em&gt; added
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;summary&lt;/strong&gt;
+                changed from &lt;em&gt;Citation button&lt;/em&gt; to &lt;em&gt;Citation instructions on dataset and resource view pages&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1171?action=diff&amp;amp;version=1"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                set to &lt;em&gt;ckan-v1.7&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Sat, 03 Mar 2012 09:02:46 GMT</pubDate>
+      <title>keywords, description changed</title>
+      <link>http://localhost/ticket/1171#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/1171#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;keywords&lt;/strong&gt;
+              &lt;em&gt;volunteers&lt;/em&gt; &lt;em&gt;xsmall&lt;/em&gt; added
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1171?action=diff&amp;amp;version=2"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>ross</dc:creator>
+
+      <pubDate>Mon, 28 May 2012 11:07:49 GMT</pubDate>
+      <title>milestone changed</title>
+      <link>http://localhost/ticket/1171#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/1171#comment:3</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan-v1.7&lt;/em&gt; to &lt;em&gt;ckan-backlog&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>ross</dc:creator>
+
+      <pubDate>Tue, 11 Sep 2012 10:18:25 GMT</pubDate>
+      <title>keywords, status, milestone changed; owner set</title>
+      <link>http://localhost/ticket/1171#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/1171#comment:4</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;keywords&lt;/strong&gt;
+              &lt;em&gt;[0.25d]&lt;/em&gt; removed
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;owner&lt;/strong&gt;
+              set to &lt;em&gt;mark.wainwright&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;assigned&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan-backlog&lt;/em&gt; to &lt;em&gt;ckan 2.0&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+I have implemented this on the datahub, but this change likely needs to be made to CKAN core. Probably as part of 2.0.
+&lt;/p&gt;
+&lt;p&gt;
+The format on tdh is currently:
+&lt;/p&gt;
+&lt;p&gt;
+${TITLE}. ${AUTHOR}.
+Retrieved ${UTC time}.
+${DATASET LINK}
+&lt;/p&gt;
+&lt;p&gt;
+Best discuss and agree on what format should be supported. Mark, I've assigned this to you as it is tagged academia ;)
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

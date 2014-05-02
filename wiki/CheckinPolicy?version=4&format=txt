@@ -1,0 +1,20 @@
+CKAN is open source and contributions are welcome. However, we have some guidelines for check-ins to ensure that all developers can work well together.
+
+=== Check-ins ===
+ 1. Work on the right branch - see BranchingPolicy.
+ 1. Write tests for all changes. Unit tests go into ckan/tests/{area}/ and functional tests go into ckan/tests/functional/ . Tests describe intent and stop the code regressing in the future.
+ 1. Run all the tests before you commit your code. It only takes 5 minutes! {{{nosetests --ckan ckan/tests}}}
+
+=== Starting out ===
+ * Before you can commit changes to the OKF repo, you'll need access rights - ask for these on [CkanDev ckan-dev].
+
+=== Life-cycle of a change ===
+Unless it is a terribly minor change:
+ * Create a ticket with your suggestion and design detail as necessary.
+ * Send a link to the ticket to [CkanDiscuss ckan-discuss] and ask for suggestions.
+ * Do it, whilst leaving the repo in a good state at all times (i.e. builds and works). Use another branch or bitbucket if necessary.
+ * When done, close the ticket and announce it on [CkanDiscuss ckan-discuss].
+
+=== Don't break the build ===
+ * Keep an eye on [http://buildbot.okfn.org/waterfall buildbot] to make sure you don't break the build. If you're a regular developer, ask to be added to the buildbot emails. Don't wait to be nagged by other frustrated developers ;-)
+ * If you break the build, please fix it quickly. If it may take time then email [CkanDev ckan-dev] to let others know what the plan is.

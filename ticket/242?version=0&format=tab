@@ -1,0 +1,5 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+242	Miscellaneous tidying up (v0.11)	rgrp	rgrp	"Dumping ground for various minor and miscellaneous items (mainly refactorings):
+
+  * lib/search.py: inheritance would be nicer than switching on entity in search (i.e. have SearchPackage, SearchTag etc)
+  * controllers/tag.py: why does this not use lib/search.py (but controllers/packages.py search method does)?"	defect	new	awaiting triage		ckan		search size-s			

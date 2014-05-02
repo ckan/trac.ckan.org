@@ -1,0 +1,10 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+82	Support diffing of versioned objects	rgrp	rgrp	"Should have function/facility to get a diff of a version object between 2 revisions. Function should return a dictionary of fields with diffs.
+
+Details:
+  * Do we deal with m2m relationships (and m2one on the many side)?
+  * What is diff?
+    * For text fields output of python diff command
+    * For non-text field guess just simple +/- for what was there before and now
+
+Cost: 4h (don't think this is a huge request)"	enhancement	closed	critical		vdm	fixed				

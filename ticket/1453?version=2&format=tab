@@ -1,0 +1,18 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1453	Flexible tag names	icmurray	icmurray	"Allowing more flexible tag names:
+
+ - allowing spaces
+ - allow capital letters (search is case sensitive)
+ - allow all punctuation except for commas and double-quotes '""'
+ - allow unicode
+ - commas delimit tag names in the package create/edit form
+
+Effects:
+
+ - package creation/edit form.
+ - /tag/{tagname} uri
+ - search action
+ - api controller (search/package-create/edit)
+ - web controller (search/package-create/edit)
+ - search api documentation
+ - autocomplete for tag names"	enhancement	new	major	current-ckan-sprint-2011-11-21	ckan		tags tag	dread	ckan	none

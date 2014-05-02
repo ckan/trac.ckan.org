@@ -1,0 +1,10 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1659	Cannot logout if CKAN mounted at non-root url	dread	dread	"If you set WSGIScriptAlias to mount CKAN at a URL other than / then you cannot logout without adjusting the OpenID logged_out_url to match in who.ini config. e.g.
+
+ [plugin:openid]
+ ...
+ logged_out_url = /sub/dir/user/logged_out
+
+Note: all the other URLs in who.ini should not have the /sub/dir/ - it is just this one that doesn't take account of the mounting point.
+
+The solution is to fix-up the repoze.who OpenID plugin to take account of the mounting point."	defect	closed	minor	ckan-sprint-2012-01-23	ckan	fixed			ckan	none

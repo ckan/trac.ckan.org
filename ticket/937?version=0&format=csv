@@ -1,0 +1,17 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+937,Record download stats for resources (extension),rgrp,,"As a User (especially as a Package Owner/Maintainer) I want to know how many times a resource has been downloaded (and when).
+
+So let's record download stats (as in clicks on the link for a resource).
+
+== Implementation ==
+
+ * Record info of form: resource id (or url?), timestamp
+ * Do this via javascript capturing of onclick event talking to an api
+ * API: /api/resource/{id}/download
+  * POST to increment (how do we stop spamming -- could use a nonce setup with a random string set on each page load for the js)
+  * GET to get data back { total: X, day_count: [ [yyyy-mm-dd, count], ... ] }
+
+== Questions ==
+
+ * Do we record ip addresses (to handle de-botting etc)?
+ * Do we count preview clicks as well?",enhancement,new,major,ckan-v1.4,ckan,,,,,

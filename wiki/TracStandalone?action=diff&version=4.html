@@ -1,0 +1,1091 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+    <html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      TracStandalone (diff) – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="help" href="TracGuide.html" />
+        <link rel="up" href="TracStandalone%3Faction=history.html" title="Page history" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/wiki.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/diff.css" type="text/css" />
+        <link rel="prev" href="TracStandalone%3Faction=diff&amp;version=3.html" title="Version 3" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/diff.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="../chrome/common/css/diff.css" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last active"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="TracStandalone%3Faction=diff&amp;version=3.html" title="Version 3">Previous Change</a></span></li><li><a href="TracStandalone%3Faction=history.html" title="Page history">Wiki History</a></li><li class="last"><span class="missing">Next Change &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="wiki">
+      <h1>
+        Changes between
+          <a href="TracStandalone%3Fversion=3.html">Version 3</a> and
+          <a href="TracStandalone%3Fversion=4.html">Version 4</a> of
+          <a href="TracStandalone%3Fversion=4.html">TracStandalone</a>
+      </h1>
+      <form method="post" id="prefs" action="TracStandalone%3Fversion=4.html"><div><input type="hidden" name="__FORM_TOKEN" value="93d81ccf9a7bb1c456462f62" /></div>
+        <div>
+          <input type="hidden" name="action" value="diff" />
+          <input type="hidden" name="version" value="4" />
+          <input type="hidden" name="old_version" value="3" />
+          
+  <label for="style">View differences</label>
+  <select id="style" name="style">
+    <option selected="selected" value="inline">inline</option>
+    <option value="sidebyside">side by side</option>
+  </select>
+  <div class="field">
+    <label><input type="radio" name="contextall" value="0" checked="checked" />
+             Show</label>
+      <label><input type="text" name="contextlines" id="contextlines" size="2" maxlength="3" value="2" />
+             lines around each change</label><br />
+    <label><input type="radio" name="contextall" value="1" />
+           Show the changes in full context</label>
+  </div>
+  <fieldset id="ignore">
+    <legend>Ignore:</legend>
+    <div class="field">
+      <input type="checkbox" id="ignoreblanklines" name="ignoreblanklines" />
+      <label for="ignoreblanklines">Blank lines</label>
+    </div>
+    <div class="field">
+      <input type="checkbox" id="ignorecase" name="ignorecase" />
+      <label for="ignorecase">Case changes</label>
+    </div>
+    <div class="field">
+      <input type="checkbox" id="ignorewhitespace" name="ignorewhitespace" />
+      <label for="ignorewhitespace">White space changes</label>
+    </div>
+  </fieldset>
+  <div class="buttons">
+    <input type="submit" name="update" value="Update" />
+  </div>
+
+        </div>
+      </form>
+      <dl id="overview">
+        <dt class="property time">Timestamp:</dt>
+        <dd class="time">
+            05/02/14 01:33:04 (<a class="timeline" href="../timeline%3Ffrom=2014-05-02T01:33:04Z&amp;precision=second.html" title="2014-05-02T01:33:04Z in Timeline">7 minutes</a> ago)
+        </dd>
+        <dt class="property author">Author:</dt>
+        <dd class="author">
+          trac
+        </dd>
+        <dt class="property message">Comment:</dt>
+        <dd class="message">
+          
+          <p>
+--
+</p>
+
+        </dd>
+      </dl>
+      <div class="diff">
+        <div class="legend" id="diff-legend">
+          <h3>Legend:</h3>
+          <dl>
+            <dt class="unmod"></dt><dd>Unmodified</dd>
+            <dt class="add"></dt><dd>Added</dd>
+            <dt class="rem"></dt><dd>Removed</dd>
+            <dt class="mod"></dt><dd>Modified</dd>
+          </dl>
+        </div>
+        <div class="diff">
+  <ul class="entries">
+      <li class="entry">
+        <h2 id="file0">
+          <a href="TracStandalone%3Fversion=4.html">TracStandalone</a>
+        </h2>
+        <table class="trac-diff inline" summary="Differences" cellspacing="0">
+              <colgroup><col class="lineno" /><col class="lineno" /><col class="content" /></colgroup>
+              <thead>
+                <tr>
+                  <th title="Version 3">
+                    <a href="TracStandalone%3Fversion=3.html#L1">
+                      v3</a>
+                  </th>
+                  <th title="Version 4">
+                    <a href="TracStandalone%3Fversion=4.html#L1">
+                      v4</a>
+                  </th>
+                  <td> </td>
+                </tr>
+              </thead>
+            <tbody class="unmod">
+                  <tr>
+                          <th>1</th><th>1</th><td class="l"><span>= Tracd =</span> </td>
+                  </tr><tr>
+                          <th>2</th><th>2</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>3</th><th> </th><td class="l"><span>Tracd is a lightweight standalone Trac web server. In most cases it's easier to setup and runs faster than the [wiki:TracCgi CGI script].</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>3</th><td class="r"><span>Tracd is a lightweight standalone Trac web server.</span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>4</th><td class="r"><span>It can be used in a variety of situations, from a test or development server to a multiprocess setup behind another web server used as a load balancer.</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>4</th><th>5</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>5</th><th>6</th><td class="l"><span>== Pros ==</span> </td>
+                  </tr><tr>
+                          <th>6</th><th>7</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>7</th><th>8</th><td class="l"><span>&nbsp;* Fewer dependencies: You don't need to install apache or any other web-server.</span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>8</th><th> </th><td class="l"><span>&nbsp;* Fast: Should be almost as fast as the [wiki:TracModPython mod_python] version (and much faster than the [wiki:TracCgi CGI])<del>.</del></span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>9</th><td class="r"><span>&nbsp;* Fast: Should be almost as fast as the [wiki:TracModPython mod_python] version (and much faster than the [wiki:TracCgi CGI])<ins>, even more so since version 0.12 where the HTTP/1.1 version of the protocol is enabled by default</ins></span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>9</th><th>10</th><td class="l"><span>&nbsp;* Automatic reloading: For development, Tracd can be used in ''auto_reload'' mode, which will automatically restart the server whenever you make a change to the code (in Trac itself or in a plugin).</span> </td>
+                  </tr><tr>
+                          <th>10</th><th>11</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>11</th><th>12</th><td class="l"><span>== Cons ==</span> </td>
+                  </tr><tr>
+                          <th>12</th><th>13</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>13</th><th> </th><td class="l"><span>&nbsp;* Fewer features: Tracd implements a very simple web-server and is not as configurable or as scalable as Apache <del>HTTPD</del>.</span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>14</th><td class="r"><span>&nbsp;* Fewer features: Tracd implements a very simple web-server and is not as configurable or as scalable as Apache <ins>httpd</ins>.</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>14</th><th>15</th><td class="l"><span>&nbsp;* No native HTTPS support: [http://www.rickk.com/sslwrap/ sslwrap] can be used instead,</span> </td>
+                  </tr><tr>
+                          <th>15</th><th>16</th><td class="l"><span>&nbsp; &nbsp;or [http://trac.edgewall.org/wiki/STunnelTracd stunnel -- a tutorial on how to use stunnel with tracd] or Apache with mod_proxy.</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracStandalone%3Fversion=3.html#L40">…</a></th>
+                  <th><a href="TracStandalone%3Fversion=4.html#L41">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>40</th><th>41</th><td class="l"><span>To exit the server on Windows, be sure to use {{{CTRL-BREAK}}} -- using {{{CTRL-C}}} will leave a Python process running in the background.</span> </td>
+                  </tr><tr>
+                          <th>41</th><th>42</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="add">
+                  <tr class="first">
+                          <th> </th><th>43</th><td class="r"><ins>== Installing as a Windows Service ==</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>44</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>45</th><td class="r"><ins>=== Option 1 ===</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>46</th><td class="r"><ins>To install as a Windows service, get the [http://www.google.com/search?q=srvany.exe SRVANY] utility and run:</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>47</th><td class="r"><ins>{{{</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>48</th><td class="r"><ins>&nbsp;C:\path\to\instsrv.exe tracd C:\path\to\srvany.exe</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>49</th><td class="r"><ins>&nbsp;reg add HKLM\SYSTEM\CurrentControlSet\Services\tracd\Parameters /v Application /d "\"C:\path\to\python.exe\" \"C:\path\to\python\scripts\tracd-script.py\" &lt;your tracd parameters&gt;"</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>50</th><td class="r"><ins>&nbsp;net start tracd</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>51</th><td class="r"><ins>}}}</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>52</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>53</th><td class="r"><ins>'''DO NOT''' use {{{tracd.exe}}}.&nbsp; Instead register {{{python.exe}}} directly with {{{tracd-script.py}}} as a parameter.&nbsp; If you use {{{tracd.exe}}}, it will spawn the python process without SRVANY's knowledge.&nbsp; This python process will survive a {{{net stop tracd}}}.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>54</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>55</th><td class="r"><ins>If you want tracd to start automatically when you boot Windows, do:</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>56</th><td class="r"><ins>{{{</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>57</th><td class="r"><ins>&nbsp;sc config tracd start= auto</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>58</th><td class="r"><ins>}}}</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>59</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>60</th><td class="r"><ins>The spacing here is important.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>61</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>62</th><td class="r"><ins>{{{#!div</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>63</th><td class="r"><ins>Once the service is installed, it might be simpler to run the Registry Editor rather than use the `reg add` command documented above.&nbsp; Navigate to:[[BR]]</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>64</th><td class="r"><ins>`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\tracd\Parameters`</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>65</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>66</th><td class="r"><ins>Three (string) parameters are provided:</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>67</th><td class="r"><ins>||!AppDirectory ||C:\Python26\ ||</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>68</th><td class="r"><ins>||Application ||python.exe ||</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>69</th><td class="r"><ins>||!AppParameters ||scripts\tracd-script.py -p 8080 ... ||</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>70</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>71</th><td class="r"><ins>Note that, if the !AppDirectory is set as above, the paths of the executable ''and'' of the script name and parameter values are relative to the directory.&nbsp; This makes updating Python a little simpler because the change can be limited, here, to a single point.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>72</th><td class="r"><ins>(This is true for the path to the .htpasswd file, as well, despite the documentation calling out the /full/path/to/htpasswd; however, you may not wish to store that file under the Python directory.)</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>73</th><td class="r"><ins>}}}</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>74</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>75</th><td class="r"><ins>For Windows 7 User, srvany.exe may not be an option, so you can use [http://www.google.com/search?q=winserv.exe WINSERV] utility and run:</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>76</th><td class="r"><ins>{{{</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>77</th><td class="r"><ins>"C:\path\to\winserv.exe" install tracd -displayname "tracd" -start auto "C:\path\to\python.exe" c:\path\to\python\scripts\tracd-script.py &lt;your tracd parameters&gt;"</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>78</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>79</th><td class="r"><ins>net start tracd</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>80</th><td class="r"><ins>}}}</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>81</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>82</th><td class="r"><ins>=== Option 2 ===</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>83</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>84</th><td class="r"><ins>Use [http://trac-hacks.org/wiki/WindowsServiceScript WindowsServiceScript], available at [http://trac-hacks.org/ Trac Hacks]. Installs, removes, starts, stops, etc. your Trac service.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>85</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>86</th><td class="r"><ins>=== Option 3 ===</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>87</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>88</th><td class="r"><ins>also cygwin's cygrunsrv.exe can be used:</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>89</th><td class="r"><ins>{{{</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>90</th><td class="r"><ins>$ cygrunsrv --install tracd --path /cygdrive/c/Python27/Scripts/tracd.exe --args '--port 8000 --env-parent-dir E:\IssueTrackers\Trac\Projects'</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>91</th><td class="r"><ins>$ net start tracd</ins> </td>
+                  </tr><tr class="last">
+                          <th> </th><th>92</th><td class="r"><ins>}}}</ins> </td>
+                  </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>42</th><th>93</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>43</th><th>94</th><td class="l"><span>== Using Authentication ==</span> </td>
+                  </tr><tr>
+                          <th>44</th><th>95</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>45</th><th> </th><td class="l"><span>Using tracd with Apache .htpasswd files:</span> </td>
+                      </tr><tr>
+                        <th>46</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>47</th><th> </th><td class="l"><span>To create a .htpasswd file using htpasswd:</span> </td>
+                      </tr><tr>
+                        <th>48</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>49</th><th> </th><td class="l"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th>50</th><th> </th><td class="l"><span>sudo htpasswd -c /path/to/env/.htpasswd username</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>96</th><td class="r"><span>Tracd provides support for both Basic and Digest authentication. Digest is considered more secure. The examples below use Digest; to use Basic authentication, replace `--auth` with `--basic-auth` in the command line.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>97</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>98</th><td class="r"><span>The general format for using authentication is:</span> </td>
+                      </tr><tr>
+                        <th> </th><th>99</th><td class="r"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th> </th><th>100</th><td class="r"><span>&nbsp;$ tracd -p port --auth="base_project_dir,password_file_path,realm" project_path</span> </td>
+                      </tr><tr>
+                        <th> </th><th>101</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>102</th><td class="r"><span>where:</span> </td>
+                      </tr><tr>
+                        <th> </th><th>103</th><td class="r"><span>&nbsp;* '''base_project_dir''': the base directory of the project specified as follows:</span> </td>
+                      </tr><tr>
+                        <th> </th><th>104</th><td class="r"><span>&nbsp; &nbsp;* when serving multiple projects: ''relative'' to the `project_path`</span> </td>
+                      </tr><tr>
+                        <th> </th><th>105</th><td class="r"><span>&nbsp; &nbsp;* when serving only a single project (`-s`): the name of the project directory</span> </td>
+                      </tr><tr>
+                        <th> </th><th>106</th><td class="r"><span>&nbsp;Don't use an absolute path here as this won't work. ''Note:'' This parameter is case-sensitive even for environments on Windows.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>107</th><td class="r"><span>&nbsp;* '''password_file_path''': path to the password file</span> </td>
+                      </tr><tr>
+                        <th> </th><th>108</th><td class="r"><span>&nbsp;* '''realm''': the realm name (can be anything)</span> </td>
+                      </tr><tr>
+                        <th> </th><th>109</th><td class="r"><span>&nbsp;* '''project_path''': path of the project</span> </td>
+                      </tr><tr>
+                        <th> </th><th>110</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>111</th><td class="r"><span>&nbsp;* **`--auth`** in the above means use Digest authentication, replace `--auth` with `--basic-auth` if you want to use Basic auth.&nbsp; Although Basic authentication does not require a "realm", the command parser does, so the second comma is required, followed directly by the closing quote for an empty realm name.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>112</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>113</th><td class="r"><span>Examples:</span> </td>
+                      </tr><tr>
+                        <th> </th><th>114</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>115</th><td class="r"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th> </th><th>116</th><td class="r"><span>&nbsp;$ tracd -p 8080 \</span> </td>
+                      </tr><tr>
+                        <th> </th><th>117</th><td class="r"><span>&nbsp; &nbsp;--auth="project1,/path/to/passwordfile,mycompany.com" /path/to/project1</span> </td>
+                      </tr><tr>
+                        <th> </th><th>118</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>119</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>120</th><td class="r"><span>Of course, the password file can be be shared so that it is used for more than one project:</span> </td>
+                      </tr><tr>
+                        <th> </th><th>121</th><td class="r"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th> </th><th>122</th><td class="r"><span>&nbsp;$ tracd -p 8080 \</span> </td>
+                      </tr><tr>
+                        <th> </th><th>123</th><td class="r"><span>&nbsp; &nbsp;--auth="project1,/path/to/passwordfile,mycompany.com" \</span> </td>
+                      </tr><tr>
+                        <th> </th><th>124</th><td class="r"><span>&nbsp; &nbsp;--auth="project2,/path/to/passwordfile,mycompany.com" \</span> </td>
+                      </tr><tr>
+                        <th> </th><th>125</th><td class="r"><span>&nbsp; &nbsp;/path/to/project1 /path/to/project2</span> </td>
+                      </tr><tr>
+                        <th> </th><th>126</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>127</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>128</th><td class="r"><span>Another way to share the password file is to specify "*" for the project name:</span> </td>
+                      </tr><tr>
+                        <th> </th><th>129</th><td class="r"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th> </th><th>130</th><td class="r"><span>&nbsp;$ tracd -p 8080 \</span> </td>
+                      </tr><tr>
+                        <th> </th><th>131</th><td class="r"><span>&nbsp; &nbsp;--auth="*,/path/to/users.htdigest,mycompany.com" \</span> </td>
+                      </tr><tr>
+                        <th> </th><th>132</th><td class="r"><span>&nbsp; &nbsp;/path/to/project1 /path/to/project2</span> </td>
+                      </tr><tr>
+                        <th> </th><th>133</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>134</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>135</th><td class="r"><span>=== Basic Authorization: Using a htpasswd password file ===</span> </td>
+                      </tr><tr>
+                        <th> </th><th>136</th><td class="r"><span>This section describes how to use `tracd` with Apache .htpasswd files.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>137</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>138</th><td class="r"><span>&nbsp; Note: It is necessary (at least with Python 2.6) to install the fcrypt package in order to</span> </td>
+                      </tr><tr>
+                        <th> </th><th>139</th><td class="r"><span>&nbsp; decode the htpasswd format.&nbsp; Trac source code attempt an `import crypt` first, but there</span> </td>
+                      </tr><tr>
+                        <th> </th><th>140</th><td class="r"><span>&nbsp; is no such package for Python 2.6.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>141</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>142</th><td class="r"><span>To create a .htpasswd file use Apache's `htpasswd` command (see [#GeneratingPasswordsWithoutApache below] for a method to create these files without using Apache):</span> </td>
+                      </tr><tr>
+                        <th> </th><th>143</th><td class="r"><span>{{{</span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>144</th><td class="r"><span>&nbsp;$ sudo htpasswd -c /path/to/env/.htpasswd username</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>51</th><th>145</th><td class="l"><span>}}}</span> </td>
+                  </tr><tr>
+                          <th>52</th><th>146</th><td class="l"><span>then for additional users:</span> </td>
+                  </tr><tr>
+                          <th>53</th><th>147</th><td class="l"><span>{{{</span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>54</th><th> </th><td class="l"><span>sudo htpasswd /var/www/html/.htpasswd-users username2</span> </td>
+                      </tr><tr>
+                        <th>55</th><th> </th><td class="l"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th>56</th><th> </th><td class="l"><span>then for starting the tracd:</span> </td>
+                      </tr><tr>
+                        <th>57</th><th> </th><td class="l"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th>58</th><th> </th><td class="l"><span>tracd -p 8080 --basic-auth=environmentname,/fullpath/environmentname/.htpasswd,/fullpath/environmentname /fullpath/environmentname</span> </td>
+                      </tr><tr>
+                        <th>59</th><th> </th><td class="l"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th>60</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>61</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>62</th><th> </th><td class="l"><span>Tracd provides support for both Basic and Digest authentication. The default is to use Digest; to use Basic authentication, replace `--auth` with `--basic-auth` in the examples below. (You must still specify a dialogic "realm", which can be an empty string by trailing the BASICAUTH with a comma.)</span> </td>
+                      </tr><tr>
+                        <th>63</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>64</th><th> </th><td class="l"><span>&nbsp; ''Support for Basic authentication was added in version 0.9.''</span> </td>
+                      </tr><tr>
+                        <th>65</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>66</th><th> </th><td class="l"><span>The general format for using authentication is:</span> </td>
+                      </tr><tr>
+                        <th>67</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>68</th><th> </th><td class="l"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th>69</th><th> </th><td class="l"><span>&nbsp;$ tracd -p port --auth=base_project_dir,password_file_path,realm project_path</span> </td>
+                      </tr><tr>
+                        <th>70</th><th> </th><td class="l"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th>71</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>72</th><th> </th><td class="l"><span>where:</span> </td>
+                      </tr><tr>
+                        <th>73</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>74</th><th> </th><td class="l"><span>&nbsp;* '''base_project_dir''' is the base directory of the project; note: this doesn't refer to the project name, and it is case-sensitive even for windows environments</span> </td>
+                      </tr><tr>
+                        <th>75</th><th> </th><td class="l"><span>&nbsp;* '''password_file_path''' path of the password file</span> </td>
+                      </tr><tr>
+                        <th>76</th><th> </th><td class="l"><span>&nbsp;* '''realm''' realm</span> </td>
+                      </tr><tr>
+                        <th>77</th><th> </th><td class="l"><span>&nbsp;* '''project_path''' path of the project</span> </td>
+                      </tr><tr>
+                        <th>78</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>79</th><th> </th><td class="l"><span>Example:</span> </td>
+                      </tr><tr>
+                        <th>80</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>81</th><th> </th><td class="l"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th>82</th><th> </th><td class="l"><span>&nbsp;$ tracd -p 8080 \</span> </td>
+                      </tr><tr>
+                        <th>83</th><th> </th><td class="l"><span>&nbsp; &nbsp;--auth=project1,/path/to/users.htdigest,mycompany.com /path/to/project1</span> </td>
+                      </tr><tr>
+                        <th>84</th><th> </th><td class="l"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th>85</th><th> </th><td class="l"><span>Of course, the digest file can be be shared so that it is used for more than one project:</span> </td>
+                      </tr><tr>
+                        <th>86</th><th> </th><td class="l"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th>87</th><th> </th><td class="l"><span>&nbsp;$ tracd -p 8080 \</span> </td>
+                      </tr><tr>
+                        <th>88</th><th> </th><td class="l"><span>&nbsp; &nbsp;--auth=project1,/path/to/users.htdigest,mycompany.com \</span> </td>
+                      </tr><tr>
+                        <th>89</th><th> </th><td class="l"><span>&nbsp; &nbsp;--auth=project2,/path/to/users.htdigest,mycompany.com \</span> </td>
+                      </tr><tr>
+                        <th>90</th><th> </th><td class="l"><span>&nbsp; &nbsp;/path/to/project1 /path/to/project2</span> </td>
+                      </tr><tr>
+                        <th>91</th><th> </th><td class="l"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th>92</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>93</th><th> </th><td class="l"><span>Another way to share the digest file is to specify "*"</span> </td>
+                      </tr><tr>
+                        <th>94</th><th> </th><td class="l"><span>for the project name:</span> </td>
+                      </tr><tr>
+                        <th>95</th><th> </th><td class="l"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th>96</th><th> </th><td class="l"><span>&nbsp;$ tracd -p 8080 \</span> </td>
+                      </tr><tr>
+                        <th>97</th><th> </th><td class="l"><span>&nbsp; &nbsp;--auth=*,/path/to/users.htdigest,mycompany.com \</span> </td>
+                      </tr><tr>
+                        <th>98</th><th> </th><td class="l"><span>&nbsp; &nbsp;/path/to/project1 /path/to/project2</span> </td>
+                      </tr><tr>
+                        <th>99</th><th> </th><td class="l"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th>100</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>101</th><th> </th><td class="l"><span>== How to set up an htdigest password file ==</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>148</th><td class="r"><span>&nbsp;$ sudo htpasswd /path/to/env/.htpasswd username2</span> </td>
+                      </tr><tr>
+                        <th> </th><th>149</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>150</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>151</th><td class="r"><span>Then to start `tracd` run something like this:</span> </td>
+                      </tr><tr>
+                        <th> </th><th>152</th><td class="r"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th> </th><th>153</th><td class="r"><span>&nbsp;$ tracd -p 8080 --basic-auth="projectdirname,/fullpath/environmentname/.htpasswd,realmname" /fullpath/environmentname</span> </td>
+                      </tr><tr>
+                        <th> </th><th>154</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>155</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>156</th><td class="r"><span>For example:</span> </td>
+                      </tr><tr>
+                        <th> </th><th>157</th><td class="r"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th> </th><th>158</th><td class="r"><span>&nbsp;$ tracd -p 8080 --basic-auth="testenv,/srv/tracenv/testenv/.htpasswd,My Test Env" /srv/tracenv/testenv</span> </td>
+                      </tr><tr>
+                        <th> </th><th>159</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>160</th><td class="r"><span>''Note:'' You might need to pass "-m" as a parameter to htpasswd on some platforms (OpenBSD).</span> </td>
+                      </tr><tr>
+                        <th> </th><th>161</th><td class="r"><span></span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>162</th><td class="r"><span>=== Digest authentication: Using a htdigest password file ===</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>102</th><th>163</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>103</th><th>164</th><td class="l"><span>If you have Apache available, you can use the htdigest command to generate the password file. Type 'htdigest' to get some usage instructions, or read [http://httpd.apache.org/docs/2.0/programs/htdigest.html this page] from the Apache manual to get precise instructions.&nbsp; You'll be prompted for a password to enter for each user that you create.&nbsp; For the name of the password file, you can use whatever you like, but if you use something like `users.htdigest` it will remind you what the file contains. As a suggestion, put it in your &lt;projectname&gt;/conf folder along with the [TracIni trac.ini] file.</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracStandalone%3Fversion=3.html#L105">…</a></th>
+                  <th><a href="TracStandalone%3Fversion=4.html#L166">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>105</th><th>166</th><td class="l"><span>Note that you can start tracd without the --auth argument, but if you click on the ''Login'' link you will get an error.</span> </td>
+                  </tr><tr>
+                          <th>106</th><th>167</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>107</th><th> </th><td class="l"><span>== Generating Passwords Without Apache ==</span> </td>
+                      </tr><tr>
+                        <th>108</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>109</th><th> </th><td class="l"><span>If you don't have Apache available, you can use this simple Python script to generate your passwords:</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>168</th><td class="r"><span>=== Generating Passwords Without Apache ===</span> </td>
+                      </tr><tr>
+                        <th> </th><th>169</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>170</th><td class="r"><span>Basic Authorization can be accomplished via this [http://www.4webhelp.net/us/password.php online HTTP Password generator].&nbsp; Copy the generated password-hash line to the .htpasswd file on your system.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>171</th><td class="r"><span></span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>172</th><td class="r"><span>You can use this simple Python script to generate a '''digest''' password file:</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>110</th><th>173</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>111</th><th>174</th><td class="l"><span>{{{</span> </td>
+                  </tr><tr>
+                          <th>112</th><th>175</th><td class="l"><span>#!python</span> </td>
+                  </tr><tr>
+                          <th>113</th><th>176</th><td class="l"><span>from optparse import OptionParser</span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>114</th><th> </th><td class="l"><span>import md5</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>177</th><td class="r"><span># The md5 module is deprecated in Python 2.5</span> </td>
+                      </tr><tr>
+                        <th> </th><th>178</th><td class="r"><span>try:</span> </td>
+                      </tr><tr>
+                        <th> </th><th>179</th><td class="r"><span>&nbsp; &nbsp; from hashlib import md5</span> </td>
+                      </tr><tr>
+                        <th> </th><th>180</th><td class="r"><span>except ImportError:</span> </td>
+                      </tr><tr>
+                        <th> </th><th>181</th><td class="r"><span>&nbsp; &nbsp; from md5 import md5</span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>182</th><td class="r"><span>realm = 'trac'</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>115</th><th>183</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>116</th><th>184</th><td class="l"><span># build the options</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracStandalone%3Fversion=3.html#L121">…</a></th>
+                  <th><a href="TracStandalone%3Fversion=4.html#L189">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>121</th><th>189</th><td class="l"><span>parser.add_option("-p", "--password",action="store", dest="password", type = "string",</span> </td>
+                  </tr><tr>
+                          <th>122</th><th>190</th><td class="l"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; help="the password to use")</span> </td>
+                  </tr>
+            </tbody><tbody class="add">
+                  <tr class="first">
+                          <th> </th><th>191</th><td class="r"><ins>parser.add_option("-r", "--realm",action="store", dest="realm", type = "string",</ins> </td>
+                  </tr><tr class="last">
+                          <th> </th><th>192</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; help="the realm in which to create the digest")</ins> </td>
+                  </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>123</th><th>193</th><td class="l"><span>(options, args) = parser.parse_args()</span> </td>
+                  </tr><tr>
+                          <th>124</th><th>194</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracStandalone%3Fversion=3.html#L126">…</a></th>
+                  <th><a href="TracStandalone%3Fversion=4.html#L196">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>126</th><th>196</th><td class="l"><span>if (options.username is None) or (options.password is None):</span> </td>
+                  </tr><tr>
+                          <th>127</th><th>197</th><td class="l"><span>&nbsp; &nbsp;parser.error("You must supply both the username and password")</span> </td>
+                  </tr>
+            </tbody><tbody class="add">
+                  <tr class="first">
+                          <th> </th><th>198</th><td class="r"><ins>if (options.realm is not None):</ins> </td>
+                  </tr><tr class="last">
+                          <th> </th><th>199</th><td class="r"><ins>&nbsp; &nbsp;realm = options.realm</ins> </td>
+                  </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>128</th><th>200</th><td class="l"><span>&nbsp; &nbsp;</span> </td>
+                  </tr><tr>
+                          <th>129</th><th>201</th><td class="l"><span># Generate the string to enter into the htdigest file</span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>130</th><th> </th><td class="l"><span>realm = 'trac'</span> </td>
+                      </tr><tr>
+                        <th>131</th><th> </th><td class="l"><span>kd = lambda x: md5.md5(':'.join(x)).hexdigest()</span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>202</th><td class="r"><span>kd = lambda x: md5(':'.join(x)).hexdigest()</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>132</th><th>203</th><td class="l"><span>print ':'.join((options.username, realm, kd([options.username, realm, options.password])))</span> </td>
+                  </tr><tr>
+                          <th>133</th><th>204</th><td class="l"><span>}}}</span> </td>
+                  </tr><tr>
+                          <th>134</th><th>205</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>135</th><th> </th><td class="l"><span>Note: If you use the above script you must use the --auth option to tracd, not --basic-auth, and you must set the realm in the --auth value to 'trac' (without the quotes). Example usage (assuming you saved the script as trac-digest.py):</span> </td>
+                      </tr><tr>
+                        <th>136</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>137</th><th> </th><td class="l"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th>138</th><th> </th><td class="l"><span>python trac-digest.py -u username -p password &gt;&gt; c:\digest.txt</span> </td>
+                      </tr><tr>
+                        <th>139</th><th> </th><td class="l"><span>tracd --port 8000 --auth=proj_name,c:\digest.txt,trac c:\path\to\proj_name</span> </td>
+                      </tr><tr>
+                        <th>140</th><th> </th><td class="l"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th>141</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>142</th><th> </th><td class="l"><span>Note: If you would like to use --basic-auth you need to use htpasswd tool from apache server to generate .htpasswd file. The remaining part is similar but make sure to use empty realm (i.e. coma after path). When using on Windows make sure to use -m option for it (did not tested it on *nix, so not sure if that is the case there).&nbsp; If you do not have Apache, [trac:source:/tags/trac-0.11b2/contrib/htpasswd.py htpasswd.py] may help.&nbsp; (Note that it requires a `crypt` or `fcrypt` module; see the source comments for details.)</span> </td>
+                      </tr><tr>
+                        <th>143</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>144</th><th> </th><td class="l"><span>It is possible to use md5sum utility to generate digest-password file using such method:</span> </td>
+                      </tr><tr>
+                        <th>145</th><th> </th><td class="l"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th>146</th><th> </th><td class="l"><span>echo -e "${user}:trac:${password}\c" | md5sum - &gt;&gt;to-file</span> </td>
+                      </tr><tr>
+                        <th>147</th><th> </th><td class="l"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th>148</th><th> </th><td class="l"><span>and manually delete " -" from the end and add "${user}:trac:" to the start of line from 'to-file'. You can see attachment:trac-digest-corrected.sh for detail.</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>206</th><td class="r"><span>Note: If you use the above script you must set the realm in the `--auth` argument to '''`trac`'''. Example usage (assuming you saved the script as trac-digest.py):</span> </td>
+                      </tr><tr>
+                        <th> </th><th>207</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>208</th><td class="r"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th> </th><th>209</th><td class="r"><span>&nbsp;$ python trac-digest.py -u username -p password &gt;&gt; c:\digest.txt</span> </td>
+                      </tr><tr>
+                        <th> </th><th>210</th><td class="r"><span>&nbsp;$ tracd --port 8000 --auth=proj_name,c:\digest.txt,trac c:\path\to\proj_name</span> </td>
+                      </tr><tr>
+                        <th> </th><th>211</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>212</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>213</th><td class="r"><span>==== Using `md5sum`</span> </td>
+                      </tr><tr>
+                        <th> </th><th>214</th><td class="r"><span>It is possible to use `md5sum` utility to generate digest-password file:</span> </td>
+                      </tr><tr>
+                        <th> </th><th>215</th><td class="r"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th> </th><th>216</th><td class="r"><span>&nbsp;$ printf "${user}:trac:${password}" | md5sum - &gt;&gt;user.htdigest</span> </td>
+                      </tr><tr>
+                        <th> </th><th>217</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>218</th><td class="r"><span>and manually delete " -" from the end and add "${user}:trac:" to the start of line from 'to-file'.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>219</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>220</th><td class="r"><span>== Reference ==</span> </td>
+                      </tr><tr>
+                        <th> </th><th>221</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>222</th><td class="r"><span>Here's the online help, as a reminder (`tracd --help`):</span> </td>
+                      </tr><tr>
+                        <th> </th><th>223</th><td class="r"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th> </th><th>224</th><td class="r"><span>Usage: tracd [options] [projenv] ...</span> </td>
+                      </tr><tr>
+                        <th> </th><th>225</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>226</th><td class="r"><span>Options:</span> </td>
+                      </tr><tr>
+                        <th> </th><th>227</th><td class="r"><span>&nbsp; --version&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;show program's version number and exit</span> </td>
+                      </tr><tr>
+                        <th> </th><th>228</th><td class="r"><span>&nbsp; -h, --help&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; show this help message and exit</span> </td>
+                      </tr><tr>
+                        <th> </th><th>229</th><td class="r"><span>&nbsp; -a DIGESTAUTH, --auth=DIGESTAUTH</span> </td>
+                      </tr><tr>
+                        <th> </th><th>230</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [projectdir],[htdigest_file],[realm]</span> </td>
+                      </tr><tr>
+                        <th> </th><th>231</th><td class="r"><span>&nbsp; --basic-auth=BASICAUTH</span> </td>
+                      </tr><tr>
+                        <th> </th><th>232</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [projectdir],[htpasswd_file],[realm]</span> </td>
+                      </tr><tr>
+                        <th> </th><th>233</th><td class="r"><span>&nbsp; -p PORT, --port=PORT&nbsp; the port number to bind to</span> </td>
+                      </tr><tr>
+                        <th> </th><th>234</th><td class="r"><span>&nbsp; -b HOSTNAME, --hostname=HOSTNAME</span> </td>
+                      </tr><tr>
+                        <th> </th><th>235</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; the host name or IP address to bind to</span> </td>
+                      </tr><tr>
+                        <th> </th><th>236</th><td class="r"><span>&nbsp; --protocol=PROTOCOL&nbsp; &nbsp;http|scgi|ajp</span> </td>
+                      </tr><tr>
+                        <th> </th><th>237</th><td class="r"><span>&nbsp; -q, --unquote&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;unquote PATH_INFO (may be needed when using ajp)</span> </td>
+                      </tr><tr>
+                        <th> </th><th>238</th><td class="r"><span>&nbsp; --http10&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; use HTTP/1.0 protocol version (default)</span> </td>
+                      </tr><tr>
+                        <th> </th><th>239</th><td class="r"><span>&nbsp; --http11&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; use HTTP/1.1 protocol version instead of HTTP/1.0</span> </td>
+                      </tr><tr>
+                        <th> </th><th>240</th><td class="r"><span>&nbsp; -e PARENTDIR, --env-parent-dir=PARENTDIR</span> </td>
+                      </tr><tr>
+                        <th> </th><th>241</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; parent directory of the project environments</span> </td>
+                      </tr><tr>
+                        <th> </th><th>242</th><td class="r"><span>&nbsp; --base-path=BASE_PATH</span> </td>
+                      </tr><tr>
+                        <th> </th><th>243</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; the initial portion of the request URL's "path"</span> </td>
+                      </tr><tr>
+                        <th> </th><th>244</th><td class="r"><span>&nbsp; -r, --auto-reload&nbsp; &nbsp; &nbsp;restart automatically when sources are modified</span> </td>
+                      </tr><tr>
+                        <th> </th><th>245</th><td class="r"><span>&nbsp; -s, --single-env&nbsp; &nbsp; &nbsp; only serve a single project without the project list</span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>246</th><td class="r"><span>}}}</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>149</th><th>247</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>150</th><th>248</th><td class="l"><span>== Tips ==</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracStandalone%3Fversion=3.html#L152">…</a></th>
+                  <th><a href="TracStandalone%3Fversion=4.html#L250">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>152</th><th>250</th><td class="l"><span>=== Serving static content ===</span> </td>
+                  </tr><tr>
+                          <th>153</th><th>251</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>154</th><th> </th><td class="l"><span>If `tracd` is the only web<del></del>server used for the project, </span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>252</th><td class="r"><span>If `tracd` is the only web<ins>&nbsp;</ins>server used for the project, </span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>155</th><th>253</th><td class="l"><span>it can also be used to distribute static content </span> </td>
+                  </tr><tr>
+                          <th>156</th><th>254</th><td class="l"><span>(tarballs, Doxygen documentation, etc.)</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracStandalone%3Fversion=3.html#L161">…</a></th>
+                  <th><a href="TracStandalone%3Fversion=4.html#L259">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>161</th><th>259</th><td class="l"><span>Example: given a `$TRAC_ENV/htdocs/software-0.1.tar.gz` file,</span> </td>
+                  </tr><tr>
+                          <th>162</th><th>260</th><td class="l"><span>the corresponding relative URL would be `/&lt;project_name&gt;/chrome/site/software-0.1.tar.gz`, </span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>163</th><th> </th><td class="l"><span>which in turn can be written using the relative link syntax</span> </td>
+                      </tr><tr>
+                        <th>164</th><th> </th><td class="l"><span>in the Wiki: `[/&lt;project_name&gt;/chrome/site/software-0.1.tar.gz]` </span> </td>
+                      </tr><tr>
+                        <th>165</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>166</th><th> </th><td class="l"><span>The development version of Trac supports a new `htdocs:` TracLinks </span> </td>
+                      </tr><tr>
+                        <th>167</th><th> </th><td class="l"><span>syntax for the above. With this, the example link above can be written simply </span> </td>
+                      </tr><tr>
+                        <th>168</th><th> </th><td class="l"><span>`htdocs:software-0.1.tar.gz`. </span> </td>
+                      </tr><tr>
+                        <th>169</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>170</th><th> </th><td class="l"><span>=== Using apache rewrite rules ===</span> </td>
+                      </tr><tr>
+                        <th>171</th><th> </th><td class="l"><span>In some situations when you choose to use tracd behind apache, you might experience issues with redirects, like being redirected to URLs with the wrong host or protocol. In this case (and only in this case), setting the `[trac] use_base_url_for_redirect` to `true` can help, as this will force Trac to use the value of `[trac] base_url` for doing the redirects.</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>261</th><td class="r"><span>which in turn can be written as `htdocs:software-0.1.tar.gz` (TracLinks syntax) or `[/&lt;project_name&gt;/chrome/site/software-0.1.tar.gz]` (relative link syntax). </span> </td>
+                      </tr><tr>
+                        <th> </th><th>262</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>263</th><td class="r"><span>&nbsp;''Support for `htdocs:` TracLinks syntax was added in version 0.10''</span> </td>
+                      </tr><tr>
+                        <th> </th><th>264</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>265</th><td class="r"><span>=== Using tracd behind a proxy</span> </td>
+                      </tr><tr>
+                        <th> </th><th>266</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>267</th><td class="r"><span>In some situations when you choose to use tracd behind Apache or another web server.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>268</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>269</th><td class="r"><span>In this situation, you might experience issues with redirects, like being redirected to URLs with the wrong host or protocol. In this case (and only in this case), setting the `[trac] use_base_url_for_redirect` to `true` can help, as this will force Trac to use the value of `[trac] base_url` for doing the redirects.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>270</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>271</th><td class="r"><span>If you're using the AJP protocol to connect with `tracd` (which is possible if you have flup installed), then you might experience problems with double quoting. Consider adding the `--unquote` parameter.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>272</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>273</th><td class="r"><span>See also [trac:TracOnWindowsIisAjp], [trac:TracNginxRecipe].</span> </td>
+                      </tr><tr>
+                        <th> </th><th>274</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>275</th><td class="r"><span>=== Authentication for tracd behind a proxy</span> </td>
+                      </tr><tr>
+                        <th> </th><th>276</th><td class="r"><span>It is convenient to provide central external authentication to your tracd instances, instead of using {{{--basic-auth}}}. There is some discussion about this in #9206.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>277</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>278</th><td class="r"><span>Below is example configuration based on Apache 2.2, mod_proxy, mod_authnz_ldap.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>279</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>280</th><td class="r"><span>First we bring tracd into Apache's location namespace.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>281</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>282</th><td class="r"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th> </th><th>283</th><td class="r"><span>&lt;Location /project/proxified&gt;</span> </td>
+                      </tr><tr>
+                        <th> </th><th>284</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; Require ldap-group cn=somegroup, ou=Groups,dc=domain.com</span> </td>
+                      </tr><tr>
+                        <th> </th><th>285</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; Require ldap-user somespecificusertoo</span> </td>
+                      </tr><tr>
+                        <th> </th><th>286</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; ProxyPass http://localhost:8101/project/proxified/</span> </td>
+                      </tr><tr>
+                        <th> </th><th>287</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; # Turns out we don't really need complicated RewriteRules here at all</span> </td>
+                      </tr><tr>
+                        <th> </th><th>288</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; RequestHeader set REMOTE_USER %{REMOTE_USER}s</span> </td>
+                      </tr><tr>
+                        <th> </th><th>289</th><td class="r"><span>&lt;/Location&gt;</span> </td>
+                      </tr><tr>
+                        <th> </th><th>290</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>291</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>292</th><td class="r"><span>Then we need a single file plugin to recognize HTTP_REMOTE_USER header as valid authentication source. HTTP headers like '''HTTP_FOO_BAR''' will get converted to '''Foo-Bar''' during processing. Name it something like '''remote-user-auth.py''' and drop it into '''proxified/plugins''' directory:</span> </td>
+                      </tr><tr>
+                        <th> </th><th>293</th><td class="r"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th> </th><th>294</th><td class="r"><span>#!python</span> </td>
+                      </tr><tr>
+                        <th> </th><th>295</th><td class="r"><span>from trac.core import *</span> </td>
+                      </tr><tr>
+                        <th> </th><th>296</th><td class="r"><span>from trac.config import BoolOption</span> </td>
+                      </tr><tr>
+                        <th> </th><th>297</th><td class="r"><span>from trac.web.api import IAuthenticator</span> </td>
+                      </tr><tr>
+                        <th> </th><th>298</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>299</th><td class="r"><span>class MyRemoteUserAuthenticator(Component):</span> </td>
+                      </tr><tr>
+                        <th> </th><th>300</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>301</th><td class="r"><span>&nbsp; &nbsp; implements(IAuthenticator)</span> </td>
+                      </tr><tr>
+                        <th> </th><th>302</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>303</th><td class="r"><span>&nbsp; &nbsp; obey_remote_user_header = BoolOption('trac', 'obey_remote_user_header', 'false', </span> </td>
+                      </tr><tr>
+                        <th> </th><th>304</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"""Whether the 'Remote-User:' HTTP header is to be trusted for user logins </span> </td>
+                      </tr><tr>
+                        <th> </th><th>305</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (''since ??.??').""") </span> </td>
+                      </tr><tr>
+                        <th> </th><th>306</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>307</th><td class="r"><span>&nbsp; &nbsp; def authenticate(self, req):</span> </td>
+                      </tr><tr>
+                        <th> </th><th>308</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; if self.obey_remote_user_header and req.get_header('Remote-User'): </span> </td>
+                      </tr><tr>
+                        <th> </th><th>309</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return req.get_header('Remote-User') </span> </td>
+                      </tr><tr>
+                        <th> </th><th>310</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; return None</span> </td>
+                      </tr><tr>
+                        <th> </th><th>311</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>312</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>313</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>314</th><td class="r"><span>Add this new parameter to your TracIni:</span> </td>
+                      </tr><tr>
+                        <th> </th><th>315</th><td class="r"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th> </th><th>316</th><td class="r"><span>...</span> </td>
+                      </tr><tr>
+                        <th> </th><th>317</th><td class="r"><span>[trac]</span> </td>
+                      </tr><tr>
+                        <th> </th><th>318</th><td class="r"><span>...</span> </td>
+                      </tr><tr>
+                        <th> </th><th>319</th><td class="r"><span>obey_remote_user_header = true</span> </td>
+                      </tr><tr>
+                        <th> </th><th>320</th><td class="r"><span>...</span> </td>
+                      </tr><tr>
+                        <th> </th><th>321</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>322</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>323</th><td class="r"><span>Run tracd:</span> </td>
+                      </tr><tr>
+                        <th> </th><th>324</th><td class="r"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th> </th><th>325</th><td class="r"><span>tracd -p 8101 -r -s proxified --base-path=/project/proxified</span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>326</th><td class="r"><span>}}}</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>172</th><th>327</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>173</th><th>328</th><td class="l"><span>=== Serving a different base path than / ===</span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>174</th><th> </th><td class="l"><span>Tracd supports serving projects with different base urls th<del>e</del>n /&lt;project&gt;. The parameter name to change this is</span> </td>
+                      </tr><tr>
+                        <th>175</th><th> </th><td class="l"><span>{{{<del></del></span> </td>
+                      </tr><tr>
+                        <th>176</th><th> </th><td class="l"><span><del></del>tracd --base-path=/some/path</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>329</th><td class="r"><span>Tracd supports serving projects with different base urls th<ins>a</ins>n /&lt;project&gt;. The parameter name to change this is</span> </td>
+                      </tr><tr>
+                        <th> </th><th>330</th><td class="r"><span>{{{<ins></ins></span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>331</th><td class="r"><span><ins>&nbsp;$ </ins>tracd --base-path=/some/path</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>177</th><th>332</th><td class="l"><span>}}}</span> </td>
+                  </tr><tr>
+                          <th>178</th><th>333</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>179</th><th>334</th><td class="l"><span>----</span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>180</th><th> </th><td class="l"><span>See also: TracInstall, TracCgi, TracModPython, TracGuide<del></del></span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>335</th><td class="r"><span>See also: TracInstall, TracCgi, TracModPython, TracGuide<ins>, [trac:TracOnWindowsStandalone#RunningTracdasservice Running tracd.exe as a Windows service]</ins></span> </td>
+                      </tr>
+            </tbody>
+        </table>
+      </li>
+  </ul>
+</div>
+      </div>
+  </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

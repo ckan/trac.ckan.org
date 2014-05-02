@@ -1,0 +1,5 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2799	Translations for demo not picking up {% trans %} blocks	aron.carroll	toby	"Also they seem to be missing the odd {{{ _() }}} block. Such in the new package form.
+
+https://github.com/okfn/ckan/blob/2375-demo-theme-development/ckan/templates/package/snippets/package_form.html#L44
+"	enhancement	closed	major	demo phase 3	ckan	fixed			ckan	none

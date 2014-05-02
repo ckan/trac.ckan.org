@@ -1,0 +1,27 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+253,Package relationships,dread,rgrp,"New domain object: PackageRelationship (revisioned)
+
+Attributes:
+  * src (Package reference)
+  * dest (Package reference)
+  * type (string)
+  * comment
+
+Relationship types:
+is_dependent_on (is_dependency_of)
+is_derived_from (has_derivation)
+is_child_of (is_parent_of)
+
+Relationship type is stored using an inherited mapped object, as given in the first column. The reverse relationship (bracketed) is given just for display purposes only.
+
+WUI:
+  * View: show both sides of the relationship (but think carefully -- e.g. a given package may have *many* dependents ...)
+  * Editable as part of package or separately? (e.g. like authz)
+  * Do we normalize to only one type name of the pair?
+  * Do we allow create of relationship from both ends (e.g. only from dependency to dependent or either way?)
+  
+API:
+  * Appear in package listing Example: 'relationships': [{'is_dependency_of':'osm', comments:'Since version 0.2'}, {'is_parent_of':'bobs_maps'}]
+  * No need for write access to be provided API for the moment.
+
+This ticket encompasses ticket:169 (Package derivations) and ticket:176 (Package dependencies).",enhancement,new,awaiting triage,,ckan,,,,,

@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2937,GroupController.history() missing extras_as_string,seanh,,"GroupController's history() method doesn't pass 'extras_as_string': True in the context when it calls group_show. This means that if you have an IGroupForm plugin that is adding a custom metadata field and using convert_to/from_extras() then a field value of 'foo' will be returned as '""foo""'
+
+Other GroupController and PackageController methods do pass 'extras_as_string'",defect,closed,awaiting triage,ckan-v1.8,ckan,fixed,,,ckan,none

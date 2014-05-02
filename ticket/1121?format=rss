@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1121: JSON extras appear in package edit form mangled</title>
+    <link>http://localhost/ticket/1121</link>
+    <description>&lt;p&gt;
+It is possible to use the CKAN API to insert JSON format data into package extra values, but this data is displayed in the package edit form.
+&lt;/p&gt;
+&lt;p&gt;
+Example: Package &lt;a class="ext-link" href="http://ckan.net/package/hbz_unioncatalog"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://ckan.net/package/hbz_unioncatalog&lt;/a&gt; in the API the extra value as a list:
+&lt;/p&gt;
+&lt;pre class="wiki"&gt;"extras": {"publishingInstitution": ["http://lobid.org/organisation/DE-605", "http://lobid.org/organisation/DE-290"...
+&lt;/pre&gt;&lt;p&gt;
+yet when you edit the package it loses all the quotes and brackets: &lt;a class="ext-link" href="http://ckan.net/package/edit/hbz_unioncatalog"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://ckan.net/package/edit/hbz_unioncatalog&lt;/a&gt;
+{{{&lt;a class="ext-link" href="http://lobid.org/organisation/DE-605http://lobid.org/organisation/DE-290"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://lobid.org/organisation/DE-605http://lobid.org/organisation/DE-290&lt;/a&gt;...
+}}}
+so when you save the package, the list is mangled into a bad string.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1121</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Mon, 06 Jun 2011 11:07:06 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/1121#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1121#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;wontfix&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+We don't need to support JSON extras at the moment.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

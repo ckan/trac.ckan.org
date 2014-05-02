@@ -1,0 +1,4 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+165	Use 'tag:' instead of 'tags:' for wui package search	dread	rgrp	"Because people might try and do ""tags:gov sweden"" when ""tag:gov sweden"" makes more sense (sweden is searched for in all fields in these cases).
+
+But in REST i/f search allow ""tag""=""gov"" OR ""tags""=""gov sweden"" in parameters."	enhancement	closed	minor		ckan	invalid			ckan	none

@@ -1,0 +1,7 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1527	Break DGU package form into sections	icmurray	icmurray	" - use javascript to selectively hide/show parts of the form
+ - on the creation form, there are ""Next"" and ""Back"" buttons.  And
+   the workflow is controlled to only enable tabs when previous
+   section has been completed.
+ - there's no validation between steps at this stage.  It's still a
+   ""big save button at the end""."	enhancement	new	major	ckan-sprint-2011-12-19	dgu		dgu form refactor wizard #1525	dread kindly shevski	ckanext-dgu	none

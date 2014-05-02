@@ -1,0 +1,10 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1003,CKAN Javascript library and demonstration web interface,rgrp,rgrp,"A plain javascript library for interfacing with CKAN would be very useful (why? see below!). It would also be nice to have a pure html + javascript web interface to CKAN both for its own sake and to act as a demonstrator for the library.
+
+Why?
+
+ * Development of bespoke interfaces -- much easier to edit html + javascript than to change ckan core
+  * E.g. for specific communities e.g. geodata, science
+  * Specialized tasks - multi-package editing
+ * Very easy deployment and integration (e.g. can drop in to getthedata or other sites)
+",enhancement,closed,critical,ckan-v1.4-sprint-3,ckan,fixed,wui js external,,,

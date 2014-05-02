@@ -1,0 +1,7 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1166	Less stringent filters for displaying the WMS preview	amercader	amercader	"Right now, for the ""View available WMS layers"" link to be displayed, the package needs to have an ""INSPIRE=True"" extra, a ""resource-type=service"" extra and a resource of type ""WMS"".
+
+This is due to DGU (the project this was developed for) related reasons, but for a generic support, the resource type should probably be enough.
+
+
+(The repository for this is ckanext-spatial, but it's not on the list)"	enhancement	closed	major	ckan-sprint-2011-10-10	uklii	fixed	geo	james.gardner@…	ckan	none

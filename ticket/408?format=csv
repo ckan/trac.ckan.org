@@ -1,0 +1,34 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+408,Integrate CMS via proxying,pudo,pudo,"* As sysadmin/user of CKAN I want to integrate a CMS to support easy addition of additional content ...
+* I want to integrate with navigation 
+* As a minimum I want to be able to add content pages (more stuff would be e.g. comments, sidebars, main menu ...)
+
+Why: CMS are great at creating content and have very good editors and theme support ...
+
+=== Previous work
+
+http://groups.google.com/group/pylons-discuss/browse_thread/thread/f8969e28b0a007c7
+* deliverance: retheming on the fly 
+
+http://knowledgeforge.net/shakespeare/hg/file/677eef9402e6/shakespeare/controllers/template.py
+
+1. Rewrite urls for proxying
+2. You need a theme to substitute into
+3. pylons
+
+Extreme version:
+* 2 sources -> pylons/ckan app, cms
+* 1 theme source: ckan or cms
+
+1 frontend/proxy app which re-themes everything
+
+Owned by CKAN:
+
+* package/
+* tag/
+* group/
+* api/
+* /
+
+Everything else proxied.
+",requirement,closed,,ckan-v1.2,ckan,fixed,,,,

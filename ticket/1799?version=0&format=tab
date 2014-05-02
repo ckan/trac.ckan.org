@@ -1,0 +1,8 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1799	To login as a different user, you need to logout first	dread	dread	"When you are logged in, you cannot login as a different user before first logging out. (This is a restricting in repoze.who, which gives priority to an existing recognised identity over another one you supply.)
+
+Yes, the CKAN login form appears when you try to do something you're not allowed to, even if you are logged in already. You login with a different identity and nothing happens - you remain as the first identity - this is incorrect.
+
+(It is also a little confusing to be sent to the log-in page, although we do have a flash message explaining, and you might want to relogin as a superuser if you can.)
+
+Whilst in this area, it would be worth fixing the problem for developers where you are logged in, do ""paster db clean"" and then try to log in - AuthTkt recognises your old cookie but the User object doesn't exist, so you get an error logging in. In this instance we should tell people to log-out."	defect	new	major	ckan-sprint-2012-03-05	ckan				ckan	none

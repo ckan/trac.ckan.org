@@ -1,0 +1,19 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+927	[super] Improvements to CKAN documentation	rgrp	rgrp	"List of improvements to CKAN documentation (result of ticket:904). Should convert most items into sub-tickets as we go along.
+
+== Major ==
+
+ * ~~(Make blog.ckan.org into ckan.org and move ckan.org to trac.ckan.org/)~~
+ * Document caching system - ticket:841
+ * Howto guide for writing an extension - ''started on this at http://wiki.ckan.net/Extending_CKAN''
+
+== Miscellaneous ==
+
+ * Contributors / credits page: ticket:928
+ * ~~(Data proxy documentation: move it to packages.python.org/dataproxy)~~
+ * ~~(List dataapi extensions on http://ckan.org/wiki/Extensions (Name, summary string + point to pypi page ...))~~
+ * Document license configuration and license system - ticket:973
+ * Refactor trac frontpage moving general feature overview to ckan.org
+ * Create proper roadmap information on http://trac.ckan.org/
+ * Add link to wiki.ckan.net to ckan.org
+"	enhancement	closed	critical	ckan-v1.4-sprint-3	ckan	fixed				

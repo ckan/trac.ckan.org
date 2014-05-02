@@ -1,0 +1,2 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1427,Tags validation needs to limit length to 100 characters,dread,dread,The tag name is limited in length in the db table to 100 characters. If you try and create a longer one you get an exception. This should cause a ValidationError and tell the user this sensibly.,enhancement,closed,trivial,ckan-sprint-2011-10-28,ckan,fixed,,,ckan,none

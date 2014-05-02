@@ -1,0 +1,37 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2322	Convenience offset on end of resource urls: /raw, /api, /viewer	rgrp	ross	"== Raw ==
+
+/raw or /download (latter may be better)
+
+{{{
+/dataset/{id}/resource/{resource-id}/raw
+
+=> redirects to resource url (download)
+}}}
+
+== API ==
+
+{{{
+/dataset/{id}/resource/{resource-id}/api[/....]
+
+=> either redirects or directly serves /api/data/{resource-id}
+}}}
+
+== Viewer (Explorer?) ==
+
+Do data viewer but without anything else showing (full-screen?). this would not be just the data explorer but other cases too (including iframe etc ...)
+
+{{{
+/dataset/{id}/resource/{resource-id}/viewer
+
+Resource (pre)-viewer without anything else (perhaps include resource title)
+}}}
+
+-----
+
+Assigning for kindly for review.
+
+These would take about 20m to implement and would be *very* convenient from my experience of using the data API.
+
+----
+Implementation at enhancement-2322-convenience-urls"	enhancement	closed	awaiting triage	ckan-sprint-2012-05-29	ckan	fixed			ckan	none

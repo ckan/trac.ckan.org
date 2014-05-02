@@ -1,0 +1,10 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1452,"Offer detected browser language, rather than auto-switch",dread,dread,"There are issues with setting the site's language according to the browser detection:
+
+* Many browsers have the language setting incorrectly set. e.g. people who download US versions of Mozilla, pirated US copies in the far east.
+
+* Although thedatahub.org has a worldwide audience, many CKAN instances are designed for a particular country's citizens. So Open Berlin should probably be in German as default for all.
+
+I suggest the site should have a default language saved in the config. The browser language *should* be detected, and that prompts a flash message offering to change to that language. And if you change language that is saved in the cookie (as we currently do). 
+
+Then do some testing to see if this suits people.",enhancement,closed,major,,ckan,wontfix,,,ckan,none

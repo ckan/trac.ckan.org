@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2985: Make lib/helpers.py more template-specific</title>
+    <link>http://localhost/ticket/2985</link>
+    <description>&lt;p&gt;
+From Toby: make lib/helpers more template specific and less generally shared with
+none template uses (some functions are shared but many shouldn't be) -
+again help avoid circular imports
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2985</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+ </channel>
+</rss>

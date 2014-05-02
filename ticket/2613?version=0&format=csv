@@ -1,0 +1,21 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2613,Javascript functionality,shevski,aron.carroll," 1. file uploads on dataset creation
+ 2. create dataset validation
+ 3. create dataset slugs
+ 4. Add dataset to group process: pop-up allowing you to quickly search for a pick a dataset to add to group. Must check you have necc auth over dataset to be added
+ validation of user name
+ 5. Language box
+ 6. toggling activity stream
+ 7.. Search sorting
+ 8. autocomplete on tags
+ 9. add and remove custom fields on forms
+ 10: the rest:
+tooltip on popular datasets with number of views
+facets to update automatically
+creating a dataset without reloading page between steps
+hover on licences information
+autocomplete on search terms
+group filtering
+add comment to datasets
+social share buttons in lightboxes
+dataset counts on homepage?",enhancement,new,awaiting triage,opendatasuite 1,ckan,,demo-theme,,ckan,none

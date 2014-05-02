@@ -1,0 +1,62 @@
+Nov 3, 2011 2:16:18 PM org.apache.solr.core.SolrDeletionPolicy onInit
+INFO: SolrDeletionPolicy.onInit: commits:num=1
+	commit{dir=/var/lib/solr/data/index,segFN=segments_eo9,version=1306423779793,generation=19017,filenames=[_g9d.tii, _g9d.fdt, _g9e.frq, _g9e.tis, _g9e.nrm, _g9d.fnm, _g9d.prx, _g9d.fdx, _g9d.nrm, _g9d.frq, _g9e.fdx, _g9e.fdt, _g9d.tis, _g9e.fnm, _g9e.prx, _g9e.tii, segments_eo9]
+Nov 3, 2011 2:16:18 PM org.apache.solr.core.SolrDeletionPolicy updateCommits
+INFO: newest commit = 1306423779793
+Nov 3, 2011 2:16:18 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: {add=[ea8074f3-391c-425a-8050-6ba9cf5aaeb9]} 0 7
+Nov 3, 2011 2:16:18 PM org.apache.solr.core.SolrCore execute
+INFO: [iatiregistry.org] webapp=/solr path=/update params={} status=0 QTime=7 
+Nov 3, 2011 2:16:19 PM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: start commit(optimize=false,waitFlush=false,waitSearcher=false,expungeDeletes=false)
+Nov 3, 2011 2:16:19 PM org.apache.solr.core.SolrDeletionPolicy onCommit
+INFO: SolrDeletionPolicy.onCommit: commits:num=2
+	commit{dir=/var/lib/solr/data/index,segFN=segments_eo9,version=1306423779793,generation=19017,filenames=[_g9d.tii, _g9d.fdt, _g9e.frq, _g9e.tis, _g9e.nrm, _g9d.fnm, _g9d.prx, _g9d.fdx, _g9d.nrm, _g9d.frq, _g9e.fdx, _g9e.fdt, _g9d.tis, _g9e.fnm, _g9e.prx, _g9e.tii, segments_eo9]
+	commit{dir=/var/lib/solr/data/index,segFN=segments_eoa,version=1306423779794,generation=19018,filenames=[_g9d.tii, _g9e.frq, _g9f.nrm, _g9d.nrm, _g9d_1.del, _g9e.fdx, segments_eoa, _g9f.fdt, _g9f.tii, _g9e.fnm, _g9e.tii, _g9d.fdt, _g9e.tis, _g9d.fnm, _g9e.nrm, _g9d.prx, _g9d.fdx, _g9f.tis, _g9d.frq, _g9f.fdx, _g9f.prx, _g9e.fdt, _g9f.frq, _g9d.tis, _g9e.prx, _g9f.fnm]
+Nov 3, 2011 2:16:19 PM org.apache.solr.core.SolrDeletionPolicy updateCommits
+INFO: newest commit = 1306423779794
+Nov 3, 2011 2:16:19 PM org.apache.solr.search.SolrIndexSearcher <init>
+INFO: Opening Searcher@2bbba5bc main
+Nov 3, 2011 2:16:19 PM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: end_commit_flush
+Nov 3, 2011 2:16:19 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: {commit=} 0 19
+Nov 3, 2011 2:16:19 PM org.apache.solr.core.SolrCore execute
+INFO: [iatiregistry.org] webapp=/solr path=/update params={} status=0 QTime=19 
+Nov 3, 2011 2:16:19 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@2bbba5bc main from Searcher@83eaa8c main
+	fieldValueCache{lookups=23,hits=21,hitratio=0.91,inserts=1,evictions=0,size=1,warmupTime=0,cumulative_lookups=12013,cumulative_hits=11631,cumulative_hitratio=0.96,cumulative_inserts=191,cumulative_evictions=0,item_groups={field=groups,memSize=6784,tindexSize=44,time=1,phase1=1,nTerms=12,bigTerms=4,termInstances=20,uses=22}}
+Nov 3, 2011 2:16:19 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@2bbba5bc main
+	fieldValueCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=12013,cumulative_hits=11631,cumulative_hitratio=0.96,cumulative_inserts=191,cumulative_evictions=0}
+Nov 3, 2011 2:16:19 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@2bbba5bc main from Searcher@83eaa8c main
+	filterCache{lookups=150,hits=143,hitratio=0.95,inserts=7,evictions=0,size=7,warmupTime=0,cumulative_lookups=111590,cumulative_hits=110474,cumulative_hitratio=0.98,cumulative_inserts=1119,cumulative_evictions=0}
+Nov 3, 2011 2:16:19 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@2bbba5bc main
+	filterCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=111590,cumulative_hits=110474,cumulative_hitratio=0.98,cumulative_inserts=1119,cumulative_evictions=0}
+Nov 3, 2011 2:16:19 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@2bbba5bc main from Searcher@83eaa8c main
+	queryResultCache{lookups=31,hits=27,hitratio=0.87,inserts=4,evictions=0,size=4,warmupTime=0,cumulative_lookups=41930,cumulative_hits=40968,cumulative_hitratio=0.97,cumulative_inserts=1041,cumulative_evictions=0}
+Nov 3, 2011 2:16:19 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@2bbba5bc main
+	queryResultCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=41930,cumulative_hits=40968,cumulative_hitratio=0.97,cumulative_inserts=1041,cumulative_evictions=0}
+Nov 3, 2011 2:16:19 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@2bbba5bc main from Searcher@83eaa8c main
+	documentCache{lookups=732,hits=690,hitratio=0.94,inserts=42,evictions=0,size=42,warmupTime=0,cumulative_lookups=633885,cumulative_hits=613821,cumulative_hitratio=0.96,cumulative_inserts=20064,cumulative_evictions=11261}
+Nov 3, 2011 2:16:19 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@2bbba5bc main
+	documentCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=633885,cumulative_hits=613821,cumulative_hitratio=0.96,cumulative_inserts=20064,cumulative_evictions=11261}
+Nov 3, 2011 2:16:19 PM org.apache.solr.core.QuerySenderListener newSearcher
+INFO: QuerySenderListener sending requests to Searcher@2bbba5bc main
+Nov 3, 2011 2:16:19 PM org.apache.solr.core.QuerySenderListener newSearcher
+INFO: QuerySenderListener done.
+Nov 3, 2011 2:16:19 PM org.apache.solr.core.SolrCore registerSearcher
+INFO: [iatiregistry.org] Registered new searcher Searcher@2bbba5bc main
+Nov 3, 2011 2:16:19 PM org.apache.solr.search.SolrIndexSearcher close
+INFO: Closing Searcher@83eaa8c main
+	fieldValueCache{lookups=23,hits=21,hitratio=0.91,inserts=1,evictions=0,size=1,warmupTime=0,cumulative_lookups=12013,cumulative_hits=11631,cumulative_hitratio=0.96,cumulative_inserts=191,cumulative_evictions=0,item_groups={field=groups,memSize=6784,tindexSize=44,time=1,phase1=1,nTerms=12,bigTerms=4,termInstances=20,uses=22}}
+	filterCache{lookups=150,hits=143,hitratio=0.95,inserts=7,evictions=0,size=7,warmupTime=0,cumulative_lookups=111590,cumulative_hits=110474,cumulative_hitratio=0.98,cumulative_inserts=1119,cumulative_evictions=0}
+	queryResultCache{lookups=31,hits=27,hitratio=0.87,inserts=4,evictions=0,size=4,warmupTime=0,cumulative_lookups=41930,cumulative_hits=40968,cumulative_hitratio=0.97,cumulative_inserts=1041,cumulative_evictions=0}
+	documentCache{lookups=732,hits=690,hitratio=0.94,inserts=42,evictions=0,size=42,warmupTime=0,cumulative_lookups=633885,cumulative_hits=613821,cumulative_hitratio=0.96,cumulative_inserts=20064,cumulative_evictions=11261}
+

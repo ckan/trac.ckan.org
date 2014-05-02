@@ -1,0 +1,25 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1312	Particular characters in JSON cause exception creating package on API	florian.marienfeld@…	dread	"From Florian:
+{{{
+I am having trouble with the characters ""=&;"".
+if they occur e.g. in the title of a package, I get a 400-Bad-Request
+when I try to register a package by POSTing to ckan/rest/api/package
+
+However, when I PUT the same package as an edit to
+ckan/rest/api/package/existing_package, it works and the title shows
+correctly on the front end and API.
+}}}
+
+== Reproduced ==
+{{{
+(pyenv-ckan)dread@dread-laptop:~/hgroot/ckan$ curl -i http://localhost:5000/api/rest/package -d '{""name"": ""test3"", ""title"": ""Test &""}' -H ""Authorization:tester"" 
+HTTP/1.0 400 Bad Request
+Server: PasteWSGIServer/0.5 Python/2.6.5
+Date: Tue, 06 Sep 2011 14:09:31 GMT
+Pragma: no-cache
+Cache-Control: no-cache
+Content-Type: application/json;charset=utf-8
+Content-Length: 87
+
+""Bad request - JSON Error: Unterminated string starting at: line 1 column 27 (char 27)""
+}}}"	enhancement	closed	minor	ckan-sprint-2011-10-28	ckan	invalid			ckan	none

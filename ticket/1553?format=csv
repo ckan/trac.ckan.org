@@ -1,0 +1,8 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1553,Upload handles non-logged in user badly,dread,aron.carroll,"When you install ckanext-store (Storage extension) then CKAN displays 'Upload a file' button in the dataset/resource edit tab.
+
+If you are not logged in, then this feature doesn't work, but there is nothing to indicate this. The button should be disabled.
+
+Furthermore, it lets you think you are starting the upload process, the spinner spins, it says 'Uploading...' and stays like that for a long while.
+
+This is a problem CKAN 1.4.3(ish) - 1.5.1 (current version) when you install the current ckanext-storage.",defect,closed,major,demo phase 5,ckan,fixed,demo-theme,,ckan,none

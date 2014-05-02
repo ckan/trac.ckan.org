@@ -1,0 +1,446 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      #1577 (Can't upload file with foreign chars in filename)
+     – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="prev" href="1576.html" title="Ticket #1576" />
+        <link rel="last" href="3030.html" title="Ticket #3030" />
+        <link rel="help" href="../wiki/TracGuide.html" />
+        <link rel="alternate" href="1577%3Fformat=csv" type="text/csv" class="csv" title="Comma-delimited Text" /><link rel="alternate" href="1577%3Fformat=tab" type="text/tab-separated-values" class="tab" title="Tab-delimited Text" /><link rel="alternate" href="1577%3Fformat=rss" type="application/rss+xml" class="rss" title="RSS Feed" />
+        <link rel="next" href="1578.html" title="Ticket #1578" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/ticket.css" type="text/css" />
+        <link rel="first" href="1.html" title="Ticket #1" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript">
+      var auto_preview_timeout=2.0;
+      var form_token="93d81ccf9a7bb1c456462f62";
+    </script>
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script><script type="text/javascript" src="../chrome/common/js/wikitoolbar.js"></script><script type="text/javascript" src="../chrome/common/js/resizer.js"></script><script type="text/javascript" src="../chrome/common/js/auto_preview.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("div.description").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $(".foldable").enableFolding(false, true);
+        var args = {realm: "ticket", id: 1577, escape_newlines: 0}
+        $("#comment").autoPreview("/wiki_render", args, function(textarea, text, rendered) {
+            $("#ticketchange div.comment").html(rendered);
+            if (rendered)
+              $("#ticketchange").show();
+            else if ($("#ticketchange ul.changes").length == 0)
+              $("#ticketchange").hide();
+        });
+        $("#trac-comment-editor textarea").autoPreview("/wiki_render", args,
+                                                       function(textarea, text, rendered) {
+          var comment = $("#trac-comment-editor").next("div.comment");
+          comment.html(rendered);
+          if (rendered)
+            comment.show();
+          else
+            comment.hide();
+        });
+        $("#modify").parent().toggleClass("collapsed");
+        $(".trac-topnav a").click(function() { $("#modify").parent().removeClass("collapsed"); });
+        /* only enable control elements for the currently selected action */
+        var actions = $("#action input[name='action']");
+        function updateActionFields() {
+          actions.each(function () {
+            $(this).siblings().find("*[id]").enable($(this).checked());
+            $(this).siblings().filter("*[id]").enable($(this).checked());
+          });
+        }
+        actions.click(updateActionFields);
+        updateActionFields();
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="../wiki/TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li class="active"><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="1576.html" title="Ticket #1576">Previous Ticket</a></span></li><li class="last"><span><a class="next" href="1578.html" title="Ticket #1578">Next Ticket</a> &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="ticket">
+      <h1 id="trac-ticket-title">
+          <a href="1577.html">Ticket #1577</a>
+          <span class="status">(new defect)</span>
+      </h1>
+      <div id="ticket">
+  <div class="date">
+    <p>Opened <a class="timeline" href="../timeline%3Ffrom=2011-12-19T18:00:59Z&amp;precision=second.html" title="2011-12-19T18:00:59Z in Timeline">2 years</a> ago</p>
+    <p>Last modified <a class="timeline" href="../timeline%3Ffrom=2012-01-02T03:06:04Z&amp;precision=second.html" title="2012-01-02T03:06:04Z in Timeline">2 years</a> ago</p>
+  </div>
+  <h2 class="summary searchable">Can't upload file with foreign chars in filename</h2>
+  <table class="properties">
+    <tr>
+      <th id="h_reporter">Reported by:</th>
+      <td headers="h_reporter" class="searchable">
+        <a href="../query%3Fstatus=!closed&amp;reporter=dread.html">dread</a>
+      </td>
+      <th id="h_owner">Owned by:</th>
+      <td headers="h_owner">
+        <a href="../query%3Fstatus=!closed&amp;owner=rgrp.html">rgrp</a>
+      </td>
+    </tr>
+    <tr>
+        <th id="h_priority">
+          Priority:
+        </th>
+        <td headers="h_priority">
+              <a href="../query%3Fstatus=!closed&amp;priority=major.html">major</a>
+        </td>
+        <th id="h_milestone">
+          Milestone:
+        </th>
+        <td headers="h_milestone">
+              <a class="milestone" href="../milestone/ckan-backlog.html">ckan-backlog</a>
+        </td>
+    </tr><tr>
+        <th id="h_component">
+          Component:
+        </th>
+        <td headers="h_component">
+              <a href="../query%3Fstatus=!closed&amp;component=ckan.html">ckan</a>
+        </td>
+        <th id="h_keywords">
+          Keywords:
+        </th>
+        <td headers="h_keywords" class="searchable">
+        </td>
+    </tr><tr>
+        <th id="h_cc">
+          Cc:
+        </th>
+        <td headers="h_cc" class="searchable">
+        </td>
+        <th id="h_repo">
+          Repository:
+        </th>
+        <td headers="h_repo">
+              <a href="../query%3Fstatus=!closed&amp;repo=ckan.html">ckan</a>
+        </td>
+    </tr><tr>
+        <th id="h_theme">
+          Theme:
+        </th>
+        <td headers="h_theme">
+              <a href="../query%3Fstatus=!closed&amp;theme=none.html">none</a>
+        </td>
+        <th>
+        </th>
+        <td>
+        </td>
+    </tr>
+  </table>
+  <div class="description">
+    <h3 id="comment:description">
+      Description
+    </h3>
+    <div class="searchable">
+      <p>
+Looks like uploading a file with foreign characters fails due to encoding reasons.
+</p>
+<pre class="wiki">URL: http://thedatahub.org/api/storage/auth/form/2011-12-19T124447/Ministerstvo-financ%C3%AD-%C4%8Cesk%C3%A9-republiky-_-P%C5%99%C3%ADprava-rozpo%C4%8Dtu.pdf
+Module weberror.errormiddleware:162 in __call__
+&lt;&lt;              __traceback_supplement__ = Supplement, self, environ
+                   sr_checker = ResponseStartChecker(start_response)
+                   app_iter = self.application(environ, sr_checker)
+                   return self.make_catching_iter(app_iter, environ, sr_checker)
+               except:
+&gt;&gt;  app_iter = self.application(environ, sr_checker)
+Module beaker.middleware:73 in __call__
+&lt;&lt;                                                     self.cache_manager)
+               environ[self.environ_key] = self.cache_manager
+               return self.app(environ, start_response)
+&gt;&gt;  return self.app(environ, start_response)
+Module beaker.middleware:152 in __call__
+&lt;&lt;                          headers.append(('Set-cookie', cookie))
+                   return start_response(status, headers, exc_info)
+               return self.wrap_app(environ, session_start_response)
+           
+           def _get_session(self):
+&gt;&gt;  return self.wrap_app(environ, session_start_response)
+Module routes.middleware:130 in __call__
+&lt;&lt;                  environ['SCRIPT_NAME'] = environ['SCRIPT_NAME'][:-1]
+               
+               response = self.app(environ, start_response)
+               
+               # Wrapped in try as in rare cases the attribute will be gone already
+&gt;&gt;  response = self.app(environ, start_response)
+Module pylons.wsgiapp:125 in __call__
+&lt;&lt;          
+               controller = self.resolve(environ, start_response)
+               response = self.dispatch(controller, environ, start_response)
+               
+               if 'paste.testing_variables' in environ and hasattr(response,
+&gt;&gt;  response = self.dispatch(controller, environ, start_response)
+Module pylons.wsgiapp:324 in dispatch
+&lt;&lt;          if log_debug:
+                   log.debug("Calling controller class with WSGI interface")
+               return controller(environ, start_response)
+           
+           def load_test_env(self, environ):
+&gt;&gt;  return controller(environ, start_response)
+Module ckan.lib.base:123 in __call__
+&lt;&lt;          # available in environ['pylons.routes_dict']    
+               try:
+                   return WSGIController.__call__(self, environ, start_response)
+               finally:
+                   model.Session.remove()
+&gt;&gt;  return WSGIController.__call__(self, environ, start_response)
+Module pylons.controllers.core:221 in __call__
+&lt;&lt;                  return response(environ, self.start_response)
+               
+               response = self._dispatch_call()
+               if not start_response_called:
+                   self.start_response = start_response
+&gt;&gt;  response = self._dispatch_call()
+Module pylons.controllers.core:172 in _dispatch_call
+&lt;&lt;              req.environ['pylons.action_method'] = func
+                   
+                   response = self._inspect_call(func)
+               else:
+                   if log_debug:
+&gt;&gt;  response = self._inspect_call(func)
+Module pylons.controllers.core:107 in _inspect_call
+&lt;&lt;                        func.__name__, args)
+               try:
+                   result = self._perform_call(func, args)
+               except HTTPException, httpe:
+                   if log_debug:
+&gt;&gt;  result = self._perform_call(func, args)
+Module pylons.controllers.core:60 in _perform_call
+&lt;&lt;          """Hide the traceback for everything above this method"""
+               __traceback_hide__ = 'before_and_this'
+               return func(**args)
+           
+           def _inspect_call(self, func):
+&gt;&gt;  return func(**args)
+Module ckanext.storage.controller:2 in auth_form
+Module ckan.lib.jsonp:26 in jsonpify
+&lt;&lt;      Very much modelled after pylons.decorators.jsonify .
+           """
+           data = func(*args, **kwargs)
+           return to_jsonp(data)
+&gt;&gt;  data = func(*args, **kwargs)
+Module ckanext.storage.controller:301 in auth_form
+&lt;&lt;          method = 'POST'
+               authorize(method, bucket, label, c.userobj, self.ofs)
+               data = self._get_form_data(label)
+               return data
+&gt;&gt;  authorize(method, bucket, label, c.userobj, self.ofs)
+Module ckanext.storage.controller:79 in authorize
+&lt;&lt;      if method != 'GET':
+               # do not allow overwriting
+               if ofs.exists(bucket, key):
+                   abort(409)
+               # now check user stuff
+&gt;&gt;  if ofs.exists(bucket, key):
+Module ofs.remote.botostore:53 in exists
+&lt;&lt;          if bucket is None: 
+                   return False
+               return (label is None) or (label in bucket)
+           
+           def claim_bucket(self, bucket):
+&gt;&gt;  return (label is None) or (label in bucket)
+Module boto.s3.bucket:87 in __contains__
+&lt;&lt;      def __contains__(self, key_name):
+              return not (self.get_key(key_name) is None)
+       
+           def startElement(self, name, attrs, connection):
+&gt;&gt;  return not (self.get_key(key_name) is None)
+Module boto.s3.bucket:144 in get_key
+&lt;&lt;          response = self.connection.make_request('HEAD', self.name, key_name,
+                                                       headers=headers,
+                                                       query_args=query_args)
+               # Allow any success status (2xx) - for example this lets us
+               # support Range gets, which return status 206:
+&gt;&gt;  query_args=query_args)
+Module boto.s3.connection:388 in make_request
+&lt;&lt;          if isinstance(key, Key):
+                   key = key.name
+               path = self.calling_format.build_path_base(bucket, key)
+               boto.log.debug('path=%s' % path)
+               auth_path = self.calling_format.build_auth_path(bucket, key)
+&gt;&gt;  path = self.calling_format.build_path_base(bucket, key)
+Module boto.s3.connection:88 in build_path_base
+&lt;&lt;      def build_path_base(self, bucket, key=''):
+               return '/%s' % urllib.quote(key)
+       
+       class SubdomainCallingFormat(_CallingFormat):
+&gt;&gt;  return '/%s' % urllib.quote(key)
+Module urllib:1222 in quote
+&lt;&lt;              safe_map[c] = (c in safe) and c or ('%%%02X' % i)
+               _safemaps[cachekey] = safe_map
+           res = map(safe_map.__getitem__, s)
+           return ''.join(res)
+&gt;&gt;  res = map(safe_map.__getitem__, s)
+KeyError: u'\xed'
+CGI Variables
+AUTH_TYPE	'cookie'
+CONTENT_TYPE	'; charset=utf-8'
+DOCUMENT_ROOT	'/htdocs'
+GATEWAY_INTERFACE	'CGI/1.1'
+HTTP_ACCEPT	'*/*'
+HTTP_ACCEPT_CHARSET	'ISO-8859-1,utf-8;q=0.7,*;q=0.3'
+HTTP_ACCEPT_ENCODING	'gzip,deflate,sdch'
+HTTP_ACCEPT_LANGUAGE	'en-US,en;q=0.8'
+HTTP_CACHE_CONTROL	'max-age=259200'
+HTTP_CONNECTION	'keep-alive'
+HTTP_COOKIE	'thedatahub_net=27a7f095fcca1ea6b36df996d595e3278b16f4538862bf7f88d49e2000b9246547c8fd0e; auth_tkt="f9c6ab2b0d9fcd71c4c2408bc12fab544eef1c45elenaibp!userid_type:unicode"; auth_tkt="f9c6ab2b0d9fcd71c4c2408bc12fab544eef1c45elenaibp!userid_type:unicode"; ckan_user=elenaibp; ckan_display_name="Elena Mondo"; ckan_apikey=decd48b1-49ee-4250-bff4-98ccca9c02a5; hide_welcome_message=1; __utma=119670349.1809834699.1323782464.1324293066.1324298316.4; __utmb=119670349.3.10.1324298316; __utmc=119670349; __utmz=119670349.1323782464.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+HTTP_HOST	'thedatahub.org'
+HTTP_REFERER	'http://thedatahub.org/dataset/edit/budget-library-czeck-republic'
+HTTP_USER_AGENT	'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/535.7 (KHTML, like Gecko) Chrome/16.0.912.63 Safari/535.7'
+HTTP_VIA	'1.1 localhost (squid/3.0.STABLE19)'
+HTTP_X_FORWARDED_FOR	'87.114.74.190'
+HTTP_X_REQUESTED_WITH	'XMLHttpRequest'
+PATH	'/usr/local/bin:/usr/bin:/bin'
+PATH_INFO	'/api/storage/auth/form/2011-12-19T124447/Ministerstvo-financ\xc3\xad-\xc4\x8cesk\xc3\xa9-republiky-_-P\xc5\x99\xc3\xadprava-rozpo\xc4\x8dtu.pdf'
+PATH_TRANSLATED	'/home/okfn/var/srvc/ckan.net/pyenv/bin/ckan.net.py/api/storage/auth/form/2011-12-19T124447/Ministerstvo-financ\xc3\xad-\xc4\x8cesk\xc3\xa9-republiky-_-P\xc5\x99\xc3\xadprava-rozpo\xc4\x8dtu.pdf'
+REMOTE_ADDR	'193.34.146.142'
+REMOTE_PORT	'55419'
+REMOTE_USER	u'elenaibp'
+REMOTE_USER_DATA	'userid_type:unicode'
+REMOTE_USER_TOKENS	['']
+REQUEST_METHOD	'GET'
+REQUEST_URI	'/api/storage/auth/form/2011-12-19T124447/Ministerstvo-financ%C3%AD-%C4%8Cesk%C3%A9-republiky-_-P%C5%99%C3%ADprava-rozpo%C4%8Dtu.pdf'
+SCRIPT_FILENAME	'/home/okfn/var/srvc/ckan.net/pyenv/bin/ckan.net.py'
+SCRIPT_URI	'http://thedatahub.org/api/storage/auth/form/2011-12-19T124447/Ministerstvo-financ\xc3\xad-\xc4\x8cesk\xc3\xa9-republiky-_-P\xc5\x99\xc3\xadprava-rozpo\xc4\x8dtu.pdf'
+SCRIPT_URL	'/api/storage/auth/form/2011-12-19T124447/Ministerstvo-financ\xc3\xad-\xc4\x8cesk\xc3\xa9-republiky-_-P\xc5\x99\xc3\xadprava-rozpo\xc4\x8dtu.pdf'
+SERVER_ADDR	'193.34.146.146'
+SERVER_ADMIN	'[no address given]'
+SERVER_NAME	'thedatahub.org'
+SERVER_PORT	'80'
+SERVER_PROTOCOL	'HTTP/1.0'
+SERVER_SIGNATURE	'&lt;address&gt;Apache/2.2.14 (Ubuntu) Server at thedatahub.org Port 80&lt;/address&gt;\n'
+SERVER_SOFTWARE	'Apache/2.2.14 (Ubuntu)'
+WSGI Variables
+application	&lt;beaker.middleware.CacheMiddleware object at 0x7f22601c7dd0&gt;
+beaker.cache	&lt;beaker.cache.CacheManager object at 0x7f22601c7b50&gt;
+beaker.get_session	&lt;bound method SessionMiddleware._get_session of &lt;beaker.middleware.SessionMiddleware object at 0x7f22601c7a90&gt;&gt;
+beaker.session	{'_accessed_time': 1324298703.071357, '_creation_time': 1324293077.4139669}
+mod_wsgi.application_group	'ckan.net|'
+mod_wsgi.callable_object	'application'
+mod_wsgi.listener_host	''
+mod_wsgi.listener_port	'80'
+mod_wsgi.process_group	'ckan.net'
+mod_wsgi.reload_mechanism	'1'
+mod_wsgi.script_reloading	'1'
+mod_wsgi.version	(2, 8)
+paste.cookies	(&lt;SimpleCookie: __utma='119670349.1809834699.1323782464.1324293066.1324298316.4' __utmb='119670349.3.10.1324298316' __utmc='119670349' __utmz='119670349.1323782464.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)' auth_tkt='f9c6ab2b0d9fcd71c4c2408bc12fab544eef1c45elenaibp!userid_type:unicode' ckan_apikey='decd48b1-49ee-4250-bff4-98ccca9c02a5' ckan_display_name='Elena Mondo' ckan_user='elenaibp' hide_welcome_message='1' thedatahub_net='27a7f095fcca1ea6b36df996d595e3278b16f4538862bf7f88d49e2000b9246547c8fd0e'&gt;, 'thedatahub_net=27a7f095fcca1ea6b36df996d595e3278b16f4538862bf7f88d49e2000b9246547c8fd0e; auth_tkt="f9c6ab2b0d9fcd71c4c2408bc12fab544eef1c45elenaibp!userid_type:unicode"; auth_tkt="f9c6ab2b0d9fcd71c4c2408bc12fab544eef1c45elenaibp!userid_type:unicode"; ckan_user=elenaibp; ckan_display_name="Elena Mondo"; ckan_apikey=decd48b1-49ee-4250-bff4-98ccca9c02a5; hide_welcome_message=1; _ _utma=119670349.1809834699.1323782464.1324293066.1324298316.4; __utmb=119670349.3.10...)|utmcmd=(none)')
+paste.registry	&lt;paste.registry.Registry object at 0x7f226194df50&gt;
+paste.throw_errors	True
+pylons.action_method	&lt;bound method StorageAPIController.auth_form of &lt;ckanext.storage.controller.StorageAPIController object at 0x7f2261dad990&gt;&gt;
+pylons.controller	&lt;ckanext.storage.controller.StorageAPIController object at 0x7f2261dad990&gt;
+pylons.environ_config	{'session': 'beaker.session', 'cache': 'beaker.cache'}
+pylons.pylons	&lt;pylons.util.PylonsContext object at 0x7f2261daddd0&gt;
+pylons.routes_dict	{'action': u'auth_form', 'controller': u'ckanext.storage.controller:StorageAPIController', 'label': u'2011-12-19T124447/Ministerstvo-financ\xed-\u010cesk\xe9-republiky-_-P\u0159\xedprava-rozpo\u010dtu.pdf'}
+repoze.who.identity	&lt;repoze.who identity (hidden, dict-like) at 139785645747120&gt;
+repoze.who.logger	&lt;logging.Logger instance at 0x7f225e23c098&gt;
+repoze.who.plugins	{'openid': &lt;OpenIdIdentificationPlugin 139785625065680&gt;, 'friendlyform': &lt;FriendlyFormPlugin 139785618095248&gt;, 'ckan.lib.authenticator:UsernamePasswordAuthenticator': &lt;ckan.lib.authenticator.UsernamePasswordAuthenticator object at 0x7f2260874c10&gt;, 'auth_tkt': &lt;AuthTktCookiePlugin 139785625065808&gt;, 'ckan.lib.authenticator:OpenIDAuthenticator': &lt;ckan.lib.authenticator.OpenIDAuthenticator object at 0x7f2260874c90&gt;}
+routes.route	&lt;routes.route.Route object at 0x7f22601a1090&gt;
+routes.url	&lt;routes.util.URLGenerator object at 0x7f2261dadf50&gt;
+webob._parsed_query_vars	(GET([]), '')
+webob.adhoc_attrs	{'language': 'en-us'}
+wsgi process	'Multiprocess'
+wsgi.file_wrapper	&lt;built-in method file_wrapper of mod_wsgi.Adapter object at 0x7f2261da9af8&gt;
+wsgiorg.routing_args	(&lt;routes.util.URLGenerator object at 0x7f2261dadf50&gt;, {'action': u'auth_form', 'controller': u'ckanext.storage.controller:StorageAPIController', 'label': u'2011-12-19T124447/Ministerstvo-financ\xed-\u010cesk\xe9-republiky-_-P\u0159\xedprava-rozpo\u010dtu.pdf'})
+</pre>
+    </div>
+  </div>
+</div>
+          
+
+        <div>
+          <h2 class="foldable">Change History</h2>
+          <div id="changelog">
+              <div class="change" id="trac-change-1">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:1" class="cnum">
+      <a href="1577.html#comment:1">comment:1</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-01-02T03:06:04Z&amp;precision=second.html" title="2012-01-02T03:06:04Z in Timeline">2 years</a> ago by rgrp
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Milestone</strong>
+        changed from <em>ckan-v1.6</em> to <em>ckan-backlog</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+Foreign characters aren't allowed in file names I would image as they will be part of url. worth noting this at some point but don't think this is very high priority and hence deferring out of v1.6.
+</p>
+
+    </div>
+
+              </div>
+          </div>
+        </div>
+      <div id="help"><strong>Note:</strong> See
+        <a href="../wiki/TracTickets.html">TracTickets</a> for help on using
+        tickets.</div>
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="first">
+          <a rel="nofollow" href="1577%3Fformat=csv" class="csv">Comma-delimited Text</a>
+        </li><li>
+          <a rel="nofollow" href="1577%3Fformat=tab" class="tab">Tab-delimited Text</a>
+        </li><li class="last">
+          <a rel="nofollow" href="1577%3Fformat=rss" class="rss">RSS Feed</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2621	Remove the deprecated 'fields' parameter from tag_search and tag_autocomplete	icmurray	icmurray	"This was deprecated in 1.8 as it wasn't accessible via GET requests due to being a dict.  See #2439
+
+In a future release of CKAN (probably 1.9) it can be removed.
+
+Internal uses of it were removed in #2439, but there are tests that still use it."	refactor	new	minor	ckan-v1.9	ckan		deprecation deprecate		ckan	none

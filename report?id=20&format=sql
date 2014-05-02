@@ -1,0 +1,15 @@
+-- ## 20: My Active Tickets By Milestone ## --
+
+-- This report demonstrates the use of the automatically set 
+-- $USER dynamic variable, replaced with the username of the
+-- logged in user when executed.
+
+SELECT p.value AS __color__,
+ milestone AS __group__,
+   id AS ticket, summary, status, component, version,
+   t.type AS type, priority, time AS created,
+   changetime AS _changetime, description AS _description,
+   reporter AS _reporter
+  FROM ticket t, enum p
+  WHERE p.name = t.priority AND p.type = 'priority' AND owner = '$USER' AND status <> 'closed'
+  ORDER BY milestone DESC,status,p.value,t.type, time

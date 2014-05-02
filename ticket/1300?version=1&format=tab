@@ -1,0 +1,10 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1300	Core changes to base theme	rgrp	rgrp	"Core changes to theme in order to make it easier to re-theme:
+
+ * page_heading
+ * side bar menu must be switchable (left to right) (through config or css)
+ * Expand optional head to be: optional css and optional js
+  * optional_head can stay but add optional_js
+  * That way we could move optional js to the bottom of the page to improve page load times.
+ * more divs.
+ * better labelling for css (and javascript)"	enhancement	new	major	ckan-backlog	ckan		refactor		ckan	none

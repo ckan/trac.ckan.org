@@ -1,0 +1,29 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1313,Tweaks to captcha configuration,dread,zephod,"Awesome to have the captcha implementation and running on thedatahub.org! Here are some further
+suggestions concerning the config options, before this goes into a release:
+
+ * Document ""ckan.recaptcha.publickey"" and ""ckan.recaptcha.privatekey"" in doc/configuration.rst
+ * Which one config option defines whether recaptcha is enabled? There is disagreement between the template and the lib. Maybe better to have a third option for this. When setting the syntax for this, I can see us wanting to use captcha for other operations, like package edit, package create, group create etc. so perhaps we'd want to be able to turn each one on/off separately, using the name of the logic action. e.g. {{{ckan.recaptcha.enable = user_create, group_create}}}
+ * We got this exception last night from the template:
+{{{
+Module ?:37 in <Expression u'g.recaptcha_publickey'>
+<<          <dd><input type=""password"" name=""password2"" value="""" /></dd>
+       
+               <dd py:if=""g.recaptcha_publickey"">
+                 <script type=""text/javascript""
+                   src=""http://www.google.com/recaptcha/api/challenge?k=${g.recaptcha_publickey}"">
+>>  <dd py:if=""g.recaptcha_publickey"">
+Module genshi.template.eval:324 in lookup_attr
+<<                      val = obj[key]
+                       except (KeyError, TypeError):
+                           val = cls.undefined(key, owner=obj)
+               return val
+>>  val = cls.undefined(key, owner=obj)
+Module genshi.template.eval:410 in undefined
+<<          """"""Raise an ``UndefinedError`` immediately.""""""
+               __traceback_hide__ = True
+               raise UndefinedError(key, owner=owner)
+>>  raise UndefinedError(key, owner=owner)
+UndefinedError: <ckan.lib.app_globals.Globals object at 0xb8f1182c> has no member named ""recaptcha_publickey""
+}}}
+I'm not sure why - might be something to do with the maintenance on the server, but worth double checking, since we don't want exceptions, say if one or other config variable is not defined.",enhancement,closed,awaiting triage,,ckan,duplicate,,rgrp,ckan,none

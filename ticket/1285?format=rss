@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1285: Errors cause emails</title>
+    <link>http://localhost/ticket/1285</link>
+    <description>&lt;p&gt;
+Currently a sysadmin gets an email when an exception is not caught. But there are occasions when we DO want to catch an exception so we can fail nicely for the user, but the sysadmin STILL gets an email to know to fix something.
+e.g. if there is an exception when search indexes a package. You want to catch the exception and still run any other notify calls.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1285</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Thu, 25 Aug 2011 10:50:14 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1285#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1285#comment:1</guid>
+      <description>
+        &lt;p&gt;
+Another instance is when the database tables are not created and you want to both display a sensible error and have an email alert. &lt;a class="closed ticket" href="http://localhost/ticket/1290" title="enhancement: Better error when blank database (closed: fixed)"&gt;#1290&lt;/a&gt;
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>thejimmyg</dc:creator>
+
+      <pubDate>Tue, 06 Dec 2011 12:05:25 GMT</pubDate>
+      <title>status changed; owner set</title>
+      <link>http://localhost/ticket/1285#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/1285#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;owner&lt;/strong&gt;
+              set to &lt;em&gt;thejimmyg&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;assigned&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+I could write some middleware to handle this. Can we come up with a list of exceptions not to catch or should I create a base exception called "&lt;a class="missing wiki"&gt;NoEmailReportTriggeredException?&lt;/a&gt;()" which exceptions for this purpose have to be derived from or which code has to raise?
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Tue, 06 Dec 2011 13:37:58 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1285#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/1285#comment:3</guid>
+      <description>
+        &lt;p&gt;
+Isn't the point is we don't to raise an exception at all - we want to call a method to send the email and then return from the controller a normal html page. Don't we just need a method to get the error email address from the config and send an email.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>ross</dc:creator>
+
+      <pubDate>Mon, 28 May 2012 11:55:51 GMT</pubDate>
+      <title>milestone set; owner deleted</title>
+      <link>http://localhost/ticket/1285#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/1285#comment:4</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;owner&lt;/strong&gt;
+              &lt;em&gt;thejimmyg&lt;/em&gt; deleted
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                set to &lt;em&gt;ckan-future&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

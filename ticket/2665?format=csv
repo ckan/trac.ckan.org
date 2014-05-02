@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2665,add dataset stages need to be form buttonable,toby,aron.carroll,"the stages snippet needs to be inside <form> so I can make some links buttons - eg stage 1 -> stage 2 I want to save the dataset not just move to add resource
+
+if you can just move it within the form html leaving everything else the same - I can then add buttons and pass back for styling",enhancement,closed,blocker,demo phase 2,ckan,fixed,demo-theme,,ckan,none

@@ -1,0 +1,8 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1446,[super] Data Explorer v2,rgrp,rgrp,"We already have first pass of Data Explorer that was released as part of #1357.
+
+ * Merging https://github.com/okfn/dataexplorer with http://github.com/okfn/recline and developing
+   * https://github.com/okfn/recline/issues
+ * Integrate this into CKAN (into resource view page) - see #1032
+
+Est: 10-15d (should be broken down -- partly is in recline issues)",enhancement,assigned,major,ckan-v1.6,ckan,,,,ckan,none

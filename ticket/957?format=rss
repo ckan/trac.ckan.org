@@ -1,0 +1,158 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #957: new "kind " field added to resources</title>
+    <link>http://localhost/ticket/957</link>
+    <description>&lt;p&gt;
+The new field was outlined in
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a class="ext-link" href="http://lists.okfn.org/pipermail/ckan-discuss/2011-February/000887.html"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://lists.okfn.org/pipermail/ckan-discuss/2011-February/000887.html&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+it says
+&lt;/p&gt;
+&lt;p&gt;
+&lt;strong&gt;Can be "data", "metadata", "service", NULL. There is a need to do this for UKLP where some of the data associated with a   package is metadata, some is data and some could be a service.&lt;/strong&gt;
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/957</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>kindly</dc:creator>
+
+      <pubDate>Fri, 04 Feb 2011 12:11:09 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/957#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/957#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/957?action=diff&amp;amp;version=1"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>kindly</dc:creator>
+
+      <pubDate>Fri, 04 Feb 2011 12:12:07 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/957#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/957#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/957?action=diff&amp;amp;version=2"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>kindly</dc:creator>
+
+      <pubDate>Mon, 14 Feb 2011 10:31:40 GMT</pubDate>
+      <title>milestone set</title>
+      <link>http://localhost/ticket/957#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/957#comment:3</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                set to &lt;em&gt;ckan-v1.4-sprint-3&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>kindly</dc:creator>
+
+      <pubDate>Mon, 14 Feb 2011 10:36:18 GMT</pubDate>
+      <title>milestone changed</title>
+      <link>http://localhost/ticket/957#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/957#comment:4</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan-v1.4-sprint-3&lt;/em&gt; to &lt;em&gt;ckan-v1.4-sprint-2&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>kindly</dc:creator>
+
+      <pubDate>Mon, 21 Feb 2011 10:13:43 GMT</pubDate>
+      <title>milestone changed</title>
+      <link>http://localhost/ticket/957#comment:5</link>
+      <guid isPermaLink="false">http://localhost/ticket/957#comment:5</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan-v1.4-sprint-2&lt;/em&gt; to &lt;em&gt;ckan-v1.4-sprint-3&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>thejimmyg</dc:creator>
+
+      <pubDate>Tue, 15 Mar 2011 19:22:38 GMT</pubDate>
+      <title>priority changed; milestone deleted</title>
+      <link>http://localhost/ticket/957#comment:6</link>
+      <guid isPermaLink="false">http://localhost/ticket/957#comment:6</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;priority&lt;/strong&gt;
+                changed from &lt;em&gt;awaiting triage&lt;/em&gt; to &lt;em&gt;minor&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                &lt;em&gt;ckan-v1.4-sprint-3&lt;/em&gt; deleted
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Let's come back to this later. There are larger UKLP refactors going on. Sorry to mess you around.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Wed, 24 Aug 2011 20:45:01 GMT</pubDate>
+      <title>status changed; repo, theme, resolution set</title>
+      <link>http://localhost/ticket/957#comment:7</link>
+      <guid isPermaLink="false">http://localhost/ticket/957#comment:7</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;repo&lt;/strong&gt;
+                set to &lt;em&gt;ckan&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;theme&lt;/strong&gt;
+                set to &lt;em&gt;none&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;wontfix&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+I'm closing this as wontfix as we now have arbitrary metadata for resources so probably won't need a specific field. That said we probably will want a schema but that is not yet finalized and would be a separate and wider ticket. For current proposal of the attributes generally wanted for resources see &lt;a class="ext-link" href="http://wiki.ckan.net/Domain_Model/Resource"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://wiki.ckan.net/Domain_Model/Resource&lt;/a&gt; (recently updated).
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

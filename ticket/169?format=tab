@@ -1,0 +1,22 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+169	Package derivations	dread	dread	"A 'Derived' relationship can be applied from one package to another.
+
+e.g.
+sussex-demography is derived from census-2001
+
+'Derived' relationship is:
+ * directional
+ * many:many
+ * stateful
+
+'derived' table columns:
+ * id (primary key)
+ * source_package (foreign key)
+ * result_package (foreign key)
+ * description (markdown text)
+
+Further tickets:
+
+ * WUI - package view - shows 'derives from package x' and 'derived package y' with UML-like diagram of x -> this package -> y
+ * WUI - package edit form - new option to say it 'derives from' or 'has derivation' and you select the appropriate
+ * REST if - expose reading and writing this property"	enhancement	closed	critical		ckan	duplicate				

@@ -1,0 +1,17 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1525,[super] DGU package form refactor,icmurray,icmurray,"Form refactor.
+
+New create/edit package form wizard for DGU.
+
+Tasks:
+
+ - #1526 : Simple one-page form.
+ - #1527 : Tab-ify the form using JS.  No validation between steps.
+ - #1541 : Setup server for the DGU form-refactor.
+ - #1537 : Package create form wizard
+ - #1538 : Store partially-filled in package form data as a draft.
+ - #1539 : Package forms auto-save
+
+How the rest of the work is carried out is up for discussion, as it depends on the approach taken.  Whether to continue with validation using AJAX queries, or whether to break the form down into multi pages.  [https://docs.google.com/spreadsheet/ccc?key=0Av2RfDDpj67zdGpSdFlKVjNrQmFXV3lHbGM3ZFlDdnc&hl=en_US#gid=1 Google doc outlining design(s)]
+
+",enhancement,new,major,,dgu,,dgu form refactor wizard,dread kindly shevski,ckanext-dgu,none

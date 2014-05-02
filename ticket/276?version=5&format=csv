@@ -1,0 +1,2 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+276,Resources in Package preview seen multiple times,rgrp,dread,"Create a new package with a name 'blah' and resource format 'blah'. Hit preview. There is an error because of the lack of resource url, but in the resource input boxes, there are now four resources with format 'blah'.",defect,new,critical,v1.0,ckan,,,,,

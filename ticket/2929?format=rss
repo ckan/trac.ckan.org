@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2929: Remove is_fallback() from I*Form extension interfaces?</title>
+    <link>http://localhost/ticket/2929</link>
+    <description>&lt;p&gt;
+If a plugin wants to take over the default package type for example, it can return &lt;a class="missing wiki"&gt;dataset?&lt;/a&gt; from its package_types() method. I don't see how there can be a package type that is not the default 'package' and is not returned by the package_types() method of a plugin, because the URLs for such a package type would not be mapped. Am I missing something or is is_fallback() not needed?
+&lt;/p&gt;
+&lt;p&gt;
+Same for IGroupForm and IOrganizationForm
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2929</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+ </channel>
+</rss>

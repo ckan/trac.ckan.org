@@ -1,0 +1,11 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1744	UX improvements to dataset edit as of Dec 2011	rgrp	zephod	"Super ticket: #1506
+
+  * ~~Show edit summary form again, at least on edit pages (and prefill it for create to something sensible like: Creating dataset {title} {name})~~ [Done #1506]
+  * ~~Fix drop down for resource types in resource add/edit to limit to fixed set of options (as per http://wiki.ckan.org/Domain_Model/Resource)~~
+    * ~~See also http://lists.okfn.org/pipermail/ckan-discuss/2011-December/001860.html~~
+  * ~~Allow reordering of resources (or: and this is somewhat more complex but possibly simpler: allow editing of a resource_order field and we use that to sort resources (this is more like wordpress page_order -- these two options could become the same if we just hijack the existing position field on the join table and get rid of ordereredlist extension))~~ [DONE #1506]
+  * ~~Radically simplify set of licenses~~ [DONE #1359]
+  * ~~""Unsaved changes"" warning briefly when you click ""Save"" #1735~~
+  * ~~""Unsaved changed"" typo on dataset edit page~~
+"	enhancement	closed	major	ckan-sprint-2012-02-20	ckan	fixed			ckan	none

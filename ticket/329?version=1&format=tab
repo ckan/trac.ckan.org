@@ -1,0 +1,10 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+329	Bad dates cause exception on Gov form	dread	rgrp	"== Reproduction ==
+
+Using the government form, create a new package with name 'test' and date released of '23/5/0210'. The result is a 500 error and 'Server Error' message.
+
+Affects all versions of CKAN.
+
+== Why it's happening ==
+
+The dates module is raising an exception on the invalid date when saving the date, which is not being caught. The exception should have been raised only during the earlier 'validation' step and that would be caught."	defect	new	blocker	v1.1	ckan					

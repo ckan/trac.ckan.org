@@ -1,0 +1,15 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1818	Spatial metadata editor	amercader	amercader	"Estimate 2.5d
+
+Right now users need to manually enter a geojson value in the 'spatial' extra field in order to define a geometry for a dataset.
+
+We need a map widget on the edit form that allows users to draw the geometry on top of a map. This will be based on the draw functions offered by OpenLayers [1], [2].
+
+Things to take into account:
+ * Integration with the form sections.
+ * Allow some degree of configuration (default extent, limit geometry types...)
+
+
+[1] http://openlayers.org/dev/examples/draw-feature.html
+[2] http://openlayers.org/dev/examples/modify-feature.html
+"	enhancement	new	major	ckan-future	ckan		geo [2.5d]		ckan	none

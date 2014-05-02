@@ -1,0 +1,151 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+293	REST PackageResource update causes exception	dread	johnbywater	"This is caused by editing a package with resources over the REST interface.
+
+Exception:
+{{{
+URL: http://de.ckan.net/api/rest/package/destatis
+Module weberror.errormiddleware:162 in __call__
+<<              __traceback_supplement__ = Supplement, self, environ
+                   sr_checker = ResponseStartChecker(start_response)
+                   app_iter = self.application(environ, sr_checker)
+                   return self.make_catching_iter(app_iter, environ, sr_checker)
+               except:
+>>  app_iter = self.application(environ, sr_checker)
+Module repoze.who.middleware:107 in __call__
+<<          wrapper = StartResponseWrapper(start_response)
+               app_iter = app(environ, wrapper.wrap_start_response)
+       
+               # The challenge decider almost(?) always needs information from the
+>>  app_iter = app(environ, wrapper.wrap_start_response)
+Module beaker.middleware:73 in __call__
+<<                                                     self.cache_manager)
+               environ[self.environ_key] = self.cache_manager
+               return self.app(environ, start_response)
+>>  return self.app(environ, start_response)
+Module beaker.middleware:152 in __call__
+<<                          headers.append(('Set-cookie', cookie))
+                   return start_response(status, headers, exc_info)
+               return self.wrap_app(environ, session_start_response)
+           
+           def _get_session(self):
+>>  return self.wrap_app(environ, session_start_response)
+Module routes.middleware:130 in __call__
+<<                  environ['SCRIPT_NAME'] = environ['SCRIPT_NAME'][:-1]
+               
+               response = self.app(environ, start_response)
+               
+               # Wrapped in try as in rare cases the attribute will be gone already
+>>  response = self.app(environ, start_response)
+Module pylons.wsgiapp:125 in __call__
+<<          
+               controller = self.resolve(environ, start_response)
+               response = self.dispatch(controller, environ, start_response)
+               
+               if 'paste.testing_variables' in environ and hasattr(response,
+>>  response = self.dispatch(controller, environ, start_response)
+Module pylons.wsgiapp:324 in dispatch
+<<          if log_debug:
+                   log.debug(""Calling controller class with WSGI interface"")
+               return controller(environ, start_response)
+           
+           def load_test_env(self, environ):
+>>  return controller(environ, start_response)
+Module ckan.lib.base:51 in __call__
+<<          # available in environ['pylons.routes_dict']
+               try:
+                   return WSGIController.__call__(self, environ, start_response)
+               finally:
+                   model.Session.remove()
+>>  return WSGIController.__call__(self, environ, start_response)
+Module pylons.controllers.core:221 in __call__
+<<                  return response(environ, self.start_response)
+               
+               response = self._dispatch_call()
+               if not start_response_called:
+                   self.start_response = start_response
+>>  response = self._dispatch_call()
+Module pylons.controllers.core:172 in _dispatch_call
+<<              req.environ['pylons.action_method'] = func
+                   
+                   response = self._inspect_call(func)
+               else:
+                   if log_debug:
+>>  response = self._inspect_call(func)
+Module pylons.controllers.core:107 in _inspect_call
+<<                        func.__name__, args)
+               try:
+                   result = self._perform_call(func, args)
+               except HTTPException, httpe:
+                   if log_debug:
+>>  result = self._perform_call(func, args)
+Module pylons.controllers.core:60 in _perform_call
+<<          """"""Hide the traceback for everything above this method""""""
+               __traceback_hide__ = 'before_and_this'
+               return func(**args)
+           
+           def _inspect_call(self, func):
+>>  return func(**args)
+Module ckan.controllers.rest:145 in update
+<<                  fs = ckan.forms.group_fs_combined
+                   fs = fs.bind(entity, data=request_fa_dict)
+                   validation = fs.validate_on_edit(entity.name, entity.id)
+                   if not validation:
+                       response.status_int = 409
+>>  validation = fs.validate_on_edit(entity.name, entity.id)
+Module ckan.forms.package:385 in validate_on_edit
+<<              temp_name = orig_pkg_name
+                   self.data['Package-%s-name' % record_id] = u'something_unique'
+               validation = self.validate()
+               if temp_name:
+                   # restore it
+>>  validation = self.validate()
+Module formalchemy.forms:175 in validate
+<<          if self.readonly:
+                   raise Exception('Cannot validate a read-only FieldSet')
+               return AbstractFieldSet.validate(self)
+       
+           def sync(self):
+>>  return AbstractFieldSet.validate(self)
+Module formalchemy.forms:104 in validate
+<<          success = True
+               for field in self.render_fields.itervalues():
+                   success = field._validate() and success
+               # run this _after_ the field validators, since each field validator
+               # resets its error list. we want to allow the global validator to add
+>>  success = field._validate() and success
+Module formalchemy.fields:763 in _validate
+<<          try:
+                   value = self._deserialize()
+               except validators.ValidationError, e:
+                   self.errors.append(e)
+>>  value = self._deserialize()
+Module formalchemy.fields:1354 in _deserialize
+<<          if self.is_composite_foreign_key:
+                   return self.query(self.relation_type()).get(python_pk(self.renderer.deserialize()))
+               return self.renderer.deserialize()
+>>  return self.renderer.deserialize()
+Module formalchemy.fields:183 in deserialize
+<<          if self.field.is_collection:
+                   return [self._deserialize(subdata) for subdata in self._serialized_value()]
+               return self._deserialize(self._serialized_value())
+       
+           def _deserialize(self, data):
+>>  return self._deserialize(self._serialized_value())
+Module formalchemy.fields:167 in _serialized_value
+<<          if self.field.is_collection:
+                   return self._params.getall(self.name)
+               return self._params.getone(self.name)
+       
+           def deserialize(self):
+>>  return self._params.getone(self.name)
+Module formalchemy.base:63 in getone
+<<          if v is None or isinstance(v, basestring) or isinstance(v, cgi.FieldStorage):
+                   return v
+               return v[0]
+           def getall(self, key):
+               v = dict.get(self, key)
+>>  return v[0]
+TypeError: 'int' object is unsubscriptable
+}}}
+
+Thanks to Friedrich for spotting this."	defect	closed	critical	v1.0	ckan	fixed				

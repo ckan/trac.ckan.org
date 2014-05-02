@@ -1,0 +1,12 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1607	[super] Data.gov.uk Maintenance Refactor and UKLP Development Support	dread	icmurray	"A ticket to collect all of the changes needed for CKAN to become the 'data' tab on DGU.
+
+Design doc: https://docs.google.com/document/d/19h9bA1G4cQkv031m8jNCu6FEB3a8qpXUmdPAguM-Ofs/edit?hl=en_GB  The design doc is the authoritative source of tasks.  This ticket acts as a synopsis.
+
+Current sprint:
+
+ * Publisher hierarchy support
+ * Improved dataset creation tools (form) - #1525
+ * Edit/delete for harvested datasets
+
+Overview of tasks: see the design doc."	enhancement	assigned	major	ckan-v1.7	ckan			thejimmyg kindly	ckanext-dgu	none

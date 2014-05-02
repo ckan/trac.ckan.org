@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1689: List deleted datasets in API</title>
+    <link>http://localhost/ticket/1689</link>
+    <description>&lt;p&gt;
+The admin extension allows deleted datasets to be viewed, but there is no equivalent in the API. The package_list API call filters to just 'state=active' datasets.
+&lt;/p&gt;
+&lt;p&gt;
+'state' could be a parameter on the package_list call
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Easy to call and implement
+&lt;/li&gt;&lt;li&gt;But getting permissions right for the different state values may not be easy - maybe a separate logic function is better?
+&lt;/li&gt;&lt;/ul&gt;</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1689</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>ross</dc:creator>
+
+      <pubDate>Wed, 20 Jun 2012 11:00:40 GMT</pubDate>
+      <title>owner, status changed; cc deleted</title>
+      <link>http://localhost/ticket/1689#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1689#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;cc&lt;/strong&gt;
+              &lt;em&gt;kindly&lt;/em&gt; removed
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;owner&lt;/strong&gt;
+              changed from &lt;em&gt;dread&lt;/em&gt; to &lt;em&gt;kindly&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;assigned&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

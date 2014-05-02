@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2731: Some sites permanently 'down for maintenance'</title>
+    <link>http://localhost/ticket/2731</link>
+    <description>&lt;p&gt;
+A large number of XXX.ckan.net sites give the following message:
+&lt;/p&gt;
+&lt;p&gt;
+"This Site is Down for Maintenance
+We apologize for the inconvenience.
+~ The Open Knowledge Foundation sysadmins."
+&lt;/p&gt;
+&lt;p&gt;
+The message is unhelpful and patently false - the sites do not exist. Some of them were supposed to have been redirected to a relevant group at thedatahub.org in this ticket (now closed):
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a class="ext-link" href="http://trac.okfn.org/ticket/933"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://trac.okfn.org/ticket/933&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+However, the redirection only seems to have worked in one case, &lt;a class="ext-link" href="http://si.ckan.net"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://si.ckan.net&lt;/a&gt;.
+&lt;/p&gt;
+&lt;p&gt;
+The problem still affects the following sites - the first 4 of which have supposedly been merged:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;a class="ext-link" href="http://lt.ckan.net"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://lt.ckan.net&lt;/a&gt;
+&lt;/li&gt;&lt;li&gt;&lt;a class="ext-link" href="http://hu.ckan.net"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://hu.ckan.net&lt;/a&gt;
+&lt;/li&gt;&lt;li&gt;&lt;a class="ext-link" href="http://be.ckan.net"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://be.ckan.net&lt;/a&gt;
+&lt;/li&gt;&lt;li&gt;&lt;a class="ext-link" href="http://gr.ckan.net"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://gr.ckan.net&lt;/a&gt;
+&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;&lt;a class="ext-link" href="http://nz.ckan.net"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://nz.ckan.net&lt;/a&gt;
+&lt;/li&gt;&lt;li&gt;&lt;a class="ext-link" href="http://bg.ckan.net"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://bg.ckan.net&lt;/a&gt;
+&lt;/li&gt;&lt;li&gt;&lt;a class="ext-link" href="http://fi.ckan.net"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://fi.ckan.net&lt;/a&gt;
+&lt;/li&gt;&lt;li&gt;&lt;a class="ext-link" href="http://katalogdanych.centrumcyfrowe.pl"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://katalogdanych.centrumcyfrowe.pl&lt;/a&gt;
+&lt;/li&gt;&lt;li&gt;&lt;a class="ext-link" href="http://pl.ckan.net"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://pl.ckan.net&lt;/a&gt;
+&lt;/li&gt;&lt;li&gt;&lt;a class="ext-link" href="http://southampton.ckan.net"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://southampton.ckan.net&lt;/a&gt;
+&lt;/li&gt;&lt;li&gt;&lt;a class="ext-link" href="http://sl.ckan.net"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://sl.ckan.net&lt;/a&gt;
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+Please sort this out by redirecting, removing the sites, giving a more helpful (and accurate) failure message, etc, as appropriate.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2731</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>markw</dc:creator>
+
+      <pubDate>Mon, 23 Jul 2012 13:53:28 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/2731#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/2731#comment:1</guid>
+      <description>
+        &lt;p&gt;
+Also, &lt;a class="ext-link" href="http://offener.datenkatalog.at"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://offener.datenkatalog.at&lt;/a&gt;, also called &lt;a class="ext-link" href="http://at.ckan.net"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://at.ckan.net&lt;/a&gt;, gives me a 500 error, including the words "Please contact the server administrator, [no address given]".
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

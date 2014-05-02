@@ -1,0 +1,5 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+214	UI Review - General template	dread	rgrp	" * Set hover names on navigation links.
+ * Do we really need to display ""About CKAN"" everywhere? Just on home page.
+ * Redirect in routing /groups and /tags rather than /group and /tag. At the very least make the plural versions forward to the singular versions.
+"	enhancement	new	critical		ckan					

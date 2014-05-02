@@ -1,0 +1,4 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+161	Tag listing is incorrect	rgrp	dread	"E.g. http://ckan.net/tag/read/postcodes this has no-postcode listed but when you look at that package 'postcodes' isn't a tag ...
+
+I suspect this may be to do with search using deleted tags as I think no-postcode had postcodes as a tag at some point earlier ..."	defect	closed	blocker	v0.11	ckan	fixed				

@@ -1,0 +1,18 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+875,Search backend supports solr interface and query API mimics solr,rgrp,pudo,"Consolidate search API interface (and backend) on solr (solrpy) type interface.
+
+ * Support for standard query structure
+ * Support for facet options
+
+Do '''not''' need to change response formats. (Or do we?)
+
+2 options here for advanced features like facets in non-solr:
+
+ 1. Disable (happens automatically)
+ 2. Implement - suggest using group by etc
+
+== Extras ==
+
+ * Front-page tag cloud: change this to use facets
+  * Accept this means that if facets not functional in backend we have no tag cloud
+",enhancement,closed,critical,ckan-v1.4-sprint-1,ckan,fixed,,,,

@@ -1,0 +1,15 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+130,Create a New Group via the WUI,rgrp,dread,"== As a ==
+
+User
+
+== I want to ==
+
+Create a new group via the WUI
+
+== Details ==
+
+  * locate at /group/new/
+  * You must be logged in to create a group
+  * Group creator is automatically given role of group admin
+  * Edit screen is same as edit screen ...",enhancement,closed,critical,v0.10,ckan,fixed,,,,

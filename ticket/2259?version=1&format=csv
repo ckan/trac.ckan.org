@@ -1,0 +1,6 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2259,Update ecportal theme for master changes (bootstrap),johnglover,johnglover,"Some recent changes caused things to break in ckanext-ecportal:
+
+ * change from blueprint to bootstrap
+ * other style / css changes (eg: tables, resource view notes field ID, etc. Forms are also broken, but that will be addressed in #2262)
+ * change to going through db_to_form_schema on package_show",enhancement,closed,major,ckan-sprint-2012-04-02,ecportal,fixed,[0.5d],,ckan,none

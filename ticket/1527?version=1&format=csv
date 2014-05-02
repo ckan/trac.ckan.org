@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1527,Break DGU package edit form into sections,icmurray,icmurray," - use javascript to selectively hide/show parts of the form
+ - there's no validation between steps at this stage.  It's still a
+   ""big save button at the end"".",enhancement,new,major,ckan-sprint-2011-12-19,dgu,,dgu form refactor wizard #1525,dread kindly shevski,ckanext-dgu,none

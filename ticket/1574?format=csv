@@ -1,0 +1,22 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1574,[super] Storage changes including automated save to Webstore,ross,ross,"Allow uploading of files to push the data into webstore.  Initially we were going to suggest changes to ckanext-storage but after further analysis we arrived at the conclusion that this should be implemented by ckanext-archiver as it already handles archiving of data from various sources and would be the best place to 'archive' to webstore.
+
+ 1. A user wants to upload a file to CKAN, and so chooses the file upload option as they do currently with ckanext-storage. The file upload itself should be handled by this code internal to core (see #1608) but still using ofs [5d]
+
+ 2. The user is provided the link to the file as currently. 
+
+ 3. The archiver's update task will check configuration to determine if it should upload some mime-types (tabular formats) to webstore. Configuration should also determine where webstore is. (see #1609) [5d] - took 6
+
+  * It should be stored in webstore using {username}/{resource-id} where {username} is the name of the user uploading the original file.
+
+ 4. The archiver will continue to move the file into permanent storage as per current practice.
+
+== Tickets
+
+ * #1608 Merge storage into Core [5d]
+ * #1609 Celery task for ckanext-archiver to write to webstore. [5d] (took 6)
+ * #1687: Deploy to datahub [1d]
+ * #1681: Core storage documentation [1d?]
+  * Internal (perhaps in README somewhere or wiki): how does process work, where does data end up and in what order etc
+  * External: here's how to configure it and here's what you get ... (goes in main sphinx docs)
+",enhancement,closed,awaiting triage,ckan-v1.7,ckan,fixed,"storage,archiver",,ckan,none

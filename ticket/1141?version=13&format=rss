@@ -1,0 +1,383 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1141: [super] Moderated Edits User Interface</title>
+    <link>http://localhost/ticket/1141</link>
+    <description>&lt;p&gt;
+&lt;strong&gt;Proposer&lt;/strong&gt;: John Glover&lt;br /&gt;
+&lt;strong&gt;Seconder&lt;/strong&gt;: James Gardner
+&lt;/p&gt;
+&lt;p&gt;
+Original CREP (ticke): &lt;a class="closed ticket" href="http://localhost/ticket/1129" title="CREP: CREP0002: Moderated  Edits (closed: fixed)"&gt;#1129&lt;/a&gt; (may just be the backend though!)
+&lt;/p&gt;
+&lt;h2 id="Abstract"&gt;Abstract&lt;/h2&gt;
+&lt;p&gt;
+We are trying to achieve these goals:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;To get people involved with making edits to CKAN metadata.
+&lt;/li&gt;&lt;li&gt;To have an ownership model as to who can moderate and validate these changes
+&lt;/li&gt;&lt;li&gt;To not put too huge a burden on these owners.
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+This feature allows anyone to edit a package and create a new revision, but requires an owner/moderator to approve a revision before it is are made "official".
+&lt;/p&gt;
+&lt;p&gt;
+There have been a lot of discussions around the revisioning system side of this ticket (CREP 0002) and I think these are now largely resolved. We now want to discuss the user interface.
+&lt;/p&gt;
+&lt;h2 id="TheProblem"&gt;The Problem&lt;/h2&gt;
+&lt;p&gt;
+We require the following functionality:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Allow a group of changes to be stored as a new revision.
+&lt;/li&gt;&lt;li&gt;Allow a linear stack of "community" revisions.
+&lt;/li&gt;&lt;li&gt;Provide a way for the editor and moderator to compare previous revisions to the current one.
+&lt;/li&gt;&lt;li&gt;When a moderator approves a change it creates a new revision flagged "moderated" (this is analogous to a merge commit)
+&lt;/li&gt;&lt;li&gt;Provide a way for the editor and moderator comment on revisions if necessary.
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+Extra features:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Need a way to summarise the changes (as part of the preview perhaps)
+&lt;/li&gt;&lt;li&gt;Sysadmin needs to purge a revision completely
+&lt;/li&gt;&lt;/ul&gt;&lt;h2 id="Specification"&gt;Specification&lt;/h2&gt;
+&lt;h3 id="UIUX"&gt;UI/UX&lt;/h3&gt;
+&lt;p&gt;
+UI Mockup:
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a style="padding:0; border:none" href="http://localhost/attachment/ticket/1141/ModeratedEdits2.png"&gt;&lt;img src="http://localhost/raw-attachment/ticket/1141/ModeratedEdits2.png" /&gt;&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+Revisions:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Revisions are per package rather than per field.
+&lt;/li&gt;&lt;li&gt;Internally CKAN has separate revisions for resources, extras and package metadata.  From a user's point of view this could be confusing to expose, so everything that they see on a package form when they hit save is a single revision.
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+On the Edit page:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;We have a panel on the right, listing all the revisions with the current moderated one selected. Moderated revisions are highligted in some way (red and bold?).
+&lt;/li&gt;&lt;li&gt;The values displayed in the form are by default populated from the latest revision (whether community or moderated)
+&lt;/li&gt;&lt;li&gt;Under each field is a "shadow", showing the value of the field in the revision selected in the panel, if it is different from the value in the field. By default the shadow values are populated from the latest moderated revision which is the one selected in the revision panel by default too.
+&lt;/li&gt;&lt;li&gt;When you change the value of a field, a shadow may appear or disappear accordingly. If they disappear a box saying that they are the same replaces it
+&lt;/li&gt;&lt;li&gt;If you want to edit values from a previous revision, you first select that revision to get the shadows populated. There is a button named "Replace fields with values from this revision" under the revision list. You click this, a warning pops up and then you say "Yes". You then select the moderated revision again.
+&lt;/li&gt;&lt;li&gt;We also allow package comments the same way as the todo extension works at the moment. Additionally, we need to be able to differentiate between what the moderator wrote and what a community member wrote, and so we may need to make a small change to the todo extension to facilitate this.
+&lt;/li&gt;&lt;li&gt;In addition to package comments, each revision will have a revision log (analogous to a commit message).
+&lt;/li&gt;&lt;/ul&gt;&lt;h3 id="TechnicalDetails"&gt;Technical Details&lt;/h3&gt;
+&lt;ul&gt;&lt;li&gt;This CREP will result in a new CKAN extension.
+&lt;/li&gt;&lt;li&gt;It depends heavily on the new revisioning system (CREP0002), some of the details of which are yet to be finalised.
+&lt;/li&gt;&lt;li&gt;This CREP therefore requires working closely with David Raznick to come up with an API that the UI AJAX calls can use.
+&lt;/li&gt;&lt;li&gt;We will then use suitable test data to mimic these API calls until CREP0002 is ready.
+&lt;/li&gt;&lt;/ul&gt;&lt;h2 id="Whydoitthisway"&gt;Why do it this way&lt;/h2&gt;
+&lt;p&gt;
+This hopefully provides a clear and consistent mechanism allowing both a community member to make new revisions and a moderator to view and approve revisions, with largely the same UI/UX.
+&lt;/p&gt;
+&lt;h2 id="Implementationplan"&gt;Implementation plan&lt;/h2&gt;
+&lt;h3 id="Deliverables"&gt;Deliverables&lt;/h3&gt;
+&lt;p&gt;
+A new CKAN extension, consisting of:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Code: Python, HTML, CSS, Javascript
+&lt;/li&gt;&lt;li&gt;Unit tests
+&lt;/li&gt;&lt;li&gt;Localization
+&lt;/li&gt;&lt;li&gt;Documentation
+&lt;/li&gt;&lt;/ul&gt;&lt;h3 id="Participants"&gt;Participants&lt;/h3&gt;
+&lt;p&gt;
+John Glover to do it.
+&lt;/p&gt;
+&lt;h3 id="Progress"&gt;Progress&lt;/h3&gt;
+&lt;p&gt;
+The Todo extension is written and available at: &lt;a class="ext-link" href="https://bitbucket.org/johnglover/ckanext-todo"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;https://bitbucket.org/johnglover/ckanext-todo&lt;/a&gt;.
+&lt;/p&gt;
+&lt;p&gt;
+In the section 'The Problem', under extra features, we mention a need for the sysadmin to be able to purge a revision already. This is already done.
+&lt;/p&gt;
+&lt;p&gt;
+The rest is yet to be started.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1141</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>johnglover</dc:creator>
+
+      <pubDate>Wed, 18 May 2011 14:53:17 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/1141#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1141#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1141?action=diff&amp;amp;version=1"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>johnglover</dc:creator>
+
+      <pubDate>Wed, 18 May 2011 14:54:31 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/1141#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/1141#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1141?action=diff&amp;amp;version=2"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>johnglover</dc:creator>
+
+      <pubDate>Wed, 18 May 2011 15:53:50 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/1141#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/1141#comment:3</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1141?action=diff&amp;amp;version=3"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>johnglover</dc:creator>
+
+      <pubDate>Wed, 18 May 2011 16:07:28 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/1141#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/1141#comment:4</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1141?action=diff&amp;amp;version=4"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>johnglover</dc:creator>
+
+      <pubDate>Tue, 24 May 2011 16:58:39 GMT</pubDate>
+      <title>attachment set</title>
+      <link>http://localhost/ticket/1141</link>
+      <guid isPermaLink="false">http://localhost/ticket/1141</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;attachment&lt;/strong&gt;
+                set to &lt;em&gt;ModeratedEdits.png&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Moderated Edits UI - Mockup
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>johnglover</dc:creator>
+
+      <pubDate>Tue, 24 May 2011 16:59:51 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/1141#comment:5</link>
+      <guid isPermaLink="false">http://localhost/ticket/1141#comment:5</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1141?action=diff&amp;amp;version=5"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>johnglover</dc:creator>
+
+      <pubDate>Wed, 25 May 2011 11:30:38 GMT</pubDate>
+      <title>attachment set</title>
+      <link>http://localhost/ticket/1141</link>
+      <guid isPermaLink="false">http://localhost/ticket/1141</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;attachment&lt;/strong&gt;
+                set to &lt;em&gt;ModeratedEdits2.png&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>johnglover</dc:creator>
+
+      <pubDate>Wed, 25 May 2011 11:31:22 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/1141#comment:6</link>
+      <guid isPermaLink="false">http://localhost/ticket/1141#comment:6</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1141?action=diff&amp;amp;version=6"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>timmcnamara</dc:creator>
+
+      <pubDate>Fri, 03 Jun 2011 00:41:10 GMT</pubDate>
+      <title>cc, keywords set</title>
+      <link>http://localhost/ticket/1141#comment:7</link>
+      <guid isPermaLink="false">http://localhost/ticket/1141#comment:7</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;cc&lt;/strong&gt;
+              &lt;em&gt;tim.mcnamara@…&lt;/em&gt; added
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;keywords&lt;/strong&gt;
+              &lt;em&gt;ui&lt;/em&gt; added
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Thu, 23 Jun 2011 11:35:28 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1141#comment:8</link>
+      <guid isPermaLink="false">http://localhost/ticket/1141#comment:8</guid>
+      <description>
+        &lt;p&gt;
+I've merged this into default in preparation for release 1.4.2, but there may be a couple of useful additions that could be done on this or another branch/ticket.
+&lt;/p&gt;
+&lt;p&gt;
+Getting a package at a specified revision is really useful. This can be used:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;links in the package history (&lt;a class="closed ticket" href="http://localhost/ticket/103" title="enhancement: View a package at a given revision (closed: fixed)"&gt;#103&lt;/a&gt;) (while in there, the 'moderated' flag should be shown in the package history too if not already)
+&lt;/li&gt;&lt;li&gt;should also be added to the package API (as a replacement for the AJAX call?)
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+The history_ajax call looks like an almost duplicate of the Package Revision API. Can these be merged and put just in the API?
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>thejimmyg</dc:creator>
+
+      <pubDate>Wed, 20 Jul 2011 15:33:12 GMT</pubDate>
+      <title>milestone set</title>
+      <link>http://localhost/ticket/1141#comment:9</link>
+      <guid isPermaLink="false">http://localhost/ticket/1141#comment:9</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                set to &lt;em&gt;ckan-backlog&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Mon, 17 Oct 2011 14:36:23 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1141#comment:10</link>
+      <guid isPermaLink="false">http://localhost/ticket/1141#comment:10</guid>
+      <description>
+        &lt;p&gt;
+What's the status of this now? The ckanext-moderatededits README still says you need a branch of ckan. Can you say which version of CKAN is required instead? I say we close this if ajax call is now in a better place in the API. (I expect it is now, with the logic layer).
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>johnglover</dc:creator>
+
+      <pubDate>Mon, 17 Oct 2011 14:46:13 GMT</pubDate>
+      <title>cc deleted</title>
+      <link>http://localhost/ticket/1141#comment:11</link>
+      <guid isPermaLink="false">http://localhost/ticket/1141#comment:11</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;cc&lt;/strong&gt;
+              &lt;em&gt;tim.mcnamara@…&lt;/em&gt; removed
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Well, it runs on datacatalogs.org with the current default so CKAN 1.5, but it needs quite a bit of updating to work with all of the new 1.5 UI changes, and as it has been a low priority for quite a while I haven't scheduled time to work on it. Really I would need to spend a few days on it to tidy it up for standard 1.5.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Fri, 30 Dec 2011 17:59:47 GMT</pubDate>
+      <title>summary changed</title>
+      <link>http://localhost/ticket/1141#comment:12</link>
+      <guid isPermaLink="false">http://localhost/ticket/1141#comment:12</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;summary&lt;/strong&gt;
+                changed from &lt;em&gt;Moderated Edits User Interface&lt;/em&gt; to &lt;em&gt;[super] Moderated Edits User Interface&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Fri, 30 Dec 2011 18:01:22 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/1141#comment:13</link>
+      <guid isPermaLink="false">http://localhost/ticket/1141#comment:13</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1141?action=diff&amp;amp;version=13"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Sat, 31 Dec 2011 17:28:27 GMT</pubDate>
+      <title>status, description changed; resolution set</title>
+      <link>http://localhost/ticket/1141#comment:14</link>
+      <guid isPermaLink="false">http://localhost/ticket/1141#comment:14</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1141?action=diff&amp;amp;version=14"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Closing, with remaining tidy up work for newer CKAN versions split off into new ticket: &lt;a class="new ticket" href="http://localhost/ticket/1604" title="enhancement: Get ckanext-moderatededits working with CKAN 1.5+ templates (new)"&gt;#1604&lt;/a&gt;
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

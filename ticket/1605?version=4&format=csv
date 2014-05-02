@@ -1,0 +1,14 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1605,[super] Multilingual support in CKAN,rgrp,kindly,"Multi-language:
+
+ * dataset and resource metadata (and other objects such as groups?)
+   * Options for implementation in http://ckan.okfnpad.org/multilingual
+ * Field values in taxonomy (e.g. country names - Eurovoc)
+   * #1665 Research into Eurovoc
+   * Display Taxonomy in different languages
+ * Field values not in taxonomy (e.g. title & description)
+   * Use extra fields e.g. _i18n_title_fr = Le data.
+   * (If lots of fields would need translating then would consider having a new package for each language, linked together with PackageRelationships. But I think it is just title and description (resource description etc. are so minor, not worth translating?), so using extra field better.)
+ * EC extension (templates, form)
+   * Currently the pot file is just for CKAN core. New pot file for CKAN core and this extension? Or separate ones for extensions?
+",enhancement,new,critical,ckan-v1.7,ckan,,,,ckan,none

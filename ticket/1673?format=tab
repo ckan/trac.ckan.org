@@ -1,0 +1,6 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1673	Add approval status field to groups	ross	ross	"Super #1669
+
+As groups need to be authorised in some cases, particularly publisher profiles, we need a field to denote how this is managed.  
+
+We should add an 'approval_status' field that will be used to denote its status.  By default this will be ""approved"" but this will allow us to override it with a ""pending"" or ""denied"" status.  The latter should also change the main status of the Group."	enhancement	closed	awaiting triage	ckan-sprint-2012-02-06	ckan	fixed	[1d][a:1d]		ckan	none

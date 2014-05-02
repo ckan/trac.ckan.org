@@ -1,0 +1,228 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #274: Allow searching by any extra field</title>
+    <link>http://localhost/ticket/274</link>
+    <description>&lt;p&gt;
+At the moment only support a very limited set of extra fields (see docs for details). Should support arbitrary extra fields (note no need to put these in special full text index though ...)
+&lt;/p&gt;
+&lt;p&gt;
+Cost: 1h
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/274</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Wed, 14 Apr 2010 13:35:37 GMT</pubDate>
+      <title>milestone changed</title>
+      <link>http://localhost/ticket/274#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/274#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;v1.0&lt;/em&gt; to &lt;em&gt;v1.1&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Fri, 09 Jul 2010 18:40:42 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/274#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/274#comment:2</guid>
+      <description>
+        &lt;p&gt;
+A significant chunk of the work towards this done in cset:742adebb707c (refactoring search options).
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>pudo</dc:creator>
+
+      <pubDate>Fri, 23 Jul 2010 13:03:57 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/274#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/274#comment:3</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+This is included in the Solr indexing engine and will become available as Solr is adopted.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Tue, 27 Jul 2010 20:23:49 GMT</pubDate>
+      <title>status changed; resolution deleted</title>
+      <link>http://localhost/ticket/274#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/274#comment:4</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;closed&lt;/em&gt; to &lt;em&gt;reopened&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                &lt;em&gt;fixed&lt;/em&gt; deleted
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Need to work on postgres and test there.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>pudo</dc:creator>
+
+      <pubDate>Thu, 29 Jul 2010 14:04:19 GMT</pubDate>
+      <title>status, type changed; resolution set; milestone deleted</title>
+      <link>http://localhost/ticket/274#comment:5</link>
+      <guid isPermaLink="false">http://localhost/ticket/274#comment:5</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;reopened&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;type&lt;/strong&gt;
+                changed from &lt;em&gt;enhancement&lt;/em&gt; to &lt;em&gt;defect&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                &lt;em&gt;v1.1&lt;/em&gt; deleted
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Tue, 10 Aug 2010 14:53:35 GMT</pubDate>
+      <title>status changed; resolution deleted</title>
+      <link>http://localhost/ticket/274#comment:6</link>
+      <guid isPermaLink="false">http://localhost/ticket/274#comment:6</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;closed&lt;/em&gt; to &lt;em&gt;reopened&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                &lt;em&gt;fixed&lt;/em&gt; deleted
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+The docs are now out of date and there doesn't seem to be a test for this.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Mon, 18 Oct 2010 10:39:58 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/274#comment:7</link>
+      <guid isPermaLink="false">http://localhost/ticket/274#comment:7</guid>
+      <description>
+        &lt;p&gt;
+I fixed the docs a couple of weeks ago. Need to ensure there is a test though.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>pudo</dc:creator>
+
+      <pubDate>Mon, 18 Oct 2010 11:42:35 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/274#comment:8</link>
+      <guid isPermaLink="false">http://localhost/ticket/274#comment:8</guid>
+      <description>
+        &lt;p&gt;
+Replying to &lt;a href="http://localhost/ticket/274#comment:7" title="Comment 7 for Ticket #274"&gt;dread&lt;/a&gt;:
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;p&gt;
+I fixed the docs a couple of weeks ago. Need to ensure there is a test though.
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+there is as of cset:c2e66cec3610
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>pudo</dc:creator>
+
+      <pubDate>Mon, 18 Oct 2010 11:44:18 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/274#comment:9</link>
+      <guid isPermaLink="false">http://localhost/ticket/274#comment:9</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;reopened&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Mon, 18 Oct 2010 11:53:20 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/274#comment:10</link>
+      <guid isPermaLink="false">http://localhost/ticket/274#comment:10</guid>
+      <description>
+        &lt;p&gt;
+Replying to &lt;a href="http://localhost/ticket/274#comment:8" title="Comment 8 for Ticket #274"&gt;pudo&lt;/a&gt;:
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;p&gt;
+Replying to &lt;a href="http://localhost/ticket/274#comment:7" title="Comment 7 for Ticket #274"&gt;dread&lt;/a&gt;:
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;p&gt;
+I fixed the docs a couple of weeks ago. Need to ensure there is a test though.
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+there is as of cset:c2e66cec3610
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Error: Invalid Changeset Number
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

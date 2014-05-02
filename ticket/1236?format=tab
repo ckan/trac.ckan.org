@@ -1,0 +1,7 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1236	View a package at a given revision	dread	dread	"As a user I want to view a package at a given revision:
+
+ * When I visit /package/osm@yyyy-mm-dd or /package/osm@rrrrrrr I should be shown package at date yyyy-mm-dd or revision rrrrrrr.
+ * viewing this page, it should say it is the old revision, just like wikipedia
+ * package history page should provide links to these pages
+"	enhancement	closed	awaiting triage	ckan-sprint-2011-11-07	ckan	fixed			ckan	none

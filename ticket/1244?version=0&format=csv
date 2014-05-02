@@ -1,0 +1,21 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1244,Notes field carriage-returns converted to CRLF,dread,,"When you edit a package in the web form, in the notes field, CKAN favours {{{\r\n}}} over other EOL characters. (The Markdown processor respects both EOLs when displaying the field, putting each line in a <p> tag.)
+
+The problem arises if you have a package created via the API, which may have other expressions of EOL e.g. just {{{\n}}}. These EOLs disappear when you edit a package in the web form. Thus when you subsequently save the package, the {{{\n}}} character is removed, even though you might not intend this, and the notes field is displayed all on one line.
+
+This can be seen when editing annakarenina (as created by 'paster create-test-data'). The diff shows for example:
+{{{
+- Some test notes
++ Some test notes
+?                +
+}}}
+but it would more clearly be shown as:
+{{{
+- Some test notes\n
++ Some test notes
+?                ++
+}}}
+
+This is a significant problem with DGU, since a lot comes in via the API.
+
+It's not clear what we should do about it. We could standardise on \n or \r\n when the form submission comes in. Do different browsers on different platforms do different things with EOLs?",enhancement,new,major,ckan-sprint-2011-11-07,ckan,,,,ckan,none

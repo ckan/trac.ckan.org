@@ -1,0 +1,17 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1728	Update UKLP harvesters	amercader	amercader	"Three small changes:
+
+ * Set Resource type to None instead of 'Undefined'
+ * Set extra 'UKLP' = True instead of 'INSPIRE' = True
+
+These two changes will require manual update of the database.
+
+ * Allow datasets to be updated if the old source is inactive, even if the metadata date hasn't changed:
+
+{{{
+    if last_harvested_object.metadata_modified_date is None \
+       or last_harvested_object.metadata_modified_date < self.obj.metadata_modified_date \
+       or self.force_import \
+       or last_harvested_object.metadata_modified_date == self.obj.metadata_modified_date and last_harvested_object.source.active is False:
+
+}}}"	enhancement	closed	major	ckan-sprint-2012-02-20	ckan	fixed	harvesting, uklp, 0.5d		ckanext-harvest	none

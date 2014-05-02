@@ -1,0 +1,46 @@
+= Welcome to Comprehensive Knowledge Archive Network (CKAN)  Development Project Wiki =
+
+== CKAN Service, CKAN API ==
+
+The CKAN software is used to run the CKAN service: http://www.ckan.net/
+
+The CKAN service also provides a [http://www.ckan.net/api/rest RESTful interface] for machine clients.
+
+CKAN is an [http://www.okfn.org/ Open Knowledge Foundation] project.
+
+----
+
+== Development Project Home Page ==
+
+Code is in a mercurial repository here: http://knowledgeforge.net/ckan/hg
+
+This Trac service is being used to track CKAN project developments.
+
+Documentation can be found at: http://knowledgeforge.net/ckan/doc/ckan/ (and on this wiki).
+                              [http://knowledgeforge.net/ckan/doc/datapkg/ DataPkg Documentation]
+
+== The Design Vision ==
+
+[[Image(ckan-vision.png)]]
+
+== Related Work ==
+
+  * Debian / R
+  * [http://www.ivoa.net/ Virtual Observatory]
+  * PyPI / Gems / CPAN
+
+== Purpose ==
+
+For those from the open source community it can most simply be put as:
+
+'''Freshmeat for Knowledge / A Debian for Data'''
+
+More detailed:
+
+'''A registry of open knowledge resources supporting automated reuse'''
+
+== Design pages ==
+
+ * PackageResources
+ * DataPkgUseCases
+ * UiReviewNotes

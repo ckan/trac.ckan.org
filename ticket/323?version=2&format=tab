@@ -1,0 +1,26 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+323	Notification message	dread	dread	"=== Which events to notify on ===
+
+Listed by domain object, these are the notification message 'change types' that will be sent:
+ * Revision
+ * Package
+ * !PackageResource
+
+Also it is clear that it could be useful to know when db-wide maintenance is carried out:
+ * db - 'clean', 'rebuild' (db is wiped and replaced with new data), 'upgrade' (migration)
+
+=== Ignored domain objects ===
+These parts of the domain model will not carry notifications as no use case has been identified for them:
+ * Group 
+ * Tag
+ * Rating
+ * User - list of users is sensitive info
+ * Relationships - complicated
+ * Authz - complicated and sensitive info
+ * License - change of a license's metadata is a question for the 'license service'
+
+=== Message format ===
+
+A notification message's header contains the routing key, identifying the object and ID. The client is probably interested in the object (all use cases so far), so it makes sense to send the object in the payload. This should be the JSON-encoded dictionary exactly as provided for the object's REST Entity.
+
+For the 'db' notifications there shall be no payload."	enhancement	new	blocker	v1.1	ckan					

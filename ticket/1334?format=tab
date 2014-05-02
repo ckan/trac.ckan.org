@@ -1,0 +1,16 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1334	"""AttributeError: 'NoneType' object has no attribute 'name'"" exception when logging in"	amercader	amercader	"On same cases this exception is thrown when logging in:
+
+ {{{
+File '/home/adria/dev/envs/iati/src/ckan/ckan/controllers/user.py', line 252 in logged_in
+  user_dict = get_action('user_show')(context,data_dict)
+File '/home/adria/dev/envs/iati/src/ckan/ckan/logic/action/get.py', line 414 in user_show
+  revision_dict = revision_show(context,{'id':revision.id})
+File '/home/adria/dev/envs/iati/src/ckan/ckan/logic/action/get.py', line 332 in revision_show
+  ref_package_by=ref_package_by)
+File '/home/adria/dev/envs/iati/src/ckan/ckan/model/__init__.py', line 317 in revision_as_dict
+  for pkg in revision.packages]
+AttributeError: 'NoneType' object has no attribute 'name'
+}}}
+
+"	defect	closed	major	ckan-sprint-2011-10-28	ckan	fixed			ckan	dictization

@@ -1,0 +1,6 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1031,User lookup API,rgrp,johnlawrenceaspden,"Add an api for searching users. This is needed for any kind of ajax autocomplete (needed for anywhere we want to add users).
+
+ * API location: /api/util/user/lookup?q=querystr&limit=10
+ * Return json objects containing {id: ..., name: ..., fullname: ...}
+ * Put in a module called controllers/apiv2/user.py",enhancement,assigned,critical,ckan-v1.4-sprint-4,ckan,,api bitesize,,,

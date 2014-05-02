@@ -1,0 +1,4 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2635	Non-destructive SOLR reindex	dread		"You can't run the search-index reindex on a live server because it will give us bad results for 2 to 3 hours while it runs. Can there be an option that doesn't delete the entire index at the start? 
+
+Instead it could just delete any items that don't exist any more, then delete them and regenerate them one by one. So the total number of datasets doesn't change much."	enhancement	new	major		ckan				ckan	none

@@ -1,0 +1,49 @@
+= The CKAN API =
+
+CKAN has a fully-featured Application Programming Interface (API).
+
+The API takes the form of a RESTful (Representational State Transfer) style API for accessing CKAN database objects and a Search API.
+
+For full details of accessing the API, see the CKAN developer documentation at http://packages.python.org/ckan/api.html
+
+== API Clients ==
+
+=== PHP client ===
+Ckan_client-PHP is an almost full and (I hope) easy-to-use interface to the CKAN APIs.
+ * Source: [http://github.com/jeffreybarke/Ckan_client-PHP]
+ * Author: Jeffrey Barke
+
+This example uses CKAN's search API and lists and reads Packages/Groups with the REST API.
+ * [http://www.practicalweb.co.uk/blog/10/02/23/accessing-ckan-data-php]
+ * Author: [http://practicalweb.co.uk/ Sean Burlington]
+
+=== Perl client example ===
+This example accesses the CKAN REST API to get a list of the packages, count the uses of an 'extra' field and then plots it with the Google chart API.  Luke broke the CKAN bits out into a CKAN specific client library - Net::CKAN.  Luke is open to improving this library and eventually releasing it to CPAN.
+ * Script Source: [http://github.com/lukec/net-ckan/blob/master/bin/make-ckan-chart]
+ * Library Source: [http://github.com/lukec/net-ckan/blob/master/lib/Net/CKAN.pm]
+ * Info: [http://lists.okfn.org/pipermail/ckan-discuss/2010-February/000057.html]
+ * Author: Luke Closs
+
+=== Python client ===
+Ckanclient is a python module that provides an full and easy-to-use interface to the CKAN APIs.
+ * About: [http://www.ckan.net/package/ckanclient]
+ * PyPI releases: [http://pypi.python.org/pypi/ckanclient/0.2]
+ * Code info: [http://knowledgeforge.net/ckan/ckanclient]
+ * Author: OKFN
+
+=== Command-line client ===
+Datapkg allows you to download the data in CKAN packages on the command-line, in the style of software package managers (e.g. apt-get, cpan, pypi).
+ * Docs: [http://packages.python.org/datapkg/]
+ * Source: [http://bitbucket.org/okfn/datapkg]
+
+== Other Code related to CKAN ==
+
+=== Drupal module ===
+Simple module:
+ * [http://www.practicalweb.co.uk/blog/10/02/24/drupal-module-ckan-integration]
+ * Author: [http://practicalweb.co.uk/ Sean Burlington]
+
+Advanced module:
+ * [http://data.gov.uk/blog/datagovuk-releases-open-source-code Blog post]
+ * [http://data.gov.uk/sites/default/files/ckanpackage.tar.gz ckanpackage.tar.gz] (and available on drupal.org shortly)
+ * Author: Data.gov.uk 

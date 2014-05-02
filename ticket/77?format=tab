@@ -1,0 +1,12 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+77	Rate packages	rgrp	dread	"= As a User or Visitor =
+
+I wish to rate a package in some way. On the package view, below Openness, there is a 'Rating' heading with the star rating which is selectable.
+
+Rating out of 5. One user or IP, one vote.
+
+package_rating table:
+
+package      | user                  | rating 
+annakarenina | joe.bloggs.openid.com | 4
+annakarenina | 154.2.5.47            | 1"	enhancement	closed	critical	v0.11	ckan	fixed				

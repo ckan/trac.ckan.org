@@ -1,0 +1,11 @@
+diff -r 31b1a5b457dd vdm/sqlalchemy/tools.py
+--- a/vdm/sqlalchemy/tools.py	Wed Jan 05 10:45:35 2011 +0000
++++ b/vdm/sqlalchemy/tools.py	Thu Jan 06 22:48:13 2011 +0000
+@@ -171,6 +171,7 @@
+         logger.debug('Purging revision: %s' % revision.id)
+         to_purge = []
+         SQLAlchemySession.setattr(self.session, 'revisioning_disabled', True)
++        self.session.autoflush = False
+         for o in self.versioned_objects:
+             revobj = o.__revision_class__
+             items = self.session.query(revobj).filter_by(revision=revision).all()

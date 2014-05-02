@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1546: Package metadata_created returns the wrong date</title>
+    <link>http://localhost/ticket/1546</link>
+    <description>&lt;p&gt;
+metadata_created seems to be returning the date of the earliest revision (for all packages), rather than the earliest revision for a specific package.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1546</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>johnglover</dc:creator>
+
+      <pubDate>Tue, 13 Dec 2011 11:23:44 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/1546#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1546#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Fixed: &lt;a class="ext-link" href="https://github.com/okfn/ckan/commit/fbaf4459b7da95c1db0ade165ea09720539c2f80"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;https://github.com/okfn/ckan/commit/fbaf4459b7da95c1db0ade165ea09720539c2f80&lt;/a&gt;
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Thu, 15 Dec 2011 15:24:49 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1546#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/1546#comment:2</guid>
+      <description>
+        &lt;p&gt;
+It looks like Rufus forgot the second bit of the AND clause:
+&lt;/p&gt;
+&lt;pre class="wiki"&gt;      and_(model.revision_table.c.id==model.package_revision_table.c.revision_id,
++          model.package_revision_table.c.continuity_id==self.id)
+          )
+&lt;/pre&gt;&lt;p&gt;
+Unfortunately John's fix breaks the &lt;a class="closed ticket" href="http://localhost/ticket/191" title="enhancement: Searching by modification date (closed: fixed)"&gt;#191&lt;/a&gt; fix. I'm reopening that to fix it there.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Thu, 15 Dec 2011 17:26:54 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1546#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/1546#comment:3</guid>
+      <description>
+        &lt;p&gt;
+The fix for the break related to 191 is checked in here: [release-v1.5.1c 2c595ae] and cherry picked to [origin/defect-191-modification-date f98a4b2]
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Fri, 16 Dec 2011 11:19:56 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1546#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/1546#comment:4</guid>
+      <description>
+        &lt;p&gt;
+Broken since introduction in CKAN 1.3. Fixed in CKAN 1.5.1.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

@@ -1,0 +1,6 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2725	Case sensitivity on tags	shevski	toby	"My feeling is that 'country-US' and 'country-us' should be the same tag. However currently tags with caps are treated differently 
+
+see http://s031.okserver.org:2375/en/dataset/test-dataset
+
+with TEST and test - there also get indexed twice in the search page"	enhancement	new	awaiting triage	demo phase 5	ckan		demo-theme		ckan	none

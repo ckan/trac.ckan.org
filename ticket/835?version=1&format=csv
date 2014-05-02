@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+835,Authorization CLI and Documentation,pudo,pudo,"As a sysadmin I want to take CKAN out of wiki-mode into normal mode. In normal mode visitor and logged in users cannot create or add packages.
+
+Suggest put this as an internal command in authz system and add to cli as paster command.",enhancement,new,blocker,ckan v1.3,ckan,,,,,

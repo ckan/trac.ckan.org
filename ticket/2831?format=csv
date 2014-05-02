@@ -1,0 +1,15 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2831,Create a limited subset of markdown that's supported,aron.carroll,,"Allowing people to use the full range of markdown results in extremely messy output across the site. I'd suggest limiting support to only a subset of common use cases.
+
+ * Allow all inline elements, this allows bold, italic, code and links.
+ * Allow lists.
+
+Disallow
+
+ * Horizontal Rules
+ * Headings
+ * Block quote and code (this may turn out to be useful and so could be included)
+
+This way you get markdowns paragraph handling and a few inline styles without breaking the entire layout of the page.
+
+Here's the full syntax if anyone is interested http://daringfireball.net/projects/markdown/syntax",enhancement,new,minor,ckan 2.0,ckan,,,,ckan,none

@@ -1,0 +1,6 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1504,Action API given blank data causes exception,dread,dread,"This is what caused the exception:
+{{{
+curl http://localhost:5000/api/action/package_search -d='{""q"": ""osm""}'
+}}}
+The problem is the content-type is formencoding, the '=' is the first character of the request, and so internally the data_dict is set to ' ', which needs to be a dictionary.",defect,closed,minor,ckan-sprint-2011-12-05,ckan,fixed,,,ckan,none

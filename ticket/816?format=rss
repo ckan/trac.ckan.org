@@ -1,0 +1,198 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #816: Autocomplete for the resource format field</title>
+    <link>http://localhost/ticket/816</link>
+    <description>&lt;p&gt;
+The field for entering the format of a resource should have autocomplete, populated from all the values that have already been entered in this field for any resource.
+&lt;/p&gt;
+&lt;p&gt;
+This would help improve data quality and consistency.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/816</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Mon, 16 May 2011 15:26:20 GMT</pubDate>
+      <title>milestone changed; priority, repo, state, theme set</title>
+      <link>http://localhost/ticket/816#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/816#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;priority&lt;/strong&gt;
+                set to &lt;em&gt;awaiting triage&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;repo&lt;/strong&gt;
+                set to &lt;em&gt;ckan&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;state&lt;/strong&gt;
+                set to &lt;em&gt;draft&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;theme&lt;/strong&gt;
+                set to &lt;em&gt;none&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan-v1.4&lt;/em&gt; to &lt;em&gt;ckan-v1.5&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>thejimmyg</dc:creator>
+
+      <pubDate>Wed, 20 Jul 2011 14:17:46 GMT</pubDate>
+      <title>status changed; owner set</title>
+      <link>http://localhost/ticket/816#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/816#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;owner&lt;/strong&gt;
+              set to &lt;em&gt;johnglover&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;assigned&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+John, could you have a look at this one please. We'd need an entry in the logic layer for it and then some autocomplete &lt;a class="missing wiki"&gt;JavaScript?&lt;/a&gt; on the format field.
+&lt;/p&gt;
+&lt;p&gt;
+Can we standardise on jQueryUI going forward.
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a class="ext-link" href="http://jqueryui.com/demos/autocomplete/"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://jqueryui.com/demos/autocomplete/&lt;/a&gt;
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>thejimmyg</dc:creator>
+
+      <pubDate>Wed, 20 Jul 2011 14:43:41 GMT</pubDate>
+      <title>priority, type, milestone changed</title>
+      <link>http://localhost/ticket/816#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/816#comment:3</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;priority&lt;/strong&gt;
+                changed from &lt;em&gt;awaiting triage&lt;/em&gt; to &lt;em&gt;minor&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;type&lt;/strong&gt;
+                changed from &lt;em&gt;requirement&lt;/em&gt; to &lt;em&gt;enhancement&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan-v1.5&lt;/em&gt; to &lt;em&gt;ckan-current-sprint&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Mon, 01 Aug 2011 09:54:59 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/816#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/816#comment:4</guid>
+      <description>
+        &lt;p&gt;
+What about idea of 'model' refactor for resource, specifically to have:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;format: human created format string with possible nesting e.g. zip:csv
+&lt;/li&gt;&lt;li&gt;kind: file | api | example | service
+&lt;/li&gt;&lt;li&gt;mimetype: standard mimetype (e.g. for zipped csv would be application/zip)
+&lt;/li&gt;&lt;li&gt;mimetype-inner: mimetype of innermost object (so for example would be text/csv)
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+See &lt;a class="ext-link" href="http://lists.okfn.org/pipermail/ckan-discuss/2011-April/001139.html"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://lists.okfn.org/pipermail/ckan-discuss/2011-April/001139.html&lt;/a&gt;
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Mon, 01 Aug 2011 15:33:02 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/816#comment:5</link>
+      <guid isPermaLink="false">http://localhost/ticket/816#comment:5</guid>
+      <description>
+        &lt;p&gt;
+I like rgrp's idea to change the model. But since it's complicated it would be good to have a UI.
+&lt;/p&gt;
+&lt;p&gt;
+e.g. You might make format field simply a drop-down with only some common options: 'CSV, Excel, Zip, Other'. If you go for Other, then a more substantial UI appears, to cover more filetypes, APIs, services and a text box for Other. And if you select 'Zip' then another set of options appears to say what is in the zip. etc.etc.
+&lt;/p&gt;
+&lt;p&gt;
+Another approach would be to have a background process downloading the data file and filling this in for you.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>johnglover</dc:creator>
+
+      <pubDate>Tue, 02 Aug 2011 14:29:31 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/816#comment:6</link>
+      <guid isPermaLink="false">http://localhost/ticket/816#comment:6</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;assigned&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+I have implemented the resource autocomplete so am closing this for now.
+&lt;/p&gt;
+&lt;p&gt;
+I agree that more information on the resource would be a good addition. It seems a bit of a different issue to just adding autocomplete though, with potentially far more changes to the codebase, so maybe it would be better discussed in a separate ticket/CREP. However, any new fields would presumably want to either be constrained or have an autocomplete and so can reuse the work done on this feature.
+&lt;/p&gt;
+&lt;p&gt;
+Cheers,
+John
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Fri, 28 Oct 2011 12:24:58 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/816#comment:7</link>
+      <guid isPermaLink="false">http://localhost/ticket/816#comment:7</guid>
+      <description>
+        &lt;p&gt;
+John did this in cset:1697dfa2552c for release 1.5
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Fri, 28 Oct 2011 14:32:04 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/816#comment:8</link>
+      <guid isPermaLink="false">http://localhost/ticket/816#comment:8</guid>
+      <description>
+        &lt;p&gt;
+And branch feature-816-format-autocomplete
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

@@ -1,0 +1,366 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      #434 (Logged in user to si.ckan.net causes genshi exception)
+     – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="prev" href="433.html" title="Ticket #433" />
+        <link rel="last" href="3030.html" title="Ticket #3030" />
+        <link rel="help" href="../wiki/TracGuide.html" />
+        <link rel="alternate" href="434%3Fformat=csv" type="text/csv" class="csv" title="Comma-delimited Text" /><link rel="alternate" href="434%3Fformat=tab" type="text/tab-separated-values" class="tab" title="Tab-delimited Text" /><link rel="alternate" href="434%3Fformat=rss" type="application/rss+xml" class="rss" title="RSS Feed" />
+        <link rel="next" href="435.html" title="Ticket #435" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/ticket.css" type="text/css" />
+        <link rel="first" href="1.html" title="Ticket #1" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript">
+      var auto_preview_timeout=2.0;
+      var form_token="93d81ccf9a7bb1c456462f62";
+    </script>
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script><script type="text/javascript" src="../chrome/common/js/wikitoolbar.js"></script><script type="text/javascript" src="../chrome/common/js/resizer.js"></script><script type="text/javascript" src="../chrome/common/js/auto_preview.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("div.description").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $(".foldable").enableFolding(false, true);
+        var args = {realm: "ticket", id: 434, escape_newlines: 0}
+        $("#comment").autoPreview("/wiki_render", args, function(textarea, text, rendered) {
+            $("#ticketchange div.comment").html(rendered);
+            if (rendered)
+              $("#ticketchange").show();
+            else if ($("#ticketchange ul.changes").length == 0)
+              $("#ticketchange").hide();
+        });
+        $("#trac-comment-editor textarea").autoPreview("/wiki_render", args,
+                                                       function(textarea, text, rendered) {
+          var comment = $("#trac-comment-editor").next("div.comment");
+          comment.html(rendered);
+          if (rendered)
+            comment.show();
+          else
+            comment.hide();
+        });
+        $("#modify").parent().toggleClass("collapsed");
+        $(".trac-topnav a").click(function() { $("#modify").parent().removeClass("collapsed"); });
+        /* only enable control elements for the currently selected action */
+        var actions = $("#action input[name='action']");
+        function updateActionFields() {
+          actions.each(function () {
+            $(this).siblings().find("*[id]").enable($(this).checked());
+            $(this).siblings().filter("*[id]").enable($(this).checked());
+          });
+        }
+        actions.click(updateActionFields);
+        updateActionFields();
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="../wiki/TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li class="active"><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="433.html" title="Ticket #433">Previous Ticket</a></span></li><li class="last"><span><a class="next" href="435.html" title="Ticket #435">Next Ticket</a> &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="ticket">
+      <h1 id="trac-ticket-title">
+          <a href="434.html">Ticket #434</a>
+          <span class="status">(closed defect: fixed)</span>
+      </h1>
+      <div id="ticket">
+  <div class="date">
+    <p>Opened <a class="timeline" href="../timeline%3Ffrom=2010-08-18T11:21:55Z&amp;precision=second.html" title="2010-08-18T11:21:55Z in Timeline">4 years</a> ago</p>
+    <p>Last modified <a class="timeline" href="../timeline%3Ffrom=2010-08-30T17:36:47Z&amp;precision=second.html" title="2010-08-30T17:36:47Z in Timeline">4 years</a> ago</p>
+  </div>
+  <h2 class="summary searchable">Logged in user to si.ckan.net causes genshi exception</h2>
+  <table class="properties">
+    <tr>
+      <th id="h_reporter">Reported by:</th>
+      <td headers="h_reporter" class="searchable">
+        <a href="../query%3Fstatus=!closed&amp;reporter=dread.html">dread</a>
+      </td>
+      <th id="h_owner">Owned by:</th>
+      <td headers="h_owner">
+      </td>
+    </tr>
+    <tr>
+        <th id="h_priority">
+          Priority:
+        </th>
+        <td headers="h_priority">
+              <a href="../query%3Fstatus=!closed&amp;priority=critical.html">critical</a>
+        </td>
+        <th id="h_milestone">
+          Milestone:
+        </th>
+        <td headers="h_milestone">
+              <a class="closed milestone" href="../milestone/ckan-v1.2.html">ckan-v1.2</a>
+        </td>
+    </tr><tr>
+        <th id="h_component">
+          Component:
+        </th>
+        <td headers="h_component">
+              <a href="../query%3Fstatus=!closed&amp;component.html"></a>
+        </td>
+        <th id="h_keywords">
+          Keywords:
+        </th>
+        <td headers="h_keywords" class="searchable">
+        </td>
+    </tr><tr>
+        <th id="h_cc">
+          Cc:
+        </th>
+        <td headers="h_cc" class="searchable">
+        </td>
+        <th id="h_repo">
+          Repository:
+        </th>
+        <td headers="h_repo">
+              <a href="../query%3Fstatus=!closed.html"></a>
+        </td>
+    </tr><tr>
+        <th id="h_theme">
+          Theme:
+        </th>
+        <td headers="h_theme">
+              <a href="../query%3Fstatus=!closed.html"></a>
+        </td>
+        <th>
+        </th>
+        <td>
+        </td>
+    </tr>
+  </table>
+  <div class="description">
+    <h3 id="comment:description">
+      Description
+      <span class="lastmod" title="2010-08-18 11:23:05+00:00">
+        (last modified by dread)
+        (<a href="434%3Faction=diff&amp;version=1.html">diff</a>)
+      </span>
+    </h3>
+    <div class="searchable">
+      <p>
+Here's the trace:
+</p>
+<pre class="wiki">[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197] Error - &lt;type 'exceptions.IndexError'&gt;: list index out of range
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197] mod_wsgi (pid=6195): Exception occurred processing WSGI script '/home/okfn/var/srvc/si.ckan.net/py
+env/bin/si.ckan.net.py'.
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197] Traceback (most recent call last):
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File "/home/okfn/var/srvc/si.ckan.net/pyenv/lib/python2.5/site-packages/paste/cascade.py", line 
+130, in __call__
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     return self.apps[-1](environ, start_response)
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File "/home/okfn/var/srvc/si.ckan.net/pyenv/lib/python2.5/site-packages/paste/registry.py", line
+ 375, in __call__
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     app_iter = self.application(environ, start_response)
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File "/home/okfn/var/srvc/si.ckan.net/pyenv/lib/python2.5/site-packages/repoze/who/middleware.py
+", line 107, in __call__
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     app_iter = app(environ, wrapper.wrap_start_response)
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File "/home/okfn/var/srvc/si.ckan.net/pyenv/lib/python2.5/site-packages/pylons/middleware.py", l
+ine 214, in __call__
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     self.app, new_environ, catch_exc_info=True)
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File "/home/okfn/var/srvc/si.ckan.net/pyenv/lib/python2.5/site-packages/pylons/util.py", line 94
+, in call_wsgi_application
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     app_iter = application(environ, start_response)
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File "/home/okfn/var/srvc/si.ckan.net/pyenv/lib/python2.5/site-packages/weberror/errormiddleware
+.py", line 156, in __call__
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     return self.application(environ, start_response)
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File "/home/okfn/var/srvc/si.ckan.net/pyenv/lib/python2.5/site-packages/beaker/middleware.py", l
+ine 73, in __call__
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     return self.app(environ, start_response)
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File "/home/okfn/var/srvc/si.ckan.net/pyenv/lib/python2.5/site-packages/beaker/middleware.py", l
+ine 152, in __call__
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     return self.wrap_app(environ, session_start_response)
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File "/home/okfn/var/srvc/si.ckan.net/pyenv/lib/python2.5/site-packages/routes/middleware.py", l
+ine 130, in __call__
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     response = self.app(environ, start_response)
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File "/home/okfn/var/srvc/si.ckan.net/pyenv/lib/python2.5/site-packages/pylons/wsgiapp.py", line
+ 125, in __call__
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     response = self.dispatch(controller, environ, start_response)
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File "/home/okfn/var/srvc/si.ckan.net/pyenv/lib/python2.5/site-packages/pylons/wsgiapp.py", line
+ 324, in dispatch
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     return controller(environ, start_response)
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File "/home/okfn/var/srvc/si.ckan.net/pyenv/src/ckan/ckan/lib/base.py", line 73, in __call__
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     return WSGIController.__call__(self, environ, start_response)
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File "/home/okfn/var/srvc/si.ckan.net/pyenv/lib/python2.5/site-packages/pylons/controllers/core.
+py", line 221, in __call__
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     response = self._dispatch_call()
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File "/home/okfn/var/srvc/si.ckan.net/pyenv/lib/python2.5/site-packages/pylons/controllers/core.
+py", line 172, in _dispatch_call
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     response = self._inspect_call(func)
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File "/home/okfn/var/srvc/si.ckan.net/pyenv/lib/python2.5/site-packages/pylons/controllers/core.
+py", line 107, in _inspect_call
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     result = self._perform_call(func, args)
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File "/home/okfn/var/srvc/si.ckan.net/pyenv/lib/python2.5/site-packages/pylons/controllers/core.
+py", line 60, in _perform_call
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     return func(**args)
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File "/home/okfn/var/srvc/si.ckan.net/pyenv/src/ckan/ckan/controllers/error.py", line 32, in doc
+ument
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     ckan_template = render('error_document_template.html')
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File "/home/okfn/var/srvc/si.ckan.net/pyenv/src/ckan/ckan/lib/base.py", line 38, in render
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     return render_template()
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File "/home/okfn/var/srvc/si.ckan.net/pyenv/src/ckan/ckan/lib/base.py", line 36, in render_templ
+ate
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     return literal(stream.render(method=method, encoding=None))
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File "/home/okfn/var/srvc/si.ckan.net/pyenv/lib/python2.5/site-packages/genshi/core.py", line 18
+3, in render
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     return encode(generator, method=method, encoding=encoding, out=out)
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File "/home/okfn/var/srvc/si.ckan.net/pyenv/lib/python2.5/site-packages/genshi/output.py", line 
+57, in encode
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     return _encode(''.join(list(iterator)))
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File "/home/okfn/var/srvc/si.ckan.net/pyenv/lib/python2.5/site-packages/genshi/output.py", line 339, in __call__
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     for kind, data, pos in stream:
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File "/home/okfn/var/srvc/si.ckan.net/pyenv/lib/python2.5/site-packages/genshi/output.py", line 670, in __call__
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     for kind, data, pos in stream:
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File "/home/okfn/var/srvc/si.ckan.net/pyenv/lib/python2.5/site-packages/genshi/output.py", line 771, in __call__
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     for kind, data, pos in chain(stream, [(None, None, None)]):
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File "/home/okfn/var/srvc/si.ckan.net/pyenv/lib/python2.5/site-packages/genshi/output.py", line 586, in __call__
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     for ev in stream:
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File "/home/okfn/var/srvc/si.ckan.net/pyenv/lib/python2.5/site-packages/genshi/core.py", line 288, in _ensure
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     for event in stream:
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File "/home/okfn/var/srvc/si.ckan.net/pyenv/lib/python2.5/site-packages/genshi/template/base.py", line 618, in _include
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     for event in tmpl.generate(ctxt, **vars):
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File "/home/okfn/var/srvc/si.ckan.net/pyenv/lib/python2.5/site-packages/genshi/template/base.py", line 618, in _include
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     for event in tmpl.generate(ctxt, **vars):
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File "/home/okfn/var/srvc/si.ckan.net/pyenv/lib/python2.5/site-packages/genshi/template/base.py", line 605, in _include
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     for event in stream:
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File "/home/okfn/var/srvc/si.ckan.net/pyenv/lib/python2.5/site-packages/genshi/template/markup.py", line 327, in _match
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     for event in stream:
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File "/home/okfn/var/srvc/si.ckan.net/pyenv/lib/python2.5/site-packages/genshi/template/base.py", line 545, in _flatten
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     for kind, data, pos in stream:
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File "/home/okfn/var/srvc/si.ckan.net/pyenv/lib/python2.5/site-packages/genshi/filters/i18n.py", line 177, in _generate
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     for event in msgbuf.translate(gettext(msgbuf.format())):
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File "/home/okfn/var/srvc/si.ckan.net/pyenv/lib/python2.5/site-packages/genshi/filters/i18n.py", line 1029, in translate
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     parts = parse_msg(string)
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File "/home/okfn/var/srvc/si.ckan.net/pyenv/lib/python2.5/site-packages/genshi/filters/i18n.py", line 1143, in parse_msg
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     parts.append((stack[-1], string))
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197] IndexError: list index out of range
+</pre><p>
+ckan: 1e403927f2bb (metastable)
+genshi: 0.6
+lang: slovenian
+</p>
+
+    </div>
+  </div>
+</div>
+          
+
+        <div>
+          <h2 class="foldable">Change History</h2>
+          <div id="changelog">
+              <div class="change" id="trac-change-1">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:1" class="cnum">
+      <a href="434.html#comment:1">comment:1</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2010-08-18T11:23:05Z&amp;precision=second.html" title="2010-08-18T11:23:05Z in Timeline">4 years</a> ago by dread
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Description</strong>
+        modified (<a href="434%3Faction=diff&amp;version=1.html">diff</a>)
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-2">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:2" class="cnum">
+      <a href="434.html#comment:2">comment:2</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2010-08-30T17:36:47Z&amp;precision=second.html" title="2010-08-30T17:36:47Z in Timeline">4 years</a> ago by rgrp
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Status</strong>
+        changed from <em>new</em> to <em>closed</em>
+    </li><li>
+      <strong>Resolution</strong>
+        set to <em>fixed</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+Looking at stack trac clear this was an issue with genshi/babel and i18n. Net search led to <a class="ext-link" href="http://trac.edgewall.org/ticket/9171"><span class="icon">​</span>http://trac.edgewall.org/ticket/9171</a> which confirmed this. Fact that error was on every page when logged in suggested this was a string in template showing up on log in. Quick search confirmed suspicion ('You are logged in as' string) and fix in <a class="ext-link" href="http://bitbucket.org/bboissin/ckan-i18n/changeset/8e0c25102cc0"><span class="icon">​</span>http://bitbucket.org/bboissin/ckan-i18n/changeset/8e0c25102cc0</a>
+</p>
+
+    </div>
+
+              </div>
+          </div>
+        </div>
+      <div id="help"><strong>Note:</strong> See
+        <a href="../wiki/TracTickets.html">TracTickets</a> for help on using
+        tickets.</div>
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="first">
+          <a rel="nofollow" href="434%3Fformat=csv" class="csv">Comma-delimited Text</a>
+        </li><li>
+          <a rel="nofollow" href="434%3Fformat=tab" class="tab">Tab-delimited Text</a>
+        </li><li class="last">
+          <a rel="nofollow" href="434%3Fformat=rss" class="rss">RSS Feed</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

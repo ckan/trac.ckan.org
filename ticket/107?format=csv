@@ -1,0 +1,12 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+107,Provide information about uploading material,rgrp,rgrp,"Often people who are registering resources want to make the associated material available. We should:
+
+  * Provide a dedicated upload page giving instructions as to upload process
+    1. Explain we don't store the data itself on CKAN. Suggest uploading to a store somewhere and then linking using download_url (that is its purpose)
+    2. Upload to
+      * Talis CC for RDF
+      * archive.org
+      * grid.okfn.org
+  * link to this page from next to download_url item on new package page
+
+In long run (now ticket:186) we may automate this by providing a ckan upload facility which caches the data and then reuploads it to relevant service (disadvantage is ""we"" are the owner of the data on that service ...)",enhancement,closed,major,,ckan,invalid,,,,

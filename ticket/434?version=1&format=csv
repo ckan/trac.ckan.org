@@ -1,0 +1,101 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+434,Logged in user to si.ckan.net causes genshi exception,dread,,"Here's the trace:
+
+{{{
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197] Error - <type 'exceptions.IndexError'>: list index out of range
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197] mod_wsgi (pid=6195): Exception occurred processing WSGI script '/home/okfn/var/srvc/si.ckan.net/py
+env/bin/si.ckan.net.py'.
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197] Traceback (most recent call last):
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File ""/home/okfn/var/srvc/si.ckan.net/pyenv/lib/python2.5/site-packages/paste/cascade.py"", line 
+130, in __call__
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     return self.apps[-1](environ, start_response)
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File ""/home/okfn/var/srvc/si.ckan.net/pyenv/lib/python2.5/site-packages/paste/registry.py"", line
+ 375, in __call__
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     app_iter = self.application(environ, start_response)
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File ""/home/okfn/var/srvc/si.ckan.net/pyenv/lib/python2.5/site-packages/repoze/who/middleware.py
+"", line 107, in __call__
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     app_iter = app(environ, wrapper.wrap_start_response)
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File ""/home/okfn/var/srvc/si.ckan.net/pyenv/lib/python2.5/site-packages/pylons/middleware.py"", l
+ine 214, in __call__
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     self.app, new_environ, catch_exc_info=True)
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File ""/home/okfn/var/srvc/si.ckan.net/pyenv/lib/python2.5/site-packages/pylons/util.py"", line 94
+, in call_wsgi_application
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     app_iter = application(environ, start_response)
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File ""/home/okfn/var/srvc/si.ckan.net/pyenv/lib/python2.5/site-packages/weberror/errormiddleware
+.py"", line 156, in __call__
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     return self.application(environ, start_response)
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File ""/home/okfn/var/srvc/si.ckan.net/pyenv/lib/python2.5/site-packages/beaker/middleware.py"", l
+ine 73, in __call__
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     return self.app(environ, start_response)
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File ""/home/okfn/var/srvc/si.ckan.net/pyenv/lib/python2.5/site-packages/beaker/middleware.py"", l
+ine 152, in __call__
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     return self.wrap_app(environ, session_start_response)
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File ""/home/okfn/var/srvc/si.ckan.net/pyenv/lib/python2.5/site-packages/routes/middleware.py"", l
+ine 130, in __call__
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     response = self.app(environ, start_response)
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File ""/home/okfn/var/srvc/si.ckan.net/pyenv/lib/python2.5/site-packages/pylons/wsgiapp.py"", line
+ 125, in __call__
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     response = self.dispatch(controller, environ, start_response)
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File ""/home/okfn/var/srvc/si.ckan.net/pyenv/lib/python2.5/site-packages/pylons/wsgiapp.py"", line
+ 324, in dispatch
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     return controller(environ, start_response)
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File ""/home/okfn/var/srvc/si.ckan.net/pyenv/src/ckan/ckan/lib/base.py"", line 73, in __call__
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     return WSGIController.__call__(self, environ, start_response)
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File ""/home/okfn/var/srvc/si.ckan.net/pyenv/lib/python2.5/site-packages/pylons/controllers/core.
+py"", line 221, in __call__
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     response = self._dispatch_call()
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File ""/home/okfn/var/srvc/si.ckan.net/pyenv/lib/python2.5/site-packages/pylons/controllers/core.
+py"", line 172, in _dispatch_call
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     response = self._inspect_call(func)
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File ""/home/okfn/var/srvc/si.ckan.net/pyenv/lib/python2.5/site-packages/pylons/controllers/core.
+py"", line 107, in _inspect_call
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     result = self._perform_call(func, args)
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File ""/home/okfn/var/srvc/si.ckan.net/pyenv/lib/python2.5/site-packages/pylons/controllers/core.
+py"", line 60, in _perform_call
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     return func(**args)
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File ""/home/okfn/var/srvc/si.ckan.net/pyenv/src/ckan/ckan/controllers/error.py"", line 32, in doc
+ument
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     ckan_template = render('error_document_template.html')
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File ""/home/okfn/var/srvc/si.ckan.net/pyenv/src/ckan/ckan/lib/base.py"", line 38, in render
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     return render_template()
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File ""/home/okfn/var/srvc/si.ckan.net/pyenv/src/ckan/ckan/lib/base.py"", line 36, in render_templ
+ate
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     return literal(stream.render(method=method, encoding=None))
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File ""/home/okfn/var/srvc/si.ckan.net/pyenv/lib/python2.5/site-packages/genshi/core.py"", line 18
+3, in render
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     return encode(generator, method=method, encoding=encoding, out=out)
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File ""/home/okfn/var/srvc/si.ckan.net/pyenv/lib/python2.5/site-packages/genshi/output.py"", line 
+57, in encode
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     return _encode(''.join(list(iterator)))
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File ""/home/okfn/var/srvc/si.ckan.net/pyenv/lib/python2.5/site-packages/genshi/output.py"", line 339, in __call__
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     for kind, data, pos in stream:
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File ""/home/okfn/var/srvc/si.ckan.net/pyenv/lib/python2.5/site-packages/genshi/output.py"", line 670, in __call__
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     for kind, data, pos in stream:
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File ""/home/okfn/var/srvc/si.ckan.net/pyenv/lib/python2.5/site-packages/genshi/output.py"", line 771, in __call__
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     for kind, data, pos in chain(stream, [(None, None, None)]):
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File ""/home/okfn/var/srvc/si.ckan.net/pyenv/lib/python2.5/site-packages/genshi/output.py"", line 586, in __call__
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     for ev in stream:
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File ""/home/okfn/var/srvc/si.ckan.net/pyenv/lib/python2.5/site-packages/genshi/core.py"", line 288, in _ensure
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     for event in stream:
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File ""/home/okfn/var/srvc/si.ckan.net/pyenv/lib/python2.5/site-packages/genshi/template/base.py"", line 618, in _include
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     for event in tmpl.generate(ctxt, **vars):
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File ""/home/okfn/var/srvc/si.ckan.net/pyenv/lib/python2.5/site-packages/genshi/template/base.py"", line 618, in _include
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     for event in tmpl.generate(ctxt, **vars):
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File ""/home/okfn/var/srvc/si.ckan.net/pyenv/lib/python2.5/site-packages/genshi/template/base.py"", line 605, in _include
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     for event in stream:
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File ""/home/okfn/var/srvc/si.ckan.net/pyenv/lib/python2.5/site-packages/genshi/template/markup.py"", line 327, in _match
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     for event in stream:
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File ""/home/okfn/var/srvc/si.ckan.net/pyenv/lib/python2.5/site-packages/genshi/template/base.py"", line 545, in _flatten
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     for kind, data, pos in stream:
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File ""/home/okfn/var/srvc/si.ckan.net/pyenv/lib/python2.5/site-packages/genshi/filters/i18n.py"", line 177, in _generate
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     for event in msgbuf.translate(gettext(msgbuf.format())):
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File ""/home/okfn/var/srvc/si.ckan.net/pyenv/lib/python2.5/site-packages/genshi/filters/i18n.py"", line 1029, in translate
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     parts = parse_msg(string)
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]   File ""/home/okfn/var/srvc/si.ckan.net/pyenv/lib/python2.5/site-packages/genshi/filters/i18n.py"", line 1143, in parse_msg
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197]     parts.append((stack[-1], string))
+[Wed Aug 18 11:10:19 2010] [error] [client 89.212.104.197] IndexError: list index out of range
+}}}
+
+ckan: 1e403927f2bb (metastable)
+genshi: 0.6
+lang: slovenian",defect,new,critical,ckan-v1.2,,,,,,

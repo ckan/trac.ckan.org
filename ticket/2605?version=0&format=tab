@@ -1,0 +1,69 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2605	Problem with user.get_groups	ross	ross	"From DR at DGU
+
+Basically get_groups() appears to cache its results, but this falls
+down when subsequent calls are in a different session. We get this
+when saving a dataset. get_groups() first gets called in the
+controller when it is trying to work out what permissions the user
+has. It later gets called, and by this time c.userobj is detached, so
+get_groups() fails.
+
+I'm working around this by refreshing c.userobj (from c.user) before
+calling get_groups(), but I wonder if the get_groups caching could
+detect the detached session and bypass the cache in this case?
+
+diff --git a/ckan/tests/models/test_user.py b/ckan/tests/models/test_user.py
+index a49759a..ffd3449 100644
+--- a/ckan/tests/models/test_user.py
++++ b/ckan/tests/models/test_user.py
+@@ -52,3 +52,50 @@ class TestUser:
+         out = model.User.get(u'http:/sandra.owndomain.com/')
+         assert out
+         assert out.fullname == u'Sandra'
++
++def to_names(domain_obj_list):
++    '''Takes a list of domain objects and returns a corresponding list
++    of their names.'''
++    objs = []
++    for obj in domain_obj_list:
++        objs.append(obj.name if obj else None)
++    return objs
++
++class TestUserGroups:
++    @classmethod
++    def setup_class(self):
++        CreateTestData.create_arbitrary([{'name': 'testpkg'}],
++                                        extra_user_names=['brian', 'sandra'])
++        CreateTestData.create_groups([
++            {'name': 'grp1',
++             'phone': '1234',
++             }
++            ])
++        model.repo.new_revision()
++        grp1 = model.Group.by_name(u'grp1')
++        brian = model.User.by_name(u'brian')
++        model.Session.add(model.Member(group=grp1,
++                                       table_id=brian.id,
++                                       table_name='user',
++                                       capacity='admin')
++                         )
++        model.repo.commit_and_remove()
++        
++    @classmethod
++    def teardown_class(self):
++        model.repo.rebuild_db()
++    
++    def test_get_groups(self):
++        brian = model.User.by_name(u'brian')
++        groups = brian.get_groups()
++        assert_equal(to_names(groups), ['grp1'])
++        assert_equal(groups[0].extras, {'phone': '1234'})
++
++        # check cache works between sessions
++        model.Session.expunge_all()
++        #don't refresh brian user since this is how c.user works
++        # i.e. don't do this: brian = model.User.by_name(u'brian')
++        groups = brian.get_groups()
++        assert_equal(to_names(groups), ['grp1'])
++        assert_equal(groups[0].extras, {'phone': '1234'})
++"	enhancement	new	awaiting triage	ckan-v1.8	ckan				ckan	none

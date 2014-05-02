@@ -1,0 +1,2 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1730,Form field for vocabularies,seanh,johnglover,"A function that takes a vocabulary name or ID as argument and returns a nice select box for selecting items from that given vocabulary. Meant to be used by form templates, to make it easy for them to integrate custom vocabularies. Could use http://harvesthq.github.com/chosen/",enhancement,closed,minor,ckan-sprint-2012-02-20,ecportal,fixed,taxonomies [1d],,ckan,none

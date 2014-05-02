@@ -1,0 +1,181 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1240: [super] API v4</title>
+    <link>http://localhost/ticket/1240</link>
+    <description>&lt;p&gt;
+(Just creating this ticket as somewhere to keep notes)
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Tidying
+&lt;ul&gt;&lt;li&gt;Unify on /api/v{version num}/... structure (do we want a default option that points to current default? e.g. /api/default/ ...)
+&lt;/li&gt;&lt;li&gt;extras merged into normal field list in package
+&lt;/li&gt;&lt;li&gt;Get rid of /rest/ so just have api/v1/package
+&lt;/li&gt;&lt;li&gt;Get rid of separation of search api from 'rest' api
+&lt;ul&gt;&lt;li&gt;Propose that GET on REST index is search e.g. /package/?q=...
+&lt;ul&gt;&lt;li&gt;This is also resolves issue whereby GET at root returns whole package set (a *bad* idea) as this would now become the matchall search query (with a default limit on items returned)
+&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;Resource read/write in API (separate from package)
+&lt;ul&gt;&lt;li&gt;Does this need authorization work?
+&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;user/account API - read/write
+&lt;/li&gt;&lt;li&gt;Remove autocomplete -- can just use search
+&lt;ul&gt;&lt;li&gt;Do not worry about backwards compat as should only be used in our js (if others using it too bad!)
+&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1240</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Mon, 01 Aug 2011 10:06:21 GMT</pubDate>
+      <title>summary, milestone changed</title>
+      <link>http://localhost/ticket/1240#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1240#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;summary&lt;/strong&gt;
+                changed from &lt;em&gt;[super] API v3&lt;/em&gt; to &lt;em&gt;[super] API v4&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan-v1.5&lt;/em&gt; to &lt;em&gt;ckan-backlog&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Wed, 24 Aug 2011 10:08:08 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1240#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/1240#comment:2</guid>
+      <description>
+        &lt;p&gt;
+I basically agree, but just thought I'd add a couple of comments into the mix.
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;p&gt;
+GET at root returns whole package set (a *bad* idea)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Sure it has a cost, but I don't see what the problem with this is if the list is cached. Forcing developers to paging through the list of packages is putting unnecessary obligations. I'd say that the top two RESTful operations are listing objects and getting a particular one, and you'd be taking away one of those.
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;p&gt;
+Unify on /api/v{version num}/... structure
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Where is it not currently unified?
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Wed, 14 Sep 2011 17:42:25 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/1240#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/1240#comment:3</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1240?action=diff&amp;amp;version=3"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+add autocomplete
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Mon, 19 Dec 2011 18:25:19 GMT</pubDate>
+      <title>status, milestone changed; owner set</title>
+      <link>http://localhost/ticket/1240#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/1240#comment:4</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;owner&lt;/strong&gt;
+              set to &lt;em&gt;kindly&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;assigned&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan-backlog&lt;/em&gt; to &lt;em&gt;ckan-v1.6&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+assigning to kindly for review
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Mon, 19 Dec 2011 18:26:29 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/1240#comment:5</link>
+      <guid isPermaLink="false">http://localhost/ticket/1240#comment:5</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1240?action=diff&amp;amp;version=5"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Mon, 19 Dec 2011 18:41:47 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1240#comment:6</link>
+      <guid isPermaLink="false">http://localhost/ticket/1240#comment:6</guid>
+      <description>
+        &lt;p&gt;
+Although I'm generally in favour of Action API over RESTful, Action API does need some sorting out wrt listing methods, advertising what params are allowed and checking those that are passed. Using the Action API is so hard without reading the code!
+&lt;/p&gt;
+&lt;p&gt;
+The RESTful API is handy when you want to do something quickly in a browser. I'd not want to lose these two, for example:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;to look at a package /api/rest/dataset/xyz
+&lt;/li&gt;&lt;li&gt;API version etc. at /api/util/status (coming with ckan 1.5.2)
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+It's also really handy in demos and to send as links to people on the list.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Mon, 02 Jan 2012 03:01:52 GMT</pubDate>
+      <title>milestone changed</title>
+      <link>http://localhost/ticket/1240#comment:7</link>
+      <guid isPermaLink="false">http://localhost/ticket/1240#comment:7</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan-v1.6&lt;/em&gt; to &lt;em&gt;ckan-backlog&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+IMO this is non-urgent and can move out of v1.6 as we have enough more important stuff to do.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

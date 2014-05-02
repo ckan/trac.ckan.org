@@ -1,0 +1,10 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1084,ckan.net RDF links changed,wwaites,wwaites,"need to make some changes for the links to semantic.ckan.net. it should use http://semantic.ckan.net/record/<package_id> now
+
+append .rdf, .ttl, .nt, .dot, .json (even .html for an ugly table)  to taste (or just leave off the suffix and let content negotiation take care of it)
+
+the base url is changed, but it now uses id not name.
+
+see for example:
+ * http://semantic.ckan.net/record/6058c017-607b-48d9-b3cd-72106ad96e33
+ * http://semantic.ckan.net/record/6058c017-607b-48d9-b3cd-72106ad96e33.ttl",task,closed,major,ckan-v1.4-sprint-6,ckan,fixed,,,ckan,none

@@ -1,0 +1,17 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1682	[super] Translatability for EC	dread	dread	"We need to be able to translate:
+ * EC extension (templates, form)
+   * Currently the pot file is just for CKAN core. New pot file for CKAN core and this extension? Or separate ones for extensions?
+ * Field values in taxonomy (e.g. country names - Eurovoc)
+   * #1665 Research into Eurovoc
+   * Display Taxonomy in different languages
+ * Field values not in taxonomy (e.g. title & description)
+   * Use extra fields e.g. _i18n_title_fr = Le data.
+   * (If lots of fields would need translating then would consider having a new package for each language, linked together with PackageRelationships. But I think it is just title and description (resource description etc. are so minor, not worth translating?), so using extra field better.)
+
+Timescale to complete this - Mar/Apr.
+
+Related work to interface with:
+
+ * Eurovoc - Sean
+ * i18n in search index - Adria"	enhancement	closed	major	ckan-v1.6	ckan	duplicate		amercader seanh kindly	ckan	none

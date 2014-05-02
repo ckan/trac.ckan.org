@@ -1,0 +1,12 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+359,Create Storage with pluggable extensions,rgrp,pudo,"Storage represents something you can upload to (download is done in ticket:406).
+
+  * storage sub package with defined interface (maybe just use OFS)
+  * Only support uploading single files for the moment (though can do multiple files).
+    * Relationship to build (ticket:306)
+    * No support for syncing e.g. hg/git repos -- that's up to you as a user
+  * Upload command
+
+At end of this we can deprecate Repository.
+
+Having Repository encapsulate Index and Storage (without Storage being explicit) is not helpful and leads to duplication.",requirement,new,major,datapkg-0.7,datapkg,,,,,

@@ -1,0 +1,219 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #941: Submit apps or ideas for apps related to datasets (extension)</title>
+    <link>http://localhost/ticket/941</link>
+    <description>&lt;p&gt;
+The basic purpose of this extension is provide a way to record  'apps' (applications) that relate to datasets in CKAN. Both existing apps and ideas for apps should be permitted.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/941</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>thejimmyg</dc:creator>
+
+      <pubDate>Wed, 09 Feb 2011 10:06:45 GMT</pubDate>
+      <title>priority changed; owner set</title>
+      <link>http://localhost/ticket/941#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/941#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;owner&lt;/strong&gt;
+              set to &lt;em&gt;wwitzel3&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;priority&lt;/strong&gt;
+                changed from &lt;em&gt;awaiting triage&lt;/em&gt; to &lt;em&gt;major&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+This will be implemented in &lt;a class="ext-link" href="http://bitbucket.org/okfn/ckanext-community"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://bitbucket.org/okfn/ckanext-community&lt;/a&gt; by Wayne.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>thejimmyg</dc:creator>
+
+      <pubDate>Mon, 14 Feb 2011 13:22:30 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/941#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/941#comment:2</guid>
+      <description>
+        &lt;p&gt;
+The system will need some way of plugging in the model. See ticket &lt;a class="new ticket" href="http://localhost/ticket/989" title="enhancement: Extending the model from plugins (new)"&gt;#989&lt;/a&gt; for progress on this.
+&lt;/p&gt;
+&lt;p&gt;
+Other ideas:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;The apps will need an image upload
+&lt;/li&gt;&lt;li&gt;We might like a voting system for apps and ideas, potentially that could be re-used later.
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+Let's discuss the above ideas after the basic functionality is in place.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>wwitzel3</dc:creator>
+
+      <pubDate>Mon, 28 Feb 2011 09:46:31 GMT</pubDate>
+      <title>status changed</title>
+      <link>http://localhost/ticket/941#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/941#comment:3</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;assigned&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Continued work on the community plugin. I am still learning the layout of templates and how they work within ckan and getting figuring out Genshi templates so this is where most of the delay has been. I've been able to determine a pretty good plugin layout for extensions that create models.
+&lt;/p&gt;
+&lt;p&gt;
+I am currently focusing on getting the rest of the UI in place and trying to determine the best way to get colander to do the desired validation beyond ensuring the form has all the elements. After todays work, I will push what I've done and I would like to walk through the design with someone at some point.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>thejimmyg</dc:creator>
+
+      <pubDate>Tue, 15 Mar 2011 20:09:00 GMT</pubDate>
+      <title>milestone set</title>
+      <link>http://localhost/ticket/941#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/941#comment:4</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                set to &lt;em&gt;ckan-v1.4-sprint-3&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>wwitzel3</dc:creator>
+
+      <pubDate>Wed, 16 Mar 2011 17:12:25 GMT</pubDate>
+      <title>repo, theme set</title>
+      <link>http://localhost/ticket/941#comment:5</link>
+      <guid isPermaLink="false">http://localhost/ticket/941#comment:5</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;repo&lt;/strong&gt;
+                set to &lt;em&gt;ckan&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;theme&lt;/strong&gt;
+                set to &lt;em&gt;none&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+&lt;a class="ext-link" href="https://bitbucket.org/okfn/ckanext-community/changeset/c26cc663fa00"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;https://bitbucket.org/okfn/ckanext-community/changeset/c26cc663fa00&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+I need to update the README to explain how to enable Edit and Delete now that I've integrated it with authorization in CKAN.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Mon, 28 Mar 2011 09:41:54 GMT</pubDate>
+      <title>owner, status, milestone changed</title>
+      <link>http://localhost/ticket/941#comment:6</link>
+      <guid isPermaLink="false">http://localhost/ticket/941#comment:6</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;owner&lt;/strong&gt;
+              changed from &lt;em&gt;wwitzel3&lt;/em&gt; to &lt;em&gt;thejimmyg&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;assigned&lt;/em&gt; to &lt;em&gt;new&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan-v1.4-sprint-3&lt;/em&gt; to &lt;em&gt;ckan-v1.4-sprint-5&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>thejimmyg</dc:creator>
+
+      <pubDate>Mon, 04 Apr 2011 09:30:46 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/941#comment:7</link>
+      <guid isPermaLink="false">http://localhost/ticket/941#comment:7</guid>
+      <description>
+        &lt;p&gt;
+See also discussion on &lt;a class="assigned ticket" href="http://localhost/ticket/1069" title="enhancement: Stub datasets (request for datasets) (assigned)"&gt;#1069&lt;/a&gt; about stub datasets.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>thejimmyg</dc:creator>
+
+      <pubDate>Mon, 18 Apr 2011 09:15:03 GMT</pubDate>
+      <title>priority, milestone changed</title>
+      <link>http://localhost/ticket/941#comment:8</link>
+      <guid isPermaLink="false">http://localhost/ticket/941#comment:8</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;priority&lt;/strong&gt;
+                changed from &lt;em&gt;major&lt;/em&gt; to &lt;em&gt;trivial&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan-v1.4-sprint-5&lt;/em&gt; to &lt;em&gt;ckan-v1.4-sprint-6&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Wed, 25 May 2011 12:10:17 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/941#comment:9</link>
+      <guid isPermaLink="false">http://localhost/ticket/941#comment:9</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/941?action=diff&amp;amp;version=9"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>thejimmyg</dc:creator>
+
+      <pubDate>Fri, 08 Jul 2011 14:12:19 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/941#comment:10</link>
+      <guid isPermaLink="false">http://localhost/ticket/941#comment:10</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;wontfix&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+This is now implemented by pudo in publicdata.eu. For the portal case, apps and ideas will come from Drupal so we no longer need this ticket.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

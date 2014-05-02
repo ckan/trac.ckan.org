@@ -1,0 +1,19 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+945	[super] Richer resources - Resource Groups, new fields, improved UI	kindly	kindly	"Super ticket: #1032
+
+This is a meta ticket for changes that are going to happen in resources.
+
+ * New resource group table.  #956
+ * New kind field in resource.  #957
+ * UI for new kind field. #958
+ * Resources in REST API ticket:358
+ * Resources in WUI #1445
+ * Make Resources first class entity. #922 (duplicate?)
+
+Background on this change can be found at:
+
+ * http://ckan.okfnpad.org/resources - discussion etherpad
+  * Contains commented version of James Gardner's main email: http://lists.okfn.org/pipermail/ckan-discuss/2011-February/000887.html
+ * UseCasesResources
+
+"	enhancement	closed	minor	ckan-v1.6	ckan	fixed			ckan	none

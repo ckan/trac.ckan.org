@@ -1,0 +1,10 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1403,Refactor groups index page,zephod,zephod,"Groups are listed alphabetically with paging - not an ideal user experience. We would like to list groups in order of 'popularity': The number of datasets they contain.
+
+Following this chain of thought, then, it would be nice to rearrange the groups table by clicking on column headers and having it sort by that column.
+
+Furthermore, then, we'd like to implement a full-fledged groups search feature (if this is at all feasible).
+
+The forthcoming groups refactor will probably have some bearing on this task.
+
+",enhancement,new,awaiting triage,ckan-backlog,ckan,,,,ckan,none

@@ -1,0 +1,2 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+282	Provide diverts when package name changes	dread	johnbywater	When a package's name is changed, references to the old name (in the WUI and REST) are redirected to the new name (assuming the old name is not being reused by another package).	enhancement	new	major		ckan					

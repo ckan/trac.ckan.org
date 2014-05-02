@@ -1,0 +1,8 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2293,Rename of Group results in disappearance of associated datasets from group page,rgrp,ross,"Rename of group makes all the datasets associated with the group disappear on the group listing page. (But they are still there if you look at edit).
+
+Suspect this is because we are using group name (rather than id!!) in the search index ...
+
+As group rename should be rare I'm marking this as minor though actual effect is major.
+
+Assigning to rossjones for review and cost assessment.",defect,closed,awaiting merge,ckan-sprint-2012-06-25,ckan,fixed,,,ckan,none

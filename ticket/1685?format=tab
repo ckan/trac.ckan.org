@@ -1,0 +1,2 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1685	Move archiver download function to core	ross	ross	Archiver is included in some places just for access to download(), we should move this to lib in core.	enhancement	closed	awaiting triage	ckan-backlog	ckan	wontfix	[1d]		ckan	none

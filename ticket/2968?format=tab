@@ -1,0 +1,2 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2968	Anyone can access organization members page	seanh		The button will not show if you are not authorized but browse to /organization/members/foo and you can edit the members, it does stop you when you try to save your changes, but you shouldn't be able to get to the page at all	defect	new	awaiting triage	ckan 2.0	ckan		organizations		ckan	none

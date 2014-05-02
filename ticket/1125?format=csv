@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1125,"Debian package ""ckan"" should not depend on ""postgresql""",nils.toedtmann,dread,"The debian package ""ckan"" with the two scripts ""ckan-create-instance"" and ""ckan-instance-maintenance"" depends against ""postgresql"". But ""ckan-create-instance"" is quite handy even when the DB is remote: it creates all the data dirs with the correct permissions, and the ckan and apache configs.
+
+Please add a flag ""--without-local-db"" to ""ckan-create-instance"" and remove the postgres dependancy from the debain package.",enhancement,closed,awaiting triage,,ckan,fixed,,sebbacon pudo,ckan,none

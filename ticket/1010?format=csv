@@ -1,0 +1,6 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1010,List CKAN users in WUI,rgrp,rgrp,"Should have user listing at /user/ rather than user account page.
+
+ * list users, sorted by number of packages contributed/edited
+ * Move user home page to /user/{user-id}
+ * Paginated",enhancement,closed,major,ckan-v1.4-sprint-2,ckan,fixed,,,,

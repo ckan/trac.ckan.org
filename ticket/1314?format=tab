@@ -1,0 +1,4 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1314	ckanclient search - generator improvements	dread		"Apparently the search generator always makes two requests, even if you don't want to see the search results, which might be slow. Can this be optimised?
+
+Maybe we should also provide a second search function that doesn't use the generator - the original simple search function (that leaves the user to deal with limit & offset)."	enhancement	assigned	minor	ckan-backlog	ckan				ckanclient	none

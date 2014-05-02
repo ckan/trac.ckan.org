@@ -1,0 +1,13 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+126	Change package state in the WUI (delete and undelete)	dread	dread	"As a Package Admin I want to change the state of the package. In particular I wish to delete and undelete it.
+
+(NB: this is quite separate from ""purging"" objects which is the term we shall use for irrevocable removal of an object from the domain model).
+
+  * Only Package Admins (and sysadmins) should be able to change state
+
+== Implementation Suggestions ==
+
+  * 'delete' action should be renamed to 'change-state' (NB: this requires a db migration ...)
+  * Have new package formalchemy form (created via inheritance?) to incorporate state attribute. Suggest this is rendered as a dropdown (and may be simple object rendering of state, i.e. do NOT need to change it to a single name such 'active').
+  * This form should then be used when the user satisfies is_authorized(..., model.Action.CHANGE_STATE) instead of the usual fieldset
+"	enhancement	new	critical	v0.10	ckan					

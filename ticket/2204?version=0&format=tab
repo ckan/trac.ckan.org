@@ -1,0 +1,53 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2204	[super] Related (Stuff) Extension	rgrp	amercader	"This is a reworking of the existing apps extension.
+
+Initial proposal at http://wiki.ckan.org/Proposals#Apps_in_CKAN and http://wiki.ckan.org/Proposals#References.2FLinks_in_CKAN
+
+== Naming ==
+
+What do we call this extension?
+
+* related
+ * RP best IMO but perhaps too close to separate relationships concept?
+* relatedstuff
+* links
+* references
+
+== Proposal ==
+
+""Related Stuff"": Apps as in an application (website/service/tool) that uses this dataset (as in Apps and Ideas extension)
+
+ * This case seems a general example of wanting to link some external thing to a dataset (e.g. this policy paper refs this dataset, this application uses this dataset, this visualization is built on this dataset cf http://lists.okfn.org/pipermail/ckan-discuss/2011-August/001607.html)
+
+== Implementation ==
+
+New table named Related with following structure
+
+{{{
+|| id (int) || type || title || description (markdown) || image_id || owner_id || url || created (timestamp)
+}}}
+
+ * type = Idea || App || API || Visualization || Post || Paper || News Article
+  * Suggest we make this a ckan.ini config option (comma separated ...?)
+ * image: ?? Depends where we store images. Simplest option would be to change to image_url and leave it to users to have already uploaded an image somewhere. If not we need to support image uploading and storage. See #1692 (add image attribute to datasets and groups) for more discussion.
+ * owner_id = user_id or creating user (see authorization below) 
+
+Related2Dataset (note that related_id, dataset_id tuple should be unique). This allows for m2m connections. If a given related item is only with one dataset this could be simplified.
+
+{{{
+|| id || dataset_id || related_id
+}}}
+
+=== Url ===
+
+ * /dataset/{dataset-name}/related/{related-item-id}/{related-item-title-stringified}
+  * If a reference item could exist in its own right (and perhaps refer to multiple datasets then it should get its own url at e.g. /related/{id}
+
+=== Authorization ===
+
+Addition of related item be considered orthogonal to datasets (and hence with separate authorization i.e. i can add the info that site X uses dataset Y without needing permission to edit dataset Y).
+
+Thus any logged in user could add a Related item. We set the owner of the related item to creating user and going forward only that user or a sysadmin can update or delete.
+
+NB: we could have a system where datasets owners have to approve related items before they show up next to their dataset. This would add substantial complexity so I propose we leave out of phase 1.
+"	enhancement	new	awaiting triage	ckan-v1.7	ckan				ckan	none

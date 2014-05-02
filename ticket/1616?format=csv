@@ -1,0 +1,2 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1616,Catch exceptions when rebuilding the search index,amercader,amercader,"Right now if an exception is found while reindexing, the whole process stops and the remaining datasets are left out of the index. The process should continue after logging the exception. If more than a certain number of exceptions occur in a row, the process should stop.",defect,closed,major,ckan-sprint-2012-04-02,ckan,fixed,search [a:1.5d],,ckan,none

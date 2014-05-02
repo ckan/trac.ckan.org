@@ -1,0 +1,12 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1041,Start Using the CKAN Wiki for Tutorial-style documentation,thejimmyg,,"For example, I will document the following:
+
+ * A specific guide on using mercurial when working with our branching and merging policy
+ * Policy document on how we use tickets, plan sprints and make releases
+ * How to package software as .deb file for project deployment
+
+I'd love if someone else would write:
+
+ * An authorisation tutorial covering the core model, the command line tools and examples of every possible way of using the system
+ * A HOWTO guide with screenshots for adding a package
+",enhancement,new,major,ckan-v1.4,ckan,,,,,

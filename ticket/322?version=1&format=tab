@@ -1,0 +1,33 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+322	Interface for Notification Service	dread	dread	"=== Use cases ===
+ * Registration
+ * Deregistration
+ * Configuration of port in pylons config
+
+=== Design ===
+ * Default port: 5672 (standard for AMQP)
+ * Exchange name: 'ckan'
+ * Exchange type: topic exchange (most flexible)
+ * Routing keys: (see below)
+
+=== Routing detail ===
+Routing key format: ""OBJ_TYPE.OBJ_ID.CHANGE_TYPE""
+(NB tags should be identified by their name, not ID)
+
+Example routing keys
+ * 'package.238bc-704a87-928374.new' - New package created with ID '238bc-704a87-928374'
+ * 'group.4234-ab98203-fe324.edited' - Group '4234-ab98203-fe324' edited
+ * 'tag.704a8-2f38bc-928374.' - New package created with ID '238bc-704a87-928374'
+
+Example queue bindings that clients may use: 
+ * * - no filtering - client receives all notifications
+ * package.* - only changes to packages
+ * package.238bc-704a87-928374.* - only changes to a particular package
+ * package.#.new - only packages creations
+
+=== Versioning ===
+Since message payloads will be tied into the REST Entities, it makes sense to join up with the REST versioning. This could be achieved by providing new exchanges called 'ckan-1.1' perhaps?
+
+=== Documentation ===
+   * How to use
+   * simple example of an external client?"	enhancement	new	blocker	v1.1	ckan					

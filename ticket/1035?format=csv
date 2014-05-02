@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1035,Form impressions given an ID,dread,thejimmyg,"To counter Cross Site Request Forgery attacks, each form generated is assigned a random number in its url, which must be passed when you submit the form.
+
+(Something to consider for the new form mechanism)",enhancement,closed,minor,,ckan,wontfix,,,ckan,none

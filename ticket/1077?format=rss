@@ -1,0 +1,207 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1077: Move to simpler vdm system</title>
+    <link>http://localhost/ticket/1077</link>
+    <description>&lt;h2 id="Option1:ChangesetModel"&gt;Option 1: 'Changeset' Model&lt;/h2&gt;
+&lt;p&gt;
+See &lt;a class="assigned ticket" href="http://localhost/ticket/1135" title="enhancement: Changeset model for vdm (assigned)"&gt;ticket:1135&lt;/a&gt; for vdm ticket. This would involve a) moving to changeset in vdm b) doing the migration in ckan to support this.
+&lt;/p&gt;
+&lt;p&gt;
+Have developed a new "changeset" based model for revisioning in vdm.
+&lt;/p&gt;
+&lt;h3 id="Implementation"&gt;Implementation&lt;/h3&gt;
+&lt;ul&gt;&lt;li&gt;The main challenge with this change is schema and data migration
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+Every revisioned object has a revision_id and revision attribute.
+&lt;/p&gt;
+&lt;p&gt;
+Approximate algorithm:
+&lt;/p&gt;
+&lt;pre class="wiki"&gt;Revision -&amp;gt; Changeset
+for revtype in [PackageRevision, ...]:
+    for pkgrev in package_revision:
+        changeset = lookupchangeset(package_revision)
+        ChangeObject(cset, (table, id), dictize(pkgrev))
+&lt;/pre&gt;&lt;p&gt;
+Question:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;does pkg include tags attributes or not? or we have to dictize, pkgrev, pkg2tagrev, and tag. Probably the latter.
+&lt;/li&gt;&lt;/ul&gt;&lt;h2 id="Option2:SimplifyRevisionObjectModel"&gt;Option 2: Simplify Revision Object Model&lt;/h2&gt;
+&lt;p&gt;
+Just use a simpler vdm, see &lt;a class="assigned ticket" href="http://localhost/ticket/1136" title="enhancement: Move to SessionExtension in vdm (assigned)"&gt;ticket:1136&lt;/a&gt; (move to SessionExtension) and &lt;a class="assigned ticket" href="http://localhost/ticket/1137" title="enhancement: Remove need for statefulness in vdm (assigned)"&gt;ticket:1137&lt;/a&gt; (remove need for statefulness in vdm).
+&lt;/p&gt;
+&lt;h2 id="Discussion"&gt;Discussion&lt;/h2&gt;
+&lt;p&gt;
+Advantage of Option 1 versus 2:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Easier support for pending state and similar behaviour
+&lt;/li&gt;&lt;li&gt;No need to introduce new tables (and hence migrations) when making something revisioned (or not).
+&lt;/li&gt;&lt;/ul&gt;&lt;h3 id="Disadvantages"&gt;Disadvantages&lt;/h3&gt;
+&lt;ul&gt;&lt;li&gt;Migration is required
+&lt;/li&gt;&lt;li&gt;More difficult to query revision history.
+&lt;ul&gt;&lt;li&gt;Could be addressed by having ChangeObject have separate cols for table name and id but would likely be more difficult.
+&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;Performance (?)
+&lt;ul&gt;&lt;li&gt;Have one big ChangeObject table to query when looking at changed objects rather than many revision tables.
+&lt;ul&gt;&lt;li&gt;Not sure this is a biggie as even with Revision model biggest revision object tables are probably on the order of the ChangeObject table
+&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;h2 id="Conclusion"&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;
+Implement Option 2 and leave Option 1 for present.
+&lt;/p&gt;
+&lt;p&gt;
+Option 1 includes Option 2 so it seems that that is required in either case (so we may as well with Option 2).
+&lt;/p&gt;
+&lt;p&gt;
+Option 1 requires significant effort (esp migration) so leave for present and then review the situation at some later date.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1077</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Mon, 18 Apr 2011 11:36:41 GMT</pubDate>
+      <title>priority, description changed</title>
+      <link>http://localhost/ticket/1077#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1077#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;priority&lt;/strong&gt;
+                changed from &lt;em&gt;awaiting triage&lt;/em&gt; to &lt;em&gt;critical&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1077?action=diff&amp;amp;version=1"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>kindly</dc:creator>
+
+      <pubDate>Mon, 02 May 2011 11:01:19 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/1077#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/1077#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1077?action=diff&amp;amp;version=2"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Sun, 08 May 2011 12:24:53 GMT</pubDate>
+      <title>description changed; state set</title>
+      <link>http://localhost/ticket/1077#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/1077#comment:3</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;state&lt;/strong&gt;
+                set to &lt;em&gt;draft&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1077?action=diff&amp;amp;version=3"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>kindly</dc:creator>
+
+      <pubDate>Sun, 08 May 2011 18:58:07 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/1077#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/1077#comment:4</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1077?action=diff&amp;amp;version=4"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Thu, 12 May 2011 14:57:51 GMT</pubDate>
+      <title>description, summary changed</title>
+      <link>http://localhost/ticket/1077#comment:5</link>
+      <guid isPermaLink="false">http://localhost/ticket/1077#comment:5</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1077?action=diff&amp;amp;version=5"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;summary&lt;/strong&gt;
+                changed from &lt;em&gt;Switch to new vdm changeset model&lt;/em&gt; to &lt;em&gt;Move to simpler vdm system&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>shevski</dc:creator>
+
+      <pubDate>Fri, 08 Jul 2011 11:56:54 GMT</pubDate>
+      <title>milestone deleted</title>
+      <link>http://localhost/ticket/1077#comment:6</link>
+      <guid isPermaLink="false">http://localhost/ticket/1077#comment:6</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                &lt;em&gt;ckan-v1.5&lt;/em&gt; deleted
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Fri, 28 Oct 2011 10:21:24 GMT</pubDate>
+      <title>priority changed</title>
+      <link>http://localhost/ticket/1077#comment:7</link>
+      <guid isPermaLink="false">http://localhost/ticket/1077#comment:7</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;priority&lt;/strong&gt;
+                changed from &lt;em&gt;critical&lt;/em&gt; to &lt;em&gt;awaiting triage&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+I guess this is not a priority now.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>kindly</dc:creator>
+
+      <pubDate>Mon, 18 Jun 2012 15:45:45 GMT</pubDate>
+      <title>milestone set</title>
+      <link>http://localhost/ticket/1077#comment:8</link>
+      <guid isPermaLink="false">http://localhost/ticket/1077#comment:8</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                set to &lt;em&gt;ckan-backlog&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

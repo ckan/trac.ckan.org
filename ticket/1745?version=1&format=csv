@@ -1,0 +1,15 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1745,Dataset search UX improvements as of Jan 2012,rgrp,,"Changes to make search both more exploratory and more satisfying to use
+
+ * Search query build - #1603
+  * Ability to add new facet fields ""live""
+  * That is add fields which then contain faceted options (a bit like data.hri.fi)
+ * (??) Autocomplete  / drop down on search (i.e. search while you type)
+  * Dubious about value / cost ratio here
+
+== Implementation ==
+
+Probably require
+
+ *  API changes to expose solr style API directly #1737
+",enhancement,new,awaiting triage,ckan-v1.7,ckan,,,,ckan,none

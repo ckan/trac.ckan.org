@@ -1,0 +1,2 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+3004,ImportError: No module named polib,seanh,,This is happening whenever people try to run paster commands. polib should only be needed for the check-po-files command don't import otherwise.,defect,closed,awaiting triage,ckan 2.0,ckan,fixed,,,ckan,none

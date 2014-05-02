@@ -1,0 +1,9 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1143,Improve stats page,dread,dread," * Ensure we don't include deleted packages in the stats
+ * Some visual improvements:
+   * Number of packages:
+      * fix x axis to start at first revision
+      * fix y axis to start at zero
+   * Fix problem with legend to 'Revisions to packages' graph.
+   * Hide sidebar in the template, so it isn't right-cropped in the DGU theme
+ * Add some testing of the stats lib - results of basic stats",enhancement,closed,critical,ckan-v1.5-sprint-2,ckan,fixed,,,ckan,none

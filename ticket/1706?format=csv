@@ -1,0 +1,2 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1706,Tag taxonomies package schema,seanh,seanh,"Enable ckanext's to add new vocabularies to default_package_schema(), use the new vocabularies in templates for dataset view, create, edit pages, helper function for extensions to create a vocabulary schema for a given vocabulary name (must match a vocab already in the db) and add it to default package schema.",enhancement,closed,awaiting triage,ckan-sprint-2012-02-06,ecportal,duplicate,taxonomies,,ckan,none

@@ -1,0 +1,30 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+936	Watch / follow a package	rgrp		"As a (logged-in) User I want to watch (follow) a package, that is register my interest about a package. (Similar to watch/follow features in github/bitbucket/wikis).
+
+NB: this is as much (if not more) about showing what packages are interesting as giving info to 'watchers'.
+
+TODO: finalize terminology (github uses watch for repos and follow for users while bitbucket combines both in 'followers').
+
+Become watcher:
+
+ * Watch button on packages (if already watching say 'Unwatch')
+
+Package-related changes:
+
+ * Show number of watchers on a package
+ * List number of watchers of a package
+  * On a separate page (a la github) or on the main page (more like bitbucket overview)
+
+User-related changes:
+
+ * Show what packages a user has started/stopped  followed on a user's public activity stream on their user page
+ * List watched packages
+  * Either on user's page on a separate 'following' page. (NB: called 'following')
+ * Does watching involve notifications (by email)
+  * Probably not: you can already subscribe to RSS feed after all and email not that necessary (?)
+
+
+=== Random Extras ===
+
+ * What about following users as well
+"	enhancement	new	major	ckan-v1.4	ckan					

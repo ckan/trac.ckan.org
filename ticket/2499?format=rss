@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2499: Documentation for the internal analytics</title>
+    <link>http://localhost/ticket/2499</link>
+    <description>&lt;p&gt;
+There's no docs for setting up the internal analytics, nor what it provides.
+&lt;/p&gt;
+&lt;h2 id="Setup"&gt;Setup&lt;/h2&gt;
+&lt;p&gt;
+Add:  &lt;tt&gt;ckan.tracking_enabled = true&lt;/tt&gt; to .ini file
+&lt;/p&gt;
+&lt;p&gt;
+Run: &lt;tt&gt;paster tracking -c dev.ini&lt;/tt&gt;
+&lt;/p&gt;
+&lt;h2 id="Relatedlinks"&gt;Related links&lt;/h2&gt;
+&lt;p&gt;
+&lt;a class="ext-link" href="http://trac.ckan.org/ticket/2251"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://trac.ckan.org/ticket/2251&lt;/a&gt;
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2499</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+ </channel>
+</rss>

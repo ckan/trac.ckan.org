@@ -1,0 +1,5 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+797,Rework core html layout to mirror wordpress twentyten,rgrp,rgrp,"WP twentyten has an excellent core html structure. Furthermore, using that structure makes us compatible with all the WP twentyten compatible themes.
+
+  * Convert to wp twentyten html
+  * Switch css to be based off twentyten css (and perhaps rework somewhat)",enhancement,closed,major,ckan-v1.3,ckan,fixed,,,,

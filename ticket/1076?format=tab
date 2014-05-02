@@ -1,0 +1,23 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1076	Improve revision and package purge system	rgrp	johnlawrenceaspden	"== Purging Revisions ==
+
+ * Delete button displayed on:
+  * /revision/list
+  * ~~(/package/history)~~
+   * /package/history is problematic because html does not allow nested forms and we already have form for doing diff/comparison.
+  * /revision/{id}
+ * Delete button submits to delete action on revision and changes revision state to 'deleted'.
+  * undelete button now displayed and revisions are marked as deleted in some way (e.g. greyed out?)
+ * Sysadmins then visit /ckan-admin/trash which lists all revisions with deleted state. There is a large button: ""Empty trash"" (irreversible). Click button purges all revisions with deleted state.
+
+== Purging Packages ==
+
+ * Put into deleted state.
+ * Listed on /ckan-admin/trash
+ * Separate Empty trash button which deletes all associated revisions.
+  * Should be separate from Empty trash for revisions
+
+== Current system ==
+
+ * Single purge link on revision listing if a sysadmin which permanently purges the revision and all associated changes (without confirmation atm!)
+"	enhancement	closed	major	ckan-v1.4	ckan	fixed			ckan	none

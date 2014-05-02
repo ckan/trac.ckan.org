@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1669: [super] Publisher profile</title>
+    <link>http://localhost/ticket/1669</link>
+    <description>&lt;p&gt;
+Implement the necessary backend changes to build profile for publishers using the group refactor.
+&lt;/p&gt;
+&lt;p&gt;
+See &lt;a class="ext-link" href="http://ckan.okfnpad.org/publisherprofiles"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://ckan.okfnpad.org/publisherprofiles&lt;/a&gt;
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1669</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>ross</dc:creator>
+
+      <pubDate>Tue, 17 Jan 2012 12:24:15 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1669#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1669#comment:1</guid>
+      <description>
+        &lt;p&gt;
+Subtickets are at:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Publisher profile analysis &lt;a class="closed ticket" href="http://localhost/ticket/1670" title="enhancement: Publisher profile documentation (closed: fixed)"&gt;#1670&lt;/a&gt; [2d]
+&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;Publisher profile sysadmin authz &lt;a class="closed ticket" href="http://localhost/ticket/1671" title="enhancement: Publisher profile sysadmin authz (closed: fixed)"&gt;#1671&lt;/a&gt; [1d]
+&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;Publisher profile user authz &lt;a class="closed ticket" href="http://localhost/ticket/1672" title="enhancement: Publisher profile user authz (closed: fixed)"&gt;#1672&lt;/a&gt; [1d]
+&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;Test auth logic hooks for publisher profile &lt;a class="closed ticket" href="http://localhost/ticket/1674" title="enhancement: Test auth logic hooks for publisher profile (closed: fixed)"&gt;#1674&lt;/a&gt; [3d]
+&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;Publisher admin authz &lt;a class="closed ticket" href="http://localhost/ticket/1675" title="enhancement: Publisher admin authz (closed: fixed)"&gt;#1675&lt;/a&gt; [3d]
+&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;Publisher editor authz &lt;a class="closed ticket" href="http://localhost/ticket/1676" title="enhancement: Publisher editor authz (closed: fixed)"&gt;#1676&lt;/a&gt; [2d]
+&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;Add approval status field to groups &lt;a class="closed ticket" href="http://localhost/ticket/1673" title="enhancement: Add approval status field to groups (closed: fixed)"&gt;#1673&lt;/a&gt; [1d]
+&lt;/li&gt;&lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Mon, 23 Jan 2012 16:09:41 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/1669#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/1669#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1669?action=diff&amp;amp;version=2"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Mon, 23 Jan 2012 16:10:02 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/1669#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/1669#comment:3</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1669?action=diff&amp;amp;version=3"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>ross</dc:creator>
+
+      <pubDate>Thu, 26 Jan 2012 10:49:24 GMT</pubDate>
+      <title>milestone set</title>
+      <link>http://localhost/ticket/1669#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/1669#comment:4</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                set to &lt;em&gt;current-ckan-sprint-2012-02-06&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Tue, 31 Jan 2012 12:40:57 GMT</pubDate>
+      <title>milestone changed</title>
+      <link>http://localhost/ticket/1669#comment:5</link>
+      <guid isPermaLink="false">http://localhost/ticket/1669#comment:5</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;current-ckan-sprint-2012-02-06&lt;/em&gt; to &lt;em&gt;ckan-v1.6&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>ross</dc:creator>
+
+      <pubDate>Mon, 28 May 2012 11:21:11 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/1669#comment:6</link>
+      <guid isPermaLink="false">http://localhost/ticket/1669#comment:6</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

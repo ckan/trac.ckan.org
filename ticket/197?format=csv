@@ -1,0 +1,18 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+197,Simple dumper,dread,dread,"== As a ==
+
+admin / user 
+
+== I want to ==
+
+Admin: export all HEAD data to JSON / CSV / RDF format dump.
+
+User: wants to get hold of this dump.
+
+== Details ==
+
+ * Just do JSON & CSV for now.
+ * Put this in CLI.
+ * Just do list of packages - as_dict info. CSV needs a bit of flattening.
+
+Cost: 2h",enhancement,closed,blocker,v0.11,ckan,fixed,,,,

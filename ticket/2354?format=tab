@@ -1,0 +1,28 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2354	Front end performance improvements [super]	aron.carroll	aron.carroll	"Try and increase the page load times for the front end.
+
+= Now = 
+
+ * Always include scripts at the bottom
+ * Include CSS at the top
+ * Load fonts with JS
+ * Concatenate and minify JavaScript files
+ * Create a build script to load dependancies seperately
+ * Enable Gzip compression on resources
+ * Enable future cache headers on resources
+
+= Next = 
+
+ * Support serving assets from a CDN
+ * Look into optimising the CSS - Remove large portions of unused CSS
+ * Remove extreaneous libraries, can jQuery UI be replaced with bootstrap? 
+
+= Tools = 
+
+ * Webkit Inspector Audits
+ * YSlow Firebug Plugin - http://yslow.org/
+ * Speed Tracer -  https://chrome.google.com/webstore/detail/ognampngfcbddbfemdapefohjiobgbdl
+
+= Continuous Integration =
+
+YSlow can be hooked up to Jenkins via Phantom JS"	enhancement	closed	major	demo phase 5	ckan	wontfix			ckan	none

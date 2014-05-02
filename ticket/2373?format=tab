@@ -1,0 +1,8 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2373	Group autocomplete doesn't work with multiple words	dread	dread	"e.g. 'Cabinet Office' returns 0 results, whereas 'Cabinet' returns 'Cabinet Office'.
+
+{{{
+/api/2/util/authorizationgroup/autocomplete?q=Cabinet%20Office
+}}}
+
+This feature only seems to be used by DGU at the moment (I think)"	defect	closed	critical	ckan-sprint-2012-05-15	ckan	fixed			ckan	none

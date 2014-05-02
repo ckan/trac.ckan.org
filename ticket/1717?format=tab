@@ -1,0 +1,12 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1717	[super] Search UX improvements	shevski		"1. Make it possible to search by tag (e.g. by typing tag:csv into the search bar and clicking enter, it should add the 'csv' tag facet to the search)
+
+2. Rename and standardise the list of format tags, on search page this should also be called 'Format' instead of 'res_format' (in the right hand side bar on search page).
+
+3. Make it possible to view full list of tags, formats and groups by clicking on the name. From here you should be table to click on a classification and go back to a search page faceted by that classification. E.g. from search page, click on 'tags', on tag page click on 'london' or whatever, and be navigated back to search page with search within 'london' tag only.  Or y'know, a better way of doing it.
+
+4. More standard classifications, such as 'Location' and 'Theme' - like on publicdata.eu
+
+5. Blue search button should be displayed in line with the search bar, not underneath
+
+6. Datasets should be displayed in order of most viewed or downloaded instead of alphabetically. For alphabetic search we could consider adding a way to facet by first letter of dataset name"	enhancement	new	awaiting triage	ckan-backlog	ckan		ux		ckan	none

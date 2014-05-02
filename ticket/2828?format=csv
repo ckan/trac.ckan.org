@@ -1,0 +1,13 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2828,Draft datasets are confusing - tickets need creating,shevski,toby,"reported as editing datasets incorrect
+
+e.g. clicking on edit here http://s031.okserver.org:2375/dataset/ff
+takes you to create dataset page http://s031.okserver.org:2375/dataset/edit/ff
+
+but this is the correct behaviour of a draft dataset
+
+
+We need to show draft datasets correctly
+
+
+proper tickets need making for the different issues after review of issues with them - who can see, where, admins and viewing, orgs too etc",enhancement,new,awaiting triage,demo phase 4,ckan,,demo-theme,,ckan,none

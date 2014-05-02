@@ -1,0 +1,7 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1498,Support multiple SOLR schema versions,amercader,amercader,"At some point the SOLR schema used by CKAN will need to be changed and the changes won't be always backward compatible, so we need a mechanism to support instances that use older versions of the schema.
+This process will involve:
+
+ * Better documentation on how to deploy SOLR, as single instance or multicore
+ * A convention on how to tag schema versions and SOLR endpoints to ensure that CKAN instances point to the correct SOLR URL.
+ * (If possible) Checks in CKAN core that deal with different schema versions.",enhancement,new,major,ckan-sprint-2011-12-05,ckan,,solr search,,ckan,migrations

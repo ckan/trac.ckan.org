@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+403,Create web service for OFS storage,pudo,,"Create a thin web service that will allow users to upload files to OFS on S3 without knowing S3 credentials. This could also provide static urls for all stored resources.
+
+* relates to #307",requirement,closed,,,dpm,fixed,,,,

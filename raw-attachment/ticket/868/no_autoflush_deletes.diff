@@ -1,0 +1,86 @@
+diff -r 336570412918 ckan/lib/create_test_data.py
+--- a/ckan/lib/create_test_data.py	Wed Jan 05 18:23:56 2011 +0000
++++ b/ckan/lib/create_test_data.py	Thu Jan 06 22:36:43 2011 +0000
+@@ -415,6 +415,7 @@
+                 model.Session.execute(sql)
+         model.repo.commit_and_remove()
+         for pkg_name in self.pkg_names:
++            model.Session().autoflush = False
+             pkg = model.Package.by_name(unicode(pkg_name))
+             if pkg:
+                 pkg.purge()
+@@ -432,6 +433,7 @@
+                 pkg.purge()
+             for grp in rev.groups:
+                 grp.purge()
++            model.Session.commit()
+             model.Session.delete(rev)
+         for user_name in self.user_names:
+             user = model.User.by_name(unicode(user_name))
+diff -r 336570412918 ckan/model/domain_object.py
+--- a/ckan/model/domain_object.py	Wed Jan 05 18:23:56 2011 +0000
++++ b/ckan/model/domain_object.py	Thu Jan 06 22:36:43 2011 +0000
+@@ -75,6 +75,7 @@
+         self.Session.delete(self)
+ 
+     def purge(self):
++        self.Session().autoflush = False
+         if hasattr(self, '__revisioned__'): # only for versioned objects ...
+             # this actually should auto occur due to cascade relationships but
+             # ...
+diff -r 336570412918 ckan/tests/forms/test_group.py
+--- a/ckan/tests/forms/test_group.py	Wed Jan 05 18:23:56 2011 +0000
++++ b/ckan/tests/forms/test_group.py	Thu Jan 06 22:36:43 2011 +0000
+@@ -10,7 +10,7 @@
+ 
+     @classmethod
+     def teardown_class(self):
+-        ckan.tests.CreateTestData.delete()
++        model.repo.clean_db()
+ 
+     def test_1(self):
+         group = model.Group.by_name(u'roger')
+diff -r 336570412918 ckan/tests/functional/api/test_model.py
+--- a/ckan/tests/functional/api/test_model.py	Wed Jan 05 18:23:56 2011 +0000
++++ b/ckan/tests/functional/api/test_model.py	Thu Jan 06 22:36:43 2011 +0000
+@@ -363,6 +363,7 @@
+     def teardown(self):
+         for relationship in self.anna.get_relationships():
+             relationship.purge()
++        model.Session.commit()
+         relationships = self.anna.get_relationships()
+         assert relationships == [], "There are still some relationships: %s" % relationships
+ 
+diff -r 336570412918 ckan/tests/functional/test_group.py
+--- a/ckan/tests/functional/test_group.py	Wed Jan 05 18:23:56 2011 +0000
++++ b/ckan/tests/functional/test_group.py	Thu Jan 06 22:36:43 2011 +0000
+@@ -39,7 +39,7 @@
+ 
+     @classmethod
+     def teardown_class(self):
+-        CreateTestData.delete()
++        model.repo.clean_db()
+ 
+     def test_mainmenu(self):
+         offset = url_for(controller='home', action='index')
+diff -r 336570412918 ckan/tests/models/test_harvesting.py
+--- a/ckan/tests/models/test_harvesting.py	Wed Jan 05 18:23:56 2011 +0000
++++ b/ckan/tests/models/test_harvesting.py	Thu Jan 06 22:36:43 2011 +0000
+@@ -22,17 +22,6 @@
+         self.gemini = GeminiExamples()
+ 
+     def teardown(self):
+-        if self.document:
+-            self.delete(self.document)
+-        for document in HarvestedDocument.filter():
+-            document.delete()
+-        if self.job:
+-            self.delete(self.job)
+-        if self.source:
+-            self.delete(self.source)
+-        self.commit_remove()
+-        self.purge_package_by_name('00a743bf-cca4-4c19-a8e5-e64f7edbcadd')
+-        super(HarvesterTestCase, self).teardown()
+         model.repo.clean_db()
+ 
+     def create_fixture(self, domain_type, **kwds):

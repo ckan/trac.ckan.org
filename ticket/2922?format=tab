@@ -1,0 +1,20 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2922	Better docstring for CKANInternationalizationExtension	seanh		"I'm unsure about what's going on here. As I understand it, when we run
+`python setup.py extract_messages` it's going to use the extract_ckan()
+function from ckan/lib/extract.py to process the HTML files. For the
+HTML files that are jinja2 templates, extract_ckan() will call
+jinja2_cleaner() which will call regularise_html() on the strings.  So
+the strings are regularised when they are extracted from the source
+files.
+
+But then we have the parse() method of CkanInternationalizationExtension
+also calling regularise_html(). I don't get what's happening here. Why
+do the strings need to be regularised twice?
+
+My guess is that CkanInternationalizationExtension is used when the
+strings are extracted from the templates at runtime, and they need to be
+regularised at this time in order to match them against the regularised
+strings in the mo files to find the translations to output?
+
+Maybe CkanInternationalizationExtension needs a better docstring saying
+what it does?"	defect	new	awaiting triage	ckan 2.0	ckan				ckan	none

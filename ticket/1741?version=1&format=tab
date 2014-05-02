@@ -1,0 +1,8 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1741	Add extention point to dataset view.	kindly	kindly	"Need to add extension point to change the data_dict that passed to the dataset view template. This extensions modify what data gets shown.
+
+Tasks include:
+
+ * Fix up data_dict and templates so that the pkg objects do not get used in the templates.  This is to assure that all data passed is modifiable. (2d)
+ * Add extension point to Ipackage controller (1d)
+ * Test (1d)"	enhancement	assigned	awaiting triage	ckan-sprint-2012-02-06	ecportal		4d		ckan	none

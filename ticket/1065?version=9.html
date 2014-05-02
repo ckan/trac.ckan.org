@@ -1,0 +1,482 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      #1065 ([super] Change Authorization System)
+     – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="prev" href="1064.html" title="Ticket #1064" />
+        <link rel="last" href="3030.html" title="Ticket #3030" />
+        <link rel="help" href="../wiki/TracGuide.html" />
+        <link rel="alternate" href="1065%3Fversion=9&amp;format=csv" type="text/csv" class="csv" title="Comma-delimited Text" /><link rel="alternate" href="1065%3Fversion=9&amp;format=tab" type="text/tab-separated-values" class="tab" title="Tab-delimited Text" /><link rel="alternate" href="1065%3Fversion=9&amp;format=rss" type="application/rss+xml" class="rss" title="RSS Feed" />
+        <link rel="next" href="1066.html" title="Ticket #1066" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/ticket.css" type="text/css" />
+        <link rel="first" href="1.html" title="Ticket #1" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript">
+      var auto_preview_timeout=2.0;
+      var form_token="93d81ccf9a7bb1c456462f62";
+    </script>
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script><script type="text/javascript" src="../chrome/common/js/wikitoolbar.js"></script><script type="text/javascript" src="../chrome/common/js/resizer.js"></script><script type="text/javascript" src="../chrome/common/js/auto_preview.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("div.description").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $(".foldable").enableFolding(false, true);
+        var args = {realm: "ticket", id: 1065, escape_newlines: 0}
+        $("#comment").autoPreview("/wiki_render", args, function(textarea, text, rendered) {
+            $("#ticketchange div.comment").html(rendered);
+            if (rendered)
+              $("#ticketchange").show();
+            else if ($("#ticketchange ul.changes").length == 0)
+              $("#ticketchange").hide();
+        });
+        $("#trac-comment-editor textarea").autoPreview("/wiki_render", args,
+                                                       function(textarea, text, rendered) {
+          var comment = $("#trac-comment-editor").next("div.comment");
+          comment.html(rendered);
+          if (rendered)
+            comment.show();
+          else
+            comment.hide();
+        });
+        $("#modify").parent().toggleClass("collapsed");
+        $(".trac-topnav a").click(function() { $("#modify").parent().removeClass("collapsed"); });
+        /* only enable control elements for the currently selected action */
+        var actions = $("#action input[name='action']");
+        function updateActionFields() {
+          actions.each(function () {
+            $(this).siblings().find("*[id]").enable($(this).checked());
+            $(this).siblings().filter("*[id]").enable($(this).checked());
+          });
+        }
+        actions.click(updateActionFields);
+        updateActionFields();
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="../wiki/TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li class="active"><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="1064.html" title="Ticket #1064">Previous Ticket</a></span></li><li class="last"><span><a class="next" href="1066.html" title="Ticket #1066">Next Ticket</a> &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="ticket">
+      <h1 id="trac-ticket-title">
+          <a href="1065.html">Ticket #1065</a>
+          <span class="status">(new enhancement)</span>
+              — at <a href="1065%3Fversion=9.html#comment:9">Version 9</a>
+      </h1>
+      <div id="ticket">
+  <div class="date">
+    <p>Opened <a class="timeline" href="../timeline%3Ffrom=2011-03-30T18:05:31Z&amp;precision=second.html" title="2011-03-30T18:05:31Z in Timeline">3 years</a> ago</p>
+    <p>Last modified <a class="timeline" href="../timeline%3Ffrom=2011-12-22T10:34:01Z&amp;precision=second.html" title="2011-12-22T10:34:01Z in Timeline">2 years</a> ago</p>
+  </div>
+  <h2 class="summary searchable">[super] Change Authorization System</h2>
+  <table class="properties">
+    <tr>
+      <th id="h_reporter">Reported by:</th>
+      <td headers="h_reporter" class="searchable">
+        <a href="../query%3Fstatus=!closed&amp;reporter=johnlawrenceaspden.html">johnlawrenceaspden</a>
+      </td>
+      <th id="h_owner">Owned by:</th>
+      <td headers="h_owner">
+      </td>
+    </tr>
+    <tr>
+        <th id="h_priority">
+          Priority:
+        </th>
+        <td headers="h_priority">
+              <a href="../query%3Fstatus=!closed&amp;priority=major.html">major</a>
+        </td>
+        <th id="h_milestone">
+          Milestone:
+        </th>
+        <td headers="h_milestone">
+              <a class="closed milestone" href="../milestone/ckan-v1.6.html">ckan-v1.6</a>
+        </td>
+    </tr><tr>
+        <th id="h_component">
+          Component:
+        </th>
+        <td headers="h_component">
+              <a href="../query%3Fstatus=!closed&amp;component=ckan.html">ckan</a>
+        </td>
+        <th id="h_keywords">
+          Keywords:
+        </th>
+        <td headers="h_keywords" class="searchable">
+        </td>
+    </tr><tr>
+        <th id="h_cc">
+          Cc:
+        </th>
+        <td headers="h_cc" class="searchable">
+              <a href="../query%3Fstatus=!closed&amp;cc=~dread.html">dread</a>
+        </td>
+        <th id="h_repo">
+          Repository:
+        </th>
+        <td headers="h_repo">
+              <a href="../query%3Fstatus=!closed&amp;repo=ckan.html">ckan</a>
+        </td>
+    </tr><tr>
+        <th id="h_theme">
+          Theme:
+        </th>
+        <td headers="h_theme">
+              <a href="../query%3Fstatus=!closed&amp;theme=none.html">none</a>
+        </td>
+        <th>
+        </th>
+        <td>
+        </td>
+    </tr>
+  </table>
+  <div class="description">
+    <h3 id="comment:description">
+      Description
+      <span class="lastmod" title="2011-07-20 16:40:18+00:00">
+        (last modified by thejimmyg)
+        (<a href="1065%3Faction=diff&amp;version=9.html">diff</a>)
+      </span>
+    </h3>
+    <div class="searchable">
+      <p>
+Child tickets
+</p>
+<ul><li><a class="new ticket" href="1198.html" title="enhancement: Publisher hierarchy (new)">#1198</a> Publisher hierarchy
+</li><li><a class="closed ticket" href="1050.html" title="enhancement: Authz lib improvement and refactor of ckan/lib/authztool.py (closed: invalid)">#1050</a> Authz lib improvement and refactor of ckan/lib/authztool.py
+</li><li><a class="closed ticket" href="1004.html" title="defect: Group creation instructions missing (closed: fixed)">#1004</a> Group creation instructions missing
+</li><li><a class="closed ticket" href="1099.html" title="defect: strange interactions between two browsers while playing with authz groups (closed: wontfix)">#1099</a> Strange interactions between two browsers while playing with authz groups
+</li><li><a class="closed ticket" href="1115.html" title="defect: can have two authzgroups with the same name (closed: wontfix)">#1115</a> can have two authzgroups with the same name
+</li><li><a class="closed ticket" href="1133.html" title="defect: command line rights manipulation doesn't work (closed: worksforme)">#1133</a> command line rights manipulation doesn't work
+</li><li><a class="closed ticket" href="1138.html" title="enhancement: minor navigations behave inconsistently (closed: invalid)">#1138</a> minor navigations behave inconsistently
+</li></ul><p>
+Old ticket description:
+</p>
+<ol><li>Change name of <a class="missing wiki">AuthzGroup?</a> to <a class="missing wiki">UserGroup?</a> to reflect what it is for
+</li></ol><ol start="2"><li>Get rid of Roles, and replace them with direct assignment of actions, even though there are many actions, and extensions can add arbitrary ones.
+<ul><li>Debatable whether we should cut the number of actions to correspond to the three roles defined by the base system.
+</li><li>Have a method of finding roles (or, in future, actions) relevant to a given protection object (e.g. FILE-UPLOAD(ER) not relevant to Packages)
+</li></ul></li></ol><ol start="3"><li>Change <a class="missing wiki">UserGroups?</a> so that they can have a hierarchical structure, 
+</li></ol><h2 id="MoreinfoonHierarchychange">More info on Hierarchy change</h2>
+<p>
+e.g. <a class="missing wiki">UserGroup?</a> NHS contains the User nhsysadmin, as well as the 
+<a class="missing wiki">UserGroups?</a> SURREY and BERKS, which themselves contain users.
+</p>
+<p>
+One user in SURREY is Simon the Sysadmin, who has permissions on the whole system. His permissions should not leak out to other users or groups, and user permissions generally should not.
+</p>
+<p>
+Each Group has permissions over various objects.
+</p>
+<p>
+A user has permissions in his own right, and also has the permissions of his own group, and of all the groups contained in his group, and so on recursively.
+</p>
+<p>
+Algorithm:
+</p>
+<p>
+possible(user, action, package):
+</p>
+<blockquote>
+<p>
+if user has permission for action on package
+</p>
+<blockquote>
+<p>
+or any of have that permission
+</p>
+<blockquote>
+<p>
+or any of his groups group-children (but not user-children), and so on recursively have the permission.
+</p>
+</blockquote>
+</blockquote>
+</blockquote>
+
+    </div>
+  </div>
+</div>
+        <div>
+          <h2 class="foldable">Change History</h2>
+          <div id="changelog">
+              <div class="change" id="trac-change-1">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:1" class="cnum">
+      <a href="1065%3Fversion=9.html#comment:1">comment:1</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-04-04T10:46:44Z&amp;precision=second.html" title="2011-04-04T10:46:44Z in Timeline">3 years</a> ago by sebbacon
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+To reflect further conversations:
+</p>
+<ul><li>We are parking this ticket until dictization is complete
+</li><li>We would prefer to see roles as asserted globally by default, with packages just storing exceptions.  E.g. If I am a "reader" globally, then I have "read-package" permission on all packages new and existing, unless otherwise asserted locally on a package.
+</li><li>Also w.r.t. algorithm above, consider repoze.what's model; "possible" is analagous to "has_permission".  See <a class="ext-link" href="http://what.repoze.org/docs/1.0/Manual/Predicates/Builtin.html"><span class="icon">​</span>http://what.repoze.org/docs/1.0/Manual/Predicates/Builtin.html</a>
+</li></ul>
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-2">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:2" class="cnum">
+      <a href="1065%3Fversion=9.html#comment:2">comment:2</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-04-05T19:54:04Z&amp;precision=second.html" title="2011-04-05T19:54:04Z in Timeline">3 years</a> ago by dread
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Cc</strong>
+        <em>dread</em> added
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+Wow, lots of solutions here, and not enough evidence of the problems encountered / difficult use cases.
+</p>
+<p>
+I have tried here to extract what John and Seb might be suggesting is difficult with our current <a class="ext-link" href="http://en.wikipedia.org/wiki/Role-based_access_control"><span class="icon">​</span>http://en.wikipedia.org/wiki/Role-based_access_control</a> system.
+</p>
+<ol><li>(Seb) It seems crazy to change the User-Object-Roles for every single package to 'lockdown' a CKAN instance. Instead of using Roles 'reader' &amp; 'editor' we start using Roles 'logged_in_user' and 'anon_user'. Then, with only changing a couple of lines of the Role-Action table for these Roles, you can give or remove permissions to edit / create packages, groups etc.
+</li></ol><ol start="2"><li>(John) Actions are being added all the time by migrations and extensions. I'm not sure what the problem is here - can someone explain? The separation of Users and the new Actions by adding the Role 'join' means the migration/extension can add existing Users with the new Actions. For example when we added the 'Group' protection object, logged in users could previously create groups, so it is natural to add this action to the 'editor' role. If you get rid of Roles, as John suggests, then you end up having to add as many Rights objects as users. And you might end up trying to infer new Rights on the basis of old Rights, rather than a role, which would be more natural. (Is the only reason to denormalise the UOR and RA tables the sake of ease of understanding? I would think we can explain the concept better now...!)
+</li></ol><ol start="3"><li>(John) This Group Hierarchy description sounds a bit like earlier incarnations of the DGU requirements. "or any of his groups group-children (but not user-children)" I'm not sure I understand the user-children bit, and I'm wary of any difficult-to-grasp concept. This modelling seems to take the <a class="missing wiki">UserGroup/User?</a> hierarchy model and use that as a hard-coded interpretation of the Authorized permission. In contrast, in DGU Evan split the Organisation Hierarchy model from the Authorization model. Each User has explicit permissions for each Organisation he is allowed to add/edit packages for. This helps for these two use cases we have to contend with: when a user is an admin for unrelated branches of the Organisation hierarchy, and when an Organisation is actually in two branches of the Organisation hierarchy. It also seems more generally flexible.
+</li></ol>
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-3">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:3" class="cnum">
+      <a href="1065%3Fversion=9.html#comment:3">comment:3</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-04-06T07:46:34Z&amp;precision=second.html" title="2011-04-06T07:46:34Z in Timeline">3 years</a> ago by sebbacon
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+Re the point against my name, yes -- I think the fundamental principles of the current system are fine, but the implementation means asserting things for every single object, whereas we should be able to optimise it for the general cases -- something along the lines you suggest.
+</p>
+<p>
+I would be very happy to write up a full, detailed proposal for the system before we implement anything, if only as a proper straw man to have debates around.
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-4">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:4" class="cnum">
+      <a href="1065%3Fversion=9.html#comment:4">comment:4</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-04-06T09:22:27Z&amp;precision=second.html" title="2011-04-06T09:22:27Z in Timeline">3 years</a> ago by dread
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+Great stuff Seb, cheers for that.
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-5">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:5" class="cnum">
+      <a href="1065%3Fversion=9.html#comment:5">comment:5</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-04-08T14:01:16Z&amp;precision=second.html" title="2011-04-08T14:01:16Z in Timeline">3 years</a> ago by rgrp
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Description</strong>
+        modified (<a href="1065%3Faction=diff&amp;version=5.html">diff</a>)
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-6">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:6" class="cnum">
+      <a href="1065%3Fversion=9.html#comment:6">comment:6</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-04-18T09:25:56Z&amp;precision=second.html" title="2011-04-18T09:25:56Z in Timeline">3 years</a> ago by thejimmyg
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Priority</strong>
+        changed from <em>awaiting triage</em> to <em>major</em>
+    </li><li>
+      <strong>Milestone</strong>
+        set to <em>ckan-v1.4-sprint-6</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+This is now more urgent and I think we have enough consensus to go ahead. See <a class="closed ticket" href="1094.html" title="enhancement: [super] Refactor the Auth System (closed: duplicate)">#1094</a> too.
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-7">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:7" class="cnum">
+      <a href="1065%3Fversion=9.html#comment:7">comment:7</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-07-20T15:03:28Z&amp;precision=second.html" title="2011-07-20T15:03:28Z in Timeline">3 years</a> ago by thejimmyg
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Description</strong>
+        modified (<a href="1065%3Faction=diff&amp;version=7.html">diff</a>)
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+Merging with <a class="closed ticket" href="1094.html" title="enhancement: [super] Refactor the Auth System (closed: duplicate)">#1094</a> so see the discussion there too.
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-8">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:8" class="cnum">
+      <a href="1065%3Fversion=9.html#comment:8">comment:8</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-07-20T16:24:27Z&amp;precision=second.html" title="2011-07-20T16:24:27Z in Timeline">3 years</a> ago by thejimmyg
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Description</strong>
+        modified (<a href="1065%3Faction=diff&amp;version=8.html">diff</a>)
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-9">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:9" class="cnum">
+      <a href="1065%3Fversion=9.html#comment:9">comment:9</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-07-20T16:40:18Z&amp;precision=second.html" title="2011-07-20T16:40:18Z in Timeline">3 years</a> ago by thejimmyg
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Description</strong>
+        modified (<a href="1065%3Faction=diff&amp;version=9.html">diff</a>)
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+          </div>
+        </div>
+      <div id="help"><strong>Note:</strong> See
+        <a href="../wiki/TracTickets.html">TracTickets</a> for help on using
+        tickets.</div>
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="first">
+          <a rel="nofollow" href="1065%3Fversion=9&amp;format=csv" class="csv">Comma-delimited Text</a>
+        </li><li>
+          <a rel="nofollow" href="1065%3Fversion=9&amp;format=tab" class="tab">Tab-delimited Text</a>
+        </li><li class="last">
+          <a rel="nofollow" href="1065%3Fversion=9&amp;format=rss" class="rss">RSS Feed</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

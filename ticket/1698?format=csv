@@ -1,0 +1,12 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1698,[super] Tag Taxonomies,seanh,seanh,"Add drupal-like ""taxonomies"" to CKAN.
+
+Etherpad with user stories, feature list, design and implementation discussion:
+
+http://ckan.okfnpad.org/22
+
+Branch where this is being developed is feature-1698-tag-taxonomies:
+
+https://github.com/okfn/ckan/compare/master...feature-1698-tag-taxonomies
+
+Tickets related to this have [http://trac.ckan.org/query?status=accepted&status=assigned&status=closed&status=new&status=reopened&group=owner&max=1000&order=milestone&col=id&col=summary&col=status&col=owner&col=milestone&col=keywords&keywords=~taxonomies keyword taxonomies].",enhancement,closed,awaiting triage,ckan-v1.7,ecportal,fixed,taxonomies,,ckan,none

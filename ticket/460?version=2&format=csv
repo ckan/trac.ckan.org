@@ -1,0 +1,12 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+460,State field changed by non-sysadmin,johnbywater,,"This package:
+
+http://ckan.net/package/dbtune-audioscrobbler
+
+was:
+ 1. created by Richard (logged-in)
+ 2. edited by Richard (logged-in)
+(According to the logs, at this point the state was changed from 'active' to 'deleted)
+ 3. pudo changed the state back to active
+
+Richard is not a sysadmin, so shouldn't have been able to see or change the state. Need to investigate how this got changed, fix if necessary and report back to Richard.",defect,new,awaiting triage,,,,,,,

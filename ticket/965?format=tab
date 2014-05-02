@@ -1,0 +1,6 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+965	make migration testing plugin to nose	kindly	kindly	"In order to test migrations properly, we need to test the upgraded database against *all* the tests.
+
+To do this a special flag to nosetests should be added. nosetests --migrations
+
+This flag will make sure that the database is recreated from scratch each time using the migrate repository, bypassing init_db."	enhancement	closed	major	ckan-v1.4	ckan	fixed				

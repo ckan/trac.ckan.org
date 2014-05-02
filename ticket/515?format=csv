@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+515,Inconsistent use of 'location' header in API,dread,kindly,"When you create a package then the 'location' header gets set. This doesn't happen for any other domain objects. I think this should be consistent - either none or all.
+
+I've removed the info about the header in the docs in the meantime.",defect,closed,minor,ckan-v1.4-sprint-6,ckan,fixed,,,ckan,none

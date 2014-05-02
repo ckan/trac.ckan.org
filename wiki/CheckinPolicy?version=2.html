@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      CheckinPolicy – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="help" href="TracGuide.html" />
+        <link rel="alternate" href="CheckinPolicy%3Fversion=2&amp;format=txt" type="text/x-trac-wiki" title="Plain Text" />
+        <link rel="up" href="CheckinPolicy.html" title="View latest version" />
+        <link rel="next" href="CheckinPolicy%3Fversion=3.html" title="Version 3" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/wiki.css" type="text/css" />
+        <link rel="prev" href="CheckinPolicy%3Fversion=1.html" title="Version 1" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("#content").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $("#content").find(".wikianchor").each(function() {
+          $(this).addAnchor(babel.format(_("Link to #%(id)s"), {id: $(this).attr('id')}));
+        });
+        $(".foldable").enableFolding(true, true);
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last active"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="pagepath" class="noprint">
+  <a class="pathentry first" title="View WikiStart" href="../wiki.1.html">wiki:</a><a class="pathentry" href="CheckinPolicy.html" title="View CheckinPolicy">CheckinPolicy</a>
+</div>
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="CheckinPolicy%3Fversion=1.html" title="Version 1">Previous Version</a></span></li><li><a href="CheckinPolicy.html" title="View latest version">View Latest Version</a></li><li class="last"><span><a class="next" href="CheckinPolicy%3Fversion=3.html" title="Version 3">Next Version</a> &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="wiki">
+        <br />
+        <table id="info" summary="Revision info">
+          <tbody>
+            <tr><th scope="row">Version 2 (modified by dread, <a class="timeline" href="../timeline%3Ffrom=2010-08-20T16:21:59Z&amp;precision=second.html" title="2010-08-20T16:21:59Z in Timeline">4 years</a> ago)
+               (<a href="CheckinPolicy%3Faction=diff&amp;version=2.html">diff</a>)</th></tr>
+            <tr><td class="message">
+              <p>
+--
+</p>
+
+            </td></tr>
+          </tbody>
+        </table>
+      <div class="wikipage searchable">
+        
+          
+          
+          <div id="wikipage"><p>
+CKAN is open source and contributions are welcome. However, we have some guidelines for check-ins to ensure that all developers can work well together.
+</p>
+<h3 id="Check-ins">Check-ins</h3>
+<ol><li>Work on the right branch - see <a class="wiki" href="VersionsAndBranching.html">VersionsAndBranching</a>.
+</li><li>Write tests for all changes. Unit tests go into ckan/tests/{area}/ and functional tests go into ckan/tests/functional/ . Tests describe intent and stop the code regressing in the future.
+</li><li>Run all the tests before you commit your code. It only takes 5 minutes! <tt>nosetests ckan/tests</tt>
+</li></ol><h3 id="Startingout">Starting out</h3>
+<ul><li>Before you can commit changes to the OKF repo, you'll need access rights - ask for these on <a class="wiki" href="CkanDiscuss.html">ckan-discuss</a>.
+</li></ul><h3 id="Life-cycleofachange">Life-cycle of a change</h3>
+<p>
+Unless it is a terribly minor change:
+</p>
+<ul><li>Create a ticket with your suggestion and design detail as necessary.
+</li><li>Send a link to the ticket to <a class="wiki" href="CkanDiscuss.html">ckan-discuss</a> and ask for suggestions.
+</li><li>Do it, whilst leaving the repo in a good state at all times (i.e. builds and works). Use another branch or bitbucket if necessary.
+</li><li>Announce it on <a class="wiki" href="CkanDiscuss.html">ckan-discuss</a> and close the ticket when done.
+</li></ul><h3 id="Dontbreakthebuild">Don't break the build</h3>
+<ul><li>Keep an eye on <a class="ext-link" href="http://buildbot.okfn.org/waterfall"><span class="icon">​</span>buildbot</a> to make sure you don't break the build. If you're a regular developer, ask to be added to the buildbot emails. Don't wait to be nagged by other frustrated developers ;-)
+</li><li>If you break the build, please fix it quickly. If it may take time then email <a class="wiki" href="CkanDiscuss.html">ckan-discuss</a> to let others know what the plan is.
+</li></ul></div>
+        
+        
+      </div>
+      
+
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="last first">
+          <a rel="nofollow" href="CheckinPolicy%3Fversion=2&amp;format=txt">Plain Text</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

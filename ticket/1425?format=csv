@@ -1,0 +1,11 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1425,Dataset delete button,dread,zephod,"From Jonathan gray: 
+
+At the moment to delete a package you have to go to 'state' and change from 'active' to 'deleted'.
+
+For me this was not very obvious, and someone recently wrote to me about this too.
+
+Its a small issue - but unless you know what 'state: active' refers to, its not obvious what this means, nor that this is where to go if you want to delete a package.
+
+From UI perspective this could be replaced by either a trash can or some text that says 'delete', perhaps with some prompt that explains what happens when you delete a package - explaining that non-admins won't be able to see it, and how you purge, etc.
+",enhancement,closed,minor,,ckan,fixed,ux,shevski,ckan,none

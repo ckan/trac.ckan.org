@@ -1,0 +1,10 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+835,Authorization CLI and Documentation,pudo,," * (CKAN) Search and browse, no editing. Lock down any updating.
+ * Req: User from an agency comes and registers. Then a system manager grants them relevant permissions. Relevant permissions? Keep it simple.
+ * In fact: could live with a single user for alpha.
+
+ * wiki-catalogue mode
+ * normal-catalogue mode - package registration is off by default etc
+ * Commands module ..
+ * call them from cli from the wui ...
+",defect,new,awaiting triage,,ckan,,,,,

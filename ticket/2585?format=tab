@@ -1,0 +1,13 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2585	Escape solr control characters in search queries, add advanced search screen	seanh		"Suggestion from David Read:
+
+We noticed that some search queries produce unexpected search results in CKAN, due to them containing special characters. For example if you were to search for ""Spend over £25,000 - NHS Leeds"" then it would not come up with the dataset with that exact name. It was excluding datasets with the word ""NHS"" due to the dash/minus sign. It works fine if you escape the minus sign: ""Spend over £25,000 \- NHS Leeds"".
+
+So in data.gov.uk I've added escaping of such control characters in
+our plugin and this useful routine:
+
+http://fragmentsofcode.wordpress.com/2010/03/10/escape-special-characters-for-solrlucene-query/
+
+Perhaps you would consider providing this in CKAN core in future?
+
+I think there is an occasional case when power users would want to use the special characters - brackets, +, -, boolean operators etc. but maybe these could be reserved for an 'advanced search' screen?"	enhancement	new	awaiting triage	ckan-v1.9	ckan		solr		ckan	none

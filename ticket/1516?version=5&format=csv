@@ -1,0 +1,61 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1516,Update SOLR schema after 1.5.1 release and set up multicore SOLR instances if needed,amercader,amercader,"CKAN 1.5.1 will introduce changes in the SOLR schema and functions to support multiple schema versions. Unfortunately the changes in the schema will be backwards incompatible so either both CKAN and SOLR are upgraded, or SOLR is configured as multicore, with one core for each schema. The solr cores would look like:
+
+{{{http://<solr-server>/solr/schema-<version>}}}
+
+Different scenarios:
+
+ * Single SOLR instance used by only one CKAN site (e.g. SOLR running on the same machine):
+  * Update CKAN
+  * Update SOLR schema (symlink to suitable version in CKAN source) 
+  * Rebuild search index
+
+ * Single SOLR instance used by multiple CKAN sites.
+  * Update CKAN source
+  * Configure SOLR as multicore, one core for version 1.2 and another for 1.3 of the schema (symlink to appropriate version in CKAN source)
+  * Update solr_url on each of the CKAN sites with the suitable core
+  * Rebuild search index
+
+
+These are the SOLR and CKAN instances that need to be updated (Please add any missing ones):
+
+ * Same machine as the CKAN site:
+  * test.ckan.net
+  * iati.test.ckan.net
+
+ * s046.okserver.org
+  * iatiregistry.org
+
+ * s052.okserver.org
+  * datacatalogs.org
+
+ * s004.okserver.org / eu4.okfn.org / solr.okfn.org
+  * thedatahub.org (=www.ckan.net)
+  * datagm.org.uk
+  * publicdata.eu
+  * hri.fi (dev.fvh.fi?)
+  * it.ckan.net
+  * ie.ckan.net
+  * cz.ckan.net
+  * register.data.overheid.nl (nl.ckan.net?)
+  * no.ckan.net / datakilder.no
+  * br.ckan.net
+  * colorado.ckan.net
+  * at.ckan.net
+
+
+TODO: which SOLR server are using these instances?
+ * data.gov.uk/ catalogue.data.gov.uk
+ * data.norge.no
+ * nederland.ckan.net
+ * lt.ckan.net
+ * pl.ckan.net
+ * datadotmontreal.ca/
+ * lt.ckan.net
+ * pl.ckan.net
+ * ca.ckan.net / datadotgc.com
+
+
+
+
+",task,new,critical,current-ckan-sprint-2011-12-19,ckan,,search solr,johnglover kindly rgrp dread nils.toedtmann@…,ckan,migrations

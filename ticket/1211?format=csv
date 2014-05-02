@@ -1,0 +1,7 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1211,[super] Drupal integration,kindly,kindly,"Sub-tasks / tickets:
+ * #1335 Action API - access to any logic layer function
+ * Standardize logic functions on ordering: (context, data_dict) and put parameters into data_dict.
+ * Add package_create_validate & package_update_validate logic functions
+ * Allow extensions to provide logic layer functions (IActions)
+",enhancement,closed,awaiting triage,ckan-v1.5,ckan,fixed,,,ckan,none

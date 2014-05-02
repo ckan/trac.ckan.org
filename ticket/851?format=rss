@@ -1,0 +1,139 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #851: Link Checking</title>
+    <link>http://localhost/ticket/851</link>
+    <description>&lt;p&gt;
+revisit link checker from &lt;a class="ext-link" href="http://knowledgeforge.net/ckan/ckanext/file/tip/ckanext/link_checker.py"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://knowledgeforge.net/ckan/ckanext/file/tip/ckanext/link_checker.py&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+revisit ollyc's parallel work
+&lt;/p&gt;
+&lt;p&gt;
+look at how this gets used in practice (maybe deprecate in favour of curate tool (suitably wrapped to hide details from the user)
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/851</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>wwaites</dc:creator>
+
+      <pubDate>Mon, 20 Dec 2010 16:02:37 GMT</pubDate>
+      <title>status changed</title>
+      <link>http://localhost/ticket/851#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/851#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;assigned&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;ul&gt;&lt;li&gt;link checker above uses the queue. queue not running generally
+&lt;/li&gt;&lt;li&gt;quickest way forward is just to put the curate tool in a cron job and make a suitable rule. shall do this soonest
+&lt;/li&gt;&lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>wwaites</dc:creator>
+
+      <pubDate>Tue, 21 Dec 2010 00:48:35 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/851#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/851#comment:2</guid>
+      <description>
+        &lt;p&gt;
+Ready to put into cron job. cf:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;a class="ext-link" href="http://groups.google.com/group/fuxi-discussion/browse_thread/thread/47f131fc2e3817e3"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://groups.google.com/group/fuxi-discussion/browse_thread/thread/47f131fc2e3817e3&lt;/a&gt; (Actions)
+&lt;/li&gt;&lt;li&gt;&lt;a class="ext-link" href="http://groups.google.com/group/fuxi-discussion/browse_thread/thread/bf955620a6ae77d8"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://groups.google.com/group/fuxi-discussion/browse_thread/thread/bf955620a6ae77d8&lt;/a&gt; (denoted/calculated functions)
+&lt;/li&gt;&lt;li&gt;&lt;a class="ext-link" href="http://groups.google.com/group/fuxi-discussion/browse_thread/thread/71a94191e9fef384"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://groups.google.com/group/fuxi-discussion/browse_thread/thread/71a94191e9fef384&lt;/a&gt; (&lt;a class="missing wiki"&gt;FuXi?&lt;/a&gt; 1.2)
+&lt;/li&gt;&lt;li&gt;&lt;a class="ext-link" href="https://github.com/wwaites/curate/commit/042a96c1589c0fa4980aca733c64c080e02f111e"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;https://github.com/wwaites/curate/commit/042a96c1589c0fa4980aca733c64c080e02f111e&lt;/a&gt; (curate tool update)
+&lt;/li&gt;&lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>wwaites</dc:creator>
+
+      <pubDate>Tue, 21 Dec 2010 01:24:21 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/851#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/851#comment:3</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;assigned&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+currently running against ckan.net, adding broken_link tag if a broken link is found. perhaps something more elaborate should be done? works for now anyhow...
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>wwaites</dc:creator>
+
+      <pubDate>Tue, 21 Dec 2010 14:21:43 GMT</pubDate>
+      <title>status changed; resolution deleted</title>
+      <link>http://localhost/ticket/851#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/851#comment:4</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;closed&lt;/em&gt; to &lt;em&gt;reopened&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                &lt;em&gt;fixed&lt;/em&gt; deleted
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+urllib2 is good for http(s) urls but not, unfortunately, for other types most prominently ftp.
+&lt;/p&gt;
+&lt;p&gt;
+change the httpReq action to use &lt;a class="ext-link" href="http://curl.haxx.se/libcurl/python/"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://curl.haxx.se/libcurl/python/&lt;/a&gt;
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>wwaites</dc:creator>
+
+      <pubDate>Wed, 22 Dec 2010 13:38:32 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/851#comment:5</link>
+      <guid isPermaLink="false">http://localhost/ticket/851#comment:5</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;reopened&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Implemented curlReq that does a curl request and returns statements
+similar to or analogous to httpReq. Require curate&amp;lt;=0.8
+&lt;/p&gt;
+&lt;p&gt;
+This in a cron job is sufficient to go through all the packages and update
+them with a broken link tag now:
+&lt;/p&gt;
+&lt;pre class="wiki"&gt;curate -r https://github.com/wwaites/curate/raw/master/examples/tagging.n3 -s -k API_KEY
+&lt;/pre&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

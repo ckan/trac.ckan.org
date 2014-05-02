@@ -1,0 +1,7 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2925,Remove trans mangle paster command?,seanh,,"- Is `trans mangle` really necessary? If you upload a pot file to
+  Transifex, it can generate a po file for you with 100% strings
+  translated into a fictional pseudo language where everything is really
+  long strings of unicode characters. I found this worked well for
+  coverage testing, and also tests handling of unicode and long strings
+  all over the place.",defect,new,awaiting triage,ckan 2.0,ckan,,,,ckan,none

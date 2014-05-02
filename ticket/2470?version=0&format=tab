@@ -1,0 +1,2 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2470	Make datasets in recent updates go through schema validators/converters	johnglover	johnglover	Datasets listed in recent updates have not gone through schema validation, so package_list snippet currently has to display both 'notes' and 'description'.	enhancement	new	minor	ckan-sprint-2012-06-25	ecportal				ckan	none

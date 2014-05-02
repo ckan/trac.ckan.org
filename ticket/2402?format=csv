@@ -1,0 +1,2 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2402,search result speedup.,kindly,kindly,Search results are slow as we do many package_dictize.  Store the package_dict in the search index so that we do not have to hit the database for each of them.,enhancement,closed,awaiting triage,ckan-sprint-2012-05-29,ckan,fixed,,,ckan,none

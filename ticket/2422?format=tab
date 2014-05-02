@@ -1,0 +1,15 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2422	Paster rights command appears broken	ross	kindly	"Reported in IRC by @floapps
+
+
+In previous ckan versions i could use paster commands to remove reader rights from visitors on all packages
+and this would then throw the user to login screen when trying to see a dataset but, when i did this in ckan 1.7, i could still see all datasets as a visitor
+
+Using http://docs.ckan.org/en/latest/authorization.html#permissions-publisher-mode
+
+    paster rights remove visitor reader package:all
+
+
+Also has an empty list of roles in config for default visitor roles
+
+I tested on my local install and could replicate with that command doing nothing. Neither affects existing or newly created datasets."	defect	closed	awaiting triage		ckan	invalid			ckan	none

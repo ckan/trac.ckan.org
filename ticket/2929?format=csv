@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2929,Remove is_fallback() from I*Form extension interfaces?,seanh,,"If a plugin wants to take over the default package type for example, it can return ['dataset'] from its package_types() method. I don't see how there can be a package type that is not the default 'package' and is not returned by the package_types() method of a plugin, because the URLs for such a package type would not be mapped. Am I missing something or is is_fallback() not needed?
+
+Same for IGroupForm and IOrganizationForm",enhancement,new,awaiting triage,ckan 2.0,ckan,,,,ckan,none

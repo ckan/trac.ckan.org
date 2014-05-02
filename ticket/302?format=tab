@@ -1,0 +1,8 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+302	Advertise a package's feed visually	dread	johnbywater	"Visual display of a package's feed in the Package Read (/package/xyz) and Package History (/package/history/xyz) pages.
+
+Motivation: each package's Atom feed is mentioned in the <link rel=""alternate"" type=""application/atom+xml"" ...> tag, which Firefox displays with a feed icon, but the other 3/4 of users may not discover it.
+
+The Repo History (/revision) page has a visual link the feed.
+
+PS It would be nice to display the feed icon in both these places too."	enhancement	closed	awaiting triage	v1.0	ckan	fixed				

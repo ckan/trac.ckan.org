@@ -1,0 +1,6 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+186	Automated upload to archive.org s3	rgrp	rgrp	"(Follows on from ticket:107). We want to provide facility for users to automatically upload material.
+
+  * Create an upload page
+  * Store the material on archive.org using s3 - http://www.archive.org/help/abouts3.txt
+  * Main issue is how we cache large datasets ..."	enhancement	closed	awaiting triage		ckan	duplicate				

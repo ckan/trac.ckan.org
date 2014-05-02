@@ -1,0 +1,10 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+106	Regularly convert CKAN data to RDF and put on Talis CC	rgrp	dread	"Sister to ticket:90 (Link to RDF version of CKAN data on Talis Connected Commons).
+
+Talis have already kindly done an initial conversion. We should repeat this process regularly and re-upload the data to Talis CC.
+
+In the long run may wish to only re-convert packages changed since the last upload. However given relatively smaller size of full dataset this optimization is probably not yet required.
+
+Attached is the ruby script used by Talis for conversion
+
+Cost: ? (1d+ depending on e.g. how easy integration with Talis CC is)"	enhancement	closed	critical		ckan	duplicate				

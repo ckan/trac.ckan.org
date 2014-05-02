@@ -1,0 +1,63 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2251,Internal analytics for ckan.,kindly,toby,"Page views and Resources clicks need to be tracked.
+
+== User Stories ==
+
+US1 As a Site Admin / Visitor (?) I want to see how often a page has been viewed (every page) and how often resources have been downloaded.
+
+US1a Next to a resource or a dataset see how often it has been downloaded / viewed
+
+US1b I want to see datasets or resources ranked by most downloaded or viewed
+
+US1c See a trend graph for a dataset (and resources)
+
+Adminstrative Dashboard (?)
+
+    * I want to see the traffic breakdown by country to my site ...
+    * Ditto for browser type, language, etc etc
+    * I want to see it graphed over time ...
+
+== Implementation Details ==
+
+1. How do we store this data in CKAN?
+2. How do we track (and store)?
+3. How do we display
+
+* Config option ckan.status.enabled = False (by default)
+
+=== Storing Data ===
+
+How does ckanext-googleanalytics do this? Current table:
+
+package_id | count_recent | count_total
+
+Move to a new stats_summary table
+
+id | item_id | object_type | stats_type (total, month_yyyy_mm, ...) | value
+
+Do we store this data into the search (solr) so we can search by it?
+
+=== Displaying Data ===
+
+ * Helper functions / dictize:
+  * Helper function: h.stats_get(object_type, id, stats_type)
+   * h.stats_top_ranked(object_type, number) -> returns object_dicts or just labels or ...
+  * Change to dictize
+ * Location in the default theme (do we show for example in search results too!)
+ * Support for ranking by most popular in search?
+
+=== Tracking Data ===
+
+* Our own solution (just write to site_tracking)
+* Google analytics (plus extension for retrieving data) <- would need a refactor
+* Piwiki
+
+==== Own Solution ====
+
+site_tracking table
+
+id | url | timestamp | action (page_view, resource_download) |
+
+ * Make javascript to make request to ckan to store clicks and page views.
+ * Add middleware so these requests do not go through pylons and just store data quickly.
+",enhancement,accepted,awaiting triage,ckan-sprint-2012-04-02,ecportal,,4d,,ckan,none

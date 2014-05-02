@@ -1,0 +1,124 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1134	CREP0003: Description and Configuration of Harvesters	amercader		"'''Proposer''': Adrià Mercader
+
+== Abstract ==
+
+The new harvester interface allows to create harvesters for different
+sources, but right now harvesters don't have many ways to describe and
+configure themselves. We need a way of allowing them to:
+
+    * Expose their type and other details so they can be used internally
+      and on the UI.
+    * Define configuration settings for particular harvester instances.
+
+
+== The Problem ==
+
+=== Harvester description ===
+
+The current UI for adding and editing harvest sources is the same used
+in ckanext-dgu, and thus the 3 harvester types used in DGU to harvest
+various GEMINI realted sources are hardcoded in the form. The form will 
+be migrated to a DGU-independent one, so we need the harvesters to 
+provide all the necessary data. There is a current {{{get_type}}} method
+that returns the harvester type, but for make it compatible with the DGU
+forms, it returns a machine-readable string (e.g. ""CSW Server""), making
+it error prone.
+
+
+=== Arbitrary configuration ===
+
+In the current implementation, when the harvest process is started,
+ckanext-harvest looks for all the available plugins that implement the 
+{{{IHarvester}}} interface and calls the appropiate methods for the
+current stage ({{{gather_stage}}},{{{fetch_stage}}},{{{import_stage}}}).
+At these stages, harvesters have no way of applying arbitrary
+configuration options, so all harvesters of the same type behave on the
+same way.
+For instance, the CKAN harvester needs a way to define the API version
+to use when harvesting remote instances (Right now, the version 2 is
+hardcoded on the code).
+
+
+== Specification ==
+
+=== Harvester description ===
+
+Harvesters will need to provide the following information so the UI form
+can be built:
+
+    * name: machine-readable name (e.g. ""waf""). This will be the value
+      stored in the database, and the one used by ckanext-harvest to
+      call the appropiate harvester.
+    * title: human-readable name (e.g. ""Web Accessible Folder (WAF)"").
+      This will appear in the form's select box.
+    * description: a description of what the harvester does (e.g. ""A Web 
+      Accessible Folder (WAF) displaying a list of GEMINI 2.1 
+      documents""). This will appear on the form as a guidance to the
+      user.
+
+The way to provide it will be an {{{info}}} method that all harvesters
+must implement, which will return a dictionary with the previous
+elements:
+
+{{{
+    {
+        'name': 'csw',
+        'title': 'CSW Server',
+        'description': 'A server that implements OGC's Catalog Service 
+                        for the Web (CSW) standard'
+    }
+}}}
+
+=== Arbitrary configuration ===
+
+As different harvesters will have very different needs, we need to
+provide a way to persist arbitrary configuration flags for each harvest
+source. The more flexible way given the current architecture in my
+opinion would be to store the configuration options as a JSON encoded
+object as a property of the harvest source (There already is an unused
+DB field called {{{config}}} in the database) (Maybe using JsonType?).
+
+This will mean adding an extra field in the harvest source form to allow
+entering the configuration. This could be just a simple text field where
+users enter the JSON encoded object or a more clever mechanism (i.e an 
+""Add a configuration flag"" link that adds two new text fields for the
+key and value for each flag, and a mechanism to later build the JSON 
+object). In any case, this should probably be hidden in an ""Advance
+options"" section.
+
+
+== Why do it this way == 
+
+=== Harvester description ===
+
+The {{{info}}} method would provide a single point to get all the
+information related to the harvester, and future properties could be 
+added to the dictionary returned without having to modify the interface.
+
+
+=== Arbitrary configuration ===
+There is an already existing {{{config}}} field in the database, so we
+won't need to change the model. 
+Harvesters could access the config object at any of the stages. Of
+course they could provide default values in their implementations so
+users don't need to enter them everytime.
+
+== Implementation plan ==
+
+=== Deliverables ===
+
+=== Risks and mitigations ===
+
+The highest risk on the harvesters {{{info}}} method side is that 
+harvester implementation don't offer one of the necessary properties
+(namely name and title). This could fire a warning when showing the 
+UI form or using the CLI.
+
+=== Participants ===
+
+Adrià Mercader to do it.
+
+=== Progress ===
+
+None yet."	CREP	new	major	ckan-backlog	ckan		Harvesting	david.raznick@…	ckanext-harvest	none

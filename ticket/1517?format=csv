@@ -1,0 +1,5 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1517,Accessing resource view sometimes auto-downloads the resource,zephod,zephod,"Clicking any of the links to a resource page in the dataset viewer seems to load the page and immediately start downloading the resource file. 
+
+For example, being here: http://test.ckan.net/dataset/europeana-lod
+and clicking on any of the links to the first resource.",defect,closed,awaiting triage,ckan-sprint-2011-12-05,ckan,fixed,,,ckan,none

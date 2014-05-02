@@ -1,0 +1,2 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1551,CKAN auth for webstore changes,ross,ross,Webstore should use auth api ( #1550 ) for authenticating users accessing webstore rather than talking directly to the CKAN database. We also need it to suppose /user/  urls and /userid/ for accessing databases.,enhancement,closed,awaiting triage,ckan-backlog,ckan,fixed,,,ckan,none

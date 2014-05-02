@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1549: [super] Short link tool</title>
+    <link>http://localhost/ticket/1549</link>
+    <description>&lt;p&gt;
+It would be great to have a CKAN extension that allowed users (or CKAN itself) to generate short links to other URIs (both internal and external). Once created, shortlinks made by CKAN should be changeable. This would allow uploaded content to be moved without the user's link changing at all. The tool itself might also be of use as a general link-shortener to users other than the CKAN system itself.
+&lt;/p&gt;
+&lt;p&gt;
+Another useful feature would be for this to also collect some simple analytics such as the referrer and client IP for future reference. I'm not yet sure what we would do with the analytics other than some sort of popularity metric.
+&lt;/p&gt;
+&lt;p&gt;
+Questions:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Core, or Extension, or Self-hosted?
+&lt;/li&gt;&lt;/ul&gt;</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1549</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Fri, 16 Dec 2011 12:11:11 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1549#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1549#comment:1</guid>
+      <description>
+        &lt;p&gt;
+I see a need for short links to any package or resource, so people can Twitter about them.
+&lt;/p&gt;
+&lt;p&gt;
+As far as providing forwarding to a resource URL, even if that changes, then I'm not sure there is a need for it to be short - we could just use a long link with the resource-id. e.g. thedatahub.org/resource/c1e89abb-13cd-4e18-9078-03d15bf6f256/url-forward.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>ross</dc:creator>
+
+      <pubDate>Tue, 20 Dec 2011 12:59:12 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1549#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/1549#comment:2</guid>
+      <description>
+        &lt;p&gt;
+Comment from John Erickson (on ckan-discuss):
+&lt;/p&gt;
+&lt;p&gt;
+FYI, such ability to maintain an identifier was an original motivation/requirement of the DOI (which is why the Handle System was
+the obvious choice for implementation).
+&lt;/p&gt;
+&lt;p&gt;
+Note that providing the ability to maintain the short URL implies some kind of authority --- either based on the originating user or a ckan administrator.
+&lt;/p&gt;
+&lt;p&gt;
+The idea of analytics as a motivator is very good; this is a great feature of bit.ly
+&lt;/p&gt;
+&lt;p&gt;
+Another feature to consider might be short URL lookup based on target URL at short URL creation time, to avoid multiple short URL for the same target.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Mon, 02 Jan 2012 03:16:59 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/1549#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/1549#comment:3</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;wontfix&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Closing as wontfix. Originally needed in context of storage but agreed this is no longer needed there. For general usage don't see the point as twitter etc already have shortlink systems and we have no urgent need for one. Happy for someone to reopen if they feel strongly the other way.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1804: CKAN mounted at URL - changing language problem</title>
+    <link>http://localhost/ticket/1804</link>
+    <description>&lt;p&gt;
+e.g. &lt;a class="ext-link" href="http://189.9.137.65/dados/"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://189.9.137.65/dados/&lt;/a&gt; clicking on Deutsch link is &lt;tt&gt;http://189.9.137.65/dados/locale?locale=de&amp;amp;return_to=%2Fdados%2F&amp;amp;hash=1dc17c315c419df850da0dd3599eefa9da76fbeb&lt;/tt&gt; and redirect goes to &lt;tt&gt;http://189.9.137.65/dados/dados/?__cache=97995106&lt;/tt&gt; so /dados/dados/ when it should be /dados.
+&lt;/p&gt;
+&lt;p&gt;
+Affects CKAN 1.6b only (not yet released).
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1804</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>toby</dc:creator>
+
+      <pubDate>Fri, 17 Feb 2012 15:05:56 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1804#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1804#comment:1</guid>
+      <description>
+        &lt;p&gt;
+This should be fixed in branch feature-1653-i18n_url_rewriting as we use different logic.  However it may affect other return_to calls used elsewhere like adding a new package.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Thu, 23 Feb 2012 12:38:25 GMT</pubDate>
+      <title>keywords set</title>
+      <link>http://localhost/ticket/1804#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/1804#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;keywords&lt;/strong&gt;
+              &lt;em&gt;[0.5d]&lt;/em&gt; added
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+I'll fix this on release-v1.6 and then reassign to Toby to fix on feature-1653-i18n_url_rewriting too if the same issue crops up there.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Thu, 23 Feb 2012 22:46:42 GMT</pubDate>
+      <title>owner, priority, status changed</title>
+      <link>http://localhost/ticket/1804#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/1804#comment:3</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;owner&lt;/strong&gt;
+              changed from &lt;em&gt;dread&lt;/em&gt; to &lt;em&gt;toby&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;priority&lt;/strong&gt;
+                changed from &lt;em&gt;critical&lt;/em&gt; to &lt;em&gt;major&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;assigned&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Fixed this on release-v1.6 in cset 557e72330db7. Spent 0.5h.
+&lt;/p&gt;
+&lt;p&gt;
+Reassigning for Toby to look at branch feature-1653-i18n_url_rewriting
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>toby</dc:creator>
+
+      <pubDate>Mon, 27 Feb 2012 12:53:05 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/1804#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/1804#comment:4</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;assigned&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+This has been fixed in master for a while and was only a 1.6 issue
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

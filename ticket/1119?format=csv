@@ -1,0 +1,9 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1119,Fully functional storage extension with file upload,rgrp,rgrp,"Previous work in #877 and #879 + #853 (storage API). In this ticket:
+
+ * Improve authorization
+ * Establish convention for laying out files on disk
+ * Add documentation
+ * Fix bugs with #879 (does not currently work -- boto may have changed)
+
+",enhancement,closed,critical,ckan-v1.4-sprint-7,ckan,fixed,,,ckan,none

@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2831: Create a limited subset of markdown that's supported</title>
+    <link>http://localhost/ticket/2831</link>
+    <description>&lt;p&gt;
+Allowing people to use the full range of markdown results in extremely messy output across the site. I'd suggest limiting support to only a subset of common use cases.
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Allow all inline elements, this allows bold, italic, code and links.
+&lt;/li&gt;&lt;li&gt;Allow lists.
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+Disallow
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Horizontal Rules
+&lt;/li&gt;&lt;li&gt;Headings
+&lt;/li&gt;&lt;li&gt;Block quote and code (this may turn out to be useful and so could be included)
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+This way you get markdowns paragraph handling and a few inline styles without breaking the entire layout of the page.
+&lt;/p&gt;
+&lt;p&gt;
+Here's the full syntax if anyone is interested &lt;a class="ext-link" href="http://daringfireball.net/projects/markdown/syntax"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://daringfireball.net/projects/markdown/syntax&lt;/a&gt;
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2831</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+ </channel>
+</rss>

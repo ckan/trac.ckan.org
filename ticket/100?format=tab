@@ -1,0 +1,9 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+100	Convert existing data on disk to a datapkg distribution	rgrp	rgrp	"(2008-10-29) convert existing directory on disk to a datapkg distribution (PythonDistribution by default). This would be presented in the CLI as a convert command.
+
+Details:
+  * Add a metadata file (setup.py), perhaps prompting for input
+  * List all existing data in that directory
+
+Cost: 4h
+"	enhancement	closed	major		dpm	fixed			datapkg	none

@@ -1,0 +1,43 @@
+= Welcome to the CKAN Software Project Issue Tracker =
+
+[[PageOutline(0-6,Table of Contents,inline)]]
+
+= Code and Trac =
+
+CKAN code is in a mercurial repository here:
+
+ * http://bitbucket.org/okfn/ckan
+
+This Trac service is being used to track CKAN project developments.
+
+== Design Pages ==
+
+ * PackageResources
+ * DataPkgUseCases
+ * UiReviewNotes
+ * [wiki:LOD2UseCases Use Cases for LOD2]
+ * AccessControl
+ * UseCasesResources
+ * SyncingInstances (and DistributingChanges)
+ * SearchEngine
+ * PushAlert
+ * BackgroundWorkers
+ * [wiki:Extensions Extensions]
+ 
+= Project Processes and Policies =
+
+ * [http://wiki.okfn.org/Coding_Standards Coding standard]
+ * CheckinPolicy
+ * VersioningPolicy
+ * BranchingPolicy
+ * ReleaseProcess
+
+= Work in Related Areas =
+
+  * Debian / R
+  * [http://www.ivoa.net/ Virtual Observatory]
+  * PyPI / Gems / CPAN
+
+= User Interface =
+
+ * [wiki:UIRedesign2010 Redesign notes (December 2010)]

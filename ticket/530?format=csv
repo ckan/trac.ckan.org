@@ -1,0 +1,16 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+530,Map IATI attributes to CKAN metadata schema,pudo,pudo,"From lopad:
+
+{{{
+Publishing Entity (often/always? equal to the logged in user)
+    * Domain logic: only can add entries for ""yourself""
+Donor
+Country
+Activity period: period to which this record relates
+Verification status: enumeration of statuses (checked, not checked etc)
+Resource links: to the actual IATI record
+Number of activities: ...
+Date record updated:
+Date data updated: 
+License: Need this field even if it may be a standard license
+}}}",task,closed,,,,fixed,,,,

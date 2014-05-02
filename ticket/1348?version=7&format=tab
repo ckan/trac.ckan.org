@@ -1,0 +1,26 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1348	UX polishing (dataset create/view/edit experience)	zephod	zephod	"Tweaking UIs and polishing the work done in #1294.
+
+## Edit Page ##
+  * [Done; cset:49e0b059b6f5] Hide upload if  storage not enabled
+  * [Done; cset:81ff13b42dad] Make 'Add resource' links on edit page clearer and more button-like.
+  * [Done; cset:03904fc50cbf] Move edit form tabs to the left
+  * [Done; cset:fde26b87d6ce] API placeholder text should not link to a CSV file
+  * [Done] We used to autocomplete the format field - restore this functionality
+    * Works on live. My local db has an empty 'resource_revision' table; maybe 'paster create-test-data' should insert something here?
+  * [Done; cset:1aab499d73db] Summary should contain 'name' (or, if unavailable, use description. Long term: description is to be deprecated)
+  * [Done] Remove/move instructions where possible (a lot could just be placeholder text on the elements) (other stuff could only show on hover)
+    * NB: reveal_instructions.js already disabled on edit page
+    * [RP] have now done this on create -- think we can leave on edit
+  * [Done; cset:755b1a622199] We have broken 'error' reporting for resource issues. Either need to move that into error summary or somehow not destroy it when we rewrite table on page load ...
+  * [Done; cset:7ad090cb7855] Add slideDown to Resource expanded view 
+  * [Done; cset:d3595143e506] Need ability to delete resources
+    * No thought yet given to uploaded resources. Long term re-think probable.
+  * [Done; cset:2430a68a59fc] Empty resource table to resemble view page (""no resources"" text)
+
+## General ##
+  * [Done; cset:cc0ad47293e5] Highlight the package tab I'm on (view/edit/history)
+    * More generally, the presence of the #minornavigation bar is very inconsistent throughout the site.
+  * [Done; cset:d5babc3629cf] Remove 'license' filtered search from backend
+  * [Done] Move script stuff to footer of page
+"	enhancement	closed	awaiting triage	ckan-current-sprint	ckan	fixed			ckan	none

@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1444: Language detection defaults to en_us?</title>
+    <link>http://localhost/ticket/1444</link>
+    <description>&lt;p&gt;
+Using curl you always get English, even if ckan.locale_default=de. Find out why. (1.5b)
+&lt;/p&gt;
+&lt;p&gt;
+Maybe we should disable locale detection for this release if lots of people's browsers don't have it set correctly (e.g. chinese with us internet explorer)
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1444</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Mon, 05 Dec 2011 12:59:20 GMT</pubDate>
+      <title>priority, milestone changed</title>
+      <link>http://localhost/ticket/1444#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1444#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;priority&lt;/strong&gt;
+                changed from &lt;em&gt;critical&lt;/em&gt; to &lt;em&gt;minor&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan-sprint-2011-11-07&lt;/em&gt; to &lt;em&gt;ckan-future&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+I've not looked at this yet, but now detection is disabled, less important.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>ross</dc:creator>
+
+      <pubDate>Wed, 20 Jun 2012 11:14:12 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/1444#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/1444#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;wontfix&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+7 months, no activity, dead bug.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

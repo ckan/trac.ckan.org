@@ -1,0 +1,10 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+269,Improve gov package form,dread,rgrp,"If the notes field could use a WYSIWYG editor with word cleanup this would really help users who may well be pasting in text from Word (and I guess may have been approved or written by someone else)
+
+having auto-complete on tags would both make the system easier to use - and reduce the risk of synonymous tags being created inadvertently.
+
+Does the department drop down options list interact with user permissions - so that users who only have rights to one department only see that option ?
+
+Similarly for licenses - can this reduce to the set of allowed options for this user/
+
+What level of validation is there on the fields?",enhancement,closed,major,,ckan,fixed,,,,

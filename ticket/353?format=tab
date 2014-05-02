@@ -1,0 +1,13 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+353	SOLR search indexing	dread		"== As a ==
+
+SOLR instance
+
+== I want to ==
+
+keep my search index of CKAN packages up-to-date 
+
+== Implementation ==
+
+* Using asynchronous event notifications
+* Running in a separate process to CKAN"	defect	closed	awaiting triage		ckan	fixed				

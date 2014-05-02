@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1244: Notes field carriage-returns converted to CRLF</title>
+    <link>http://localhost/ticket/1244</link>
+    <description>&lt;p&gt;
+When you edit a package in the web form, in the notes field, CKAN favours &lt;tt&gt;\r\n&lt;/tt&gt; over other EOL characters. (The Markdown processor respects both EOLs when displaying the field, putting each line in a &amp;lt;p&amp;gt; tag.)
+&lt;/p&gt;
+&lt;p&gt;
+The problem arises if you have a package created via the API, which may have other expressions of EOL e.g. just &lt;tt&gt;\n&lt;/tt&gt;. These EOLs disappear when you edit a package in the web form. Thus when you subsequently save the package, the &lt;tt&gt;\n&lt;/tt&gt; character is removed, even though you might not intend this, and the notes field is displayed all on one line.
+&lt;/p&gt;
+&lt;p&gt;
+This can be seen when editing annakarenina (as created by 'paster create-test-data'). The diff shows for example:
+&lt;/p&gt;
+&lt;pre class="wiki"&gt;- Some test notes
++ Some test notes
+?                +
+&lt;/pre&gt;&lt;p&gt;
+but it would more clearly be shown as:
+&lt;/p&gt;
+&lt;pre class="wiki"&gt;- Some test notes\n
++ Some test notes
+?                ++
+&lt;/pre&gt;&lt;p&gt;
+This is a significant problem with DGU, since a lot comes in via the API.
+&lt;/p&gt;
+&lt;p&gt;
+It's not clear what we should do about it. We could standardise on \n or \r\n when the form submission comes in. Do different browsers on different platforms do different things with EOLs?
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1244</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Tue, 26 Jul 2011 17:03:13 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/1244#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1244#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1244?action=diff&amp;amp;version=1"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Mon, 01 Aug 2011 09:37:46 GMT</pubDate>
+      <title>status changed; owner set</title>
+      <link>http://localhost/ticket/1244#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/1244#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;owner&lt;/strong&gt;
+              set to &lt;em&gt;dread&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;assigned&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Mon, 05 Dec 2011 12:59:55 GMT</pubDate>
+      <title>milestone changed</title>
+      <link>http://localhost/ticket/1244#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/1244#comment:3</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan-sprint-2011-11-07&lt;/em&gt; to &lt;em&gt;ckan-backlog&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+No progress yet
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>ross</dc:creator>
+
+      <pubDate>Wed, 20 Jun 2012 11:20:53 GMT</pubDate>
+      <title>owner, milestone deleted</title>
+      <link>http://localhost/ticket/1244#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/1244#comment:4</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;owner&lt;/strong&gt;
+              &lt;em&gt;dread&lt;/em&gt; deleted
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                &lt;em&gt;ckan-backlog&lt;/em&gt; deleted
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

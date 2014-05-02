@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+37,Purge a Revision (i.e. purge all changes associated with that revision),rgrp,rgrp,"Spam entries have started to occur on ckan.net in the last few months. It would be useful to be able to purge these revisions -- that is permanently delete all changes to domain objects associated with those revision (one might also permanently delete that revision -- or alternatively simply mark it as purged).
+
+In addition to providing this facility from the shell it would also be useful to be able to do this from the web interface (with associated restrictions on usage via an authorization controller of some sort).",enhancement,closed,critical,v0.5,ckan,fixed,,,,

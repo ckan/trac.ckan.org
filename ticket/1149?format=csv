@@ -1,0 +1,2 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1149,Change domain object modification plugin to use Session extension.,kindly,kindly,This should make it more efficient as it currently does a lot of repeating work.  i.e if you change a package and a resource in the same commit it sends out 2 notifications and should only really send out 1.   ,enhancement,closed,awaiting triage,ckan-v1.5-sprint-1,ckan,fixed,,,ckan,none

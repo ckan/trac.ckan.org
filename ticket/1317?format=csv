@@ -1,0 +1,11 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1317,password reset - improve user search,dread,,"In password reset, it gets confused if you have two similar users. This is because with the string the user provides, it searches several fields, not just name but also fullname and email address, allowing you to search for these. But only name is unique.
+
+Specific problem:
+Ira searches for ""Irina"" then it finds both:
+{{{<User name=irina fullname=Irina email=irina.bolychevsky@okfn.org ]}}}
+and
+{{{<User name=shevski fullname=Ira email=>}}}
+(I think)
+
+Maybe need to choose which field it searches?",defect,assigned,trivial,ckan-backlog,ckan,,,,ckan,none

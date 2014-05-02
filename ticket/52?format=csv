@@ -1,0 +1,5 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+52,Paginated results sets should be customizable across domain objects,rgrp,rgrp,"  1. Tag results could/should show number of associated packages
+  2. Package results should show title (and be in list)
+  3. Pagination should be able to be applied to other result sets than simply register listing (e.g. search results ...)
+  4. Revisions should be listed in a table with full details",enhancement,closed,major,v0.7,ckan,invalid,,,,

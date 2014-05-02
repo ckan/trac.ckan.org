@@ -1,0 +1,8 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1655,Setup issues on s025 (Publicdata.eu),amercader,amercader,"Time estimate: 2d
+
+ * Fix logs (apache, ckan, harvest): rotate, set suitable levels
+ * Fix harvesting jobs: supervisord for gather consumer, cron job
+ * Fix backups
+
+Also it may be worth setting up a test instance ( on s023 ?)",task,closed,major,ckan-sprint-2012-01-23,pdeu,fixed,pdeu [2d],,ckan,none

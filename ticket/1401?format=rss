@@ -1,0 +1,241 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1401: Some links don't take account when CKAN is mounted at a non-root URL</title>
+    <link>http://localhost/ticket/1401</link>
+    <description>&lt;p&gt;
+if you want your ckan to reside not at
+&lt;a class="ext-link" href="http://yourhost.org/"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://yourhost.org/&lt;/a&gt;
+but rather e.g. at
+&lt;a class="ext-link" href="http://yourhost.org/ckan/"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://yourhost.org/ckan/&lt;/a&gt;
+you can use this hint
+&lt;a class="ext-link" href="http://wiki.pylonshq.com/display/pylonsdocs/Configuration+Files"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://wiki.pylonshq.com/display/pylonsdocs/Configuration+Files&lt;/a&gt;
+and set ckan.site_url accordingly in your .ini.
+However, there are some instances where internal links are created without the required prefix.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1401</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Tue, 01 Nov 2011 10:12:39 GMT</pubDate>
+      <title>milestone changed</title>
+      <link>http://localhost/ticket/1401#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1401#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan-v1.5&lt;/em&gt; to &lt;em&gt;ckan-v1.6&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Hi, this is very useful to hear. Can you point out links or even better submit a patch / pull request: &lt;a class="ext-link" href="http://wiki.ckan.org/Submitting_a_code_patch"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://wiki.ckan.org/Submitting_a_code_patch&lt;/a&gt;
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Fri, 11 Nov 2011 18:56:45 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1401#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/1401#comment:2</guid>
+      <description>
+        &lt;p&gt;
+Another problem is 401 redirect when your not authorized to do something, like creating a group. The redirect URL is set in the who.ini:
+&lt;/p&gt;
+&lt;pre class="wiki"&gt;login_form_url= /user/login
+&lt;/pre&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Wed, 23 Nov 2011 16:41:14 GMT</pubDate>
+      <title>cc set</title>
+      <link>http://localhost/ticket/1401#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/1401#comment:3</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;cc&lt;/strong&gt;
+              &lt;em&gt;augusto.herrmann@…&lt;/em&gt; added
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Patch from Augusto Herrmann for the icon URLs: &lt;a class="ext-link" href="http://pastebin.com/aRBQmftL"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://pastebin.com/aRBQmftL&lt;/a&gt;
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Fri, 13 Jan 2012 13:23:13 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1401#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/1401#comment:4</guid>
+      <description>
+        &lt;p&gt;
+When javascript calls other scripts, it misses the mount-point prefix.
+e.g.
+application.js has hard-coded URL /api/2/util/is_slug_valid
+&lt;/p&gt;
+&lt;p&gt;
+The URL prefix is stored in request.environ&lt;a class="missing wiki"&gt;SCRIPT_NAME?&lt;/a&gt; so perhaps this value should be put in the HTML somewhere for the javascript to get at?
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Mon, 16 Jan 2012 18:30:36 GMT</pubDate>
+      <title>summary changed</title>
+      <link>http://localhost/ticket/1401#comment:5</link>
+      <guid isPermaLink="false">http://localhost/ticket/1401#comment:5</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;summary&lt;/strong&gt;
+                changed from &lt;em&gt;some links lack the site_url prefix&lt;/em&gt; to &lt;em&gt;Some links don't take account when CKAN is mounted at a non-root URL&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Mon, 16 Jan 2012 20:51:51 GMT</pubDate>
+      <title>owner, status changed; keywords set</title>
+      <link>http://localhost/ticket/1401#comment:6</link>
+      <guid isPermaLink="false">http://localhost/ticket/1401#comment:6</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;keywords&lt;/strong&gt;
+              &lt;em&gt;ux&lt;/em&gt; added
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;owner&lt;/strong&gt;
+              changed from &lt;em&gt;flofokus&lt;/em&gt; to &lt;em&gt;zephod&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;assigned&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Links have been fixed on branch defect-1401-mount-non-root. (Instead of using c.site_url the links now just detect the mount url like the rest of the links.)
+&lt;/p&gt;
+&lt;p&gt;
+Now it needs the js and css to be fixed too. Reassigning to Tom for this.
+&lt;/p&gt;
+&lt;p&gt;
+Brazilians currently waiting for this to be fixed.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Fri, 20 Jan 2012 18:49:03 GMT</pubDate>
+      <title>owner, milestone changed</title>
+      <link>http://localhost/ticket/1401#comment:7</link>
+      <guid isPermaLink="false">http://localhost/ticket/1401#comment:7</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;owner&lt;/strong&gt;
+              changed from &lt;em&gt;zephod&lt;/em&gt; to &lt;em&gt;rgrp&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan-v1.6&lt;/em&gt; to &lt;em&gt;current-ckan-sprint-2012-01-23&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Fri, 20 Jan 2012 20:05:04 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/1401#comment:8</link>
+      <guid isPermaLink="false">http://localhost/ticket/1401#comment:8</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;assigned&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Fixed. See &lt;a class="ext-link" href="https://github.com/okfn/ckan/commit/7088b1fcae685e56a280ec7b396b0f9803a477d9"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;https://github.com/okfn/ckan/commit/7088b1fcae685e56a280ec7b396b0f9803a477d9&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+@dread: not at all clear why we had to change from g.site_url to h.url_for (idea was people could set site_url if the site was not at root ...)
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Fri, 27 Jan 2012 11:56:39 GMT</pubDate>
+      <title>status changed; resolution deleted</title>
+      <link>http://localhost/ticket/1401#comment:9</link>
+      <guid isPermaLink="false">http://localhost/ticket/1401#comment:9</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;closed&lt;/em&gt; to &lt;em&gt;reopened&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                &lt;em&gt;fixed&lt;/em&gt; deleted
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Basic check of the home page shows the CSS has not been fixed:
+&lt;/p&gt;
+&lt;pre class="wiki"&gt;GET http://127.0.1.1/img/find.png 404 (Not Found)
+GET http://127.0.1.1/img/share.png 404 (Not Found)
+GET http://127.0.1.1/img/collaborate.png 404 (Not Found)
+&lt;/pre&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Tue, 31 Jan 2012 09:10:14 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/1401#comment:10</link>
+      <guid isPermaLink="false">http://localhost/ticket/1401#comment:10</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;reopened&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Thanks for that dread. Have now fixed these issues as well: &lt;a class="ext-link" href="https://github.com/okfn/ckan/commit/abb99cae9972d45f4b3acfbf8ea711da398d8a4a"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;https://github.com/okfn/ckan/commit/abb99cae9972d45f4b3acfbf8ea711da398d8a4a&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+Re-closing.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

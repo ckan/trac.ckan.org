@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2922: Better docstring for CKANInternationalizationExtension</title>
+    <link>http://localhost/ticket/2922</link>
+    <description>&lt;p&gt;
+I'm unsure about what's going on here. As I understand it, when we run
+&lt;tt&gt;python setup.py extract_messages&lt;/tt&gt; it's going to use the extract_ckan()
+function from ckan/lib/extract.py to process the HTML files. For the
+HTML files that are jinja2 templates, extract_ckan() will call
+jinja2_cleaner() which will call regularise_html() on the strings.  So
+the strings are regularised when they are extracted from the source
+files.
+&lt;/p&gt;
+&lt;p&gt;
+But then we have the parse() method of &lt;a class="missing wiki"&gt;CkanInternationalizationExtension?&lt;/a&gt;
+also calling regularise_html(). I don't get what's happening here. Why
+do the strings need to be regularised twice?
+&lt;/p&gt;
+&lt;p&gt;
+My guess is that &lt;a class="missing wiki"&gt;CkanInternationalizationExtension?&lt;/a&gt; is used when the
+strings are extracted from the templates at runtime, and they need to be
+regularised at this time in order to match them against the regularised
+strings in the mo files to find the translations to output?
+&lt;/p&gt;
+&lt;p&gt;
+Maybe &lt;a class="missing wiki"&gt;CkanInternationalizationExtension?&lt;/a&gt; needs a better docstring saying
+what it does?
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2922</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+ </channel>
+</rss>

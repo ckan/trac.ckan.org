@@ -1,0 +1,31 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2840,tag line styling,toby,aron.carroll,"@aron
+
+Is it possible to get the tagline text to float  the other way
+
+at the moment we have
+
+...........Title
+Tag line to here
+
+I'd like 
+
+...........Title
+...........Tag line to here
+
+is this possible or too much pain
+
+
+based partly on this comment
+Markw wrote 
+
+
+A minor problem visible on the home page
+<http://s031.okserver.org:2375/> and other pages, when viewing in both
+Chrome and Firefox:
+
+if the browser width is not very wide, the tag line 'Open source data
+portal' vanishes off the *left* hand side of the screen. For some
+reason the browser doesn't even recognise this with a horizontal
+scroll bar (as it does when stuff is off the *right* hand side) - it
+just chops off the text.",enhancement,closed,awaiting triage,demo phase 3,ckan,fixed,,,ckan,none

@@ -1,0 +1,16 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1171	Citation button	dread		"Some sort of citation helper. Something small on the package page that could open-up to provide citations to copy and paste.
+
+Aim: provide some guidance for academics/researchers who are creating knowledge.some guidance for academics/researchers who are creating knowledge.
+
+Use cases:
+ * someone wanting to refer to the package metadata in CKAN 
+ * someone wanting to refer to the metadata for a resource in CKAN 
+
+We could also add a timestamp, or revision ID in the link, perhaps as an alternative to the 'Accessed on 31/5/11' bit.
+
+I understand there are various exacting standards for citations, but I would have thought the key thing is to suggest the idea and make it easy access to the key information required for whatever format the user needs.
+
+wwaites: Some related thoughts on this from opb: http://homepages.inf.ed.ac.uk/opb/papers/ssdbm2006.pdf
+
+timclicks: I'm looking at Dataverse for the first time[0]. It seems very popular in the social sciences. I noticed that there is a recommended citation for each dataset. For example, [1] is has this one: ""Targeted Input Programme (TIP) 2000-01"", http://hdl.handle.net/1902.1/SSC-MWI-TIP2000-01-M1 V1 [Version]"""	enhancement	new	minor		ckan				ckan	none

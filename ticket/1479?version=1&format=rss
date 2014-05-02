@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1479: Can't edit a user with a unicode email address</title>
+    <link>http://localhost/ticket/1479</link>
+    <description>&lt;ol&gt;&lt;li&gt;Register User with an email address with a unicode char (e.g. u'\u044e')
+&lt;/li&gt;&lt;li&gt;View the User in the UI (/user/) or with 'user_show' Action API
+&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;
+Exception:
+&lt;/p&gt;
+&lt;pre class="wiki"&gt;Module ckan.controllers.user:98 in read
+&amp;lt;&amp;lt;          try:
+                   user_dict = get_action('user_show')(context,data_dict)
+               except NotFound:
+                   h.redirect_to(controller='user', action='login', id=None)
+&amp;gt;&amp;gt;  user_dict = get_action('user_show')(context,data_dict)
+Module ckan.logic.action.get:488 in user_show
+&amp;lt;&amp;lt;      check_access('user_show',context, data_dict)
+           user_dict = user_dictize(user_obj,context)
+           if not (Authorizer().is_sysadmin(unicode(user)) or user == user_obj.name):
+&amp;gt;&amp;gt;  user_dict = user_dictize(user_obj,context)
+Module ckan.lib.dictization.model_dictize:189 in user_dictize
+&amp;lt;&amp;lt;
+           result_dict['display_name'] = user.display_name
+           result_dict['email_hash'] = user.email_hash
+           result_dict['number_of_edits'] = user.number_of_edits()
+           result_dict['number_administered_packages'] = user.number_administered_packages()
+&amp;gt;&amp;gt;  result_dict['email_hash'] = user.email_hash
+Module ckan.model.user:59 in email_hash
+&amp;lt;&amp;lt;          if self.email:
+                   e = self.email.strip().lower()
+               return hashlib.md5(e).hexdigest()
+           def get_reference_preferred_for_uri(self):
+&amp;gt;&amp;gt;  return hashlib.md5(e).hexdigest()
+UnicodeEncodeError: 'ascii' codec can't encode character u'\u044e' in position 17: ordinal not in range(128)
+&lt;/pre&gt;</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1479</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Tue, 22 Nov 2011 11:15:19 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/1479#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1479#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1479?action=diff&amp;amp;version=1"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Tue, 22 Nov 2011 11:33:12 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/1479#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/1479#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Fixed in cset:380eab620c7397 for CKAN 1.5.1.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

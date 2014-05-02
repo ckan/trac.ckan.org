@@ -1,0 +1,22 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1152,True support for generic CSW servers,amercader,amercader,"The CSW harvesters implemented at the moment were developed with the DGU
+project in mind, and they assume all remote CSW servers to implement the
+Gemini 2 specification. Gemini 2 is the profile defined in the UK for
+INSPIRE complying metadata, so obviously catalogs from other countries
+or non-INSPIRE complying ones won't be able to be harvested.
+
+The changes needed to support generic CSW servers (i.e. those
+implementing the ISO 19139 profile) are:
+
+* Handling the validators (right now are hardcoded in the harvester
+code). This probably involves issues discussed in the CREP 3
+(ticket #1134)
+
+* Changes in the model to adapt the specification to ISO 19139
+
+* Renaming objects and classes which are now Gemini-centric
+
+
+List of CSW servers tested:
+
+https://spreadsheets.google.com/spreadsheet/ccc?key=0Atp3cZFjuIOAdDBVQWRINnlfN1d0b2lleHVEdjBSb2c&hl=en_US&authkey=CNu4hsEB#gid=0",enhancement,new,major,ckan-backlog,uklii,,geo,william.waites@…,ckanext-harvest,harvesting

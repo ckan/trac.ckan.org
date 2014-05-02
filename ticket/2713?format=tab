@@ -1,0 +1,10 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2713	button colour not set properly in variables.css	toby	aron.carroll	"to reproduce run
+
+paster color fuchsia -c development.ini
+
+then go to http://localhost:5000/dataset/new
+
+Add button is blue gradient at the top this should be overridden in variables.less
+
+when added send this ticket to me and i'll update the color command to change it"	enhancement	closed	critical	demo phase 3	ckan	fixed	demo-theme		ckan	none

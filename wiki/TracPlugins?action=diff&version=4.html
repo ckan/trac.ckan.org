@@ -1,0 +1,898 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+    <html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      TracPlugins (diff) – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="help" href="TracGuide.html" />
+        <link rel="up" href="TracPlugins%3Faction=history.html" title="Page history" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/wiki.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/diff.css" type="text/css" />
+        <link rel="prev" href="TracPlugins%3Faction=diff&amp;version=3.html" title="Version 3" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/diff.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="../chrome/common/css/diff.css" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last active"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="TracPlugins%3Faction=diff&amp;version=3.html" title="Version 3">Previous Change</a></span></li><li><a href="TracPlugins%3Faction=history.html" title="Page history">Wiki History</a></li><li class="last"><span class="missing">Next Change &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="wiki">
+      <h1>
+        Changes between
+          <a href="TracPlugins%3Fversion=3.html">Version 3</a> and
+          <a href="TracPlugins%3Fversion=4.html">Version 4</a> of
+          <a href="TracPlugins%3Fversion=4.html">TracPlugins</a>
+      </h1>
+      <form method="post" id="prefs" action="TracPlugins%3Fversion=4.html"><div><input type="hidden" name="__FORM_TOKEN" value="93d81ccf9a7bb1c456462f62" /></div>
+        <div>
+          <input type="hidden" name="action" value="diff" />
+          <input type="hidden" name="version" value="4" />
+          <input type="hidden" name="old_version" value="3" />
+          
+  <label for="style">View differences</label>
+  <select id="style" name="style">
+    <option selected="selected" value="inline">inline</option>
+    <option value="sidebyside">side by side</option>
+  </select>
+  <div class="field">
+    <label><input type="radio" name="contextall" value="0" checked="checked" />
+             Show</label>
+      <label><input type="text" name="contextlines" id="contextlines" size="2" maxlength="3" value="2" />
+             lines around each change</label><br />
+    <label><input type="radio" name="contextall" value="1" />
+           Show the changes in full context</label>
+  </div>
+  <fieldset id="ignore">
+    <legend>Ignore:</legend>
+    <div class="field">
+      <input type="checkbox" id="ignoreblanklines" name="ignoreblanklines" />
+      <label for="ignoreblanklines">Blank lines</label>
+    </div>
+    <div class="field">
+      <input type="checkbox" id="ignorecase" name="ignorecase" />
+      <label for="ignorecase">Case changes</label>
+    </div>
+    <div class="field">
+      <input type="checkbox" id="ignorewhitespace" name="ignorewhitespace" />
+      <label for="ignorewhitespace">White space changes</label>
+    </div>
+  </fieldset>
+  <div class="buttons">
+    <input type="submit" name="update" value="Update" />
+  </div>
+
+        </div>
+      </form>
+      <dl id="overview">
+        <dt class="property time">Timestamp:</dt>
+        <dd class="time">
+            05/02/14 01:33:04 (<a class="timeline" href="../timeline%3Ffrom=2014-05-02T01:33:04Z&amp;precision=second.html" title="2014-05-02T01:33:04Z in Timeline">7 minutes</a> ago)
+        </dd>
+        <dt class="property author">Author:</dt>
+        <dd class="author">
+          trac
+        </dd>
+        <dt class="property message">Comment:</dt>
+        <dd class="message">
+          
+          <p>
+--
+</p>
+
+        </dd>
+      </dl>
+      <div class="diff">
+        <div class="legend" id="diff-legend">
+          <h3>Legend:</h3>
+          <dl>
+            <dt class="unmod"></dt><dd>Unmodified</dd>
+            <dt class="add"></dt><dd>Added</dd>
+            <dt class="rem"></dt><dd>Removed</dd>
+            <dt class="mod"></dt><dd>Modified</dd>
+          </dl>
+        </div>
+        <div class="diff">
+  <ul class="entries">
+      <li class="entry">
+        <h2 id="file0">
+          <a href="TracPlugins%3Fversion=4.html">TracPlugins</a>
+        </h2>
+        <table class="trac-diff inline" summary="Differences" cellspacing="0">
+              <colgroup><col class="lineno" /><col class="lineno" /><col class="content" /></colgroup>
+              <thead>
+                <tr>
+                  <th title="Version 3">
+                    <a href="TracPlugins%3Fversion=3.html#L1">
+                      v3</a>
+                  </th>
+                  <th title="Version 4">
+                    <a href="TracPlugins%3Fversion=4.html#L1">
+                      v4</a>
+                  </th>
+                  <td> </td>
+                </tr>
+              </thead>
+            <tbody class="mod">
+                      <tr class="first">
+                        <th>1</th><th> </th><td class="l"><span>= Trac <del>P</del>lugins =</span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>1</th><td class="r"><span>= Trac <ins>p</ins>lugins =</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>2</th><th>2</th><td class="l"><span>[[TracGuideToc]]</span> </td>
+                  </tr><tr>
+                          <th>3</th><th>3</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>4</th><th> </th><td class="l"><span>Since version 0.9, Trac supports [PluginList plugins] that extend the built-in functionality. The plugin functionality is based on the [trac:TracDev/ComponentArchitecture component architecture].</span> </td>
+                      </tr><tr>
+                        <th>5</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>6</th><th> </th><td class="l"><span>== Requirements ==</span> </td>
+                      </tr><tr>
+                        <th>7</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>8</th><th> </th><td class="l"><span>To use egg based plugins in Trac, you need to have [http://peak.telecommunity.com/DevCenter/setuptools setuptools] (version 0.6) installed.</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>4</th><td class="r"><span>From version 0.9 onwards, Trac is extensible with [trac:PluginList plugins]. Plugin functionality is based on the [trac:TracDev/ComponentArchitecture component architecture], with peculiarities described in the [TracDev/PluginDevelopment plugin development] page.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>5</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>6</th><td class="r"><span>== Plugin discovery ==</span> </td>
+                      </tr><tr>
+                        <th> </th><th>7</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>8</th><td class="r"><span>From the user's point of view, a plugin is either a standalone .py file or an .egg package. Trac looks for plugins in the global shared plugins directory (see [TracIni#GlobalConfiguration Global Configuration]) and in the `plugins` directory of the local TracEnvironment. Components defined in globally-installed plugins should be explicitly enabled in the [[TracIni#components-section| [components] ]] section of the trac.ini file.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>9</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>10</th><td class="r"><span>== Requirements for Trac eggs ==</span> </td>
+                      </tr><tr>
+                        <th> </th><th>11</th><td class="r"><span></span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>12</th><td class="r"><span>To use egg-based plugins in Trac, you need to have [http://peak.telecommunity.com/DevCenter/setuptools setuptools] (version 0.6) installed.</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>9</th><th>13</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>10</th><th>14</th><td class="l"><span>To install `setuptools`, download the bootstrap module [http://peak.telecommunity.com/dist/ez_setup.py ez_setup.py] and execute it as follows:</span> </td>
+                  </tr>
+            </tbody><tbody class="add">
+                  <tr class="last first">
+                          <th> </th><th>15</th><td class="r"><ins></ins> </td>
+                  </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>11</th><th>16</th><td class="l"><span>{{{</span> </td>
+                  </tr><tr>
+                          <th>12</th><th>17</th><td class="l"><span>$ python ez_setup.py</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracPlugins%3Fversion=3.html#L15">…</a></th>
+                  <th><a href="TracPlugins%3Fversion=4.html#L20">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>15</th><th>20</th><td class="l"><span>If the `ez_setup.py` script fails to install the setuptools release, you can download it from [http://www.python.org/pypi/setuptools PyPI] and install it manually.</span> </td>
+                  </tr><tr>
+                          <th>16</th><th>21</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>17</th><th> </th><td class="l"><span>Plugins can also consist of a single `.py` file dropped into either the environment or global `plugins` directory ''(since [milestone:0.10])''. See TracIni#GlobalConfiguration .</span> </td>
+                      </tr><tr>
+                        <th>18</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>19</th><th> </th><td class="l"><span>== Installing a Trac Plugin ==</span> </td>
+                      </tr><tr>
+                        <th>20</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>21</th><th> </th><td class="l"><span>=== For a Single Project ===</span> </td>
+                      </tr><tr>
+                        <th>22</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>23</th><th> </th><td class="l"><span>Plugins are packaged as [http://peak.telecommunity.com/DevCenter/PythonEggs Python eggs]. That means they are ZIP archives with the file extension `.egg`. </span> </td>
+                      </tr><tr>
+                        <th>24</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>25</th><th> </th><td class="l"><span>If you have downloaded a source distribution of a plugin, and want to build the `.egg` file, follow this instruction:</span> </td>
+                      </tr><tr>
+                        <th>26</th><th> </th><td class="l"><span>&nbsp;* Unpack the source. It should provide a setup.py. </span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>22</th><td class="r"><span>Plugins can also consist of a single `.py` file dropped directly into either the project's or the shared `plugins` directory.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>23</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>24</th><td class="r"><span>== Installing a Trac plugin ==</span> </td>
+                      </tr><tr>
+                        <th> </th><th>25</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>26</th><td class="r"><span>=== For a single project ===</span> </td>
+                      </tr><tr>
+                        <th> </th><th>27</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>28</th><td class="r"><span>Plugins are typically packaged as [http://peak.telecommunity.com/DevCenter/PythonEggs Python eggs]. That means they are .zip archives with the file extension `.egg`.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>29</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>30</th><td class="r"><span>If you have downloaded a source distribution of a plugin, and want to build the `.egg` file:</span> </td>
+                      </tr><tr>
+                        <th> </th><th>31</th><td class="r"><span></span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>32</th><td class="r"><span>&nbsp;* Unpack the source. It should provide `setup.py`.</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>27</th><th>33</th><td class="l"><span>&nbsp;* Run:</span> </td>
+                  </tr>
+            </tbody><tbody class="add">
+                  <tr class="last first">
+                          <th> </th><th>34</th><td class="r"><ins></ins> </td>
+                  </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>28</th><th>35</th><td class="l"><span>{{{</span> </td>
+                  </tr><tr>
+                          <th>29</th><th>36</th><td class="l"><span>$ python setup.py bdist_egg</span> </td>
+                  </tr><tr>
+                          <th>30</th><th>37</th><td class="l"><span>}}}</span> </td>
+                  </tr><tr>
+                          <th>31</th><th>38</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>32</th><th> </th><td class="l"><span>Then you will have a *.egg file. Examine the output of running python to find where this was created.</span> </td>
+                      </tr><tr>
+                        <th>33</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>34</th><th> </th><td class="l"><span>Once you have the plugin archive, you need to copy it into the `plugins` directory of the [wiki:TracEnvironment project environment]. Also, make sure that the web server has sufficient permissions to read the plugin egg.</span> </td>
+                      </tr><tr>
+                        <th>35</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>36</th><th> </th><td class="l"><span>To uninstall a plugin installed this way, remove the egg from `plugins` directory and restart web server.</span> </td>
+                      </tr><tr>
+                        <th>37</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>38</th><th> </th><td class="l"><span>Note that the Python version that the egg is built with must</span> </td>
+                      </tr><tr>
+                        <th>39</th><th> </th><td class="l"><span>match the Python version with which Trac is run.&nbsp; If for</span> </td>
+                      </tr><tr>
+                        <th>40</th><th> </th><td class="l"><span>instance you are running Trac under Python 2.3, but have</span> </td>
+                      </tr><tr>
+                        <th>41</th><th> </th><td class="l"><span>upgraded your standalone Python to 2.4, the eggs won't be</span> </td>
+                      </tr><tr>
+                        <th>42</th><th> </th><td class="l"><span>recognized.</span> </td>
+                      </tr><tr>
+                        <th>43</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>44</th><th> </th><td class="l"><span>Note also that in a multi-project setup, a pool of Python interpreter instances will be dynamically allocated to projects based on need, and since plugins occupy a place in Python's module system, the first version of any given plugin to be loaded will be used for all the projects. In other words, you cannot use different versions of a single plugin in two projects of a multi-project setup. It may be safer to install plugins for all projects (see below) and then enable them selectively on a project-by-project basis.</span> </td>
+                      </tr><tr>
+                        <th>45</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>46</th><th> </th><td class="l"><span>=== For All Projects ===</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>39</th><td class="r"><span>You should have a *.egg file. Examine the output of running python to find where this was created.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>40</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>41</th><td class="r"><span>Once you have the plugin archive, copy it into the `plugins` directory of the [wiki:TracEnvironment project environment]. Also, make sure that the web server has sufficient permissions to read the plugin egg. Then restart the web server. If you are running as a [wiki:TracStandalone "tracd" standalone server], restart tracd (kill and run again).</span> </td>
+                      </tr><tr>
+                        <th> </th><th>42</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>43</th><td class="r"><span>To uninstall a plugin installed this way, remove the egg from the `plugins` directory and restart the web server.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>44</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>45</th><td class="r"><span>Note: the Python version that the egg is built with ''must'' match the Python version with which Trac is run. For example, if you're running Trac under Python 2.5, but have upgraded your standalone Python to 2.6, the eggs won't be recognized.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>46</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>47</th><td class="r"><span>Note also: in a multi-project setup, a pool of Python interpreter instances will be dynamically allocated to projects based on need; since plugins occupy a place in Python's module system, the first version of any given plugin to be loaded will be used for all projects. In other words, you cannot use different versions of a single plugin in two projects of a multi-project setup. It may be safer to install plugins for all projects (see below), and then enable them selectively on a project-by-project basis.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>48</th><td class="r"><span></span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>49</th><td class="r"><span>=== For all projects ===</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>47</th><th>50</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>48</th><th>51</th><td class="l"><span>==== With an .egg file ====</span> </td>
+                  </tr><tr>
+                          <th>49</th><th>52</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>50</th><th> </th><td class="l"><span>Some plugins (such as [trac:SpamFilter SpamFilter]) are downloadable as a<del>&nbsp;`.egg` file which</del> can be installed with the `easy_install` program:</span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>53</th><td class="r"><span>Some plugins (such as [trac:SpamFilter SpamFilter]) are downloadable as a<ins>n `.egg` file that</ins> can be installed with the `easy_install` program:</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>51</th><th>54</th><td class="l"><span>{{{</span> </td>
+                  </tr><tr>
+                          <th>52</th><th>55</th><td class="l"><span>easy_install TracSpamFilter</span> </td>
+                  </tr><tr>
+                          <th>53</th><th>56</th><td class="l"><span>}}}</span> </td>
+                  </tr><tr>
+                          <th>54</th><th>57</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>55</th><th> </th><td class="l"><span>If `easy_install` is not on your system<del>&nbsp;see the Requirements section above to install it.&nbsp; Windows users will need to add the `Scripts` directory of their Python installation (for example, `C:\Python23</del>\Scripts`) to their `PATH` environment variable (see [http://peak.telecommunity.com/DevCenter/EasyInstall#windows-notes easy_install Windows notes] for more information).</span> </td>
+                      </tr><tr>
+                        <th>56</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>57</th><th> </th><td class="l"><span>If Trac reports permission errors after installing a zipped egg<del></del> and you would rather not bother providing a egg cache directory writable by the web server, you can get around it by simply unzipping the egg. Just pass `--always-unzip` to `easy_install`:</span> </td>
+                      </tr><tr>
+                        <th>58</th><th> </th><td class="l"><span>{{{<del></del></span> </td>
+                      </tr><tr>
+                        <th>59</th><th> </th><td class="l"><span>easy_install --always-unzip TracSpamFilter-0.<del>2.1dev_r5943-py2.4</del>.egg</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>58</th><td class="r"><span>If `easy_install` is not on your system<ins>, see the Requirements section above to install it. Windows users will need to add the `Scripts` directory of their Python installation (for example, `C:\Python24</ins>\Scripts`) to their `PATH` environment variable (see [http://peak.telecommunity.com/DevCenter/EasyInstall#windows-notes easy_install Windows notes] for more information).</span> </td>
+                      </tr><tr>
+                        <th> </th><th>59</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>60</th><td class="r"><span>If Trac reports permission errors after installing a zipped egg<ins>,</ins> and you would rather not bother providing a egg cache directory writable by the web server, you can get around it by simply unzipping the egg. Just pass `--always-unzip` to `easy_install`:</span> </td>
+                      </tr><tr>
+                        <th> </th><th>61</th><td class="r"><span>{{{<ins></ins></span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>62</th><td class="r"><span>easy_install --always-unzip TracSpamFilter-0.<ins>4.1_r10106-py2.6</ins>.egg</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>60</th><th>63</th><td class="l"><span>}}}</span> </td>
+                  </tr><tr>
+                          <th>61</th><th>64</th><td class="l"><span>You should end up with a directory having the same name as the zipped egg (complete with `.egg` extension) and containing its uncompressed contents.</span> </td>
+                  </tr><tr>
+                          <th>62</th><th>65</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>63</th><th> </th><td class="l"><span>Trac also searches for <del>globally installed plugins ''(since 0.10)'', see TracIni#GlobalConfiguration</del>.</span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>66</th><td class="r"><span>Trac also searches for <ins>plugins installed in the shared plugins directory ''(since 0.10)''; see TracIni#GlobalConfiguration. This is a convenient way to share the installation of plugins across several, but not all, environments</ins>.</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>64</th><th>67</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>65</th><th>68</th><td class="l"><span>==== From source ====</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracPlugins%3Fversion=3.html#L67">…</a></th>
+                  <th><a href="TracPlugins%3Fversion=4.html#L70">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>67</th><th>70</th><td class="l"><span>`easy_install` makes installing from source a snap. Just give it the URL to either a Subversion repository or a tarball/zip of the source:</span> </td>
+                  </tr><tr>
+                          <th>68</th><th>71</th><td class="l"><span>{{{</span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>69</th><th> </th><td class="l"><span>easy_install http://svn.edgewall.com/repos/trac/<del>sandbox/spam-filter</del></span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>72</th><td class="r"><span>easy_install http://svn.edgewall.com/repos/trac/<ins>plugins/0.12/spam-filter-captcha</ins></span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>70</th><th>73</th><td class="l"><span>}}}</span> </td>
+                  </tr><tr>
+                          <th>71</th><th>74</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>72</th><th>75</th><td class="l"><span>==== Enabling the plugin ====</span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>73</th><th> </th><td class="l"><span>Unlike plugins installed per-environment, you'll have to explicitly enable globally installed plugins via [wiki:TracIni trac.ini]. This is done in the `[components]` section of the configuration file, for example:</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>76</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>77</th><td class="r"><span>Unlike plugins installed per-environment, you'll have to explicitly enable globally installed plugins via [wiki:TracIni trac.ini]. This also applies to plugins installed in the shared plugins directory, i.e. the path specified in the `[inherit] plugins_dir` configuration option. </span> </td>
+                      </tr><tr>
+                        <th> </th><th>78</th><td class="r"><span></span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>79</th><td class="r"><span>This is done in the `[components]` section of the configuration file. For example:</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>74</th><th>80</th><td class="l"><span>{{{</span> </td>
+                  </tr><tr>
+                          <th>75</th><th>81</th><td class="l"><span>[components]</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracPlugins%3Fversion=3.html#L77">…</a></th>
+                  <th><a href="TracPlugins%3Fversion=4.html#L83">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>77</th><th>83</th><td class="l"><span>}}}</span> </td>
+                  </tr><tr>
+                          <th>78</th><th>84</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>79</th><th> </th><td class="l"><span>The name of the option is the Python package of the plugin. This should be specified in the documentation of the plugin, but can also be easily discovered by looking at the source (look for a top-level directory that contains a file named `__init__.py`<del>.)</del></span> </td>
+                      </tr><tr>
+                        <th>80</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>81</th><th> </th><td class="l"><span>Note: After installing the plugin, you <del>need to</del> restart your web server.</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>85</th><td class="r"><span>The name of the option is the Python package of the plugin. This should be specified in the documentation of the plugin, but can also be easily discovered by looking at the source (look for a top-level directory that contains a file named `__init__.py`<ins>).</ins></span> </td>
+                      </tr><tr>
+                        <th> </th><th>86</th><td class="r"><span></span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>87</th><td class="r"><span>Note: After installing the plugin, you <ins>must</ins> restart your web server.</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>82</th><th>88</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>83</th><th>89</th><td class="l"><span>==== Uninstalling ====</span> </td>
+                  </tr><tr>
+                          <th>84</th><th>90</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>85</th><th> </th><td class="l"><span>`easy_install` or `python setup.py` does not have an uninstall feature. Hower, it is usually quite trivial to remove a globally installed egg and reference:</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>91</th><td class="r"><span>`easy_install` or `python setup.py` does not have an uninstall feature. Hower, it is usually quite trivial to remove a globally-installed egg and reference:</span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>92</th><td class="r"><span></span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>86</th><th>93</th><td class="l"><span>&nbsp;1. Do `easy_install -m [plugin name]` to remove references from `$PYTHONLIB/site-packages/easy-install.pth` when the plugin installed by setuptools.</span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>87</th><th> </th><td class="l"><span>&nbsp;1. Delete executables from `/usr/bin`, `/usr/local/bin`<del>&nbsp;or `C:\\Python*\Scripts`. For search what executables are there, you may refer to</del> `[console-script]` section of `setup.py`.</span> </td>
+                      </tr><tr>
+                        <th>88</th><th> </th><td class="l"><span>&nbsp;1. Delete the .egg file or folder from where it<del>&nbsp;is installed, usually inside `$PYTHONLIB/site-packages/`</del>.</span> </td>
+                      </tr><tr>
+                        <th>89</th><th> </th><td class="l"><span>&nbsp;1. Restart <del></del>web server.</span> </td>
+                      </tr><tr>
+                        <th>90</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>91</th><th> </th><td class="l"><span>If you are uncertain about the location of the egg, here<del>&nbsp;is a small tip to help locate an egg (or any package) -</del> replace `myplugin` with whatever namespace the plugin uses (as used when enabling the plugin):</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>94</th><td class="r"><span>&nbsp;1. Delete executables from `/usr/bin`, `/usr/local/bin`<ins>, or `C:\\Python*\Scripts`. To find what executables are involved, refer to the</ins> `[console-script]` section of `setup.py`.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>95</th><td class="r"><span>&nbsp;1. Delete the .egg file or folder from where it<ins>'s installed (usually inside `$PYTHONLIB/site-packages/`)</ins>.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>96</th><td class="r"><span>&nbsp;1. Restart <ins>the </ins>web server.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>97</th><td class="r"><span></span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>98</th><td class="r"><span>If you are uncertain about the location of the egg, here<ins>'s a small tip to help locate an egg (or any package). Just</ins> replace `myplugin` with whatever namespace the plugin uses (as used when enabling the plugin):</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>92</th><th>99</th><td class="l"><span>{{{</span> </td>
+                  </tr><tr>
+                          <th>93</th><th>100</th><td class="l"><span>&gt;&gt;&gt; import myplugin</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracPlugins%3Fversion=3.html#L96">…</a></th>
+                  <th><a href="TracPlugins%3Fversion=4.html#L103">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>96</th><th>103</th><td class="l"><span>}}}</span> </td>
+                  </tr><tr>
+                          <th>97</th><th>104</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>98</th><th> </th><td class="l"><span>== Setting up the <del>Plugin C</del>ache ==</span> </td>
+                      </tr><tr>
+                        <th>99</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>100</th><th> </th><td class="l"><span>Some plugins will need to be extracted by the Python eggs runtime (`pkg_resources`), so that their contents are actual files on the file system. The directory in which they are extracted defaults to <del>the home directory of the current user, which may or may not be a problem. You can however</del> override the default location using the `PYTHON_EGG_CACHE` environment variable.</span> </td>
+                      </tr><tr>
+                        <th>101</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>102</th><th> </th><td class="l"><span>To do this from the Apache configuration, use the `SetEnv` directive<del>&nbsp;as follows</del>:</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>105</th><td class="r"><span>== Setting up the <ins>plugin c</ins>ache ==</span> </td>
+                      </tr><tr>
+                        <th> </th><th>106</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>107</th><td class="r"><span>Some plugins will need to be extracted by the Python eggs runtime (`pkg_resources`), so that their contents are actual files on the file system. The directory in which they are extracted defaults to <ins>`.python-eggs` in the home directory of the current user, which may or may not be a problem. You can, however,</ins> override the default location using the `PYTHON_EGG_CACHE` environment variable.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>108</th><td class="r"><span></span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>109</th><td class="r"><span>To do this from the Apache configuration, use the `SetEnv` directive<ins></ins>:</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>103</th><th>110</th><td class="l"><span>{{{</span> </td>
+                  </tr><tr>
+                          <th>104</th><th>111</th><td class="l"><span>SetEnv PYTHON_EGG_CACHE /path/to/dir</span> </td>
+                  </tr><tr>
+                          <th>105</th><th>112</th><td class="l"><span>}}}</span> </td>
+                  </tr><tr>
+                          <th>106</th><th>113</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>107</th><th> </th><td class="l"><span>This works whether you<del>&nbsp;a</del>re using the [wiki:TracCgi CGI] or the [wiki:TracModPython mod_python] front-end. Put this directive next to where you set the path to the [wiki:TracEnvironment Trac environment], i.e. in the same `&lt;Location&gt;` block.</span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>114</th><td class="r"><span>This works whether you<ins>'</ins>re using the [wiki:TracCgi CGI] or the [wiki:TracModPython mod_python] front-end. Put this directive next to where you set the path to the [wiki:TracEnvironment Trac environment], i.e. in the same `&lt;Location&gt;` block.</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>108</th><th>115</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>109</th><th>116</th><td class="l"><span>For example (for CGI):</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracPlugins%3Fversion=3.html#L115">…</a></th>
+                  <th><a href="TracPlugins%3Fversion=4.html#L122">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>115</th><th>122</th><td class="l"><span>}}}</span> </td>
+                  </tr><tr>
+                          <th>116</th><th>123</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>117</th><th> </th><td class="l"><span><del>o</del>r (for mod_python):</span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>124</th><td class="r"><span><ins>O</ins>r (for mod_python):</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>118</th><th>125</th><td class="l"><span>{{{</span> </td>
+                  </tr><tr>
+                          <th>119</th><th>126</th><td class="l"><span>&nbsp;&lt;Location /trac&gt;</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracPlugins%3Fversion=3.html#L124">…</a></th>
+                  <th><a href="TracPlugins%3Fversion=4.html#L131">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>124</th><th>131</th><td class="l"><span>}}}</span> </td>
+                  </tr><tr>
+                          <th>125</th><th>132</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>126</th><th> </th><td class="l"><span>&nbsp;''Note: <del>this requires the `mod_env` module</del>''</span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>133</th><td class="r"><span>&nbsp;''Note: <ins>!SetEnv requires the `mod_env` module which needs to be activated for Apache. In this case the !SetEnv directive can also be used in the `mod_python` Location block.</ins>''</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>127</th><th>134</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>128</th><th>135</th><td class="l"><span>For [wiki:TracFastCgi FastCGI], you'll need to `-initial-env` option, or whatever is provided by your web server for setting environment variables. </span> </td>
+                  </tr><tr>
+                          <th>129</th><th>136</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>130</th><th> </th><td class="l"><span>&nbsp;''Note: that if you already use -initial-env to set the project directory for either a single project or parent you will need to add atleast one environment variable inside trac.fcgi as expressed in the example on [wiki:TracFastCgi TracFastCgi].</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>137</th><td class="r"><span>&nbsp;''Note: that if you already use -initial-env to set the project directory for either a single project or parent you will need to add an additional -initial-env directive to the !FastCgiConfig directive. I.e.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>138</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>139</th><td class="r"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th> </th><th>140</th><td class="r"><span>FastCgiConfig -initial-env TRAC_ENV=/var/lib/trac -initial-env PYTHON_EGG_CACHE=/var/lib/trac/plugin-cache</span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>141</th><td class="r"><span>}}}</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>131</th><th>142</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>132</th><th>143</th><td class="l"><span>=== About hook scripts ===</span> </td>
+                  </tr><tr>
+                          <th>133</th><th>144</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>134</th><th> </th><td class="l"><span>If you<del>&nbsp;have set up some subversion hook scripts that call the Trac engine - such as the post-commit hook script provided in the `/contrib` directory -</del> make sure you define the `PYTHON_EGG_CACHE` environment variable within these scripts as well.</span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>145</th><td class="r"><span>If you<ins>'ve set up some subversion hook scripts that call the Trac engine, such as the post-commit hook script provided in the `/contrib` directory,</ins> make sure you define the `PYTHON_EGG_CACHE` environment variable within these scripts as well.</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>135</th><th>146</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>136</th><th>147</th><td class="l"><span>== Troubleshooting ==</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracPlugins%3Fversion=3.html#L147">…</a></th>
+                  <th><a href="TracPlugins%3Fversion=4.html#L158">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>147</th><th>158</th><td class="l"><span>=== Did you get the correct version of the Python egg? ===</span> </td>
+                  </tr><tr>
+                          <th>148</th><th>159</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>149</th><th> </th><td class="l"><span>Python eggs have the Python version encoded in their filename. For example, `MyPlugin-1.0-py2.<del>4.egg` is an egg for Python 2.4, and will '''not''' be loaded if you're running a different Python version (such as 2.3 or 2.5</del>).</span> </td>
+                      </tr><tr>
+                        <th>150</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>151</th><th> </th><td class="l"><span>Also, verify that the egg file you downloaded is indeed a <del>ZIP</del> archive. If you downloaded it from a Trac site, chances are you downloaded the HTML preview page instead.</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>160</th><td class="r"><span>Python eggs have the Python version encoded in their filename. For example, `MyPlugin-1.0-py2.<ins>5.egg` is an egg for Python 2.5, and will '''not''' be loaded if you're running a different Python version (such as 2.4 or 2.6</ins>).</span> </td>
+                      </tr><tr>
+                        <th> </th><th>161</th><td class="r"><span></span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>162</th><td class="r"><span>Also, verify that the egg file you downloaded is indeed a <ins>.zip</ins> archive. If you downloaded it from a Trac site, chances are you downloaded the HTML preview page instead.</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>152</th><th>163</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>153</th><th>164</th><td class="l"><span>=== Is the plugin enabled? ===</span> </td>
+                  </tr><tr>
+                          <th>154</th><th>165</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>155</th><th> </th><td class="l"><span>If you install a plugin globally (i.e. ''not'' inside the `plugins` directory of the Trac project environment) you will have to explicitly enable it in [TracIni trac.ini]. Make sure that:</span> </td>
+                      </tr><tr>
+                        <th>156</th><th> </th><td class="l"><span>&nbsp;* you actually added the necessary line(s) to the `[components]` section</span> </td>
+                      </tr><tr>
+                        <th>157</th><th> </th><td class="l"><span>&nbsp;* the package/module names are correct</span> </td>
+                      </tr><tr>
+                        <th>158</th><th> </th><td class="l"><span>&nbsp;* the value is “enabled", not e.g. “enable”</span> </td>
+                      </tr><tr>
+                        <th>159</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>160</th><th> </th><td class="l"><span>=== Check the permissions on the egg file ===</span> </td>
+                      </tr><tr>
+                        <th>161</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>162</th><th> </th><td class="l"><span>Trac must be able to read the file. </span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>166</th><td class="r"><span>If you install a plugin globally (i.e., ''not'' inside the `plugins` directory of the Trac project environment), you must explicitly enable it in [TracIni trac.ini]. Make sure that:</span> </td>
+                      </tr><tr>
+                        <th> </th><th>167</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>168</th><td class="r"><span>&nbsp;* ...you actually added the necessary line(s) to the `[components]` section.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>169</th><td class="r"><span>&nbsp;* ...the package/module names are correct.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>170</th><td class="r"><span>&nbsp;* ...the value is "enabled", not "enable" or "Enable".</span> </td>
+                      </tr><tr>
+                        <th> </th><th>171</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>172</th><td class="r"><span>=== Check the permissions on the .egg file ===</span> </td>
+                      </tr><tr>
+                        <th> </th><th>173</th><td class="r"><span></span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>174</th><td class="r"><span>Trac must be able to read the .egg file. </span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>163</th><th>175</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>164</th><th>176</th><td class="l"><span>=== Check the log files ===</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracPlugins%3Fversion=3.html#L168">…</a></th>
+                  <th><a href="TracPlugins%3Fversion=4.html#L180">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>168</th><th>180</th><td class="l"><span>=== Verify you have proper permissions ===</span> </td>
+                  </tr><tr>
+                          <th>169</th><th>181</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>170</th><th> </th><td class="l"><span>Some plugins require you have special permissions in order to use them. <del>WebAdmin</del>, for example, requires the user to have TRAC_ADMIN permissions for it to show up on the navigation bar.</span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>182</th><td class="r"><span>Some plugins require you have special permissions in order to use them. <ins>[trac:WebAdmin WebAdmin]</ins>, for example, requires the user to have TRAC_ADMIN permissions for it to show up on the navigation bar.</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>171</th><th>183</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>172</th><th>184</th><td class="l"><span>=== Is the wrong version of the plugin loading? ===</span> </td>
+                  </tr><tr>
+                          <th>173</th><th>185</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>174</th><th>186</th><td class="l"><span>If you put your plugins inside plugins directories, and certainly if you have more than one project, you need to make sure that the correct version of the plugin is loading. Here are some basic rules:</span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>175</th><th> </th><td class="l"><span>&nbsp;* Only one version of the plugin can be loaded for each running Trac server (ie. each Python process). The Python namespaces and module list will be shared, and it cannot handle duplicates. Whether a plugin is `enabled` or `disabled` makes no difference.</span> </td>
+                      </tr><tr>
+                        <th>176</th><th> </th><td class="l"><span>&nbsp;* A globally installed plugin (typically `setup.py install`) will override any version in global or project plugins directories. A plugin from the global plugins directory will be located before any project plugins directory.</span> </td>
+                      </tr><tr>
+                        <th>177</th><th> </th><td class="l"><span>&nbsp;* If your Trac server hosts more than one project (as with `TRAC_ENV_PARENT_DIR` setups), then having two versions of a plugin in two different projects will give uncertain results. Only one of them will load, and the one loaded will be shared by both projects. Trac will load the first found - basically from the project that receives the first request.</span> </td>
+                      </tr><tr>
+                        <th>178</th><th> </th><td class="l"><span>&nbsp;* Having more than one version listed inside Python site-packages is fine (ie. installed with `setup.py install`) - setuptools will make sure you get the version installed most recently. However, don't store more than one version inside a global or project plugins directory - neither version number nor installed date will matter at all. There is no way to determine which one will be located first when Trac searches the directory for plugins.</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>187</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>188</th><td class="r"><span>&nbsp;* Only one version of the plugin can be loaded for each running Trac server (i.e., each Python process). The Python namespaces and module list will be shared, and it cannot handle duplicates. Whether a plugin is `enabled` or `disabled` makes no difference.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>189</th><td class="r"><span>&nbsp;* A globally-installed plugin (typically `setup.py install`) will override any version in the global or project plugins directories. A plugin from the global plugins directory will be located ''before'' any project plugins directory.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>190</th><td class="r"><span>&nbsp;* If your Trac server hosts more than one project (as with `TRAC_ENV_PARENT_DIR` setups), having two versions of a plugin in two different projects will give uncertain results. Only one of them will load, and the one loaded will be shared by both projects. Trac will load the first plugin found, usually from the project that receives the first request.</span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>191</th><td class="r"><span>&nbsp;* Having more than one version listed inside Python site-packages is fine (i.e., installed with `setup.py install`) -- setuptools will make sure you get the version installed most recently. However, don't store more than one version inside a global or project plugins directory -- neither version number nor installed date will matter at all. There is no way to determine which one will be located first when Trac searches the directory for plugins.</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>179</th><th>192</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>180</th><th>193</th><td class="l"><span>=== If all of the above failed ===</span> </td>
+                  </tr><tr>
+                          <th>181</th><th>194</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>182</th><th> </th><td class="l"><span>OK, so the logs don't mention plugins, the egg is readable, the python version is correct ''and'' the egg has been installed globally (and is enabled in the trac.ini) and it still doesn't work or give any error messages or any other indication as to why? Hop on the IrcChannel and ask away.</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>195</th><td class="r"><span>Okay, so the logs don't mention plugins, the egg is readable, the Python version is correct, ''and'' the egg has been installed globally (and is enabled in trac.ini)... and it ''still'' doesn't work or give any error messages or any other indication as to why. Hop on the [trac:IrcChannel IrcChannel] and ask away!</span> </td>
+                      </tr><tr>
+                        <th> </th><th>196</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>197</th><td class="r"><span>== Web-based plugin administration ==</span> </td>
+                      </tr><tr>
+                        <th> </th><th>198</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>199</th><td class="r"><span>The WebAdmin plugin (part of the core since 0.11) offers limited support for plugin configuration through the web to users with `TRAC_ADMIN` permission:</span> </td>
+                      </tr><tr>
+                        <th> </th><th>200</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>201</th><td class="r"><span>* en/disabling installed plugins</span> </td>
+                      </tr><tr>
+                        <th> </th><th>202</th><td class="r"><span>* installing plugins by uploading them as eggs</span> </td>
+                      </tr><tr>
+                        <th> </th><th>203</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>204</th><td class="r"><span>You probably want to disable the second function for security reasons: in `trac.ini`, in the `[components]` section, add the line</span> </td>
+                      </tr><tr>
+                        <th> </th><th>205</th><td class="r"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th> </th><th>206</th><td class="r"><span>trac.admin.web_ui.PluginAdminPanel = disabled</span> </td>
+                      </tr><tr>
+                        <th> </th><th>207</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>208</th><td class="r"><span>This disables the whole panel, so the first function will no longer be available either.</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>183</th><th>209</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>184</th><th>210</th><td class="l"><span>----</span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>185</th><th> </th><td class="l"><span>See also TracGuide, [trac:PluginList plugin list], [trac:TracDev/ComponentArchitecture component architecture]<del></del></span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>211</th><td class="r"><span>See also TracGuide, [trac:PluginList plugin list], [trac:TracDev/ComponentArchitecture component architecture]<ins>.</ins></span> </td>
+                      </tr>
+            </tbody>
+        </table>
+      </li>
+  </ul>
+</div>
+      </div>
+  </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

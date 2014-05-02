@@ -1,0 +1,19 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+14	Update a release	johnbywater	johnbywater	"== As a ==
+
+Authenticated user
+
+== I want to ==
+
+Update a release
+
+== So that ==
+
+The release details are amended. Attributes of a release are:
+  * name (may include '.' and '-'
+  * nickname
+  * date
+  * description
+
+== Notes ==
+  * permissions: as for updating a package (ticket:10)"	enhancement	closed	minor		ckan	invalid				

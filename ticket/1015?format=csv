@@ -1,0 +1,9 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1015,Editing group gives exception,dread,kindly,"Editing a group properties on ckan.net gives an exception when you submit the form. (Is this related to db migration issues?)
+
+Example page: http://ckan.net/group/edit/civil-society
+
+Exception:
+{{{
+WebApp Error: <class 'sqlalchemy.exc.IntegrityError'>: (IntegrityError) duplicate key value violates unique constraint ""group_revision_pkey"" 'INSERT INTO group_revision (id, name, title, description, created, state, revision_id, continuity_id) VALUES (%(id)s, %(name)s, %(title)s, %(description)s, %(created)s, %(state)s, %(revision_id)s, %(continuity_id)s)' {'description': u""A group for open data related to civil society supported by members of the interest group at: http://okfn.org/groups/civil-society\r\n\r\nCivil society is composed of the totality of voluntary civic and social organizations and institutions that form the basis of a functioning society, as distinct from the force-backed structures of a state (regardless of that state's political system) and commercial institutions of the market. \r\n\r\nhttp://en.wikipedia.org/wiki/Civil_society"", 'created': datetime.datetime(2011, 2, 24, 14, 30, 53, 334842), 'title': u'Civil Society', 'state': u'active', 'continuity_id': u'f4f9f09
+}}}",defect,closed,critical,ckan-v1.4-sprint-3,ckan,fixed,,,,

@@ -1,0 +1,6 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+3021	Logout doesn't work without JS	johnmartin	johnmartin	"Essentially, the functionality should be as follows:
+
+- Add logout link that has `.js-hide` attached to it within the header that isn't hidden within a dropdown
+
+See http://plus.google.com/ (when logged in) with and without JS to see an example of the actual sign-out working without JS"	enhancement	accepted	awaiting triage		ckan				ckan	none

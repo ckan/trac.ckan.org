@@ -1,0 +1,6 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1006	Deprecate stable branch	rgrp	kindly	"Now that we have release branches we should deprecate the stable branch (ie. make sure it is no longer a head and then do --close-branch and merge into default one last time).
+
+Cost: 10m (giving high priority because of low cost)
+
+(Assigning to dread as he has been managing the stable branch)."	enhancement	closed	major	ckan-v1.4-sprint-4	ckan	fixed			ckan	none

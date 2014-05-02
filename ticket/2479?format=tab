@@ -1,0 +1,16 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2479	Meanings of Author and Maintainer fields are unclear	markw		"CKAN's default schema has fields for Author ('The name of the main contact, for enquiries about this particular dataset') and 'Maintainer ('another important contact person'). The distinction is not clear. Also the fields are often left blank.
+
+The roles that seems most important are those of the original owner/publisher of the data, and the person maintaining the CKAN record/copy of it. So I suggest:
+
+(1) Rename the fields 'Owner' and 'Maintainer'.
+
+(2) Change the explanatory text for the relevant fields:
+
+Owner: 'The person or organisation who create/collect/publish the data in this dataset.'
+Owner e-mail: 'E-mail address for enquiries to the Owner named above.'
+Maintainer: 'The person maintaining this dataset on [name of CKAN instance], if different from the above.'
+Maintainer e-mail: 'E-mail address for enquiries to the Maintainer named above.'
+
+(3) When a logged-in user creates a new dataset, the main form should have a checkbox, checked by default, marked 'I am the maintainer of this dataset'. If checked, the Maintainer name and e-mail fields are populated from the user's profile.
+"	enhancement	new	awaiting triage	ckan-v1.9	ckan				ckan	none

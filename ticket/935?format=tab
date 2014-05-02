@@ -1,0 +1,16 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+935	"""groups"" field bug in IATI"	pudo	pudo	"An internal server error was reported when trying to create a new package (not when editing):
+
+  WebApp Error: <class 'sqlalchemy.exceptions.IntegrityError'>: (IntegrityError) null value in column ""name"" violates not-null constraint 'INSERT INTO package (id, name, title, version, url, author, author_email, maintainer, maintainer_email, notes, license_id, state, revision_id) VALUES (%(id)s, %(name)s, %(title)s, %(version)s, %(url)s, %(author)s, %(author_email)s, %(maintainer)s, %(maintainer_email)s, %(notes)s, %(license_id)s, %(state)s, %(revision_id)s)' {'maintainer': None, 'name': None, 'author': None, 'author_email': None, 'notes': None, 'title': None, 'maintainer_email': None, 'url': None, 'state': 'active', 'version': None, 'license_id': None, 'revision_id': '0141c09c-4eb3-4dda-a6b1-e07f2c73b4c5', 'id': '7fe16a29-f183-471a-99c5-2c2e81dd86e4'} 
+
+The error could not be reproduced in a non-apache/mod_wsgi environment, even with a dump of the live database. Further investigation by manual editing of the package form left the ""groups"" field as the likely cause. After updating the packages installed, and temporarily editing the package controller the problem vanished after a restart of the web server. 
+
+Possible causes include: 
+
+ * Stale pyc file
+ * Threading issue
+ * Dependency issue
+
+As the problem is gone for now, it cannot be further investigated atm. 
+
+"	defect	closed	critical		iati	fixed			ckan	none

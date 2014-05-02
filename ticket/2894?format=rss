@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2894: Empty lists get stripped from package dicst in package_show()</title>
+    <link>http://localhost/ticket/2894</link>
+    <description>&lt;p&gt;
+If there's an IDatasetForm plugin active with a form_to_db_schema(), then packages with e.g. no extras get the 'extras' key entirely stripped by the validation in package_show, which causes some tests to crash, e.g. in ckan/tests/functional/api/test_activity.py (if the tests are run with a suitable IDatasetForm plugin active).
+&lt;/p&gt;
+&lt;p&gt;
+If a package has no extras the dict returned by package_show should still have an 'extras' key with an empty list as the value.
+&lt;/p&gt;
+&lt;p&gt;
+Suspect this also effects packages with no tags, no groups, etc.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2894</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+ </channel>
+</rss>

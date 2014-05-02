@@ -1,0 +1,8 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1549,[super] Short link tool,ross,,"It would be great to have a CKAN extension that allowed users (or CKAN itself) to generate short links to other URIs (both internal and external). Once created, shortlinks made by CKAN should be changeable. This would allow uploaded content to be moved without the user's link changing at all. The tool itself might also be of use as a general link-shortener to users other than the CKAN system itself.
+
+Another useful feature would be for this to also collect some simple analytics such as the referrer and client IP for future reference. I'm not yet sure what we would do with the analytics other than some sort of popularity metric.
+
+Questions:
+  - Core, or Extension, or Self-hosted?
+",enhancement,closed,awaiting triage,ckan-backlog,ckan,wontfix,shortlink,,ckan,none

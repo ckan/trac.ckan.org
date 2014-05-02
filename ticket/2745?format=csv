@@ -1,0 +1,27 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2745,Password reset returns an exception if the key parameter is missing,amercader,,"Instead of showing a notice, the password reset page throws an exception if the key parameter is missing:
+
+{{{
+Module ckan.controllers.user:329 in perform_reset
+         c.reset_key = request.params.get('key')
+               if not mailer.verify_reset_link(user_obj, c.reset_key):
+                   h.flash_error(_('Invalid reset key. Please try again.'))
+                   abort(403)
+ if not mailer.verify_reset_link(user_obj, c.reset_key):
+Module ckan.lib.mailer:100 in verify_reset_link
+     if not user.reset_key or len(user.reset_key) < 5:
+               return False
+           return key.strip() == user.reset_key
+ return key.strip() == user.reset_key
+AttributeError: 'NoneType' object has no attribute 'strip'
+}}}
+
+Apart from the obvious fix of checking for the 'key' parameter, it seems like is quite common to get these reset urls without the key parameter, so I suspect some email clients might strip the query params when building the links. We could avoid this problem by making the key part of the url instead of a param:
+
+http://thedatahub.org/en/user/reset/3086e91c-fe09-4a98-92e1-19de67a9ac9d/b4c2d03fa8
+
+instead of:
+
+http://thedatahub.org/en/user/reset/3086e91c-fe09-4a98-92e1-19de67a9ac9d?key=b4c2d03fa8
+
+",defect,new,major,ckan-v1.9,ckan,,,,ckan,none

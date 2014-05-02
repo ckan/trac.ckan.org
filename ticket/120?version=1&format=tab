@@ -1,0 +1,9 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+120	Security audit	dread	dread	"Look for all places where model is accessed and check authorization is checked.
+
+Document holes (and, as necessary, suggestions for fixes) as new tickets. Likely areas that need looking at:
+
+ * search i/f
+ * package WUI commit
+
+Write holes are obviously much more significant to us than read holes."	enhancement	new	major	v0.10	ckan					

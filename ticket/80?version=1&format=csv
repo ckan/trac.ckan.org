@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+80,Refactor or remove modes code,rgrp,dread,"Get rid of modes in the RESTful API. Do json stuff directly in controllers.
+
+ * package will have to_dict and from_dict methods (called by rest controller) which provide and consume JSON friendly dictionaries representing the object. from_dict - class_method. stuff in forms for tags as_string, maybe factor out. reuse validation stuff.",enhancement,new,minor,,ckan,,,,,

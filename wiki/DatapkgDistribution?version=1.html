@@ -1,0 +1,325 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      DatapkgDistribution – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="help" href="TracGuide.html" />
+        <link rel="alternate" href="DatapkgDistribution%3Fversion=1&amp;format=txt" type="text/x-trac-wiki" title="Plain Text" />
+        <link rel="up" href="DatapkgDistribution.html" title="View latest version" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/wiki.css" type="text/css" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("#content").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $("#content").find(".wikianchor").each(function() {
+          $(this).addAnchor(babel.format(_("Link to #%(id)s"), {id: $(this).attr('id')}));
+        });
+        $(".foldable").enableFolding(true, true);
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last active"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="pagepath" class="noprint">
+  <a class="pathentry first" title="View WikiStart" href="../wiki.1.html">wiki:</a><a class="pathentry" href="DatapkgDistribution.html" title="View DatapkgDistribution">DatapkgDistribution</a>
+</div>
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span class="missing">&larr; Previous Version</span></li><li><a href="DatapkgDistribution.html" title="View latest version">View Latest Version</a></li><li class="last"><span class="missing">Next Version &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="wiki">
+        <br />
+        <table id="info" summary="Revision info">
+          <tbody>
+            <tr><th scope="row">Version 1 (modified by rgrp, <a class="timeline" href="../timeline%3Ffrom=2010-12-26T18:05:37Z&amp;precision=second.html" title="2010-12-26T18:05:37Z in Timeline">3 years</a> ago)
+               (<a href="DatapkgDistribution%3Faction=diff&amp;version=1.html">diff</a>)</th></tr>
+            <tr><td class="message">
+              <p>
+mass import of existing work/research on the topic of distribution formats and metadata
+</p>
+
+            </td></tr>
+          </tbody>
+        </table>
+      <div class="wikipage searchable">
+        
+          
+          
+          <div id="wikipage"><p>
+</p><div class="wiki-toc">
+<ol>
+  <li>
+    <a href="DatapkgDistribution%3Fversion=1.html#ProposedFormat">Proposed Format</a>
+    <ol>
+      <li>
+        <a href="DatapkgDistribution%3Fversion=1.html#Metadata">Metadata</a>
+        <ol>
+          <li>
+            <a href="DatapkgDistribution%3Fversion=1.html#Futurespec">Future spec</a>
+          </li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <a href="DatapkgDistribution%3Fversion=1.html#ExistingDistributionFormats">Existing Distribution Formats</a>
+    <ol>
+      <li>
+        <a href="DatapkgDistribution%3Fversion=1.html#Debs">Debs</a>
+      </li>
+      <li>
+        <a href="DatapkgDistribution%3Fversion=1.html#JARs">JARs</a>
+      </li>
+      <li>
+        <a href="DatapkgDistribution%3Fversion=1.html#CommonJSjavascriptpackages">CommonJS javascript packages</a>
+        <ol>
+          <li>
+            <a href="DatapkgDistribution%3Fversion=1.html#Packages">Packages</a>
+          </li>
+          <li>
+            <a href="DatapkgDistribution%3Fversion=1.html#PackageDescriptorFile">Package Descriptor File</a>
+          </li>
+          <li>
+            <a href="DatapkgDistribution%3Fversion=1.html#CatalogProperties">Catalog Properties</a>
+          </li>
+        </ol>
+      </li>
+      <li>
+        <a href="DatapkgDistribution%3Fversion=1.html#OpenDocumentFormat">Open Document Format</a>
+      </li>
+    </ol>
+  </li>
+</ol>
+</div><p>
+</p>
+<p>
+Designing a distribution format for datapkgs.
+</p>
+<p>
+Would like it to be:
+</p>
+<ul><li>Simple
+</li><li>Extensible
+</li><li>Human editable
+</li><li>Machine usable (easily parsable and editable)
+</li><li>Based on existing standard formats
+</li><li>Not linked to a particular language or system
+</li></ul><h1 id="ProposedFormat">Proposed Format</h1>
+<ul><li>metadata.json - for metadata
+</li><li>manifest.json - file listings (may be optional)
+</li></ul><h2 id="Metadata">Metadata</h2>
+<p>
+See also the current source at: <a class="ext-link" href="https://bitbucket.org/okfn/datapkg/src/tip/datapkg/metadata.py"><span class="icon">​</span>https://bitbucket.org/okfn/datapkg/src/tip/datapkg/metadata.py</a>
+</p>
+<p>
+Current spec (heavily based on python distributions)
+</p>
+<ul><li>version
+</li><li>license
+</li><li>author
+</li><li>author_email
+</li><li>maintainer
+</li><li>maintainer_email
+</li><li>url
+</li><li>notes
+</li><li>tags
+</li><li>resources - urls where package data can be obtained
+<ul><li>download_url - deprecated in favour of resources
+</li></ul></li><li>extras - arbitrary additional metadata
+</li></ul><h3 id="Futurespec">Future spec</h3>
+<p>
+This is very closely based on the Common JS spec (also a json based format). That spec in turn shared many common attributes with Debs, Python etc.
+</p>
+<ul><li>name - the name of the package.
+</li><li>description - a brief description of the package. By convention, the first sentence (up to the first ". ") should be usable as a package title in listings.
+</li><li>version - a version string conforming to the Semantic Versioning requirements (<a class="ext-link" href="http://semver.org/"><span class="icon">​</span>http://semver.org/</a>).
+</li><li>keywords - an Array of string keywords to assist users searching for the package in catalogs.
+</li><li>maintainers - Array of maintainers of the package. Each maintainer is a hash which must have a "name" property and may optionally provide "email" and "web" properties.
+</li><li>licenses - array of licenses under which the package is provided. Each license is a hash with a "type" property specifying the type of license and a url property linking to the actual text.
+</li><li>repositories - Array of repositories where the package can be located. Each repository is a hash with properties for the "type" and "url" location of the repository to clone/checkout the package. A "path" property may also be specified to locate the package in the repository if it does not reside at the root.
+</li><li>dependencies - Hash of prerequisite packages on which this package depends in order to install and run. Each dependency defines the lowest compatible MAJOR[.MINOR[.PATCH]] dependency versions (only one per MAJOR version) with which the package has been tested and is assured to work. The version may be a simple version string (see the version property for acceptable forms), or it may be a hash group of dependencies which define a set of options, any one of which satisfies the dependency. The ordering of the group is significant and earlier entries have higher priority.
+</li></ul><p>
+Optional attributes:
+</p>
+<ul><li>contributors - an Array of hashes each containing the details of a contributor. Format is the same as for author. By convention, the first contributor is the original author of the package.
+</li></ul><h1 id="ExistingDistributionFormats">Existing Distribution Formats</h1>
+<h2 id="Debs">Debs</h2>
+<p>
+<a class="ext-link" href="http://www.debian.org/doc/debian-policy/ch-controlfields.html"><span class="icon">​</span>http://www.debian.org/doc/debian-policy/ch-controlfields.html</a>
+</p>
+<p>
+The fields in the binary package paragraphs are:
+</p>
+<ul><li>Package (mandatory)
+</li><li>Architecture (mandatory)
+</li><li>Section (recommended)
+</li><li>Priority (recommended)
+</li><li>Essential
+</li><li>Depends et al
+</li><li>Description (mandatory)
+</li><li>Homepage
+</li></ul><p>
+5.6.2 Maintainer
+</p>
+<p>
+The package maintainer's name and email address. The name must come first, then the email address inside angle brackets &lt;&gt; (in RFC822 format).
+</p>
+<p>
+5.6.13 Description
+</p>
+<p>
+In a source or binary control file, the Description field contains a description of the binary package, consisting of two parts, the synopsis or the short description, and the long description. The field's format is as follows:
+</p>
+<p>
+5.6.5 Section
+</p>
+<p>
+This field specifies an application area into which the package has been classified. See Sections, Section 2.4.
+</p>
+<h2 id="JARs">JARs</h2>
+<p>
+<a class="ext-link" href="http://java.sun.com/j2se/1.3/docs/guide/jar/jar.html"><span class="icon">​</span>http://java.sun.com/j2se/1.3/docs/guide/jar/jar.html</a>
+</p>
+<p>
+The META-INF directory
+</p>
+<p>
+The following files/directories in the META-INF directory are recognized and interpreted by the Java 2 Platform to configure applications, extensions, class loaders and services:
+</p>
+<p>
+MANIFEST.MF - The manifest file that is used to define extension and package related data.
+</p>
+<p>
+INDEX.LIST
+</p>
+<h2 id="CommonJSjavascriptpackages">CommonJS javascript packages</h2>
+<p>
+<a class="ext-link" href="http://wiki.commonjs.org/wiki/Packages/1.0"><span class="icon">​</span>http://wiki.commonjs.org/wiki/Packages/1.0</a>
+</p>
+<p>
+The following is an extract:
+</p>
+<h3 id="Packages">Packages</h3>
+<p>
+This specification describes the CommonJS package format for distributing CommonJS programs and libraries. A CommonJS package is a cohesive wrapping of a collection of modules, code and other assets into a single form. It provides the basis for convenient delivery, installation and management of CommonJS components.
+</p>
+<p>
+This specifies the CommonJS package descriptor file and package file format. It does not specify a package catalogue file or format; this is an exercise for future specifications.
+The package descriptor file is a statement of known fact at the time the package is published and may not be modified without publishing a new release.
+</p>
+<h3 id="PackageDescriptorFile">Package Descriptor File</h3>
+<p>
+Each package must provide a top-level package descriptor file called "package.json". This file is a JSON format file. Each package must provide all the following fields in its package descriptor file.
+</p>
+<ul><li>name - the name of the package.
+</li><li>description - a brief description of the package. By convention, the first sentence (up to the first ". ") should be usable as a package title in listings.
+</li><li>version - a version string conforming to the Semantic Versioning requirements (<a class="ext-link" href="http://semver.org/"><span class="icon">​</span>http://semver.org/</a>).
+</li><li>keywords - an Array of string keywords to assist users searching for the package in catalogs.
+</li><li>maintainers - Array of maintainers of the package. Each maintainer is a hash which must have a "name" property and may optionally provide "email" and "web" properties.
+</li><li>contributors - an Array of hashes each containing the details of a contributor. Format is the same as for author. By convention, the first contributor is the original author of the package.
+</li><li>bugs - URL for submitting bugs. Can be mailto or http.
+</li><li>licenses - array of licenses under which the package is provided. Each license is a hash with a "type" property specifying the type of license and a url property linking to the actual text. If the license is one of the <a class="ext-link" href="http://www.opensource.org/licenses/alphabetical"><span class="icon">​</span>official open source licenses</a> the official license name or its abbreviation may be explicated with the "type" property.  If an abbreviation is provided (in parentheses), the abbreviation must be used.
+</li><li>repositories - Array of repositories where the package can be located. Each repository is a hash with properties for the "type" and "url" location of the repository to clone/checkout the package. A "path" property may also be specified to locate the package in the repository if it does not reside at the root.
+</li><li>dependencies - Hash of prerequisite packages on which this package depends in order to install and run. Each dependency defines the lowest compatible MAJOR[.MINOR[.PATCH]] dependency versions (only one per MAJOR version) with which the package has been tested and is assured to work. The version may be a simple version string (see the version property for acceptable forms), or it may be a hash group of dependencies which define a set of options, any one of which satisfies the dependency. The ordering of the group is significant and earlier entries have higher priority.
+</li></ul><h3 id="CatalogProperties">Catalog Properties</h3>
+<p>
+When a package.json is included in a catalog of packages, the following fields should be present for each package. 
+</p>
+<ul><li>checksums - Hash of package checksums. This checksum is used by package manager tools to verify the integrity of a package. For example:
+</li></ul><pre class="wiki"> checksums: {
+   "md5": "841959b03e98c92d938cdeade9e0784d",
+   "sha1": " f8919b549295a259a6cef5b06e7c86607a3c3ab7",
+   "sha256": "1abb530034bc88162e8427245839ec17c5515e01a5dede6e702932bbebbfe8a7"
+ }
+</pre><p>
+This checksum is meant to be automatically added by the catalog service
+</p>
+<h2 id="OpenDocumentFormat">Open Document Format</h2>
+<p>
+<a class="ext-link" href="http://en.wikipedia.org/wiki/OpenDocument_technical_specification#Format_internals"><span class="icon">​</span>http://en.wikipedia.org/wiki/OpenDocument_technical_specification#Format_internals</a>
+</p>
+<pre class="wiki">meta.xml
+META-INF/
+  manifest.xml
+</pre><p>
+meta.xml contains the file metadata. For example, Author, "Last modified by", date of last modification, etc. The contents look somewhat like this:
+</p>
+<pre class="wiki">    &lt;meta:creation-date&gt;2003-09-10T15:31:11&lt;/meta:creation-date&gt;
+    &lt;dc:creator&gt;Daniel Carrera&lt;/dc:creator&gt;
+    &lt;dc:date&gt;2005-06-29T22:02:06&lt;/dc:date&gt;
+    &lt;dc:language&gt;es-ES&lt;/dc:language&gt;
+    &lt;meta:document-statistic  table-count="6" object-count="0"
+      page-count="59" paragraph-count="676"
+      image-count="2" word-count="16701"
+      character-count="98757"/&gt;
+</pre><p>
+META-INF is a separate folder. Information about the files contained in the <a class="missing wiki">OpenDocument?</a> package is stored in an XML file called the manifest file. The manifest file is always stored at the pathname META-INF/manifest.xml. The main pieces of information stored in the manifest are:
+</p>
+<ul><li>A list of all of the files in the package.
+</li><li>The media type of each file in the package.
+</li><li>If a file stored in the package is encrypted, the information required to decrypt the file is stored in the manifest.
+</li></ul></div>
+        
+        
+      </div>
+      
+
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="last first">
+          <a rel="nofollow" href="DatapkgDistribution%3Fversion=1&amp;format=txt">Plain Text</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

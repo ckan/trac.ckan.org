@@ -1,0 +1,386 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+    <html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      UiReviewNotes (diff) – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="help" href="TracGuide.html" />
+        <link rel="up" href="UiReviewNotes%3Faction=history.html" title="Page history" />
+        <link rel="next" href="UiReviewNotes%3Faction=diff&amp;version=2.html" title="Version 2" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/wiki.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/diff.css" type="text/css" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/diff.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="../chrome/common/css/diff.css" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last active"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span class="missing">&larr; Previous Change</span></li><li><a href="UiReviewNotes%3Faction=history.html" title="Page history">Wiki History</a></li><li class="last"><span><a class="next" href="UiReviewNotes%3Faction=diff&amp;version=2.html" title="Version 2">Next Change</a> &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="wiki">
+      <h1>
+        Changes between
+          <a href="http://localhost/wiki/UiReviewNotes?version=0">Initial Version</a> and
+          <a href="UiReviewNotes%3Fversion=1.html">Version 1</a> of
+          <a href="UiReviewNotes%3Fversion=1.html">UiReviewNotes</a>
+      </h1>
+      <form method="post" id="prefs" action="UiReviewNotes%3Fversion=1.html"><div><input type="hidden" name="__FORM_TOKEN" value="93d81ccf9a7bb1c456462f62" /></div>
+        <div>
+          <input type="hidden" name="action" value="diff" />
+          <input type="hidden" name="version" value="1" />
+          <input type="hidden" name="old_version" value="0" />
+          
+  <label for="style">View differences</label>
+  <select id="style" name="style">
+    <option selected="selected" value="inline">inline</option>
+    <option value="sidebyside">side by side</option>
+  </select>
+  <div class="field">
+    <label><input type="radio" name="contextall" value="0" checked="checked" />
+             Show</label>
+      <label><input type="text" name="contextlines" id="contextlines" size="2" maxlength="3" value="2" />
+             lines around each change</label><br />
+    <label><input type="radio" name="contextall" value="1" />
+           Show the changes in full context</label>
+  </div>
+  <fieldset id="ignore">
+    <legend>Ignore:</legend>
+    <div class="field">
+      <input type="checkbox" id="ignoreblanklines" name="ignoreblanklines" />
+      <label for="ignoreblanklines">Blank lines</label>
+    </div>
+    <div class="field">
+      <input type="checkbox" id="ignorecase" name="ignorecase" />
+      <label for="ignorecase">Case changes</label>
+    </div>
+    <div class="field">
+      <input type="checkbox" id="ignorewhitespace" name="ignorewhitespace" />
+      <label for="ignorewhitespace">White space changes</label>
+    </div>
+  </fieldset>
+  <div class="buttons">
+    <input type="submit" name="update" value="Update" />
+  </div>
+
+        </div>
+      </form>
+      <dl id="overview">
+        <dt class="property time">Timestamp:</dt>
+        <dd class="time">
+            12/15/09 09:57:13 (<a class="timeline" href="../timeline%3Ffrom=2009-12-15T09:57:13Z&amp;precision=second.html" title="2009-12-15T09:57:13Z in Timeline">4 years</a> ago)
+        </dd>
+        <dt class="property author">Author:</dt>
+        <dd class="author">
+          dread
+        </dd>
+        <dt class="property message">Comment:</dt>
+        <dd class="message">
+          
+          <p>
+Moved from UIReviewNotes
+</p>
+
+        </dd>
+      </dl>
+      <div class="diff">
+        <div class="legend" id="diff-legend">
+          <h3>Legend:</h3>
+          <dl>
+            <dt class="unmod"></dt><dd>Unmodified</dd>
+            <dt class="add"></dt><dd>Added</dd>
+            <dt class="rem"></dt><dd>Removed</dd>
+            <dt class="mod"></dt><dd>Modified</dd>
+          </dl>
+        </div>
+        <div class="diff">
+  <ul class="entries">
+      <li class="entry">
+        <h2 id="file0">
+          <a href="UiReviewNotes%3Fversion=1.html">UiReviewNotes</a>
+        </h2>
+        <table class="trac-diff inline" summary="Differences" cellspacing="0">
+              <colgroup><col class="lineno" /><col class="lineno" /><col class="content" /></colgroup>
+              <thead>
+                <tr>
+                  <th title="Version currently edited">
+                    <a href="UiReviewNotes%3Faction=diff&amp;version=1.html#L1">
+                      v1</a>
+                  </th>
+                  <th title="Version 1">
+                    <a href="UiReviewNotes%3Fversion=1.html#L1">
+                      v1</a>
+                  </th>
+                  <td> </td>
+                </tr>
+              </thead>
+            <tbody class="add">
+                  <tr class="first">
+                          <th> </th><th>1</th><td class="r"><ins>= CKAN UI Review = </ins> </td>
+                  </tr><tr>
+                          <th> </th><th>2</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>3</th><td class="r"><ins>General points</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>4</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; * GUIDs are ugly. Can we, per default, display them truncated?</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>5</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; * "You're currently in the X section" is largely unhelpful. Try and work out what the user might *actually* be doing, and suggest possible next steps/alternative actions, without such a stilted writing style.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>6</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; * Set meaningful title attributes on navigation links.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>7</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; * Do we really need to display "About CKAN" everywhere? Doesn't it get a little tired?</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>8</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; * Perhaps an academic point, but users in general think of model objects as collections: /groups and /tags rather than /group and /tag. At the very least make the plural versions forward to the singular versions.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>9</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; * Not so keen on URLS such as /package/edit/mypackagename. These seem to be task-oriented rather than resource oriented (which would be /package/mypackagename/edit), and unstable: there is a common root for /package/edit/mypackage and /package/history/mypackage which is not reflected in the URL structure.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>10</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; * The "FAQ and Guide" is anything but.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>11</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; * There is huge inconsistency in the titles of pages across the site: to give one example "Edit Package:" vs "Package: mypkg [not linked]" vs "History - mypkg [linked to package page]"</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>12</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>13</th><td class="r"><ins>Home [/]</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>14</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; * 'Login via OpenID' -&gt; 'Login with OpenID'?</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>15</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>16</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; * Make clearer possible actions on home page. Maybe move explanatory para below {search, browse recents, add} options?</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>17</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>18</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; * Search</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>19</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; * allow clicking on 'only openly licensed'/'only downloadable' to select/deselect checkboxes: make them &lt;label&gt;s.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>20</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; * cut 'only's -- use word 'filter' instead</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>21</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; * doesn't appear to match substrings!? A search for 'anna' doesn't return match the 'annakarenina' package.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>22</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; * autocomplete package names?</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>23</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; </ins> </td>
+                  </tr><tr>
+                          <th> </th><th>24</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; * Search results page</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>25</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; * See below under "Packages:" -&gt; "Package search results page:"</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>26</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>27</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; * Recently changed</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>28</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; * What's with the blank entries?</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>29</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; * Could we make this neater? Tabulate the information, and cut down on the visual impact of less relevant data (time, @-signs, etc).</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>30</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; * "More..." what? -- make it clearer what this does.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>31</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; * /revision needs copyediting.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>32</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; </ins> </td>
+                  </tr><tr>
+                          <th> </th><th>33</th><td class="r"><ins>Packages</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>34</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; * Packages landing page [/package]</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>35</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; * Booooooring! Can we show some 'hottest'/'most recent' package lists here? Or something? Anything!</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>36</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; * Propose three-column package listing: two lists of highest-scorers on some metric and last column is an invitation to register a new package, with a little copy explaining what's involved and why you'd want to.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>37</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; * Why can I search packages from the home page but not immediately from the packages index page? It's not like there's anything else going on here... Move contents of /package/search to here. This to go above the three-col stuff suggested above.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>38</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; </ins> </td>
+                  </tr><tr>
+                          <th> </th><th>39</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; * Package search results page [/package/search?q=something]</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>40</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; * need clearer delineation between search entry form and results.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>41</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; * 0 results needs to be clearer, and the alternative suggestion: 'would you like to create a new package' needs to not look like a search result.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>42</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; * openness/downloadability ticks/crosses are totally inscrutable to non-techies (those who don't know about the title attribute). need better icons, and a key in a box on RHS.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>43</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; * maybe highlight two-tick entries with a particular colour, but the open knowledge badge is horrendous, and breaks visual cadence.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>44</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; * results data should be tabulated, with the project names and descriptions made most prominent. &lt;li&gt; blobs are unnecessary visual noise.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>45</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; * "N tags found" -- why do I care? this should be presented as "filter results by tag" -- very unlikely that I'm looking for a tag: I'm looking for a package, but tags might help me narrow down my search.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>46</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; * tags should be displayed more like the way they're displayed when you add them to a package (i.e. blue 'tag' background)</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>47</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; * maybe links should go on the full titles? package names are less important to a user scanning the list: they could have less visual impact and come after the readable title.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>48</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; * pagination is currently lost in amongst the results list. needs to be *much* more obvious, and should appear top and bottom, or at the very least at the bottom!</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>49</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; * copywriting: "Packages - Search" -&gt; "Find a package"</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>50</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>51</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; * "Browse packages" [/package/list]</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>52</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; * Same comments as package search listing in general.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>53</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; * Should have filter by name (à la KForge alphanum widget) and also by tag: list of most common tags in box on RHS?</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>54</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; </ins> </td>
+                  </tr><tr>
+                          <th> </th><th>55</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; * Package page [/package/mypackagename]</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>56</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; * In general: a huge amount of visual and typographic noise: "Package:" is redundant.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>57</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; * "{edit}", "{history}" -- ugly, and it's not clear that these are primary actions on this page. Notably, why on earth is "make an enquiry with Is It Open?" bigger than these?</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>58</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; * Openness/downloadability icons: need help, as discussed earlier</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>59</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; * "Rating:" redundant, as is the second set of stars -- why can't both the display and rate widget</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>60</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; * "Metadata:" technospeak, probably redundant.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>61</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; * &lt;li&gt; bullets add nothing.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>62</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; * Title, Version, URL can probably go in one line.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>63</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; * Resources can be made more prominent.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>64</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; * Author, author email and Maintainer, maintainer email can be merged.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>65</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; * Groups, tags in little boxes?</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>66</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; * Notes made more delineated -- Markdown has the capacity to look like other parts of the page: perhaps monospace the typeface?</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>67</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; * Don't show extras unless there are any.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>68</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; </ins> </td>
+                  </tr><tr>
+                          <th> </th><th>69</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; * Package edit page [/package/edit/mypackagename]</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>70</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; * Fields could be grouped.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>71</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; * Inconsistent capitalisation (Url -&gt; URL).</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>72</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; * Tag editor appears to break occasionally.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>73</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; * Perhaps move to two column forms to save vertical space?</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>74</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; * Notes field to monospace?</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>75</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; * Extras fields need some jQuery love -- shouldn't have a fixed number available.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>76</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; * Typography is a bit of a mess.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>77</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; </ins> </td>
+                  </tr><tr>
+                          <th> </th><th>78</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; * Package history page [/package/history/mypackagename]</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>79</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; * "Revisions" is redundant</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>80</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; * "Compare" button is in a ridiculous place. It should be above/below (both) the table, but not *in* it!</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>81</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; * Ditto to overall "Recent Changes" page comments w.r.t. timestamps, GUIDs, and (if poss) author links.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>82</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>83</th><td class="r"><ins>Tags</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>84</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; * Tags landing page [/tag]</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>85</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; * Currently this page serves *no* purpose other than to get in the way. Why can't I *both* search for tags *and* browse the list of tags right here? (In fact they're the same operation as far as a user is concerned).</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>86</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; * Big cloud of tags (sorted by popularity/usage?) filterable with a search box.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>87</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; </ins> </td>
+                  </tr><tr>
+                          <th> </th><th>88</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; * Tags search page [/tag/search] and list [/tag/list] are both redundant and should be merged straight into [/tag].</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>89</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>90</th><td class="r"><ins>Groups</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>91</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; * Groups landing page [/group]</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>92</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; * Yeesh! What's up with the typography for "Just login..."?</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>93</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; * Propose another three column thing with (say) largest/most active groups and a "create your own group" column, with (again) a little copy explaining how/why you'd do this, and also that you'll need to log in before you can. Cut the scary italics.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>94</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; * Another case of &lt;li&gt; bullets adding nothing.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>95</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; </ins> </td>
+                  </tr><tr>
+                          <th> </th><th>96</th><td class="r"><ins>Repository History [/revision]</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>97</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; * What is this page called? "Recent Changes", "Repository History", "/revision": standardise. Between the link in the nav and the page &lt;title&gt; particularly, but the route is also important. Perhaps /changes or something similar?</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>98</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; * Pagination has similar issues to elsewhere. Also, most obvious here, is the fact that we don't need to display a link to every possible page. Please can we limit it to, say, a dozen nearby pages and an ellipsis.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>99</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; * Without looking at dates, its not clear whether I'm seeing most recent or oldest changes. Change pagination to say "Older"/"More recent" rather than "Previous"/"Next".</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>100</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; * Table layout is pretty ugly (yes, I'm aware this is my fault).</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>101</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; * Timestamps are horribly unreadable. At the absolute minimum get rid of the micros.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>102</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; * Can we link to an author page?</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>103</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; * Atom feed should have a feed icon!</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>104</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; * Why are we adding another &lt;link rel="alternate"&gt; to this page? We already have one for recent changes on every page in the site and the one we're adding has a less descriptive title. Which is correct? Use that one as a feed for every page.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>105</th><td class="r"><ins></ins> </td>
+                  </tr><tr class="last">
+                          <th> </th><th>106</th><td class="r"><ins></ins> </td>
+                  </tr>
+            </tbody>
+        </table>
+      </li>
+  </ul>
+</div>
+      </div>
+  </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

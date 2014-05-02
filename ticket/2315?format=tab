@@ -1,0 +1,15 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2315	Change Cookie expiry	dread	dread	"Change login cookie from a default expiry of 50 years to 2 years. You can also uncheck a 'remember me' checkbox on the login form for the cookie to just last the session.
+
+Background conversation on ckan-dev:
+
+DR: I wonder if anyone objects to the expiry of the login cookie to be
+changed from 50 years to 2 years? 50 years might be appropriate for
+thedatahub.org, but for government sites it seems (to me) to be too
+lax.
+
+Toby: is this the repoze.who cookie?  If so that seems sensible to me.
+
+Rufus: Definitely agree. I would also like to see introduction of a standard
+""remember me"" checkbox (set to true by default). At the moment a login
+lasts forever (until you logout) automatically."	enhancement	closed	minor	ckan-sprint-2012-04-30	ckan	fixed			ckan	none

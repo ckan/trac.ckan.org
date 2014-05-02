@@ -1,0 +1,76 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+936,Follow / watch package extension,rgrp,johnglover,"As a (logged-in) User I want to watch (follow) a package, that is register my interest about a package. (Similar to watch/follow features in github/bitbucket/wikis).
+
+NB: this is as much (if not more) about showing what packages are interesting to people as giving info to 'watchers'.
+
+Need to finalize terminology (github uses watch for repos and follow for users while bitbucket combines both in 'followers'). '''Decision: use follow'''
+
+== Implementation ==
+
+=== Interface ===
+
+Become a follower:
+
+ * Follow button on packages (if already watching say 'unfollow')
+
+Package-related changes:
+
+ * Show number of followers on a package
+ * List followers of a package at /package/{name}/followers
+  * On a separate page
+a package
+User-related changes:
+
+ * List followed packages
+  * Either on user's page on a separate 'following' page. (NB: called 'following')
+ * Does watching involve notifications (by email)
+  * Probably not: you can already subscribe to RSS feed after all and email not that necessary (?)
+ * [Future - don't have activity stream yet] Show what packages a user has started/stopped  followed on a user's public activity stream on their user page
+
+=== Nitty-Gritty ===
+
+ * Want to do this in ajax-y manner
+ * API endpoint: /api/2/follower
+ * Store data in a new follower table
+
+==== API ====
+
+/api/2/follower
+
+{{{
+follow => PUT / POST
+{
+   user_id
+   object_type
+   object_id
+}
+}}}
+
+If this is submitted by a user with user.id != user_id => error (401)
+
+{{{
+unfollow => DELETE
+
+/api/2/follower/package/{id}
+=> list of followers
+[
+    { safe dictized user }
+]
+}}}
+
+NB: depends on access to a 'safe' dictized user object. Dictization is in nearly done, and current example of doing this by hand is in user API autocomplete method.
+
+==== Table ====
+
+Called 'follower'
+
+{{{
+user_id, table, object_id, created
+xxx, package, yyy, ...
+xxx, user, yyy, ... [future]
+}}}
+ 
+=== Random Extras ===
+
+ * What about following users as well
+",enhancement,closed,major,ckan-v1.4-sprint-6,ckan,fixed,,,ckan,none

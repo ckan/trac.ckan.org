@@ -1,0 +1,31 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2950	paster command to minify javascript and css	icmurray		"With the latest template, css and js changes in 2.0, there are a number of things that need preparation prior to a production deployment.  One of these is:
+
+ - the fanstatic_resources defined in `ckan/lib/fanstatic_resources.py` (bottom of module) should be prepared, and minified.
+
+This ticket is to:
+
+ - provide a paster command which when run will generate the minified javascript as css files.
+ - stop the auto-minification of files when CKAN starts up.
+ - remove reference to the minified files in the `.gitignore` file.
+ - add instruction to the release process to run this command, and check-in the minified files to the repo.
+
+## Background
+
+Currently, minification works seamlessly without the need for any preparation when CKAN is started in a development setup.  But on a production site, the webserver will (almost certainly) not have write-access to the directories that will contain the minified files.  And so the minification will fail, and the site will end up serving the un-minified media, or even *old* minified media.
+
+One way around this would be to allow webserver write access to the directory its serving out of.  But this is not generally considered good practice.
+
+Another method would be to distribute the minified files with CKAN.  This ticket describes how to do this without causing a lot of noise in the commit history of the repo.
+
+The auto-minifcation occurs when importing `ckan/lib/fanstatic_resources.py`.
+
+## Changing the process slightly
+
+The reason for moving away from auto-minifying files at start-up, to minifying files when running a paster command is:
+
+ - we should be distributing the minified files when we make a release (as we do with translation files).  This makes it easier to install CKAN from source.
+
+ - if we distribute the minified files, then they need to be checked-in to the repo.
+
+ - if they are auto-minified, whenever small changes are made, then this will create a lot of noise in the repo.  It will be clearer to have the minified-files generated manually as part of the release process. (Or whever we make a deployment internally)."	requirement	new	major	ckan 2.0	ckan		frontend paster javascript fanstatic		ckan	none

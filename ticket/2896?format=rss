@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2896: resource_create crashes on ValidationErrors with KeyError: 'resources'</title>
+    <link>http://localhost/ticket/2896</link>
+    <description>&lt;p&gt;
+ckan/logic/action/create.py:resource_create():
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+try:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+pkg_dict = _get_action('package_update')(context, pkg_dict)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+except &lt;a class="missing wiki"&gt;ValidationError?&lt;/a&gt;, e:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+errors = e.error_dict&lt;a class="missing wiki"&gt;resources?&lt;/a&gt;[-1]
+raise &lt;a class="missing wiki"&gt;ValidationError?&lt;/a&gt;(errors)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+This assumes that package_update always returns an error dict with 'resources' in it. This assumption doesn't hold.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2896</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+ </channel>
+</rss>

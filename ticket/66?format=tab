@@ -1,0 +1,13 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+66	Improve user account UI	rgrp	rgrp	"1. Link at top should say ""Your Account"" when you are logged in
+  * when not logged in should say: ""Log in via openid""
+  * Open Id info on /account/ should move to /account/login/ or be deleted
+  * Going to /account/ when not logged in should redirect to /account/login/
+
+2. When logged in the basic account index page should not give generic information but should reflect fact you are logged in by:
+
+  * Saying something like: ""You are logged in as: ...""
+  * Showing your apikey or a link to apikey
+  * Giving you a logout link
+
+We can think of a bunch of other stuff that could go on their (recent edits, packages you own etc) but these will be separate tickets."	enhancement	closed	major	v0.10	ckan	fixed				

@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1289: Remove 'relationships'</title>
+    <link>http://localhost/ticket/1289</link>
+    <description>&lt;h2 id="Abstract"&gt;Abstract&lt;/h2&gt;
+&lt;p&gt;
+Package Relationships have not taken off in the 18 months we've had them in the API. There are some issues with them and we need to spend more time improving them or consider getting rid of them.
+&lt;/p&gt;
+&lt;h2 id="TheProblem"&gt;The Problem&lt;/h2&gt;
+&lt;p&gt;
+Original use cases are expressed here: &lt;a class="assigned ticket" href="http://localhost/ticket/253" title="enhancement: Package relationships (assigned)"&gt;#253&lt;/a&gt; Here are comments about how we could handle these specific examples better:
+&lt;/p&gt;
+&lt;ol&gt;&lt;li&gt;groups of packages - maybe better with a custom tag?
+&lt;/li&gt;&lt;li&gt;fragment resources - soon to be covered by 'kind' resource field &lt;a class="closed ticket" href="http://localhost/ticket/957" title="enhancement: new &amp;#34;kind &amp;#34; field added to resources (closed: wontfix)"&gt;#957&lt;/a&gt;
+&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;
+3&amp;amp;5. derived resource - better to have some sort of resource relationship perhaps?
+&lt;/p&gt;
+&lt;ol start="4"&gt;&lt;li&gt;linked resource - again better to have some sort of resource relationship perhaps?
+&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;
+Outstanding issues needing serious effort to fix:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;a class="assigned ticket" href="http://localhost/ticket/256" title="requirement: Package relationships - 3. Edit in WUI (assigned)"&gt;#256&lt;/a&gt; Editing them in Web UI (not done yet)
+&lt;/li&gt;&lt;li&gt;&lt;a class="new ticket" href="http://localhost/ticket/1288" title="defect: Package edit/creation can't include 'relationships' field (new)"&gt;#1288&lt;/a&gt; Package edit/creation can't include 'relationships' field
+&lt;/li&gt;&lt;/ul&gt;&lt;h2 id="Specification"&gt;Specification&lt;/h2&gt;
+&lt;p&gt;
+Remove relationships from model, API, tests, Web UI. Data migration to remove from db.
+&lt;/p&gt;
+&lt;h2 id="Whydoitthisway"&gt;Why do it this way&lt;/h2&gt;
+&lt;p&gt;
+Getting frustrated having problems with the code, when it's not used much. Often asked about what it's for, but rarely used. Seems an overly complicated design.
+&lt;/p&gt;
+&lt;h2 id="BackwardsCompatibility"&gt;Backwards Compatibility&lt;/h2&gt;
+&lt;p&gt;
+n/a
+&lt;/p&gt;
+&lt;h2 id="Implementationplan"&gt;Implementation plan&lt;/h2&gt;
+&lt;h3 id="Deliverables"&gt;Deliverables&lt;/h3&gt;
+&lt;p&gt;
+See Specification
+&lt;/p&gt;
+&lt;h3 id="Risksandmitigations"&gt;Risks and mitigations&lt;/h3&gt;
+&lt;p&gt;
+Risk: a customer suddenly wants this, and the new ways to relate resources are not in place yet.
+&lt;/p&gt;
+&lt;p&gt;
+Mitigation: discuss this decision thoroughly to make sure we are confident the use cases are not important. Discuss with team, ckan-discuss and specifically the LOD people who have some related packages on thedatahub.org.
+&lt;/p&gt;
+&lt;h3 id="Participants"&gt;Participants&lt;/h3&gt;
+&lt;p&gt;
+David Read
+&lt;/p&gt;
+&lt;h3 id="Progress"&gt;Progress&lt;/h3&gt;
+&lt;p&gt;
+Not yet.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1289</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Thu, 29 Sep 2011 16:53:31 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/1289#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1289#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;wontfix&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Discussions have not resolved this either way. Decided to leave it like it is for now.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

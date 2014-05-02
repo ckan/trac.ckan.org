@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2820: English Language: Visualization -&gt; Visualisation</title>
+    <link>http://localhost/ticket/2820</link>
+    <description>&lt;p&gt;
+Problem: In the English version (which has a UK flag, indicating British English), the word "Visualization" is used. For an example see the "Filter by type" drop down on the /apps page.
+Expected: This should be "Visualisation" in British English. Any instances of "Visualize" should be changed to "Visualise" too.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2820</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+ </channel>
+</rss>

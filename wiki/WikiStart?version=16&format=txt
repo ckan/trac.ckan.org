@@ -1,0 +1,40 @@
+= Welcome to Comprehensive Knowledge Archive Network (CKAN)  Development Project Wiki =
+
+== CKAN Service, CKAN API ==
+
+The [http://www.ckan.net/ CKAN service] is here:
+
+http://www.ckan.net/
+
+The CKAN service also provides a [http://www.ckan.net/api/rest RESTful interface] for machine clients.
+
+http://www.ckan.net/api/rest
+
+CKAN is an [http://www.okfn.org/ Open Knowledge Foundation] project.
+
+----
+
+== Development Project Home Page ==
+
+Code is in a mercurial repository here: http://knowledgeforge.net/ckan/hg
+
+This Trac service is being used to track CKAN project developments.
+
+== The Design Vision ==
+
+[[Image(ckan-vision.png)]]
+
+== Purpose ==
+
+For those from the open source community it can most simply be put as:
+
+'''Freshmeat for knowledge'''
+
+More detailed:
+
+'''To provide a comprehesive database of open knowledge projects, tools and datasets.'''
+
+== Design pages ==
+
+PackageResources
+DataPkgUseCases

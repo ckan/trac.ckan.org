@@ -1,0 +1,15 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2306,Updates to metadata model,johnglover,johnglover,"Finalised metadata model requires several changes to our existing model:
+
+ * new extra: alternative title
+ * new extra: identifier
+ * new extra: interop level
+ * new extra: version description
+ * new extra: dataset status
+ * dataset type: change to fixed vocab
+ * resource types: prefix with documentation/distribution/etc for clarity, add new resource types
+ * rename update frequency to accrual periodicity
+ * add new fixed vocab field: language coverage
+ * resources: missing issued date - add as new core field called 'created'
+
+Also add functional tests for full metadata model.",enhancement,closed,major,ckan-sprint-2012-04-30,ecportal,fixed,[3d],,ckan,none

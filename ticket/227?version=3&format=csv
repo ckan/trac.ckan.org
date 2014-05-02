@@ -1,0 +1,5 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+227,UI Review - General checks,dread,nickstenning," * There is huge inconsistency in the titles of pages across the site: to give one example ""Edit Package:"" vs ""Package: mypkg [not linked]"" vs ""History - mypkg [linked to package page]""
+   * Normalize and use terminology: ""Data Package"" - also change in navbar (but nowhere else for the time being). So hvae Data Package - mypkg, Data Package - mypkg - Edit etc
+ * pagination is currently lost in amongst the results list. needs to be *much* more obvious, and should appear top and bottom, or at the very least at the bottom!
+",enhancement,new,major,v1.1,ckan,,,,,

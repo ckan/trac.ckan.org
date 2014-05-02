@@ -1,0 +1,9 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1140,Adding the package to the group is not search indexed,dread,dread,"To reproduce:
+
+1. {{{paster db init}}}
+2. {{{paster create-test-data}}}
+3. In Web UI: create new group 'tilo', which includes package 'annakarenina'
+4. {{{curl http://localhost:5000/api/search/package?groups=tilo}}}  results in 0 results (WRONG)
+5. {{{paster search-index rebuild}}}
+6. {{{curl http://localhost:5000/api/search/package?groups=tilo}}}  results in 1 result",defect,new,major,ckan-v1.5-sprint-1,ckan,,,,ckan,none

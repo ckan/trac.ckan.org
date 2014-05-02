@@ -1,0 +1,8 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1327,[super] Dataset Archiving,rgrp,,"Split out of #852. Automated archiving of datasets (related to QA).
+
+''' Automated archiving using worker process '''
+
+ * #890 - Timed actions in ckanext-queue
+ * #891 - Resource download worker daemon
+ * #892 - Make stored data available in WUI",enhancement,closed,awaiting triage,ckan-v1.6,ckan,duplicate,,,ckan,none

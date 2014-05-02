@@ -1,0 +1,8 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1608	Merge storage into Core	ross	ross	"As part of [#1574 Storage Changes] and http://ckan.okfnpad.org/newstorage it was decided to merge ckanext-storage back into core.
+
+Other changes:
+
+ * Remove /storage/upload page (we have frontend integration elsewhere now and we should also ensure that upload items relate to a resource or other domain object).
+ * Provide a local path as well as remote path for form upload requests in API so that frontend can see url to CKAN path rather than cloud storage path ...
+"	enhancement	reopened	awaiting triage	current-ckan-sprint-2012-01-23	ckan		storage 5d	kindly	ckan	none

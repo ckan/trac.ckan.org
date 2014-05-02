@@ -1,0 +1,2 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+3008,Add tests for dashboard activity stream auth,seanh,,"We need to test that only logged in users can see their own dashboard activity streams, and they can only see their own dashboard activity streams not those of other users.",enhancement,closed,awaiting triage,ckan 2.0,ckan,fixed,activity_streams,,ckan,none

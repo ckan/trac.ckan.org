@@ -1,0 +1,8 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1486	"""allow_partial_update"" option does not work with resource lists of packages"	seanh	seanh	"1. Call ckan.logic.action.update:package_update()
+2. Pass in a context dict with ""allow_partial_update"":True
+3. Pass in a partial data dict containing only the package's ID and those fields that you want to update (e.g. title).
+
+=> All of the package's resource will have their statuses changed to ""deleted"".
+
+The ""allow_partial_update"" option should apply to the resource lists of packages, but it does not."	defect	closed	minor		ckan	fixed			ckan	none

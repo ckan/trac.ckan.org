@@ -1,0 +1,9 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+735,Investigate 'deduping' (ONS import),dread,dread,"ww 22/9/10:
+
+(discussion of ticket:509) This leads us to deduping which
+should be the next order of business oin this thread...
+
+ww 20/10/10:
+
+if a dataset is missing a department and the ons script makes a new version of it with a department we now have two reccords for the same dataset. these should be manually merged - need a merge tool where you can tell it that two datasets are the same.",task,closed,awaiting triage,,ckan,fixed,,,,

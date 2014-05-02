@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2571,implement logic.action.create.resource_create(),toby,kindly,"This function is incomplete
+
+If you want I can do this but I need guidance over how to do this properly. ie would I go through lib.dictization.model_save.package_resource_list_save() which looks wrong to me as I'd need the package.  resource_dict_save() seems better but to be honest the total lack of docstrings etc makes me feel ill.",enhancement,closed,blocker,demo phase 1,ckan,fixed,demo-theme,,ckan,none

@@ -1,0 +1,9 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1238,Viewing a package @date misses non-PackageRevisions,dread,kindly,"There's a problem with getting old versions of packages using @date. The query looks for the PackageRevision related to the date, but ignores TagRevisions etc.
+
+So for example if you compare this table:
+http://ckan.net/package/history/osm
+with this view:
+http://ckan.net/package/osm%402010-11-30%2000%3A21%3A49.627830
+you actually see the 2010-01-13 11:13 revision - the wrong revision.
+",defect,closed,major,ckan-sprint-2011-10-28,ckan,invalid,,,ckan,none

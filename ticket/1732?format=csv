@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1732,Update CKAN's search for taxonomies,seanh,johnglover,"Initially we'll just add all tags from all vocabularies into the existing tags search facet (this should happen automatically). Later we want to enable templates to use separate search facets for different vocabularies.
+
+Also need to make sure that search terms are matched against the texts of the tag names themselves (should happen already) and maybe also against the texts of the vocabulary names?",enhancement,closed,awaiting triage,ckan-v1.8,ckan,fixed,taxonomies,,ckan,none

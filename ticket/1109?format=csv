@@ -1,0 +1,6 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1109,When extras has a value other than a string an integrity error occurs in the api.,kindly,kindly,"This is a regression that happened after refactoring the api.
+
+It was shown by 
+
+http://pastebin.com/2v7QasZy",defect,closed,awaiting triage,,ckan,fixed,,,ckan,none

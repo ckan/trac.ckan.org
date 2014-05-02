@@ -1,0 +1,31 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1515	[super] Activity Streams	seanh	seanh	"We want to add github-like ""activity streams"" (chronological lists of events) to CKAN.
+
+Branch for this feature: https://github.com/seanh/ckan/compare/master...feature-1515-activity-streams
+
+Etherpad: http://ckan.okfnpad.org/notifications (most relevant parts inlined here)
+
+== Tasks ==
+
+1. New domain objects Activity and ActivityStream [2d] #1298
+
+2. Migrate existing data into activity streams model [3.5d] #1510 
+
+3. Generate activity events when objects are saved [4d] #1298
+   (Further tickets are needed for generating activity events from objects other than packages and resources, e.g. users.)
+
+4. Get the activity stream for a given user as a list of Python objects. [1d] #1511
+
+4a. Get activity streams for packages, groups, tags, sets of multiple sources that users subscribe to, etc.
+
+5. Render a user's activity stream on her user page [3d] #1494 #1496
+
+5a. Render activity streams for packages, groups, tags, sets of multiple sources that users subscribe to, etc.
+
+5b. Render activity streams as RSS feeds, as JSON via an API call, etc. #1495
+
+6. Enable users to subscribe to activity streams
+
+7. Deploy to UAT [0.5d]
+
+8. Docs and announce [1d]"	enhancement	new	awaiting triage		ckan				ckan	none

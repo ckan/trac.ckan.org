@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+536,Extend base importer merging in resources,dread,dread,"Multiple ONS records can go into one package e.g. Stats for Jan, Stats for Feb, Stats for Mar etc.
+
+We already identify an existing package by 'external_id'. Now need to find package by title and an extra field (department in ONS case) and allow it to merge in resource and tags. Alert if rest of meta data is different.",task,closed,,ckan-v1.2,,fixed,,,,

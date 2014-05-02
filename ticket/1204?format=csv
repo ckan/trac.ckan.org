@@ -1,0 +1,6 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1204,renaming packages seems to result in a server error,timmcnamara,,"When renaming a package, and doing other changes at the same time an error is reported. However, the changes seem to go through fine.
+
+ENV:
+
+ - datacatalogs.org as of 29 June 2011",enhancement,closed,awaiting triage,,ckan,invalid,,,ckan,none

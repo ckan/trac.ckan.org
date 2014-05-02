@@ -1,0 +1,2 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1548,Simplfy inheritance in functional tests,dread,dread,"It's hard to understand what's going on with the functional tests because there is so much going on in inherited classes. Would be better to be explicit in constructors, even if it involves cut & paste.",enhancement,closed,minor,ckan-sprint-2011-12-19,ckan,fixed,,,ckan,none

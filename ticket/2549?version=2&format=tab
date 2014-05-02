@@ -1,0 +1,43 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2549	Merge organization logic into groups	ross	ross	"
+== Requirements ==
+
+Merge the organizations plugin into the core groups functionality. Most of this is templating and a small number of changes to the group controller.
+
+Investigate the possibility of removing the Membership model and using FKs.
+
+== Interface ==
+
+This is likely to consist of:
+
+ * Updating the templates in templates/group/
+
+ * Configuring whether we want to constrain datasets to a single group (as per organizations)
+
+ * Implementing the separate user management (add users to group).
+
+ * Checking the publisher auth to not necessarily rely on group type = 'organization'
+
+ * Making sure that the changes still work with publisher auth.
+
+
+== User Stories ==
+
+None
+
+== Tasks ==
+
+
+[ ] Code
+ 
+    [ ] Configuration
+  
+    [ ] Model/Migration
+  
+    [ ] Fix templates
+
+[ ] Documentation
+
+
+== Estimates ==
+"	enhancement	accepted	awaiting triage	current-ckan-sprint-2012-06-25	ckan				ckan	none

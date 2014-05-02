@@ -1,0 +1,2 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1749	Allow creating activity details through API	seanh		Currently the activity_create() logic action function only lets you create top-level activity stream items, and not their related activity details. It should handle activity details via nested dicts.	enhancement	assigned	awaiting triage	ckan-future	ckan		activity_streams		ckan	none

@@ -1,0 +1,14 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2619	Omit private datasets from public activity streams	seanh	seanh	"Activities about private datasets should not appear in public activity streams.
+
+I don't think you want to actually purge the activities from the db, because you might still want them to appear in private activity streams.
+
+I do think that when a dataset goes private all its past activity should go private, because I imagine that users are going to want to hide everything about the dataset and not have any past activities 'leaking out'
+
+I don't think you want to consider whether the dataset was private when the activity happened, rather if a dataset is private now then all its past activities are private (and the simplest thing would be to say that if a dataset is public now then all its past activities become public as well, but is that a privacy concern?)
+
+The easiest way to implement this is going to be by modifying the *_activity_list() action functions in get.py, after they pull their activity lists out of the db they should pass them through a function that filters out stuff about private datasets.
+
+An activity about a private dataset is one whose object_type is 'dataset' and whose object_id matches the id of a private dataset. You should also check the object_type and object_id of all of the activity object's activity detail objects, if any of those match a private dataset then mark the whole activity as private.
+
+Currently all activity streams are public so should have all private datasets filtered out from them, except for the dashboard activity stream which is private to the individual user. In this case private datasets that the user has permission to see should not be filtered."	enhancement	assigned	awaiting triage	ckan-v1.9	ckan		activity_streams organizations		ckan	none

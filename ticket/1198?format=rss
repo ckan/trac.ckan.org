@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1198: Publisher hierarchy</title>
+    <link>http://localhost/ticket/1198</link>
+    <description>&lt;p&gt;
+'Publisher' entities in the model. They are hierarchical.
+&lt;/p&gt;
+&lt;p&gt;
+'User-Publisher' connections with one or more roles (e.g. drafter, moderator).
+&lt;/p&gt;
+&lt;p&gt;
+Authorization settings can control who can set what values in a 'published by' type field.
+&lt;/p&gt;
+&lt;p&gt;
+Publishers and User-Publishers available to read in the API.
+&lt;/p&gt;
+&lt;p&gt;
+Future tickets will provide:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;API to write Publishers and User-Publishers
+&lt;/li&gt;&lt;li&gt;UI to edit Publishers and User-Publishers
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+(This feature deprecates authorization groups)
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1198</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>pudo</dc:creator>
+
+      <pubDate>Thu, 23 Jun 2011 09:31:29 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1198#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1198#comment:1</guid>
+      <description>
+        &lt;p&gt;
+This ticket is essential I think. I would propose we should be a bit more radical here, though:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Introduce an "Agent" SQLAlchemy object and derive both publishers and users via single table inheritance.
+&lt;/li&gt;&lt;li&gt;Make agent the central object of authorization, e.g. by introducing c.agencies including the user account, visitor, logged_in, etc.
+&lt;/li&gt;&lt;li&gt;Abolish &lt;a class="missing wiki"&gt;AuthorizationGroups?&lt;/a&gt; in favor of publishers. Yes, they are different but the use case for what &lt;a class="missing wiki"&gt;AuthzGroups?&lt;/a&gt; do and Publishers don't is just nerdery.
+&lt;/li&gt;&lt;li&gt;Restructure URLs to be /&amp;lt;agent&amp;gt;/&amp;lt;package_name&amp;gt; rather than /package/&amp;lt;package_name&amp;gt; and have /&amp;lt;agent&amp;gt; be a useful list of managed resources rather than a revision list (users current home page).
+&lt;/li&gt;&lt;li&gt;Make Agents a primary facet for all kinds of navigation.
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+Of course this would be done incrementally but I think we should agree on some such scheme as a marching direction.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Thu, 23 Jun 2011 10:27:50 GMT</pubDate>
+      <title>cc set</title>
+      <link>http://localhost/ticket/1198#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/1198#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;cc&lt;/strong&gt;
+              &lt;em&gt;kindly&lt;/em&gt;, &lt;em&gt;pudo&lt;/em&gt; added
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+I think it is a good idea to allow both users and publishers to be the object of authorization. The user_object_role table and all logic surrounding it would be simpler.
+&lt;/p&gt;
+&lt;p&gt;
+I deliberately didn't suggest any detail on the authz front because I know other related changes are afoot so it would be useful for David Raznick to contribute here.
+&lt;/p&gt;
+&lt;p&gt;
+I really like the url ideas - more like github. /&amp;lt;agent&amp;gt; having a list of packages and a search box, plus a link to the latest revisions would be great. /package/&amp;lt;package_name&amp;gt; would usefully redirect to /&amp;lt;agent&amp;gt;/&amp;lt;package_name&amp;gt;. I do think this should be split off into a separate ticket though. What do you think?
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>seanh</dc:creator>
+
+      <pubDate>Fri, 15 Jun 2012 15:30:00 GMT</pubDate>
+      <title>milestone set</title>
+      <link>http://localhost/ticket/1198#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/1198#comment:3</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                set to &lt;em&gt;ckan-backlog&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

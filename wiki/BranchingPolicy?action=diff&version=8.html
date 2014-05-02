@@ -1,0 +1,398 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+    <html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      BranchingPolicy (diff) – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="help" href="TracGuide.html" />
+        <link rel="up" href="BranchingPolicy%3Faction=history.html" title="Page history" />
+        <link rel="next" href="BranchingPolicy%3Faction=diff&amp;version=9.html" title="Version 9" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/wiki.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/diff.css" type="text/css" />
+        <link rel="prev" href="BranchingPolicy%3Faction=diff&amp;version=7.html" title="Version 7" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/diff.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="../chrome/common/css/diff.css" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last active"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="BranchingPolicy%3Faction=diff&amp;version=7.html" title="Version 7">Previous Change</a></span></li><li><a href="BranchingPolicy%3Faction=history.html" title="Page history">Wiki History</a></li><li class="last"><span><a class="next" href="BranchingPolicy%3Faction=diff&amp;version=9.html" title="Version 9">Next Change</a> &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="wiki">
+      <h1>
+        Changes between
+          <a href="BranchingPolicy%3Fversion=7.html">Version 7</a> and
+          <a href="BranchingPolicy%3Fversion=8.html">Version 8</a> of
+          <a href="BranchingPolicy%3Fversion=8.html">BranchingPolicy</a>
+      </h1>
+      <form method="post" id="prefs" action="BranchingPolicy%3Fversion=8.html"><div><input type="hidden" name="__FORM_TOKEN" value="93d81ccf9a7bb1c456462f62" /></div>
+        <div>
+          <input type="hidden" name="action" value="diff" />
+          <input type="hidden" name="version" value="8" />
+          <input type="hidden" name="old_version" value="7" />
+          
+  <label for="style">View differences</label>
+  <select id="style" name="style">
+    <option selected="selected" value="inline">inline</option>
+    <option value="sidebyside">side by side</option>
+  </select>
+  <div class="field">
+    <label><input type="radio" name="contextall" value="0" checked="checked" />
+             Show</label>
+      <label><input type="text" name="contextlines" id="contextlines" size="2" maxlength="3" value="2" />
+             lines around each change</label><br />
+    <label><input type="radio" name="contextall" value="1" />
+           Show the changes in full context</label>
+  </div>
+  <fieldset id="ignore">
+    <legend>Ignore:</legend>
+    <div class="field">
+      <input type="checkbox" id="ignoreblanklines" name="ignoreblanklines" />
+      <label for="ignoreblanklines">Blank lines</label>
+    </div>
+    <div class="field">
+      <input type="checkbox" id="ignorecase" name="ignorecase" />
+      <label for="ignorecase">Case changes</label>
+    </div>
+    <div class="field">
+      <input type="checkbox" id="ignorewhitespace" name="ignorewhitespace" />
+      <label for="ignorewhitespace">White space changes</label>
+    </div>
+  </fieldset>
+  <div class="buttons">
+    <input type="submit" name="update" value="Update" />
+  </div>
+
+        </div>
+      </form>
+      <dl id="overview">
+        <dt class="property time">Timestamp:</dt>
+        <dd class="time">
+            02/10/11 12:05:28 (<a class="timeline" href="../timeline%3Ffrom=2011-02-10T12:05:28Z&amp;precision=second.html" title="2011-02-10T12:05:28Z in Timeline">3 years</a> ago)
+        </dd>
+        <dt class="property author">Author:</dt>
+        <dd class="author">
+          rgrp
+        </dd>
+        <dt class="property message">Comment:</dt>
+        <dd class="message">
+          
+          <p>
+update for new policy
+</p>
+
+        </dd>
+      </dl>
+      <div class="diff">
+        <div class="legend" id="diff-legend">
+          <h3>Legend:</h3>
+          <dl>
+            <dt class="unmod"></dt><dd>Unmodified</dd>
+            <dt class="add"></dt><dd>Added</dd>
+            <dt class="rem"></dt><dd>Removed</dd>
+            <dt class="mod"></dt><dd>Modified</dd>
+          </dl>
+        </div>
+        <div class="diff">
+  <ul class="entries">
+      <li class="entry">
+        <h2 id="file0">
+          <a href="BranchingPolicy%3Fversion=8.html">BranchingPolicy</a>
+        </h2>
+        <table class="trac-diff inline" summary="Differences" cellspacing="0">
+              <colgroup><col class="lineno" /><col class="lineno" /><col class="content" /></colgroup>
+              <thead>
+                <tr>
+                  <th title="Version 7">
+                    <a href="BranchingPolicy%3Fversion=7.html#L1">
+                      v7</a>
+                  </th>
+                  <th title="Version 8">
+                    <a href="BranchingPolicy%3Fversion=8.html#L1">
+                      v8</a>
+                  </th>
+                  <td> </td>
+                </tr>
+              </thead>
+            <tbody class="unmod">
+                  <tr>
+                          <th>1</th><th>1</th><td class="l"><span>= Branching Policy =</span> </td>
+                  </tr><tr>
+                          <th>2</th><th>2</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>3</th><th> </th><td class="l"><span>CKAN is stored in a mercurial repo<del>&nbsp;and we have devised this policy to cope with coding, releasing and maintaining versions of the software</del>.</span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>3</th><td class="r"><span>CKAN is stored in a mercurial repo<ins>. This policy covers development and branching policy for this repo</ins>.</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>4</th><th>4</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>5</th><th> </th><td class="l"><span>This is based on the [http://www.python.org/dev/peps/pep-0374/#backport system used to develop Python], but instead of naming branches after their version numbers, they are named after the maturity of the release, which suits our more frequent releases. This allows `metastable` to always to be a beta, `stable` to be the latest solid release and `ultrastable` to be the previous-but-one release.</span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>5</th><td class="r"><span>= General: One Branch per Feature and Defect =</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>6</th><th>6</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>7</th><th> </th><td class="l"><span>== Branches ==</span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>7</th><td class="r"><span>We will be following the process described in (1) but applied to mercurial. Key aspects:</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>8</th><th>8</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>9</th><th> </th><td class="l"><span>We have a number of maintained branches of the code to reflect their uses:</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>9</th><td class="r"><span>&nbsp;1. There will be three 'core' branches: "stable", "metastable" and "default" (in article stable=master and develop=default)</span> </td>
+                      </tr><tr>
+                        <th> </th><th>10</th><td class="r"><span>&nbsp; * stable: stable code</span> </td>
+                      </tr><tr>
+                        <th> </th><th>11</th><td class="r"><span>&nbsp; * metastable: (will soon be deprecated) for code preparing to be stable</span> </td>
+                      </tr><tr>
+                        <th> </th><th>12</th><td class="r"><span>&nbsp; * default: development HEAD</span> </td>
+                      </tr><tr>
+                        <th> </th><th>13</th><td class="r"><span>&nbsp;2. A (named) branch will be created for each feature or defect (bug). Naming convention:</span> </td>
+                      </tr><tr>
+                        <th> </th><th>14</th><td class="r"><span>&nbsp; * defect-{ticket-number}[-optional-name] e.g. defect-902-my-bad-bug</span> </td>
+                      </tr><tr>
+                        <th> </th><th>15</th><td class="r"><span>&nbsp; * feature-{ticket-number}[-optional-name] e.g. feature-903-my-amazing-feature</span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>16</th><td class="r"><span>&nbsp;3. A (named) branch will be created for each release: release-v{release-number} e.g. release-v1.3</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>10</th><th>17</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>11</th><th> </th><td class="l"><span>'''default''' branch is for future releases - New features go here. Bug fixes should always go here as well as the other branches.</span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>18</th><td class="r"><span>Feature, bug and release branches may be "closed" once appropriately merged. To summarize the work-flow:</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>12</th><th>19</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>13</th><th> </th><td class="l"><span>'''metastable''' branch is for beta releases and proper releases deployed to ckan.net and similar servers. These servers get new features first. Sometimes there are issues to be resolved with these new features. It usually lags `default`.</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>20</th><td class="r"><span>&nbsp;* No (or almost no) work should be done in default or stable directly. Work in branches.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>21</th><td class="r"><span>&nbsp;* feature branches branch off default and merge back into default</span> </td>
+                      </tr><tr>
+                        <th> </th><th>22</th><td class="r"><span>&nbsp;* defect branches branch off default *or* stable and merge back into respective branches. Fixes on stable get merged to default as appropriate.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>23</th><td class="r"><span>&nbsp; * NB: if a fix needs to go from default to stable (it happens!) then you can use mercurial's transplant (as you obviously must *not* merge from default to stable)</span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>24</th><td class="r"><span>&nbsp;* release branches branch off metastable (in future off stable)</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>14</th><th>25</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>15</th><th> </th><td class="l"><span><del>'''stable''' branch is the latest proper release. It usually lags `metastable`</del>.</span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>26</th><td class="r"><span><ins>More in article (1)</ins>.</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>16</th><th>27</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>17</th><th> </th><td class="l"><span><del>'''ultrastable''' branch is for the most stable code - proper releases, always one behind `stable`</del>.</span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>28</th><td class="r"><span><ins>We also strongly recommend that users push *by default* to their own personal repo rather than the main repo. This allows for code review by another dev before merging into the main repo and should reduce the number of "oops, I've pushed and broken the build" moments</ins>.</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>18</th><th>29</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>19</th><th> </th><td class="l"><span>== <del>Merging between the b</del>ranches ==</span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>30</th><td class="r"><span>== <ins>Closing B</ins>ranches ==</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>20</th><th>31</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>21</th><th> </th><td class="l"><span>This arrangement can be seen to be like a waterfall of changesets. `default` has the most, `metastable` is a subset of `default`, `stable` a subset of `metastable` etc. As the releases go down the waterfall, the bug-fixes go in the opposite direction:</span> </td>
+                      </tr><tr>
+                        <th>22</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>23</th><th> </th><td class="l"><span>&nbsp;* A branch may need a bug-fix, and this would need to be merged to all branches UP the waterfall. Even if the bug-fix no longer applies on `default` (because say the file in question has been completely refactored in the meantime), this isn't a bad thing, since you'll be alerted when you get a conflict during the merge.</span> </td>
+                      </tr><tr>
+                        <th>24</th><th> </th><td class="l"><span>&nbsp;* Along with the bug-fix it may be worth adding a version change (e.g. `1.2` to `1.2.1`). This would also be usefully merged with the bug-fix up the waterfall, indicating the bug is fixed in these places too.</span> </td>
+                      </tr><tr>
+                        <th>25</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>26</th><th> </th><td class="l"><span>Unless there is a big need for a bug fixes on the more stable branches, bug fixes are best done on `metastable` (and then merged just to `default`). This saves the more stable branches from the risk of bug fixes causing other bad effects.</span> </td>
+                      </tr><tr>
+                        <th>27</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>28</th><th> </th><td class="l"><span>So the rule is:</span> </td>
+                      </tr><tr>
+                        <th>29</th><th> </th><td class="l"><span>&nbsp;* Releases are merged DOWN the waterfall: `default` -&gt; `metastable` -&gt; `stable` -&gt; `ultrastable`</span> </td>
+                      </tr><tr>
+                        <th>30</th><th> </th><td class="l"><span>&nbsp;* Bug fixes should be merged UP the waterfall: `default` &lt;- `metastable` ( &lt;- `stable` &lt;- `ultrastable` )</span> </td>
+                      </tr><tr>
+                        <th>31</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>32</th><th> </th><td class="l"><span>It is good to merge all branch changes up the waterfall to the top, so that you don't forget to apply a bugfix to a higher branch. In the process&nbsp; of doing this, you close the branch heads on the way. So when you push new changesets onto a branch (aside from `default`), you should expect to be reminded to create a new head (`hg push -f`).</span> </td>
+                      </tr><tr>
+                        <th>33</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>34</th><th> </th><td class="l"><span>(We've not thought of a use case that needs this, but there is a possibility that you want to make a change to a branch, which you don't want merged up the waterfall and wouldn't cause a conflict. If this should arise you can still merge upwards, but manually revert the change before committing it. But this would be against the grain of this waterfall model and if this becomes frequent, this policy should be reconsidered.)</span> </td>
+                      </tr><tr>
+                        <th>35</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>36</th><th> </th><td class="l"><span>If you merge bug fixes the wrong way (i.e. down the waterfall), you may well end up with unstable changesets merged as well as the bugfix! If you find you have fixed a bug on a higher branch than necessary and want to have the bugfix on a lower branch, then you need to 'transplant' the changeset, rather than 'merge'.</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>32</th><td class="r"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th> </th><th>33</th><td class="r"><span>hg up -r {branch-name}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>34</th><td class="r"><span>hg ci --close-branch {branch-name}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>35</th><td class="r"><span># may now want to merge to default or you'll be left with a dangling head</span> </td>
+                      </tr><tr>
+                        <th> </th><th>36</th><td class="r"><span>hg up -r default</span> </td>
+                      </tr><tr>
+                        <th> </th><th>37</th><td class="r"><span>hg merge -r {branch-name}</span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>38</th><td class="r"><span>}}}</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>37</th><th>39</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>38</th><th>40</th><td class="l"><span>== Transplanting changesets ==</span> </td>
+                  </tr><tr>
+                          <th>39</th><th>41</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>40</th><th> </th><td class="l"><span>When you merge, you can't cherry pick changesets - you have to take all of them up to a certain one. So you have to be slightly more cunning to 'transplant' a bugfix changeset down the waterfall.</span> </td>
+                      </tr><tr>
+                        <th>41</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>42</th><th> </th><td class="l"><span>You can either use the mercurial 'transplant' extension or use `hg export` and `hg import`. </span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>42</th><td class="r"><span>When you merge, you can't cherry pick changesets - you have to take all of them up to a certain one. In these cases transplant can be useful to copy a changeset across (though mercurial will not be aware of this copy).</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>43</th><th>43</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>44</th><th>44</th><td class="l"><span>== 'tip' note ==</span> </td>
+                  </tr><tr>
+                          <th>45</th><th>45</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>46</th><th>46</th><td class="l"><span>Mercurial tags the latest commit with the tag `tip`. This means it changes on every commit and might be on ''any'' branch. So it's best not to refer to it in documentation, emails or changeset comments.</span> </td>
+                  </tr>
+            </tbody><tbody class="add">
+                  <tr class="first">
+                          <th> </th><th>47</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>48</th><td class="r"><ins>= Further references =</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>49</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>50</th><td class="r"><ins>&nbsp;1. http://nvie.com/posts/a-successful-git-branching-model/</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>51</th><td class="r"><ins>&nbsp;2. http://forceten.tidalwave.it/development/mercurial-best-practices/</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>52</th><td class="r"><ins>&nbsp;3. http://www.rabbitmq.com/mercurial.html#branchperbug</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>53</th><td class="r"><ins>&nbsp;4. http://stevelosh.com/blog/2009/08/a-guide-to-branching-in-mercurial/</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>54</th><td class="r"><ins>&nbsp;5. Original thread http://lists.okfn.org/pipermail/ckan-dev/2010-November/000034.html</ins> </td>
+                  </tr><tr class="last">
+                          <th> </th><th>55</th><td class="r"><ins></ins> </td>
+                  </tr>
+            </tbody>
+        </table>
+      </li>
+  </ul>
+</div>
+      </div>
+  </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

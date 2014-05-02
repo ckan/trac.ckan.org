@@ -1,0 +1,329 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1521: [super] Groups UI and UX improvements in v1.6 from Cygri</title>
+    <link>http://localhost/ticket/1521</link>
+    <description>&lt;p&gt;
+Add search to groups: &lt;a class="ext-link" href="http://thedatahub.org/group"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://thedatahub.org/group&lt;/a&gt;
+Way to filter by activity, number of datasets; display number of users belonging to a group
+&lt;/p&gt;
+&lt;p&gt;
+First to do: analysis &amp;amp; user stories
+&lt;/p&gt;
+&lt;h2 id="Improvedgroups"&gt;Improved groups&lt;/h2&gt;
+&lt;p&gt;
+From Richard Cyganiak.
+&lt;/p&gt;
+&lt;p&gt;
+This is a set of proposals to make the groups feature more powerful. As a result, currently separate CKAN instances such as &lt;a class="ext-link" href="http://ie.ckan.net/"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://ie.ckan.net/&lt;/a&gt; could be turned into a simple group on the &lt;a class="ext-link" href="http://thedatahub.org"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;Data Hub&lt;/a&gt; without losing their separate identity.
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Group homepages:&lt;/strong&gt; Make the group pages more attractive and welcoming as homepages. The main Data Hub homepage does a great job at this now – can the group pages be made more like that? They're quite uninformative and bland right now.
+&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Subdomains for groups:&lt;/strong&gt; Enable subdomains such as &amp;lt;code&amp;gt;ie.thedatahub.org&amp;lt;/code&amp;gt; as aliases for &amp;lt;code&amp;gt;thedatahub.org/group/ireland&amp;lt;/code&amp;gt;
+&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Search within the group:&lt;/strong&gt; Have a big search box that searches just within the group on the group page, with a look like on &lt;a class="ext-link" href="http://thedatahub.org/dataset"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://thedatahub.org/dataset&lt;/a&gt;
+&lt;/li&gt;&lt;li&gt;Have an “&lt;strong&gt;Add a dataset to this group&lt;/strong&gt;” link on the group page, perhaps in the sidebar.
+&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Navigation within the group:&lt;/strong&gt; Have some more navigation starting points on the group page, e.g., the Tags + Resource Format sidebar from &lt;a class="ext-link" href="http://thedatahub.org/dataset"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://thedatahub.org/dataset&lt;/a&gt;
+&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Group documentation:&lt;/strong&gt; Add the ability to add more “About this group” text, or pages like “FAQ” and “Extra field conventions”.
+&lt;ul&gt;&lt;li&gt;The only place where one can currently put group-specific text is before the dataset list. Putting much text there is bad as it moves the datasets below the fold.
+&lt;/li&gt;&lt;li&gt;Can the top-level sections of a group's description be automatically turned into separate pages that are linked from the sidebar? With headlines &amp;lt;code&amp;gt;About&amp;lt;/code&amp;gt;, &amp;lt;code&amp;gt;Frequently Asked Questions&amp;lt;/code&amp;gt; and &amp;lt;code&amp;gt;How to get involved&amp;lt;/code&amp;gt;, we'd then get three links in the sidebar that point to &amp;lt;code&amp;gt;datahub.org/group/ireland/about&amp;lt;/code&amp;gt;, &amp;lt;code&amp;gt;datahub.org/group/ireland/frequently-asked-questions&amp;lt;/code&amp;gt;, &amp;lt;code&amp;gt;datahub.org/group/ireland/how-to-get-involved&amp;lt;/code&amp;gt;.
+&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;&lt;a class="closed ticket" href="http://localhost/ticket/1597" title="enhancement: Tag search - filter by group (closed: fixed)"&gt;#1597&lt;/a&gt; &lt;strong&gt;Tag search, filtered by group&lt;/strong&gt;
+&lt;/li&gt;&lt;/ul&gt;</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1521</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>shevski</dc:creator>
+
+      <pubDate>Tue, 06 Dec 2011 11:19:18 GMT</pubDate>
+      <title>keywords set</title>
+      <link>http://localhost/ticket/1521#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1521#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;keywords&lt;/strong&gt;
+              &lt;em&gt;ux&lt;/em&gt; added
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>thejimmyg</dc:creator>
+
+      <pubDate>Tue, 06 Dec 2011 12:30:18 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1521#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/1521#comment:2</guid>
+      <description>
+        &lt;p&gt;
+It would be nice if the new UX also made it clearer that a user has to login, before they click the "Add a group" link which currently takes them to the login page with the message "Unauthorized to create a group".
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Wed, 21 Dec 2011 19:42:16 GMT</pubDate>
+      <title>priority, description, summary changed</title>
+      <link>http://localhost/ticket/1521#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/1521#comment:3</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;priority&lt;/strong&gt;
+                changed from &lt;em&gt;awaiting triage&lt;/em&gt; to &lt;em&gt;major&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1521?action=diff&amp;amp;version=3"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;summary&lt;/strong&gt;
+                changed from &lt;em&gt;Groups UI/UX improvements post refactor&lt;/em&gt; to &lt;em&gt;[super] Groups UI and UX improvements in v1.6 from Cygri&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Thu, 22 Dec 2011 10:42:37 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/1521#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/1521#comment:4</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1521?action=diff&amp;amp;version=4"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Thu, 22 Dec 2011 10:43:19 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/1521#comment:5</link>
+      <guid isPermaLink="false">http://localhost/ticket/1521#comment:5</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1521?action=diff&amp;amp;version=5"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Fri, 30 Dec 2011 11:32:36 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/1521#comment:6</link>
+      <guid isPermaLink="false">http://localhost/ticket/1521#comment:6</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1521?action=diff&amp;amp;version=6"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Fri, 30 Dec 2011 11:39:22 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/1521#comment:7</link>
+      <guid isPermaLink="false">http://localhost/ticket/1521#comment:7</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1521?action=diff&amp;amp;version=7"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Fri, 30 Dec 2011 11:53:57 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/1521#comment:8</link>
+      <guid isPermaLink="false">http://localhost/ticket/1521#comment:8</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1521?action=diff&amp;amp;version=8"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Mon, 02 Jan 2012 03:08:21 GMT</pubDate>
+      <title>priority changed</title>
+      <link>http://localhost/ticket/1521#comment:9</link>
+      <guid isPermaLink="false">http://localhost/ticket/1521#comment:9</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;priority&lt;/strong&gt;
+                changed from &lt;em&gt;major&lt;/em&gt; to &lt;em&gt;critical&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>zephod</dc:creator>
+
+      <pubDate>Fri, 20 Jan 2012 17:22:16 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1521#comment:10</link>
+      <guid isPermaLink="false">http://localhost/ticket/1521#comment:10</guid>
+      <description>
+        &lt;p&gt;
+This function can be deprecated, as groups will use Solr searching to list their packages.
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a class="ext-link" href="https://github.com/okfn/ckan/blob/master/ckan/logic/action/get.py#L398"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;https://github.com/okfn/ckan/blob/master/ckan/logic/action/get.py#L398&lt;/a&gt;
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>zephod</dc:creator>
+
+      <pubDate>Fri, 20 Jan 2012 18:44:19 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/1521#comment:11</link>
+      <guid isPermaLink="false">http://localhost/ticket/1521#comment:11</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1521?action=diff&amp;amp;version=11"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>zephod</dc:creator>
+
+      <pubDate>Fri, 20 Jan 2012 18:44:37 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/1521#comment:12</link>
+      <guid isPermaLink="false">http://localhost/ticket/1521#comment:12</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1521?action=diff&amp;amp;version=12"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Mon, 23 Jan 2012 11:00:35 GMT</pubDate>
+      <title>milestone changed</title>
+      <link>http://localhost/ticket/1521#comment:13</link>
+      <guid isPermaLink="false">http://localhost/ticket/1521#comment:13</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan-v1.6&lt;/em&gt; to &lt;em&gt;current-ckan-sprint-2012-01-23&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Mon, 23 Jan 2012 11:09:06 GMT</pubDate>
+      <title>status changed; owner set</title>
+      <link>http://localhost/ticket/1521#comment:14</link>
+      <guid isPermaLink="false">http://localhost/ticket/1521#comment:14</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;owner&lt;/strong&gt;
+              set to &lt;em&gt;zephod&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;assigned&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>zephod</dc:creator>
+
+      <pubDate>Tue, 24 Jan 2012 11:43:14 GMT</pubDate>
+      <title>status, description changed; resolution set</title>
+      <link>http://localhost/ticket/1521#comment:15</link>
+      <guid isPermaLink="false">http://localhost/ticket/1521#comment:15</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;assigned&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1521?action=diff&amp;amp;version=15"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Resolved in this merge:
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a class="ext-link" href="https://github.com/okfn/ckan/commit/2337424dd4ebe3b81b6da454f2305031922d3d5c"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;https://github.com/okfn/ckan/commit/2337424dd4ebe3b81b6da454f2305031922d3d5c&lt;/a&gt;
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Fri, 24 Feb 2012 11:56:39 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1521#comment:16</link>
+      <guid isPermaLink="false">http://localhost/ticket/1521#comment:16</guid>
+      <description>
+        &lt;p&gt;
+This went into CKAN 1.6
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Fri, 02 Mar 2012 08:12:10 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/1521#comment:17</link>
+      <guid isPermaLink="false">http://localhost/ticket/1521#comment:17</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1521?action=diff&amp;amp;version=17"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

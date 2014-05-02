@@ -1,0 +1,6 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+300,Resource ordering issue,dread,rgrp,"Failing test: ckan.tests.models.test_resource.TestResourceLifecycle.test_03_reorder_resources
+
+Not clear how visible this is to the user.
+
+Related to ticket:292",defect,closed,blocker,v1.0,ckan,fixed,,,,

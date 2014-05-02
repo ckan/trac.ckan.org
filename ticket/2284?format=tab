@@ -1,0 +1,9 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2284	Local queries/views/viz in Related stuff.	ross		"From #2204
+
+not sure how much we have thought through using this for storing queries / views / visualizations coming from our data viewer. In particular, wonder if this necessitates some kind of support for arbitrary json data ...
+
+### Comments
+
+In the simplest form, right now all I need to store is store the url to the resource plus hashbang config for recline. That would be super easy ...
+"	enhancement	assigned	awaiting triage	ckan-backlog	ckan				ckan	none

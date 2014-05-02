@@ -1,0 +1,8 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+90,Link to RDF versions of CKAN data provided by Talis,rgrp,rgrp,"Talis have kindly converted the CKAN metadata to RDF and uploaded to Talis Connected Commons. We should link to this. Suggested locations:
+
+  * Each package page could link to its RDF representation
+  * Search page to link to SPARQL interface
+  * License/dump page could link to full RDF dump
+
+Cost: 3h",enhancement,new,awaiting triage,v0.10,ckan,,,,,

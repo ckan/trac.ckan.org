@@ -1,0 +1,225 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      TracLinks – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="help" href="TracGuide.html" />
+        <link rel="alternate" href="TracLinks%3Fversion=1&amp;format=txt" type="text/x-trac-wiki" title="Plain Text" />
+        <link rel="up" href="TracLinks.html" title="View latest version" />
+        <link rel="next" href="TracLinks%3Fversion=2.html" title="Version 2" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/wiki.css" type="text/css" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("#content").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $("#content").find(".wikianchor").each(function() {
+          $(this).addAnchor(babel.format(_("Link to #%(id)s"), {id: $(this).attr('id')}));
+        });
+        $(".foldable").enableFolding(true, true);
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last active"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="pagepath" class="noprint">
+  <a class="pathentry first" title="View WikiStart" href="../wiki.1.html">wiki:</a><a class="pathentry" href="TracLinks.html" title="View TracLinks">TracLinks</a>
+</div>
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span class="missing">&larr; Previous Version</span></li><li><a href="TracLinks.html" title="View latest version">View Latest Version</a></li><li class="last"><span><a class="next" href="TracLinks%3Fversion=2.html" title="Version 2">Next Version</a> &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="wiki">
+        <br />
+        <table id="info" summary="Revision info">
+          <tbody>
+            <tr><th scope="row">Version 1 (modified by trac, <a class="timeline" href="../timeline%3Ffrom=2006-05-13T12:08:45Z&amp;precision=second.html" title="2006-05-13T12:08:45Z in Timeline">8 years</a> ago)
+               (<a href="TracLinks%3Faction=diff&amp;version=1.html">diff</a>)</th></tr>
+            <tr><td class="message">
+              <p>
+--
+</p>
+
+            </td></tr>
+          </tbody>
+        </table>
+      <div class="wikipage searchable">
+        
+          
+          
+          <div id="wikipage"><h1 id="TracLinks">Trac Links</h1>
+<p>
+As you might have guessed, <a class="wiki" href="TracLinks.html">TracLinks</a> are a very fundamental feature of Trac.
+</p>
+<p>
+They allow hyperlinking between Trac entities (tickets, reports, changesets, Wiki
+pages, milestones and source files) from anywhere <a class="wiki" href="WikiFormatting.html">WikiFormatting</a> is used.
+</p>
+<p>
+<a class="wiki" href="TracLinks.html">TracLinks</a> are generally of the form <strong>type:id</strong> (where <em>id</em> represents the
+number, name or path of the item) though some frequently used kinds of items
+also have short-hand notations.
+</p>
+<p>
+Some examples:
+</p>
+<ul><li>Tickets: <strong>#1</strong> or <strong>ticket:1</strong>
+</li><li>Reports: <strong>{1}</strong> or <strong>report:1</strong>
+</li><li>Changesets: <strong>r1</strong>, <strong>[1]</strong> or <strong>changeset:1</strong>
+</li><li>Revision log: <strong>r1:3</strong>, <strong>[1:3]</strong> or <strong>log:#1:3</strong>
+</li><li>Wiki pages: <strong><a class="wiki" href="CamelCase.html">CamelCase</a></strong> or <strong>wiki:CamelCase</strong>
+</li><li>Milestones: <strong>milestone:1.0</strong>
+</li><li>Attachment: <strong>attachment:ticket:944:attachment.1073.diff</strong>
+</li><li>Files: <strong>source:trunk/COPYING</strong>
+</li><li>A specific file revision: <strong>source:/trunk/COPYING#200</strong>
+</li></ul><p>
+Display:
+</p>
+<ul><li>Tickets: <a class="closed ticket" href="../ticket/1.html" title="enhancement: Visitor visits service (closed: fixed)">#1</a> or <a class="closed ticket" href="../ticket/1.html" title="enhancement: Visitor visits service (closed: fixed)">ticket:1</a>
+</li><li>Reports: <a class="report" href="../report/1.html">{1}</a> or <a class="report" href="../report/1.html">report:1</a>
+</li><li>Changesets: <a class="missing changeset" title="No default repository defined">r1</a>, <a class="missing changeset" title="No default repository defined">[1]</a> or <a class="missing changeset" title="No default repository defined">changeset:1</a>
+</li><li>Differences: <a class="missing source" title="No default repository defined">r1:3</a>, <a class="missing source" title="No default repository defined">[1:3]</a> or <a class="missing source" title="No default repository defined">log:#1:3</a>
+</li><li>Wiki pages: <a class="wiki" href="CamelCase.html">CamelCase</a> or <a class="wiki" href="CamelCase.html">wiki:CamelCase</a>
+</li><li>Milestones: <a class="missing milestone">milestone:1.0</a>
+</li><li>Files: <a class="source" href="http://localhost/browser/trunk/COPYING">source:trunk/COPYING</a>
+</li><li>Attachment: <a class="missing attachment">attachment:ticket:944:attachment.1073.diff</a>
+</li><li>A specific file revision: <a class="source" href="http://localhost/browser/trunk/COPYING#200">source:/trunk/COPYING#200</a>
+</li></ul><p>
+<strong>Note:</strong> The <a class="wiki" href="CamelCase.html">wiki:CamelCase</a> form is rarely used, but it can be convenient to refer to
+pages whose names do not follow <a class="wiki" href="WikiPageNames.html">WikiPageNames</a> rules, i.e., single words,
+non-alphabetic characters, etc.
+</p>
+<p>
+Trac links using the full (non-shorthand) notation can also be given a custom
+link title like this:
+</p>
+<pre class="wiki">[ticket:1 This is a link to ticket number one].
+</pre><p>
+Display: <a class="closed ticket" href="../ticket/1.html" title="enhancement: Visitor visits service (closed: fixed)">This is a link to ticket number one</a>.
+</p>
+<p>
+If the title is be omitted, only the id (the part after the colon) is displayed:
+</p>
+<pre class="wiki">[ticket:1]
+</pre><p>
+Display: <a class="closed ticket" href="../ticket/1.html" title="enhancement: Visitor visits service (closed: fixed)">1</a>
+</p>
+<p>
+It might seem a simple enough concept at a glance, but actually allows quite a complex network of information. In practice, it's very intuitive and simple to use, and we've found the "link trail" extremely helpful to better understand what's happening in a project or why a particular change was made.
+</p>
+<h2 id="attachement:links">attachement: links</h2>
+<p>
+The link syntax for attachments is as follows:
+</p>
+<ul><li>attachment:the_file.txt creates a link to the attachment the_file.txt of the current object
+</li><li>attachment:wiki:MyPage:the_file.txt creates a link to the attachment the_file.txt of the MyPage wiki page
+</li><li>attachment:ticket:753:the_file.txt creates a link to the attachment the_file.txt of the ticket 753 attachment:wiki:MyPage:the_file.txt
+</li></ul><h2 id="source:links">source: links</h2>
+<p>
+The default behavior for a <a class="source" href="http://localhost/browser/some/path">source:/some/path</a> link is to open the directory browser 
+if the path points to a directory and otherwise open the log view. 
+It's also possible to link directly to a specific revision of a file like this: <a class="source" href="http://localhost/browser/some/file?rev=123">source:/some/file@123</a> 
+or like this to link to the latest revision: <a class="source" href="http://localhost/browser/some/file?rev=latest">source:/some/file@latest</a>.
+If the revision is specified, one can even link to a specific line number: source:/some/file@123#L10 
+
+</p>
+<h2 id="QuotingspaceinTracLinks">Quoting space in <a class="wiki" href="TracLinks.html">TracLinks</a></h2>
+<p>
+The usual syntax for quoting space is:
+</p>
+<ul><li>attachment:'the file.txt' or
+</li><li>attachment:&#34;the file.txt&#34; 
+</li></ul><h2 id="WheretouseTracLinks">Where to use <a class="wiki" href="TracLinks.html">TracLinks</a></h2>
+<p>
+You can use <a class="wiki" href="TracLinks.html">TracLinks</a> in:
+</p>
+<ul><li>Source code (Subversion) commit messages
+</li><li>Wiki pages
+</li><li>Full descriptions for tickets, reports and milestones
+</li></ul><p>
+and any other text fields explicitly marked as supporting <a class="wiki" href="WikiFormatting.html">WikiFormatting</a>.
+</p>
+<h2 id="EscapingLinks">Escaping Links</h2>
+<p>
+To prevent parsing of a TracLink, you can escape it by preceding it with a '!' (exclamation mark).
+</p>
+<pre class="wiki"> !NoLinkHere.
+ ![42] is not a link either.
+</pre><p>
+Display:
+</p>
+<blockquote>
+<p>
+NoLinkHere.
+[42] is not a link either.
+</p>
+</blockquote>
+<hr />
+<p>
+See also: <a class="wiki" href="WikiFormatting.html">WikiFormatting</a>, <a class="wiki" href="TracWiki.html">TracWiki</a>
+ 
+</p>
+</div>
+        
+        
+      </div>
+      
+
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="last first">
+          <a rel="nofollow" href="TracLinks%3Fversion=1&amp;format=txt">Plain Text</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

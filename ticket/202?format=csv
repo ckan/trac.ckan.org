@@ -1,0 +1,16 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+202,Internationalization (i18n) try-out,dread,tonfa,"Try i18n for one language (German) for ckan (de.ckan.net).
+
+Basic approach to i18n is well-covered in Pylons book: http://pylonsbook.com/en/1.1/internationalization-and-localization.html
+
+However, we need to integrate with our Genshi templates. Details on how to do this in comment:
+http://wiki.pylonshq.com/display/pylonsdocs/Internationalization+and+Localization
+
+== Steps ==
+
+ 1. i18n templates
+   * Extract content using Babel
+   * Get genshi translation working
+   * Do the translation!
+ 2. i18n all strings in controllers (if any)
+ 3. i18n forms",enhancement,closed,critical,v0.11,ckan,fixed,,,,

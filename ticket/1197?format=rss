@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1197: Add JavaScript guide for CKAN</title>
+    <link>http://localhost/ticket/1197</link>
+    <description>&lt;p&gt;
+A new library, &lt;a class="ext-link" href="http://blog.optimizely.com/introducing-guidersjs-an-open-source-guider-e"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;guiders.js&lt;/a&gt;, has been open sourced that seems to be great at unobtrusively introducing new users to features of websites.
+&lt;/p&gt;
+&lt;p&gt;
+The library drives Optimizely's website. The GitHub repo is here: &lt;a class="ext-link" href="https://github.com/jeff-optimizely/Guiders-JS"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;https://github.com/jeff-optimizely/Guiders-JS&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+Some examples:
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a style="padding:0; border:none" href="http://posterous.com/getfile/files.posterous.com/temp-2011-06-22/BnlgHDvhjpFfqbwvprsIaklqrpdgJyebfuhxajbDhmvnFgzdzzCJdvluJFki/Screen_shot_2011-06-22_at_6.42.21_PM.png.scaled500.png"&gt;&lt;img src="http://posterous.com/getfile/files.posterous.com/temp-2011-06-22/BnlgHDvhjpFfqbwvprsIaklqrpdgJyebfuhxajbDhmvnFgzdzzCJdvluJFki/Screen_shot_2011-06-22_at_6.42.21_PM.png.scaled500.png" alt="http://posterous.com/getfile/files.posterous.com/temp-2011-06-22/BnlgHDvhjpFfqbwvprsIaklqrpdgJyebfuhxajbDhmvnFgzdzzCJdvluJFki/Screen_shot_2011-06-22_at_6.42.21_PM.png.scaled500.png" title="http://posterous.com/getfile/files.posterous.com/temp-2011-06-22/BnlgHDvhjpFfqbwvprsIaklqrpdgJyebfuhxajbDhmvnFgzdzzCJdvluJFki/Screen_shot_2011-06-22_at_6.42.21_PM.png.scaled500.png" /&gt;&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a style="padding:0; border:none" href="http://s3.amazonaws.com/files.posterous.com/temp-2011-06-22/CpvlcinkrxhtnAHfGtEHhxyGkraqlFmCjcnztFuugagBGxmBjCdwuquHpvEB/promo_gmail.png?AWSAccessKeyId=AKIAJFZAE65UYRT34AOQ&amp;amp;Expires=1308801019&amp;amp;Signature=DJWDgj7fmyq7K3ve177H7DPwKdw%3D"&gt;&lt;img src="http://s3.amazonaws.com/files.posterous.com/temp-2011-06-22/CpvlcinkrxhtnAHfGtEHhxyGkraqlFmCjcnztFuugagBGxmBjCdwuquHpvEB/promo_gmail.png?AWSAccessKeyId=AKIAJFZAE65UYRT34AOQ&amp;amp;Expires=1308801019&amp;amp;Signature=DJWDgj7fmyq7K3ve177H7DPwKdw%3D" alt="http://s3.amazonaws.com/files.posterous.com/temp-2011-06-22/CpvlcinkrxhtnAHfGtEHhxyGkraqlFmCjcnztFuugagBGxmBjCdwuquHpvEB/promo_gmail.png" title="http://s3.amazonaws.com/files.posterous.com/temp-2011-06-22/CpvlcinkrxhtnAHfGtEHhxyGkraqlFmCjcnztFuugagBGxmBjCdwuquHpvEB/promo_gmail.png" /&gt;&lt;/a&gt;
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1197</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>seanh</dc:creator>
+
+      <pubDate>Fri, 15 Jun 2012 15:30:36 GMT</pubDate>
+      <title>milestone set</title>
+      <link>http://localhost/ticket/1197#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1197#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                set to &lt;em&gt;ckan-backlog&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>toby</dc:creator>
+
+      <pubDate>Mon, 18 Jun 2012 09:04:16 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1197#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/1197#comment:2</guid>
+      <description>
+        &lt;p&gt;
+personally I'm against these for 4 reasons
+&lt;/p&gt;
+&lt;p&gt;
+a) The site should be self explanatory and if it is not this is a failure of design
+&lt;/p&gt;
+&lt;p&gt;
+b) a cookie would be needed to prevent these happening all the time - cookies are bad as they interfere with caching proxies.
+&lt;/p&gt;
+&lt;p&gt;
+c) I find stuff like this patronising/annoying for the user
+&lt;/p&gt;
+&lt;p&gt;
+d) They are a maintenance burden for ckan as we do not have a single instance
+&lt;/p&gt;
+&lt;p&gt;
+Therefore I'd suggest closing this as a won't fix - I agree this is just a personal view point and therefore am not going to actually close the ticket but just record my opinion.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>seanh</dc:creator>
+
+      <pubDate>Mon, 18 Jun 2012 11:28:23 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1197#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/1197#comment:3</guid>
+      <description>
+        &lt;p&gt;
+Hi Toby, yes I think I agree with you, it reminds me of when I install new Android apps on my phone, some of them start off by bothering me with some sort of guided tour or long instructional text, I hate this and always skip through without reading it, expecting to be able to figure out the interface for myself.
+&lt;/p&gt;
+&lt;p&gt;
+The one thing that something like this could be useful is, rather than showing someone how to use the site, showing them what the site is capable of so they can assess whether it meets their needs/is something they're interested in. However, we already have a good guided tour of this type on ckan.org/features, those pages are really pretty good.
+&lt;/p&gt;
+&lt;p&gt;
+Close this as wontfix?
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>toby</dc:creator>
+
+      <pubDate>Mon, 18 Jun 2012 11:41:15 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1197#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/1197#comment:4</guid>
+      <description>
+        &lt;p&gt;
+Thinking horrible thoughts, there was a rumour of a ckan tour, for something like that this would be useful.
+&lt;/p&gt;
+&lt;p&gt;
+Not sure where that plan is at?  if there is a ticket for it maybe link to this one and close?
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>seanh</dc:creator>
+
+      <pubDate>Mon, 18 Jun 2012 11:52:37 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/1197#comment:5</link>
+      <guid isPermaLink="false">http://localhost/ticket/1197#comment:5</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;wontfix&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+AFAIK there isn't a ticket for that, it was something originally requested as part of the demo site, but since the devs think it's a horrible idea I don't think it's going to happen, easiest way to make a CKAN tour would be a series of static pages like the one we already have on ckan.org, I think that combined with a real functioning demo site probably meets the requirement.
+&lt;/p&gt;
+&lt;p&gt;
+Anyway, closing this as wontfix
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

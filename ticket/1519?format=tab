@@ -1,0 +1,4 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1519	combine stats and analytics extensions into one in UI as well as deployment	shevski	johnglover	"Makes more sense to only have one comprehensive stats/analytics extension, so when people are looking to add a stats extension they won't have to add two which may be confusing (is one an old version of the other? why do I have to add two? what's the difference? etc)
+
+User-wise we need a way to display our stats with google analytics in the same place"	enhancement	closed	minor	ckan-sprint-2012-01-09	ckan	wontfix	ux		ckan	none

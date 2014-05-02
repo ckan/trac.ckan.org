@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1113: lists in extras serialized wrongly on get with the api.</title>
+    <link>http://localhost/ticket/1113</link>
+    <description>&lt;p&gt;
+Lists are being converted to unicode and then translated into a json when getting from the api.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1113</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>kindly</dc:creator>
+
+      <pubDate>Thu, 28 Apr 2011 19:07:29 GMT</pubDate>
+      <title>summary changed</title>
+      <link>http://localhost/ticket/1113#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1113#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;summary&lt;/strong&gt;
+                changed from &lt;em&gt;lists in extras serialized wrongly on get in extras&lt;/em&gt; to &lt;em&gt;lists in extras serialized wrongly on get with the api.&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>kindly</dc:creator>
+
+      <pubDate>Thu, 28 Apr 2011 21:03:31 GMT</pubDate>
+      <title>status, type changed; resolution set</title>
+      <link>http://localhost/ticket/1113#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/1113#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;type&lt;/strong&gt;
+                changed from &lt;em&gt;enhancement&lt;/em&gt; to &lt;em&gt;defect&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+cset: 52a3fb230074
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

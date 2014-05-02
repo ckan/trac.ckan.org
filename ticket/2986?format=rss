@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2986: Make lib/base.py more like it was originally intended</title>
+    <link>http://localhost/ticket/2986</link>
+    <description>&lt;p&gt;
+From Toby: make lib/base.py be more like it was originally intended eg defines
+stuff that is shared eg _ but maybe try to include stuff like
+render/get_action if the circular import stuff can be solved - which should
+be doable if hard and likely needs an extra file or two for the externals _
+etc
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2986</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+ </channel>
+</rss>

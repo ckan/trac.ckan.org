@@ -1,0 +1,16 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+193	Searching by time-related field	dread	rgrp	"Cost - 2 days
+
+Search interface has new options to filter and sort the results by the time-related field of the package. Search options are included in both Web UI and Search API.
+
+The filter specifies a range of dates. The results can be sorted by ascending or descending dates. The last modification date is surfaced in the package. Need to decide for a time-related field value that is date range, what date is used for the search.
+
+Example search parameters:
+
+|| reldate-range=5/4/09- || Exclude packages related to earlier than 5/4/09 ||
+|| reldate-range=5/4/09-5/12/09 || Exclude packages related to date outside of 5/4/09-5/12/09 ||
+|| order_by=reldate || Sort by date package is related to. Defaults to newest first. ||
+|| order_by=reldate-newest || Sort by date package is related to, newest first. ||
+|| order_by=reldate-oldest || Sort by date package is related to, oldest first. ||
+
+Related to ticket:192"	enhancement	closed	awaiting triage		ckan	wontfix			ckan	none

@@ -1,0 +1,8 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1544	delete old git branches	dread		"We have 150 odd branches ({{{git branch -a}}}) - most of them old - we should prune them. At very least, branches that have been merged in should be deleted. Look at old branches that haven't been merged in and wonder why.
+
+May be of some use:
+{{{
+git branch --merged
+git branch --no-merged
+}}}"	task	new	minor	ckan-backlog	ckan				ckan	none

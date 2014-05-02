@@ -1,0 +1,20 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+474	Questions related to fi.ckan.net	dread	dread	"Several questions to answer (and see file in email). To respond to the Finnish team and copy all Q&A to the ckan-discuss list.
+
+1 ) I have played with two different datasets to get the metadata from those imported to CKAN. The other dataset is in PCAXIS format and other one is in Excel format. Please find the scripts + sample files attached in a zip file that contains instructions too to run the scripts. I looked at import scripts written in object oriented manner and getdata samples in CKAN but it was easier for me too write these from scratch (copied the unicrap function from CKAN samples). If I run the PCAXIS import script I get Unicode decode error (see errors file). When I use the unicrap function then the error does not appear in logs. I assume this is some Python environment setting issue. Of course I would like to run the 
+script without unicrap function to get scandic letter imported correctly to ckan(and displayed in WUI). In Excel case there is no scandic letter issue which is kind of strange but this probably relates how the Excel library handles encoding.
+
+To be honest the whole unicode/encoding/decoding issue has been quite difficult to deal with and debug. I hope I would get proper environment configuration to handle scandic letters.
+
+
+2 ) It seem in CKAN by default the localisation file contains 462 strings. The transifex link Rufus sent contains 400 strings. Is transifex the one we should use as localisation file ? Where are the rest 62 strings then fetched from or are they needed at all. I have found that as I have been using the .po file coming in CKAN source (which has API translations too) this also causes similar unicode problems when an error in API occurs (the API error messages containing scandic letters provide the similar UnicodeDecoding errors as mentioned above). So, it seems the unicode issues appear in various cases. Maybe a proper environment settings will be able to prevent also these problems... If transifex is the one to use I can prepare it and maybe then you could upload it to fi.ckan.net as there will be also other people checking the translations. To run the test and see the API translation errors especially in pcaxis case I would recommend to install attached FI translations to your environment and include lang = fi configuration. It looks like the API errors does not come when running default lang = en. 
+
+
+3 ) Is it possible to change the license selection/options available in license field drop-down ? Where are these located and can these be modified locally ?
+
+4) It looks like the values stored in package extra fields are not searchable. Is this intentional ? It looks more or less that all other fields can be searched using free-text search in CKAN. 
+
+5) How package dependencies are defined and managed ? For instance we want to import some packages in a manner that the other package is a child package of another. Does API support this and/or is this possible to do in WUI ?
+
+Best Regards,
+Henri"	task	closed	awaiting triage		ckan	wontfix				

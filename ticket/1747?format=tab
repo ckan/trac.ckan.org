@@ -1,0 +1,2 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1747	Expire old activities	seanh		Currently the activity streams database tables just get longer and longer over time. Do we want to eventually delete the oldest activities, to keep the length of the table within limits?	enhancement	new	awaiting triage	ckan-backlog	ckan		activity_streams		ckan	none

@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+51,Upgrade CKAN to use sqlalchemy and vdm v0.2,rgrp,rgrp,"Move CKAN codebase to use sqlalchemy (rather than sqlobject) along with vdm v0.2.
+
+NB: the upgrade itself should not be too hard, the work will be in providing a satisfactory migration script to convert existing data on ckan.net service.",enhancement,closed,blocker,v0.7,ckan,fixed,,,,

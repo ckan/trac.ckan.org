@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1257: Anti-Spam tools</title>
+    <link>http://localhost/ticket/1257</link>
+    <description>&lt;p&gt;
+We are getting more and more spam on ckan.net and we need to improve our strategy of combating it. It is bad because google ranks who we link to (which we do want for legitimate links), and our front page contains the latest package edits, so spam is immediately very visible.
+&lt;/p&gt;
+&lt;p&gt;
+Spam:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Package creation
+&lt;/li&gt;&lt;li&gt;Package edit
+&lt;/li&gt;&lt;li&gt;User creation?
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+Systems to consider:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Automatic
++ captcha
++ bayesian scoring
+&lt;/li&gt;&lt;li&gt;Sysadmin
++ a tool to quickly analyse and remove packages, edits and users
+&lt;/li&gt;&lt;li&gt;Helpful users
++ button to click indicating spam, leading to any/all of:
+&lt;/li&gt;&lt;/ul&gt;&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
++ add TODO item (which emails package admin and sysadmins)
++ quarantine the package/user so it doesn't show up on the front page and a warning is shown when you view it
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+General thoughts:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;We should learn from the wikipedia tools, as they are the experts
+&lt;/li&gt;&lt;li&gt;This is a serious problem that is only going to get worse and is a threat to the whole site.
+&lt;/li&gt;&lt;/ul&gt;</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1257</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Tue, 02 Aug 2011 11:14:37 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/1257#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1257#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1257?action=diff&amp;amp;version=1"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Mon, 22 Aug 2011 16:01:09 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/1257#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/1257#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1257?action=diff&amp;amp;version=2"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>seanh</dc:creator>
+
+      <pubDate>Fri, 15 Jun 2012 15:28:49 GMT</pubDate>
+      <title>milestone set</title>
+      <link>http://localhost/ticket/1257#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/1257#comment:3</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                set to &lt;em&gt;ckan-backlog&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

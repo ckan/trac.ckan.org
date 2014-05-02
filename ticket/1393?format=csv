@@ -1,0 +1,2 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1393,Don't skip search tests,dread,johnglover,"Now we don't use postgres search, all the tests involving search now don't need to be skipped when running on sqlite. Should help coders spot earlier if these tests break. ",enhancement,assigned,minor,ckan-backlog,ckan,,,johnglover,ckan,none

@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #159: Searching for tags:... resulting in lots of tags being found</title>
+    <link>http://localhost/ticket/159</link>
+    <description>&lt;p&gt;
+Search of form: tags: ... behaves differently depending on whether there is a leading space:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;tags: postcode - tags found correctly but no packages found
+&lt;/li&gt;&lt;li&gt;tags:postcode - tags incorrectly found but correct packages found
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+Let's fix this.
+&lt;/p&gt;
+&lt;p&gt;
+Cost: 0.5h
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/159</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Tue, 20 Oct 2009 17:37:44 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/159#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/159#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Fixed in cset:e7ea5b97365e
+&lt;/p&gt;
+&lt;p&gt;
+Note: no spaces allowed between search operator and the word associated with the operator. So with "tags: postcode" it was searching for a blank tag. I've made the change so that would ignore 'tags' in this case, producing reasonable search results for postcodes in all fields. postcodes.
+&lt;/p&gt;
+&lt;p&gt;
+Cost: 1.5h
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

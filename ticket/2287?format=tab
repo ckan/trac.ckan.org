@@ -1,0 +1,12 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2287	Consistent datetime and time period strings localization	seanh		"Find all places where date, times and time periods are rendered as strings in CKAN. Make them all go through the same code path (e.g. the helper function in helpers.py) with localization support.
+
+For example, on the user index page right now there are time period strings like ""less than 1 month"" that currently do not get translated (and the way they're implemented doesn't look i18n-friendly).
+
+ISO date format everywhere might be a good idea.
+
+Need to consider local timezone issues.
+
+Python standard library and Babel may have useful helpers for this.
+
+Should the local timezone displayed be a global setting per CKAN instance? Or should it change depending on the location of the user who is viewing the page?"	enhancement	new	awaiting triage	ckan-future	ckan		ecportal i18n		ckan	none

@@ -1,0 +1,8 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2239,EC ODP RDF/N3 templates,ross,ross,"Implement the EC/ODP template for RDF to match the requested schemas.
+
+Using the previous work on allowing for templatised RDF representations we should implement the proposed schema for EC/ODP.
+
+We also agreed to allow upload of RDF as an extra (raised to top level in package schema) which will instead be used for the RDF template.  On insertion extra CKAN triples will be added... initially this is just owl:sameAs although we're awaiting EC/ODP agreement on which triples we should add to show the CKAN link.
+
+",enhancement,closed,awaiting triage,ckan-sprint-2012-04-30,ckan,fixed,[2d],,ckan,none

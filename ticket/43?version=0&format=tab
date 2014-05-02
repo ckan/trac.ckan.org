@@ -1,0 +1,17 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+43	Generic Attributes for Packages	rgrp	rgrp	"= As A =
+
+User
+
+= I Want To =
+
+Add arbitrary named attributes to packages (an attribute being a name, type, value triple).
+
+= Queries =
+
+  * How complex is this to implement?
+  * What would an arbitrary user be able to edit? Possibilities:
+    1. 'create new attribute' and setting the value (so name and type would be chosen from predefined list).
+    2. 'create', setting of name and value (but not type -- type already set in predefined list)
+  * Could just use (machine) tags -- though this could be seen as a bit of a hack.
+  * Would solve having to create special file/url attributes (though I think that perhaps file stuff is important enough to merit first class support in the domain model -- though, that said, since one won't want to have a file limit adding unlimited file support is very similar to unlimited attributes of arbitrary type)."	enhancement	new	major		ckan					

@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2331,Search should AND terms not OR terms,rgrp,kindly,"Appears current default search in CKAN ORs terms rather than ANDing them (i.e. adding more terms increasing number of items found rather than reducing it).
+
+Not sure when this crept in or if it has been there for a long time.",defect,reopened,major,ckan-sprint-2012-05-29,ckan,,,,ckan,none

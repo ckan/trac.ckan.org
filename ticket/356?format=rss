@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #356: Search box in at top of page (UI)</title>
+    <link>http://localhost/ticket/356</link>
+    <description>&lt;p&gt;
+A small but useful ui improvement would be to have a search box at top right on every page.
+&lt;/p&gt;
+&lt;p&gt;
+As an example see the one here on trac or on github.com or bitbucket.org.
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;It would be particularly good to include a small advanced search link that took you to the full search page. Need to keep it small because screen real-estate here is limited (see how github.com does this for inspiration).
+&lt;/li&gt;&lt;/ul&gt;</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/356</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Mon, 12 Jul 2010 10:50:16 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/356#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/356#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Done in cset:a1af5f8fe59e. Have not done advanced search link normal package search currently provides no info about how to use advanced features.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Mon, 12 Jul 2010 10:50:30 GMT</pubDate>
+      <title>priority changed; milestone set</title>
+      <link>http://localhost/ticket/356#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/356#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;priority&lt;/strong&gt;
+                changed from &lt;em&gt;awaiting triage&lt;/em&gt; to &lt;em&gt;major&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                set to &lt;em&gt;v1.1&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

@@ -1,0 +1,12 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1635,Email notifications for activity streams,seanh,seanh,"Users need to be able to subscribe to/unsubscribe from receiving email notifications for activity stream events.
+
+This is not necessarily the same as following and unfollowing different activity streams (which then appear on the user's dashboard). The user may have activity streams on her dashboard for which she doesn't get email notifications, and perhaps also vice-versa.
+
+Some templating might have to be written to format activity stream events for plain text emails (as opposed formatting them for HTML as the current templating does).
+
+May need to add an email_subscriptions to the User class/database table? Or add a new table for it?
+
+The activity_create() function could be responsible for looking up subscriptions when an activity stream event is emitted and writing any activity stream event IDs out to a notifications outbox table. For package and resource activity events, the session extension may need to handle this.
+
+Another process will take rows out of the notifications outbox and send them as emails.",enhancement,new,awaiting triage,ckan-v1.7,ckan,,9d activity_streams,,ckan,none

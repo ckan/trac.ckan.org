@@ -1,0 +1,19 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2379	RDF output, api/sparql	ross	ross	"From: 
+Pierre-Yves Vandenbussche
+
+In my use case I need to fetch every sparql endpoint associated to a dataset. With the previous version of your endpoint, I was doing this query:
+SELECT DISTINCT ?dataset ?endpoint ?title ?identifier WHERE { 
+	?dataset <http://www.w3.org/ns/dcat#distribution> ?distribution. 
+	?distribution <http://purl.org/dc/terms/format> [ <http://moat-project.org/ns#taggedWithTag> [ <http://moat-project.org/ns#name> ""api/sparql"" ] ]. 
+	?distribution <http://www.w3.org/ns/dcat#accessURL> ?endpoint. 
+	?dataset <http://purl.org/dc/terms/title> ?title.  
+	?dataset <http://purl.org/dc/terms/identifier> ?identifier. 
+} ORDER BY ?title
+
+Using your new version,dcterms:title of a dataset is now a rdfs:label ... OK
+
+Unfortunately, I don't have the information of ""api/sparql""  anymore. So I can not differentiate between a dump file and a SPARQL endpoint... 
+____
+
+Add the required information to the RDF template."	enhancement	closed	awaiting triage	ckan-sprint-2012-06-25	ckan	fixed			ckan	none

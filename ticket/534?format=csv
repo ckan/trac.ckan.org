@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+534,buildbot config - database machine moved,dread,johnbywater,"Configure buildbot to use postgres db which has been moved to eu5.okfn.org
+
+pudo said: Could you perhaps also comment on http://knowledgeforge.net/okfn/tasks/ticket/466 with a hint on how to update this properly? I only edited /home/buildslave/okfn/full/build/buildandsmoke/buildandsmoke.ini which was the only occurence of the DB credentials I could find there.",defect,closed,critical,ckan-v1.2,,fixed,,,,

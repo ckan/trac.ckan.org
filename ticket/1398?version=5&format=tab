@@ -1,0 +1,13 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1398	Automated conversion of resource data into webstore	rgrp	kindly	"
+ * Possible sibling / requirement: #1397 (resource archiving)
+
+ * Setup test environment. 1d
+ * Make task to upload files to webstorer. 3d
+   * This includes writing back webstore_url and updated date. 0.5d
+   * Type guessing of file format. 1d
+   * Make cron to upload all un webstored resources. 0.5d
+ * Testing for errors by running cron 2d
+ * Documentation. 1d
+ * Deployment. 1d
+"	enhancement	new	awaiting triage	ckan-v1.6	ckan				ckan	none

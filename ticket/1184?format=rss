@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1184: Support Wuala as CKAN storage option</title>
+    <link>http://localhost/ticket/1184</link>
+    <description>&lt;p&gt;
+Most of CKANs storage options are tied to the USA. This brings concerns of data security for some organisations who may wish to adopt the system. &lt;a class="ext-link" href="http://wua.la"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;Wuala&lt;/a&gt; is a distributed file system that stores data in a peer-to-peer manner. The company behind it, &lt;a class="missing wiki"&gt;LaCie?&lt;/a&gt; sells storage for a fee. However, they also enable clients to have 'free' storage space when machines act as a storage node.
+&lt;/p&gt;
+&lt;p&gt;
+In order to be a storage node, a machine needs to be online for more than 14% of the time - roughly 4h per day. Most CKAN servers are likely to have a far greater uptime than this.
+&lt;/p&gt;
+&lt;p&gt;
+Supporting Wuala would go some way to enabling CKAN to be used in a secure manner. That is, CKAN could be promoted for organisational use where there is lots of data to be stored and large geographic distances to be managed. There is a &lt;a class="ext-link" href="http://www.wuala.com/Wuala%20API/Sample%20Clients/Python/wualaAPI/"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;Python client available&lt;/a&gt; and a fairly &lt;a class="ext-link" href="http://www.youtube.com/watch?v=3xKZ4KGkQY8"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;long Google Tech Talk&lt;/a&gt; that overviews the system.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1184</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>seanh</dc:creator>
+
+      <pubDate>Fri, 15 Jun 2012 15:31:46 GMT</pubDate>
+      <title>milestone set</title>
+      <link>http://localhost/ticket/1184#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1184#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                set to &lt;em&gt;ckan-backlog&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

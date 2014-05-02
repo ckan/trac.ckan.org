@@ -1,0 +1,11 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1583,Integrate QA into frontend - 1d,johnglover,zephod,"Tasks:
+ * ~~On dataset view page, add star rating after each resource view url. Probably similar to current format label after url.~~
+ * ~~Add star rating to resource view page, along with a way of displaying the reason for the rating and tips to improve. Should be unobtrusive.~~
+ * ~~Fix the table at http://thedatahub.org/qa/dataset/broken_resource_links - URLs should be truncated to a fixed not-too-long length and the other fields line up (eg by using a table)~
+ * ~~Handle 404s by showing that 'we think this resource is 404ing'.~~
+ * ~~Handle the absence of QA data on a resource (currently nothing is displayed. Maybe that's fine.~~
+ * ~~Do we need to integrate the 'reason for rating' string into the UI?~~
+
+Next Steps:
+ * ~~Use db dump of thedatahub.org for final testing.~~",enhancement,closed,major,ckan-sprint-2012-02-06,ckan,fixed,qa,,ckan,none

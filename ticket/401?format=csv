@@ -1,0 +1,2 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+401,Provide base worker as queue consumer,pudo,pudo,"We should create and document a basic queue consumer and task processor for CKAN. It will connect to the CKAN update queue, read messages and dispatch them to a consumer function (such as a downloader or an analysis app)",task,closed,,,,fixed,,,,

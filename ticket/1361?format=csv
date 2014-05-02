@@ -1,0 +1,25 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1361,Simple search support,rgrp,rgrp,"Would be nice if CKAN could work out of the box without the need for SOLR (solr is great but complex and heavyweight to install).
+
+Propose:
+
+ * ckan.simple_search config option
+ * If set:
+   * query via simple query to database backend
+   * do no specialized indexing
+
+== Extras ==
+
+Remove
+
+  * TagSearchQuery from lib/search (just do a search directly)?
+  * #1360: filter by downloadable and filter by open search options
+
+== Possible Extras ==
+
+(Probably future improvements)
+
+ * Re-introduce full-text search indexing where supported in e.g. postgres and use for querying
+
+
+",enhancement,closed,critical,ckan-v1.5,ckan,fixed,,,ckan,none

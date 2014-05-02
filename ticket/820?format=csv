@@ -1,0 +1,7 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+820,Exception browsing /user/apikey when not logged in,dread,,"Should fail gracefully (not the existing 500 error) when you go to ckan.net/user/apikey (manually typing in the url) but haven't logged in.
+{{{
+WebApp Error: <type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'apikey' 						
+
+URL: http://test-hmg.ckan.net/user/apikey
+}}}",defect,closed,trivial,,ckan,fixed,,,ckan,none

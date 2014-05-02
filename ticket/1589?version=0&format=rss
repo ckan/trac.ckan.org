@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1589: QA - Give 5 star rating to datasets with link metadata</title>
+    <link>http://localhost/ticket/1589</link>
+    <description>&lt;p&gt;
+From Richard Cyganiak on the CKAN Discuss list:
+&lt;/p&gt;
+&lt;p&gt;
+Regarding the fifth star (is the dataset linked to others?). This cannot be automatically determined just by looking at the format. It either requires inspection of the actual data, or information about links in the metadata. As you're probably aware, we've established conventions for recording information on data links in CKAN &lt;a class="missing changeset" title="No default repository defined"&gt;[1]&lt;/a&gt;, as part of the work of the lodcloud group on the Data Hub. Link information is captured for hundreds of datasets. I would claim that we have the majority of four-star datasets covered there, and hence you can determine if they should get the fifth star by checking for the presence of a links:xxx field.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1589</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Mon, 02 Jan 2012 03:31:35 GMT</pubDate>
+      <title>description, milestone changed</title>
+      <link>http://localhost/ticket/1589#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1589#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1589?action=diff&amp;amp;version=1"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan-v1.6&lt;/em&gt; to &lt;em&gt;ckan-backlog&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Moving out of v1.6 (super ticket is in).
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

@@ -1,0 +1,18 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2326	dataset permalinks	toby	toby	"create permalinks
+
+eg \dataset\~a5-DQ\nice-name
+
+~XXXXX defines the permalink the nice-name is ignored
+
+* packages table needs a new field for this data
+
+* existing datasets need updating
+
+* new datasets need the identifier creating
+
+* routing needs updating
+
+* needs to work for all urls like edit
+
+Once this is implemented we can decide when we will use permalinks vs the normal urls."	enhancement	new	minor	ckan-future	ckan				ckan	none

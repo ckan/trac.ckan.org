@@ -1,0 +1,12 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+259,isitopen enquiry broken,dread,rgrp,"Pressing the 'make an enquiry' link on the package read page gives 404. (Also links should also be changed from isitopen.ckan.net to isitopendata.org)
+
+Example link is: 
+
+http://isitopen.ckan.net/enquiry/create/?ckan_package=zeno
+
+which gets forwarded to:
+
+http://www.isitopendata.org/enquiry/create/?ckan_package=zeno 
+
+which gives 404",defect,closed,awaiting triage,v1.0,ckan,fixed,,,,

@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #661: Create CKAN site tester</title>
+    <link>http://localhost/ticket/661</link>
+    <description>&lt;p&gt;
+From Rufus:
+&lt;/p&gt;
+&lt;pre class="wiki"&gt;'blackbox' testing command (read-only only would be fine) -- very
+useful for upgrade on sunday
+On blackbox thinking of something like:
+paster test-site http://hmg.ckan.net {package-name}
+Or (maybe better):
+paster test-site --site-spec {myconfig.json}
+my-config is a json file with info for testing (could overload
+--config rather than site-spec):
+site-url: http://hmg.ckan.net/
+package-name:
+package-title:
+...etc ...
+Then:
+Test front-page
+Test /revision/
+Test /package/{page}  -- check title
+Test /package/history
+Test /api/rest/package/ ...
+Test /api/search/package ...
+etc
+&lt;/pre&gt;</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/661</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Thu, 28 Oct 2010 13:07:46 GMT</pubDate>
+      <title>status changed; sprint, resolution, milestone set</title>
+      <link>http://localhost/ticket/661#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/661#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;sprint&lt;/strong&gt;
+                set to &lt;em&gt;1.3.1&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                set to &lt;em&gt;ckan v1.3&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Friedrich has done the main meat of this in ckanext/blackbox/smoke.py
+&lt;/p&gt;
+&lt;p&gt;
+I've extended it to include http basic auth, testing wanted error statuses, checking API calls etc.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

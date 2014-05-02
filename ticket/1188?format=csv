@@ -1,0 +1,6 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1188,Allow diffing against initial (blank) package version,nickstenning,,"Currently the history page only allows diffing between different versions of a package, but there doesn't appear to be any easy way to see the changes introduced by the first version of a package.
+
+I'm requesting the ability to diff against a ""blank slate"" initial state of a project, so I can see the content of the first project commit.
+
+Not sure if this is a vdm feature, so I'm putting this ticket in against ckan.",enhancement,new,awaiting triage,ckan-backlog,ckan,,,,ckan,none

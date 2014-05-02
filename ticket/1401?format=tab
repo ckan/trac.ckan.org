@@ -1,0 +1,9 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1401	Some links don't take account when CKAN is mounted at a non-root URL	flofokus	rgrp	"if you want your ckan to reside not at
+http://yourhost.org/
+but rather e.g. at
+http://yourhost.org/ckan/
+you can use this hint
+http://wiki.pylonshq.com/display/pylonsdocs/Configuration+Files
+and set ckan.site_url accordingly in your .ini.
+However, there are some instances where internal links are created without the required prefix."	defect	closed	minor	ckan-sprint-2012-01-23	ckan	fixed	ux	augusto.herrmann@…	ckan	deployment

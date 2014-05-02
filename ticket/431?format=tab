@@ -1,0 +1,2 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+431	Solr index testing tool	pudo	pudo	There seem to be a few conditions under which either queue processing or the indexer fail in their current state. To get a more systematic picture of these failures, we should have a small testing tool to compare the index to the database of a live CKAN instance. 	task	closed	awaiting triage		ckan	wontfix				

@@ -1,0 +1,7 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+208,Obfuscate author email and maintainer email field,rgrp,dread,"Obfuscate author email and maintainer email field.
+
+Use: webhelpers.html.tools.mail_to e.g. webhelpers.html.tools.mail_to('mike@jones.com', encode='javascript')
+
+Do we want to? Surely only public addresses should be on CKAN in which case why obfuscate?
+",enhancement,closed,major,v0.11,ckan,fixed,,,,

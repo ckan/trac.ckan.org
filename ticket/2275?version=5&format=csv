@@ -1,0 +1,6 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2275,Implement group logos,seanh,johnglover,"Groups should be able to specify a URL to an image file for a group logo, the image will be shown on the group page.
+
+~~Actually uploading an image file (rather than giving a URL) and cropping and resizing the file will be done later, for now just give a URL.~~ (later ticket)
+
+~~Further customisation of group pages (CSS, templates) also for later.~~ (not sure if we really want this, but in a later ticket if so)",enhancement,assigned,major,ckan-sprint-2012-04-16,ckan,,[2d],,ckan,none

@@ -1,0 +1,52 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1526,[super] Update and test existing DGU package form,icmurray,icmurray,"Re-create behaviour of old form without using form-alchemy.  And unit test.
+
+ * [X] write high-level functional tests for the form.  Creation / edition / validation.
+       Original estimate: 6 days (3 days x 2)
+              Time spent: 3 days
+          Time remaining: 0 days
+
+ * [X] write the html
+       Original estimate: 2 days (1 day x 2)
+              Time spent: 1.3 days
+          Time remaining: 0 days
+
+ * [X] modify the existing validation schema
+       Original estimate: 2 days (1 day x 2)
+              Time spent: 1.3 days
+          Time remaining: 1 days
+
+ * [X] split resources into types: individual, time-series, and additional.
+       Original estimate: 2 days
+              Time spent: 2.5 days
+          Time remaining: 0 days
+
+ * [X] contact information is derived from Publisher, but can be altered for each dataset. [#1617]
+       Original estimate: 4 days
+              Time spent: 0 days
+          Time remaining: 4 days
+       (Waiting on publisher integration)
+
+ * [X] foi contact information is derived from user, but can be altered for each dataset. [#1617]
+       Original estimate: 1 days
+              Time spent: 0 days
+          Time remaining: 1 days
+       (Waiting on publisher integration)
+
+ * [X] provide stubs for the theme and sub-themes [#1618]
+       Original estimate: 1 days
+              Time spent: 0 days
+          Time remaining: 0 days
+
+ * [X] provide stubs for the publisher hierarchy [#1619]
+       Original estimate: 2 days
+              Time spent: 0.5 days
+          Time remaining: 1.5 days
+     Note - the groups refactor is essentially ready to be used. And this would be a good test case for it.
+
+ * [X] don't allow package-type selection when editing a package
+     Can't change a dataset from containing time-series resources to one containing individual resources or visa-versa. (#1620)
+       Original estimate: 0.5 days
+              Time spent: 0 days
+          Time remaining: 0 days
+",enhancement,closed,major,ckan-sprint-2012-03-05,dgu,fixed,dgu form refactor,dread kindly shevski,ckanext-dgu,none

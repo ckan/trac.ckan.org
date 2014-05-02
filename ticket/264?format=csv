@@ -1,0 +1,8 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+264,Investigate why there are revisions with no associated packages,rgrp,dread,"Revision.packages should not include all changes so why are we getting revisions with no associated changes? See e.g. http://ckan.net/revision/read/814e39e1-2540-4449-90d1-ac9a92ab40fb?
+
+Investigate and fix.
+
+NB: if this is bugfix this should go against stable or metastable branch if at all possible and then be merged into default.
+
+Cost: 1.5h (?)",defect,closed,major,v1.0,ckan,fixed,,,,

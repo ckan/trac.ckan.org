@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2268: UKLP Use same schema as form for harvested records</title>
+    <link>http://localhost/ticket/2268</link>
+    <description>&lt;p&gt;
+Datasets created via the harvesting (UKLP ones) and the ones created via the form use a different schema. That could lead to problems. We need to discuss the best approach.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2268</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+ </channel>
+</rss>

@@ -1,0 +1,9 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+665	The system shall support withdrawing a harvested dataset or service from publication	johnbywater	johnbywater	"Discussion between John and Peter:
+> Given we can identify a document, does the disappearance of a document
+> from a registered source imply the disappearance of the metadata (such
+> that we delete packages once the documents disappear from the registered
+> source)?
+> 
+I would expect a more explicit 'delete'. The UKLP Use Case Library describes this as ""withdraw a dataset or service from publication"" (part of UCD03 Maintain resources).
+"	requirement	closed	awaiting triage	ckan-v1.3	uklii	duplicate				

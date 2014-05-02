@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+274,Allow searching by any extra field,rgrp,rgrp,"At the moment only support a very limited set of extra fields (see docs for details). Should support arbitrary extra fields (note no need to put these in special full text index though ...)
+
+Cost: 1h",defect,closed,major,,ckan,fixed,,,,

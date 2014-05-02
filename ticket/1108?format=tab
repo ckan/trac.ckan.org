@@ -1,0 +1,16 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1108	Create a more modern theme for CKAN	pudo	zephod	"CKAN looks a bit aged, it should be styled more modernly and some elements could be re-arranged: 
+
+ * Collect user info in top bar
+ * re-add the logo to ckan.net
+ * Remove tags from main menu, replace with /sitemap.xml
+
+Inpiration: 
+
+quora.com, github.com, Google Projects, Google Refine, etc.
+
+== CKAN.net or CKAN general theme? ==
+
+To be decided. Suggest we start with ckan.net specific and then backwards integrate (?). Existing ckan.net theme repo:
+
+https://bitbucket.org/okfn/ckan-ckan.net"	enhancement	closed	major	ckan-sprint-2011-09-12	ckan	fixed			ckan	none

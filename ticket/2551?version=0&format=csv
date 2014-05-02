@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2551,Feature metrics,ross,kindly,"It would be great if we could obtain metrics about specific features,  so that we can determine usage patterns for them and whether we need to continue to maintain them if they are unused. i.e. How often revisions are actually view?  Does anyone ever revert?
+
+GA provides a way to do this which requires JS snippets, which may be enough to get the request metrics.  ",enhancement,new,awaiting triage,,ckan,,,,ckan,none

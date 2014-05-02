@@ -1,0 +1,4 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2902	genshi is used in Group controller	ross		"The Group controller uses the genshi module where it may be better for it to use Markup() in the template.
+
+See https://github.com/okfn/ckan/pull/117/files#r1524863"	enhancement	new	awaiting triage	ckan 2.0	ckan				ckan	none

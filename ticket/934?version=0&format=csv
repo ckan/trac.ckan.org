@@ -1,0 +1,11 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+934,key value store for allowing plug-ins to store data,kindly,,"We need to allow plugins to store extra information in the database somewhere.
+
+Each plug-in should have its own name space and allow any data to be set.
+
+There are two options.  
+
+* make a key value table in ckan that will hold random information.
+* use redis (or other key value store)
+
+",enhancement,new,awaiting triage,,ckan,,,,,

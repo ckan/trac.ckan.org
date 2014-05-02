@@ -1,0 +1,15 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+76	Convert to use formalchemy for all forms	rgrp	dread	"Current form stuff is not very good (uses formencode). Switch to formalchemy would improve this, especially on validation.
+
+As an extra we could utilize the formalchemy pylons admin interface (pretty much for free).
+
+Cost: 12h
+
+== Details ==
+
+  1. Replace htmlfill and formencode extract in controllers/templates with formalchemy
+    1. Crude and simple
+    2. Suppress unwanted fields (revision, state, all revisions) and sort out ordering to be similar to before.
+    3. Sort out tag field with a special renderer
+  2. Validation - testing definitely required.
+  3. Fix up description and pretty css etc"	enhancement	closed	critical	v0.10	ckan	fixed				

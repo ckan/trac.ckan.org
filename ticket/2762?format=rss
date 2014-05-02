@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2762: test_related.py crashes</title>
+    <link>http://localhost/ticket/2762</link>
+    <description>&lt;p&gt;
+/home/seanh/Projects/ckan/ckan/ckan/tests/functional/test_related.py
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a class="missing wiki"&gt;ImportError?&lt;/a&gt; (cannot import name assert_regexp_matches)
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2762</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+ </channel>
+</rss>

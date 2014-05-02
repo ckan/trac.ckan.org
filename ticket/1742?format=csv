@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1742,Naming of a new package/group can clash with a route,ross,ross,"It is possible to create a group or a dataset called new, or edit, which will then be inaccessible as it is blocked by the existing routes with those names.
+
+We should maintain a list of invalid names in the verification that happens behind the scenes in the UI.",enhancement,closed,trivial,ckan-sprint-2012-03-19,ckan,fixed,[1d][a:0.5d],,ckan,none

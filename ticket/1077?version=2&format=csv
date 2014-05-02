@@ -1,0 +1,43 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1077,Switch to new vdm changeset model,rgrp,kindly,"Have developed a new ""changeset"" based model for revisioning in vdm. This has several advantages:
+
+ * Much simpler
+ * Cleaner separation of continuity from changesets
+  * Supports certain operations that are impossible now (e.g. deleting all changes to a particular object irrespective of whether other objects were changed in same revisions).
+ * Easier support for pending state and similar behaviour
+ * Almost identical API
+
+Disadvantages:
+
+ * Difficult to query revision history. Currently we have a way of finding out the diffs of particular packages.  These diffs *include* changes to objects associated with packages (i.e a resource attached to a package).  With the new model the only way to get this information is by looking in the json stored in the change object which is very awkward.
+
+ * Does not give us anything extra if we simplify our use of vdm currently. (see alternative below)
+
+ * A large change to database structure needs to happen.
+
+== Implementation ==
+
+ * The main challenge with this change is schema and data migration
+
+=== Migration ===
+
+Every revisioned object has a revision_id and revision attribute.
+
+Approximate algorithm:
+
+{{{
+Revision -> Changeset
+
+for revtype in [PackageRevision, ...]:
+    for pkgrev in package_revision:
+        changeset = lookupchangeset(package_revision)
+        ChangeObject(cset, (table, id), dictize(pkgrev))
+}}}
+
+Question:
+   * does pkg include tags attributes or not? or we have to dictize, pkgrev, pkg2tagrev, and tag. Probably the latter.
+
+== Alternative ==
+
+Instead of restructuring the whole of the database to fit the new changeset model just simplifying our use of the current vdm by removing stateful list/dicts and handling this state ourselves in the logic layer could be adequate. The vdm would then be just a simple copy on write mechanism at the table level.  This seems to cover all advantages/disadvantages above.
+",enhancement,new,critical,ckan-v1.5,ckan,,,,ckan,none

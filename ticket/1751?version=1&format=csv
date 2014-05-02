@@ -1,0 +1,12 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1751,DGU dataset form: collection of updates from feedback,icmurray,icmurray,"A collection of improvements to the dataset creation/edition form (feedback form DGU).
+
+ - [x] validation error formatting
+ - [x] geograohic coverage: add local authority
+ - [x] resource format field
+ - [x] resource format auto-complete
+ - [x] renamed data tab -> files tab
+ - [x] integrate Adris'a INSPIRE changeset, and migration scripts as part of build
+ - [x] remove ""discontinued"" from the update frequency
+ - [x] disable the disabling of save
+ - [x] Remove ability to edit url on the edit-form (and remove ""url not available"")",enhancement,closed,major,ckan-sprint-2012-02-20,dgu,fixed,,,ckanext-dgu,none

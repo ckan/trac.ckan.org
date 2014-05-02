@@ -1,0 +1,15 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2302,Simple theming,ross,ross,"Simple image upload, text changes and css updates for a single instance.  All done on a single configuration/admin page
+
+See http://ckan.okfnpad.org/simple-themes for user stories
+
+[x] Initial version will only take an image_url rather than allowing an upload.
+
+[x] New page with form for title, tagline, image loader etc.
+
+[x] Allow the user to paste in values for the CSS, do we really want a colour swatch?
+
+[x] Generate local CSS override which should *somehow* override colors in the original CSS.
+
+[ ] Allow user to provide text for an about page.
+",enhancement,new,awaiting triage,ckan-sprint-2012-04-30,ckan,,[5.5d],,ckan,none

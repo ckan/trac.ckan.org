@@ -1,0 +1,28 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+190,Package comments,dread,pudo,"Cost 7 days
+
+When viewing a package, users can read user comments and leave their own. Users need to be logged in to leave a message. Comments appear immediately. A mechanism for deleting unwanted comments is provided to an authorized user. Comments are sorted with the most recent first. Comments are available for read, creation and deletion in both the Web UI and over the REST API. 
+
+The admin for the package and a superuser can delete unwanted comments, both on the package page and a collation of all comments on their user page. Users can delete their own comments(?) Need to consider whether over the REST API we encourage the use of a 'frontend user' APIKEY which can be used to leave comments for another, actual user.
+
+Example at bottom of package page:
+
+'''Leave a comment:'''
+||Subject||  _________  ||
+||Comment||  _________  || 
+[[br]]
+||Submit button||
+
+'''Comments:'''
+||'''Explanation doc'''||
+||''Posted on 25h May 2009 by !http://bertdavies.myopenid.com''||
+||It says on the pollution data web page that not all the stations have a CO2 sensor, so you have to extrapolate from the ones that do. See my visualisation of CO2 across London for an idea of what you can do: bertdavies.com/pollution-2008.jpg||
+
+||'''More info'''||
+||''Posted on 24th May 2009 by !http://ronsmith.myopenid.com''||
+||Excellent data, but why is there no value in the CO2 column for some of the testing stations?||
+
+= Implementation details: = 
+Comments table is with columns:
+||id || package_id || date (date) || comment (multi-line text)||
+",defect,closed,awaiting triage,,ckan,fixed,,,,

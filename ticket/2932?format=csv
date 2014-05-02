@@ -1,0 +1,2 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2932,Add docstring to system_info.py,seanh,,"What is the system_info table for? It looks like a way to override config file settings in the database, perhaps so that admins can use a web interface to change site title etc. Could do with a docstring explaining the intended purpose of the table.",enhancement,new,awaiting triage,ckan 2.0,ckan,,,,ckan,none

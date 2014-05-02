@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #259: isitopen enquiry broken</title>
+    <link>http://localhost/ticket/259</link>
+    <description>&lt;p&gt;
+Pressing the 'make an enquiry' link on the package read page gives 404. (Also links should also be changed from isitopen.ckan.net to isitopendata.org)
+&lt;/p&gt;
+&lt;p&gt;
+Example link is:
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a class="ext-link" href="http://isitopen.ckan.net/enquiry/create/?ckan_package=zeno"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://isitopen.ckan.net/enquiry/create/?ckan_package=zeno&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+which gets forwarded to:
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a class="ext-link" href="http://www.isitopendata.org/enquiry/create/?ckan_package=zeno"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://www.isitopendata.org/enquiry/create/?ckan_package=zeno&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+which gives 404
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/259</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Fri, 26 Feb 2010 18:12:44 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/259#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/259#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+rgrp fixed this in cset:45e16431add9
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Tue, 11 May 2010 16:42:33 GMT</pubDate>
+      <title>milestone set</title>
+      <link>http://localhost/ticket/259#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/259#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                set to &lt;em&gt;v1.0&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

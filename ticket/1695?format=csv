@@ -1,0 +1,9 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1695,Relationships - improvements,dread,dread,"Suggested by Richard Cyganiak in http://lists.okfn.org/pipermail/ckan-discuss/2012-January/001977.html
+
+ * new relationship type links_to / linked_from
+   * Maybe with extra 'count' property?
+ * creating a new relationship should be post to the relationship register, not the source entity.
+ * add missing doc about creating a new relationship
+ * 'Model Formats' section seems to be missed out of the docs since release 1.4.2. See: http://readthedocs.org/docs/ckan/en/ckan-1.4.2/api/version2.html#model-formats
+",enhancement,closed,major,,ckan,fixed,,cygri,ckan,none

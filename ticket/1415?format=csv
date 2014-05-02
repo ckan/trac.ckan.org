@@ -1,0 +1,22 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1415,Comments on current status of ckan deb packages,nils.toedtmann,thejimmyg,"This is a scratch pad ticket with some comments on the current status of our ckan deb packages. I know that some of it is the deb packaging roadmap anyway, please forgive me if i mention them here again.
+
+Rufus and me re-deployed some community ckan instances onto s022 (see http://trac.okfn.org/ticket/926). We followed the documentation 
+http://docs.ckan.org/en/latest/install-from-package.html 
+
+ * Deb package version number: the version of the deb package is ""python-ckan 1309471251~149be76faabc+lucid-1"", and it's hard to guess from there that it contains a ckan 1.4.2a
+ * When is 1.4.3/1.5.x expected as deb package?
+ * There was a bug in the DB upgrade script /usr/share/pyshared/ckan/migration/versions/029_version_groups.py (line 150) which looks like it was fixed 1.4.1==>1.4.2 but was nevertheless present in this deb package.
+ * The current script /usr/bin/ckan-std-install
+  * does not set the Apache ServerName according to the $INSTANCE variable
+  * automatically configures a ckan extension named after $INSTANCE
+  * depends on local postgres
+  * could be replaced with ""/usr/bin/ckan-deploy --name=ckan-std --domain=ckan-std.localhost (see next point)
+ * (i think this is exactly James' plan): have more generic deployment script /usr/bin/ckan-deploy as part of python-ckan which takes arguments like
+  * --domain=cc.ckan.net
+  * --aliases=$list-of-domains
+  * --name=cc (defaults to ""domain"")
+  * --no-db (does not configure a DB)
+  * --sql-alchemy=$DB_CONFIG_STRING (also runs ""paster --plugin ckan db upgrade --config"")
+  * --extension $list-of-extesions 
+  * ...",enhancement,closed,minor,ckan-sprint-2011-12-05,ckan,fixed,,rgrp pudo dread,ckan,none

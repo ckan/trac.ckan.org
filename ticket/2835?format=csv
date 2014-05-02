@@ -1,0 +1,7 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2835,Client module needs a template loading method,aron.carroll,,"{{{
+Client#getTemplate(name, params, success, error);
+}}}
+
+
+Where params, success and error are optional arguments. test/index.html already has an implementation called loadFixture().",enhancement,new,minor,demo phase 5,ckan,,,,ckan,none

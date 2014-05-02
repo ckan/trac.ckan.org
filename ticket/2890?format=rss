@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2890: Collect data previews and data store docs in one chapter</title>
+    <link>http://localhost/ticket/2890</link>
+    <description>&lt;p&gt;
+Currently there is this page:
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a class="ext-link" href="http://docs.ckan.org/en/latest/data-viewer.html"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://docs.ckan.org/en/latest/data-viewer.html&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+which covers Recline Data Explorer and other kinds of data preview in CKAN. It is under the Publishing Datasets section in the documentation. I had to to a search for 'recline' to find it.
+&lt;/p&gt;
+&lt;p&gt;
+Separately there is this page: &lt;a class="ext-link" href="http://docs.ckan.org/en/ckan-1.7.1/datastore.html"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://docs.ckan.org/en/ckan-1.7.1/datastore.html&lt;/a&gt; which covers datastore, datastorer, and the data api.
+&lt;/p&gt;
+&lt;p&gt;
+I suggest collecting this together in one chapter called 'Data Previews'. If I understand it right the general gist would be:
+&lt;/p&gt;
+&lt;p&gt;
+CKAN has builtin previews of data resources on resource pages, enabled by default.
+&lt;/p&gt;
+&lt;p&gt;
+Images, Google Documents, and web page resources will be loaded into embedded iframes for preview.
+&lt;/p&gt;
+&lt;p&gt;
+Text-like files will be displayed raw.
+&lt;/p&gt;
+&lt;p&gt;
+CSV or Excel files uploaded to CKAN will be previewed using Recline Data Explorer.
+&lt;/p&gt;
+&lt;p&gt;
+Additionally, you can enable CKAN's &lt;a class="missing wiki"&gt;DataStore?&lt;/a&gt;, requires you to install &lt;a class="missing wiki"&gt;ElasticSearch?&lt;/a&gt; and nginx and put datastore.enabled=1 in your ini file. Lets you use the Data API to query data.
+&lt;/p&gt;
+&lt;p&gt;
+Does having &lt;a class="missing wiki"&gt;DataStore?&lt;/a&gt; enabled mean you get preview of more types of resources? Any resource that's available via the Data API will be previewed using Recline,
+&lt;/p&gt;
+&lt;p&gt;
+You can install ckanext-datastorer, and then CSV and Excel files _linked to_ as CKAN resources will be previewed using Recline also. Requires celeryd.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2890</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>seanh</dc:creator>
+
+      <pubDate>Tue, 28 Aug 2012 10:21:36 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/2890#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/2890#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/2890?action=diff&amp;amp;version=1"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>seanh</dc:creator>
+
+      <pubDate>Tue, 28 Aug 2012 11:43:08 GMT</pubDate>
+      <title>milestone set</title>
+      <link>http://localhost/ticket/2890#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/2890#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                set to &lt;em&gt;ckan-v1.8.1&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Tue, 28 Aug 2012 17:44:27 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/2890#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/2890#comment:3</guid>
+      <description>
+        &lt;p&gt;
+I know this is tricky. The issue is that Datastore does not exist *just* to provided data views - it also provides a bunch of other stuff like a Data API and, well, a Datastore. I also think there are different audiences. Data view info is about publishers and (viewing) users, while the Data API is for (non-CKAN) devs and CKAN devs and the Datastore sysadmin section is for deployers.
+&lt;/p&gt;
+&lt;p&gt;
+My feeling is therefore keeping things as is but with more stuff in the Data View seciton about it all works:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Data viewer: explanation for publisher, links to next 2 sections
+&lt;/li&gt;&lt;li&gt;Datastore page (as we have it)
+&lt;ul&gt;&lt;li&gt;Includes datastorer
+&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;Using Data API page (as we have it)
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+So main change is a better data viewer page ...
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

@@ -1,0 +1,24 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1506,"[super] UX improvements to dataset edit, create and search + group + user page (Dec 2011)",rgrp,zephod,"TODO: create smaller tickets
+
+See also: http://trac.ckan.org/ticket/1404 (Post-v1.5 UX improvements) -- probably want to integrate with this and subtickets.
+
+Note: dataset (and resource) view UX improvements are #1450 and #1032
+
+== Dataset edit ==
+
+See #1744 
+
+== Dataset Create ==
+
+  * ? Show Home Page field when creating dataset (+ show description (?) (-- but state that it should just be a few lines)
+  * ?  Do some Guerilla UX to see whether we need to Redirect to Resources directly after dataset creation?
+
+== Group Improvements ==
+
+ * Minor fixes to dataset add on Group edit form - 0.5d - #1507
+
+== User pages ==
+
+ * Improvements to user page UX - 1d - #1396
+ * Broken links for non-Gravatar use icons - 0.25d - #1719",enhancement,assigned,major,ckan-v1.6,ckan,,ux,,ckan,none

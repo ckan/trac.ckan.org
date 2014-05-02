@@ -1,0 +1,2 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2928	Run CKAN tests with example_i*form extensions enabled	seanh		Before releasing CKAN 2.0 we need to run all the CKAN tests with a modified test-core.ini with the example_idatasetform, example_igroupform and example_iorganizationform plugins enabled. If any tests fail, fix the bugs. This needs to be done for each release so add it to the release process.	enhancement	new	awaiting triage	ckan 2.0	ckan				ckan	none

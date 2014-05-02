@@ -1,0 +1,33 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+661	Create CKAN site tester	dread		"From Rufus: 
+
+{{{
+'blackbox' testing command (read-only only would be fine) -- very
+useful for upgrade on sunday
+
+On blackbox thinking of something like:
+
+paster test-site http://hmg.ckan.net {package-name}
+
+Or (maybe better):
+
+paster test-site --site-spec {myconfig.json}
+
+my-config is a json file with info for testing (could overload
+--config rather than site-spec):
+
+site-url: http://hmg.ckan.net/
+package-name:
+package-title:
+...etc ...
+
+Then:
+
+Test front-page
+Test /revision/
+Test /package/{page}  -- check title
+Test /package/history
+Test /api/rest/package/ ...
+Test /api/search/package ...
+etc
+}}}"	task	closed		ckan-v1.3		fixed				

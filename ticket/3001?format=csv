@@ -1,0 +1,20 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+3001,Multilingual plugin crashes CKAN on add dataset when some languages are default,seanh,,"Enable the multilingual plugins:
+
+ckan.plugins = stats synchronous_search multilingual_dataset multilingual_group multilingual_tag
+
+and set your default language to one not supported by the multilingual plugin, e.g.
+
+ckan.locale_default = cs_CZ
+
+now run CKAN and try to add a dataset:
+
+File '/home/seanh/Projects/ckan171/ckan/ckanext/multilingual/plugin.py', line 141 in before_index
+  text_field_items['text_' + default_lang].extend(all_terms)
+KeyError: 'text_cs_CZ'
+
+It doesn't matter what language you are viewing the site in in your browser, the default language setting in the ini file determines whether it crashed or not.
+
+A number of supported languages are defined at the top of ckanext/multilingual/plugin.py. I think if the default language is not one of these it crashes.
+
+I think this affects all versions of CKAN since the multilingual plugin was added so at least 1.7, 1.8 and 2.0",defect,new,awaiting triage,ckan 2.0,ckan,,multilingual,,ckan,none

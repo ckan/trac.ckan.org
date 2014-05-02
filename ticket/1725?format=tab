@@ -1,0 +1,4 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1725	Tag autocompletion and commas don't mix	dread	dread	"If you use tag autocompletion, it automatically adds a comma after the tag. This is fine if you are going to add another tag, but not fine if it is the last one. If you don't manually remove the final comma than you get form validation error ""Tag string: Tag """" length is less than minimum 2""
+
+Affects only version 1.5.2a."	defect	closed	major	ckan-sprint-2012-02-06	ckan	fixed			ckan	none

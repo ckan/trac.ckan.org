@@ -1,0 +1,2 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2948	Negative range breaks datastore backend	dominik		Recline allows negative ranges. The Backend returns an error 500 for that which breaks the recline preview.	enhancement	new	awaiting triage		ckan		iframe		ckan	none

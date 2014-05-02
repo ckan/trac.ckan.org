@@ -1,0 +1,11 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2499,Documentation for the internal analytics,icmurray,toby,"There's no docs for setting up the internal analytics, nor what it provides.
+
+== Setup ==
+
+Add:  `ckan.tracking_enabled = true` to .ini file
+
+Run: `paster tracking -c dev.ini`
+
+== Related links ==
+http://trac.ckan.org/ticket/2251",enhancement,new,awaiting triage,ckan-v1.8,ckan,,,toby,ckan,none

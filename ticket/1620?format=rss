@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1620: Update and test existing DGU package form : don't allow package-type selection when editing a package</title>
+    <link>http://localhost/ticket/1620</link>
+    <description>&lt;p&gt;
+[Child of &lt;a class="closed ticket" href="http://localhost/ticket/1526" title="enhancement: [super] Update and test existing DGU package form (closed: fixed)"&gt;#1526&lt;/a&gt;]
+&lt;/p&gt;
+&lt;p&gt;
+Can't change a dataset from containing time-series resources to one containing individual resources or visa-versa.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1620</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>icmurray</dc:creator>
+
+      <pubDate>Thu, 12 Jan 2012 19:11:52 GMT</pubDate>
+      <title>keywords changed</title>
+      <link>http://localhost/ticket/1620#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1620#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;keywords&lt;/strong&gt;
+              &lt;em&gt;0.5d&lt;/em&gt; &lt;em&gt;#1526&lt;/em&gt; added; &lt;em&gt;dgu&lt;/em&gt; &lt;em&gt;form&lt;/em&gt; &lt;em&gt;refactor&lt;/em&gt; removed
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>icmurray</dc:creator>
+
+      <pubDate>Thu, 12 Jan 2012 19:12:11 GMT</pubDate>
+      <title>milestone changed</title>
+      <link>http://localhost/ticket/1620#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/1620#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;current-ckan-sprint-2012-01-23&lt;/em&gt; to &lt;em&gt;ckan-v1.6&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>icmurray</dc:creator>
+
+      <pubDate>Thu, 26 Jan 2012 14:52:56 GMT</pubDate>
+      <title>status, milestone changed; resolution set</title>
+      <link>http://localhost/ticket/1620#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/1620#comment:3</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan-v1.6&lt;/em&gt; to &lt;em&gt;current-ckan-sprint-2012-02-06&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

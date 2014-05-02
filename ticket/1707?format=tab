@@ -1,0 +1,9 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1707	Over-long URLs in QA ext broken links list	johnglover	johnglover	"From Mark on the ckan-dev list:
+
+In the table of broken links at
+<http://thedatahub.org/qa/dataset/broken_resource_links>, the links as
+printed should be abridged to a fixed length (but link to the full
+URL). Otherwise the 'reason' column vanishes off the screen. Also a
+table would probably be better since as things stand the 'reasons' are
+not lined up"	defect	closed	minor	ckan-sprint-2012-02-06	ckan	duplicate	qa		ckan	none

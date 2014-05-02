@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2284,Local queries/views/viz in Related stuff.,ross,ross,"From #2204
+
+not sure how much we have thought through using this for storing queries / views / visualizations coming from our data viewer. In particular, wonder if this necessitates some kind of support for arbitrary json data ...",enhancement,new,awaiting triage,,ckan,,,,ckan,none

@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1593: [super] Create feeds from search results</title>
+    <link>http://localhost/ticket/1593</link>
+    <description>&lt;p&gt;
+Recent changes (see &lt;a class="closed ticket" href="http://localhost/ticket/191" title="enhancement: Searching by modification date (closed: fixed)"&gt;#191&lt;/a&gt; and &lt;a class="closed ticket" href="http://localhost/ticket/1498" title="enhancement: Support multiple SOLR schema versions (closed: fixed)"&gt;#1498&lt;/a&gt;) have made really easy to get search results ordered chronologically, and creating RSS or Atom feeds from them is relatively easy.
+&lt;/p&gt;
+&lt;p&gt;
+Feeds are extremely popular and there are several tools for consuming them, so it would be a great way to allow users to follow datasets related with their topics of interest.
+&lt;/p&gt;
+&lt;p&gt;
+Apart from the general feed with changes on the whole instance, other different "pre-set" feed endpoints could be implemented. The most obvious choices for custom feeds could be groups and tags:
+&lt;/p&gt;
+&lt;pre class="wiki"&gt;http://&amp;lt;ckan_server&amp;gt;/feed/group/{id}.{format:rss|atom}
+http://&amp;lt;ckan_server&amp;gt;/feed/tag/{id}.{format:rss|atom}
+&lt;/pre&gt;&lt;p&gt;
+These could be shown on the group/tag page, both on the &amp;lt;head&amp;gt; section, so browsers can autodiscover them, and on the UI, with a message like "Subscribe to this group/tag".
+&lt;/p&gt;
+&lt;p&gt;
+Another powerful option is to have a custom feed builder that accepts the same parameters as the search page, so users can subscribe to whatever query they are interested on
+&lt;/p&gt;
+&lt;pre class="wiki"&gt;http://&amp;lt;ckan_server&amp;gt;/feed/custom.{format:rss|atom}?res_format=api%2Fsparql
+http://&amp;lt;ckan_server&amp;gt;/feed/custom.{format:rss|atom}?q=tags:animal*
+&lt;/pre&gt;&lt;p&gt;
+On this case a message "Subscribe to these search results" would appear.
+&lt;/p&gt;
+&lt;p&gt;
+Note that a lot of work on this front needs to be done for the IATI registry project (see &lt;a class="closed ticket" href="http://localhost/ticket/1590" title="enhancement: Create customized feeds for the IATI Registry (closed: fixed)"&gt;#1590&lt;/a&gt;)
+&lt;/p&gt;
+&lt;p&gt;
+Other tickets related:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;a class="closed ticket" href="http://localhost/ticket/1592" title="enhancement: Add metadata_modified and metadata_created to package_dictize output (closed: fixed)"&gt;#1592&lt;/a&gt;: metadata_modified and metadata_created are not included in the search results, so an extra query for each package is needed right now.
+&lt;/li&gt;&lt;/ul&gt;</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1593</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>amercader</dc:creator>
+
+      <pubDate>Wed, 21 Dec 2011 17:39:42 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/1593#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1593#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1593?action=diff&amp;amp;version=1"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>icmurray</dc:creator>
+
+      <pubDate>Mon, 02 Apr 2012 16:44:12 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1593#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/1593#comment:2</guid>
+      <description>
+        &lt;p&gt;
+Implemented in branch &lt;a class="ext-link" href="https://github.com/okfn/ckan/commits/feature-1593-create-feeds-from-search-results"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;feature-1593-create-feeds-from-search-results&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+Not quite close as I've only included links to the atom feed in the &amp;lt;head&amp;gt;.  Will do that this week.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>icmurray</dc:creator>
+
+      <pubDate>Mon, 02 Apr 2012 16:44:35 GMT</pubDate>
+      <title>owner, status changed</title>
+      <link>http://localhost/ticket/1593#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/1593#comment:3</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;owner&lt;/strong&gt;
+              changed from &lt;em&gt;amercader&lt;/em&gt; to &lt;em&gt;icmurray&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;assigned&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>icmurray</dc:creator>
+
+      <pubDate>Mon, 02 Apr 2012 17:07:11 GMT</pubDate>
+      <title>milestone changed</title>
+      <link>http://localhost/ticket/1593#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/1593#comment:4</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan-v1.7&lt;/em&gt; to &lt;em&gt;current-ckan-sprint-2012-04-16&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>icmurray</dc:creator>
+
+      <pubDate>Mon, 16 Apr 2012 08:57:48 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/1593#comment:5</link>
+      <guid isPermaLink="false">http://localhost/ticket/1593#comment:5</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;assigned&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

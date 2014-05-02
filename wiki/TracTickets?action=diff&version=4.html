@@ -1,0 +1,579 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+    <html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      TracTickets (diff) – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="help" href="TracGuide.html" />
+        <link rel="up" href="TracTickets%3Faction=history.html" title="Page history" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/wiki.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/diff.css" type="text/css" />
+        <link rel="prev" href="TracTickets%3Faction=diff&amp;version=3.html" title="Version 3" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/diff.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="../chrome/common/css/diff.css" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last active"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="TracTickets%3Faction=diff&amp;version=3.html" title="Version 3">Previous Change</a></span></li><li><a href="TracTickets%3Faction=history.html" title="Page history">Wiki History</a></li><li class="last"><span class="missing">Next Change &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="wiki">
+      <h1>
+        Changes between
+          <a href="TracTickets%3Fversion=3.html">Version 3</a> and
+          <a href="TracTickets%3Fversion=4.html">Version 4</a> of
+          <a href="TracTickets%3Fversion=4.html">TracTickets</a>
+      </h1>
+      <form method="post" id="prefs" action="TracTickets%3Fversion=4.html"><div><input type="hidden" name="__FORM_TOKEN" value="93d81ccf9a7bb1c456462f62" /></div>
+        <div>
+          <input type="hidden" name="action" value="diff" />
+          <input type="hidden" name="version" value="4" />
+          <input type="hidden" name="old_version" value="3" />
+          
+  <label for="style">View differences</label>
+  <select id="style" name="style">
+    <option selected="selected" value="inline">inline</option>
+    <option value="sidebyside">side by side</option>
+  </select>
+  <div class="field">
+    <label><input type="radio" name="contextall" value="0" checked="checked" />
+             Show</label>
+      <label><input type="text" name="contextlines" id="contextlines" size="2" maxlength="3" value="2" />
+             lines around each change</label><br />
+    <label><input type="radio" name="contextall" value="1" />
+           Show the changes in full context</label>
+  </div>
+  <fieldset id="ignore">
+    <legend>Ignore:</legend>
+    <div class="field">
+      <input type="checkbox" id="ignoreblanklines" name="ignoreblanklines" />
+      <label for="ignoreblanklines">Blank lines</label>
+    </div>
+    <div class="field">
+      <input type="checkbox" id="ignorecase" name="ignorecase" />
+      <label for="ignorecase">Case changes</label>
+    </div>
+    <div class="field">
+      <input type="checkbox" id="ignorewhitespace" name="ignorewhitespace" />
+      <label for="ignorewhitespace">White space changes</label>
+    </div>
+  </fieldset>
+  <div class="buttons">
+    <input type="submit" name="update" value="Update" />
+  </div>
+
+        </div>
+      </form>
+      <dl id="overview">
+        <dt class="property time">Timestamp:</dt>
+        <dd class="time">
+            05/02/14 01:33:04 (<a class="timeline" href="../timeline%3Ffrom=2014-05-02T01:33:04Z&amp;precision=second.html" title="2014-05-02T01:33:04Z in Timeline">7 minutes</a> ago)
+        </dd>
+        <dt class="property author">Author:</dt>
+        <dd class="author">
+          trac
+        </dd>
+        <dt class="property message">Comment:</dt>
+        <dd class="message">
+          
+          <p>
+--
+</p>
+
+        </dd>
+      </dl>
+      <div class="diff">
+        <div class="legend" id="diff-legend">
+          <h3>Legend:</h3>
+          <dl>
+            <dt class="unmod"></dt><dd>Unmodified</dd>
+            <dt class="add"></dt><dd>Added</dd>
+            <dt class="rem"></dt><dd>Removed</dd>
+            <dt class="mod"></dt><dd>Modified</dd>
+          </dl>
+        </div>
+        <div class="diff">
+  <ul class="entries">
+      <li class="entry">
+        <h2 id="file0">
+          <a href="TracTickets%3Fversion=4.html">TracTickets</a>
+        </h2>
+        <table class="trac-diff inline" summary="Differences" cellspacing="0">
+              <colgroup><col class="lineno" /><col class="lineno" /><col class="content" /></colgroup>
+              <thead>
+                <tr>
+                  <th title="Version 3">
+                    <a href="TracTickets%3Fversion=3.html#L4">
+                      v3</a>
+                  </th>
+                  <th title="Version 4">
+                    <a href="TracTickets%3Fversion=4.html#L4">
+                      v4</a>
+                  </th>
+                  <td> </td>
+                </tr>
+              </thead>
+            <tbody class="unmod">
+                  <tr>
+                          <th>4</th><th>4</th><td class="l"><span>The Trac ticket database provides simple but effective tracking of issues and bugs within a project.</span> </td>
+                  </tr><tr>
+                          <th>5</th><th>5</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>6</th><th> </th><td class="l"><span>As the central project management element of Trac, tickets <del>are used for '''project tasks''', '''feature requests''', '''bug reports''' and '''software support issues'''</del>. </span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>6</th><td class="r"><span>As the central project management element of Trac, tickets <ins>can be used for '''project tasks''', '''feature requests''', '''bug reports''', '''software support issues''' among others</ins>. </span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>7</th><th>7</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>8</th><th> </th><td class="l"><span>As with the TracWiki, this subsystem has been designed with the goal of making user contribution and participation as simple as possible. It should be as easy as possible to report bugs, ask questions<del>&nbsp;and suggest improvement</del>s.</span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>8</th><td class="r"><span>As with the TracWiki, this subsystem has been designed with the goal of making user contribution and participation as simple as possible. It should be as easy as possible to report bugs, ask questions<ins>, suggest improvements and discuss resolution</ins>s.</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>9</th><th>9</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>10</th><th>10</th><td class="l"><span>An issue is assigned to a person who must resolve it or reassign the ticket to someone else.</span> </td>
+                  </tr><tr>
+                          <th>11</th><th>11</th><td class="l"><span>All tickets can be edited, annotated, assigned, prioritized and discussed at any time.</span> </td>
+                  </tr>
+            </tbody><tbody class="add">
+                  <tr class="first">
+                          <th> </th><th>12</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>13</th><td class="r"><ins>[=#edit-permissions]</ins> </td>
+                  </tr><tr class="last">
+                          <th> </th><th>14</th><td class="r"><ins>However, some Trac installations may put restrictions in place about who can change what. For example, the default installation doesn't permit to non-authenticated users ("anonymous" users) to change anything, even to comment on an issue, for obvious spam prevention reasons. Check the local contributing policy, which you can usually find on the front page WikiStart, or contact your local Trac administrator.</ins> </td>
+                  </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>12</th><th>15</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>13</th><th>16</th><td class="l"><span>== Ticket Fields ==</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracTickets%3Fversion=3.html#L15">…</a></th>
+                  <th><a href="TracTickets%3Fversion=4.html#L18">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>15</th><th>18</th><td class="l"><span>A&nbsp; ticket contains the following information attributes:</span> </td>
+                  </tr><tr>
+                          <th>16</th><th>19</th><td class="l"><span>&nbsp;</span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>17</th><th> </th><td class="l"><span>&nbsp;* '''Reporter''' - The author of the ticket.</span> </td>
+                      </tr><tr>
+                        <th>18</th><th> </th><td class="l"><span>&nbsp;* '''Type''' - The nature of the ticket (for example, defect or enhancement request)</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>20</th><td class="r"><span>&nbsp;* '''Reporter''' — The author of the ticket.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>21</th><td class="r"><span>&nbsp;* '''Type''' — The nature of the ticket (for example, defect or enhancement request). See TicketTypes for more details.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>22</th><td class="r"><span>&nbsp;* '''Component''' — The project module or subsystem this ticket concerns.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>23</th><td class="r"><span>&nbsp;* '''Version''' — Version of the project that this ticket pertains to.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>24</th><td class="r"><span>&nbsp;* '''Keywords''' — Keywords that a ticket is marked with. Useful for searching and report generation.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>25</th><td class="r"><span>&nbsp;* '''Priority''' — The importance of this issue, ranging from ''trivial'' to ''blocker''. A pull-down if different priorities where defined.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>26</th><td class="r"><span>&nbsp;* '''Milestone''' — When this issue should be resolved at the latest. A pull-down menu containing a list of milestones.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>27</th><td class="r"><span>&nbsp;* '''Assigned to/Owner''' — Principal person responsible for handling the issue.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>28</th><td class="r"><span>&nbsp;* '''Cc''' — A comma-separated list of other users or E-Mail addresses to notify. ''Note that this does not imply responsiblity or any other policy.''</span> </td>
+                      </tr><tr>
+                        <th> </th><th>29</th><td class="r"><span>&nbsp;* '''Resolution''' — Reason for why a ticket was closed. One of {{{fixed}}}, {{{invalid}}}, {{{wontfix}}}, {{{duplicate}}}, {{{worksforme}}}.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>30</th><td class="r"><span>&nbsp;* '''Status''' — What is the current status? One of {{{new}}}, {{{assigned}}}, {{{closed}}}, {{{reopened}}}.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>31</th><td class="r"><span>&nbsp;* '''Summary''' — A brief description summarizing the problem or issue. Simple text without WikiFormatting.</span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>32</th><td class="r"><span>&nbsp;* '''Description''' — The body of the ticket. A good description should be specific, descriptive and to the point. Accepts WikiFormatting.</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>19</th><th>33</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>20</th><th> </th><td class="l"><span>&nbsp;* '''Component''' - The project module or subsystem this ticket concerns.</span> </td>
+                      </tr><tr>
+                        <th>21</th><th> </th><td class="l"><span>&nbsp;* '''Version''' - Version of the project that this ticket pertains to.</span> </td>
+                      </tr><tr>
+                        <th>22</th><th> </th><td class="l"><span>&nbsp;* '''Keywords''' - Keywords that a ticket is marked with.&nbsp; Useful for searching and report generation.</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>34</th><td class="r"><span>'''Notes:''' </span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>35</th><td class="r"><span>&nbsp;- Versions of Trac prior to 0.9 did not have the ''type'' field, but instead provided a ''severity'' field and different default values for the ''priority'' field. This change was done to simplify the ticket model by removing the somewhat blurry distinction between ''priority'' and ''severity''. However, the old model is still available if you prefer it: just add/modify the default values of the ''priority'' and ''severity'', and optionally hide the ''type'' field by removing all the possible values through [wiki:TracAdmin trac-admin].</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>23</th><th>36</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>24</th><th> </th><td class="l"><span>&nbsp;* '''Priority''' - The importance of this issue, ranging from ''trivial'' to ''blocker''.</span> </td>
+                      </tr><tr>
+                        <th>25</th><th> </th><td class="l"><span>&nbsp;* '''Milestone''' - When this issue should be resolved at the latest.</span> </td>
+                      </tr><tr>
+                        <th>26</th><th> </th><td class="l"><span>&nbsp;* '''Assigned to/Owner''' - Principal person responsible for handling the issue.</span> </td>
+                      </tr><tr>
+                        <th>27</th><th> </th><td class="l"><span>&nbsp;* '''Cc''' - A comma-separated list of other users or E-Mail addresses to notify. ''Note that this does not imply responsiblity or any other policy.''</span> </td>
+                      </tr><tr>
+                        <th>28</th><th> </th><td class="l"><span>&nbsp;</span> </td>
+                      </tr><tr>
+                        <th>29</th><th> </th><td class="l"><span>&nbsp;* '''Resolution''' - Reason for why a ticket was closed. One of {{{fixed}}}, {{{invalid}}}, {{{wontfix}}}, {{{duplicate}}}, {{{worksforme}}}.</span> </td>
+                      </tr><tr>
+                        <th>30</th><th> </th><td class="l"><span>&nbsp;* '''Status''' - What is the current status? One of {{{new}}}, {{{assigned}}}, {{{closed}}}, {{{reopened}}}.</span> </td>
+                      </tr><tr>
+                        <th>31</th><th> </th><td class="l"><span>&nbsp;* '''Summary''' - A brief description summarizing the problem or issue.</span> </td>
+                      </tr><tr>
+                        <th>32</th><th> </th><td class="l"><span>&nbsp;* '''Description''' - The body of the ticket. A good description should be specific, descriptive and to the point.</span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>37</th><td class="r"><span>&nbsp;- the [trac:TicketTypes type], [trac:TicketComponent component], version, priority and severity fields can be managed with [wiki:TracAdmin trac-admin] or with the [trac:WebAdmin WebAdmin] plugin.</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>33</th><th>38</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>34</th><th> </th><td class="l"><span>'''Note:''' Versions of Trac prior to 0.9 did not have the ''type'' field, but instead provided a ''severity'' field and different default values for the ''priority'' field. This change was done to simplify the ticket model by removing the somewhat blurry distinction between ''priority'' and ''severity''. However, the old model is still available if you prefer it: just add/modify the default values of the ''priority'' and ''severity'', and optionally hide the ''type'' field by removing all the possible values through [wiki:TracAdmin trac-admin].</span> </td>
+                      </tr><tr>
+                        <th>35</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>36</th><th> </th><td class="l"><span>'''Note:''' the [wiki:TicketTypes type], [wiki:TicketComponent component], version, priority and severity fields can be managed with [wiki:TracAdmin trac-admin] or with the WebAdmin plugin.</span> </td>
+                      </tr><tr>
+                        <th>37</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>38</th><th> </th><td class="l"><span>'''Note:''' Description of the builtin ''priority'' values is available at [wiki:TicketTypes#Whyistheseverityfieldgone]</span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>39</th><td class="r"><span>&nbsp;- Description of the builtin ''priority'' values is available at [trac:TicketTypes#Whyistheseverityfieldgone TicketTypes]</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>39</th><th>40</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>40</th><th>41</th><td class="l"><span>== Changing and Commenting Tickets ==</span> </td>
+                  </tr><tr>
+                          <th>41</th><th>42</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>42</th><th> </th><td class="l"><span>Once a ticket has been entered into Trac, you can at any time change the</span> </td>
+                      </tr><tr>
+                        <th>43</th><th> </th><td class="l"><span>information by '''annotating''' the bug. This means changes and comments to</span> </td>
+                      </tr><tr>
+                        <th>44</th><th> </th><td class="l"><span>the ticket are logged as a part of the ticket itself.</span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>43</th><td class="r"><span>With appropriate permissions, as already mentioned [#edit-permissions above], a ticket entered into Trac can at any time be modified by '''annotating'''.</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>45</th><th>44</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>46</th><th> </th><td class="l"><span><del></del>When viewing a ticket, the history of changes will appear below the main ticket area.</span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>45</th><td class="r"><span><ins>Then, annotations like changes and comments to the ticket are logged as a part of the ticket itself. </ins>When viewing a ticket, the history of changes will appear below the main ticket area.</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>47</th><th>46</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>48</th><th> </th><td class="l"><span>''In the Trac project, we use ticket comments to discuss issues and tasks. This makes</span> </td>
+                      </tr><tr>
+                        <th>49</th><th> </th><td class="l"><span>understanding the motivation behind a design- or implementation choice easier,</span> </td>
+                      </tr><tr>
+                        <th>50</th><th> </th><td class="l"><span>when returning to it later.''</span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>47</th><td class="r"><span>Comment editing (available since 0.12) is meant to be used to make small corrections to comments, like fixing formatting, forgotten WikiFormatting or spelling errors, not major edits. For longer edits, you should be adding a new comment instead. Editing a comment will not produce a new entry on [/timeline] while entering a new comment or other changes will do.</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>51</th><th>48</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>52</th><th> </th><td class="l"><span>'''Note:''' An important feature is being able to use TracLinks and</span> </td>
+                      </tr><tr>
+                        <th>53</th><th> </th><td class="l"><span>WikiFormatting in ticket descriptions and comments. Use TracLinks to refer to</span> </td>
+                      </tr><tr>
+                        <th>54</th><th> </th><td class="l"><span>other issues, changesets or files to make your ticket more specific and easier</span> </td>
+                      </tr><tr>
+                        <th>55</th><th> </th><td class="l"><span>to understand.</span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>49</th><td class="r"><span>All edits (field changes, new comments, comment edits) update the "last changed" time of the ticket.</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>56</th><th>50</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="rem">
+                  <tr class="last first">
+                          <th>57</th><th> </th><td class="l"><del>'''Note:''' See TracNotification for how to configure email notifications of ticket changes.</del> </td>
+                  </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>58</th><th>51</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>59</th><th> </th><td class="l"><span>'''Note:''' See TracWorkflow for information about the state transitions (ticket lifecycle), and how this workflow can be customized.</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>52</th><td class="r"><span>'''Notes:''' </span> </td>
+                      </tr><tr>
+                        <th> </th><th>53</th><td class="r"><span>&nbsp;- An important feature is being able to use TracLinks and WikiFormatting in ticket descriptions and comments. Use TracLinks to refer to other issues, changesets or files to make your ticket more specific and easier to understand.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>54</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>55</th><td class="r"><span>&nbsp;- See TracNotification for how to configure email notifications of ticket changes.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>56</th><td class="r"><span></span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>57</th><td class="r"><span>&nbsp;- See TracWorkflow for information about the state transitions (ticket lifecycle), and how this workflow can be customized.</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>60</th><th>58</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>61</th><th>59</th><td class="l"><span>== Default Values for Drop-Down Fields ==</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracTickets%3Fversion=3.html#L69">…</a></th>
+                  <th><a href="TracTickets%3Fversion=4.html#L67">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>69</th><th>67</th><td class="l"><span>&nbsp;* `default_type`: Default ticket type</span> </td>
+                  </tr><tr>
+                          <th>70</th><th>68</th><td class="l"><span>&nbsp;* `default_version`: Name of the default version</span> </td>
+                  </tr>
+            </tbody><tbody class="add">
+                  <tr class="last first">
+                          <th> </th><th>69</th><td class="r"><ins>&nbsp;* `default_owner`: Name of the default owner. If set to the text "&lt; default &gt;" (the default value), the component owner is used.</ins> </td>
+                  </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>71</th><th>70</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>72</th><th> </th><td class="l"><span>If any of these options are omitted, the default value will either be the first in the list, or an empty value, depending on whether the field in question is required to be set.<del></del></span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>71</th><td class="r"><span>If any of these options are omitted, the default value will either be the first in the list, or an empty value, depending on whether the field in question is required to be set.<ins>&nbsp; Some of these can be chosen through the [trac:WebAdmin WebAdmin] plugin in the "Ticket System" section (others in the [[wiki:TracIni#ticket-section|"[ticket]"]] section in `trac.ini`).</ins></span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>73</th><th>72</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>74</th><th>73</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracTickets%3Fversion=3.html#L86">…</a></th>
+                  <th><a href="TracTickets%3Fversion=4.html#L85">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>86</th><th>85</th><td class="l"><span>To appear in the dropdown list, a user needs be registered with the project, ''i.e.'' a user session should exist in the database. Such an entry is automatically created in the database the first time the user submits a change in the project, for example when editing the user's details in the ''Settings'' page, or simply by authenticating if the user has a login. Also, the user must have `TICKET_MODIFY` [TracPermissions permissions].</span> </td>
+                  </tr><tr>
+                          <th>87</th><th>86</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="add">
+                  <tr class="first">
+                          <th> </th><th>87</th><td class="r"><ins>'''Notes:''' </ins> </td>
+                  </tr><tr>
+                          <th> </th><th>88</th><td class="r"><ins>&nbsp;- See [http://pacopablo.com/wiki/pacopablo/blog/set-assign-to-drop-down Populating Assign To Drop Down] on how to add user entries at database level</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>89</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>90</th><td class="r"><ins>&nbsp;- If you need serious flexibility and aren't afraid of a little plugin coding of your own, see [http://trac-hacks.org/wiki/FlexibleAssignToPlugin FlexibleAssignTo] (disclosure: I'm the author)</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>91</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>92</th><td class="r"><ins>&nbsp;-&nbsp; Activating this option may cause some performance degradation, read more about this in the [trac:TracPerformance#Configuration Trac performance] page.</ins> </td>
+                  </tr><tr class="last">
+                          <th> </th><th>93</th><td class="r"><ins></ins> </td>
+                  </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>88</th><th>94</th><td class="l"><span>== Preset Values for New Tickets ==</span> </td>
+                  </tr><tr>
+                          <th>89</th><th>95</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>90</th><th> </th><td class="l"><span>To create a link to the new-ticket form filled with preset values, you need to call the `/newticket?` URL with <del>variable=value separated by &amp;</del>. </span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>96</th><td class="r"><span>To create a link to the new-ticket form filled with preset values, you need to call the `/newticket?` URL with <ins>`variable=value` separated by `&amp;`</ins>. </span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>91</th><th>97</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>92</th><th>98</th><td class="l"><span>Possible variables are :</span> </td>
+                  </tr><tr>
+                          <th>93</th><th>99</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>94</th><th> </th><td class="l"><span>&nbsp;* '''type''' <del>-</del> The type droplist</span> </td>
+                      </tr><tr>
+                        <th>95</th><th> </th><td class="l"><span>&nbsp;* '''reporter''' <del>-</del> Name or email of the reporter</span> </td>
+                      </tr><tr>
+                        <th>96</th><th> </th><td class="l"><span>&nbsp;* '''summary''' <del>-</del> Summary line for the ticket</span> </td>
+                      </tr><tr>
+                        <th>97</th><th> </th><td class="l"><span>&nbsp;* '''description''' <del>-</del> Long description of the ticket</span> </td>
+                      </tr><tr>
+                        <th>98</th><th> </th><td class="l"><span>&nbsp;* '''component''' <del>-</del> The component droplist</span> </td>
+                      </tr><tr>
+                        <th>99</th><th> </th><td class="l"><span>&nbsp;* '''version''' <del>-</del> The version droplist</span> </td>
+                      </tr><tr>
+                        <th>100</th><th> </th><td class="l"><span>&nbsp;* '''severity''' <del>-</del> The severity droplist</span> </td>
+                      </tr><tr>
+                        <th>101</th><th> </th><td class="l"><span>&nbsp;* '''keywords''' <del>-</del> The keywords </span> </td>
+                      </tr><tr>
+                        <th>102</th><th> </th><td class="l"><span>&nbsp;* '''priority''' <del>-</del> The priority droplist</span> </td>
+                      </tr><tr>
+                        <th>103</th><th> </th><td class="l"><span>&nbsp;* '''milestone''' <del>-</del> The milestone droplist</span> </td>
+                      </tr><tr>
+                        <th>104</th><th> </th><td class="l"><span>&nbsp;* '''owner''' <del>-</del> The person responsible for the ticket</span> </td>
+                      </tr><tr>
+                        <th>105</th><th> </th><td class="l"><span>&nbsp;* '''cc''' <del>-</del> The list of emails for notifying about the ticket change</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>100</th><td class="r"><span>&nbsp;* '''type''' <ins>—</ins> The type droplist</span> </td>
+                      </tr><tr>
+                        <th> </th><th>101</th><td class="r"><span>&nbsp;* '''reporter''' <ins>—</ins> Name or email of the reporter</span> </td>
+                      </tr><tr>
+                        <th> </th><th>102</th><td class="r"><span>&nbsp;* '''summary''' <ins>—</ins> Summary line for the ticket</span> </td>
+                      </tr><tr>
+                        <th> </th><th>103</th><td class="r"><span>&nbsp;* '''description''' <ins>—</ins> Long description of the ticket</span> </td>
+                      </tr><tr>
+                        <th> </th><th>104</th><td class="r"><span>&nbsp;* '''component''' <ins>—</ins> The component droplist</span> </td>
+                      </tr><tr>
+                        <th> </th><th>105</th><td class="r"><span>&nbsp;* '''version''' <ins>—</ins> The version droplist</span> </td>
+                      </tr><tr>
+                        <th> </th><th>106</th><td class="r"><span>&nbsp;* '''severity''' <ins>—</ins> The severity droplist</span> </td>
+                      </tr><tr>
+                        <th> </th><th>107</th><td class="r"><span>&nbsp;* '''keywords''' <ins>—</ins> The keywords </span> </td>
+                      </tr><tr>
+                        <th> </th><th>108</th><td class="r"><span>&nbsp;* '''priority''' <ins>—</ins> The priority droplist</span> </td>
+                      </tr><tr>
+                        <th> </th><th>109</th><td class="r"><span>&nbsp;* '''milestone''' <ins>—</ins> The milestone droplist</span> </td>
+                      </tr><tr>
+                        <th> </th><th>110</th><td class="r"><span>&nbsp;* '''owner''' <ins>—</ins> The person responsible for the ticket</span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>111</th><td class="r"><span>&nbsp;* '''cc''' <ins>—</ins> The list of emails for notifying about the ticket change</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>106</th><th>112</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>107</th><th> </th><td class="l"><span><del>'''Example:''' ''/trac/newticket?summary=Compile%20Error&amp;version=1.0&amp;component=gui</del>''[[BR]]</span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>113</th><td class="r"><span><ins>Example: ''`[/newticket?summary=Compile%20Error&amp;version=1.0&amp;component=gui]`</ins>''[[BR]]</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>108</th><th>114</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>109</th><th>115</th><td class="l"><span>----</span> </td>
+                  </tr>
+            </tbody>
+        </table>
+      </li>
+  </ul>
+</div>
+      </div>
+  </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

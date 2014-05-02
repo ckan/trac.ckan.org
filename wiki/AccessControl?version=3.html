@@ -1,0 +1,248 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      AccessControl – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="help" href="TracGuide.html" />
+        <link rel="alternate" href="AccessControl%3Fversion=3&amp;format=txt" type="text/x-trac-wiki" title="Plain Text" />
+        <link rel="up" href="AccessControl.html" title="View latest version" />
+        <link rel="next" href="AccessControl%3Fversion=4.html" title="Version 4" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/wiki.css" type="text/css" />
+        <link rel="prev" href="AccessControl%3Fversion=2.html" title="Version 2" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("#content").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $("#content").find(".wikianchor").each(function() {
+          $(this).addAnchor(babel.format(_("Link to #%(id)s"), {id: $(this).attr('id')}));
+        });
+        $(".foldable").enableFolding(true, true);
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last active"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="pagepath" class="noprint">
+  <a class="pathentry first" title="View WikiStart" href="../wiki.1.html">wiki:</a><a class="pathentry" href="AccessControl.html" title="View AccessControl">AccessControl</a>
+</div>
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="AccessControl%3Fversion=2.html" title="Version 2">Previous Version</a></span></li><li><a href="AccessControl.html" title="View latest version">View Latest Version</a></li><li class="last"><span><a class="next" href="AccessControl%3Fversion=4.html" title="Version 4">Next Version</a> &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="wiki">
+        <br />
+        <table id="info" summary="Revision info">
+          <tbody>
+            <tr><th scope="row">Version 3 (modified by rgrp, <a class="timeline" href="../timeline%3Ffrom=2009-09-02T10:00:34Z&amp;precision=second.html" title="2009-09-02T10:00:34Z in Timeline">5 years</a> ago)
+               (<a href="AccessControl%3Faction=diff&amp;version=3.html">diff</a>)</th></tr>
+            <tr><td class="message">
+              <p>
+--
+</p>
+
+            </td></tr>
+          </tbody>
+        </table>
+      <div class="wikipage searchable">
+        
+          
+          
+          <div id="wikipage"><h1 id="Accesscontrol">Access control</h1>
+<p>
+</p><div class="wiki-toc">
+<ol>
+  <li>
+    <a href="AccessControl%3Fversion=3.html#Accesscontrol">Access control</a>
+    <ol>
+      <li>
+        <a href="AccessControl%3Fversion=3.html#UseCases">Use Cases</a>
+      </li>
+      <li>
+        <a href="AccessControl%3Fversion=3.html#Optional">Optional</a>
+      </li>
+      <li>
+        <a href="AccessControl%3Fversion=3.html#Implementation">Implementation</a>
+        <ol>
+          <li>
+            <a href="AccessControl%3Fversion=3.html#Determiningpermissions">Determining permissions</a>
+          </li>
+          <li>
+            <a href="AccessControl%3Fversion=3.html#InitializingPermissionsforaPackage">Initializing Permissions for a Package</a>
+          </li>
+          <li>
+            <a href="AccessControl%3Fversion=3.html#DBSketch">DB Sketch</a>
+          </li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+</ol>
+</div><p>
+</p>
+<p>
+When a new package is created you as the creator automatically become admin for it and you can assign which other users have write or read access. NB: by default any user (including someone who is not-logged-in) will be able to read and write.
+</p>
+<p>
+There are "system" level admins for CKAN who may alter permissions on any package.
+</p>
+<h2 id="UseCases">Use Cases</h2>
+<ul><li>A user means someone who is logged in.
+</li><li>A visitor means someone who is not logged in.
+</li><li>An entity is the subject of a permission (either a user or a pseudo-user)
+</li><li>There are roles named: Admin, Reader, Writer
+</li></ul><ol><li>A visitor visits a package page and reads the content
+</li></ol><ol start="2"><li>A visitor visits a package page and edits the package
+</li></ol><p>
+3+4: Ditto for a user
+</p>
+<ol start="5"><li>On package creation if done by a user and not a visitor then user is made the 'admin'
+</li></ol><ol start="6"><li>An admin of a package adds a user as an admin
+</li></ol><ol start="7"><li>An admin of a package removes a user as an admin
+</li></ol><ol start="8"><li>Ditto for admin re. editor
+</li></ol><ol start="9"><li>Ditto for admin re. reader
+</li></ol><ol start="10"><li>We wish to be able assign roles to 2 specific entire groups in addition to specific users: 'visitor', 'users'. These will be termed pseudo-users as we do not have AC 'groups' as such.
+</li></ol><ol start="11"><li>The sysadmin alters the assignment of entities to roles for any package
+</li></ol><ol start="12"><li>A visitor goes to a package where the editor role does not include 'visitor' pseudo-user. They are unable to edit the package.
+</li></ol><ol start="13"><li>Ditto for user where users pseudo-user does not have editor role and user is not an editor for the package
+</li></ol><p>
+14+15: Ditto for above re reader role ...
+</p>
+<h2 id="Optional">Optional</h2>
+<ul><li>Support for access-related groups
+</li><li>Support for blacklisting
+</li></ul><h2 id="Implementation">Implementation</h2>
+<pre class="wiki">      Context
+Entity ----&gt; Role
+
+E.g. a user is assigned to a given role for a particular package.
+
+    Context
+Role ----&gt; Action/Permission/Capability (on an Object e.g. a Package)
+</pre><p>
+Package level:
+</p>
+<ul><li>Package Roles: admin, editor, reader
+</li><li>Entities: xyz@… (user), pseudo-users 'visitor'
+</li><li>Assignment of entities to roles in a given context (the package)
+</li><li>Roles give permissions (in a given context)
+<ul><li>admin -&gt; update assignment to roles, delete package, plus editor
+</li><li>editor -&gt; update package plus reader
+</li><li>reader -&gt; read package
+</li></ul></li></ul><p>
+System level permissions:
+</p>
+<ul><li>Roles:??
+</li><li>create package 
+</li><li>update assignment of system level role
+</li></ul><h3 id="Determiningpermissions">Determining permissions</h3>
+<pre class="wiki">def is_allowed(name, action, context=None):
+    user = locate_user(name)
+    if not user:
+        # they are a visitor ...
+   
+    if context is None:
+        context = 'system'
+    contextroles = locate_roles(user, context)
+    if context != 'system':
+        sysrole =
+        if sysrole = 'sysadmin':
+            # can do anything ...
+            return True
+    for role in contextroles:
+        # assuming 'ORing' of permissions
+        if role.is_allowed(action)
+            return True
+    if visitor:
+        visitor_role = locate_roles(visitor, context)
+        # check again
+    return False
+</pre><h3 id="InitializingPermissionsforaPackage">Initializing Permissions for a Package</h3>
+<blockquote>
+<p>
+when we create a package: visitor is given reader and editor roles automatically (ditto for user)
+</p>
+</blockquote>
+<h3 id="DBSketch">DB Sketch</h3>
+<pre class="wiki">role-table
+
+name | context | action
+admin| package | update
+admin| package | update-permissions
+admin| package | read
+editor| package | update
+editor| package | read
+
+user-role-table
+
+username | context_type | objectid | role
+xyz      | package | geonames | admin
+rgrp     | system  |   | admin
+visitor  | package |   | reader
+visitor  | package | geonames  | editor 
+visitor  | package | geonames | reader
+
+</pre></div>
+        
+        
+      </div>
+      
+
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="last first">
+          <a rel="nofollow" href="AccessControl%3Fversion=3&amp;format=txt">Plain Text</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

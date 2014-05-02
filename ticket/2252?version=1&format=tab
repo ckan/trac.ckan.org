@@ -1,0 +1,28 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2252	UKLP harvesters returning errors when importing due to schema changes	amercader	amercader	"See trace below.
+
+
+As in #2231, the schema passed with the context is no longer used on the logic layer (in this case the one used on the DGU form is used). This can be fixed allowing a schema to be passed with the context.
+
+{{{
+  File ""/var/lib/ckan/std/pyenv/src/ckanext-inspire/ckanext/inspire/harvesters.py"", line 139, in import_stage
+    self.import_gemini_object(harvest_object.content)
+  File ""/var/lib/ckan/std/pyenv/src/ckanext-inspire/ckanext/inspire/harvesters.py"", line 163, in import_gemini_object
+    package = self.write_package_from_gemini_string(unicode_gemini_string)
+  File ""/var/lib/ckan/std/pyenv/src/ckanext-inspire/ckanext/inspire/harvesters.py"", line 386, in write_package_from_gemin
+    package = self._create_package_from_data(package_dict, package = package)
+  File ""/var/lib/ckan/std/pyenv/src/ckanext-inspire/ckanext/inspire/harvesters.py"", line 486, in _create_package_from_dat
+    package_dict = action_function(context, package_dict)
+  File ""/usr/lib/pymodules/python2.6/ckan/logic/action/update.py"", line 169, in package_update
+    data, errors = validate(data_dict, schema, context)
+  File ""/usr/lib/pymodules/python2.6/ckan/lib/navl/dictization_functions.py"", line 216, in validate
+    converted_data, errors = _validate(flattened, schema, context)
+  File ""/usr/lib/pymodules/python2.6/ckan/lib/navl/dictization_functions.py"", line 289, in _validate
+    convert(converter, key, converted_data, errors, context)
+  File ""/usr/lib/pymodules/python2.6/ckan/lib/navl/dictization_functions.py"", line 179, in convert
+    converter(key, converted_data, errors, context)
+  File ""/var/lib/ckan/std/pyenv/src/ckanext-dgu/ckanext/dgu/validators.py"", line 81, in validate_license
+    if data[('license_id',)]== '__extra__':
+KeyError: ('access_constraints',)
+2012-03-19 10:47:41,736 ERROR [ckanext.inspire.harvesters] Error importing Gemini document: ('access_constraints',)
+}}}"	defect	closed	major	ckan-sprint-2012-04-02	ckan	fixed	uklp		ckan	none

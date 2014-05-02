@@ -1,0 +1,5 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2983,Refactor lib/base.py to remove circular import issues,seanh,,"From Toby: c) refactor lib/base.py to remove the circular import issues (render
+functions to lib/render.py - would fix much of that)
+
+",refactor,new,awaiting triage,ckan 2.0,ckan,,,,ckan,none

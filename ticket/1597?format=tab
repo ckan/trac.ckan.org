@@ -1,0 +1,13 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1597	Tag search - filter by group	dread		"I want to browse tags, but filtered for a particular group. Currently our tag API doesn't allow for filtering by group. 
+
+This is important for improving groups as communities within a site #1521. It would be easy to do this by adding an option to filter by a group. BUT are there any other use cases that would warrant a more complete faceted tag search?
+
+--
+
+BTW I can currently draw a tag cloud for a group - I can get the top tags used in a group like this:
+
+curl http://thedatahub.org/api/action/package_search -d
+'{""q"":""groups:country-ca"", ""facet.field"":""tags"", ""rows"":""0""}'
+
+but it only contains the top 20 tags."	enhancement	closed	minor	ckan-sprint-2012-01-23	ckan	fixed			ckan	none

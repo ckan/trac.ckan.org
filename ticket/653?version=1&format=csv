@@ -1,0 +1,13 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+653,Trackback links for packages,dread,,"When people link to a package, a track-back link is auto-created. (Similar system as for blogs). 
+
+As suggested by Tim Davies: 
+
+Allowing some form of ‘track back’ against datasets
+When a non-technical user comes to look at a dataset it would be really useful for them to be able to see if anyone has created an interface interpretation of it already.
+
+
+I found quite a few cases in research of end-users struggling to make sense of a dataset when good interfaces to that data had already been built and blogged about, but without there being any link from the dataset listing to those data uses.
+ 
+Accepting track backs could also make it easier for technical users to find blog posts / shared code etc. relating to a given dataset.
+",requirement,new,,,ckan,,,,,

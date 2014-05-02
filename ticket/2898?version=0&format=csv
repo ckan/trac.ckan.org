@@ -1,0 +1,6 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2898,Looses data entered on step 1 of create dataset after login,johnmartin,,"To reproduce:
+
+1. Enter details for new dataset without being logged in
+2. Hit login page for just before step 2
+3. Once logged in you end up back at the empty add dataset form (instead of expected 2nd step of dataset edit)",defect,new,awaiting triage,demo phase 5,ckan,,,,ckan,none

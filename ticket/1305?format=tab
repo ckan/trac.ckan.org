@@ -1,0 +1,9 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1305	SMTP config for thedatahub.org and IATI	amercader	nils.toedtmann	"The email sending functionality (e.g for password reset) does not work on thedatahub.org and IATI (and probably some other instances) when using an address which is not a okfn.org one.
+
+Could not send reset link:
+SMTPRecipientsRefused({u'amercadero@gmail.com': (550, 'relay not
+permitted')},)
+
+As I said, adria.mercader@okfn.org works fine.
+The SMTP server used mail.okfn.org"	defect	closed	critical	ckan-backlog	ckan	fixed			ckan	none

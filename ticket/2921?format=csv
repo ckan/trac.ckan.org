@@ -1,0 +1,16 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2921,Add docstring to top of lib/extract.py file,seanh,,"I think it couldn't hurt for this module to have a docstring at the top
+of the file explaining what the module is for. I know from setup.py that
+it's there to provide the extract_ckan() string extractor function for
+Babel, but I think looking at the file on its own it's not so obvious.
+
+Also a couple of other small fixes:
+
+jinja2_cleaner looks like a helper function only meant to be used by
+extract_ckan(), might make things clearer if it was called
+_jinja2_cleaner(), just so it doesn't look like a public function the
+module wants to export.
+
+jinja_extensions seems to be a module-level variable that is only used
+in one function, could be moved into the function, unless you think
+there might be more functions that want it in future.",defect,new,awaiting triage,ckan 2.0,ckan,,,,ckan,none

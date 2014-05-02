@@ -1,0 +1,6 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1830	OpenID disablable	dread	dread	"Allow OpenID to be disabled as a login option. 
+
+Currently (CKAN 1.6) there is a config option openid_enabled which stops the login option being displayed, but:
+ * In the User edit form you can still add your OpenID
+ * The repoze.who.openid middleware is still required - can it be avoided?"	enhancement	closed	major	ckan-sprint-2012-03-05	ckan	fixed		thejimmyg	ckan	none

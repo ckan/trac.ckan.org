@@ -1,0 +1,2 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1033,Register user with blank password causes 500,dread,dread,Go to http://ckan.net/user/register and fill in all the fields apart from password. On submit you get 500 error.,defect,closed,minor,,ckan,fixed,,,ckan,none

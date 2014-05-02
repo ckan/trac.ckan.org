@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2892,IDatasetForm's form_to_db_schema() breaks API?,seanh,,"It looks like when an IDatasetForm plugin with a form_to_db_schema() method is active, then the posted data dict is validated against the schema even if the user is posting to an API endpoint like /api/action/package_update etc. This breaks the API, for example 'name' and 'title' are optional keys for package_update (you can supply only the 'id'), but the schema validation will fail if either are not present in the posted dict.
+
+It may be we need different schema for package create and package update, currently IDatasetForm has just the one form_to_db_schema() method.",defect,new,awaiting triage,ckan-v1.8.1,ckan,,,,ckan,none

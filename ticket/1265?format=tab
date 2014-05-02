@@ -1,0 +1,8 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1265	user/edit error conditions cause exceptions	dread	dread	"We get exceptions on these occasions:
+ * user/edit if not logged in
+ * user/edit/bob if bob is not a known user
+
+These are a problem only on 1.4.3b.
+
+Introduced in #1229 - merge of branch feature-1229-db-out-of-controllers"	defect	closed	minor	ckan-sprint-2011-10-28	ckan	fixed		amercader	ckan	none

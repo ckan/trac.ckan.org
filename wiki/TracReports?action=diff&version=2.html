@@ -1,0 +1,325 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+    <html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      TracReports (diff) – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="help" href="TracGuide.html" />
+        <link rel="up" href="TracReports%3Faction=history.html" title="Page history" />
+        <link rel="next" href="TracReports%3Faction=diff&amp;version=3.html" title="Version 3" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/wiki.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/diff.css" type="text/css" />
+        <link rel="prev" href="TracReports%3Faction=diff&amp;version=1.html" title="Version 1" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/diff.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="../chrome/common/css/diff.css" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last active"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="TracReports%3Faction=diff&amp;version=1.html" title="Version 1">Previous Change</a></span></li><li><a href="TracReports%3Faction=history.html" title="Page history">Wiki History</a></li><li class="last"><span><a class="next" href="TracReports%3Faction=diff&amp;version=3.html" title="Version 3">Next Change</a> &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="wiki">
+      <h1>
+        Changes between
+          <a href="TracReports%3Fversion=1.html">Version 1</a> and
+          <a href="TracReports%3Fversion=2.html">Version 2</a> of
+          <a href="TracReports%3Fversion=2.html">TracReports</a>
+      </h1>
+      <form method="post" id="prefs" action="TracReports%3Fversion=2.html"><div><input type="hidden" name="__FORM_TOKEN" value="93d81ccf9a7bb1c456462f62" /></div>
+        <div>
+          <input type="hidden" name="action" value="diff" />
+          <input type="hidden" name="version" value="2" />
+          <input type="hidden" name="old_version" value="1" />
+          
+  <label for="style">View differences</label>
+  <select id="style" name="style">
+    <option selected="selected" value="inline">inline</option>
+    <option value="sidebyside">side by side</option>
+  </select>
+  <div class="field">
+    <label><input type="radio" name="contextall" value="0" checked="checked" />
+             Show</label>
+      <label><input type="text" name="contextlines" id="contextlines" size="2" maxlength="3" value="2" />
+             lines around each change</label><br />
+    <label><input type="radio" name="contextall" value="1" />
+           Show the changes in full context</label>
+  </div>
+  <fieldset id="ignore">
+    <legend>Ignore:</legend>
+    <div class="field">
+      <input type="checkbox" id="ignoreblanklines" name="ignoreblanklines" />
+      <label for="ignoreblanklines">Blank lines</label>
+    </div>
+    <div class="field">
+      <input type="checkbox" id="ignorecase" name="ignorecase" />
+      <label for="ignorecase">Case changes</label>
+    </div>
+    <div class="field">
+      <input type="checkbox" id="ignorewhitespace" name="ignorewhitespace" />
+      <label for="ignorewhitespace">White space changes</label>
+    </div>
+  </fieldset>
+  <div class="buttons">
+    <input type="submit" name="update" value="Update" />
+  </div>
+
+        </div>
+      </form>
+      <dl id="overview">
+        <dt class="property time">Timestamp:</dt>
+        <dd class="time">
+            07/30/07 11:26:42 (<a class="timeline" href="../timeline%3Ffrom=2007-07-30T11:26:42Z&amp;precision=second.html" title="2007-07-30T11:26:42Z in Timeline">7 years</a> ago)
+        </dd>
+        <dt class="property author">Author:</dt>
+        <dd class="author">
+          trac
+        </dd>
+        <dt class="property message">Comment:</dt>
+        <dd class="message">
+          
+          <p>
+--
+</p>
+
+        </dd>
+      </dl>
+      <div class="diff">
+        <div class="legend" id="diff-legend">
+          <h3>Legend:</h3>
+          <dl>
+            <dt class="unmod"></dt><dd>Unmodified</dd>
+            <dt class="add"></dt><dd>Added</dd>
+            <dt class="rem"></dt><dd>Removed</dd>
+            <dt class="mod"></dt><dd>Modified</dd>
+          </dl>
+        </div>
+        <div class="diff">
+  <ul class="entries">
+      <li class="entry">
+        <h2 id="file0">
+          <a href="TracReports%3Fversion=2.html">TracReports</a>
+        </h2>
+        <table class="trac-diff inline" summary="Differences" cellspacing="0">
+              <colgroup><col class="lineno" /><col class="lineno" /><col class="content" /></colgroup>
+              <thead>
+                <tr>
+                  <th title="Version 1">
+                    <a href="TracReports%3Fversion=1.html#L10">
+                      v1</a>
+                  </th>
+                  <th title="Version 2">
+                    <a href="TracReports%3Fversion=2.html#L10">
+                      v2</a>
+                  </th>
+                  <td> </td>
+                </tr>
+              </thead>
+            <tbody class="unmod">
+                  <tr>
+                          <th>10</th><th>10</th><td class="l"><span>&nbsp; '''Note:''' ''The report module is being phased out in its current form because it seriously limits the ability of the Trac team to make adjustments to the underlying database schema. We believe that the [wiki:TracQuery query module] is a good replacement that provides more flexibility and better usability. While there are certain reports that cannot yet be handled by the query module, we intend to further enhance it so that at some point the reports module can be completely removed. This also means that there will be no major enhancements to the report module anymore.''</span> </td>
+                  </tr><tr>
+                          <th>11</th><th>11</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>12</th><th> </th><td class="l"><span>&nbsp; ''You can already completely replace the reports module by the query module simply b<del>e</del> disabling the former in [wiki:TracIni trac.ini]:''</span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>12</th><td class="r"><span>&nbsp; ''You can already completely replace the reports module by the query module simply b<ins>y</ins> disabling the former in [wiki:TracIni trac.ini]:''</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>13</th><th>13</th><td class="l"><span>&nbsp; {{{</span> </td>
+                  </tr><tr>
+                          <th>14</th><th>14</th><td class="l"><span>&nbsp; [components]</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracReports%3Fversion=1.html#L30">…</a></th>
+                  <th><a href="TracReports%3Fversion=2.html#L30">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>30</th><th>30</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>31</th><th>31</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>32</th><th> </th><td class="l"><span>== Alternat<del></del>e Download Formats ==</span> </td>
+                      </tr><tr>
+                        <th>33</th><th> </th><td class="l"><span>Aside from the default HTML view, reports can also be exported in a number of alternat<del></del>e formats.</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>32</th><td class="r"><span>== Alternat<ins>iv</ins>e Download Formats ==</span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>33</th><td class="r"><span>Aside from the default HTML view, reports can also be exported in a number of alternat<ins>iv</ins>e formats.</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>34</th><th>34</th><td class="l"><span>At the bottom of the report page, you will find a list of available data formats. Click the desired link to </span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>35</th><th> </th><td class="l"><span>download the alternat<del></del>e report format.</span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>35</th><td class="r"><span>download the alternat<ins>iv</ins>e report format.</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>36</th><th>36</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>37</th><th>37</th><td class="l"><span>=== Comma-delimited - CSV (Comma Separated Values) ===</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracReports%3Fversion=1.html#L155">…</a></th>
+                  <th><a href="TracReports%3Fversion=2.html#L155">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>155</th><th>155</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>156</th><th>156</th><td class="l"><span>=== Custom formatting columns ===</span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>157</th><th> </th><td class="l"><span>Columns whose names begin and end with 2 underscores (Example: '''<del>_''''''_color_''''''_</del>''') are</span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>157</th><td class="r"><span>Columns whose names begin and end with 2 underscores (Example: '''<ins>`__color__`</ins>''') are</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>158</th><th>158</th><td class="l"><span>assumed to be ''formatting hints'', affecting the appearance of the row.</span> </td>
+                  </tr><tr>
+                          <th>159</th><th>159</th><td class="l"><span>&nbsp;</span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>160</th><th> </th><td class="l"><span>&nbsp;* '''<del>_''''''_group_''''''_</del>''' -- Group results based on values in this column. Each group will have its own header and table.</span> </td>
+                      </tr><tr>
+                        <th>161</th><th> </th><td class="l"><span>&nbsp;* '''<del>_''''''_color_''''''_</del>''' -- Should be a numeric value ranging from 1 to 5 to select a pre-defined row color. Typically used to color rows by issue priority.</span> </td>
+                      </tr><tr>
+                        <th>162</th><th> </th><td class="l"><span>&nbsp;* '''<del>_''''''_style_''''''_</del>''' -- A custom CSS style expression to use for the current row. </span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>160</th><td class="r"><span>&nbsp;* '''<ins>`__group__`</ins>''' -- Group results based on values in this column. Each group will have its own header and table.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>161</th><td class="r"><span>&nbsp;* '''<ins>`__color__`</ins>''' -- Should be a numeric value ranging from 1 to 5 to select a pre-defined row color. Typically used to color rows by issue priority.</span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>162</th><td class="r"><span>&nbsp;* '''<ins>`__style__`</ins>''' -- A custom CSS style expression to use for the current row. </span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>163</th><th>163</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>164</th><th>164</th><td class="l"><span>'''Example:''' ''List active tickets, grouped by milestone, colored by priority''</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracReports%3Fversion=1.html#L182">…</a></th>
+                  <th><a href="TracReports%3Fversion=2.html#L182">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>182</th><th>182</th><td class="l"><span>also possible to create multi-line report entries.</span> </td>
+                  </tr><tr>
+                          <th>183</th><th>183</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>184</th><th> </th><td class="l"><span>&nbsp;* '''<del>column_</del>''' -- ''Break row after this''. By appending an underscore ('_') to the column name, the remaining columns will be be continued on a second line.</span> </td>
+                      </tr><tr>
+                        <th>185</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>186</th><th> </th><td class="l"><span>&nbsp;* '''<del>_column_</del>''' -- ''Full row''. By adding an underscore ('_') both at the beginning and the end of a column name, the data will be shown on a separate row.</span> </td>
+                      </tr><tr>
+                        <th>187</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>188</th><th> </th><td class="l"><span>&nbsp;* '''<del>_column</del>'''&nbsp; --&nbsp; ''Hide data''. Prepending an underscore ('_') to a column name instructs Trac to hide the contents from the HTML output. This is useful for information to be visible only if downloaded in other formats (like CSV or RSS/XML).</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>184</th><td class="r"><span>&nbsp;* '''<ins>`column_`</ins>''' -- ''Break row after this''. By appending an underscore ('_') to the column name, the remaining columns will be be continued on a second line.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>185</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>186</th><td class="r"><span>&nbsp;* '''<ins>`_column_`</ins>''' -- ''Full row''. By adding an underscore ('_') both at the beginning and the end of a column name, the data will be shown on a separate row.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>187</th><td class="r"><span></span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>188</th><td class="r"><span>&nbsp;* '''<ins>`_column`</ins>'''&nbsp; --&nbsp; ''Hide data''. Prepending an underscore ('_') to a column name instructs Trac to hide the contents from the HTML output. This is useful for information to be visible only if downloaded in other formats (like CSV or RSS/XML).</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>189</th><th>189</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>190</th><th>190</th><td class="l"><span>'''Example:''' ''List active tickets, grouped by milestone, colored by priority, with&nbsp; description and multi-line layout''</span> </td>
+                  </tr>
+            </tbody>
+        </table>
+      </li>
+  </ul>
+</div>
+      </div>
+  </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

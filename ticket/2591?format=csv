@@ -1,0 +1,6 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2591,postgres unicode problems postgres v9.1.4,toby,toby,"sqlalchemy fails on postgres 9.1.4 when unicode is returned
+
+see http://docs.sqlalchemy.org/en/rel_0_7/dialects/postgresql.html
+
+",enhancement,closed,critical,ckan-v1.8,ckan,fixed,,,ckan,none

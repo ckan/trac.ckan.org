@@ -1,0 +1,10 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+73,Put enquiry template in db so it can be edited by admins,rgrp,rgrp,"Currently stored in the python controller file. This is not the right place and putting it in db will allow editing by admins.
+
+May also want to do this for the footer (also in the controller file).
+
+Details:
+
+  * Will need to create a new domain object/db table. Suggest called miscellaneous and consist of key value pairs utilizing JSON type for values.
+
+Cost: 2h.",enhancement,closed,major,,isitopen,invalid,,,,

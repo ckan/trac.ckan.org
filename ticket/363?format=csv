@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+363,Blank revisions,dread,kindly,"Occasionally we seem to get revisions that are not connected to packages. These shouldn't appear, since all revisioned objects are linked to a package aren't they?
+
+They appear on the 'Recently changed' list on the home page with an empty 'Packages' column.",defect,closed,trivial,ckan-backlog,ckan,wontfix,,,ckan,none

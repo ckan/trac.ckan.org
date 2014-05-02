@@ -1,0 +1,16 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2807	autocomplete.js error	toby	aron.carroll	"@aron,
+
+
+edit dataset has a js error
+
+
+http://localhost:5000/dataset/edit/1-kmwaterfractionfromnationaltopographicdatabasemapscanada
+
+
+TypeError: options is undefined
+[Break On This Error] 	
+
+this.lookup(options.term, options.callback);
+
+autocomplete.js (line 231)"	enhancement	closed	critical	demo phase 3	ckan	fixed			ckan	none

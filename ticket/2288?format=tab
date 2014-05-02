@@ -1,0 +1,10 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2288	Fix i18n of strings on auth group add/edit pages	seanh		"There are a couple of strings on the authorization group add/edit form that are not being translated:
+
+""Name: Please enter a value"" (error message when you try to add an auth group with no name)
+
+""User name""
+
+""Save"" button
+
+The form seems to be built using FormBuilder. See ckan/forms/authorizationgroup.py, builder.set_displayed_fields()"	defect	closed	awaiting triage	ckan-v1.7	ckan	wontfix	ecportal i18n		ckan	none

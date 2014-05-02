@@ -1,0 +1,82 @@
+= About CKAN Releases =
+
+The OKF aims to make releases CKAN regularly - minor points every two months. Find releases at: [http://pypi.python.org/pypi/ckan PyPI]. See the changes at on the [http://knowledgeforge.net/ckan/doc/ckan/CHANGELOG.html Changelog].
+
+See also: VersioningPolicy
+
+= Approaching CKAN release - alpha release =
+
+ 1. Change the version number to the next version alpha in ckan/__init__.py e.g. 1.2a
+ 1. Commit and push this change.
+ 1. Bring metastable branch in line with default: 
+{{{
+$ hg up -C metastable
+$ hg merge -r default
+$ nosetests ckan/tests
+$ hg ci -m '[merge] from release 1.1a.'
+$ hg push
+}}}
+
+
+= Doing a CKAN release =
+
+ 1. Test the code satisfactorily.
+ 1. Summarise the tickets going in this release in the ckan/doc/CHANGELOG.rst
+ 1. Remove the pre-release letter in the version number in ckan/__init__.py e.g. 1.1c -> 1.1
+ 1. Commit this change.
+ 1. Compile the docs:
+{{{
+$ python setup.py build_sphinx
+}}}
+ 1. Upload docs to knowledgeforge.
+ 1. Tag the repo with the version number (commits change). (add -f to the tag if you want to overwrite a previous tag with this release) e.g.
+{{{
+$ hg tag ckan-1.1 -m 'Release 1.1'
+$ hg push
+}}} 
+ 1. Upload the release to PyPI (If you make a mistake, you can always go into PyPI, remove the release file and then reupload it.) 
+{{{
+python setup.py sdist upload
+}}}
+ 1. Bring metastable branch in line with default: 
+{{{
+$ hg up -C metastable
+$ hg merge -r default
+$ nosetests ckan/tests
+$ hg ci -m '[merge] from release 1.1.'
+$ hg push
+}}}
+ 1. Merge the release to the bitbucket i18n repo and recreate the pot:
+{{{
+???
+}}}
+ 1. If there have been any unreleased changes to vdm, make sure you release that too.
+
+
+= ckanclient releases =
+
+ 1. Increase version number in ckanclient/__init__.py
+ 1. Add a changelog for this new version in ckanclient/__init__.py
+ 1. Check-in the changes
+ 1. Tag the version:
+{{{
+ $ hg tag "ckanclient=v0.5"
+}}}
+ 1. Create a PYPI config file (~/.pypirc) if necessary:
+{{{
+[distutils]
+index-servers =
+  pypi
+
+[pypi]
+#repository: http://www.python.org/pypi
+username: joebloggs
+password: mypassword
+}}}
+ 1. Produce the distribution and upload to PYPI
+{{{
+$ python setup.py sdist upload
+}}}
+ 1. See the upload here: [[http://www.python.org/pypi/ckanclient]]
+ 1. Check that the setup.py for various branches of CKAN have the new version in their range (as appropriate).
+ 1. Check that the various pip-requirements.txt files also match the new version (as appropriate).

@@ -1,0 +1,40 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2347,Related stuff dashboard and changes,ross,ross,"
+Some additions to the related stuff functionality to make it more useful post the 1.7 release.
+
+[\] My related things on my user page
+
+    [x] Show user created related things on the users' page with links direct to the related page of that dataset. {0.5d}
+  
+
+[x] Related stuff usage counts { 1d }
+
+    Record the number of times the link for a related item is clicked.  This is likely to mean that the link fires to call CKAN and then redirects to the actual URL.
+
+[x] Un-attached related items {0.25d}
+
+    Allow related items to be created without being attached to datasets.  This may mean that the dataset field is optional in the API.
+
+[ ] Dashboard for related 
+
+    A dashboard for related items, site-wide (not package specific) and orderable by date, views, {rating}, popularity of the dataset.  Would be useful (possibly) for site-admin to mark one or more as 'featured'
+
+    [x] Dashboard + Controller (Related) {1d}
+
+    [ ] Ordering at logic layer (date, views, rating, popularity of package, featured) {1d}
+         [x] date
+         [x] views
+         [ ] rating?   
+         [ ] featured
+
+    [ ] 'Featured' related item with mechanism to fetch it. {0.5d}
+
+        [ ] UI within dashboard for sysadmins to check/uncheck feature status {0.5d}
+
+[ ] Changing auth for related.
+
+    Currently auth is based on deletion being possible by dataset owner and the related owner but it may be that a lot of the auth for related items should be configured to have more restrictive auth.
+
+    [ ] Document auth changes, allow for simple auth or this more complex auth in related.  This might be on by default for publisher auth? { 0.5d }
+
+    [ ] Implement auth changes as per doc. { 0.5d }",enhancement,new,awaiting triage,ckan-sprint-2012-05-15,ckan,,[6d],,ckan,none

@@ -1,0 +1,64 @@
+----
+'''This page is deprecated. Requirements are now being written up as tickets on this wiki.'''
+----
+
+
+= Use Case Instructions =
+
+This is the base index page for OpenKnowledgeRegistry use cases. Use cases are numbered for identification purposes (without any sequential or value signification). Use UseCaseTemplate for the use cases.
+
+= Use Cases =
+
+|| Id || Title || Value || Est. Cost || Actual Cost ||
+|| /UseCase1 || Visit service || 10 || 1 || - ||
+|| /UseCase2 || Register as user on the service || 7 || 1 || - ||
+|| /UseCase3 || Login to the service || 7 || 1 || - ||
+|| /UseCase4 || Find a package by searching metadata || 8 || 1 || - ||
+|| /UseCase7 || Browse list of packages || 8 || 1 || - ||
+|| /UseCase8 || View an individual package || 9 || 1 || - ||
+|| /UseCase9 || View a release associated with a package || 6 || 1 || - ||
+|| /UseCase10 || Viewing a file associated with a release || 6 || 1 || - ||
+|| /UseCase11 || Registering a package || 9 || 1 || - ||
+|| /UseCase12 || Update a package || 8 || 1 || - ||
+|| /UseCase13 || Deleting a package || 7 || 1 || - ||
+|| /UseCase14 || Registering a release associated with a package || 8 || 1 || - ||
+|| /UseCase15 || Updating a release || 8 || 1 || - ||
+|| /UseCase16 || Deleting a release || 4 || 1 || - ||
+|| /UseCase17 || Registering a file associated with a release || 7 || 1 || - ||
+|| /UseCase18 || Updating a file || 6 || 1 || - ||
+|| /UseCase19 || Deleting a file || 4 || 1 || - ||
+|| /UseCase20 || Purge a user (registered person) || 3 || 1 || - ||
+|| /UseCase21 || Undelete a user (registered person) || 3 || 1 || - ||
+|| /UseCase22 || Purge a package || 3 || 1 || - ||
+|| /UseCase23 || Undelete a package || 3 || 1 || - ||
+|| /UseCase28 || Update person attributes || 8 || 1 || - ||
+|| /UseCase29 || Request new password (or a reminder) if old has been lost || 5 || 1 || - ||
+|| /UseCase29 || View list of most recently registered or updated packages on front page || 6 || 1 || - ||
+|| /UseCase31 || A registered person creates their own tags for a package || 1 || 1 || - ||
+|| /UseCase40 || Register/Update a package via a web-api || 2 || 1 || - ||
+|| /UseCase41 || Provide a dump of all packages listed on the system in XML || 2 || 1 || - ||
+
+= Domain Objects 'Use Cases' (OLD) =
+  * This is currently very similar to Jo's sketch at http://wiki.wirelesslondon.info/CKan
+  * CRUD: stands for Create, Read, Update Delete
+  * Objects are of two kinds:
+    1. Those that are part of the webapp (i.e. running the system)
+    2. Those that are actually part of things which we wish to model
+  * primary model objects Project and Data Source should allow for extensive '''unstructured''' commenting.
+
+|| Domain Object || Action || Category || Value || Comment ||
+|| Person/User   || CRUD   || webapp   ||   7   ||||
+|| Role          || CRUD   || webapp   ||   5   ||||
+|| Permission    || CRUD   || webapp   ||   5   ||||
+|| Project       || CRUD   || model    ||   10  ||||
+|| License       || CRUD   || model    ||    9  || Open Knowledge or Open Source License ||
+|| Release       || CRUD   || model    ||   6   ||||
+|| Data  Source  || CRUD   || model    ||   10  ||||
+|| Collection[?1]|| CRUD   || model    ||   ?   ||||
+|| Tag           || CRUD   || model    ||   9   || Not sure whether this should be a domain object or whether should just be a field in project ||
+
+[1]: a collection would be a collection of data sources and would be an intermediate layer between project and datasources. Not sure it is necessary hence the '?'
+
+  * Project <>1---*> Release
+  * Project <>1---*> License
+  * Project <>1---*> Datasource

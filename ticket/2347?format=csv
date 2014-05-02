@@ -1,0 +1,83 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2347,Related stuff dashboard and changes,ross,icmurray,"
+Some additions to the related stuff functionality to make it more useful post the 1.7 release.
+
+[x] Edit item (after checking auth)
+
+[x] My related things on my user page
+
+    [x] Show user created related things on the users' page with links direct to the related page of that dataset. {0.5d}
+  
+
+[x] Related stuff usage counts { 1d }
+
+    Record the number of times the link for a related item is clicked.  This is likely to mean that the link fires to call CKAN and then redirects to the actual URL.
+
+[x] Un-attached related items {0.25d}
+
+    Allow related items to be created without being attached to datasets.  This may mean that the dataset field is optional in the API.
+
+[ ] Dashboard for related 
+
+    A dashboard for related items, site-wide (not package specific) and orderable by date, views, {rating}, popularity of the dataset.  Would be useful (possibly) for site-admin to mark one or more as 'featured'
+
+    [x] Dashboard + Controller (Related) {1d}
+
+    [x] Ordering at logic layer (date, views, rating, popularity of package, featured) {1d}
+         [x] date
+         [x] views
+         [x] featured
+
+    [x] 'Featured' related item with mechanism to fetch it. {0.5d}
+
+        [ ] UI within dashboard for sysadmins to check/uncheck feature status {0.5d}
+
+[x] Changing auth for related.
+
+    Currently auth is based on deletion being possible by dataset owner and the related owner but it may be that a lot of the auth for related items should be configured to have more restrictive auth.
+
+    [x] Implement auth changes for publisher auth profile. { 0.5d }
+
+
+[x] General issues
+
+  [x] Serverside validation of URLs
+
+  [x] Activity updates
+
+  [x] Make optional
+
+
+ [x] Related item only includes App, Idea, Visualization but not API | Post | Paper | News Article options as in original ticket #2204
+
+
+
+[ ] UI Changes
+
+  [ ] General tidy up, fix form etc (icon for menu bar)
+
+  [ ]  Highlight featured items py:if=""related.featured""
+
+  [ ] Show either view count or popularity ${ related.view_count }
+
+  [ ] A user's related items should be on their home page
+
+  [ ] Related item plus sign is very poorly aligned within box
+
+  [ ] Add related items should be in drop down like for resources (?) to make it easy to add items
+
+  [ ] Hover should show a title that gives some information about what related are (not at all clear)
+       ""Apps, Ideas, Visualization and other material related to this dataset""
+
+[x] Related is a pretty terrible name in the UI - much better to have it called Apps, Ideas etc (perhaps title tag could even give more details e.g. ""Apps, Ideas, Visualization and other material related to this dataset"") -- btw i thought this was in #2332 but realize it wasn't (apologies for that!)
+
+ - Went with Apps & Ideas (for now)
+
+[x] Documentation, documentation, documentation - AFAICT I can't see anything in v1.7 or master docs. I imagine this would be a short section like http://docs.ckan.org/en/ckan-1.7/commenting.html (and probably coming right after that in the ToC) which says
+
+  * What it does
+  * How to enable (and perhaps includes a nice-screenshot!)
+  * How to customize (e.g. can one customize the list of options of things one can create (e.g. can I set it to just be app and idea or ...)
+  * Also liase with Mark W re a blog post about this from the user perspective (a screenshot walkthrough ...)
+
+[ ] Clearly mark the old extension as deprecated from v1.7 forward: https://github.com/okfn/ckanext-apps (I just met someone last week who was working on integrating this and had no idea it was replaced by something better in v1.7)",enhancement,closed,awaiting merge,ckan-v1.8,ckan,fixed,[6d][r:2d] ui,aron.carroll,ckan,none

@@ -1,0 +1,41 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1248	License exception	dread	dread	"Exception received on test.ckan.net at 10.12 on 29/7/11
+{{{
+http://test.ckan.net/package?__cache=2759373&page=4
+Module pylons.controllers.core:60 in _perform_call
+<<          """"""Hide the traceback for everything above this method""""""
+               __traceback_hide__ = 'before_and_this'
+               return func(**args)
+           
+           def _inspect_call(self, func):
+>>  return func(**args)
+Module ckan.controllers.package:153 in search
+<<                          }
+       
+                   query = get.package_search(context,data_dict)
+       
+                   c.page = h.Page(
+>>  query = get.package_search(context,data_dict)
+Module ckan.logic.action.get:514 in package_search
+<<      for package in query.results:
+               result_dict = table_dictize(package, context)
+               result_dict = _extend_package_dict(result_dict,context)
+       
+               results.append(result_dict)
+>>  result_dict = _extend_package_dict(result_dict,context)
+Module ckan.logic.action.get:537 in _extend_package_dict
+<<      license_id = package_dict['license_id']
+           if license_id:
+               isopen = model.Package.get_license_register()[license_id].isopen()
+               package_dict['isopen'] = isopen
+           else:
+>>  isopen = model.Package.get_license_register()[license_id].isopen()
+Module ckan.model.license:59 in __getitem__
+<<              return default
+               else:
+                   raise KeyError, ""License not found: %s"" % key
+       
+           def get(self, key, default=None):
+>>  raise KeyError, ""License not found: %s"" % key
+KeyError: u'License not found: None'
+}}}"	defect	new	minor	ckan-sprint-2011-11-07	ckan				ckan	none

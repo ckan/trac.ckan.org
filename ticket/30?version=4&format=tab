@@ -1,0 +1,19 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+30	Tags are added to a package by package owner	rgrp	zool	"== As A ==
+
+Site User
+
+== I Want To ==
+
+Create/Edit/Update/Delete tags associated with my package
+
+== Notes ==
+
+  * Tags are service-wide and '''not''' package specific
+  * Tags should not allow spaces (but allow everything else e.g. ':')
+  * web interface details
+    * should provide a text box where users can add space separated tags (a la delicious).
+    * tag creation should be seemless (so if a tag does not already tag exists it should automatically be created in the background)
+    * would like to provide a list of relevant existing tags. For time being could just list all existing tags below entry box but in long run would like auto-updating/auto-suggesting listing a la delicious 
+
+"	enhancement	closed	blocker	v0.3	ckan	fixed				

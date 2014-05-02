@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #269: Improve gov package form</title>
+    <link>http://localhost/ticket/269</link>
+    <description>&lt;p&gt;
+If the notes field could use a WYSIWYG editor with word cleanup this would really help users who may well be pasting in text from Word (and I guess may have been approved or written by someone else)
+&lt;/p&gt;
+&lt;p&gt;
+having auto-complete on tags would both make the system easier to use - and reduce the risk of synonymous tags being created inadvertently.
+&lt;/p&gt;
+&lt;p&gt;
+Does the department drop down options list interact with user permissions - so that users who only have rights to one department only see that option ?
+&lt;/p&gt;
+&lt;p&gt;
+Similarly for licenses - can this reduce to the set of allowed options for this user/
+&lt;/p&gt;
+&lt;p&gt;
+What level of validation is there on the fields?
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/269</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Mon, 25 Oct 2010 19:51:09 GMT</pubDate>
+      <title>status, type changed; resolution set</title>
+      <link>http://localhost/ticket/269#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/269#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;type&lt;/strong&gt;
+                changed from &lt;em&gt;enhancement&lt;/em&gt; to &lt;em&gt;defect&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;invalid&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+I think this has been long obsoleted by other work (e.g. more recent work on gov form).
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Mon, 25 Oct 2010 20:05:03 GMT</pubDate>
+      <title>status changed; resolution deleted</title>
+      <link>http://localhost/ticket/269#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/269#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;closed&lt;/em&gt; to &lt;em&gt;reopened&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                &lt;em&gt;invalid&lt;/em&gt; deleted
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Several of these points haven't been considered in the recent work.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>thejimmyg</dc:creator>
+
+      <pubDate>Wed, 08 Dec 2010 17:53:00 GMT</pubDate>
+      <title>priority, type changed</title>
+      <link>http://localhost/ticket/269#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/269#comment:3</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;priority&lt;/strong&gt;
+                changed from &lt;em&gt;awaiting triage&lt;/em&gt; to &lt;em&gt;major&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;type&lt;/strong&gt;
+                changed from &lt;em&gt;defect&lt;/em&gt; to &lt;em&gt;enhancement&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Just discussed this with Evan...
+&lt;/p&gt;
+&lt;p&gt;
+notes field could use a WYSIWYG
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;No, Evan wants to discourage fancy features, plain text/markdown is fine
+&lt;/li&gt;&lt;li&gt;auto-complete on tags - DONE
+&lt;/li&gt;&lt;li&gt;department drop down options list interact with user permission - Evan building the API we need for this now.
+&lt;/li&gt;&lt;li&gt;licenses -&amp;gt; drop down is fine, let's just OGL as default
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+So just default licence and replacing department with provider and via to be implemented on this ticket.
+&lt;/p&gt;
+&lt;p&gt;
+Evan will provide:
+&lt;/p&gt;
+&lt;p&gt;
+organisation.one() to look up one organsisation by ID
+&lt;/p&gt;
+&lt;p&gt;
+organisation.many() to look up a list of organsisation by ID all at once
+&lt;/p&gt;
+&lt;p&gt;
+organisation.match() to match a string and return a organsisation ID
+&lt;/p&gt;
+&lt;p&gt;
+organisation.department() to take a organsisation ID and return the organsisation ID of the department it represents.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Thu, 09 Dec 2010 12:25:38 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/269#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/269#comment:4</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;reopened&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Licence is defaulted in CKAN cset:5bfbcd457426 (merged into default) and DGU cset:2d798e8af3d7.
+&lt;/p&gt;
+&lt;p&gt;
+"replacing department with provider" is covered in ticket: &lt;a class="ext-link" href="https://trac.dataco.coi.gov.uk/projects/datagov/ticket/742"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;https://trac.dataco.coi.gov.uk/projects/datagov/ticket/742&lt;/a&gt;
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

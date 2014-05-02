@@ -1,0 +1,7 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1737	Expose solr-based search API	rgrp	zephod	"Super ticket: #1506
+
+ * Convert /api/rest/dataset to be search query (i.e. take arguments in ?....)
+ * Directly expose solr though may want to override limit. See https://github.com/okfn/openspending/blob/master/openspending/ui/controllers/api.py#L48
+
+Required for some improvements to UX (such as autocomplete and better search)."	enhancement	new	major	ckan-sprint-2012-02-20	ckan				ckan	none

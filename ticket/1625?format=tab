@@ -1,0 +1,2 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1625	Add activity stream events for new/changed users	seanh	seanh	This requires adding a logic function for emitting an activity stream event, and then editing the logic functions for creating or updating users and making them call the new emit event function. This same emit event function can later be used to emit activity stream events for other types of object as well.	enhancement	closed	awaiting triage	ckan-sprint-2012-01-23	ckan	fixed	2d		ckan	none

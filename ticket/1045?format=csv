@@ -1,0 +1,12 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1045,Group identified by ID in API,dread,dread,"{{{
+http://ckan.net/api/2/rest/group
+}}}
+returns group IDs but I can only reach a group by name:
+{{{
+http://ckan.net/api/2/rest/group/economics
+}}}
+when I also want to get a group by ID:
+{{{
+http://ckan.net/api/2/rest/group/04fb43d2-8ddf-4485-9bf5-66d47d3672f3
+}}}",defect,closed,major,ckan-v1.4-sprint-4,ckan,fixed,,apohllo@…,ckan,none

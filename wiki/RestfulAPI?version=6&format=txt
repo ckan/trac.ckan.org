@@ -1,0 +1,37 @@
+= The CKAN RESTful API =
+
+== Design Questions ==
+
+ * What are the URIs?
+ * What's the format?
+ * What methods are supported at each URI?
+ * What status codes could be returned?
+
+== URLs ==
+
+ * !http://ckan.net/api/rest/package/list/:page
+ * !http://ckan.net/api/rest/package/create/:name
+ * !http://ckan.net/api/rest/package/update/:name
+ * !http://ckan.net/api/rest/package/read/:name
+
+== Data Formats ==
+
+|| '''Request''' || HTTP Parameters ||
+|| '''Response''' || JSON ||
+
+== Methods ==
+ 
+|| '''Action''' || '''Methods''' ||
+|| list/ || GET ||
+|| create/ || POST ||
+|| update/ || POST ||
+|| read/ || GET ||
+
+== Status Codes ==
+ 
+|| '''Action-Method''' || '''Success''' || '''Exception''' ||
+|| list/ GET || 200 || 400 Invalid Request, 404 Not Found ||
+|| create/ POST || 201 || 400 Invalid Request, 409 Conflict ||
+|| update/ POST || 200 || 400 Invalid Request ||
+|| read/ GET || 200 || 404 Not Found ||
+

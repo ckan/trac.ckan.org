@@ -1,0 +1,5 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+461	Change ONS data importing to work via API	johnbywater	dread	"  * Move script out to ckandgu repo
+  * Change script to convert xml into package dicts
+  * Test (against test.ckan.net, hmg.test.ckan.net)
+  * Deploy"	task	closed		ckan-v1.2		fixed				

@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #271: The system shall support distributing changes.</title>
+    <link>http://localhost/ticket/271</link>
+    <description>&lt;p&gt;
+See &lt;a class="wiki" href="http://localhost/wiki/DistributingChanges"&gt;DistributingChanges&lt;/a&gt; for analysis and functional requirements.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/271</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>johnbywater</dc:creator>
+
+      <pubDate>Mon, 15 Mar 2010 16:56:23 GMT</pubDate>
+      <title>description, summary changed</title>
+      <link>http://localhost/ticket/271#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/271#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/271?action=diff&amp;amp;version=1"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;summary&lt;/strong&gt;
+                changed from &lt;em&gt;The system shall support DistributingChanges.&lt;/em&gt; to &lt;em&gt;The system shall support distributing changes.&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>johnbywater</dc:creator>
+
+      <pubDate>Mon, 26 Apr 2010 11:06:45 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/271#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/271#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Initial spike solution has been written, covering four user stories:
+&lt;/p&gt;
+&lt;ol&gt;&lt;li&gt;Commit CKAN revisions to changeset system (&lt;a class="closed ticket" href="http://localhost/ticket/296" title="enhancement: Commit CKAN revisions to changeset system (closed: duplicate)"&gt;#296&lt;/a&gt;)
+&lt;/li&gt;&lt;li&gt;Update CKAN repository from changeset system (&lt;a class="closed ticket" href="http://localhost/ticket/297" title="enhancement: Update CKAN repository from changeset system (closed: duplicate)"&gt;#297&lt;/a&gt;)
+&lt;/li&gt;&lt;li&gt;Pull changesets from remote CKAN instance (&lt;a class="closed ticket" href="http://localhost/ticket/298" title="enhancement: Pull changesets from remote CKAN instance (closed: duplicate)"&gt;#298&lt;/a&gt;)
+&lt;/li&gt;&lt;li&gt;Merge diverging lines of changesets (&lt;a class="closed ticket" href="http://localhost/ticket/299" title="enhancement: Merge diverging lines of changesets (closed: duplicate)"&gt;#299&lt;/a&gt;)
+&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;
+Emails to ckan-discuss include:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;a class="ext-link" href="http://lists.okfn.org/pipermail/ckan-discuss/2010-March/000109.html"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://lists.okfn.org/pipermail/ckan-discuss/2010-March/000109.html&lt;/a&gt;
+&lt;/li&gt;&lt;li&gt;&lt;a class="ext-link" href="http://lists.okfn.org/pipermail/ckan-discuss/2010-March/000154.html"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://lists.okfn.org/pipermail/ckan-discuss/2010-March/000154.html&lt;/a&gt;
+&lt;/li&gt;&lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Tue, 11 May 2010 16:42:24 GMT</pubDate>
+      <title>milestone set</title>
+      <link>http://localhost/ticket/271#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/271#comment:3</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                set to &lt;em&gt;v1.0&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

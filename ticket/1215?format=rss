@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1215: Edit Resources table - removing all rows prevents adding them again</title>
+    <link>http://localhost/ticket/1215</link>
+    <description>&lt;p&gt;
+I'm not sure if this was reported earlier, but I have found a minor bug in the "Add new package" form. As far as I can see this bug exists in v1.3.2 and also in v1.4.1a (that runs on ckan.net). This is a problem with adding new resources in "Resources" section. To reproduce the bug do the following:
+&lt;/p&gt;
+&lt;ol&gt;&lt;li&gt;Go to "Add new package", for instance &lt;a class="ext-link" href="http://ckan.net/package/new"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://ckan.net/package/new&lt;/a&gt;
+&lt;/li&gt;&lt;li&gt;Scroll down to "Resources" section.
+&lt;/li&gt;&lt;li&gt;Click on "Remove this row" link (red circle).
+&lt;/li&gt;&lt;li&gt;Say "Yes" to "Are you sure you wish to remove this row?"
+&lt;/li&gt;&lt;li&gt;Now there should be no rows. Only the header "URL*   Format  Description"
+&lt;/li&gt;&lt;li&gt;Click on "Add row to table"
+&lt;/li&gt;&lt;li&gt;All you get now is another row with table header "URL*        Format Description". You will not be able to add any resources now. Solution is to reload the page.
+&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;
+The simplest solution to this bug will be to hide the "Remove this
+row" link if there is only one row.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1215</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>kindly</dc:creator>
+
+      <pubDate>Sun, 10 Jul 2011 22:05:41 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/1215#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1215#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+fixed cset: 8a317eadbb36
+&lt;/p&gt;
+&lt;p&gt;
+If you delete the last row then it just clears it instead of deleting the row.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Mon, 11 Jul 2011 11:58:05 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1215#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/1215#comment:2</guid>
+      <description>
+        &lt;p&gt;
+This is now deployed on ckan.net (requires Ctrl-R to reload js).
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

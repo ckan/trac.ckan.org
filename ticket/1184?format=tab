@@ -1,0 +1,6 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1184	Support Wuala as CKAN storage option	timmcnamara		"Most of CKANs storage options are tied to the USA. This brings concerns of data security for some organisations who may wish to adopt the system. [http://wua.la Wuala] is a distributed file system that stores data in a peer-to-peer manner. The company behind it, LaCie sells storage for a fee. However, they also enable clients to have 'free' storage space when machines act as a storage node. 
+
+In order to be a storage node, a machine needs to be online for more than 14% of the time - roughly 4h per day. Most CKAN servers are likely to have a far greater uptime than this.
+
+Supporting Wuala would go some way to enabling CKAN to be used in a secure manner. That is, CKAN could be promoted for organisational use where there is lots of data to be stored and large geographic distances to be managed. There is a [http://www.wuala.com/Wuala%20API/Sample%20Clients/Python/wualaAPI/ Python client available] and a fairly [http://www.youtube.com/watch?v=3xKZ4KGkQY8 long Google Tech Talk] that overviews the system."	enhancement	new	awaiting triage	ckan-backlog	ckan				ckan	none

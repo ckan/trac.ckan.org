@@ -1,0 +1,9 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2869,user profile not linked on disqus until page refresh,shevski,,"Reported by Daniel:
+
+Problem: DISQUS comments don't appear with profile details (inc. username).
+How to reproduce:
+1) Go to a dataset, e.g. I went to http://s031.okserver.org:2375/dataset/ff
+2) I logged into DISQUS using the Google Authentication, e.g. in my case that is okfn.daniel.lewis@gmail.com
+3) I made a comment and submitted
+4) It comes up with the comment, but no linked profile until the page gets refreshed",defect,new,awaiting triage,demo phase 4,ckan,,,,ckan,none

@@ -1,0 +1,6 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+222	UI Review - Package history	dread	nickstenning	"Package history page [/package/history/mypackagename]
+  * ""Revisions"" is redundant
+  * ""Compare"" button is in a ridiculous place. It should be above/below (both) the table, but not *in* it!
+  * Ditto to overall ""Recent Changes"" page comments w.r.t. timestamps, GUIDs (ellipsis), and (if poss) author links.
+"	defect	closed	critical		ckan	fixed				

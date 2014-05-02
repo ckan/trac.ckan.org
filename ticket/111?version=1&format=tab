@@ -1,0 +1,7 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+111	Create user object	dread	rgrp	"Object properties:
+  * id (uuid)
+  * apikey (uuid) -- migrated from the apikey table
+  * name (username = openid)
+
+/account is being renamed to /user in the wui."	enhancement	closed	blocker	v0.10	ckan	fixed				

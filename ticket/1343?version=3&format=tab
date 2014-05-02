@@ -1,0 +1,6 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1343	[super] User related improvements (login, user pages etc)	rgrp	rgrp	" * Disallow account creation via openid - #1386
+ * Require email field - #1319
+  * Require email confirmation to be activated (?)
+ * Improvements to user page (e.g. show activity and more info about user) - #1396
+ * Modal user login - #1311"	enhancement	new	major	ckan-v1.5	ckan				ckan	none

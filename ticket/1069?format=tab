@@ -1,0 +1,18 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1069	Stub datasets (request for datasets)	rgrp	tobes	"Idea is to have stubs for datasets that someone wants but don't yet exist (or haven't been discovered) in the way one has stub pages on a wiki.
+
+We could do this within the existing model by a slight 'abuse' - create a dataset and mark it with a special tag e.g. todo.does-not-yet-exist or similar ...
+
+(Just as we have datasets listed that exist but aren't available ...)
+
+Alternative would be to have a request for datasets subsystem.
+
+I prefer the stub dataset model because it's simpler, provides a simple workflow (as a dataset is found or comes into existence), and the package page provides a natural space in which to accumulate information about what is wanted and what exists.
+
+== Implementation ==
+
+ * Agree a new dedicated tag. e.g. todo.does-not-exist
+
+== Related ==
+
+ * This ticket has clear links to http://getthedata.org/"	enhancement	assigned	awaiting triage		ckan			tobes	ckan	none

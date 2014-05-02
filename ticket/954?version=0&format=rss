@@ -1,0 +1,232 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #954: Change API JSON response format to include errors etc</title>
+    <link>http://localhost/ticket/954</link>
+    <description>&lt;p&gt;
+Move to a format that has a separate responseHeader and response.
+&lt;/p&gt;
+&lt;h3 id="Astandardpackageresponse"&gt;A standard package response&lt;/h3&gt;
+&lt;pre class="wiki"&gt;{
+  responseHeader: {
+    status: 0,
+  }
+  response: {package-dict}
+}
+&lt;/pre&gt;&lt;p&gt;
+On error:
+&lt;/p&gt;
+&lt;pre class="wiki"&gt;{
+  responseHeader: {
+    status: {err-code},
+    error: 'message'
+  }
+  response: none
+}
+&lt;/pre&gt;&lt;h3 id="Asearchquery"&gt;A search query&lt;/h3&gt;
+&lt;p&gt;
+Based directly on solr.
+&lt;/p&gt;
+&lt;pre class="wiki"&gt;{
+  responseHeader: {
+    status: 0,
+  }
+  response: {
+    numFound: 5,
+    start: 0
+    docs: [
+    ]
+  }
+}
+&lt;/pre&gt;&lt;h2 id="Issues"&gt;Issues&lt;/h2&gt;
+&lt;p&gt;
+This is a breaking change for clients
+&lt;/p&gt;
+&lt;h2 id="References"&gt;References&lt;/h2&gt;
+&lt;ul&gt;&lt;li&gt;&lt;a class="ext-link" href="http://wiki.apache.org/solr/SolJSON"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://wiki.apache.org/solr/SolJSON&lt;/a&gt;
+&lt;/li&gt;&lt;li&gt;&lt;a class="ext-link" href="http://www.flickr.com/services/api/response.json.html"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://www.flickr.com/services/api/response.json.html&lt;/a&gt;
+&lt;/li&gt;&lt;/ul&gt;</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/954</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>thejimmyg</dc:creator>
+
+      <pubDate>Tue, 15 Mar 2011 19:25:06 GMT</pubDate>
+      <title>owner set</title>
+      <link>http://localhost/ticket/954#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/954#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;owner&lt;/strong&gt;
+              set to &lt;em&gt;thejimmyg&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+I'll look at this for a v3 API with kindly as part of the dictization. It also addresses some potential XSS issues in the API we've discovered.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>thejimmyg</dc:creator>
+
+      <pubDate>Fri, 18 Mar 2011 11:24:26 GMT</pubDate>
+      <title>repo, theme set</title>
+      <link>http://localhost/ticket/954#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/954#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;repo&lt;/strong&gt;
+                set to &lt;em&gt;ckan&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;theme&lt;/strong&gt;
+                set to &lt;em&gt;none&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+What would also be really nice is a &lt;tt&gt;help&lt;/tt&gt; key in the response which was always returned unless a query parameter of &lt;tt&gt;?help=False&lt;/tt&gt; was sent.
+&lt;/p&gt;
+&lt;p&gt;
+The help text could explain what the response meant but more importantly would show examples of other calls you can make with the IDs returned such that the whole API is discoverable without anyone ever needing to read any docs! It also means the API documentation is more likely to be up to date since it will be obvious to developers when it isn't.
+&lt;/p&gt;
+&lt;p&gt;
+With help=False, the JSON can have all whitespace stripped too for production use.
+&lt;/p&gt;
+&lt;p&gt;
+I also think there should be no distinction between GET and POST so that people can easily link to API calls if they want to.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>thejimmyg</dc:creator>
+
+      <pubDate>Mon, 18 Apr 2011 09:21:53 GMT</pubDate>
+      <title>milestone changed</title>
+      <link>http://localhost/ticket/954#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/954#comment:3</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan-v1.4&lt;/em&gt; to &lt;em&gt;ckan-v1.4-sprint-7&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+David Raznick has implemented JSON errors for the v1 and v2 API, we'll look at this over the next few weeks.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>thejimmyg</dc:creator>
+
+      <pubDate>Fri, 08 Jul 2011 14:15:31 GMT</pubDate>
+      <title>summary, milestone changed</title>
+      <link>http://localhost/ticket/954#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/954#comment:4</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;summary&lt;/strong&gt;
+                changed from &lt;em&gt;Change API JSON response format to include errors etc&lt;/em&gt; to &lt;em&gt;API version 3&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan-v1.5&lt;/em&gt; to &lt;em&gt;ckan-backlog&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+See also this proposal about "inlining" extras fields &lt;a class="closed ticket" href="http://localhost/ticket/972" title="enhancement: Merge 'extras' into main package dict rather than having separate key (closed: wontfix)"&gt;#972&lt;/a&gt;.
+&lt;/p&gt;
+&lt;p&gt;
+David Raznick and I have also agreed that for API 3, each call to the logic layer will return an object (basically a dictionary) rather than using Exceptions. This means the return values from the logic layer can exactly mirror the JSON data strucutres returned via the API.
+&lt;/p&gt;
+&lt;p&gt;
+The help values can come from the docstrings of the logic layer functions.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>thejimmyg</dc:creator>
+
+      <pubDate>Fri, 08 Jul 2011 14:19:42 GMT</pubDate>
+      <title>summary, description, milestone changed</title>
+      <link>http://localhost/ticket/954#comment:5</link>
+      <guid isPermaLink="false">http://localhost/ticket/954#comment:5</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;summary&lt;/strong&gt;
+                changed from &lt;em&gt;API version 3&lt;/em&gt; to &lt;em&gt;[super] API version 3&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/954?action=diff&amp;amp;version=5"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan-backlog&lt;/em&gt; to &lt;em&gt;ckan-v1.5&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Mon, 01 Aug 2011 10:07:28 GMT</pubDate>
+      <title>owner, status changed</title>
+      <link>http://localhost/ticket/954#comment:6</link>
+      <guid isPermaLink="false">http://localhost/ticket/954#comment:6</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;owner&lt;/strong&gt;
+              changed from &lt;em&gt;thejimmyg&lt;/em&gt; to &lt;em&gt;kindly&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;assigned&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Tue, 13 Sep 2011 21:20:55 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/954#comment:7</link>
+      <guid isPermaLink="false">http://localhost/ticket/954#comment:7</guid>
+      <description>
+        &lt;p&gt;
+@kindly: can you update here. My impression is that lots was done but the current ticket description bears little relation to what was done. Suggest we move current content to a new ticket and update this with a short description of what *was* done and then close -- does this sound sensible?
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>kindly</dc:creator>
+
+      <pubDate>Tue, 01 Nov 2011 10:19:04 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/954#comment:8</link>
+      <guid isPermaLink="false">http://localhost/ticket/954#comment:8</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;assigned&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+This is basically the complete now with documentation.  The child tickets no longer seem to fit and are not essential for completion.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

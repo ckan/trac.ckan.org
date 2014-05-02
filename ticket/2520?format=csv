@@ -1,0 +1,34 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2520,Document undocumented config options,seanh,seanh,"There are 21 undocumented config options in CKAN, some of which are not mentioned in the config file template either:
+
+ckan.admin.name
+ckan.admin.email
+ckan.default.group_type
+ckan.page_cache_enabled
+ckan.cache_enabled
+ckan.cache_expires
+ckan.extra_resource_fields
+ckan.extra_resource_group_fields
+ckan.storage.key_prefix
+ckan.storage.max_content_length
+ckan.feeds.authority_name *
+ckan.feeds.date *
+ckan.feeds.author_name *
+ckan.feeds.author_link *
+ckan.mail_from
+ckan.gravatar_default *
+ckan.plugins
+ckan.api_url
+ckan.auth.profile
+ckan.datastore.enabled
+ckan.tracking_enabled
+
+There are also some options that are in the default deployment.ini even though they're deprecated:
+
+ckan.async_notifier
+carrot_messaging_library
+ckan.build_search_index_synchronously
+
+See email to ckan-dev from David Read: http://lists.okfn.org/pipermail/ckan-dev/2012-June/002447.html
+
+It'd be best if the docs could be automatically pulled from the source into sphinx using autodoc, see #1358",defect,assigned,awaiting triage,ckan-v1.9,ckan,,docs,,ckan,none

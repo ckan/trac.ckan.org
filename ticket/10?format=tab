@@ -1,0 +1,32 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+10	Update package	johnbywater	johnbywater	"== As a ==
+
+Authenticated user
+
+== I want to ==
+
+Update the attributes of a package and add/remove releases
+
+== So that ==
+
+The package attributes are changed. Package attributes are:
+  * A title
+  * A description (short or long)
+  * Date added
+  * Project url
+  * package license(s)
+  * download url
+  * A list of releases with their dates and a summary line
+  * a list of owners (referencing authenticated users)
+
+I would also like to be able to add comments
+
+== Notes ==
+
+  * Only an authenticated user is one of owners of a package may update it
+  * Any authenticated user may add comments (but visitors may not)
+  * can break down into:
+   * Update a package by changing simple package attributes (value: 8)
+   * Update a package by adding or removing an owner (value: 5)
+   * Update a package by adding or removing comments (value: 7)
+"	enhancement	closed	major	milestone15	ckan	worksforme				

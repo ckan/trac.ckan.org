@@ -1,0 +1,13 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+54	Support dump and load of CKAN data to JSON	rgrp	johnbywater	"= As a =
+
+Sysadmin
+
+= I want to =
+
+Dump (serialize) CKAN data to a simple transport format (e.g. JSON) and be able to load it again.
+
+= Details =
+
+  * Already have simple db dump. However dumping to JSON has various advantages, particularly where changes to the data need to be made upon reloading (e.g. during a migration).
+  * Dump should include *all* CKAN data (i.e. all the data in the CKAN db tables)"	enhancement	new	major	v0.7	ckan					

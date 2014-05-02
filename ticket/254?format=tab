@@ -1,0 +1,18 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+254	Package relationships - 1. model	dread	dread	"New domain object: PackageRelationship (revisioned)
+
+Attributes:
+  * subject (Package reference)
+  * object (Package reference)
+  * type (string)
+  * comment
+
+Relationship type values:
+depends_on (dependency_of)
+derives_from (has_derivation)
+child_of (parent_of)
+
+Relationship type is stored as a string, as given in the first column. The reverse relationship (bracketed) is given just for display purposes only.
+
+Subject / Object - as in a sentence: ""Dracos is derived from OSM"" is <subject> <predicate> <object>. We'll use 'type' instead of 'predicate' as that is a more familiar word.
+"	enhancement	closed	blocker	v1.0	ckan	fixed				

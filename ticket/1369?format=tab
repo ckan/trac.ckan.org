@@ -1,0 +1,2 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1369	Remove showdown.js from the page download	zephod	zephod	ckan.js can be rearchitected to avoid instantiating showdown.js in the root namespace. That way, layout_base.html doesn't need to import the script (because we don't use the showdown-dependant parts of ckan.js).	enhancement	closed	awaiting triage	ckan-sprint-2011-10-10	ckan	fixed			ckan	none

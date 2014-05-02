@@ -1,0 +1,4 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2530	DataHub purge fails on some revisions	rgrp	kindly	"See http://datahub.io/ckan-admin/trash and try to purge revisions (*not* datasets). It will fail on some of the revisions with errors like:
+
+Problem purging revision 391db9e8-df57-4e0e-8fe6-d4e0c2318344: (IntegrityError) update or delete on table ""revision"" violates foreign key constraint ""group_extra_revision_revision_id_fkey"" on table ""group_extra_revision"" DETAIL: Key (id)=(391db9e8-df57-4e0e-8fe6-d4e0c2318344) is still referenced from table ""group_extra_revision"". 'DELETE FROM revision WHERE revision.id = %(id)s' {'id': u'391db9e8-df57-4e0e-8fe6-d4e0c2318344'}"	enhancement	new	minor	ckan-v1.9	ckan				ckan	none

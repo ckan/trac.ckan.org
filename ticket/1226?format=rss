@@ -1,0 +1,298 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1226: Genshi stream exception</title>
+    <link>http://localhost/ticket/1226</link>
+    <description>&lt;p&gt;
+&lt;a class="missing wiki"&gt;IndexError?&lt;/a&gt; exception in genshi.filters.i18n keeps popping up daily.
+&lt;/p&gt;
+&lt;p&gt;
+e.g.
+&lt;/p&gt;
+&lt;pre class="wiki"&gt;...
+Module ckan.controllers.authorization_group:28 in index
+&amp;lt;&amp;lt;              items_per_page=20
+               )
+               return render('authorization_group/index.html')
+           def read(self, id):
+&amp;gt;&amp;gt;  return render('authorization_group/index.html')
+Module ckan.lib.base:74 in render
+&amp;lt;&amp;lt;
+           return cached_template(template_name, render_template, cache_key=cache_key,
+                                  cache_type=cache_type, cache_expire=cache_expire)
+                                  #, ns_options=('method'), method=method)
+&amp;gt;&amp;gt;  cache_type=cache_type, cache_expire=cache_expire)
+Module pylons.templating:249 in cached_template
+&amp;lt;&amp;lt;          return content
+           else:
+               return render_func()
+&amp;gt;&amp;gt;  return render_func()
+Module ckan.lib.base:63 in render_template
+&amp;lt;&amp;lt;              stream = item.filter(stream)
+               return literal(stream.render(method=method, encoding=None))
+           if 'Pragma' in response.headers:
+&amp;gt;&amp;gt;  return literal(stream.render(method=method, encoding=None))
+Module genshi.core:183 in render
+&amp;lt;&amp;lt;              method = self.serializer or 'xml'
+               generator = self.serialize(method=method, **kwargs)
+               return encode(generator, method=method, encoding=encoding, out=out)
+           def select(self, path, namespaces=None, variables=None):
+&amp;gt;&amp;gt;  return encode(generator, method=method, encoding=encoding, out=out)
+Module genshi.output:57 in encode
+&amp;lt;&amp;lt;          _encode = lambda string: string
+           if out is None:
+               return _encode(''.join(list(iterator)))
+           for chunk in iterator:
+               out.write(_encode(chunk))
+&amp;gt;&amp;gt;  return _encode(''.join(list(iterator)))
+Module genshi.output:339 in __call__
+&amp;lt;&amp;lt;          for filter_ in self.filters:
+                   stream = filter_(stream)
+               for kind, data, pos in stream:
+                   cached = cache_get((kind, data))
+                   if cached is not None:
+&amp;gt;&amp;gt;  for kind, data, pos in stream:
+Module genshi.output:670 in __call__
+&amp;lt;&amp;lt;          _gen_prefix = _gen_prefix().next
+               for kind, data, pos in stream:
+                   output = cache_get((kind, data))
+                   if output is not None:
+&amp;gt;&amp;gt;  for kind, data, pos in stream:
+Module genshi.output:771 in __call__
+&amp;lt;&amp;lt;          push_text = textbuf.append
+               pop_text = textbuf.pop
+               for kind, data, pos in chain(stream, [(None, None, None)]):
+                   if kind is TEXT:
+&amp;gt;&amp;gt;  for kind, data, pos in chain(stream, [(None, None, None)]):
+Module genshi.output:586 in __call__
+&amp;lt;&amp;lt;      def __call__(self, stream):
+               prev = (None, None, None)
+               for ev in stream:
+                   if prev[0] is START:
+                       if ev[0] is END:
+&amp;gt;&amp;gt;  for ev in stream:
+Module genshi.core:288 in _ensure
+&amp;lt;&amp;lt;      # unchanged
+           yield event
+           for event in stream:
+               yield event
+&amp;gt;&amp;gt;  for event in stream:
+Module genshi.core:288 in _ensure
+&amp;lt;&amp;lt;      # unchanged
+           yield event
+           for event in stream:
+               yield event
+&amp;gt;&amp;gt;  for event in stream:
+Module genshi.filters.transform:686 in _unmark
+&amp;lt;&amp;lt;      def _unmark(self, stream):
+               for mark, event in stream:
+                   kind = event[0]
+                   if not (kind is None or kind is ATTR or kind is BREAK):
+&amp;gt;&amp;gt;  for mark, event in stream:
+Module genshi.filters.transform:1145 in __call__
+&amp;lt;&amp;lt;          :param stream: The marked event stream to filter
+               """
+               for mark, event in stream:
+                   yield mark, event
+                   if mark is ENTER:
+&amp;gt;&amp;gt;  for mark, event in stream:
+Module genshi.filters.transform:714 in __call__
+&amp;lt;&amp;lt;          stream = iter(stream)
+               next = stream.next
+               for mark, event in stream:
+                   if mark is None:
+                       yield mark, event
+&amp;gt;&amp;gt;  for mark, event in stream:
+Module genshi.filters.transform:682 in _mark
+&amp;lt;&amp;lt;      def _mark(self, stream):
+               for event in stream:
+                   yield OUTSIDE, event
+&amp;gt;&amp;gt;  for event in stream:
+Module genshi.core:288 in _ensure
+&amp;lt;&amp;lt;      # unchanged
+           yield event
+           for event in stream:
+               yield event
+&amp;gt;&amp;gt;  for event in stream:
+Module genshi.filters.transform:686 in _unmark
+&amp;lt;&amp;lt;      def _unmark(self, stream):
+               for mark, event in stream:
+                   kind = event[0]
+                   if not (kind is None or kind is ATTR or kind is BREAK):
+&amp;gt;&amp;gt;  for mark, event in stream:
+Module ckanext.googleanalytics.plugin:62 in download_adder
+&amp;lt;&amp;lt;              (downloaded %s times)&amp;lt;/span&amp;gt;'''
+                   count = None
+                   for mark, (kind, data, pos) in stream:
+                       if mark and kind == START:
+                           href = data[1].get('href')
+&amp;gt;&amp;gt;  for mark, (kind, data, pos) in stream:
+Module genshi.filters.transform:714 in __call__
+&amp;lt;&amp;lt;          stream = iter(stream)
+               next = stream.next
+               for mark, event in stream:
+                   if mark is None:
+                       yield mark, event
+&amp;gt;&amp;gt;  for mark, event in stream:
+Module genshi.filters.transform:682 in _mark
+&amp;lt;&amp;lt;      def _mark(self, stream):
+               for event in stream:
+                   yield OUTSIDE, event
+&amp;gt;&amp;gt;  for event in stream:
+Module genshi.core:288 in _ensure
+&amp;lt;&amp;lt;      # unchanged
+           yield event
+           for event in stream:
+               yield event
+&amp;gt;&amp;gt;  for event in stream:
+Module genshi.filters.transform:686 in _unmark
+&amp;lt;&amp;lt;      def _unmark(self, stream):
+               for mark, event in stream:
+                   kind = event[0]
+                   if not (kind is None or kind is ATTR or kind is BREAK):
+&amp;gt;&amp;gt;  for mark, event in stream:
+Module genshi.filters.transform:1175 in __call__
+&amp;lt;&amp;lt;          """
+               callable_value = hasattr(self.value, '__call__')
+               for mark, (kind, data, pos) in stream:
+                   if mark is ENTER:
+                       if callable_value:
+&amp;gt;&amp;gt;  for mark, (kind, data, pos) in stream:
+Module genshi.filters.transform:714 in __call__
+&amp;lt;&amp;lt;          stream = iter(stream)
+               next = stream.next
+               for mark, event in stream:
+                   if mark is None:
+                       yield mark, event
+&amp;gt;&amp;gt;  for mark, event in stream:
+Module genshi.filters.transform:682 in _mark
+&amp;lt;&amp;lt;      def _mark(self, stream):
+               for event in stream:
+                   yield OUTSIDE, event
+&amp;gt;&amp;gt;  for event in stream:
+Module genshi.core:288 in _ensure
+&amp;lt;&amp;lt;      # unchanged
+           yield event
+           for event in stream:
+               yield event
+&amp;gt;&amp;gt;  for event in stream:
+Module genshi.filters.transform:686 in _unmark
+&amp;lt;&amp;lt;      def _unmark(self, stream):
+               for mark, event in stream:
+                   kind = event[0]
+                   if not (kind is None or kind is ATTR or kind is BREAK):
+&amp;gt;&amp;gt;  for mark, event in stream:
+Module genshi.filters.transform:1145 in __call__
+&amp;lt;&amp;lt;          :param stream: The marked event stream to filter
+               """
+               for mark, event in stream:
+                   yield mark, event
+                   if mark is ENTER:
+&amp;gt;&amp;gt;  for mark, event in stream:
+Module genshi.filters.transform:714 in __call__
+&amp;lt;&amp;lt;          stream = iter(stream)
+               next = stream.next
+               for mark, event in stream:
+                   if mark is None:
+                       yield mark, event
+&amp;gt;&amp;gt;  for mark, event in stream:
+Module genshi.filters.transform:682 in _mark
+&amp;lt;&amp;lt;      def _mark(self, stream):
+               for event in stream:
+                   yield OUTSIDE, event
+&amp;gt;&amp;gt;  for event in stream:
+Module genshi.template.base:618 in _include
+&amp;lt;&amp;lt;                      tmpl = self.loader.load(href, relative_to=event[2][0],
+                                                   cls=cls or self.__class__)
+                           for event in tmpl.generate(ctxt, **vars):
+                               yield event
+                       except TemplateNotFound:
+&amp;gt;&amp;gt;  for event in tmpl.generate(ctxt, **vars):
+Module genshi.template.base:618 in _include
+&amp;lt;&amp;lt;                      tmpl = self.loader.load(href, relative_to=event[2][0],
+                                                   cls=cls or self.__class__)
+                           for event in tmpl.generate(ctxt, **vars):
+                               yield event
+                       except TemplateNotFound:
+&amp;gt;&amp;gt;  for event in tmpl.generate(ctxt, **vars):
+Module genshi.template.base:618 in _include
+&amp;lt;&amp;lt;                      tmpl = self.loader.load(href, relative_to=event[2][0],
+                                                   cls=cls or self.__class__)
+                           for event in tmpl.generate(ctxt, **vars):
+                               yield event
+                       except TemplateNotFound:
+&amp;gt;&amp;gt;  for event in tmpl.generate(ctxt, **vars):
+Module genshi.template.base:605 in _include
+&amp;lt;&amp;lt;          from genshi.template.loader import TemplateNotFound
+               for event in stream:
+                   if event[0] is INCLUDE:
+                       href, cls, fallback = event[1]
+&amp;gt;&amp;gt;  for event in stream:
+Module genshi.template.markup:378 in _match
+&amp;lt;&amp;lt;                      for event in self._match(self._flatten(template, ctxt,
+                                                                  **vars),
+                                                    ctxt, start=idx + 1, **vars):
+                               yield event
+&amp;gt;&amp;gt;  ctxt, start=idx + 1, **vars):
+Module genshi.template.markup:327 in _match
+&amp;lt;&amp;lt;                      break
+               for event in stream:
+                   # We (currently) only care about start and end events for matching
+&amp;gt;&amp;gt;  for event in stream:
+Module genshi.template.base:545 in _flatten
+&amp;lt;&amp;lt;          while 1:
+                   for kind, data, pos in stream:
+                       if kind is START and data[1]:
+&amp;gt;&amp;gt;  for kind, data, pos in stream:
+Module genshi.filters.i18n:177 in _generate
+&amp;lt;&amp;lt;                  msgbuf.append(*previous)
+                       previous = None
+                   for event in msgbuf.translate(gettext(msgbuf.format())):
+                       yield event
+                   if previous:
+&amp;gt;&amp;gt;  for event in msgbuf.translate(gettext(msgbuf.format())):
+Module genshi.filters.i18n:1029 in translate
+&amp;lt;&amp;lt;                      )
+               parts = parse_msg(string)
+               parts_counter = {}
+               for order, string in parts:
+&amp;gt;&amp;gt;  parts = parse_msg(string)
+Module genshi.filters.i18n:1143 in parse_msg
+&amp;lt;&amp;lt;      if string:
+               parts.append((stack[-1], string))
+           return parts
+&amp;gt;&amp;gt;  parts.append((stack[-1], string))
+IndexError: list index out of range
+&lt;/pre&gt;</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1226</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Mon, 22 Aug 2011 16:10:34 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/1226#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1226#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;worksforme&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+This appears to have gone away. No sign of it for two weeks on any OKF sites.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

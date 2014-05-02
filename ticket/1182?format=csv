@@ -1,0 +1,6 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1182,"Comments from deleted packages appear in ""Recent Comments"" feed",timmcnamara,,"When a package has been deleted, say for spam moderation, comments still appear in the recent comments section.
+
+This is a problem because non-admin users will be shown a warning that they're not authorised to view the package if they click on the link.
+
+At CKAN.net currently, this affects the most recent comment.",defect,new,awaiting triage,ckan-backlog,ckan,,comments,,ckan,none

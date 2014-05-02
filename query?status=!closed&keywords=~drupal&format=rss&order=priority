@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket Query</title>
+    <link>http://localhost/query?status=!closed&amp;keywords=~drupal&amp;order=priority</link>
+    <description>The open source data portal software</description>
+    <language>en-US</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/query?status=!closed&amp;keywords=~drupal&amp;order=priority</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+        <link>http://localhost/ticket/1255</link>
+        <guid isPermaLink="false">http://localhost/ticket/1255</guid>
+        <title>#1255: Drupal consistancy checks.</title>
+        <pubDate>Mon, 01 Aug 2011 17:32:48 GMT</pubDate>
+        
+        <dc:creator>kindly</dc:creator>
+
+        <description>&lt;p&gt;
+Make a robust way to make sure the drupal database is consistent with the ckan data.
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/1255#changelog</comments>
+    </item>
+ </channel>
+</rss>

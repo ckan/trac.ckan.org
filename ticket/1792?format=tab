@@ -1,0 +1,2 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1792	[super] api to use same validation and logic as wui forms.	kindly	toby	The api currently uses the default validation schemas regardless of the form you specified on the front end.  There should be a way to post through the api using the same validation rules.	enhancement	closed	awaiting triage	ckan-sprint-2012-03-05	ckan	fixed	5d		ckan	none

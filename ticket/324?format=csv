@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+324,Search indexing using notifications,dread,dread,"Currently search indexing is triggered directly using a Postgresql db callback. Now take advantage of the Notification system to register interest in all package changes and db changes to trigger this instead.
+
+The indexing shall run in a separate shell/process, managed by supervisord.",enhancement,closed,blocker,v1.1,ckan,fixed,,pudo,,

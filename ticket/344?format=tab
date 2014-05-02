@@ -1,0 +1,21 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+344	REST Create package with incorrect format gives 500 error	dread		"PUT to /rest/api/package of {{{ {""name"": ""name"", ""resources"": [""someurl.com/data""] } }}} (i.e. resource is a string, not a dictionary) gives 500 error, when it should give a 400 error and helpful error message.
+
+Exception:
+{{{
+Module ckan.controllers.rest:154 in create
+<<              if register == 'package' and not subregister:
+                       fs = ckan.forms.get_standard_fieldset()
+                       request_fa_dict = ckan.forms.edit_package_dict(ckan.forms.get_package_dict(fs=fs), request_data)
+                       fs = fs.bind(model.Package, data=request_fa_dict, session=model.Session)
+                   elif register == 'package' and subregister in model.PackageRelationship.get_all_types():
+>>  request_fa_dict = ckan.forms.edit_package_dict(ckan.forms.get_package_dict(fs=fs), request_data)
+Module ckan.forms.package_dict:88 in edit_package_dict
+<<                      for res_dict in value:
+                               res_dict_str = {}
+                               for key, value in res_dict.items():
+                                   res_dict_str[str(key)] = value
+                               resources.append(res_dict_str)
+>>  for key, value in res_dict.items():
+AttributeError: 'unicode' object has no attribute 'items'
+}}}"	defect	closed	awaiting triage		ckan	fixed				

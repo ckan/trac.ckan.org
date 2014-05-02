@@ -1,0 +1,6 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1460,Improve extensions documentation,rgrp,,"Current extensions documentation needs some work: http://docs.ckan.org/en/latest/plugins.html
+
+ * Queue extension section may now be out of date (?)
+ * Think about how it integrates with https://github.com/okfn/ckanext-example (especially tutorial and example extension)
+ * Document all plugin points (auto-extract from CKAN source??)",enhancement,assigned,major,,ckan,,docs,,ckan,none

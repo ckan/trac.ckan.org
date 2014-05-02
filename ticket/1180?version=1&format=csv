@@ -1,0 +1,23 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1180,User 'about' field put in HTML unsafely,dread,dread,"User can insert bad things into their About field and when you view the user (web interface) then it causes a 500 error - something is not right here. Need to filter to just safe markdown, as we do for the package notes field.
+{{{
+<a href=""http://xxxsex.com>nasty/website
+}}}
+Also check this related exception:
+{{{
+Module ckan.controllers.user:59 in read
+<<          c.is_myself = user.name == c.user
+               c.api_key = user.apikey
+               c.about_formatted = self._format_about(user.about)
+               revisions_q = model.Session.query(model.Revision
+                       ).filter_by(author=user.name)
+>>  c.about_formatted = self._format_about(user.about)
+Module ckan.controllers.user:167 in _format_about
+<<      def _format_about(self, about):
+               about_formatted = ckan.misc.MarkdownFormat().to_html(about)
+               return genshi.HTML(about_formatted) 
+       
+           def _get_form_password(self):
+>>  return genshi.HTML(about_formatted)
+WebApp Error: <class 'genshi.input.ParseError'>: junk characters in start tag: u'\u201dhttp://www.settingu': line 1, column 3
+}}}",defect,new,critical,ckan-v1.5-sprint-3,ckan,,,,ckan,none

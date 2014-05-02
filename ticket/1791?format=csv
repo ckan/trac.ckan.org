@@ -1,0 +1,8 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1791,Changing locale on /dataset/new causes exception,dread,dread,"When you are on the /dataset/new page and you try and change locale then you get a 500 error. 
+
+This is because it adds the '__cache' parameter, to ensure any proxy cache in the chain does not just send the cached page.
+
+e.g. 
+http://127.0.0.1:5000/dataset/new?__cache=37713707
+",defect,closed,minor,ckan-sprint-2012-02-20,ckan,fixed,,,ckan,none

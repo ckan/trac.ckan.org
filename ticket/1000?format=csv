@@ -1,0 +1,7 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1000,Remove call timings code,rgrp,kindly,"Not used and extra overhead. Very useful to strip this out and low cost.
+
+Places where it seems to be:
+
+  * lib/base.py: c.time_call_started
+  * ....",enhancement,closed,critical,ckan-v1.4-sprint-3,ckan,fixed,bitesize,,,

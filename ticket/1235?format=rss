@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1235: [super] Search Improvements</title>
+    <link>http://localhost/ticket/1235</link>
+    <description>&lt;p&gt;
+Child tickets:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;a class="closed ticket" href="http://localhost/ticket/234" title="enhancement: UI Review - Autocomplete package names &amp;amp; tags in search (closed: wontfix)"&gt;#234&lt;/a&gt; UI Review - Autocomplete package names &amp;amp; tags in search
+&lt;/li&gt;&lt;li&gt;&lt;a class="closed ticket" href="http://localhost/ticket/193" title="enhancement: Searching by time-related field (closed: wontfix)"&gt;#193&lt;/a&gt;        Searching by time-related field
+&lt;/li&gt;&lt;li&gt;&lt;a class="closed ticket" href="http://localhost/ticket/191" title="enhancement: Searching by modification date (closed: fixed)"&gt;#191&lt;/a&gt;        Searching by modification date
+&lt;/li&gt;&lt;li&gt;&lt;a class="closed ticket" href="http://localhost/ticket/905" title="defect: Unable to search with accented characters in package names (closed: worksforme)"&gt;#905&lt;/a&gt; Unable to search with accented characters in package names
+&lt;/li&gt;&lt;li&gt;&lt;a class="closed ticket" href="http://localhost/ticket/906" title="enhancement: Ability to search without accents for accented words (closed: fixed)"&gt;#906&lt;/a&gt; Ability to search without accents for accented words
+&lt;/li&gt;&lt;li&gt;&lt;a class="new ticket" href="http://localhost/ticket/924" title="enhancement: Search box has no search button (new)"&gt;#924&lt;/a&gt; Search box has no search button
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+Broadly speaking though we need to choose PostgreSQL, Solr or something else. We don't want to invest our time maintaining two search backends with a limited abstraction layer between the two.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1235</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+ </channel>
+</rss>

@@ -1,0 +1,10 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2371	fanstatic integration	toby	toby	"aims
+
+* allow templates to specify needed css/js
+
+* allow split js files to be bundled (including plugin supplied if possible - stage 2)
+
+* serve minified in production/ non-minified in dev
+
+* possibly look at doing the minification via paster - maybe as different ticket"	enhancement	closed	minor	ckan-v1.9	ckan	fixed			ckan	none

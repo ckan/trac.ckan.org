@@ -1,0 +1,306 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #253: Package relationships</title>
+    <link>http://localhost/ticket/253</link>
+    <description>&lt;h1 id="Overview"&gt;Overview&lt;/h1&gt;
+&lt;p&gt;
+Functionality to formally associate packages. We see a need for specific parent-child, inheriting or dependency relations. Not only should this help navigation between packages in the web interface, but it also provides a mechanism to automatically pull dependencies when downloading a data package, in a similar manner as we see in software package management.
+&lt;/p&gt;
+&lt;h1 id="Examples"&gt;Examples&lt;/h1&gt;
+&lt;ol&gt;&lt;li&gt;There are 27 packages in data.gov.uk to do with the Data4NR's Health Poverty Index. There is currently no common link between these, unless you search for 'HPI' (which also brings up House Price Index), or look under tag 'health' (which also has 600 other results). There should be a link on each HPI package page to navigate to the other 'sibling' HPI packages, and to a 'root' package that has info about the set. This could be partially achieved using the existing tag or group concepts, but a more explicit/official/obvious marking of their relationship could be beneficial.
+&lt;/li&gt;&lt;/ol&gt;&lt;ol start="2"&gt;&lt;li&gt;In ckan.net is freedict, a collection of translation dictionaries. You could make each dictionary a child package and use this system. But it would probably be better to make each dictionary a different resource in the same package. (There are other ideas to denote a resource as the data making up a 'portion' of package, or a 'whole' of the package, to help people downloading datasets in the software package style.)
+&lt;/li&gt;&lt;/ol&gt;&lt;ol start="3"&gt;&lt;li&gt;OSM has had some Naptan data imported (bus stops), with special permission - i.e. a more liberal license. It would be useful to show this link on both OSM and Naptan packages in CKAN: OSM 'derives from' Naptan with a comment about the license change. I'm not sure this is useful to an automatic download or use of these datasets, but may aid exploration on the CKAN website and understanding the provenance of the bus stop data on it.
+&lt;/li&gt;&lt;/ol&gt;&lt;ol start="4"&gt;&lt;li&gt;IPCC collection of data linked / mirrored. Not sure if there are useful relationships here?
+&lt;/li&gt;&lt;/ol&gt;&lt;ol start="5"&gt;&lt;li&gt;Dracos gets postbox locations from crowd sourcing and OSM. We could say Dracos 'derives from' OSM.
+&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;
+See more examples discussed here: &lt;a class="ext-link" href="http://trac.ckan.org/ticket/253"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://trac.ckan.org/ticket/253&lt;/a&gt;
+&lt;/p&gt;
+&lt;h1 id="Implementation"&gt;Implementation&lt;/h1&gt;
+&lt;p&gt;
+This is split into four tickets:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Model: &lt;a class="closed ticket" href="http://localhost/ticket/254" title="enhancement: Package relationships - 1. model (closed: fixed)"&gt;ticket:254&lt;/a&gt;
+&lt;/li&gt;&lt;li&gt;Read in WUI: &lt;a class="closed ticket" href="http://localhost/ticket/255" title="enhancement: Package relationships - 2. Read in WUI (closed: fixed)"&gt;ticket:255&lt;/a&gt;
+&lt;/li&gt;&lt;li&gt;Edit in WUI: &lt;a class="assigned ticket" href="http://localhost/ticket/256" title="requirement: Package relationships - 3. Edit in WUI (assigned)"&gt;ticket:256&lt;/a&gt;
+&lt;/li&gt;&lt;li&gt;API: &lt;a class="closed ticket" href="http://localhost/ticket/257" title="enhancement: Package relationships - 4. Read in API (closed: fixed)"&gt;ticket:257&lt;/a&gt;
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+No need for write access to be provided API for the moment.
+&lt;/p&gt;
+&lt;p&gt;
+This ticket also encompasses &lt;a class="closed ticket" href="http://localhost/ticket/169" title="enhancement: Package derivations (closed: duplicate)"&gt;ticket:169&lt;/a&gt; (Package derivations) and &lt;a class="closed ticket" href="http://localhost/ticket/176" title="enhancement: Package dependencies (closed: duplicate)"&gt;ticket:176&lt;/a&gt; (Package dependencies).
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/253</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Mon, 22 Feb 2010 17:23:28 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/253#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/253#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/253?action=diff&amp;amp;version=1"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Tue, 23 Feb 2010 12:37:39 GMT</pubDate>
+      <title>owner, priority, description changed</title>
+      <link>http://localhost/ticket/253#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/253#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;owner&lt;/strong&gt;
+              changed from &lt;em&gt;rgrp&lt;/em&gt; to &lt;em&gt;dread&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;priority&lt;/strong&gt;
+                changed from &lt;em&gt;awaiting triage&lt;/em&gt; to &lt;em&gt;blocker&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/253?action=diff&amp;amp;version=2"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Tue, 23 Feb 2010 12:38:48 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/253#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/253#comment:3</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/253?action=diff&amp;amp;version=3"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Wed, 07 Apr 2010 09:27:38 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/253#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/253#comment:4</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;duplicate&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Closing in favour of the 4 tickets it is split into.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Tue, 11 May 2010 16:43:07 GMT</pubDate>
+      <title>milestone set</title>
+      <link>http://localhost/ticket/253#comment:5</link>
+      <guid isPermaLink="false">http://localhost/ticket/253#comment:5</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                set to &lt;em&gt;v1.0&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Fri, 21 Jan 2011 11:43:08 GMT</pubDate>
+      <title>status changed; resolution deleted</title>
+      <link>http://localhost/ticket/253#comment:6</link>
+      <guid isPermaLink="false">http://localhost/ticket/253#comment:6</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;closed&lt;/em&gt; to &lt;em&gt;reopened&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                &lt;em&gt;duplicate&lt;/em&gt; deleted
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Re-opening as this is a useful meta-ticket and should only be closed when all subtickets done.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Mon, 31 Jan 2011 10:54:46 GMT</pubDate>
+      <title>milestone changed</title>
+      <link>http://localhost/ticket/253#comment:7</link>
+      <guid isPermaLink="false">http://localhost/ticket/253#comment:7</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;v1.0&lt;/em&gt; to &lt;em&gt;longterm&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Mon, 31 Jan 2011 18:53:44 GMT</pubDate>
+      <title>priority changed</title>
+      <link>http://localhost/ticket/253#comment:8</link>
+      <guid isPermaLink="false">http://localhost/ticket/253#comment:8</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;priority&lt;/strong&gt;
+                changed from &lt;em&gt;blocker&lt;/em&gt; to &lt;em&gt;major&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>thejimmyg</dc:creator>
+
+      <pubDate>Fri, 08 Jul 2011 11:35:01 GMT</pubDate>
+      <title>repo, theme set; milestone deleted</title>
+      <link>http://localhost/ticket/253#comment:9</link>
+      <guid isPermaLink="false">http://localhost/ticket/253#comment:9</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;repo&lt;/strong&gt;
+                set to &lt;em&gt;ckan&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;theme&lt;/strong&gt;
+                set to &lt;em&gt;none&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                &lt;em&gt;ckan-backlog&lt;/em&gt; deleted
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Fri, 02 Sep 2011 10:54:43 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/253#comment:10</link>
+      <guid isPermaLink="false">http://localhost/ticket/253#comment:10</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/253?action=diff&amp;amp;version=10"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Thu, 27 Oct 2011 10:01:24 GMT</pubDate>
+      <title>priority, status changed; resolution set</title>
+      <link>http://localhost/ticket/253#comment:11</link>
+      <guid isPermaLink="false">http://localhost/ticket/253#comment:11</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;priority&lt;/strong&gt;
+                changed from &lt;em&gt;major&lt;/em&gt; to &lt;em&gt;awaiting triage&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;reopened&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Thu, 27 Oct 2011 10:01:54 GMT</pubDate>
+      <title>status changed; resolution deleted</title>
+      <link>http://localhost/ticket/253#comment:12</link>
+      <guid isPermaLink="false">http://localhost/ticket/253#comment:12</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;closed&lt;/em&gt; to &lt;em&gt;reopened&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                &lt;em&gt;fixed&lt;/em&gt; deleted
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Closed by mistake
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Thu, 27 Oct 2011 10:02:08 GMT</pubDate>
+      <title>status changed; owner deleted</title>
+      <link>http://localhost/ticket/253#comment:13</link>
+      <guid isPermaLink="false">http://localhost/ticket/253#comment:13</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;owner&lt;/strong&gt;
+              &lt;em&gt;dread&lt;/em&gt; deleted
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;reopened&lt;/em&gt; to &lt;em&gt;assigned&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>seanh</dc:creator>
+
+      <pubDate>Fri, 15 Jun 2012 15:38:46 GMT</pubDate>
+      <title>milestone set</title>
+      <link>http://localhost/ticket/253#comment:14</link>
+      <guid isPermaLink="false">http://localhost/ticket/253#comment:14</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                set to &lt;em&gt;ckan-backlog&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

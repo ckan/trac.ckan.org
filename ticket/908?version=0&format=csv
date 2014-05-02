@@ -1,0 +1,14 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+908,Issues deploying extensions with modwsgi,rgrp,rgrp,"Some extensions import pylons features (such as request) at root.
+
+Have encountered following issues:
+
+1. You need to import ckanext before any ckan stuff in your wsgi script
+
+2. Running under wsgi daemon mode (normal mode is fine!) the front page (front page only) will not work. You get errors like this in the log:
+
+{{{
+[Mon Jan 17 09:01:19 2011] [error] Exception KeyError: KeyError(-1218594160,) in <module 'threading' from '/usr/lib/python2.6/threading.pyc'> ignored
+[Mon Jan 17 09:01:20 2011] [error] Exception AttributeError: ""'NoneType' object has no attribute 'clearing'"" in <bound method PluginEnvironment.__del__ of  Services for Environment '<default>'
+}}}
+",defect,new,critical,ckan-v1.3,ckan,,,,,

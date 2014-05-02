@@ -1,0 +1,6 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+870,Menu items not selecting correctly,memespring,,"Since the main menu items have changed (part of the UI redesign) the selected items are not functioning correctly.
+
+Specifically if Home / About or Add Package / Search are selected both menu items are highlighted.
+
+This is because the code assumes only one top-level menu item per controller.",defect,closed,blocker,ckan-v1.3-sprint-1,ckan,fixed,,,,

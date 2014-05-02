@@ -1,0 +1,2 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+240,Do not allow creation of PackageResource object without a url,rgrp,johnbywater,Currently it is possible (v0.11) to have a PackageResource object without a url. This should be impossible to do (either at creation time or via modification).,defect,closed,major,v1.0,ckan,fixed,,,,

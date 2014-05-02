@@ -1,0 +1,6 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+359,Deprecate Repository and create Storage,rgrp,rgrp,"Deprecate Repository and create explicit Storage object.
+
+Having Repository encapsulate Index and Storage (without Storage being explicit) is not helpful and leads to duplication.
+
+",defect,new,major,datapkg-0.7,component1,,,,,

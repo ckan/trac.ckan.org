@@ -1,0 +1,15 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1050,Authz lib improvement and refactor of ckan/lib/authztool.py,johnlawrenceaspden,thejimmyg,"Refactor ckan/lib/authztool.py so that the relevant methods are independent of the command line interface.
+
+The extracted methods should live in a new file ckan/authz.py. authztool.py should probably move into cli.py and will just do command line parsing and printing and use ckan/authz.py. The updated web gui for authz will also use this code.
+
+Tests should be made. There's already a file ckan/tests/test_authz.py, which looks like the appropriate place for new tests.
+
+all to go on a branch feature-1050-refactor-authtoolz
+
+== Optional extras ==
+
+ * Rename ckan/authz.py to ckan/lib/authz.py or even ckan/logic/authz.py
+
+
+",enhancement,closed,major,,ckan,invalid,refactoring auth,,ckan,none

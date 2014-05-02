@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2897: db_to_form_package_schema() crashes historical dataset page</title>
+    <link>http://localhost/ticket/2897</link>
+    <description>&lt;p&gt;
+If there's an IDatasetForm plugin active with a db_to_form_schema() method based on db_to_form_package_schema(), then viewing historical versions of datasets (e.g. &lt;a class="ext-link" href="http://127.0.0.1:5000/dataset/dasd%402012-08-30T12%3A26%3A18.524191"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://127.0.0.1:5000/dataset/dasd%402012-08-30T12%3A26%3A18.524191&lt;/a&gt;) crashes.
+&lt;/p&gt;
+&lt;p&gt;
+Reason is that revison_id and revision_timestamp need to be added to db_to_form_package_schema(), something like:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+schema.update({'revision_id': [validators.ignore_missing, unicode]})
+schema.update({'revision_timestamp':
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+[validators.ignore_missing, unicode]})
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2897</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+ </channel>
+</rss>

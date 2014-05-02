@@ -1,0 +1,4 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+977	db_upgrade errors	dread		" * db_upgrade (in ckan/model/__init__) makes call to validate_authorization_setup but forgets about rest of initialisation.
+
+ * it uses self.metadata.bind.url when it should be self.metadata.bind it seems (confused by sqlmigrate update?)"	defect	closed	critical	ckan-v1.3	ckan	fixed				

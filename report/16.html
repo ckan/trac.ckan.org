@@ -1,0 +1,2353 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      EC ODP – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="help" href="../wiki/TracGuide.html" />
+        <link rel="alternate" href="http://localhost/query?status=accepted&amp;status=assigned&amp;status=closed&amp;status=new&amp;status=reopened&amp;component=ecportal&amp;groupdesc=1&amp;group=resolution&amp;format=rss&amp;col=id&amp;col=summary&amp;col=component&amp;col=status&amp;col=owner&amp;col=type&amp;col=priority&amp;col=milestone&amp;col=keywords&amp;report=16&amp;order=priority" type="application/rss+xml" class="rss" title="RSS Feed" /><link rel="alternate" href="http://localhost/query?status=accepted&amp;status=assigned&amp;status=closed&amp;status=new&amp;status=reopened&amp;component=ecportal&amp;groupdesc=1&amp;group=resolution&amp;format=csv&amp;col=id&amp;col=summary&amp;col=component&amp;col=status&amp;col=owner&amp;col=type&amp;col=priority&amp;col=milestone&amp;col=keywords&amp;report=16&amp;order=priority" type="text/csv" class="csv" title="Comma-delimited Text" /><link rel="alternate" href="http://localhost/query?status=accepted&amp;status=assigned&amp;status=closed&amp;status=new&amp;status=reopened&amp;component=ecportal&amp;groupdesc=1&amp;group=resolution&amp;format=tab&amp;col=id&amp;col=summary&amp;col=component&amp;col=status&amp;col=owner&amp;col=type&amp;col=priority&amp;col=milestone&amp;col=keywords&amp;report=16&amp;order=priority" type="text/tab-separated-values" class="tab" title="Tab-delimited Text" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/report.css" type="text/css" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript">
+      var properties={"cc":{"label":"Cc","type":"text"},"changetime":{"label":"Modified","type":"time"},"component":{"label":"Component","options":["ckan","ckan hosted","contrib","datacatalogs","dgu","dpm","ecportal","iati","lod2","pdeu","uklii","vdm"],"type":"select"},"description":{"label":"Description","type":"textarea"},"id":{"label":"Ticket","type":"id"},"keywords":{"label":"Keywords","type":"text"},"milestone":{"label":"Milestone","options":["milestone15","milestone1","milestone16","milestone17","milestone18","v0.3","v0.4","v0.5","v0.6","v0.7","v0.8","v0.9","v0.10","v0.11","vdm-0.6","vdm-0.7","v1.0","v1.1","iati-1","iati-2","ckan-v1.2","datapkg-0.7","iati-3","ckan-v1.3-sprint-2","ckan-v1.3-sprint-1","ckan-v1.3-sprint-3","ckan-v1.3","datapkg-0.8","ckan-v1.4-sprint-1","ckan-sprint-2011-12-19","ckan-v1.4-sprint-2","ckan-v1.4-sprint-3","ckan-v1.4-sprint-4","ckan-v1.4-sprint-5","ckan-v1.4-sprint-6","ckan-v1.4","ckan-v1.4-sprint-7","ckan-v1.5-sprint-1","ckan-v1.5-sprint-2","pdeu-1","vdm-0.8","ckan-v1.5-sprint-3","ckan-v1.5-sprint-4","ckan-sprint-2011-09-12","iati-4","ckan-sprint-2011-09-26","ckan-sprint-2011-10-10","ckan-sprint-2011-10-24","ckan-sprint-2011-10-28","ckan-v1.5","ckan-sprint-2011-11-07","ckan-sprint-2011-11-21","ckan-sprint-2011-12-05","ckan-sprint-2012-01-09","ckan-sprint-2012-01-23","ckan-sprint-2012-02-06","ckan-sprint-2012-02-20","ckan-v1.6","ckan-sprint-2012-03-05","ckan-sprint-2012-03-19","ckan-sprint-2012-04-02","ckan-sprint-2012-04-16","ckan-sprint-2012-04-30","ckan-sprint-2012-05-15","ckan-sprint-2012-05-29","ckan-v1.7","demo phase 1","demo phase 2","demo phase 3","ckan-v1.8","ckan-sprint-2012-06-25","opendatasuite 1","ckanbuild","datahub-july","datahub-oct","opendatasuite 2","ckan-v1.9","ckan 2.0","ckan-backlog","ckan-ecportal","ckan-future","ckan-v1.8.1","demo phase 4","demo phase 5"],"type":"select"},"owner":{"label":"Owner","type":"text"},"priority":{"label":"Priority","options":["blocker","critical","major","minor","trivial","awaiting triage","awaiting merge"],"type":"select"},"repo":{"label":"Repository","options":["ckan","ckanclient","ckanext","ckanext-admin","ckanext-community","ckanext-csw","ckanext-dataapi","ckanext-no","ckanext-datapreview","ckanext-deliverance","ckanext-dgu","ckanext-geo","ckanext-harvest","ckanext-iati","ckanext-importlib","ckanext-qa","ckanext-queue","ckanext-solr","ckanext-stats","ckanext-storage","ckanext-upload","ckanext-webhooks","datapkg","vdm"],"type":"select"},"reporter":{"label":"Reporter","type":"text"},"resolution":{"label":"Resolution","options":["fixed","invalid","wontfix","duplicate","worksforme"],"type":"radio"},"status":{"label":"Status","options":["accepted","assigned","closed","new","reopened"],"type":"radio"},"summary":{"label":"Summary","type":"text"},"theme":{"label":"Theme","options":["deployment","notifications","migrations","harvesting","dictization","qa","entities","none"],"type":"select"},"time":{"label":"Created","type":"time"},"type":{"label":"Type","options":["defect","enhancement","refactor","task","requirement","CREP"],"type":"select"}};
+      var modes={"id":[{"name":"is","value":""},{"name":"is not","value":"!"}],"select":[{"name":"is","value":""},{"name":"is not","value":"!"}],"text":[{"name":"contains","value":"~"},{"name":"doesn't contain","value":"!~"},{"name":"begins with","value":"^"},{"name":"ends with","value":"$"},{"name":"is","value":""},{"name":"is not","value":"!"}],"textarea":[{"name":"contains","value":"~"},{"name":"doesn't contain","value":"!~"}]};
+    </script>
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/query.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="../chrome/common/js/folding.js"></script>
+    <script type="text/javascript">/*<![CDATA[*/
+      jQuery(document).ready(function($) {
+        initializeFilters();
+        $("#group").change(function() {
+          $("#groupdesc").enable(this.selectedIndex != 0)
+        }).change();
+        $("fieldset legend.foldable").enableFolding(false);
+        /* Hide the filters for saved queries. */
+        if (window.location.href.search(/[?&]report=[0-9]+/) != -1)
+          $("#filters").toggleClass("collapsed");
+        /* Hide the columns by default. */
+        $("#columns").toggleClass("collapsed");
+      });
+    /*]]>*/</script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="../wiki/TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li class="active"><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><a href="../report.html">Available Reports</a></li><li class="last">Custom Query</li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="query">
+      <h1>EC ODP <span class="numrows">(72 matches)</span></h1>
+      <form id="query" method="post" action="../query.html"><div><input type="hidden" name="__FORM_TOKEN" value="93d81ccf9a7bb1c456462f62" /></div>
+        <fieldset id="filters">
+          <legend class="foldable">Filters</legend>
+          <table summary="Query filters">
+            <tbody>
+              <tr style="display: none">
+                <td>
+		  <div class="trac-clause-lsep"> <hr /></div>
+		  <div class="trac-clause-msep">Or</div>
+		  <div class="trac-clause-rsep"> <hr /></div>
+		</td>
+              </tr>
+              <tr><td class="trac-clause">
+                <table class="trac-clause">
+                  <tbody>
+                    <tr class="component">
+                      <td>
+                        <div class="inlinebuttons">
+                          <input type="submit" name="rm_filter_0_component_0" value="–" />
+                        </div>
+                      </td>
+                          <th scope="row"><label id="label_0_component">Component</label></th>
+                          <td class="mode">
+                            <select name="0_component_mode">
+                              <option value="" selected="selected">is</option><option value="!">is not</option>
+                            </select>
+                          </td>
+                      <td class="filter">
+                          <select name="0_component">
+                            <option></option>
+                            <option value="ckan">ckan</option><option value="ckan hosted">ckan hosted</option><option value="contrib">contrib</option><option value="datacatalogs">datacatalogs</option><option value="dgu">dgu</option><option value="dpm">dpm</option><option selected="selected" value="ecportal">ecportal</option><option value="iati">iati</option><option value="lod2">lod2</option><option value="pdeu">pdeu</option><option value="uklii">uklii</option><option value="vdm">vdm</option>
+                          </select>
+                      </td>
+                    </tr>
+                  </tbody><tbody>
+                    <tr class="status">
+                      <td>
+                        <div class="inlinebuttons">
+                          <input type="submit" name="rm_filter_0_status_0" value="–" />
+                        </div>
+                      </td>
+                          <th scope="row"><label id="label_0_status">Status</label></th>
+                      <td class="filter" colspan="2">
+                            <input type="checkbox" id="_0_status_accepted" name="0_status" value="accepted" checked="checked" />
+                            <label for="_0_status_accepted" class="control">accepted</label>
+                            <input type="checkbox" id="_0_status_assigned" name="0_status" value="assigned" checked="checked" />
+                            <label for="_0_status_assigned" class="control">assigned</label>
+                            <input type="checkbox" id="_0_status_closed" name="0_status" value="closed" checked="checked" />
+                            <label for="_0_status_closed" class="control">closed</label>
+                            <input type="checkbox" id="_0_status_new" name="0_status" value="new" checked="checked" />
+                            <label for="_0_status_new" class="control">new</label>
+                            <input type="checkbox" id="_0_status_reopened" name="0_status" value="reopened" checked="checked" />
+                            <label for="_0_status_reopened" class="control">reopened</label>
+                      </td>
+                    </tr>
+                  </tbody>
+                  <tbody>
+                    <tr class="actions">
+                      <td class="and" colspan="2">
+                         <label for="add_filter_0">And</label> 
+                        <select name="add_filter_0" id="add_filter_0">
+                          <option></option>
+                          <option value="cc">Cc</option><option value="component">Component</option><option value="time">Created</option><option value="description">Description</option><option value="keywords">Keywords</option><option value="milestone">Milestone</option><option value="changetime">Modified</option><option value="owner">Owner</option><option value="priority">Priority</option><option value="reporter">Reporter</option><option value="repo">Repository</option><option value="resolution">Resolution</option><option value="status" disabled="disabled">Status</option><option value="summary">Summary</option><option value="theme">Theme</option><option value="id">Ticket</option><option value="type">Type</option>
+                        </select>
+                        <div class="inlinebuttons">
+                          <input type="submit" name="add_0" value="+" />
+                        </div>
+                      </td>
+                      <td class="or" colspan="2">
+                        <label for="add_clause">Or</label> 
+                        <select name="add_clause_1" id="add_clause">
+                          <option></option>
+                          <option value="cc">Cc</option><option value="component">Component</option><option value="time">Created</option><option value="description">Description</option><option value="keywords">Keywords</option><option value="milestone">Milestone</option><option value="changetime">Modified</option><option value="owner">Owner</option><option value="priority">Priority</option><option value="reporter">Reporter</option><option value="repo">Repository</option><option value="resolution">Resolution</option><option value="status">Status</option><option value="summary">Summary</option><option value="theme">Theme</option><option value="id">Ticket</option><option value="type">Type</option>
+                        </select>
+                        <div class="inlinebuttons">
+                          <input type="submit" name="add_1" value="+" />
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td></tr>
+            </tbody>
+          </table>
+        </fieldset>
+        <fieldset id="columns">
+          <legend class="foldable">Columns</legend>
+          <div>
+              <label>
+                <input type="checkbox" name="col" value="summary" checked="checked" />
+                Summary
+              </label>
+              <label>
+                <input type="checkbox" name="col" value="component" checked="checked" />
+                Component
+              </label>
+              <label>
+                <input type="checkbox" name="col" value="status" checked="checked" />
+                Status
+              </label>
+              <label>
+                <input type="checkbox" name="col" value="owner" checked="checked" />
+                Owner
+              </label>
+              <label>
+                <input type="checkbox" name="col" value="type" checked="checked" />
+                Type
+              </label>
+              <label>
+                <input type="checkbox" name="col" value="priority" checked="checked" />
+                Priority
+              </label>
+              <label>
+                <input type="checkbox" name="col" value="milestone" checked="checked" />
+                Milestone
+              </label>
+              <label>
+                <input type="checkbox" name="col" value="resolution" />
+                Resolution
+              </label>
+              <label>
+                <input type="checkbox" name="col" value="time" />
+                Created
+              </label>
+              <label>
+                <input type="checkbox" name="col" value="changetime" />
+                Modified
+              </label>
+              <label>
+                <input type="checkbox" name="col" value="repo" />
+                Repository
+              </label>
+              <label>
+                <input type="checkbox" name="col" value="theme" />
+                Theme
+              </label>
+              <label>
+                <input type="checkbox" name="col" value="reporter" />
+                Reporter
+              </label>
+              <label>
+                <input type="checkbox" name="col" value="keywords" checked="checked" />
+                Keywords
+              </label>
+              <label>
+                <input type="checkbox" name="col" value="cc" />
+                Cc
+              </label>
+          </div>
+        </fieldset>
+        <p class="option">
+          <label for="group">Group results by</label>
+          <select name="group" id="group">
+            <option></option>
+              <option value="component">Component</option>
+              <option value="milestone">Milestone</option>
+              <option value="owner">Owner</option>
+              <option value="priority">Priority</option>
+              <option value="reporter">Reporter</option>
+              <option value="repo">Repository</option>
+              <option selected="selected" value="resolution">Resolution</option>
+              <option value="status">Status</option>
+              <option value="theme">Theme</option>
+              <option value="type">Type</option>
+          </select>
+          <input type="checkbox" name="groupdesc" id="groupdesc" checked="checked" />
+          <label for="groupdesc">descending</label>
+        </p>
+        <p class="option">
+          Show under each result:
+            <label><input type="checkbox" name="row" value="description" />
+            Description</label>
+        </p>
+        <p class="option">
+          <label for="max">Max items per page</label>
+          <input type="text" name="max" id="max" size="10" value="100" />
+        </p>
+        <div class="buttons">
+          <input type="hidden" name="report" value="16" />
+          <input type="hidden" name="order" value="priority" />
+          <input type="submit" name="update" value="Update" />
+        </div>
+        <hr />
+      </form>
+      <div>
+  
+    <h2 class="report-result">
+      Resolution:
+      None
+      <span class="numrows">(1 match)</span>
+    </h2>
+  <table class="listing tickets">
+    <thead>
+    <tr class="trac-columns">
+      <th class="id">
+        <a title="Sort by Ticket (ascending)" href="../query%3Fstatus=accepted&amp;status=assigned&amp;status=closed&amp;status=new&amp;status=reopened&amp;component=ecportal&amp;groupdesc=1&amp;group=resolution&amp;col=id&amp;col=summary&amp;col=component&amp;col=status&amp;col=owner&amp;col=type&amp;col=priority&amp;col=milestone&amp;col=keywords&amp;report=16&amp;order=id.html">Ticket</a>
+      </th><th class="summary">
+        <a title="Sort by Summary (ascending)" href="http://localhost/query?status=accepted&amp;status=assigned&amp;status=closed&amp;status=new&amp;status=reopened&amp;component=ecportal&amp;groupdesc=1&amp;group=resolution&amp;col=id&amp;col=summary&amp;col=component&amp;col=status&amp;col=owner&amp;col=type&amp;col=priority&amp;col=milestone&amp;col=keywords&amp;report=16&amp;order=summary">Summary</a>
+      </th><th class="component">
+        <a title="Sort by Component (ascending)" href="http://localhost/query?status=accepted&amp;status=assigned&amp;status=closed&amp;status=new&amp;status=reopened&amp;component=ecportal&amp;groupdesc=1&amp;group=resolution&amp;col=id&amp;col=summary&amp;col=component&amp;col=status&amp;col=owner&amp;col=type&amp;col=priority&amp;col=milestone&amp;col=keywords&amp;report=16&amp;order=component">Component</a>
+      </th><th class="status">
+        <a title="Sort by Status (ascending)" href="http://localhost/query?status=accepted&amp;status=assigned&amp;status=closed&amp;status=new&amp;status=reopened&amp;component=ecportal&amp;groupdesc=1&amp;group=resolution&amp;col=id&amp;col=summary&amp;col=component&amp;col=status&amp;col=owner&amp;col=type&amp;col=priority&amp;col=milestone&amp;col=keywords&amp;report=16&amp;order=status">Status</a>
+      </th><th class="owner">
+        <a title="Sort by Owner (ascending)" href="http://localhost/query?status=accepted&amp;status=assigned&amp;status=closed&amp;status=new&amp;status=reopened&amp;component=ecportal&amp;groupdesc=1&amp;group=resolution&amp;col=id&amp;col=summary&amp;col=component&amp;col=status&amp;col=owner&amp;col=type&amp;col=priority&amp;col=milestone&amp;col=keywords&amp;report=16&amp;order=owner">Owner</a>
+      </th><th class="type">
+        <a title="Sort by Type (ascending)" href="../query%3Fstatus=accepted&amp;status=assigned&amp;status=closed&amp;status=new&amp;status=reopened&amp;component=ecportal&amp;groupdesc=1&amp;group=resolution&amp;col=id&amp;col=summary&amp;col=component&amp;col=status&amp;col=owner&amp;col=type&amp;col=priority&amp;col=milestone&amp;col=keywords&amp;report=16&amp;order=type.html">Type</a>
+      </th><th class="priority asc">
+        <a title="Sort by Priority (descending)" href="http://localhost/query?status=accepted&amp;status=assigned&amp;status=closed&amp;status=new&amp;status=reopened&amp;component=ecportal&amp;groupdesc=1&amp;group=resolution&amp;col=id&amp;col=summary&amp;col=component&amp;col=status&amp;col=owner&amp;col=type&amp;col=priority&amp;col=milestone&amp;col=keywords&amp;report=16&amp;desc=1&amp;order=priority">Priority</a>
+      </th><th class="milestone">
+        <a title="Sort by Milestone (ascending)" href="http://localhost/query?status=accepted&amp;status=assigned&amp;status=closed&amp;status=new&amp;status=reopened&amp;component=ecportal&amp;groupdesc=1&amp;group=resolution&amp;col=id&amp;col=summary&amp;col=component&amp;col=status&amp;col=owner&amp;col=type&amp;col=priority&amp;col=milestone&amp;col=keywords&amp;report=16&amp;order=milestone">Milestone</a>
+      </th><th class="keywords">
+        <a title="Sort by Keywords (ascending)" href="http://localhost/query?status=accepted&amp;status=assigned&amp;status=closed&amp;status=new&amp;status=reopened&amp;component=ecportal&amp;groupdesc=1&amp;group=resolution&amp;col=id&amp;col=summary&amp;col=component&amp;col=status&amp;col=owner&amp;col=type&amp;col=priority&amp;col=milestone&amp;col=keywords&amp;report=16&amp;order=keywords">Keywords</a>
+      </th>
+    </tr>
+    </thead>
+      <tbody>
+              <tr class="even prio6">
+                    <td class="id"><a href="../ticket/1789.html" title="View ticket">#1789</a></td>
+                    <td class="summary">
+                      <a href="../ticket/1789.html" title="View ticket">Implement a tag_update() logic action function</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      new
+                    </td>
+                    <td class="owner">
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      awaiting triage
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-backlog.html">ckan-backlog</a>
+                    </td>
+                    <td class="keywords">
+                      taxonomies
+                    </td>
+              </tr>
+      </tbody>
+      <tbody>
+        <tr class="trac-group">
+          <th colspan="9">
+    <h2 class="report-result">
+      Resolution:
+      duplicate
+      <span class="numrows">(3 matches)</span>
+    </h2>
+          </th>
+        </tr>
+    <tr class="trac-columns">
+      <th class="id">
+        <a title="Sort by Ticket (ascending)" href="../query%3Fstatus=accepted&amp;status=assigned&amp;status=closed&amp;status=new&amp;status=reopened&amp;component=ecportal&amp;groupdesc=1&amp;group=resolution&amp;col=id&amp;col=summary&amp;col=component&amp;col=status&amp;col=owner&amp;col=type&amp;col=priority&amp;col=milestone&amp;col=keywords&amp;report=16&amp;order=id.html">Ticket</a>
+      </th><th class="summary">
+        <a title="Sort by Summary (ascending)" href="http://localhost/query?status=accepted&amp;status=assigned&amp;status=closed&amp;status=new&amp;status=reopened&amp;component=ecportal&amp;groupdesc=1&amp;group=resolution&amp;col=id&amp;col=summary&amp;col=component&amp;col=status&amp;col=owner&amp;col=type&amp;col=priority&amp;col=milestone&amp;col=keywords&amp;report=16&amp;order=summary">Summary</a>
+      </th><th class="component">
+        <a title="Sort by Component (ascending)" href="http://localhost/query?status=accepted&amp;status=assigned&amp;status=closed&amp;status=new&amp;status=reopened&amp;component=ecportal&amp;groupdesc=1&amp;group=resolution&amp;col=id&amp;col=summary&amp;col=component&amp;col=status&amp;col=owner&amp;col=type&amp;col=priority&amp;col=milestone&amp;col=keywords&amp;report=16&amp;order=component">Component</a>
+      </th><th class="status">
+        <a title="Sort by Status (ascending)" href="http://localhost/query?status=accepted&amp;status=assigned&amp;status=closed&amp;status=new&amp;status=reopened&amp;component=ecportal&amp;groupdesc=1&amp;group=resolution&amp;col=id&amp;col=summary&amp;col=component&amp;col=status&amp;col=owner&amp;col=type&amp;col=priority&amp;col=milestone&amp;col=keywords&amp;report=16&amp;order=status">Status</a>
+      </th><th class="owner">
+        <a title="Sort by Owner (ascending)" href="http://localhost/query?status=accepted&amp;status=assigned&amp;status=closed&amp;status=new&amp;status=reopened&amp;component=ecportal&amp;groupdesc=1&amp;group=resolution&amp;col=id&amp;col=summary&amp;col=component&amp;col=status&amp;col=owner&amp;col=type&amp;col=priority&amp;col=milestone&amp;col=keywords&amp;report=16&amp;order=owner">Owner</a>
+      </th><th class="type">
+        <a title="Sort by Type (ascending)" href="../query%3Fstatus=accepted&amp;status=assigned&amp;status=closed&amp;status=new&amp;status=reopened&amp;component=ecportal&amp;groupdesc=1&amp;group=resolution&amp;col=id&amp;col=summary&amp;col=component&amp;col=status&amp;col=owner&amp;col=type&amp;col=priority&amp;col=milestone&amp;col=keywords&amp;report=16&amp;order=type.html">Type</a>
+      </th><th class="priority asc">
+        <a title="Sort by Priority (descending)" href="http://localhost/query?status=accepted&amp;status=assigned&amp;status=closed&amp;status=new&amp;status=reopened&amp;component=ecportal&amp;groupdesc=1&amp;group=resolution&amp;col=id&amp;col=summary&amp;col=component&amp;col=status&amp;col=owner&amp;col=type&amp;col=priority&amp;col=milestone&amp;col=keywords&amp;report=16&amp;desc=1&amp;order=priority">Priority</a>
+      </th><th class="milestone">
+        <a title="Sort by Milestone (ascending)" href="http://localhost/query?status=accepted&amp;status=assigned&amp;status=closed&amp;status=new&amp;status=reopened&amp;component=ecportal&amp;groupdesc=1&amp;group=resolution&amp;col=id&amp;col=summary&amp;col=component&amp;col=status&amp;col=owner&amp;col=type&amp;col=priority&amp;col=milestone&amp;col=keywords&amp;report=16&amp;order=milestone">Milestone</a>
+      </th><th class="keywords">
+        <a title="Sort by Keywords (ascending)" href="http://localhost/query?status=accepted&amp;status=assigned&amp;status=closed&amp;status=new&amp;status=reopened&amp;component=ecportal&amp;groupdesc=1&amp;group=resolution&amp;col=id&amp;col=summary&amp;col=component&amp;col=status&amp;col=owner&amp;col=type&amp;col=priority&amp;col=milestone&amp;col=keywords&amp;report=16&amp;order=keywords">Keywords</a>
+      </th>
+    </tr>
+      </tbody>
+      <tbody>
+              <tr class="even prio3">
+                    <td class="id"><a href="../ticket/1729.html" title="View ticket" class="closed">#1729</a></td>
+                    <td class="summary">
+                      <a href="../ticket/1729.html" title="View ticket">Helper function for extensions to add vocabularies to a ckan instance</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      johnglover
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      major
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-sprint-2012-02-20.html">ckan-sprint-2012-02-20</a>
+                    </td>
+                    <td class="keywords">
+                      taxonomies
+                    </td>
+              </tr>
+              <tr class="odd prio3">
+                    <td class="id"><a href="../ticket/2462.html" title="View ticket" class="closed">#2462</a></td>
+                    <td class="summary">
+                      <a href="../ticket/2462.html" title="View ticket">Add converter to rename resource_type field to type</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      johnglover
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      major
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-sprint-2012-06-25.html">ckan-sprint-2012-06-25</a>
+                    </td>
+                    <td class="keywords">
+                    </td>
+              </tr>
+              <tr class="even prio6">
+                    <td class="id"><a href="../ticket/1706.html" title="View ticket" class="closed">#1706</a></td>
+                    <td class="summary">
+                      <a href="../ticket/1706.html" title="View ticket">Tag taxonomies package schema</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      seanh
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      awaiting triage
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-sprint-2012-02-06.html">ckan-sprint-2012-02-06</a>
+                    </td>
+                    <td class="keywords">
+                      taxonomies
+                    </td>
+              </tr>
+      </tbody>
+      <tbody>
+        <tr class="trac-group">
+          <th colspan="9">
+    <h2 class="report-result">
+      Resolution:
+      wontfix
+      <span class="numrows">(5 matches)</span>
+    </h2>
+          </th>
+        </tr>
+    <tr class="trac-columns">
+      <th class="id">
+        <a title="Sort by Ticket (ascending)" href="../query%3Fstatus=accepted&amp;status=assigned&amp;status=closed&amp;status=new&amp;status=reopened&amp;component=ecportal&amp;groupdesc=1&amp;group=resolution&amp;col=id&amp;col=summary&amp;col=component&amp;col=status&amp;col=owner&amp;col=type&amp;col=priority&amp;col=milestone&amp;col=keywords&amp;report=16&amp;order=id.html">Ticket</a>
+      </th><th class="summary">
+        <a title="Sort by Summary (ascending)" href="http://localhost/query?status=accepted&amp;status=assigned&amp;status=closed&amp;status=new&amp;status=reopened&amp;component=ecportal&amp;groupdesc=1&amp;group=resolution&amp;col=id&amp;col=summary&amp;col=component&amp;col=status&amp;col=owner&amp;col=type&amp;col=priority&amp;col=milestone&amp;col=keywords&amp;report=16&amp;order=summary">Summary</a>
+      </th><th class="component">
+        <a title="Sort by Component (ascending)" href="http://localhost/query?status=accepted&amp;status=assigned&amp;status=closed&amp;status=new&amp;status=reopened&amp;component=ecportal&amp;groupdesc=1&amp;group=resolution&amp;col=id&amp;col=summary&amp;col=component&amp;col=status&amp;col=owner&amp;col=type&amp;col=priority&amp;col=milestone&amp;col=keywords&amp;report=16&amp;order=component">Component</a>
+      </th><th class="status">
+        <a title="Sort by Status (ascending)" href="http://localhost/query?status=accepted&amp;status=assigned&amp;status=closed&amp;status=new&amp;status=reopened&amp;component=ecportal&amp;groupdesc=1&amp;group=resolution&amp;col=id&amp;col=summary&amp;col=component&amp;col=status&amp;col=owner&amp;col=type&amp;col=priority&amp;col=milestone&amp;col=keywords&amp;report=16&amp;order=status">Status</a>
+      </th><th class="owner">
+        <a title="Sort by Owner (ascending)" href="http://localhost/query?status=accepted&amp;status=assigned&amp;status=closed&amp;status=new&amp;status=reopened&amp;component=ecportal&amp;groupdesc=1&amp;group=resolution&amp;col=id&amp;col=summary&amp;col=component&amp;col=status&amp;col=owner&amp;col=type&amp;col=priority&amp;col=milestone&amp;col=keywords&amp;report=16&amp;order=owner">Owner</a>
+      </th><th class="type">
+        <a title="Sort by Type (ascending)" href="../query%3Fstatus=accepted&amp;status=assigned&amp;status=closed&amp;status=new&amp;status=reopened&amp;component=ecportal&amp;groupdesc=1&amp;group=resolution&amp;col=id&amp;col=summary&amp;col=component&amp;col=status&amp;col=owner&amp;col=type&amp;col=priority&amp;col=milestone&amp;col=keywords&amp;report=16&amp;order=type.html">Type</a>
+      </th><th class="priority asc">
+        <a title="Sort by Priority (descending)" href="http://localhost/query?status=accepted&amp;status=assigned&amp;status=closed&amp;status=new&amp;status=reopened&amp;component=ecportal&amp;groupdesc=1&amp;group=resolution&amp;col=id&amp;col=summary&amp;col=component&amp;col=status&amp;col=owner&amp;col=type&amp;col=priority&amp;col=milestone&amp;col=keywords&amp;report=16&amp;desc=1&amp;order=priority">Priority</a>
+      </th><th class="milestone">
+        <a title="Sort by Milestone (ascending)" href="http://localhost/query?status=accepted&amp;status=assigned&amp;status=closed&amp;status=new&amp;status=reopened&amp;component=ecportal&amp;groupdesc=1&amp;group=resolution&amp;col=id&amp;col=summary&amp;col=component&amp;col=status&amp;col=owner&amp;col=type&amp;col=priority&amp;col=milestone&amp;col=keywords&amp;report=16&amp;order=milestone">Milestone</a>
+      </th><th class="keywords">
+        <a title="Sort by Keywords (ascending)" href="http://localhost/query?status=accepted&amp;status=assigned&amp;status=closed&amp;status=new&amp;status=reopened&amp;component=ecportal&amp;groupdesc=1&amp;group=resolution&amp;col=id&amp;col=summary&amp;col=component&amp;col=status&amp;col=owner&amp;col=type&amp;col=priority&amp;col=milestone&amp;col=keywords&amp;report=16&amp;order=keywords">Keywords</a>
+      </th>
+    </tr>
+      </tbody>
+      <tbody>
+              <tr class="even prio3">
+                    <td class="id"><a href="../ticket/1810.html" title="View ticket" class="closed">#1810</a></td>
+                    <td class="summary">
+                      <a href="../ticket/1810.html" title="View ticket">Store list of Eurovoc tag names and IDs</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      johnglover
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      major
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-backlog.html">ckan-backlog</a>
+                    </td>
+                    <td class="keywords">
+                      1d
+                    </td>
+              </tr>
+              <tr class="odd prio3">
+                    <td class="id"><a href="../ticket/1811.html" title="View ticket" class="closed">#1811</a></td>
+                    <td class="summary">
+                      <a href="../ticket/1811.html" title="View ticket">Translate Eurovoc tags from ID to dataset language</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      johnglover
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      major
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-backlog.html">ckan-backlog</a>
+                    </td>
+                    <td class="keywords">
+                      1d
+                    </td>
+              </tr>
+              <tr class="even prio3">
+                    <td class="id"><a href="../ticket/2338.html" title="View ticket" class="closed">#2338</a></td>
+                    <td class="summary">
+                      <a href="../ticket/2338.html" title="View ticket">Help with setup of new test instance for EC ODP (running on RedHat)</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      johnglover
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      major
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-sprint-2012-05-15.html">ckan-sprint-2012-05-15</a>
+                    </td>
+                    <td class="keywords">
+                    </td>
+              </tr>
+              <tr class="odd prio6">
+                    <td class="id"><a href="../ticket/1650.html" title="View ticket" class="closed">#1650</a></td>
+                    <td class="summary">
+                      <a href="../ticket/1650.html" title="View ticket">Add new language/translation of fields for datasets.</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      ross
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      awaiting triage
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-future.html">ckan-future</a>
+                    </td>
+                    <td class="keywords">
+                      [4d]
+                    </td>
+              </tr>
+              <tr class="even prio6">
+                    <td class="id"><a href="../ticket/1723.html" title="View ticket" class="closed">#1723</a></td>
+                    <td class="summary">
+                      <a href="../ticket/1723.html" title="View ticket">Update tests for taxonomies</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      seanh
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      awaiting triage
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-sprint-2012-02-20.html">ckan-sprint-2012-02-20</a>
+                    </td>
+                    <td class="keywords">
+                      taxonomies
+                    </td>
+              </tr>
+      </tbody>
+      <tbody>
+        <tr class="trac-group">
+          <th colspan="9">
+    <h2 class="report-result">
+      Resolution:
+      fixed
+      <span class="numrows">(63 matches)</span>
+    </h2>
+          </th>
+        </tr>
+    <tr class="trac-columns">
+      <th class="id">
+        <a title="Sort by Ticket (ascending)" href="../query%3Fstatus=accepted&amp;status=assigned&amp;status=closed&amp;status=new&amp;status=reopened&amp;component=ecportal&amp;groupdesc=1&amp;group=resolution&amp;col=id&amp;col=summary&amp;col=component&amp;col=status&amp;col=owner&amp;col=type&amp;col=priority&amp;col=milestone&amp;col=keywords&amp;report=16&amp;order=id.html">Ticket</a>
+      </th><th class="summary">
+        <a title="Sort by Summary (ascending)" href="http://localhost/query?status=accepted&amp;status=assigned&amp;status=closed&amp;status=new&amp;status=reopened&amp;component=ecportal&amp;groupdesc=1&amp;group=resolution&amp;col=id&amp;col=summary&amp;col=component&amp;col=status&amp;col=owner&amp;col=type&amp;col=priority&amp;col=milestone&amp;col=keywords&amp;report=16&amp;order=summary">Summary</a>
+      </th><th class="component">
+        <a title="Sort by Component (ascending)" href="http://localhost/query?status=accepted&amp;status=assigned&amp;status=closed&amp;status=new&amp;status=reopened&amp;component=ecportal&amp;groupdesc=1&amp;group=resolution&amp;col=id&amp;col=summary&amp;col=component&amp;col=status&amp;col=owner&amp;col=type&amp;col=priority&amp;col=milestone&amp;col=keywords&amp;report=16&amp;order=component">Component</a>
+      </th><th class="status">
+        <a title="Sort by Status (ascending)" href="http://localhost/query?status=accepted&amp;status=assigned&amp;status=closed&amp;status=new&amp;status=reopened&amp;component=ecportal&amp;groupdesc=1&amp;group=resolution&amp;col=id&amp;col=summary&amp;col=component&amp;col=status&amp;col=owner&amp;col=type&amp;col=priority&amp;col=milestone&amp;col=keywords&amp;report=16&amp;order=status">Status</a>
+      </th><th class="owner">
+        <a title="Sort by Owner (ascending)" href="http://localhost/query?status=accepted&amp;status=assigned&amp;status=closed&amp;status=new&amp;status=reopened&amp;component=ecportal&amp;groupdesc=1&amp;group=resolution&amp;col=id&amp;col=summary&amp;col=component&amp;col=status&amp;col=owner&amp;col=type&amp;col=priority&amp;col=milestone&amp;col=keywords&amp;report=16&amp;order=owner">Owner</a>
+      </th><th class="type">
+        <a title="Sort by Type (ascending)" href="../query%3Fstatus=accepted&amp;status=assigned&amp;status=closed&amp;status=new&amp;status=reopened&amp;component=ecportal&amp;groupdesc=1&amp;group=resolution&amp;col=id&amp;col=summary&amp;col=component&amp;col=status&amp;col=owner&amp;col=type&amp;col=priority&amp;col=milestone&amp;col=keywords&amp;report=16&amp;order=type.html">Type</a>
+      </th><th class="priority asc">
+        <a title="Sort by Priority (descending)" href="http://localhost/query?status=accepted&amp;status=assigned&amp;status=closed&amp;status=new&amp;status=reopened&amp;component=ecportal&amp;groupdesc=1&amp;group=resolution&amp;col=id&amp;col=summary&amp;col=component&amp;col=status&amp;col=owner&amp;col=type&amp;col=priority&amp;col=milestone&amp;col=keywords&amp;report=16&amp;desc=1&amp;order=priority">Priority</a>
+      </th><th class="milestone">
+        <a title="Sort by Milestone (ascending)" href="http://localhost/query?status=accepted&amp;status=assigned&amp;status=closed&amp;status=new&amp;status=reopened&amp;component=ecportal&amp;groupdesc=1&amp;group=resolution&amp;col=id&amp;col=summary&amp;col=component&amp;col=status&amp;col=owner&amp;col=type&amp;col=priority&amp;col=milestone&amp;col=keywords&amp;report=16&amp;order=milestone">Milestone</a>
+      </th><th class="keywords">
+        <a title="Sort by Keywords (ascending)" href="http://localhost/query?status=accepted&amp;status=assigned&amp;status=closed&amp;status=new&amp;status=reopened&amp;component=ecportal&amp;groupdesc=1&amp;group=resolution&amp;col=id&amp;col=summary&amp;col=component&amp;col=status&amp;col=owner&amp;col=type&amp;col=priority&amp;col=milestone&amp;col=keywords&amp;report=16&amp;order=keywords">Keywords</a>
+      </th>
+    </tr>
+      </tbody>
+      <tbody>
+              <tr class="even prio2">
+                    <td class="id"><a href="../ticket/1699.html" title="View ticket" class="closed">#1699</a></td>
+                    <td class="summary">
+                      <a href="../ticket/1699.html" title="View ticket">Setup Ckan on tenforce test server</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      johnglover
+                    </td>
+                    <td class="type">
+                      task
+                    </td>
+                    <td class="priority">
+                      critical
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-sprint-2012-02-06.html">ckan-sprint-2012-02-06</a>
+                    </td>
+                    <td class="keywords">
+                      2d
+                    </td>
+              </tr>
+              <tr class="odd prio2">
+                    <td class="id"><a href="../ticket/2351.html" title="View ticket" class="closed">#2351</a></td>
+                    <td class="summary">
+                      <a href="../ticket/2351.html" title="View ticket">Install EC Portal on CentOS</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      icmurray
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      critical
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-ecportal.html">ckan-ecportal</a>
+                    </td>
+                    <td class="keywords">
+                      [4-5d]
+                    </td>
+              </tr>
+              <tr class="even prio3">
+                    <td class="id"><a href="../ticket/1703.html" title="View ticket" class="closed">#1703</a></td>
+                    <td class="summary">
+                      <a href="../ticket/1703.html" title="View ticket">Make custom fields for ecportal form based on prototype metamodel</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      johnglover
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      major
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-sprint-2012-03-19.html">ckan-sprint-2012-03-19</a>
+                    </td>
+                    <td class="keywords">
+                      4d [a:4.7]
+                    </td>
+              </tr>
+              <tr class="odd prio3">
+                    <td class="id"><a href="../ticket/1720.html" title="View ticket" class="closed">#1720</a></td>
+                    <td class="summary">
+                      <a href="../ticket/1720.html" title="View ticket">Add converter functions to convert tags (with a given taxonomy) to/from tags field</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      johnglover
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      major
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-sprint-2012-02-20.html">ckan-sprint-2012-02-20</a>
+                    </td>
+                    <td class="keywords">
+                      taxonomies [2d]
+                    </td>
+              </tr>
+              <tr class="even prio3">
+                    <td class="id"><a href="../ticket/1721.html" title="View ticket" class="closed">#1721</a></td>
+                    <td class="summary">
+                      <a href="../ticket/1721.html" title="View ticket">Tag taxonomies table migration</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      johnglover
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      major
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-sprint-2012-02-20.html">ckan-sprint-2012-02-20</a>
+                    </td>
+                    <td class="keywords">
+                      taxonomies
+                    </td>
+              </tr>
+              <tr class="odd prio3">
+                    <td class="id"><a href="../ticket/1766.html" title="View ticket" class="closed">#1766</a></td>
+                    <td class="summary">
+                      <a href="../ticket/1766.html" title="View ticket">Update and deploy EC Portal theme</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      johnglover
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      major
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-sprint-2012-02-20.html">ckan-sprint-2012-02-20</a>
+                    </td>
+                    <td class="keywords">
+                      [0.5d]
+                    </td>
+              </tr>
+              <tr class="even prio3">
+                    <td class="id"><a href="../ticket/1767.html" title="View ticket" class="closed">#1767</a></td>
+                    <td class="summary">
+                      <a href="../ticket/1767.html" title="View ticket">Write end-to-end functional tests for tag vocabularies</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      johnglover
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      major
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-sprint-2012-02-20.html">ckan-sprint-2012-02-20</a>
+                    </td>
+                    <td class="keywords">
+                      taxonomies [2d]
+                    </td>
+              </tr>
+              <tr class="odd prio3">
+                    <td class="id"><a href="../ticket/1812.html" title="View ticket" class="closed">#1812</a></td>
+                    <td class="summary">
+                      <a href="../ticket/1812.html" title="View ticket">Restrict editing rights/permissions based on publisher</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      johnglover
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      major
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-backlog.html">ckan-backlog</a>
+                    </td>
+                    <td class="keywords">
+                    </td>
+              </tr>
+              <tr class="even prio3">
+                    <td class="id"><a href="../ticket/1817.html" title="View ticket" class="closed">#1817</a></td>
+                    <td class="summary">
+                      <a href="../ticket/1817.html" title="View ticket">Importer for EC publisher info</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      johnglover
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      major
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-sprint-2012-03-05.html">ckan-sprint-2012-03-05</a>
+                    </td>
+                    <td class="keywords">
+                      0.5d
+                    </td>
+              </tr>
+              <tr class="odd prio3">
+                    <td class="id"><a href="../ticket/2206.html" title="View ticket" class="closed">#2206</a></td>
+                    <td class="summary">
+                      <a href="../ticket/2206.html" title="View ticket">Change site header to match latest ODP template</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      johnglover
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      major
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-sprint-2012-03-19.html">ckan-sprint-2012-03-19</a>
+                    </td>
+                    <td class="keywords">
+                      [0.5d]
+                    </td>
+              </tr>
+              <tr class="even prio3">
+                    <td class="id"><a href="../ticket/2212.html" title="View ticket" class="closed">#2212</a></td>
+                    <td class="summary">
+                      <a href="../ticket/2212.html" title="View ticket">Import latest data into demo site</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      johnglover
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      major
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-sprint-2012-03-19.html">ckan-sprint-2012-03-19</a>
+                    </td>
+                    <td class="keywords">
+                      [0.5d]
+                    </td>
+              </tr>
+              <tr class="odd prio3">
+                    <td class="id"><a href="../ticket/2213.html" title="View ticket" class="closed">#2213</a></td>
+                    <td class="summary">
+                      <a href="../ticket/2213.html" title="View ticket">Update geographical coverage tags</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      johnglover
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      major
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-sprint-2012-04-02.html">ckan-sprint-2012-04-02</a>
+                    </td>
+                    <td class="keywords">
+                      [2d]
+                    </td>
+              </tr>
+              <tr class="even prio3">
+                    <td class="id"><a href="../ticket/2246.html" title="View ticket" class="closed">#2246</a></td>
+                    <td class="summary">
+                      <a href="../ticket/2246.html" title="View ticket">Change published_by metadata field to reference group instead of a custom extra</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      johnglover
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      major
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-sprint-2012-04-02.html">ckan-sprint-2012-04-02</a>
+                    </td>
+                    <td class="keywords">
+                      [0.5d]
+                    </td>
+              </tr>
+              <tr class="odd prio3">
+                    <td class="id"><a href="../ticket/2251.html" title="View ticket" class="closed">#2251</a></td>
+                    <td class="summary">
+                      <a href="../ticket/2251.html" title="View ticket">Internal analytics for ckan.</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      toby
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      major
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-sprint-2012-04-16.html">ckan-sprint-2012-04-16</a>
+                    </td>
+                    <td class="keywords">
+                      6d
+                    </td>
+              </tr>
+              <tr class="even prio3">
+                    <td class="id"><a href="../ticket/2259.html" title="View ticket" class="closed">#2259</a></td>
+                    <td class="summary">
+                      <a href="../ticket/2259.html" title="View ticket">Update ecportal theme for master changes (bootstrap)</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      johnglover
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      major
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-sprint-2012-04-02.html">ckan-sprint-2012-04-02</a>
+                    </td>
+                    <td class="keywords">
+                      [0.5d]
+                    </td>
+              </tr>
+              <tr class="odd prio3">
+                    <td class="id"><a href="../ticket/2260.html" title="View ticket" class="closed">#2260</a></td>
+                    <td class="summary">
+                      <a href="../ticket/2260.html" title="View ticket">Update ecportal theme to match latest changes to tenforce theme</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      johnglover
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      major
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-sprint-2012-04-16.html">ckan-sprint-2012-04-16</a>
+                    </td>
+                    <td class="keywords">
+                      [1d]
+                    </td>
+              </tr>
+              <tr class="even prio3">
+                    <td class="id"><a href="../ticket/2262.html" title="View ticket" class="closed">#2262</a></td>
+                    <td class="summary">
+                      <a href="../ticket/2262.html" title="View ticket">Update ecportal form and dataset style/ux to match CKAN master</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      johnglover
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      major
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-sprint-2012-04-02.html">ckan-sprint-2012-04-02</a>
+                    </td>
+                    <td class="keywords">
+                      [0.5d]
+                    </td>
+              </tr>
+              <tr class="odd prio3">
+                    <td class="id"><a href="../ticket/2269.html" title="View ticket" class="closed">#2269</a></td>
+                    <td class="summary">
+                      <a href="../ticket/2269.html" title="View ticket">EC ODP review and server setup</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      johnglover
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      major
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-sprint-2012-04-30.html">ckan-sprint-2012-04-30</a>
+                    </td>
+                    <td class="keywords">
+                      [2d]
+                    </td>
+              </tr>
+              <tr class="even prio3">
+                    <td class="id"><a href="../ticket/2280.html" title="View ticket" class="closed">#2280</a></td>
+                    <td class="summary">
+                      <a href="../ticket/2280.html" title="View ticket">Move ecportal to organizations, add history template</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      ross
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      major
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-sprint-2012-04-30.html">ckan-sprint-2012-04-30</a>
+                    </td>
+                    <td class="keywords">
+                      [0.5d]
+                    </td>
+              </tr>
+              <tr class="odd prio3">
+                    <td class="id"><a href="../ticket/2306.html" title="View ticket" class="closed">#2306</a></td>
+                    <td class="summary">
+                      <a href="../ticket/2306.html" title="View ticket">Updates to metadata model</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      johnglover
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      major
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-sprint-2012-04-30.html">ckan-sprint-2012-04-30</a>
+                    </td>
+                    <td class="keywords">
+                      [3d]
+                    </td>
+              </tr>
+              <tr class="even prio3">
+                    <td class="id"><a href="../ticket/2343.html" title="View ticket" class="closed">#2343</a></td>
+                    <td class="summary">
+                      <a href="../ticket/2343.html" title="View ticket">Convert all non-free metadata fields to vocabulary fields</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      johnglover
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      major
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-sprint-2012-05-15.html">ckan-sprint-2012-05-15</a>
+                    </td>
+                    <td class="keywords">
+                      [1d]
+                    </td>
+              </tr>
+              <tr class="odd prio3">
+                    <td class="id"><a href="../ticket/2346.html" title="View ticket" class="closed">#2346</a></td>
+                    <td class="summary">
+                      <a href="../ticket/2346.html" title="View ticket">EC ODP Theme updates</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      johnglover
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      major
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-sprint-2012-05-15.html">ckan-sprint-2012-05-15</a>
+                    </td>
+                    <td class="keywords">
+                      [3d]
+                    </td>
+              </tr>
+              <tr class="even prio3">
+                    <td class="id"><a href="../ticket/2459.html" title="View ticket" class="closed">#2459</a></td>
+                    <td class="summary">
+                      <a href="../ticket/2459.html" title="View ticket">Faceting improvements: fix tags and decide on facet fields</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      johnglover
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      major
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-sprint-2012-06-25.html">ckan-sprint-2012-06-25</a>
+                    </td>
+                    <td class="keywords">
+                    </td>
+              </tr>
+              <tr class="odd prio3">
+                    <td class="id"><a href="../ticket/2460.html" title="View ticket" class="closed">#2460</a></td>
+                    <td class="summary">
+                      <a href="../ticket/2460.html" title="View ticket">Hide private datasets in 'top publishers' and 'recent updates' on home page</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      johnglover
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      major
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-sprint-2012-06-25.html">ckan-sprint-2012-06-25</a>
+                    </td>
+                    <td class="keywords">
+                    </td>
+              </tr>
+              <tr class="even prio3">
+                    <td class="id"><a href="../ticket/2463.html" title="View ticket" class="closed">#2463</a></td>
+                    <td class="summary">
+                      <a href="../ticket/2463.html" title="View ticket">Fix whitespace bug in breadcrumbs when zoomed in (Google Chrome)</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      johnglover
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      major
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-sprint-2012-06-25.html">ckan-sprint-2012-06-25</a>
+                    </td>
+                    <td class="keywords">
+                    </td>
+              </tr>
+              <tr class="odd prio3">
+                    <td class="id"><a href="../ticket/2464.html" title="View ticket" class="closed">#2464</a></td>
+                    <td class="summary">
+                      <a href="../ticket/2464.html" title="View ticket">Rename 'organization' to 'publisher'</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      johnglover
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      major
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-sprint-2012-06-25.html">ckan-sprint-2012-06-25</a>
+                    </td>
+                    <td class="keywords">
+                    </td>
+              </tr>
+              <tr class="even prio3">
+                    <td class="id"><a href="../ticket/2465.html" title="View ticket" class="closed">#2465</a></td>
+                    <td class="summary">
+                      <a href="../ticket/2465.html" title="View ticket">Make sure dropdown lists on dataset edit form are sorted</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      johnglover
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      major
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-sprint-2012-06-25.html">ckan-sprint-2012-06-25</a>
+                    </td>
+                    <td class="keywords">
+                    </td>
+              </tr>
+              <tr class="odd prio3">
+                    <td class="id"><a href="../ticket/2487.html" title="View ticket" class="closed">#2487</a></td>
+                    <td class="summary">
+                      <a href="../ticket/2487.html" title="View ticket">Don't preview text/html</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      johnglover
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      major
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-sprint-2012-06-25.html">ckan-sprint-2012-06-25</a>
+                    </td>
+                    <td class="keywords">
+                    </td>
+              </tr>
+              <tr class="even prio3">
+                    <td class="id"><a href="../ticket/2517.html" title="View ticket" class="closed">#2517</a></td>
+                    <td class="summary">
+                      <a href="../ticket/2517.html" title="View ticket">Test installation instructions for EC ODP on CentOS 6.2</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      johnglover
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      major
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-sprint-2012-06-25.html">ckan-sprint-2012-06-25</a>
+                    </td>
+                    <td class="keywords">
+                    </td>
+              </tr>
+              <tr class="odd prio3">
+                    <td class="id"><a href="../ticket/2518.html" title="View ticket" class="closed">#2518</a></td>
+                    <td class="summary">
+                      <a href="../ticket/2518.html" title="View ticket">Create EC ODP CKAN release branch</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      johnglover
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      major
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-sprint-2012-06-25.html">ckan-sprint-2012-06-25</a>
+                    </td>
+                    <td class="keywords">
+                    </td>
+              </tr>
+              <tr class="even prio3">
+                    <td class="id"><a href="../ticket/2593.html" title="View ticket" class="closed">#2593</a></td>
+                    <td class="summary">
+                      <a href="../ticket/2593.html" title="View ticket">Setup nginx caching for EC ODP</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      johnglover
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      major
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-ecportal.html">ckan-ecportal</a>
+                    </td>
+                    <td class="keywords">
+                      [0.5d]
+                    </td>
+              </tr>
+              <tr class="odd prio3">
+                    <td class="id"><a href="../ticket/2594.html" title="View ticket" class="closed">#2594</a></td>
+                    <td class="summary">
+                      <a href="../ticket/2594.html" title="View ticket">Add EU27 to EC ODP geographical coverage field</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      johnglover
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      major
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-ecportal.html">ckan-ecportal</a>
+                    </td>
+                    <td class="keywords">
+                    </td>
+              </tr>
+              <tr class="even prio3">
+                    <td class="id"><a href="../ticket/2645.html" title="View ticket" class="closed">#2645</a></td>
+                    <td class="summary">
+                      <a href="../ticket/2645.html" title="View ticket">Update server setup to use local files</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      johnglover
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      major
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-ecportal.html">ckan-ecportal</a>
+                    </td>
+                    <td class="keywords">
+                      [1d]
+                    </td>
+              </tr>
+              <tr class="odd prio4">
+                    <td class="id"><a href="../ticket/1704.html" title="View ticket" class="closed">#1704</a></td>
+                    <td class="summary">
+                      <a href="../ticket/1704.html" title="View ticket">Import test datasets from prototype into ckan.</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      johnglover
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      minor
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-sprint-2012-02-06.html">ckan-sprint-2012-02-06</a>
+                    </td>
+                    <td class="keywords">
+                      1d
+                    </td>
+              </tr>
+              <tr class="even prio4">
+                    <td class="id"><a href="../ticket/1730.html" title="View ticket" class="closed">#1730</a></td>
+                    <td class="summary">
+                      <a href="../ticket/1730.html" title="View ticket">Form field for vocabularies</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      johnglover
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      minor
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-sprint-2012-02-20.html">ckan-sprint-2012-02-20</a>
+                    </td>
+                    <td class="keywords">
+                      taxonomies [1d]
+                    </td>
+              </tr>
+              <tr class="odd prio4">
+                    <td class="id"><a href="../ticket/2205.html" title="View ticket" class="closed">#2205</a></td>
+                    <td class="summary">
+                      <a href="../ticket/2205.html" title="View ticket">Document Tag Vocab schema/form setup</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      johnglover
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      minor
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-sprint-2012-03-19.html">ckan-sprint-2012-03-19</a>
+                    </td>
+                    <td class="keywords">
+                      [0.2d]
+                    </td>
+              </tr>
+              <tr class="even prio4">
+                    <td class="id"><a href="../ticket/2470.html" title="View ticket" class="closed">#2470</a></td>
+                    <td class="summary">
+                      <a href="../ticket/2470.html" title="View ticket">Fix inconsistency in package_list snippet</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      johnglover
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      minor
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-sprint-2012-06-25.html">ckan-sprint-2012-06-25</a>
+                    </td>
+                    <td class="keywords">
+                    </td>
+              </tr>
+              <tr class="odd prio4">
+                    <td class="id"><a href="../ticket/2489.html" title="View ticket" class="closed">#2489</a></td>
+                    <td class="summary">
+                      <a href="../ticket/2489.html" title="View ticket">Select publisher when dataset created via 'publisher &gt; add dataset'</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      johnglover
+                    </td>
+                    <td class="type">
+                      defect
+                    </td>
+                    <td class="priority">
+                      minor
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-sprint-2012-06-25.html">ckan-sprint-2012-06-25</a>
+                    </td>
+                    <td class="keywords">
+                    </td>
+              </tr>
+              <tr class="even prio6">
+                    <td class="id"><a href="../ticket/1698.html" title="View ticket" class="closed">#1698</a></td>
+                    <td class="summary">
+                      <a href="../ticket/1698.html" title="View ticket">[super] Tag Taxonomies</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      seanh
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      awaiting triage
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-v1.7.html">ckan-v1.7</a>
+                    </td>
+                    <td class="keywords">
+                      taxonomies
+                    </td>
+              </tr>
+              <tr class="odd prio6">
+                    <td class="id"><a href="../ticket/1700.html" title="View ticket" class="closed">#1700</a></td>
+                    <td class="summary">
+                      <a href="../ticket/1700.html" title="View ticket">Document server setup for ckan server.</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      johnglover
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      awaiting triage
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-sprint-2012-02-06.html">ckan-sprint-2012-02-06</a>
+                    </td>
+                    <td class="keywords">
+                      2d
+                    </td>
+              </tr>
+              <tr class="even prio6">
+                    <td class="id"><a href="../ticket/1701.html" title="View ticket" class="closed">#1701</a></td>
+                    <td class="summary">
+                      <a href="../ticket/1701.html" title="View ticket">Normalize character encoding for ckan search.</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      amercader
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      awaiting triage
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-sprint-2012-02-06.html">ckan-sprint-2012-02-06</a>
+                    </td>
+                    <td class="keywords">
+                      4d
+                    </td>
+              </tr>
+              <tr class="odd prio6">
+                    <td class="id"><a href="../ticket/1705.html" title="View ticket" class="closed">#1705</a></td>
+                    <td class="summary">
+                      <a href="../ticket/1705.html" title="View ticket">Implement Vocabularies domain model and API</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      seanh
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      awaiting triage
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-sprint-2012-02-20.html">ckan-sprint-2012-02-20</a>
+                    </td>
+                    <td class="keywords">
+                      taxonomies [2d][a:2d]
+                    </td>
+              </tr>
+              <tr class="even prio6">
+                    <td class="id"><a href="../ticket/1715.html" title="View ticket" class="closed">#1715</a></td>
+                    <td class="summary">
+                      <a href="../ticket/1715.html" title="View ticket">Search index multilingual</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      kindly
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      awaiting triage
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-sprint-2012-02-20.html">ckan-sprint-2012-02-20</a>
+                    </td>
+                    <td class="keywords">
+                      2d [a1.5d]
+                    </td>
+              </tr>
+              <tr class="odd prio6">
+                    <td class="id"><a href="../ticket/1722.html" title="View ticket" class="closed">#1722</a></td>
+                    <td class="summary">
+                      <a href="../ticket/1722.html" title="View ticket">Update the package model for vocabularies</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      seanh
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      awaiting triage
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-sprint-2012-02-20.html">ckan-sprint-2012-02-20</a>
+                    </td>
+                    <td class="keywords">
+                      taxonomies
+                    </td>
+              </tr>
+              <tr class="even prio6">
+                    <td class="id"><a href="../ticket/1724.html" title="View ticket" class="closed">#1724</a></td>
+                    <td class="summary">
+                      <a href="../ticket/1724.html" title="View ticket">Update logic action functions for vocabularies</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      seanh
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      awaiting triage
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-sprint-2012-02-20.html">ckan-sprint-2012-02-20</a>
+                    </td>
+                    <td class="keywords">
+                      taxonomies [4d]
+                    </td>
+              </tr>
+              <tr class="odd prio6">
+                    <td class="id"><a href="../ticket/1736.html" title="View ticket" class="closed">#1736</a></td>
+                    <td class="summary">
+                      <a href="../ticket/1736.html" title="View ticket">[Super] Multilingual Metadata</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      kindly
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      awaiting triage
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-v1.7.html">ckan-v1.7</a>
+                    </td>
+                    <td class="keywords">
+                      13d
+                    </td>
+              </tr>
+              <tr class="even prio6">
+                    <td class="id"><a href="../ticket/1738.html" title="View ticket" class="closed">#1738</a></td>
+                    <td class="summary">
+                      <a href="../ticket/1738.html" title="View ticket">Add extension point to search index, so can modify dataset dict before index.</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      kindly
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      awaiting triage
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-sprint-2012-02-06.html">ckan-sprint-2012-02-06</a>
+                    </td>
+                    <td class="keywords">
+                      2d
+                    </td>
+              </tr>
+              <tr class="odd prio6">
+                    <td class="id"><a href="../ticket/1741.html" title="View ticket" class="closed">#1741</a></td>
+                    <td class="summary">
+                      <a href="../ticket/1741.html" title="View ticket">Add extention point to dataset view.</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      kindly
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      awaiting triage
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-sprint-2012-02-20.html">ckan-sprint-2012-02-20</a>
+                    </td>
+                    <td class="keywords">
+                      4d
+                    </td>
+              </tr>
+              <tr class="even prio6">
+                    <td class="id"><a href="../ticket/1765.html" title="View ticket" class="closed">#1765</a></td>
+                    <td class="summary">
+                      <a href="../ticket/1765.html" title="View ticket">Enhance Tag and Package models with vocabularies</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      seanh
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      awaiting triage
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-sprint-2012-02-20.html">ckan-sprint-2012-02-20</a>
+                    </td>
+                    <td class="keywords">
+                      taxonomies [4d]
+                    </td>
+              </tr>
+              <tr class="odd prio6">
+                    <td class="id"><a href="../ticket/1775.html" title="View ticket" class="closed">#1775</a></td>
+                    <td class="summary">
+                      <a href="../ticket/1775.html" title="View ticket">Enable adding many tags at once to controlled vocabularies via API</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      seanh
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      awaiting triage
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-sprint-2012-03-05.html">ckan-sprint-2012-03-05</a>
+                    </td>
+                    <td class="keywords">
+                      taxonomies [0.5d] [a:1d]
+                    </td>
+              </tr>
+              <tr class="even prio6">
+                    <td class="id"><a href="../ticket/1776.html" title="View ticket" class="closed">#1776</a></td>
+                    <td class="summary">
+                      <a href="../ticket/1776.html" title="View ticket">Granular editing of vocabulary tags</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      seanh
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      awaiting triage
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-sprint-2012-02-20.html">ckan-sprint-2012-02-20</a>
+                    </td>
+                    <td class="keywords">
+                      taxonomies [1d]
+                    </td>
+              </tr>
+              <tr class="odd prio6">
+                    <td class="id"><a href="../ticket/1777.html" title="View ticket" class="closed">#1777</a></td>
+                    <td class="summary">
+                      <a href="../ticket/1777.html" title="View ticket">Write about multilingual features for ec.</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      kindly
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      awaiting triage
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-sprint-2012-02-20.html">ckan-sprint-2012-02-20</a>
+                    </td>
+                    <td class="keywords">
+                      [0.5]
+                    </td>
+              </tr>
+              <tr class="even prio6">
+                    <td class="id"><a href="../ticket/1779.html" title="View ticket" class="closed">#1779</a></td>
+                    <td class="summary">
+                      <a href="../ticket/1779.html" title="View ticket">Add multilingual translation table.</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      kindly
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      awaiting triage
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-sprint-2012-02-20.html">ckan-sprint-2012-02-20</a>
+                    </td>
+                    <td class="keywords">
+                      2d
+                    </td>
+              </tr>
+              <tr class="odd prio6">
+                    <td class="id"><a href="../ticket/1781.html" title="View ticket" class="closed">#1781</a></td>
+                    <td class="summary">
+                      <a href="../ticket/1781.html" title="View ticket">Api to add translations.</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      kindly
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      awaiting triage
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-sprint-2012-02-20.html">ckan-sprint-2012-02-20</a>
+                    </td>
+                    <td class="keywords">
+                      3d
+                    </td>
+              </tr>
+              <tr class="even prio6">
+                    <td class="id"><a href="../ticket/1806.html" title="View ticket" class="closed">#1806</a></td>
+                    <td class="summary">
+                      <a href="../ticket/1806.html" title="View ticket">make drop down language selector</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      toby
+                    </td>
+                    <td class="type">
+                      task
+                    </td>
+                    <td class="priority">
+                      awaiting triage
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-sprint-2012-03-05.html">ckan-sprint-2012-03-05</a>
+                    </td>
+                    <td class="keywords">
+                      2d
+                    </td>
+              </tr>
+              <tr class="odd prio6">
+                    <td class="id"><a href="../ticket/1819.html" title="View ticket" class="closed">#1819</a></td>
+                    <td class="summary">
+                      <a href="../ticket/1819.html" title="View ticket">change search index code to use package_dictize instead of obj.to_dict</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      kindly
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      awaiting triage
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-sprint-2012-04-02.html">ckan-sprint-2012-04-02</a>
+                    </td>
+                    <td class="keywords">
+                      2d
+                    </td>
+              </tr>
+              <tr class="even prio6">
+                    <td class="id"><a href="../ticket/1820.html" title="View ticket" class="closed">#1820</a></td>
+                    <td class="summary">
+                      <a href="../ticket/1820.html" title="View ticket">Index multilingual data when mulilingual extension is added.</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      kindly
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      awaiting triage
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-sprint-2012-03-19.html">ckan-sprint-2012-03-19</a>
+                    </td>
+                    <td class="keywords">
+                      2d
+                    </td>
+              </tr>
+              <tr class="odd prio6">
+                    <td class="id"><a href="../ticket/1821.html" title="View ticket" class="closed">#1821</a></td>
+                    <td class="summary">
+                      <a href="../ticket/1821.html" title="View ticket">create internal multilingual extension that brings together all multilingual features</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      kindly
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      awaiting triage
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-sprint-2012-03-05.html">ckan-sprint-2012-03-05</a>
+                    </td>
+                    <td class="keywords">
+                      1d
+                    </td>
+              </tr>
+              <tr class="even prio6">
+                    <td class="id"><a href="../ticket/1822.html" title="View ticket" class="closed">#1822</a></td>
+                    <td class="summary">
+                      <a href="../ticket/1822.html" title="View ticket">Weight mulilingual searches correctly</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      kindly
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      awaiting triage
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-sprint-2012-03-05.html">ckan-sprint-2012-03-05</a>
+                    </td>
+                    <td class="keywords">
+                      2d
+                    </td>
+              </tr>
+              <tr class="odd prio6">
+                    <td class="id"><a href="../ticket/2250.html" title="View ticket" class="closed">#2250</a></td>
+                    <td class="summary">
+                      <a href="../ticket/2250.html" title="View ticket">Setup nginx and datastore on ecportal</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      kindly
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      awaiting triage
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-sprint-2012-04-02.html">ckan-sprint-2012-04-02</a>
+                    </td>
+                    <td class="keywords">
+                      1d
+                    </td>
+              </tr>
+              <tr class="even prio6">
+                    <td class="id"><a href="../ticket/2261.html" title="View ticket" class="closed">#2261</a></td>
+                    <td class="summary">
+                      <a href="../ticket/2261.html" title="View ticket">All links need to option to change where language is placed in url.</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      toby
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      awaiting triage
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-sprint-2012-04-02.html">ckan-sprint-2012-04-02</a>
+                    </td>
+                    <td class="keywords">
+                    </td>
+              </tr>
+              <tr class="odd prio6">
+                    <td class="id"><a href="../ticket/2392.html" title="View ticket" class="closed">#2392</a></td>
+                    <td class="summary">
+                      <a href="../ticket/2392.html" title="View ticket">Add language field to dataset</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      icmurray
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      awaiting triage
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-sprint-2012-05-29.html">ckan-sprint-2012-05-29</a>
+                    </td>
+                    <td class="keywords">
+                      [0.5-1d]
+                    </td>
+              </tr>
+              <tr class="even prio6">
+                    <td class="id"><a href="../ticket/2393.html" title="View ticket" class="closed">#2393</a></td>
+                    <td class="summary">
+                      <a href="../ticket/2393.html" title="View ticket">Map licenses with countryCode to license name without countryCode</a>
+                    </td>
+                    <td class="component">
+                      ecportal
+                    </td>
+                    <td class="status">
+                      closed
+                    </td>
+                    <td class="owner">
+                      icmurray
+                    </td>
+                    <td class="type">
+                      enhancement
+                    </td>
+                    <td class="priority">
+                      awaiting triage
+                    </td>
+                    <td class="milestone">
+                      <a title="View milestone" href="../milestone/ckan-sprint-2012-05-29.html">ckan-sprint-2012-05-29</a>
+                    </td>
+                    <td class="keywords">
+                      [0.5-1d]
+                    </td>
+              </tr>
+      </tbody>
+  </table>
+  
+</div>
+      <div class="buttons">
+      </div>
+      <div id="help"><strong>Note:</strong> See <a href="../wiki/TracQuery.html">TracQuery</a>
+        for help on using queries.</div>
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="first">
+          <a rel="nofollow" href="http://localhost/query?status=accepted&amp;status=assigned&amp;status=closed&amp;status=new&amp;status=reopened&amp;component=ecportal&amp;groupdesc=1&amp;group=resolution&amp;format=rss&amp;col=id&amp;col=summary&amp;col=component&amp;col=status&amp;col=owner&amp;col=type&amp;col=priority&amp;col=milestone&amp;col=keywords&amp;report=16&amp;order=priority" class="rss">RSS Feed</a>
+        </li><li>
+          <a rel="nofollow" href="http://localhost/query?status=accepted&amp;status=assigned&amp;status=closed&amp;status=new&amp;status=reopened&amp;component=ecportal&amp;groupdesc=1&amp;group=resolution&amp;format=csv&amp;col=id&amp;col=summary&amp;col=component&amp;col=status&amp;col=owner&amp;col=type&amp;col=priority&amp;col=milestone&amp;col=keywords&amp;report=16&amp;order=priority" class="csv">Comma-delimited Text</a>
+        </li><li class="last">
+          <a rel="nofollow" href="http://localhost/query?status=accepted&amp;status=assigned&amp;status=closed&amp;status=new&amp;status=reopened&amp;component=ecportal&amp;groupdesc=1&amp;group=resolution&amp;format=tab&amp;col=id&amp;col=summary&amp;col=component&amp;col=status&amp;col=owner&amp;col=type&amp;col=priority&amp;col=milestone&amp;col=keywords&amp;report=16&amp;order=priority" class="tab">Tab-delimited Text</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

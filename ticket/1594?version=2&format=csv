@@ -1,0 +1,12 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1594,[super] QA Improvements,johnglover,johnglover,"Now that QA has been updated for Celery and CKAN 1.5.1, there are a number of improvements that we should probably implement.
+
+ * Integrate QA into frontend - 1d - #1583
+ * QA report improvements - 2.5d - #1584
+ * QA - Check license as part of 5 star rating - #1587
+ * QA - Give SPARQL endpoints a 4 star rating - #1588
+ * QA - Give 5 star rating to datasets with link metadata - #1589
+
+Main pad: http://ckan.okfnpad.org/qa
+
+Some QA discussion (relating to Celery in particular) at http://ckan.okfnpad.org/queue",enhancement,new,major,ckan-v1.6,ckan,,qa,,ckan,none

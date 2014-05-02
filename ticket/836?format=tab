@@ -1,0 +1,6 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+836	Use site_url config option in templates	rgrp		"A user reported wanting to install ckan at a suburl. Apparently this does not work well because some urls are hard-coded: http://lists.okfn.org/pipermail/ckan-discuss/2010-November/000726.html
+
+Instead we should use the site_url config option where necessary.
+
+Cost: 1h"	enhancement	closed	awaiting triage	ckan-v1.3-sprint-1	ckan	fixed			ckan	none

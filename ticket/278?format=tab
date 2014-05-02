@@ -1,0 +1,2 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+278	Spaces in extra field keys	dread	dread	If the key to an extra field has a space in it then various form code doesn't work. Either need to disallow spaces or cope with them.	defect	closed	awaiting triage	v1.0	ckan	fixed				

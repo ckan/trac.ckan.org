@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1082: language changes behave strangely</title>
+    <link>http://localhost/ticket/1082</link>
+    <description>&lt;p&gt;
+Set language to Greek, flash message says 'Language set to: English', but page is now about half in Greek.
+&lt;/p&gt;
+&lt;p&gt;
+Set language back to English causes server error:
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a class="missing wiki"&gt;AttributeError?&lt;/a&gt;: '&lt;a class="missing wiki"&gt;NoneType?&lt;/a&gt;' object has no attribute 'path'
+&lt;/p&gt;
+&lt;p&gt;
+Module ckan.controllers.error:29 in document          view
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+if original_request.path.startswith('/api'):
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+However going to a new page reveals that it's back to English
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1082</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Tue, 06 Sep 2011 14:03:45 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/1082#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1082#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+The flash message 'Language set to: English' was always in the previous language, not the new one. Pudo fixed this in cset:eaf342823caf and I have transplanted this into release-1.4.3.
+&lt;/p&gt;
+&lt;p&gt;
+I've also added/corrected translations for all languages for 'Language set to: English' so that it makes sense!
+&lt;/p&gt;
+&lt;p&gt;
+"Set language back to English causes server error:"
+I can't reproduce this. The exception looks like a problem with the forwarding, which improvements were made in &lt;a class="closed ticket" href="http://localhost/ticket/1126" title="enhancement: Exceptions arising from error page (closed: fixed)"&gt;#1126&lt;/a&gt;.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Tue, 13 Sep 2011 12:33:37 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1082#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/1082#comment:2</guid>
+      <description>
+        &lt;p&gt;
+Language switch problem has been around since it was introduced in the 1.3.1 release.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

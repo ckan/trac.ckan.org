@@ -1,0 +1,76 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+336	Resource extension to REST API	donovanhide	dread	"== As a ==
+
+CKAN client such as !ScraperWiki
+
+== I want to ==
+
+search for Package Resources, either by URL or other field, or just get them all. I want to be able to get all the resource's fields, such as URL.
+
+== Proposed implementation ==
+
+Add resource search API at:
+
+/api/search/resource
+
+AND resource added to model API at:
+
+api/rest/resource
+
+Functional differences from the !ScraperWiki suggested patch:
+
+ * URL is not normalised
+ 
+ * URLs are not grouped
+
+ * All fields of the resource object are returned, not just the URL
+
+ * Package is identified by its ID, not name or full URL. (This is for consistency in the API - you can simple prepend 'http://ckan.net/package/' to the package ID)
+
+This is to make our API more general, simple and consistent. It means that the !ScraperWiki client has to do a bit more processing to get exactly what it needs. Is this ok?
+
+=== Examples ===
+
+POST 
+{{{
+{""url"": ""scraperwiki.com"", ""all_fields"": 1}
+}}}
+to: /api/2/search/resource
+
+returns JSON:
+{{{
+ [{""URL"": ""http://scraperwiki.com/lincolnshire-councillors"", 
+   ""format"": ""CSV"", 
+   ""Description"": ""Scrape of www.lincs.gov/councillors.pdf by ScraperWiki."",
+   ""hash"": """", ""package_id"": ""b8a325c8-af2a-43f3-8245-9db7d73dfbfe""
+ }]
+}}}
+
+Note use of package_id instead of package_name is something we're moving towards in the API, since names can change. When we've done ticket:341 then ckan.net/package/lincs-councillors will be a synonym of ckan.net/package/b8a325c8-af2a-43f3-8245-9db7d73dfbfe
+
+=== Search Parameters ===
+{{{
+Key:  q
+Description: Search all resource fields for the value
+
+Key: url / description / format / 
+Description: Search particular field for the value
+
+Key: all_fields
+Value: 0 or 1 (0 is default)
+Description: If 1 (true), the full record of the package resource
+(and it's package reference) are returned, rather than just the
+PackageResource ID.
+}}}
+May also choose to introduce 'offset' and 'limit' to page through a large number of results.
+
+== Original request ==
+
+Hi,
+have attached a patch for adding a resource list api call. Have also added a JSONP compatible callback section, along the lines of #388.
+
+Could also add a search version. Not sure what the best url would be for that though.
+
+Haven't written a test as the structure seems to follow a functional spec. Is that document around somewhere?
+
+Donovan"	enhancement	new	awaiting triage	v1.1	ckan		rest resource			

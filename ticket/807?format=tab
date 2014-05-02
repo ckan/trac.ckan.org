@@ -1,0 +1,6 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+807	Handle robot traffic better	rgrp		"We get a lot of robot traffic. Notice that robots are visiting package edit pages. Suggest:
+
+  * Add rel=nofollow to various links
+  * Throttle some robots (not all seem to respect robots.txt)
+"	enhancement	closed	awaiting triage	ckan-v1.3	ckan	wontfix				

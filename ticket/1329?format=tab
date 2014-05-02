@@ -1,0 +1,33 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1329	i18n poor in some templates - missing i18n tags	amercader	dread	"Just a tip for developers regarding translations:
+
+* When writing templates, mark <p>, <div>, etc elements with the
+i18:msg attribute, otherwise the messages don't get extracted
+properly.
+
+Good: https://bitbucket.org/okfn/ckan/src/1996b0439e81/ckan/templates/home/about.html#cl-40
+{{{
+<p i18n:msg="""">More about CKAN, and the background to its creation can
+   be found in <a
+     href=""http://m.okfn.org/files/talks/opentech_20080705/"">these
+     slides</a>.</p>
+}}}
+gives this:
+https://bitbucket.org/okfn/ckan/src/1996b0439e81/ckan/i18n/ca/LC_MESSAGES/ckan.po#cl-1238
+
+Bad: https://bitbucket.org/okfn/ckan/src/1996b0439e81/ckan/templates/package/new_package_form.html#cl-211
+
+{{{
+<p class=""hints"">
+<strong>Important:</strong> By submitting content, you agree to
+release your contributions
+ under the <a href=""http://opendatacommons.org/licenses/odbl/1.0/"">Open
+Database License</a>. Please <strong>refrain</strong> from editing
+this page if you are <strong>not</strong> happy to do this.
+</p>
+}}}
+gives this:
+https://bitbucket.org/okfn/ckan/src/1996b0439e81/ckan/i18n/ca/LC_MESSAGES/ckan.po#cl-1384
+
+The message is split in different parts that not necessarily match the
+grammar or syntax of the translated language."	defect	closed	major	ckan-sprint-2011-10-28	ckan	fixed			ckan	none

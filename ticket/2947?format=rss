@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2947: Redirect to the resource page from /resource/{res-id}</title>
+    <link>http://localhost/ticket/2947</link>
+    <description>&lt;p&gt;
+Use story:
+As a user of the datasore I want to be able to put the resource id without the dataset name in a url and see the resource page.
+&lt;/p&gt;
+&lt;p&gt;
+Proposed redirect:
+&lt;/p&gt;
+&lt;p&gt;
+/resource/{res-id} -&amp;gt; dataset/foo-bar/resource/{res-id}
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2947</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+ </channel>
+</rss>

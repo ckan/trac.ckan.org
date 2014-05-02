@@ -1,0 +1,12 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1404	Post-v1.5 UX improvements	zephod	zephod	"Various UX improvements, bugs, and suggestions are collected here:
+
+  * [general]: Empty tables have a '(none)' placeholder which is causing issues. Move it into a separate div - it doesn't need be a wide <td> object.
+  * [dataset/edit]: Errors in form - would be nice to auto-open the appropriate resource box.
+  * [dataset/edit]: Autocomplete the author/maintainer box (requires API extension?)
+  * [search]: Declutter the sidebar. No yellow box.
+  * [search]: Facets to go on the left, rather than the right. More logical flow.
+  * [search]: Did you know you can search by author? Probably not. Find a nice way of presenting extended search options.
+  * [dataset/edit]: No hint is given that the time format for a resource is in ISO, eg 2005-01-01T10:10:10
+  * [general]: Ticket #1413 (presently unassigned; certainly related to this ticket)
+  * [dataset]: Ticket #1425 (deletion of datasets)"	enhancement	new	awaiting triage	ckan-backlog	ckan				ckan	none

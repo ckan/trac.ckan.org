@@ -1,0 +1,5 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2788,Speed improvements on creating/updating and indexing,amercader,amercader,"Specially needed when importing large numbers of datasets.
+
+Profiling the import command from the harvesting extension has shown some areas where improvements could be made.
+",enhancement,new,awaiting triage,ckan-v1.9,ckan,,,kindly,ckan,none

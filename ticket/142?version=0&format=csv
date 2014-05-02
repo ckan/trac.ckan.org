@@ -1,0 +1,5 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+142,User has nickname,dread,rgrp,"* User can give themselves a nickname. Their user page then becomes user/<nickname> rather than user/<id>.
+* Where we show lists of revisions, each revision author is now a link to the author's user page.
+
+Related to ticket:136 and ticket:138.",enhancement,new,major,,ckan,,,,,

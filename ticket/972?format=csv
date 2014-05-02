@@ -1,0 +1,10 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+972,Merge 'extras' into main package dict rather than having separate key,rgrp,sebbacon,"Rather than have a separate 'extras' key all the extras fields should be consolidated into the main package dict when presenting the package internally or e.g. via the API.
+
+Why? Extras are really just an artefact of our internal storage model. Clients of the system (both internal and external) should just see a set of key/values with no distinction between extras and non-extras.
+
+== Issues ==
+
+ * Possible breaking change to the API (could enforce backwards compatibility by keepings extras for the time being)
+
+Possible subticket of forms refactoring: #961",enhancement,closed,major,ckan-v1.5,ckan,wontfix,model,,ckan,none

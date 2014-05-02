@@ -1,0 +1,10 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1784,Links to renamed objects break,seanh,seanh,"The HTML templates for some activity stream activities link to objects (packages, resources, etc.) by their names, e.g. /dataset/foo, but if the object has since been renamed then the link will be broken.
+
+Possible solutions are to use the object ID to find its current name at rendering time and link to that, or link to the object by ID rather than by name.
+
+Linking by ID is both simpler to implement and better. Links by ID are ugly, but they are permanent and don't break when an object is renamed. We should be using links by ID everywhere on CKAN, so that when third-party sites copy-paste our URLs and link to us, their links don't break later.
+
+Fixing this means fixing the dataset_link(), resource_link(), group_link() etc. functions in ckan/lib/helpers.py which will change the links everywhere in CKAN where those functions are used to link to objects (which should be everywhere where we link to an object).
+
+If we want to have nice looking by-name URLs and what them to be permanent, then we need to change CKAN so that objects cannot be renamed.",enhancement,closed,awaiting triage,ckan-v1.7,ckan,wontfix,activity_streams,,ckan,none

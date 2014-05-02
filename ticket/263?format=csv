@@ -1,0 +1,12 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+263,Improve and test openid login,rgrp,johnbywater,"At the moment the user has to figure out to login with providers -- this is not always obvious (e.g. google).
+
+We could improve this with a small bit of javascript. As an example see: http://standalone.demo.civicrm.org/standalone/
+
+Not sure exactly what library that is using (or if bespoke) so alternatives include (NB: we already use jquery):
+  * http://code.google.com/p/openid-realselector/
+  * http://code.google.com/p/openid-selector/
+
+In addition to implementing this we also need to test logging in with main providers: google, wordpress -- as we have had reports of it not working with e.g. wordpress (not sure if this testing can be automated really -- best hope would be selenium I think -- so OK if done by hand).
+
+Cost: 3h (2h UI), (1h testing)",enhancement,closed,critical,v1.1,ckan,fixed,,,,

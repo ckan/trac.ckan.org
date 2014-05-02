@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1202,Links to datapkg utility don't lead to info about it,rolf,rgrp,"In the presentation of data packages, the link in ""The information on this page and the downloads / resources are also available using the datapkg command line utility."" (http://knowledgeforge.net/ckan/doc/datapkg/install.html) ends up at the home page of ckan.org
+
+Perhaps link it to https://bitbucket.org/okfn/datapkg/overview for now, to save some searching for people who want to find out more?",enhancement,closed,awaiting triage,,ckan,invalid,,,ckan,none

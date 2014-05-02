@@ -1,0 +1,5 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2317,Corrections to dataset creation form for v1.7,rgrp,," * Add home page url
+ * Remove group option (seen it confuse several users) - perhaps replace with tags (?)
+ * Check form looks ok in portugese (seems to be a problem with css)
+",enhancement,new,critical,ckan-v1.7,ckan,,,,ckan,none

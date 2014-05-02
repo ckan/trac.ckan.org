@@ -1,0 +1,22 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1257,Anti-Spam tools,dread,,"We are getting more and more spam on ckan.net and we need to improve our strategy of combating it. It is bad because google ranks who we link to (which we do want for legitimate links), and our front page contains the latest package edits, so spam is immediately very visible.
+
+Spam:
+ * Package creation
+ * Package edit
+ * User creation
+
+Systems to consider:
+ * Automatic
+   * captcha
+   * bayesian scoring
+ * Sysadmin
+   * a tool to quickly analyse and remove packages, edits and users
+ * Helpful users
+   * button to click indicating spam, leading to any/all of: 
+     * add TODO item (which emails package admin and sysadmins)
+     * quarantine the package/user so it doesn't show up on the front page and a warning is shown when you view it
+
+General thoughts:
+ * We should learn from the wikipedia tools, as they are the experts
+ * This is a serious problem that is only going to get worse and is a threat to the whole site.",enhancement,new,major,,ckan,,,,ckan,none

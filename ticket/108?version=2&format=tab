@@ -1,0 +1,29 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+108	Package search in the REST API	rgrp	dread	"Add package search facility in the rest api at /api/search
+
+Queries can be provided as for the normal package search either by posting to that url or by performing a get with a query string.
+
+E.g. .../api/search/package?q=xyz
+
+Query parameter q:
+  * keyword string (searches name, title, tags by default)
+    * split by words and ANDed
+  * Searching by specific fields (in addition to keyword string). Pass in a query parameter qjson '''instead''' of q. Payload to json is a JSON-encoded dict which is a dictionary with a q field for free text (keywords) and additional key/value pairs for specific fields
+     * if q and qjson specified ignore q and just process qjson value
+
+Additional parameters in addition to query (""q"" or ""qjson"") are:
+  * limit
+  * offset
+  * fullinfo=0/1 - return full record for each result (default=0)
+  * order_by=field_name
+  * search_notes=0/1 (default 0) do we search notes field in a keyword search
+
+Return value is json encoded dictionary with keys:
+  * 'results': list of results
+  * 'count': total number of results
+
+=== Extras (for the future) ===
+
+  * Prioritisation is not part of this ticket (requires fulltext support in DB or in external app such as Xapian) 
+
+"	enhancement	new	critical	v0.10	ckan					

@@ -1,0 +1,8 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+327	Create a web hook worker for CKAN	pudo	rgrp	" This will be useful as an example consumer of the new queue notifications (#325). 
+
+* A user can register any URL to be notified upon an event. 
+* Possible extensions: GET with ID only vs. POST with serialized object
+* E-Mail notifications are also hooks, essentially. 
+
+We need to have a UI module that allows for the hook CRUD and some feedback (e.g. non 200 status codes)"	enhancement	new	awaiting triage	v1.1	ckan					

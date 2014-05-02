@@ -1,0 +1,10 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2301	Replace old-style string formatting with format() method (at least in strings marked for translation)	seanh	seanh	"Some strings in CKAN are passed to gettext with more than one %s in them, this is no good as translators may need to change the order of substituted words.
+
+Strings should not use the old style % substitution, they should use the new format method in Python 2.6+, e.g.:
+
+'This {food} is {adjective}.'.format(food='spam', adjective='absolutely horrible')
+
+http://docs.python.org/release/2.6.8/tutorial/inputoutput.html#fancier-output-formatting
+
+We should probably only change strings that are marked for translation and that contain multiple %s, don't want to make too much work or cause too many strings to change and need to be re-translated."	enhancement	new	minor	ckan-future	ckan		i18n		ckan	none

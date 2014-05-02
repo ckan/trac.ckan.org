@@ -1,0 +1,6 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2880	Datasets (Package) should have owners	ross	icmurray	"Each dataset should have an explicit owner that is an organisation.  This is the organisation that owns the dataset* and will be used for specifying who can move a dataset out of the default organisation.
+
+This should probably be a foreign key link from dataset to organisation (or rather group).
+
+* Currently this won't necessarily be the organisation that the dataset is a member of, but it is likely that this will be the case initially (at least until someone moves it to another organisation)."	enhancement	closed	awaiting triage	ckan 2.0	ckan	wontfix	organizations		ckan	none

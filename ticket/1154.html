@@ -1,0 +1,580 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      #1154 (Make ckan robust against solr failure)
+     – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="prev" href="1153.html" title="Ticket #1153" />
+        <link rel="last" href="3030.html" title="Ticket #3030" />
+        <link rel="help" href="../wiki/TracGuide.html" />
+        <link rel="alternate" href="1154%3Fformat=csv" type="text/csv" class="csv" title="Comma-delimited Text" /><link rel="alternate" href="1154%3Fformat=tab" type="text/tab-separated-values" class="tab" title="Tab-delimited Text" /><link rel="alternate" href="1154%3Fformat=rss" type="application/rss+xml" class="rss" title="RSS Feed" />
+        <link rel="next" href="1155.html" title="Ticket #1155" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/ticket.css" type="text/css" />
+        <link rel="first" href="1.html" title="Ticket #1" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript">
+      var auto_preview_timeout=2.0;
+      var form_token="93d81ccf9a7bb1c456462f62";
+    </script>
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script><script type="text/javascript" src="../chrome/common/js/wikitoolbar.js"></script><script type="text/javascript" src="../chrome/common/js/resizer.js"></script><script type="text/javascript" src="../chrome/common/js/auto_preview.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("div.description").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $(".foldable").enableFolding(false, true);
+        var args = {realm: "ticket", id: 1154, escape_newlines: 0}
+        $("#comment").autoPreview("/wiki_render", args, function(textarea, text, rendered) {
+            $("#ticketchange div.comment").html(rendered);
+            if (rendered)
+              $("#ticketchange").show();
+            else if ($("#ticketchange ul.changes").length == 0)
+              $("#ticketchange").hide();
+        });
+        $("#trac-comment-editor textarea").autoPreview("/wiki_render", args,
+                                                       function(textarea, text, rendered) {
+          var comment = $("#trac-comment-editor").next("div.comment");
+          comment.html(rendered);
+          if (rendered)
+            comment.show();
+          else
+            comment.hide();
+        });
+        $("#modify").parent().toggleClass("collapsed");
+        $(".trac-topnav a").click(function() { $("#modify").parent().removeClass("collapsed"); });
+        /* only enable control elements for the currently selected action */
+        var actions = $("#action input[name='action']");
+        function updateActionFields() {
+          actions.each(function () {
+            $(this).siblings().find("*[id]").enable($(this).checked());
+            $(this).siblings().filter("*[id]").enable($(this).checked());
+          });
+        }
+        actions.click(updateActionFields);
+        updateActionFields();
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="../wiki/TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li class="active"><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="1153.html" title="Ticket #1153">Previous Ticket</a></span></li><li class="last"><span><a class="next" href="1155.html" title="Ticket #1155">Next Ticket</a> &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="ticket">
+      <h1 id="trac-ticket-title">
+          <a href="1154.html">Ticket #1154</a>
+          <span class="status">(closed enhancement: fixed)</span>
+      </h1>
+      <div id="ticket">
+  <div class="date">
+    <p>Opened <a class="timeline" href="../timeline%3Ffrom=2011-05-24T16:27:52Z&amp;precision=second.html" title="2011-05-24T16:27:52Z in Timeline">3 years</a> ago</p>
+    <p>Last modified <a class="timeline" href="../timeline%3Ffrom=2011-08-25T15:51:59Z&amp;precision=second.html" title="2011-08-25T15:51:59Z in Timeline">3 years</a> ago</p>
+  </div>
+  <h2 class="summary searchable">Make ckan robust against solr failure</h2>
+  <table class="properties">
+    <tr>
+      <th id="h_reporter">Reported by:</th>
+      <td headers="h_reporter" class="searchable">
+        <a href="../query%3Fstatus=!closed&amp;reporter=nils.toedtmann.html">nils.toedtmann</a>
+      </td>
+      <th id="h_owner">Owned by:</th>
+      <td headers="h_owner">
+        <a href="../query%3Fstatus=!closed&amp;owner=johnglover.html">johnglover</a>
+      </td>
+    </tr>
+    <tr>
+        <th id="h_priority">
+          Priority:
+        </th>
+        <td headers="h_priority">
+              <a href="../query%3Fstatus=!closed&amp;priority=major.html">major</a>
+        </td>
+        <th id="h_milestone">
+          Milestone:
+        </th>
+        <td headers="h_milestone">
+              <a class="closed milestone" href="../milestone/ckan-sprint-2011-10-28.html">ckan-sprint-2011-10-28</a>
+        </td>
+    </tr><tr>
+        <th id="h_component">
+          Component:
+        </th>
+        <td headers="h_component">
+              <a href="../query%3Fstatus=!closed&amp;component=ckan.html">ckan</a>
+        </td>
+        <th id="h_keywords">
+          Keywords:
+        </th>
+        <td headers="h_keywords" class="searchable">
+              <a href="../query%3Fstatus=!closed&amp;keywords=~search.html">search</a>
+        </td>
+    </tr><tr>
+        <th id="h_cc">
+          Cc:
+        </th>
+        <td headers="h_cc" class="searchable">
+              <a href="../query%3Fstatus=!closed&amp;cc=~pudo.html">pudo</a>
+        </td>
+        <th id="h_repo">
+          Repository:
+        </th>
+        <td headers="h_repo">
+              <a href="../query%3Fstatus=!closed&amp;repo=ckanext-solr.html">ckanext-solr</a>
+        </td>
+    </tr><tr>
+        <th id="h_theme">
+          Theme:
+        </th>
+        <td headers="h_theme">
+              <a href="../query%3Fstatus=!closed&amp;theme=none.html">none</a>
+        </td>
+        <th>
+        </th>
+        <td>
+        </td>
+    </tr>
+  </table>
+  <div class="description">
+    <h3 id="comment:description">
+      Description
+      <span class="lastmod" title="2011-08-24 09:32:05+00:00">
+        (last modified by johnglover)
+        (<a href="1154%3Faction=diff&amp;version=4.html">diff</a>)
+      </span>
+    </h3>
+    <div class="searchable">
+      <p>
+According to pudo, a ckan with activated solr extension throws a 5xx when solr is unreachable. Instead, it should behave more like a ckan without ckanext-solr when this happens.
+</p>
+
+    </div>
+  </div>
+</div>
+          
+
+        <div>
+          <h2 class="foldable">Change History</h2>
+          <div id="changelog">
+              <div class="change" id="trac-change-1">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:1" class="cnum">
+      <a href="1154.html#comment:1">comment:1</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-08-15T13:03:37Z&amp;precision=second.html" title="2011-08-15T13:03:37Z in Timeline">3 years</a> ago by johnglover
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Status</strong>
+        changed from <em>new</em> to <em>assigned</em>
+    </li><li>
+      <strong>Cc</strong>
+        <em>sebbacon</em> removed
+    </li><li>
+      <strong>Priority</strong>
+        changed from <em>awaiting triage</em> to <em>major</em>
+    </li><li>
+      <strong>Owner</strong>
+        set to <em>johnglover</em>
+    </li><li>
+      <strong>Milestone</strong>
+        set to <em>ckan-current-sprint</em>
+    </li><li>
+      <strong>Keywords</strong>
+        <em>search</em> added
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-2">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:2" class="cnum">
+      <a href="1154.html#comment:2">comment:2</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-08-23T17:28:17Z&amp;precision=second.html" title="2011-08-23T17:28:17Z in Timeline">3 years</a> ago by johnglover
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Status</strong>
+        changed from <em>assigned</em> to <em>closed</em>
+    </li><li>
+      <strong>Resolution</strong>
+        set to <em>fixed</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+Fixed in core (branch feature-1275-solr-search).
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-3">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:3" class="cnum">
+      <a href="1154.html#comment:3">comment:3</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-08-24T09:17:57Z&amp;precision=second.html" title="2011-08-24T09:17:57Z in Timeline">3 years</a> ago by dread
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Status</strong>
+        changed from <em>closed</em> to <em>reopened</em>
+    </li><li>
+      <strong>Resolution</strong>
+        <em>fixed</em> deleted
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+Looking at the changeset, it now does a connection check at start-up of CKAN. If it fails then CKAN runs but doesn't show any packages, apart from via the Tags interface, and the search page and widget on the front-page are removed. (BTW Is this a useful thing to do? Without search, perhaps CKAN should simply not start?)
+</p>
+<p>
+I believe the problem pudo is referring to is temporary periods when the SOLR server is slow/overloaded/down. During this time pudo and I get exception emails saying connection failed for request. e.g.
+</p>
+<pre class="wiki">Module ckan.controllers.home:29 in index
+&lt;&lt;          query = query_for(model.Package)
+               query.run(query='*:*', facet_by=g.facets,
+                         limit=0, offset=0, username=c.user)
+               c.facets = query.facets
+               c.fields = []
+&gt;&gt;  limit=0, offset=0, username=c.user)
+Module ckan.lib.search.common:115 in run
+&lt;&lt;          self.query = QueryParser(query, terms, fields)
+               self.query.validate()
+               self._run()
+               self._format_results()
+               return {'results': self.results, 'count': self.count}
+&gt;&gt;  self._run()
+Module ckanext.solr.backend:63 in _run
+&lt;&lt;              # this wrapping will be caught further up in the WUI.
+                   log.exception(e)
+                   raise SearchError(e)
+               finally:
+                   conn.close()
+&gt;&gt;  raise SearchError(e)
+SearchError: [Errno 111] Connection refused
+}}} (recently from nl.ckan.net)
+</pre>
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-4">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:4" class="cnum">
+      <a href="1154.html#comment:4">comment:4</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-08-24T09:32:05Z&amp;precision=second.html" title="2011-08-24T09:32:05Z in Timeline">3 years</a> ago by johnglover
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Description</strong>
+        modified (<a href="1154%3Faction=diff&amp;version=4.html">diff</a>)
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <blockquote class="citation">
+<p>
+Looking at the changeset, it now does a connection check at start-up of CKAN. If it fails then CKAN runs but doesn't show any
+packages, apart from via the Tags interface, and the search page and widget on the front-page are removed. (BTW Is this a 
+useful thing to do? Without search, perhaps CKAN should simply not start?)
+</p>
+</blockquote>
+<p>
+When discussing the ticket we agreed that we should allow ckan to start without search. It is possible that people simply want to list/view information without searching for it and we decided not to prevent them from doing so.
+</p>
+<blockquote class="citation">
+<p>
+I believe the problem pudo is referring to is temporary periods when the SOLR server is slow/overloaded/down. During this 
+time pudo and I get exception emails saying connection failed for request.
+</p>
+</blockquote>
+<p>
+Ok, other options then:
+</p>
+<ul><li>if an error occurs during search, return 0 results
+</li><li>if an error occurs during search, redirect to a generic 'search is unavailable' page
+</li><li>if an error occurs during search, retry the query a certain number of times before giving up and doing one of the above.
+</li></ul><p>
+What do you suggest?
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-5">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:5" class="cnum">
+      <a href="1154.html#comment:5">comment:5</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-08-24T09:48:10Z&amp;precision=second.html" title="2011-08-24T09:48:10Z in Timeline">3 years</a> ago by dread
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+Search requests - option one seems like a bad user experience, and option three seems too complicated. I should do option 2, explain it may well be a temporary problem, and let the user press reload, as per any normal web request.
+</p>
+<p>
+A more difficult problem though is what to do about a failed search indexing. Because of the try/except catch we've had until the patch yesterday, we get no exception emails for this, but I'm worried that this has caused packages to not be indexed, and hence are essentially lost in CKAN (unless someone realises there is a problem and does a reindex at some point).
+</p>
+<p>
+BTW I added paster command 'search-index check' for looking at this problem, but I don't think it was ever added to solr. Is it easy to add get_all_entity_ids for the purpose of checking for this problem?
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-6">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:6" class="cnum">
+      <a href="1154.html#comment:6">comment:6</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-08-24T13:11:36Z&amp;precision=second.html" title="2011-08-24T13:11:36Z in Timeline">3 years</a> ago by johnglover
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+Ok I'll implement option 2 for search query issues.
+</p>
+<p>
+Yes it is easy to get a list of IDs from Solr so I'll have a look at that command and make sure that it works. I think a case could be made for not allowing a package to be added if it cannot be indexed however, and making the user simply retry the request.
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-7">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:7" class="cnum">
+      <a href="1154.html#comment:7">comment:7</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-08-24T13:25:24Z&amp;precision=second.html" title="2011-08-24T13:25:24Z in Timeline">3 years</a> ago by dread
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+Yes, forcing a retry may be possible, although I guess on these occasions you'd be looking at rolling back the creation of the package object too, which is not really in the spirit of the notifications system at present. This is why we had the queue for solr for occasions like this - is it here no longer?
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-8">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:8" class="cnum">
+      <a href="1154.html#comment:8">comment:8</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-08-24T13:32:33Z&amp;precision=second.html" title="2011-08-24T13:32:33Z in Timeline">3 years</a> ago by johnglover
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+Not in core, there is a queue feature in the extension still which I could add to core. I think though it was a case of using either the queue or synchronous search, I don't think it would automatically fall back to the queue if there was an indexing problem, but we could look at that. Was there not talk of changing the queue system recently though? There are also no tests for the Solr queue so that would take a bit of work as well.
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-9">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:9" class="cnum">
+      <a href="1154.html#comment:9">comment:9</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-08-24T13:47:13Z&amp;precision=second.html" title="2011-08-24T13:47:13Z in Timeline">3 years</a> ago by johnglover
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+RE search queries failing: Just having a look through the controller code and the package search controller and the search api  both perform option 2 already, so I'll just update the home controller.
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-10">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:10" class="cnum">
+      <a href="1154.html#comment:10">comment:10</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-08-24T14:21:24Z&amp;precision=second.html" title="2011-08-24T14:21:24Z in Timeline">3 years</a> ago by dread
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+Ok, I chatted to David about this and we feel it should go like this: notification to search indexer fails and raises an exception, this gets passed through the notification system back up to the code that creates the package, and you do a roll back. Does this tally with what you mentioned in the last comment or is what's there better?
+</p>
+<p>
+Thanks for the info on the queue and ckanext-solr. It sounds like this isn't deployed successfully anywhere (or does pudo know if it is?). In this case we should be clear that it is not what it says it is: "This extension adds support for package search using Apache Solr to CKAN" and maybe simply mark it as deprecated. Pudo what do you think?
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-11">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:11" class="cnum">
+      <a href="1154.html#comment:11">comment:11</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-08-24T14:38:03Z&amp;precision=second.html" title="2011-08-24T14:38:03Z in Timeline">3 years</a> ago by johnglover
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <blockquote class="citation">
+<p>
+Ok, I chatted to David about this and we feel it should go like this: notification to search indexer fails and raises an exception, 
+this gets passed through the notification system back up to the code that creates the package, and you do a roll back. Does this 
+tally with what you mentioned in the last comment or is what's there better?
+</p>
+</blockquote>
+<p>
+This sounds good to me, definitely better than what is currently there.
+</p>
+<blockquote class="citation">
+<p>
+Thanks for the info on the queue and ckanext-solr. It sounds like this isn't deployed successfully anywhere (or does pudo
+know if it is?).
+</p>
+</blockquote>
+<p>
+I'm not actually sure if the queue works or not, but if it does I'll have to write some tests for it before we could add it to core. A working queue system would be useful generally however, as there are other things that it would be useful for (such as QA), but yes, going forward the Solr extension should really be deprecated.
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-12">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:12" class="cnum">
+      <a href="1154.html#comment:12">comment:12</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-08-25T15:51:59Z&amp;precision=second.html" title="2011-08-25T15:51:59Z in Timeline">3 years</a> ago by johnglover
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Status</strong>
+        changed from <em>reopened</em> to <em>closed</em>
+    </li><li>
+      <strong>Resolution</strong>
+        set to <em>fixed</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+All attempts to index packages should now throw a <a class="missing wiki">SearchIndexError?</a> if Solr is unavailable and the create/update will be rolled back. These errors are caught in the main package controller (redirecting to an error page) and the API controller. I have added tests for both controllers.
+</p>
+<p>
+Also updated the paster 'search-index check' command to work with solr.
+</p>
+
+    </div>
+
+              </div>
+          </div>
+        </div>
+      <div id="help"><strong>Note:</strong> See
+        <a href="../wiki/TracTickets.html">TracTickets</a> for help on using
+        tickets.</div>
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="first">
+          <a rel="nofollow" href="1154%3Fformat=csv" class="csv">Comma-delimited Text</a>
+        </li><li>
+          <a rel="nofollow" href="1154%3Fformat=tab" class="tab">Tab-delimited Text</a>
+        </li><li class="last">
+          <a rel="nofollow" href="1154%3Fformat=rss" class="rss">RSS Feed</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

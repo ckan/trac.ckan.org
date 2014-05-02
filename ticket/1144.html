@@ -1,0 +1,497 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      #1144 (Support DSPL)
+     – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="prev" href="1134.html" title="Ticket #1134" />
+        <link rel="last" href="1534.html" title="Ticket #1534" />
+        <link rel="help" href="../wiki/TracGuide.html" />
+        <link rel="alternate" href="1144%3Fformat=csv" type="text/csv" class="csv" title="Comma-delimited Text" /><link rel="alternate" href="1144%3Fformat=tab" type="text/tab-separated-values" class="tab" title="Tab-delimited Text" /><link rel="alternate" href="1144%3Fformat=rss" type="application/rss+xml" class="rss" title="RSS Feed" />
+        <link rel="up" href="../query%3Fstatus=assigned&amp;status=new&amp;status=accepted&amp;status=reopened&amp;milestone=ckan-backlog&amp;group=status&amp;order=time.html" />
+        <link rel="next" href="1145.html" title="Ticket #1145" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/ticket.css" type="text/css" />
+        <link rel="first" href="143.html" title="Ticket #143" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript">
+      var auto_preview_timeout=2.0;
+      var form_token="93d81ccf9a7bb1c456462f62";
+    </script>
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script><script type="text/javascript" src="../chrome/common/js/wikitoolbar.js"></script><script type="text/javascript" src="../chrome/common/js/resizer.js"></script><script type="text/javascript" src="../chrome/common/js/auto_preview.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("div.description").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $(".foldable").enableFolding(false, true);
+        var args = {realm: "ticket", id: 1144, escape_newlines: 0}
+        $("#comment").autoPreview("/wiki_render", args, function(textarea, text, rendered) {
+            $("#ticketchange div.comment").html(rendered);
+            if (rendered)
+              $("#ticketchange").show();
+            else if ($("#ticketchange ul.changes").length == 0)
+              $("#ticketchange").hide();
+        });
+        $("#trac-comment-editor textarea").autoPreview("/wiki_render", args,
+                                                       function(textarea, text, rendered) {
+          var comment = $("#trac-comment-editor").next("div.comment");
+          comment.html(rendered);
+          if (rendered)
+            comment.show();
+          else
+            comment.hide();
+        });
+        $("#modify").parent().toggleClass("collapsed");
+        $(".trac-topnav a").click(function() { $("#modify").parent().removeClass("collapsed"); });
+        /* only enable control elements for the currently selected action */
+        var actions = $("#action input[name='action']");
+        function updateActionFields() {
+          actions.each(function () {
+            $(this).siblings().find("*[id]").enable($(this).checked());
+            $(this).siblings().filter("*[id]").enable($(this).checked());
+          });
+        }
+        actions.click(updateActionFields);
+        updateActionFields();
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="../wiki/TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li class="active"><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="1134.html" title="Ticket #1134">Previous Ticket</a></span></li><li><a href="../query%3Fstatus=assigned&amp;status=new&amp;status=accepted&amp;status=reopened&amp;milestone=ckan-backlog&amp;group=status&amp;order=time.html">Back to Query</a></li><li class="last"><span><a class="next" href="1145.html" title="Ticket #1145">Next Ticket</a> &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="ticket">
+      <h1 id="trac-ticket-title">
+          <a href="1144.html">Ticket #1144</a>
+          <span class="status">(new enhancement)</span>
+      </h1>
+      <div id="ticket">
+  <div class="date">
+    <p>Opened <a class="timeline" href="../timeline%3Ffrom=2011-05-19T00:06:49Z&amp;precision=second.html" title="2011-05-19T00:06:49Z in Timeline">3 years</a> ago</p>
+    <p>Last modified <a class="timeline" href="../timeline%3Ffrom=2012-06-15T15:35:17Z&amp;precision=second.html" title="2012-06-15T15:35:17Z in Timeline">23 months</a> ago</p>
+  </div>
+  <h2 class="summary searchable">Support DSPL</h2>
+  <table class="properties">
+    <tr>
+      <th id="h_reporter">Reported by:</th>
+      <td headers="h_reporter" class="searchable">
+        <a href="../query%3Fstatus=!closed&amp;reporter=timmcnamara.html">timmcnamara</a>
+      </td>
+      <th id="h_owner">Owned by:</th>
+      <td headers="h_owner">
+      </td>
+    </tr>
+    <tr>
+        <th id="h_priority">
+          Priority:
+        </th>
+        <td headers="h_priority">
+              <a href="../query%3Fstatus=!closed&amp;priority=awaiting+triage.html">awaiting triage</a>
+        </td>
+        <th id="h_milestone">
+          Milestone:
+        </th>
+        <td headers="h_milestone">
+              <a class="milestone" href="../milestone/ckan-backlog.html">ckan-backlog</a>
+        </td>
+    </tr><tr>
+        <th id="h_component">
+          Component:
+        </th>
+        <td headers="h_component">
+              <a href="../query%3Fstatus=!closed&amp;component=ckan.html">ckan</a>
+        </td>
+        <th id="h_keywords">
+          Keywords:
+        </th>
+        <td headers="h_keywords" class="searchable">
+        </td>
+    </tr><tr>
+        <th id="h_cc">
+          Cc:
+        </th>
+        <td headers="h_cc" class="searchable">
+        </td>
+        <th id="h_repo">
+          Repository:
+        </th>
+        <td headers="h_repo">
+              <a href="../query%3Fstatus=!closed&amp;repo=ckan.html">ckan</a>
+        </td>
+    </tr><tr>
+        <th id="h_theme">
+          Theme:
+        </th>
+        <td headers="h_theme">
+              <a href="../query%3Fstatus=!closed&amp;theme=none.html">none</a>
+        </td>
+        <th>
+        </th>
+        <td>
+        </td>
+    </tr>
+  </table>
+  <div class="description">
+    <h3 id="comment:description">
+      Description
+    </h3>
+    <div class="searchable">
+      <p>
+DSPL, the Dataset Publishing Language, is being promoted by Google for its "Google Public Data Explorer" system. It is an XML format with metadata.
+</p>
+<p>
+The format is described on the <a class="ext-link" href="http://code.google.com/apis/publicdata/docs/developer_guide.html"><span class="icon">​</span>developer docs ofthe Google Code site</a>.
+</p>
+<p>
+Google provides a <a class="ext-link" href="http://code.google.com/apis/publicdata/docs/dsplgen.html"><span class="icon">​</span>Python script which reads CSV data and generates DSPL</a>
+</p>
+<p>
+Sample from <a class="ext-link" href="http://code.google.com/apis/publicdata/docs/dspl_sample.html"><span class="icon">​</span>http://code.google.com/apis/publicdata/docs/dspl_sample.html</a>:
+</p>
+<div class="code"><pre>
+<span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="nt">&lt;dspl</span> <span class="na">xmlns=</span><span class="s">"http://schemas.google.com/dspl/2010"</span>
+    <span class="na">xmlns:geo=</span><span class="s">"http://www.google.com/publicdata/dataset/google/geo"</span>
+    <span class="na">xmlns:geo_usa=</span><span class="s">"http://www.google.com/publicdata/dataset/google/geo/us"</span>
+    <span class="na">xmlns:time=</span><span class="s">"http://www.google.com/publicdata/dataset/google/time"</span>
+    <span class="na">xmlns:quantity=</span><span class="s">"http://www.google.com/publicdata/dataset/google/quantity"</span>
+    <span class="na">xmlns:entity=</span><span class="s">"http://www.google.com/publicdata/dataset/google/entity"</span><span class="nt">&gt;</span>
+
+  <span class="nt">&lt;import</span> <span class="na">namespace=</span><span class="s">"http://www.google.com/publicdata/dataset/google/time"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;import</span> <span class="na">namespace=</span><span class="s">"http://www.google.com/publicdata/dataset/google/quantity"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;import</span> <span class="na">namespace=</span><span class="s">"http://www.google.com/publicdata/dataset/google/entity"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;import</span> <span class="na">namespace=</span><span class="s">"http://www.google.com/publicdata/dataset/google/geo"</span><span class="nt">/&gt;</span>
+  
+  <span class="nt">&lt;info&gt;</span>
+    <span class="nt">&lt;name&gt;</span>
+      <span class="nt">&lt;value&gt;</span>My statistics<span class="nt">&lt;/value&gt;</span>
+    <span class="nt">&lt;/name&gt;</span>
+    <span class="nt">&lt;description&gt;</span>
+      <span class="nt">&lt;value&gt;</span>Some very interesting statistics about countries<span class="nt">&lt;/value&gt;</span>
+    <span class="nt">&lt;/description&gt;</span>
+    <span class="nt">&lt;url&gt;</span>
+      <span class="nt">&lt;value&gt;</span>http://www.stats-bureau.com/mystats/info.html<span class="nt">&lt;/value&gt;</span>
+    <span class="nt">&lt;/url&gt;</span>
+  <span class="nt">&lt;/info&gt;</span>
+
+  <span class="nt">&lt;provider&gt;</span>
+    <span class="nt">&lt;name&gt;</span>
+      <span class="nt">&lt;value&gt;</span>Bureau of Statistics<span class="nt">&lt;/value&gt;</span>
+    <span class="nt">&lt;/name&gt;</span>
+    <span class="nt">&lt;url&gt;</span>
+      <span class="nt">&lt;value&gt;</span>http://www.stats-bureau.com<span class="nt">&lt;/value&gt;</span>
+    <span class="nt">&lt;/url&gt;</span>
+  <span class="nt">&lt;/provider&gt;</span>
+
+  <span class="nt">&lt;topics&gt;</span>
+    <span class="nt">&lt;topic</span> <span class="na">id=</span><span class="s">"geography"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;info&gt;</span>
+        <span class="nt">&lt;name&gt;&lt;value&gt;</span>Geography<span class="nt">&lt;/value&gt;&lt;/name&gt;</span>
+      <span class="nt">&lt;/info&gt;</span>
+    <span class="nt">&lt;/topic&gt;</span>
+    <span class="nt">&lt;topic</span> <span class="na">id=</span><span class="s">"social_indicators"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;info&gt;</span>
+        <span class="nt">&lt;name&gt;&lt;value&gt;</span>Social indicators<span class="nt">&lt;/value&gt;&lt;/name&gt;</span>
+      <span class="nt">&lt;/info&gt;</span>
+      <span class="nt">&lt;topic</span> <span class="na">id=</span><span class="s">"population_indicators"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;info&gt;</span>
+          <span class="nt">&lt;name&gt;&lt;value&gt;</span>Population indicators<span class="nt">&lt;/value&gt;&lt;/name&gt;</span>
+        <span class="nt">&lt;/info&gt;</span>
+      <span class="nt">&lt;/topic&gt;</span>
+      <span class="nt">&lt;topic</span> <span class="na">id=</span><span class="s">"poverty_and_income"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;info&gt;</span>
+          <span class="nt">&lt;name&gt;&lt;value&gt;</span>Poverty <span class="err">&amp;</span> income<span class="nt">&lt;/value&gt;&lt;/name&gt;</span>
+        <span class="nt">&lt;/info&gt;</span>
+      <span class="nt">&lt;/topic&gt;</span>
+      <span class="nt">&lt;topic</span> <span class="na">id=</span><span class="s">"health"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;info&gt;</span>
+          <span class="nt">&lt;name&gt;&lt;value&gt;</span>Health<span class="nt">&lt;/value&gt;&lt;/name&gt;</span>
+        <span class="nt">&lt;/info&gt;</span>
+      <span class="nt">&lt;/topic&gt;</span>
+    <span class="nt">&lt;/topic&gt;</span>
+  <span class="nt">&lt;/topics&gt;</span>
+
+  <span class="nt">&lt;concepts&gt;</span>
+    <span class="c">&lt;!-- As noted in the tutorial, this concept should extend quantity:amount.--&gt;</span>
+    <span class="nt">&lt;concept</span> <span class="na">id=</span><span class="s">"population"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;info&gt;</span>
+        <span class="nt">&lt;name&gt;</span>
+          <span class="nt">&lt;value&gt;</span>Population<span class="nt">&lt;/value&gt;</span>
+        <span class="nt">&lt;/name&gt;</span>
+        <span class="nt">&lt;description&gt;</span>
+          <span class="nt">&lt;value&gt;</span>Size of the resident population.<span class="nt">&lt;/value&gt;</span>
+        <span class="nt">&lt;/description&gt;</span>
+      <span class="nt">&lt;/info&gt;</span>
+      <span class="nt">&lt;topic</span> <span class="na">ref=</span><span class="s">"population_indicators"</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;type</span> <span class="na">ref=</span><span class="s">"integer"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/concept&gt;</span>
+
+    <span class="c">&lt;!-- This country concept is defined for educational purposes only. A country
+    concept exists in the Google geo dataset. See:
+
+    http://code.google.com/apis/publicdata/docs/canonical/geo.html --&gt;</span> 
+    <span class="nt">&lt;concept</span> <span class="na">id=</span><span class="s">"country"</span> <span class="na">extends=</span><span class="s">"geo:location"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;info&gt;</span>
+        <span class="nt">&lt;name&gt;</span>
+          <span class="nt">&lt;value&gt;</span>Country<span class="nt">&lt;/value&gt;</span>
+        <span class="nt">&lt;/name&gt;</span>
+        <span class="nt">&lt;description&gt;</span>
+          <span class="nt">&lt;value&gt;</span>My list of countries<span class="nt">&lt;/value&gt;</span>
+        <span class="nt">&lt;/description&gt;</span>
+      <span class="nt">&lt;/info&gt;</span>
+      <span class="nt">&lt;type</span> <span class="na">ref=</span><span class="s">"string"</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;property</span> <span class="na">id=</span><span class="s">"name"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;info&gt;</span>
+          <span class="nt">&lt;name&gt;&lt;value</span> <span class="na">xml:lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>Country name<span class="nt">&lt;/value&gt;&lt;/name&gt;</span>
+          <span class="nt">&lt;description&gt;</span>
+            <span class="nt">&lt;value</span> <span class="na">xml:lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>The official name of the country<span class="nt">&lt;/value&gt;</span>
+          <span class="nt">&lt;/description&gt;</span>
+        <span class="nt">&lt;/info&gt;</span>
+        <span class="nt">&lt;type</span> <span class="na">ref=</span><span class="s">"string"</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;/property&gt;</span>
+      <span class="nt">&lt;table</span> <span class="na">ref=</span><span class="s">"countries_table"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/concept&gt;</span>
+
+    <span class="c">&lt;!-- This US state concept is defined for educational purposes only. A US state
+      concept exists in the Google geo US dataset. See:
+
+      http://code.google.com/apis/publicdata/docs/canonical/geo.us.html --&gt;</span> 
+    <span class="nt">&lt;concept</span> <span class="na">id=</span><span class="s">"state"</span> <span class="na">extends=</span><span class="s">"geo:location"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;info&gt;</span>
+        <span class="nt">&lt;name&gt;</span>
+          <span class="nt">&lt;value&gt;</span>State<span class="nt">&lt;/value&gt;</span>
+        <span class="nt">&lt;/name&gt;</span>
+        <span class="nt">&lt;description&gt;</span>
+          <span class="nt">&lt;value&gt;</span>US states<span class="nt">&lt;/value&gt;</span>
+        <span class="nt">&lt;/description&gt;</span>
+      <span class="nt">&lt;/info&gt;</span>
+      <span class="nt">&lt;type</span> <span class="na">ref=</span><span class="s">"string"</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;property</span> <span class="na">concept=</span><span class="s">"country"</span> <span class="na">isParent=</span><span class="s">"true"</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;table</span> <span class="na">ref=</span><span class="s">"states_table"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/concept&gt;</span>
+
+    <span class="nt">&lt;concept</span> <span class="na">id=</span><span class="s">"gender"</span> <span class="na">extends=</span><span class="s">"entity:entity"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;info&gt;</span>
+          <span class="nt">&lt;name&gt;</span>
+          <span class="nt">&lt;value&gt;</span>Gender<span class="nt">&lt;/value&gt;</span>
+        <span class="nt">&lt;/name&gt;</span>
+        <span class="nt">&lt;description&gt;</span>
+          <span class="nt">&lt;value&gt;</span>Gender, Male or Female<span class="nt">&lt;/value&gt;</span>
+        <span class="nt">&lt;/description&gt;</span>
+        <span class="nt">&lt;pluralName&gt;&lt;value&gt;</span>Genders<span class="nt">&lt;/value&gt;&lt;/pluralName&gt;</span>
+        <span class="nt">&lt;totalName&gt;&lt;value&gt;</span>Both genders<span class="nt">&lt;/value&gt;&lt;/totalName&gt;</span>
+      <span class="nt">&lt;/info&gt;</span>
+      <span class="nt">&lt;type</span> <span class="na">ref=</span><span class="s">"string"</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;table</span> <span class="na">ref=</span><span class="s">"genders_table"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/concept&gt;</span>
+
+    <span class="nt">&lt;concept</span> <span class="na">id=</span><span class="s">"unemployment_rate"</span> <span class="na">extends=</span><span class="s">"quantity:rate"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;info&gt;</span>
+        <span class="nt">&lt;name&gt;</span>
+          <span class="nt">&lt;value&gt;</span>unemployment rate<span class="nt">&lt;/value&gt;</span>
+        <span class="nt">&lt;/name&gt;</span>
+        <span class="nt">&lt;description&gt;</span>
+          <span class="nt">&lt;value&gt;</span>The percent of the labor force that is unemployed, not seasonally
+            adjusted.<span class="nt">&lt;/value&gt;</span>
+        <span class="nt">&lt;/description&gt;</span>
+        <span class="nt">&lt;url&gt;&lt;value&gt;</span>http://www.bls.gov/cps/cps_htgm.htm<span class="nt">&lt;/value&gt;&lt;/url&gt;</span>
+      <span class="nt">&lt;/info&gt;</span>
+      <span class="nt">&lt;topic</span> <span class="na">ref=</span><span class="s">"social_indicators"</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;type</span> <span class="na">ref=</span><span class="s">"float"</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;attribute</span> <span class="na">id=</span><span class="s">"is_percentage"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;type</span> <span class="na">ref=</span><span class="s">"boolean"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;value&gt;</span>true<span class="nt">&lt;/value&gt;</span>
+      <span class="nt">&lt;/attribute&gt;</span>
+    <span class="nt">&lt;/concept&gt;</span>
+
+  <span class="nt">&lt;/concepts&gt;</span>
+
+  <span class="nt">&lt;slices&gt;</span>
+    <span class="nt">&lt;slice</span> <span class="na">id=</span><span class="s">"countries_slice"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;dimension</span> <span class="na">concept=</span><span class="s">"country"</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;dimension</span> <span class="na">concept=</span><span class="s">"time:year"</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;metric</span> <span class="na">concept=</span><span class="s">"population"</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;table</span> <span class="na">ref=</span><span class="s">"countries_slice_table"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/slice&gt;</span>
+
+    <span class="nt">&lt;slice</span> <span class="na">id=</span><span class="s">"states_slice"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;dimension</span> <span class="na">concept=</span><span class="s">"state"</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;dimension</span> <span class="na">concept=</span><span class="s">"time:year"</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;metric</span> <span class="na">concept=</span><span class="s">"population"</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;metric</span> <span class="na">concept=</span><span class="s">"unemployment_rate"</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;table</span> <span class="na">ref=</span><span class="s">"states_slice_table"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/slice&gt;</span>
+
+    <span class="nt">&lt;slice</span> <span class="na">id=</span><span class="s">"countries_gender_slice"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;dimension</span> <span class="na">concept=</span><span class="s">"country"</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;dimension</span> <span class="na">concept=</span><span class="s">"gender"</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;dimension</span> <span class="na">concept=</span><span class="s">"time:year"</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;metric</span> <span class="na">concept=</span><span class="s">"population"</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;table</span> <span class="na">ref=</span><span class="s">"countries_gender_slice_table"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/slice&gt;</span>
+
+  <span class="nt">&lt;/slices&gt;</span>
+
+  <span class="nt">&lt;tables&gt;</span>
+    <span class="nt">&lt;table</span> <span class="na">id=</span><span class="s">"countries_table"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;column</span> <span class="na">id=</span><span class="s">"country"</span> <span class="na">type=</span><span class="s">"string"</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;column</span> <span class="na">id=</span><span class="s">"name"</span> <span class="na">type=</span><span class="s">"string"</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;column</span> <span class="na">id=</span><span class="s">"latitude"</span> <span class="na">type=</span><span class="s">"float"</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;column</span> <span class="na">id=</span><span class="s">"longitude"</span> <span class="na">type=</span><span class="s">"float"</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;data&gt;</span>
+        <span class="nt">&lt;file</span> <span class="na">format=</span><span class="s">"csv"</span> <span class="na">encoding=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>countries.csv<span class="nt">&lt;/file&gt;</span>
+      <span class="nt">&lt;/data&gt;</span>
+    <span class="nt">&lt;/table&gt;</span>
+
+    <span class="nt">&lt;table</span> <span class="na">id=</span><span class="s">"countries_slice_table"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;column</span> <span class="na">id=</span><span class="s">"country"</span> <span class="na">type=</span><span class="s">"string"</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;column</span> <span class="na">id=</span><span class="s">"year"</span> <span class="na">type=</span><span class="s">"date"</span> <span class="na">format=</span><span class="s">"yyyy"</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;column</span> <span class="na">id=</span><span class="s">"population"</span> <span class="na">type=</span><span class="s">"integer"</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;data&gt;</span>
+        <span class="nt">&lt;file</span> <span class="na">format=</span><span class="s">"csv"</span> <span class="na">encoding=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>country_slice.csv<span class="nt">&lt;/file&gt;</span>
+      <span class="nt">&lt;/data&gt;</span>
+    <span class="nt">&lt;/table&gt;</span>
+
+    <span class="nt">&lt;table</span> <span class="na">id=</span><span class="s">"states_table"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;column</span> <span class="na">id=</span><span class="s">"state"</span> <span class="na">type=</span><span class="s">"string"</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;column</span> <span class="na">id=</span><span class="s">"name"</span> <span class="na">type=</span><span class="s">"string"</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;column</span> <span class="na">id=</span><span class="s">"country"</span> <span class="na">type=</span><span class="s">"string"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;value&gt;</span>US<span class="nt">&lt;/value&gt;</span>
+      <span class="nt">&lt;/column&gt;</span>
+      <span class="nt">&lt;column</span> <span class="na">id=</span><span class="s">"latitude"</span> <span class="na">type=</span><span class="s">"float"</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;column</span> <span class="na">id=</span><span class="s">"longitude"</span> <span class="na">type=</span><span class="s">"float"</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;data&gt;</span>
+        <span class="nt">&lt;file</span> <span class="na">format=</span><span class="s">"csv"</span> <span class="na">encoding=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>states.csv<span class="nt">&lt;/file&gt;</span>
+      <span class="nt">&lt;/data&gt;</span>
+    <span class="nt">&lt;/table&gt;</span>
+
+    <span class="nt">&lt;table</span> <span class="na">id=</span><span class="s">"states_slice_table"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;column</span> <span class="na">id=</span><span class="s">"state"</span> <span class="na">type=</span><span class="s">"string"</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;column</span> <span class="na">id=</span><span class="s">"year"</span> <span class="na">type=</span><span class="s">"date"</span> <span class="na">format=</span><span class="s">"yyyy"</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;column</span> <span class="na">id=</span><span class="s">"population"</span> <span class="na">type=</span><span class="s">"integer"</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;column</span> <span class="na">id=</span><span class="s">"unemployment_rate"</span> <span class="na">type=</span><span class="s">"float"</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;data&gt;</span>
+        <span class="nt">&lt;file</span> <span class="na">format=</span><span class="s">"csv"</span> <span class="na">encoding=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>state_slice.csv<span class="nt">&lt;/file&gt;</span>
+      <span class="nt">&lt;/data&gt;</span>
+    <span class="nt">&lt;/table&gt;</span>
+
+    <span class="nt">&lt;table</span> <span class="na">id=</span><span class="s">"genders_table"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;column</span> <span class="na">id=</span><span class="s">"gender"</span> <span class="na">type=</span><span class="s">"string"</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;column</span> <span class="na">id=</span><span class="s">"name"</span> <span class="na">type=</span><span class="s">"string"</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;data&gt;</span>
+        <span class="nt">&lt;file</span> <span class="na">format=</span><span class="s">"csv"</span> <span class="na">encoding=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>genders.csv<span class="nt">&lt;/file&gt;</span>
+      <span class="nt">&lt;/data&gt;</span>
+    <span class="nt">&lt;/table&gt;</span>
+
+    <span class="nt">&lt;table</span> <span class="na">id=</span><span class="s">"countries_gender_slice_table"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;column</span> <span class="na">id=</span><span class="s">"country"</span> <span class="na">type=</span><span class="s">"string"</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;column</span> <span class="na">id=</span><span class="s">"gender"</span> <span class="na">type=</span><span class="s">"string"</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;column</span> <span class="na">id=</span><span class="s">"year"</span> <span class="na">type=</span><span class="s">"date"</span> <span class="na">format=</span><span class="s">"yyyy"</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;column</span> <span class="na">id=</span><span class="s">"population"</span> <span class="na">type=</span><span class="s">"integer"</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;data&gt;</span>
+        <span class="nt">&lt;file</span> <span class="na">format=</span><span class="s">"csv"</span> <span class="na">encoding=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>gender_country_slice.csv<span class="nt">&lt;/file&gt;</span>
+      <span class="nt">&lt;/data&gt;</span>
+    <span class="nt">&lt;/table&gt;</span>
+  <span class="nt">&lt;/tables&gt;</span>
+
+<span class="nt">&lt;/dspl&gt;</span>
+</pre></div>
+    </div>
+  </div>
+</div>
+          
+
+        <div>
+          <h2 class="foldable">Change History</h2>
+          <div id="changelog">
+              <div class="change" id="trac-change-1">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:1" class="cnum">
+      <a href="1144.html#comment:1">comment:1</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-06-15T15:35:17Z&amp;precision=second.html" title="2012-06-15T15:35:17Z in Timeline">23 months</a> ago by seanh
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Milestone</strong>
+        set to <em>ckan-backlog</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+          </div>
+        </div>
+      <div id="help"><strong>Note:</strong> See
+        <a href="../wiki/TracTickets.html">TracTickets</a> for help on using
+        tickets.</div>
+    </div>
+    <script type="text/javascript">
+        jQuery.loadStyleSheet("/pygments/trac.css", "text/css");
+    </script>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="first">
+          <a rel="nofollow" href="1144%3Fformat=csv" class="csv">Comma-delimited Text</a>
+        </li><li>
+          <a rel="nofollow" href="1144%3Fformat=tab" class="tab">Tab-delimited Text</a>
+        </li><li class="last">
+          <a rel="nofollow" href="1144%3Fformat=rss" class="rss">RSS Feed</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

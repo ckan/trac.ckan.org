@@ -1,0 +1,5 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+824	'Getdata' moved out of CKAN	dread	dread	"Data importers should use API instead of object model directly:
+ * saves load on server
+ * much better error checking and authentication
+ * eating our own dogfood (tests the API well)"	enhancement	closed	major		ckan	fixed				

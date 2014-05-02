@@ -1,0 +1,26 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2332,Fixes for v1.7 release,rgrp,rossjones,"A place to list crucial fixes for v1.7 release:
+
+ * Related Item has comments on index page (they should not show up here -- why is this happening!)
+ * Related item should be to left of history (history could in fact move to RHS)
+   * What about losing icons since we duplicate for related item
+ * Related item plus sign is very poorly aligned within box
+  * Add related items should be in drop down like for resources (?) to make it easy to add items
+  * Hover should show a title that gives some information about what related are (not at all clear)
+
+Search results:
+
+ * #2231 - search should add not or
+ * Search results should be similar across group pages and normal search results (suggest adopting group page style)
+  * Search results resource link should link to resource page rather than url for that resource
+  * Suggest we could tidy this a bit (e.g. have resources in mini-sidebar of search result ...?)
+
+Data viewer:
+
+ * Do not show failed preview with red-bar (esp when just empty datastore ...)
+
+Dataset page:
+
+ * Put home page link somewhere more prominent (e.g. the top of the sidebar)
+ * Make resources stand out more
+ * Rename resources tab and heading to Data & Resources",enhancement,new,critical,ckan-v1.7,ckan,,,,ckan,none

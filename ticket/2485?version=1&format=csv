@@ -1,0 +1,18 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2485,Encourage leak containment by limiting the number of requests a CKAN process serves,nils.toedtmann,icmurray,"CKAN has [ticket:1345 memory leaks]. They can be contained by limiting the time-to-live of a ckan process. An easy way to achieve this is to limit the number of requests a ckan server process can serve before it gets killed and replaced.
+
+One should ...
+ * research ways to limit requests-per-process with the different web servers (see below for a start);
+ * explain these safeguards in the CKAN documentation and encourage users to apply them;
+ * consider the helper script '''[https://github.com/okfn/ckan/blob/master/ckan_deb/usr/bin/ckan-create-instance ckan-create-instance]''' to generate Apache configs with '''WSGIDaemonProcess ... maximum-requests=XY''' being active instead of [https://github.com/okfn/ckan/blob/master/ckan_deb/usr/lib/ckan/common.sh#L262 commented out]. Or at least let it warn the user to use '''!MaxRequestsPerChild''';
+ * Investigate current CKAN deployments whether they suffer from mem leaks, and if so contain them.
+
+----
+
+How to limit requests-per-process
+ * Apache:
+  * Use '''WSGIDaemonProcess''' with '''maximum-requests=50''' or whatever limit is appropriate. We did this sucessfully on [http://trac.okfn.org/ticket/904 datahub.io] and the [http://trac.okfn.org/ticket/1245 ckan farm]
+  * (This need to be verified) Without WSGIDaemonProcess, '''!MaxRequestsPerChild 50''' should achieve the same.
+ * nginx/supervisord: to be researched.
+
+",defect,new,awaiting triage,,ckan,,,pudo amercader seanhammond kindly,ckan,none

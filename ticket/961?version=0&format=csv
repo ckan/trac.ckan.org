@@ -1,0 +1,30 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+961,"Refactoring of forms, validation and model synchronization",rgrp,sebbacon,"This is a meta-ticket to hold all of the work on refactoring forms, validation and model-synchronization in CKAN.
+
+ckan-dev thread: http://lists.okfn.org/pipermail/ckan-dev/2011-January/000180.html
+
+== The Issue ==
+
+From #926:
+
+The current formalchemy setup conflates view, controller and model code in a way that makes it hard to debug and customise.
+
+From http://lists.okfn.org/pipermail/ckan-dev/2011-January/000181.html:
+
+... !FormAlchemy, in retrospect, was probably a mistake as it merges too much model/validation/form generation into one thing.
+
+At least 3 functions involved [in this area]:
+
+ 1. Generating (or just filling) a form template with 'form data' (and errors)
+ 2. Converting model data to form data (also happens for APIs in fact) -- let's call this 'dict-ization'
+ 3. Converting form data to model data (and validating) (inverse of previous step)
+
+== Related Tickets ==
+
+ * #926 - Pick a simpler form framework
+ * [not ticketed yet] 'dictization' - serialization / deserialization of package (and other domain objects) to standard intermediate format such as json-convertable python dict
+  * cf existing dumper and importer code
+  * This will fix #662
+ * [not ticketed yet] - validation layer (should work on serialized objects?)
+ * #662 - Can't put entity that is returned by posting to package register (Defect)
+",enhancement,new,blocker,ckan-v1.4-sprint-1,ckan,,,,,

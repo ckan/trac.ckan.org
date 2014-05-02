@@ -1,0 +1,1851 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket Query</title>
+    <link>http://localhost/query?status=closed&amp;col=id&amp;col=resolution&amp;col=summary&amp;col=owner&amp;col=reporter&amp;desc=1&amp;order=reporter&amp;row=description</link>
+    <description>The open source data portal software</description>
+    <language>en-US</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/query?status=closed&amp;col=id&amp;col=resolution&amp;col=summary&amp;col=owner&amp;col=reporter&amp;desc=1&amp;order=reporter&amp;row=description</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+        <link>http://localhost/ticket/2198</link>
+        <guid isPermaLink="false">http://localhost/ticket/2198</guid>
+        <title>#2198: API documentation is missing Storage Metadata API info</title>
+        <pubDate>Tue, 28 Feb 2012 09:35:43 GMT</pubDate>
+        
+        <dc:creator>zydio</dc:creator>
+
+        <description>&lt;p&gt;
+Now that ckanext-storage is back into the core (v1.6), CKAN documentation should probably contain info on &lt;a class="ext-link" href="https://github.com/okfn/ckanext-storage/blob/master/README.rst"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;Storate Metadata API&lt;/a&gt;.
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/2198#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/34</link>
+        <guid isPermaLink="false">http://localhost/ticket/34</guid>
+        <title>#34: Page Not Found - returns with 200 rather than 404 as it should</title>
+        <pubDate>Wed, 08 Nov 2006 18:02:41 GMT</pubDate>
+        
+        <dc:creator>zool</dc:creator>
+
+        <description></description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/34#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/1309</link>
+        <guid isPermaLink="false">http://localhost/ticket/1309</guid>
+        <title>#1309: Registering new user requires immediate login</title>
+        <pubDate>Mon, 05 Sep 2011 12:25:10 GMT</pubDate>
+        
+        <dc:creator>zephod</dc:creator>
+
+        <description>&lt;p&gt;
+Registering a new user directs you to that user's profile page but does not log you in. There is an empty set of "Recent changes" and no ability to modify the page. Users must follow the login link in the top-right corner to continue.
+&lt;/p&gt;
+&lt;p&gt;
+Registering a new user should immediately log you in.
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/1309#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/1348</link>
+        <guid isPermaLink="false">http://localhost/ticket/1348</guid>
+        <title>#1348: UX polishing (dataset create/view/edit experience)</title>
+        <pubDate>Fri, 16 Sep 2011 10:53:30 GMT</pubDate>
+        
+        <dc:creator>zephod</dc:creator>
+
+        <description>&lt;p&gt;
+Tweaking UIs and polishing the work done in &lt;a class="closed ticket" href="http://localhost/ticket/1294" title="enhancement: [super] Package creation and editing UX improvements (closed: fixed)"&gt;#1294&lt;/a&gt;.
+&lt;/p&gt;
+&lt;p&gt;
+## Edit Page ##
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;[Done; cset:49e0b059b6f5] Hide upload if  storage not enabled
+&lt;/li&gt;&lt;li&gt;[Done; cset:81ff13b42dad] Make 'Add resource' links on edit page clearer and more button-like.
+&lt;/li&gt;&lt;li&gt;[Done; cset:03904fc50cbf] Move edit form tabs to the left
+&lt;/li&gt;&lt;li&gt;[Done; cset:fde26b87d6ce] API placeholder text should not link to a CSV file
+&lt;/li&gt;&lt;li&gt;[Done] We used to autocomplete the format field - restore this functionality
+&lt;ul&gt;&lt;li&gt;Works on live. My local db has an empty 'resource_revision' table; maybe 'paster create-test-data' should insert something here?
+&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;[Done; cset:1aab499d73db] Summary should contain 'name' (or, if unavailable, use description. Long term: description is to be deprecated)
+&lt;/li&gt;&lt;li&gt;[Done] Remove/move instructions where possible (a lot could just be placeholder text on the elements) (other stuff could only show on hover)
+&lt;ul&gt;&lt;li&gt;NB: reveal_instructions.js already disabled on edit page
+&lt;/li&gt;&lt;li&gt;[RP] have now done this on create -- think we can leave on edit
+&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;[Done; cset:755b1a622199] We have broken 'error' reporting for resource issues. Either need to move that into error summary or somehow not destroy it when we rewrite table on page load ...
+&lt;/li&gt;&lt;li&gt;[Done; cset:7ad090cb7855] Add slideDown to Resource expanded view
+&lt;/li&gt;&lt;li&gt;[Done; cset:d3595143e506] Need ability to delete resources
+&lt;ul&gt;&lt;li&gt;No thought yet given to uploaded resources. Long term re-think probable.
+&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;[Done; cset:2430a68a59fc] Empty resource table to resemble view page ("no resources" text)
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+## General ##
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;[Done; cset:cc0ad47293e5] Highlight the package tab I'm on (view/edit/history)
+&lt;ul&gt;&lt;li&gt;More generally, the presence of the #minornavigation bar is very inconsistent throughout the site.
+&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;[Done; cset:d5babc3629cf] Remove 'license' filtered search from backend
+&lt;/li&gt;&lt;li&gt;[Done] Move script stuff to footer of page
+&lt;/li&gt;&lt;/ul&gt;</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/1348#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/1349</link>
+        <guid isPermaLink="false">http://localhost/ticket/1349</guid>
+        <title>#1349: Template tidying</title>
+        <pubDate>Fri, 16 Sep 2011 11:03:45 GMT</pubDate>
+        
+        <dc:creator>zephod</dc:creator>
+
+        <description>&lt;p&gt;
+Various things in templates can be tidied up after work has finished on &lt;a class="closed ticket" href="http://localhost/ticket/1294" title="enhancement: [super] Package creation and editing UX improvements (closed: fixed)"&gt;#1294&lt;/a&gt;:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;remove styling in page in group/index.html (put in css main)
+&lt;ul&gt;&lt;li&gt;ditto for package/search.html
+&lt;/li&gt;&lt;li&gt;ditto for home/index.html
+&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;Forms.css - to merge into style.css; remove explicit imports elsewhere
+&lt;ul&gt;&lt;li&gt;@import at the top of style.css @import url(forms.css)
+&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;Make a note: Success/failure controllers clash CSS with success/failure flash banners
+&lt;/li&gt;&lt;/ul&gt;</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/1349#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/1350</link>
+        <guid isPermaLink="false">http://localhost/ticket/1350</guid>
+        <title>#1350: i18n of new javascript</title>
+        <pubDate>Fri, 16 Sep 2011 11:29:36 GMT</pubDate>
+        
+        <dc:creator>zephod</dc:creator>
+
+        <description>&lt;p&gt;
+New js code running produced in the work following &lt;a class="closed ticket" href="http://localhost/ticket/1294" title="enhancement: [super] Package creation and editing UX improvements (closed: fixed)"&gt;#1294&lt;/a&gt; contains various string literals, and needs proper internationalisation.
+&lt;/p&gt;
+&lt;p&gt;
+See files:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;application.js
+&lt;/li&gt;&lt;li&gt;templates.js
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+Furthermore, efforts can be made to tidy up strings as described in &lt;a class="closed ticket" href="http://localhost/ticket/1329" title="defect: i18n poor in some templates - missing i18n tags (closed: fixed)"&gt;#1329&lt;/a&gt;.
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/1350#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/1351</link>
+        <guid isPermaLink="false">http://localhost/ticket/1351</guid>
+        <title>#1351: Tidy edit-user form; strip preview functionality</title>
+        <pubDate>Tue, 20 Sep 2011 16:05:53 GMT</pubDate>
+        
+        <dc:creator>zephod</dc:creator>
+
+        <description>&lt;p&gt;
+The template for editing a user's profile seems to output the same form twice in one page.
+Furthermore, the page is made needlessly complex by the preview functionality. The neat inline preview used in package will make this page a lot neater.
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Fix the duplicate form
+&lt;/li&gt;&lt;li&gt;Strip the preview functionality from the front-end, replacing it with js editor
+&lt;/li&gt;&lt;li&gt;Strip the preview functionality from the back-end and test
+&lt;/li&gt;&lt;/ul&gt;</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/1351#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/1368</link>
+        <guid isPermaLink="false">http://localhost/ticket/1368</guid>
+        <title>#1368: UX polishing and bugfixes</title>
+        <pubDate>Fri, 30 Sep 2011 14:12:40 GMT</pubDate>
+        
+        <dc:creator>zephod</dc:creator>
+
+        <description>&lt;p&gt;
+From Ira:
+PDF of bugs and suggestions is attached.
+&lt;/p&gt;
+&lt;p&gt;
+This ticket is included in release v1.5. Post-v1.5 UX improvements are collected in &lt;a class="closed ticket" href="http://localhost/ticket/1404" title="enhancement: Search Page UI improvements (closed: wontfix)"&gt;#1404&lt;/a&gt;.
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a class="missing wiki"&gt; DONE ?&lt;/a&gt;
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;[dataset/edit]: Deletions are confirmed with a dialog box
+&lt;/li&gt;&lt;li&gt;[dataset/edit]: Long URLs break the edit resources tab. Show name (&amp;amp; 'no name') with a pencil icon.
+&lt;/li&gt;&lt;li&gt;[dataset/edit]: Rearrange the delete resources mechanism;
+&lt;ul&gt;&lt;li&gt;Use a little minus icon on the far left, followed by a pencil icon for editing.
+&lt;/li&gt;&lt;li&gt;The 'delete resource' button can become 'hide'
+&lt;/li&gt;&lt;li&gt;Deletions are confirmed with a dialog box
+&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;[dataset/edit]: Rearrange the 'you have unsaved changes' warning;
+&lt;ul&gt;&lt;li&gt;Delete the little green plus sign on the right;
+&lt;/li&gt;&lt;li&gt;Try a flash banner instead (more general purpose &amp;amp; beautiful)
+&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;[dataset/edit]: Try a pencil icon (+'hide' button) rather than the +/- buttons which look a bit like you're adding a dataset.
+&lt;/li&gt;&lt;li&gt;[dataset/view]: Subscribe button (&amp;amp; subscribe to history) doesn't work as expected. Modal dialog carrying instructions?
+&lt;/li&gt;&lt;li&gt;[dataset/view]: Drop the 'add to a group&amp;gt;&amp;gt;' and 'add tag&amp;gt;&amp;gt;'. Needs inline tag-adder.
+&lt;/li&gt;&lt;li&gt;[markdown editor]: Tab colours confuse the user. Inactive button appears to be greyed out.
+&lt;/li&gt;&lt;li&gt;[dataset/edit]: The upload file UI mutates and breaks across lines; make it a little more rigid. Verify at different zoom levels.
+&lt;/li&gt;&lt;li&gt;[groups/add]: Hide unimportant fields
+&lt;/li&gt;&lt;li&gt;[navigation] Add 3D bevel (@see github) to current tab highlight.
+&lt;/li&gt;&lt;li&gt;[dataset/create and groups/create]: Slug generator can be tidied. Default: Not editable. @see &lt;a class="ext-link" href="http://groupspaces.com/a/group/"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://groupspaces.com/a/group/&lt;/a&gt;
+&lt;/li&gt;&lt;li&gt;[groups/view]: Show description and owner. To match dataset section.
+&lt;/li&gt;&lt;li&gt;[groups/authz]: Tidy to match admin/authz (pretty buttons &amp;amp; spacing). Add navigation bar.
+&lt;/li&gt;&lt;li&gt;[groups]: Entire section to use pretty buttons please.
+&lt;/li&gt;&lt;li&gt;[about]: Get the about page working on test.ckan.org. (Works locally and on live).
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+&lt;a class="missing wiki"&gt; WONTFIX ?&lt;/a&gt;
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;del&gt;[dataset/edit]: Make 'tags' a top level form section; it is too important to go below the fold.&lt;/del&gt; (wontfix)
+&lt;/li&gt;&lt;li&gt;&lt;del&gt;[groups]: Clicking a column heading should sort by that column. Default should be 'size', not 'name'.&lt;/del&gt; (ticket &lt;a class="new ticket" href="http://localhost/ticket/1403" title="enhancement: Refactor groups index page (new)"&gt;#1403&lt;/a&gt;)
+&lt;/li&gt;&lt;li&gt;&lt;del&gt;([groups]: (Investigate) Is it easy to implement a little search-groups feature?)&lt;/del&gt; (ticket &lt;a class="new ticket" href="http://localhost/ticket/1403" title="enhancement: Refactor groups index page (new)"&gt;#1403&lt;/a&gt;)
+&lt;/li&gt;&lt;li&gt;&lt;del&gt;[*/authz]: Add tooltips to explain column headers. (Not required if mechanism is about to be refactored...)&lt;/del&gt; (wontfix: we need to rethink this mechanism; authorization refactor is coming)
+&lt;/li&gt;&lt;li&gt;&lt;del&gt;[general]: 'Authorization' refactor to 'Permissions' on nav-bars.&lt;/del&gt; (wontfix, further discussion. authorization might be less techy...)
+&lt;/li&gt;&lt;li&gt;&lt;del&gt;[search]: (Investigate) Can we quickly &amp;amp; easily reintegrate the faceted search-by-license but present it in the sidebar like the other facets?&lt;/del&gt; (wontfix: high cost and maintenance overhead; need compelling user story)
+&lt;/li&gt;&lt;/ul&gt;</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/1368#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/1369</link>
+        <guid isPermaLink="false">http://localhost/ticket/1369</guid>
+        <title>#1369: Remove showdown.js from the page download</title>
+        <pubDate>Fri, 30 Sep 2011 14:21:56 GMT</pubDate>
+        
+        <dc:creator>zephod</dc:creator>
+
+        <description>&lt;p&gt;
+ckan.js can be rearchitected to avoid instantiating showdown.js in the root namespace. That way, layout_base.html doesn't need to import the script (because we don't use the showdown-dependant parts of ckan.js).
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/1369#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/1377</link>
+        <guid isPermaLink="false">http://localhost/ticket/1377</guid>
+        <title>#1377: Ckan admin repair</title>
+        <pubDate>Mon, 10 Oct 2011 09:46:58 GMT</pubDate>
+        
+        <dc:creator>zephod</dc:creator>
+
+        <description>&lt;p&gt;
+Integrating ckanext-admin into core has thrown up a number of problems:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Look &amp;amp; feel does not match the rest of the site
+&lt;/li&gt;&lt;li&gt;Tests are not passing
+&lt;/li&gt;&lt;li&gt;On the trash page, clicking 'undelete' triggers a purge
+&lt;/li&gt;&lt;li&gt;Using the purge functionality is dangerous; deleting and purging the latest revision will corrupt a dataset (&amp;amp; several corrupt datasets have been found on thedatahub.org)
+&lt;/li&gt;&lt;li&gt;Trash page can contain nested form tags in certain cases (breaking test harness &amp;amp; form redirection)
+&lt;/li&gt;&lt;/ul&gt;</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/1377#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/1378</link>
+        <guid isPermaLink="false">http://localhost/ticket/1378</guid>
+        <title>#1378: New to TheDataHub? - StackOverflow style banner</title>
+        <pubDate>Mon, 10 Oct 2011 11:48:49 GMT</pubDate>
+        
+        <dc:creator>zephod</dc:creator>
+
+        <description>&lt;p&gt;
+Implement a banner across the top of the screen giving newbies a link to the about page, and making them feel welcome. See stackoverflow for reference?
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/1378#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/1379</link>
+        <guid isPermaLink="false">http://localhost/ticket/1379</guid>
+        <title>#1379: Markdown conversion of linked references broken</title>
+        <pubDate>Mon, 10 Oct 2011 11:55:19 GMT</pubDate>
+        
+        <dc:creator>zephod</dc:creator>
+
+        <description>&lt;p&gt;
+eg. &lt;a class="ext-link" href="http://thedatahub.org/dataset/us-gov-tarp"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://thedatahub.org/dataset/us-gov-tarp&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+[This Paper][my-paper] is very interesting.
+&lt;/p&gt;
+&lt;p&gt;
+[my-paper]: &lt;a class="ext-link" href="http://somelink.com/paper"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://somelink.com/paper&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+Write a test to check this markdown feature works - if not, use external markdown lib rather than webhelpers.markdown. Probably need to add markdown lib to list of requirements.
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/1379#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/1380</link>
+        <guid isPermaLink="false">http://localhost/ticket/1380</guid>
+        <title>#1380: Making customizing CSS easier</title>
+        <pubDate>Mon, 10 Oct 2011 16:25:56 GMT</pubDate>
+        
+        <dc:creator>zephod</dc:creator>
+
+        <description>&lt;p&gt;
+While integrating the new theme and making a large number of UX tweaks, I've allowed the CSS file to bloat out of control with some very specific rules and subtle hacks, as well as a couple of clearfix &amp;lt;div&amp;gt; objects in the markup which isn't really good practice.
+&lt;/p&gt;
+&lt;p&gt;
+In general we want a logical CSS structure which is as easy to modify as possible. You should not find yourself being overwritten by highly specific rules all the time!
+&lt;/p&gt;
+&lt;h2 id="Actions"&gt;Actions&lt;/h2&gt;
+&lt;ol&gt;&lt;li&gt;Clean up css
+&lt;/li&gt;&lt;li&gt;Add a config option ckan.template_head_end - arbitrary string inserted at end of &amp;lt;head&amp;gt; tag so you can add custom css etc (may also want to update theming docs to reflect possibility of using this)
+&lt;/li&gt;&lt;li&gt;(While we're at it): Add ckan.template_footer_end config option to deployment.ini_template. (This already exists, we just haven't told anybody)
+&lt;/li&gt;&lt;li&gt;The /users index page isn't linked anywhere. Clean it up and link it in the footer next to Groups etc.
+&lt;/li&gt;&lt;li&gt;package/new, package/edit, group/new and group/edit all include their forms differently. Use h.literal in all cases.
+&lt;/li&gt;&lt;li&gt;Fix the padding on minornavigation.
+&lt;/li&gt;&lt;/ol&gt;&lt;h2 id="Background"&gt;Background&lt;/h2&gt;
+&lt;p&gt;
+David Read sent me the following as background:
+&lt;/p&gt;
+&lt;ol class="upperalpha" start="22"&gt;&lt;li&gt;basic theming is described here: &lt;a class="ext-link" href="http://docs.ckan.org/en/latest/theming.html"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://docs.ckan.org/en/latest/theming.html&lt;/a&gt;
+&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;
+Deep customisation of the templates is done by creating an extension, with this as a template: &lt;a class="ext-link" href="https://bitbucket.org/okfn/ckanext-exampletheme/overview"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;https://bitbucket.org/okfn/ckanext-exampletheme/overview&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+That's what Augusto and the Brazilians have done &lt;a class="ext-link" href="http://alpha.dados.gov.br/dados/"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://alpha.dados.gov.br/dados/&lt;/a&gt; and their code is here:
+hg clone &lt;a class="ext-link" href="http://dev.dados.gov.br/codigo/dev/tema-ckan"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://dev.dados.gov.br/codigo/dev/tema-ckan&lt;/a&gt;
+&amp;lt;snip&amp;gt;
+Another thing of interest was us becoming compatible with Wordpress themes last December. Richard Pope worked with Rufus on this. I believe the base theme is 'twentyten' and I'm guessing that one would swap that css file with another to change theme, but I don't know. I don't know if this feature has been dropped since then.
+&lt;a class="ext-link" href="http://lists.okfn.org/pipermail/ckan-dev/2010-December/000073.html"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://lists.okfn.org/pipermail/ckan-dev/2010-December/000073.html&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+Dave
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/1380#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/1404</link>
+        <guid isPermaLink="false">http://localhost/ticket/1404</guid>
+        <title>#1404: Search Page UI improvements</title>
+        <pubDate>Mon, 17 Oct 2011 10:36:58 GMT</pubDate>
+        
+        <dc:creator>zephod</dc:creator>
+
+        <description>&lt;p&gt;
+[Refactored] :: Follows on from &lt;a class="closed ticket" href="http://localhost/ticket/1506" title="enhancement: [super] UX improvements to dataset edit, create and search + group + user ... (closed: fixed)"&gt;#1506&lt;/a&gt; UX changes.
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Declutter the sidebar. No yellow box.
+&lt;/li&gt;&lt;li&gt;Facets to go on the left, rather than the right. More logical flow.
+&lt;/li&gt;&lt;li&gt;Did you know you can search by author? Probably not. Find a nice way of presenting extended search options.
+&lt;/li&gt;&lt;li&gt;Make Datasets in the search page look more like Datasets on the groups pages (ie. like awesome sexy search results).
+&lt;ul&gt;&lt;li&gt;Update that look-and-feel to include the new resource icons created in &lt;a class="closed ticket" href="http://localhost/ticket/1506" title="enhancement: [super] UX improvements to dataset edit, create and search + group + user ... (closed: fixed)"&gt;#1506&lt;/a&gt;
+&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/1404#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/1409</link>
+        <guid isPermaLink="false">http://localhost/ticket/1409</guid>
+        <title>#1409: Add Gravatars to user profiles</title>
+        <pubDate>Fri, 21 Oct 2011 12:39:33 GMT</pubDate>
+        
+        <dc:creator>zephod</dc:creator>
+
+        <description>&lt;p&gt;
+Since we now require email addresses, it's sensible to request users' gravatars to add a little flavour to their user profile (and, potentially, other places eg. comments threads?)
+&lt;/p&gt;
+&lt;p&gt;
+[Reopened: Additional]
+Use gravatars in the HTML generated by helpers.py to create lists of users. Eg. on user/list and dataset/history.
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/1409#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/1410</link>
+        <guid isPermaLink="false">http://localhost/ticket/1410</guid>
+        <title>#1410: Add Gravatars to user profiles</title>
+        <pubDate>Fri, 21 Oct 2011 12:39:34 GMT</pubDate>
+        
+        <dc:creator>zephod</dc:creator>
+
+        <description>&lt;p&gt;
+Since we now require email addresses, it's sensible to request users' gravatars to add a little flavour to their user profile (and, potentially, other places eg. comments threads?)
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/1410#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/1482</link>
+        <guid isPermaLink="false">http://localhost/ticket/1482</guid>
+        <title>#1482: Minor JS bugs</title>
+        <pubDate>Tue, 22 Nov 2011 19:44:51 GMT</pubDate>
+        
+        <dc:creator>zephod</dc:creator>
+
+        <description>&lt;p&gt;
+Three JS bugs have appeared:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;The slug editor is not updating the text field again. [Fixed; commit:fadda17383]
+&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;The View Dataset page will stop executing javascript if there are no resources. [Fixed; commit:e54b089f6e]
+&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;The Add-Dataset and Add-Group URL editor shows the wrong URL for datasets and groups. Broken in this commit:
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+&lt;a class="ext-link" href="https://github.com/okfn/ckan/commit/5a01e67"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;https://github.com/okfn/ckan/commit/5a01e67&lt;/a&gt;
+by 'map.explicit=true'. JohnG: Can you look into this? [Fixed; commit:88e88380f6]
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/1482#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/1517</link>
+        <guid isPermaLink="false">http://localhost/ticket/1517</guid>
+        <title>#1517: Accessing resource view sometimes auto-downloads the resource</title>
+        <pubDate>Mon, 05 Dec 2011 18:27:27 GMT</pubDate>
+        
+        <dc:creator>zephod</dc:creator>
+
+        <description>&lt;p&gt;
+Clicking any of the links to a resource page in the dataset viewer seems to load the page and immediately start downloading the resource file.
+&lt;/p&gt;
+&lt;p&gt;
+For example, being here: &lt;a class="ext-link" href="http://test.ckan.net/dataset/europeana-lod"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://test.ckan.net/dataset/europeana-lod&lt;/a&gt;
+and clicking on any of the links to the first resource.
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/1517#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/1528</link>
+        <guid isPermaLink="false">http://localhost/ticket/1528</guid>
+        <title>#1528: Gravatar next to My Account link on all pages</title>
+        <pubDate>Tue, 06 Dec 2011 18:58:51 GMT</pubDate>
+        
+        <dc:creator>zephod</dc:creator>
+
+        <description>&lt;p&gt;
+Rather than the anonymous 'user' icon in the top-right corner, we could display your gravatar on all pages when you are logged in.
+&lt;/p&gt;
+&lt;p&gt;
+This was suggested by Richard Cyganiak:
+&lt;a class="ext-link" href="http://lists.okfn.org/pipermail/ckan-discuss/2011-November/001825.html"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://lists.okfn.org/pipermail/ckan-discuss/2011-November/001825.html&lt;/a&gt;
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/1528#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/1788</link>
+        <guid isPermaLink="false">http://localhost/ticket/1788</guid>
+        <title>#1788: IE7 compatibility problems</title>
+        <pubDate>Thu, 09 Feb 2012 14:54:10 GMT</pubDate>
+        
+        <dc:creator>zephod</dc:creator>
+
+        <description>&lt;p&gt;
+From Antonia Acuno, via Ira:
+&lt;/p&gt;
+&lt;p&gt;
+It appears that the current layout for the datahub does not work in
+IE7, which would mean a problem for us as most gov uses it and is one
+of those we have to support...any views?
+&lt;/p&gt;
+&lt;p&gt;
+Tested in several gov departments computers, so a common enough issue.
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a class="ext-link" href="http://imgur.com/ip4xa"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://imgur.com/ip4xa&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+From Rufus:
+We haven't officially supported IE7 so far but can put engineering
+effort into this if absolutely needed. I note that IE 7 is now 3y out
+of date and is likely a security risk. Obviously this is something to
+ask Antonio about.
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/1788#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/2221</link>
+        <guid isPermaLink="false">http://localhost/ticket/2221</guid>
+        <title>#2221: Tests are broken for some of us: NotAPairTreeStoreException</title>
+        <pubDate>Fri, 09 Mar 2012 18:46:21 GMT</pubDate>
+        
+        <dc:creator>zephod</dc:creator>
+
+        <description>&lt;p&gt;
+Since my last pull I'm getting a strange new error which is presumably to do with my local config or assumptions about the storage extension.
+&lt;/p&gt;
+&lt;p&gt;
+Test output here:
+&lt;a class="ext-link" href="https://gist.github.com/2007985"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;https://gist.github.com/2007985&lt;/a&gt;
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/2221#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/2222</link>
+        <guid isPermaLink="false">http://localhost/ticket/2222</guid>
+        <title>#2222: Tests are broken for some of us: NotAPairTreeStoreException</title>
+        <pubDate>Fri, 09 Mar 2012 18:46:23 GMT</pubDate>
+        
+        <dc:creator>zephod</dc:creator>
+
+        <description>&lt;p&gt;
+Since my last pull I'm getting a strange new error which is presumably to do with my local config or assumptions about the storage extension.
+&lt;/p&gt;
+&lt;p&gt;
+Test output here:
+&lt;a class="ext-link" href="https://gist.github.com/2007985"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;https://gist.github.com/2007985&lt;/a&gt;
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/2222#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/2286</link>
+        <guid isPermaLink="false">http://localhost/ticket/2286</guid>
+        <title>#2286: Upgrade to boostrap v2.0.2</title>
+        <pubDate>Thu, 12 Apr 2012 17:30:18 GMT</pubDate>
+        
+        <dc:creator>zephod</dc:creator>
+
+        <description>&lt;p&gt;
+I minified bootstrap and apparently downgraded the version. This breaks things in Recline, and creates weird discrepancies (DGU uses 2.0.2 and had some problems importing HTML from &lt;a class="missing wiki"&gt;TheDataHub?&lt;/a&gt; core, for example.)
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Switch to the latest minifed CSS + JS
+&lt;/li&gt;&lt;li&gt;QA-sweep the site, especially dataset/edit
+&lt;/li&gt;&lt;/ul&gt;</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/2286#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/318</link>
+        <guid isPermaLink="false">http://localhost/ticket/318</guid>
+        <title>#318: Insufficient validation of resource URIs</title>
+        <pubDate>Wed, 19 May 2010 20:58:43 GMT</pubDate>
+        
+        <dc:creator>wwaites</dc:creator>
+
+        <description>&lt;p&gt;
+The CKAN instance on data.gov.uk serves invalid URIs out of its API.
+&lt;/p&gt;
+&lt;p&gt;
+For example the following can be found,
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a class="ext-link" href="http://uk.sitestat.com/homeoffice/rds/s?rds.hosb0509tabsxls&amp;amp;ns_type=pdf&amp;amp;ns_url=[http://www.homeoffice.gov.uk/rds/pdfs09/hosb0509tabs.xls"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://uk.sitestat.com/homeoffice/rds/s?rds.hosb0509tabsxls&amp;amp;ns_type=pdf&amp;amp;ns_url=[http://www.homeoffice.gov.uk/rds/pdfs09/hosb0509tabs.xls&lt;/a&gt;]
+&lt;/p&gt;
+&lt;p&gt;
+In this URI, the : and / characters after the ? in the query part are invalid according to section 3.4 of RFC2396
+&lt;/p&gt;
+&lt;p&gt;
+Also URIs are not stripped of whitespace at the end.
+&lt;/p&gt;
+&lt;p&gt;
+This causes problems when other software with a more correct interpretation of what a valid URI is attempts to consume data from CKAN. In this instance the Talis triplestore complains about such URIs.
+&lt;/p&gt;
+&lt;p&gt;
+"Be liberal in what you accept and conservative in what you send" would seem apt.
+&lt;/p&gt;
+&lt;h2 id="Actions"&gt;Actions&lt;/h2&gt;
+&lt;ul&gt;&lt;li&gt;Validation of urls as part of form entry or data loading
+&lt;ul&gt;&lt;li&gt;Need to consider situation where this should happen out-of-band (i.e. we allow load even with invalid data and then flag bad dates in separate validation process). In general doubtful that we should do this here because url invalidity is such a big deal
+&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;This code should support analysis of existing data so we can go through existing database and find invalid urls
+&lt;ul&gt;&lt;li&gt;Also useful to have this so we can do out of band validation
+&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/318#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/433</link>
+        <guid isPermaLink="false">http://localhost/ticket/433</guid>
+        <title>#433: Data package metadata in the Egg</title>
+        <pubDate>Tue, 17 Aug 2010 20:57:40 GMT</pubDate>
+        
+        <dc:creator>wwaites</dc:creator>
+
+        <description>&lt;p&gt;
+Still not sure if we shouldn't use the existing setuptools machinery to manage this -- there is already a way to get at the metadata. In any event, I've just made an addition to datapkg that makes it possible to put datapkg_sources as a dictionary in your package's setup.py. Afterwards it is possible to pull the metadata out of the egg. Of course this could easily be changed to save the information in whatever form, indeed if you pass it a string instead of a dictionary it will just write whatever you gave it into the datapkg_sources.spec. The point is, I think that the egg is a good place to stuff this information.
+&lt;/p&gt;
+&lt;p&gt;
+For non-python users, it is always possible to simply put up the datapkg_sources.spec somewhere on the web so they can directly retrieve the data files.
+&lt;/p&gt;
+&lt;p&gt;
+From the docstring::
+&lt;/p&gt;
+&lt;pre class="wiki"&gt;    This is the implementation for an [egg_info.writers] entrypoint.
+    Datapkg adds an argument to setuptools's setup() function called
+    datapkg_sources. The argument should be a dictionary of the form:
+    .. code-block:: python
+        setup(
+            ...,
+            datapkg_sources = {
+                "cra2009" : "http://www.hm-treasury.gov.uk/d/cra_2009_db.csv"
+            }
+        )
+    The result of this is that there will be a file in the egg called
+    datapkg_sources.spec that looks like this::
+        [sources]
+        cra2009=http://www.hm-treasury.gov.uk/d/cra_2009_db.csv
+    How do you get at this data? Simple::
+    .. code-block:: python
+        import pkg_resources
+        dist = pkg_resources.get_distribution("ukgov_treasury_cra")
+        spec = dist.get_metadata("datapkg_sources.spec")
+    and 'spec' will be the contents of the file as a string.
+&lt;/pre&gt;</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/433#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/537</link>
+        <guid isPermaLink="false">http://localhost/ticket/537</guid>
+        <title>#537: Caching and Performance improvement</title>
+        <pubDate>Mon, 30 Aug 2010 16:06:02 GMT</pubDate>
+        
+        <dc:creator>wwaites</dc:creator>
+
+        <description>&lt;p&gt;
+There are several places where performance is unacceptably slow. Even in places where it is not, the system could still be more responsive for read requests.
+&lt;/p&gt;
+&lt;p&gt;
+Introducing caching has to be done carefully and should be done in a &lt;em&gt;standards compliant manner&lt;/em&gt;.
+&lt;/p&gt;
+&lt;h2 id="Generalstrategy"&gt;General strategy&lt;/h2&gt;
+&lt;ul&gt;&lt;li&gt;Where possible, cache output within the pylons app (beaker).
+&lt;/li&gt;&lt;li&gt;Facilitate external caching in an end-user's web browser or a caching proxy
+&lt;/li&gt;&lt;li&gt;Slightly stale data is not necessarily much of a problem so allow the output to be cached for a relatively short period (e.g. 5-15 minutes).
+&lt;/li&gt;&lt;li&gt;When cache expiry has been reached, a request will be made to the server. The server should check if its internally cached data is still valid, and serve that, otherwise regenerate the data.
+&lt;/li&gt;&lt;/ul&gt;&lt;h2 id="Tasks"&gt;Tasks&lt;/h2&gt;
+&lt;p&gt;
+These tasks should be broken into sub-tickets:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;caching of parts of templates that are expensive to render (package list, tag list, group list)
+&lt;/li&gt;&lt;li&gt;caching of entire output using beaker particularly for API read operations.
+&lt;/li&gt;&lt;li&gt;need to perform a check to see if the cache should be invalidated by checking if anything in the output would have changed -- i.e. checking timestamps on package modifications. this is a natural place to introduce the ETag which will help browsers and web caches.
+&lt;/li&gt;&lt;li&gt;cache infrastructure front end - varnish, squid, etc. To do this right, the controllers need to set the cache control headers appropriately (max-age, must-revalidate). This is a good resource: &lt;a class="ext-link" href="http://www.mnot.net/cache_docs/#CACHE-CONTROL"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://www.mnot.net/cache_docs/#CACHE-CONTROL&lt;/a&gt;
+&lt;ul&gt;&lt;li&gt;Deploy varnish on a host dedicated to this purpose for research. This will be useful for other sites as well
+&lt;/li&gt;&lt;li&gt;Do not configure varnish to ignore cache control headers or otherwise behave in a non HTTP/1.1 compliant manner
+&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;h2 id="FutureWork"&gt;Future Work&lt;/h2&gt;
+&lt;ul&gt;&lt;li&gt;Investigate ckanclient library maintaining a local cache as a web browser would
+&lt;/li&gt;&lt;li&gt;Investigate using a CDN like Google Storage or Amazon for serving cached data.
+&lt;/li&gt;&lt;/ul&gt;</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/537#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/576</link>
+        <guid isPermaLink="false">http://localhost/ticket/576</guid>
+        <title>#576: CKAN Requires Old Version of SQLAlchemy</title>
+        <pubDate>Fri, 10 Sep 2010 17:59:33 GMT</pubDate>
+        
+        <dc:creator>wwaites</dc:creator>
+
+        <description>&lt;p&gt;
+Requires 0.4. 0.5 is a maintenance branch, 0.6 is current.
+&lt;/p&gt;
+&lt;p&gt;
+VDM appears to work correctly (all the tests pass) with 0.5. CKAN does not -- requires more investigation to determine exactly why.
+&lt;/p&gt;
+&lt;p&gt;
+It would actually be nice to be able to run with 0.6 or 0.5, though 0.6 will require some changes to VDM as well
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/576#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/693</link>
+        <guid isPermaLink="false">http://localhost/ticket/693</guid>
+        <title>#693: Support ETag in cache decorator</title>
+        <pubDate>Mon, 11 Oct 2010 21:04:11 GMT</pubDate>
+        
+        <dc:creator>wwaites</dc:creator>
+
+        <description>&lt;p&gt;
+... and make cache-control header optional
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/693#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/843</link>
+        <guid isPermaLink="false">http://localhost/ticket/843</guid>
+        <title>#843: user list ui for group curation</title>
+        <pubDate>Sat, 04 Dec 2010 17:37:25 GMT</pubDate>
+        
+        <dc:creator>wwaites</dc:creator>
+
+        <description>&lt;ul&gt;&lt;li&gt;perhaps we should show the openid as well to distinguish between users with the same name.
+&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;perhaps on account creation, the user should be redirected to their personal details page to encourage them to fill in a human readable name.
+&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;also the list is much too long. can we make it work some other way? javascript is an option, but must be careful to fail gracefully when the browser does not support it.
+&lt;/li&gt;&lt;/ul&gt;</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/843#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/844</link>
+        <guid isPermaLink="false">http://localhost/ticket/844</guid>
+        <title>#844: bad mail config ckan.net/ckan.org</title>
+        <pubDate>Sun, 05 Dec 2010 13:45:53 GMT</pubDate>
+        
+        <dc:creator>wwaites</dc:creator>
+
+        <description>&lt;p&gt;
+ckan.net and ckan.org have no mx record and no listener on port 25. yet they send out mail. this means, when messages it sends bounce for whatever reason, the bounce messages stay in the queue on the remote mail server until they expire. for example:
+&lt;/p&gt;
+&lt;pre class="wiki"&gt;B30E6D9F       2873 Sat Dec  4 14:05:40  MAILER-DAEMON
+(delivery temporarily suspended: connect to ckan.net[46.51.189.76]:25: Operation timed out)
+                                         no-reply@ckan.net
+&lt;/pre&gt;&lt;p&gt;
+both these domains should have an mx record pointing to mail.okfn.org and mail.okfn.org should be configured to handle these addresses correctly, e.g. by sending them to /dev/null
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/844#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/851</link>
+        <guid isPermaLink="false">http://localhost/ticket/851</guid>
+        <title>#851: Link Checking</title>
+        <pubDate>Tue, 07 Dec 2010 11:54:20 GMT</pubDate>
+        
+        <dc:creator>wwaites</dc:creator>
+
+        <description>&lt;p&gt;
+revisit link checker from &lt;a class="ext-link" href="http://knowledgeforge.net/ckan/ckanext/file/tip/ckanext/link_checker.py"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://knowledgeforge.net/ckan/ckanext/file/tip/ckanext/link_checker.py&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+revisit ollyc's parallel work
+&lt;/p&gt;
+&lt;p&gt;
+look at how this gets used in practice (maybe deprecate in favour of curate tool (suitably wrapped to hide details from the user)
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/851#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/852</link>
+        <guid isPermaLink="false">http://localhost/ticket/852</guid>
+        <title>#852: [super] Dataset upload and archiving</title>
+        <pubDate>Tue, 07 Dec 2010 11:56:33 GMT</pubDate>
+        
+        <dc:creator>wwaites</dc:creator>
+
+        <description>&lt;p&gt;
+3 (4) use cases: (With and without access to auth keys.)
+&lt;/p&gt;
+&lt;ol&gt;&lt;li&gt;upload form on ckan (by default local system has auth key for storage)
+&lt;/li&gt;&lt;li&gt;datapkg upload (client) (by default without key) (plumbing done)
+&lt;/li&gt;&lt;li&gt;background job archiving downloads (by queue client)
+&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;
+Most important are:
+&lt;/p&gt;
+&lt;ol&gt;&lt;li&gt;Upload form on ckan.net (with access to keys)
+&lt;/li&gt;&lt;li&gt;API for getting credentials for upload from ckan.net api (without access to keys).
+&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;
+Aside: Once 2 was done we could deprecate storage.ckan.net
+&lt;/p&gt;
+&lt;h3 id="Sub-tickets"&gt;Sub-tickets&lt;/h3&gt;
+&lt;p&gt;
+&lt;strong&gt; Required infrastructure &lt;/strong&gt;
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;a class="closed ticket" href="http://localhost/ticket/826" title="enhancement: Resource 'extra' fields (closed: fixed)"&gt;#826&lt;/a&gt; - Resource 'extra' fields
+&lt;/li&gt;&lt;li&gt;&lt;a class="closed ticket" href="http://localhost/ticket/358" title="enhancement: Resources in REST API (closed: duplicate)"&gt;#358&lt;/a&gt; - Resources in REST API
+&lt;/li&gt;&lt;li&gt;&lt;a class="assigned ticket" href="http://localhost/ticket/235" title="enhancement: Resource format normalization and detection (assigned)"&gt;#235&lt;/a&gt; - Resource format normalization and detection
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+&lt;strong&gt; User upload via Web UI &lt;/strong&gt;
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;a class="closed ticket" href="http://localhost/ticket/877" title="enhancement: File upload in WUI (extension) (closed: fixed)"&gt;#877&lt;/a&gt; - File upload in WUI
+&lt;/li&gt;&lt;li&gt;&lt;a class="closed ticket" href="http://localhost/ticket/878" title="enhancement: Integrate file upload with workflow around package resources (closed: fixed)"&gt;#878&lt;/a&gt; - Integrate file upload with workflow around package resources
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+&lt;strong&gt; User upload via CLI/datapkg &lt;/strong&gt;
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;a class="closed ticket" href="http://localhost/ticket/853" title="enhancement: Client upload to storage without having primary storage keys (closed: fixed)"&gt;#853&lt;/a&gt; - plumbing for credential-less rest upload
+&lt;/li&gt;&lt;li&gt;&lt;a class="closed ticket" href="http://localhost/ticket/879" title="enhancement: Storage auth API (closed: fixed)"&gt;#879&lt;/a&gt; - Storage auth API
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+Also related:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;a class="closed ticket" href="http://localhost/ticket/405" title="task: Retrieval options for package resources (closed: fixed)"&gt;#405&lt;/a&gt; - Retrieval options for package resources
+&lt;/li&gt;&lt;/ul&gt;&lt;h3 id="MoreInfo"&gt;More Info&lt;/h3&gt;
+&lt;ul&gt;&lt;li&gt;Upload/storage discussion: &lt;a class="ext-link" href="http://ckan.okfnpad.org/storage"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://ckan.okfnpad.org/storage&lt;/a&gt;
+&lt;ul&gt;&lt;li&gt;For api to generate upload key (for e.g. datapkg usage) suggest locating at ckan.net/api/utils/
+&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/852#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/853</link>
+        <guid isPermaLink="false">http://localhost/ticket/853</guid>
+        <title>#853: Client upload to storage without having primary storage keys</title>
+        <pubDate>Tue, 07 Dec 2010 11:57:43 GMT</pubDate>
+        
+        <dc:creator>wwaites</dc:creator>
+
+        <description>&lt;p&gt;
+Reverse engineer boto and work out how to get headers to support upload to google storage without holding api keys.
+&lt;/p&gt;
+&lt;p&gt;
+This would lead to an extension to OFS.
+&lt;/p&gt;
+&lt;p&gt;
+This analysis should inform (and go hand-in-hand) with the implementation of &lt;a class="closed ticket" href="http://localhost/ticket/879" title="enhancement: Storage auth API (closed: fixed)"&gt;ticket:879&lt;/a&gt; (Storage Auth API in CKAN).
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;master ticket &lt;a class="closed ticket" href="http://localhost/ticket/852" title="enhancement: [super] Dataset upload and archiving (closed: fixed)"&gt;#852&lt;/a&gt;
+&lt;/li&gt;&lt;/ul&gt;</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/853#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/860</link>
+        <guid isPermaLink="false">http://localhost/ticket/860</guid>
+        <title>#860: full text indexing for semantic.ckan.net</title>
+        <pubDate>Tue, 07 Dec 2010 12:47:09 GMT</pubDate>
+        
+        <dc:creator>wwaites</dc:creator>
+
+        <description>&lt;p&gt;
+...
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/860#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/861</link>
+        <guid isPermaLink="false">http://localhost/ticket/861</guid>
+        <title>#861: unicode errors creating rdf output</title>
+        <pubDate>Tue, 07 Dec 2010 12:48:45 GMT</pubDate>
+        
+        <dc:creator>wwaites</dc:creator>
+
+        <description>&lt;p&gt;
+&lt;a class="ext-link" href="http://bitbucket.org/ww/ckanrdf/changeset/63b60d3a253d"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://bitbucket.org/ww/ckanrdf/changeset/63b60d3a253d&lt;/a&gt;
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/861#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/862</link>
+        <guid isPermaLink="false">http://localhost/ticket/862</guid>
+        <title>#862: deploy rdf on catalogue.data.gov.uk</title>
+        <pubDate>Tue, 07 Dec 2010 12:50:37 GMT</pubDate>
+        
+        <dc:creator>wwaites</dc:creator>
+
+        <description>&lt;p&gt;
+handle various dgu extras, configure apache for autonegotiation, etc.
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/862#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/883</link>
+        <guid isPermaLink="false">http://localhost/ticket/883</guid>
+        <title>#883: uklii harvesting refactor</title>
+        <pubDate>Sat, 25 Dec 2010 11:48:33 GMT</pubDate>
+        
+        <dc:creator>wwaites</dc:creator>
+
+        <description>&lt;h2 id="masterticket"&gt;master ticket&lt;/h2&gt;
+&lt;ul&gt;&lt;li&gt;&lt;a class="closed ticket" href="http://localhost/ticket/884" title="enhancement: harvest job delete operation (closed: fixed)"&gt;#884&lt;/a&gt; implement harvest job delete command for an easier life
+&lt;/li&gt;&lt;li&gt;&lt;a class="closed ticket" href="http://localhost/ticket/885" title="defect: reimplement csw module to use owslib (closed: fixed)"&gt;#885&lt;/a&gt; move csw code into dedicated ckanext plugin
+&lt;/li&gt;&lt;li&gt;&lt;a class="closed ticket" href="http://localhost/ticket/886" title="defect: move uklii forms api to dgu module (closed: duplicate)"&gt;#886&lt;/a&gt; move forms api into dgu extension module
+&lt;/li&gt;&lt;li&gt;&lt;a class="closed ticket" href="http://localhost/ticket/887" title="enhancement: move harvesting to generic module (closed: fixed)"&gt;#887&lt;/a&gt; move harvesting code to use generic harvesting module
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/883#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/884</link>
+        <guid isPermaLink="false">http://localhost/ticket/884</guid>
+        <title>#884: harvest job delete operation</title>
+        <pubDate>Sat, 25 Dec 2010 11:50:00 GMT</pubDate>
+        
+        <dc:creator>wwaites</dc:creator>
+
+        <description>&lt;p&gt;
+implement paster subcommand to delete harvest jobs
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/884#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/885</link>
+        <guid isPermaLink="false">http://localhost/ticket/885</guid>
+        <title>#885: reimplement csw module to use owslib</title>
+        <pubDate>Sat, 25 Dec 2010 11:54:59 GMT</pubDate>
+        
+        <dc:creator>wwaites</dc:creator>
+
+        <description></description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/885#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/886</link>
+        <guid isPermaLink="false">http://localhost/ticket/886</guid>
+        <title>#886: move uklii forms api to dgu module</title>
+        <pubDate>Sat, 25 Dec 2010 11:55:45 GMT</pubDate>
+        
+        <dc:creator>wwaites</dc:creator>
+
+        <description>&lt;p&gt;
+doesn't belong in ckan core
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/886#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/887</link>
+        <guid isPermaLink="false">http://localhost/ticket/887</guid>
+        <title>#887: move harvesting to generic module</title>
+        <pubDate>Sat, 25 Dec 2010 11:56:55 GMT</pubDate>
+        
+        <dc:creator>wwaites</dc:creator>
+
+        <description>&lt;p&gt;
+in concert with pudo's work on harvesting different types of documents. should also make it possible to consume, e.g. dcat
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/887#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/894</link>
+        <guid isPermaLink="false">http://localhost/ticket/894</guid>
+        <title>#894: harvest from http://locationmetadataeditor.data.gov.uk/geonetwork/srv/csw</title>
+        <pubDate>Wed, 05 Jan 2011 18:57:56 GMT</pubDate>
+        
+        <dc:creator>wwaites</dc:creator>
+
+        <description></description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/894#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/1084</link>
+        <guid isPermaLink="false">http://localhost/ticket/1084</guid>
+        <title>#1084: ckan.net RDF links changed</title>
+        <pubDate>Tue, 12 Apr 2011 13:58:37 GMT</pubDate>
+        
+        <dc:creator>wwaites</dc:creator>
+
+        <description>&lt;p&gt;
+need to make some changes for the links to semantic.ckan.net. it should use &lt;a class="ext-link" href="http://semantic.ckan.net/record/"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://semantic.ckan.net/record/&lt;/a&gt;&amp;lt;package_id&amp;gt; now
+&lt;/p&gt;
+&lt;p&gt;
+append .rdf, .ttl, .nt, .dot, .json (even .html for an ugly table)  to taste (or just leave off the suffix and let content negotiation take care of it)
+&lt;/p&gt;
+&lt;p&gt;
+the base url is changed, but it now uses id not name.
+&lt;/p&gt;
+&lt;p&gt;
+see for example:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;a class="ext-link" href="http://semantic.ckan.net/record/6058c017-607b-48d9-b3cd-72106ad96e33"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://semantic.ckan.net/record/6058c017-607b-48d9-b3cd-72106ad96e33&lt;/a&gt;
+&lt;/li&gt;&lt;li&gt;&lt;a class="ext-link" href="http://semantic.ckan.net/record/6058c017-607b-48d9-b3cd-72106ad96e33.ttl"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://semantic.ckan.net/record/6058c017-607b-48d9-b3cd-72106ad96e33.ttl&lt;/a&gt;
+&lt;/li&gt;&lt;/ul&gt;</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/1084#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/1087</link>
+        <guid isPermaLink="false">http://localhost/ticket/1087</guid>
+        <title>#1087: version and contact info api call</title>
+        <pubDate>Tue, 12 Apr 2011 17:22:24 GMT</pubDate>
+        
+        <dc:creator>wwaites</dc:creator>
+
+        <description>&lt;p&gt;
+a simple api call that returns data like this:
+&lt;/p&gt;
+&lt;pre class="wiki"&gt;{ "version": ckan_software_version,
+  "contact": { "name": "Some Admin", "mbox": "admin@exmaple.org" },
+  "description": "Site Description",
+  "url": "http://canonical.name.ckan.net/"
+&lt;/pre&gt;</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/1087#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/1088</link>
+        <guid isPermaLink="false">http://localhost/ticket/1088</guid>
+        <title>#1088: content-type autonegotiation is wonky</title>
+        <pubDate>Tue, 12 Apr 2011 17:44:21 GMT</pubDate>
+        
+        <dc:creator>wwaites</dc:creator>
+
+        <description>&lt;p&gt;
+in ckan/controllers/package.py around line 130 it does some strange things...
+&lt;/p&gt;
+&lt;p&gt;
+perhaps replace with &lt;a class="ext-link" href="https://github.com/wwaites/autoneg"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;https://github.com/wwaites/autoneg&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+and handle redirection of these content types:
+&lt;/p&gt;
+&lt;pre class="wiki"&gt;application/rdf+xml
+application/turtle
+text/plain
+text/x-graphviz
+&lt;/pre&gt;</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/1088#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/1803</link>
+        <guid isPermaLink="false">http://localhost/ticket/1803</guid>
+        <title>#1803: clean up routes</title>
+        <pubDate>Fri, 17 Feb 2012 12:58:17 GMT</pubDate>
+        
+        <dc:creator>toby</dc:creator>
+
+        <description></description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/1803#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/1805</link>
+        <guid isPermaLink="false">http://localhost/ticket/1805</guid>
+        <title>#1805: Error pages do not translate</title>
+        <pubDate>Fri, 17 Feb 2012 14:33:36 GMT</pubDate>
+        
+        <dc:creator>toby</dc:creator>
+
+        <description>&lt;p&gt;
+eg 404 page
+&lt;/p&gt;
+&lt;p&gt;
+create a 404 error via a bad url - translation links go to /document/error not the actual bad url
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/1805#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/1806</link>
+        <guid isPermaLink="false">http://localhost/ticket/1806</guid>
+        <title>#1806: make drop down language selector</title>
+        <pubDate>Mon, 20 Feb 2012 12:36:33 GMT</pubDate>
+        
+        <dc:creator>toby</dc:creator>
+
+        <description>&lt;p&gt;
+language chooser should look like the ec one
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/1806#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/2220</link>
+        <guid isPermaLink="false">http://localhost/ticket/2220</guid>
+        <title>#2220: make ckan cacheable</title>
+        <pubDate>Thu, 08 Mar 2012 17:44:03 GMT</pubDate>
+        
+        <dc:creator>toby</dc:creator>
+
+        <description>&lt;p&gt;
+need to sort cookies etc
+&lt;/p&gt;
+&lt;p&gt;
+should work with nginx and varnish
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/2220#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/2227</link>
+        <guid isPermaLink="false">http://localhost/ticket/2227</guid>
+        <title>#2227: Tests are slow and broken</title>
+        <pubDate>Mon, 12 Mar 2012 12:49:30 GMT</pubDate>
+        
+        <dc:creator>toby</dc:creator>
+
+        <description>&lt;p&gt;
+not all tests run and they take too long :(
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/2227#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/2253</link>
+        <guid isPermaLink="false">http://localhost/ticket/2253</guid>
+        <title>#2253: CMAP [super]</title>
+        <pubDate>Wed, 21 Mar 2012 14:45:33 GMT</pubDate>
+        
+        <dc:creator>toby</dc:creator>
+
+        <description>&lt;p&gt;
+Somewhere for CMAP stuff not in other tickets
+&lt;/p&gt;
+&lt;p&gt;
+need to create some general tickets
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;template changes
+&lt;/li&gt;&lt;li&gt;general demo server setup
+&lt;/li&gt;&lt;/ul&gt;</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/2253#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/2254</link>
+        <guid isPermaLink="false">http://localhost/ticket/2254</guid>
+        <title>#2254: better hooks for templates</title>
+        <pubDate>Wed, 21 Mar 2012 14:48:53 GMT</pubDate>
+        
+        <dc:creator>toby</dc:creator>
+
+        <description>&lt;p&gt;
+TD look at issues and then email ckan-dev
+&lt;/p&gt;
+&lt;p&gt;
+meeting notes from 21-3-2012
+general ideas non specific
+&lt;/p&gt;
+&lt;p&gt;
+Problem:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;We want to remove the Transformer usage due to performance and its close tie to genshi
+&lt;/li&gt;&lt;li&gt;Want a standard way for core code and extensions to put code into the templates where *templates request it* (templates control insertion rather than extensions ...)
+&lt;/li&gt;&lt;li&gt;Stacking versus overwriting on entry points
+&lt;ul&gt;&lt;li&gt;Relationship to h.requires('jquery', version) - &lt;a class="ext-link" href="http://codex.wordpress.org/Function_Reference/wp_enqueue_script"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://codex.wordpress.org/Function_Reference/wp_enqueue_script&lt;/a&gt;
+&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+Options:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;placeholders or helper methods
+&lt;/li&gt;&lt;li&gt;{{user _info}} {{sub_menu}} is this equivalent to &amp;lt;span class="insert-user-info"&amp;gt;&amp;lt;/span&amp;gt;
+&lt;ul&gt;&lt;li&gt;[xyz arguments] -&amp;gt; h.load_snippet('xyz', ...)
+&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;${h.snipit()}
+&lt;/li&gt;&lt;/ul&gt;</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/2254#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/2256</link>
+        <guid isPermaLink="false">http://localhost/ticket/2256</guid>
+        <title>#2256: remove TDH from core</title>
+        <pubDate>Fri, 23 Mar 2012 14:33:19 GMT</pubDate>
+        
+        <dc:creator>toby</dc:creator>
+
+        <description>&lt;p&gt;
+make core independent of TDH and make core as minimal app
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/2256#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/2311</link>
+        <guid isPermaLink="false">http://localhost/ticket/2311</guid>
+        <title>#2311: disqus - improvements</title>
+        <pubDate>Mon, 16 Apr 2012 17:54:13 GMT</pubDate>
+        
+        <dc:creator>toby</dc:creator>
+
+        <description>&lt;p&gt;
+get working on TDH
+&lt;/p&gt;
+&lt;p&gt;
+look at removing stream filters
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/2311#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/2355</link>
+        <guid isPermaLink="false">http://localhost/ticket/2355</guid>
+        <title>#2355: [super] make extensions cleaner</title>
+        <pubDate>Tue, 01 May 2012 15:10:51 GMT</pubDate>
+        
+        <dc:creator>toby</dc:creator>
+
+        <description>&lt;ul&gt;&lt;li&gt;Do an analysis of why upgrades are problematic
+&lt;/li&gt;&lt;li&gt;What can we do better
+&lt;/li&gt;&lt;li&gt;Decide what to implement
+&lt;/li&gt;&lt;/ul&gt;</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/2355#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/2371</link>
+        <guid isPermaLink="false">http://localhost/ticket/2371</guid>
+        <title>#2371: fanstatic integration</title>
+        <pubDate>Thu, 03 May 2012 12:00:11 GMT</pubDate>
+        
+        <dc:creator>toby</dc:creator>
+
+        <description>&lt;p&gt;
+aims
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;allow templates to specify needed css/js
+&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;allow split js files to be bundled (including plugin supplied if possible - stage 2)
+&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;serve minified in production/ non-minified in dev
+&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;possibly look at doing the minification via paster - maybe as different ticket
+&lt;/li&gt;&lt;/ul&gt;</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/2371#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/2420</link>
+        <guid isPermaLink="false">http://localhost/ticket/2420</guid>
+        <title>#2420: @depreciated decorator</title>
+        <pubDate>Thu, 24 May 2012 11:15:44 GMT</pubDate>
+        
+        <dc:creator>toby</dc:creator>
+
+        <description>&lt;p&gt;
+create a depreciated decorator to wrap functions we intend to remove
+&lt;/p&gt;
+&lt;p&gt;
+logs a warning
+maybe check that 'depreciated' is included in the docstring too
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/2420#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/2421</link>
+        <guid isPermaLink="false">http://localhost/ticket/2421</guid>
+        <title>#2421: demo-theme pills break in dataset search</title>
+        <pubDate>Thu, 24 May 2012 13:13:16 GMT</pubDate>
+        
+        <dc:creator>toby</dc:creator>
+
+        <description>&lt;p&gt;
+if pills cross onto 2 lines they split which they shouldn't to see just add some tags/formats till it breaks
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/2421#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/2482</link>
+        <guid isPermaLink="false">http://localhost/ticket/2482</guid>
+        <title>#2482: related items dataset page 500 error</title>
+        <pubDate>Thu, 31 May 2012 12:48:44 GMT</pubDate>
+        
+        <dc:creator>toby</dc:creator>
+
+        <description></description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/2482#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/2484</link>
+        <guid isPermaLink="false">http://localhost/ticket/2484</guid>
+        <title>#2484: move follower functionality into helper functions</title>
+        <pubDate>Fri, 01 Jun 2012 10:49:30 GMT</pubDate>
+        
+        <dc:creator>toby</dc:creator>
+
+        <description></description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/2484#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/2496</link>
+        <guid isPermaLink="false">http://localhost/ticket/2496</guid>
+        <title>#2496: get debug fixed in demo branch</title>
+        <pubDate>Thu, 07 Jun 2012 11:15:09 GMT</pubDate>
+        
+        <dc:creator>toby</dc:creator>
+
+        <description>&lt;p&gt;
+stacktrace
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/2496#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/2497</link>
+        <guid isPermaLink="false">http://localhost/ticket/2497</guid>
+        <title>#2497: abort loses language settings</title>
+        <pubDate>Thu, 07 Jun 2012 11:17:35 GMT</pubDate>
+        
+        <dc:creator>toby</dc:creator>
+
+        <description>&lt;p&gt;
+if not logged in then go to add dataset url
+the language is lost
+&lt;/p&gt;
+&lt;p&gt;
+check if this is a ckan 1.7 issue
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/2497#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/2498</link>
+        <guid isPermaLink="false">http://localhost/ticket/2498</guid>
+        <title>#2498: on loggin redirect to requested page</title>
+        <pubDate>Thu, 07 Jun 2012 11:18:49 GMT</pubDate>
+        
+        <dc:creator>toby</dc:creator>
+
+        <description></description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/2498#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/2511</link>
+        <guid isPermaLink="false">http://localhost/ticket/2511</guid>
+        <title>#2511: header logo should be link to /</title>
+        <pubDate>Tue, 12 Jun 2012 15:11:20 GMT</pubDate>
+        
+        <dc:creator>toby</dc:creator>
+
+        <description></description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/2511#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/2522</link>
+        <guid isPermaLink="false">http://localhost/ticket/2522</guid>
+        <title>#2522: view user gatavar not sqaure</title>
+        <pubDate>Wed, 13 Jun 2012 16:29:14 GMT</pubDate>
+        
+        <dc:creator>toby</dc:creator>
+
+        <description>&lt;p&gt;
+the user pic should be square on the user read page
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/2522#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/2523</link>
+        <guid isPermaLink="false">http://localhost/ticket/2523</guid>
+        <title>#2523: New package metadata form needs creating</title>
+        <pubDate>Wed, 13 Jun 2012 16:32:56 GMT</pubDate>
+        
+        <dc:creator>toby</dc:creator>
+
+        <description>&lt;p&gt;
+&lt;a class="ext-link" href="http://localhost:5000/dataset/new_metadata/dataset"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://localhost:5000/dataset/new_metadata/dataset&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+Controller : package
+Action : new_metadata
+&lt;/p&gt;
+&lt;p&gt;
+template package/snippets/package_metadata_form.html
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/2523#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/2532</link>
+        <guid isPermaLink="false">http://localhost/ticket/2532</guid>
+        <title>#2532: show activity steam for user no js</title>
+        <pubDate>Fri, 15 Jun 2012 09:55:58 GMT</pubDate>
+        
+        <dc:creator>toby</dc:creator>
+
+        <description>&lt;p&gt;
+We should allow the user activity stream to be accessible with no js by passing a param or something.  Need to agree how we hide/show basically agree what classes we use.
+&lt;/p&gt;
+&lt;p&gt;
+This should be a generalised solution that we can use in other places as needed.
+&lt;/p&gt;
+&lt;p&gt;
+I think this just needs discussion
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/2532#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/2536</link>
+        <guid isPermaLink="false">http://localhost/ticket/2536</guid>
+        <title>#2536: cleanup activity streams</title>
+        <pubDate>Fri, 15 Jun 2012 13:02:03 GMT</pubDate>
+        
+        <dc:creator>toby</dc:creator>
+
+        <description></description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/2536#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/2553</link>
+        <guid isPermaLink="false">http://localhost/ticket/2553</guid>
+        <title>#2553: Create a get snippet api action</title>
+        <pubDate>Mon, 18 Jun 2012 11:56:53 GMT</pubDate>
+        
+        <dc:creator>toby</dc:creator>
+
+        <description>&lt;p&gt;
+just passes template name
+&lt;/p&gt;
+&lt;p&gt;
+?template_name=...
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/2553#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/2571</link>
+        <guid isPermaLink="false">http://localhost/ticket/2571</guid>
+        <title>#2571: implement logic.action.create.resource_create()</title>
+        <pubDate>Tue, 19 Jun 2012 10:37:39 GMT</pubDate>
+        
+        <dc:creator>toby</dc:creator>
+
+        <description>&lt;p&gt;
+This function is incomplete
+&lt;/p&gt;
+&lt;p&gt;
+If you want I can do this but I need guidance over how to do this properly. ie would I go through lib.dictization.model_save.package_resource_list_save() which looks wrong to me as I'd need the package.  resource_dict_save() seems better but to be honest the total lack of docstrings etc makes me feel ill.
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/2571#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/2574</link>
+        <guid isPermaLink="false">http://localhost/ticket/2574</guid>
+        <title>#2574: look at package states</title>
+        <pubDate>Tue, 19 Jun 2012 14:22:51 GMT</pubDate>
+        
+        <dc:creator>toby</dc:creator>
+
+        <description>&lt;p&gt;
+we want to be able to add new datasets but not have them indexed or seem by people
+&lt;/p&gt;
+&lt;p&gt;
+is the vdm.state the place to do this
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/2574#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/2576</link>
+        <guid isPermaLink="false">http://localhost/ticket/2576</guid>
+        <title>#2576: resource side box in dataset resource view broken</title>
+        <pubDate>Wed, 20 Jun 2012 13:44:17 GMT</pubDate>
+        
+        <dc:creator>toby</dc:creator>
+
+        <description>&lt;p&gt;
+assuming you have datahub data
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a class="ext-link" href="http://localhost:5000/en/dataset/2008_facility_ghg_emissions_by_province_territory/resource/28650645-8878-4826-9405-f20b9dfa4c12"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://localhost:5000/en/dataset/2008_facility_ghg_emissions_by_province_territory/resource/28650645-8878-4826-9405-f20b9dfa4c12&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+also the breadcrumb becomes overly long too
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/2576#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/2578</link>
+        <guid isPermaLink="false">http://localhost/ticket/2578</guid>
+        <title>#2578: demo theme breaks the tests</title>
+        <pubDate>Thu, 21 Jun 2012 11:08:44 GMT</pubDate>
+        
+        <dc:creator>toby</dc:creator>
+
+        <description>&lt;p&gt;
+The demo branch fails huge numbers of tests.
+&lt;/p&gt;
+&lt;p&gt;
+many are going to be template based - these need to be sorted - ideally we need to get them to work with legacy/new templates but see how we go on that one
+&lt;/p&gt;
+&lt;p&gt;
+anyhow this is not a priority whilst we are branched but needs resolving before we merge into master
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/2578#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/2580</link>
+        <guid isPermaLink="false">http://localhost/ticket/2580</guid>
+        <title>#2580: create resource validation</title>
+        <pubDate>Thu, 21 Jun 2012 13:26:48 GMT</pubDate>
+        
+        <dc:creator>toby</dc:creator>
+
+        <description>&lt;p&gt;
+david I've got the add resource working but it is happy to add empty resources which implies that it isn't doing validation correctly.
+&lt;/p&gt;
+&lt;p&gt;
+I'm not sure what the validation rules are so hard to test this - I'm coming through as an api call
+&lt;/p&gt;
+&lt;p&gt;
+let me know if i can help
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/2580#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/2581</link>
+        <guid isPermaLink="false">http://localhost/ticket/2581</guid>
+        <title>#2581: allow state = 'draft'</title>
+        <pubDate>Thu, 21 Jun 2012 14:01:38 GMT</pubDate>
+        
+        <dc:creator>toby</dc:creator>
+
+        <description>&lt;p&gt;
+pass some stuff through the context
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/2581#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/2584</link>
+        <guid isPermaLink="false">http://localhost/ticket/2584</guid>
+        <title>#2584: edit profile needs new theme</title>
+        <pubDate>Fri, 22 Jun 2012 10:12:05 GMT</pubDate>
+        
+        <dc:creator>toby</dc:creator>
+
+        <description>&lt;p&gt;
+&lt;a class="ext-link" href="http://localhost:5000/user/edit/"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://localhost:5000/user/edit/&lt;/a&gt;&amp;lt;my user name&amp;gt;
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/2584#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/2586</link>
+        <guid isPermaLink="false">http://localhost/ticket/2586</guid>
+        <title>#2586: edit dataset - tags broken</title>
+        <pubDate>Fri, 22 Jun 2012 10:40:30 GMT</pubDate>
+        
+        <dc:creator>toby</dc:creator>
+
+        <description>&lt;p&gt;
+tags is list not string
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/2586#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/2587</link>
+        <guid isPermaLink="false">http://localhost/ticket/2587</guid>
+        <title>#2587: author/maintainer not shown if email missing</title>
+        <pubDate>Fri, 22 Jun 2012 12:50:50 GMT</pubDate>
+        
+        <dc:creator>toby</dc:creator>
+
+        <description>&lt;p&gt;
+is this the expected behaviour seems crap to me, should we just see the author but just no link
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/2587#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/2588</link>
+        <guid isPermaLink="false">http://localhost/ticket/2588</guid>
+        <title>#2588: search index for new package</title>
+        <pubDate>Fri, 22 Jun 2012 13:52:25 GMT</pubDate>
+        
+        <dc:creator>toby</dc:creator>
+
+        <description>&lt;p&gt;
+when package is added it does not seem to get indexed
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/2588#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/2589</link>
+        <guid isPermaLink="false">http://localhost/ticket/2589</guid>
+        <title>#2589: users can view draft datasets</title>
+        <pubDate>Fri, 22 Jun 2012 13:53:14 GMT</pubDate>
+        
+        <dc:creator>toby</dc:creator>
+
+        <description>&lt;p&gt;
+need to add some logic for this
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/2589#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/2591</link>
+        <guid isPermaLink="false">http://localhost/ticket/2591</guid>
+        <title>#2591: postgres unicode problems postgres v9.1.4</title>
+        <pubDate>Mon, 25 Jun 2012 12:36:16 GMT</pubDate>
+        
+        <dc:creator>toby</dc:creator>
+
+        <description>&lt;p&gt;
+sqlalchemy fails on postgres 9.1.4 when unicode is returned
+&lt;/p&gt;
+&lt;p&gt;
+see &lt;a class="ext-link" href="http://docs.sqlalchemy.org/en/rel_0_7/dialects/postgresql.html"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://docs.sqlalchemy.org/en/rel_0_7/dialects/postgresql.html&lt;/a&gt;
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/2591#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/2598</link>
+        <guid isPermaLink="false">http://localhost/ticket/2598</guid>
+        <title>#2598: stages css broken in FF</title>
+        <pubDate>Tue, 26 Jun 2012 10:55:02 GMT</pubDate>
+        
+        <dc:creator>toby</dc:creator>
+
+        <description>&lt;p&gt;
+I see X where none should be
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/2598#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/2606</link>
+        <guid isPermaLink="false">http://localhost/ticket/2606</guid>
+        <title>#2606: make fanstatic use full path</title>
+        <pubDate>Wed, 27 Jun 2012 11:19:45 GMT</pubDate>
+        
+        <dc:creator>toby</dc:creator>
+
+        <description>&lt;p&gt;
+ckan/main not main
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/2606#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/2614</link>
+        <guid isPermaLink="false">http://localhost/ticket/2614</guid>
+        <title>#2614: improve the documentation around less/node</title>
+        <pubDate>Wed, 27 Jun 2012 16:52:08 GMT</pubDate>
+        
+        <dc:creator>toby</dc:creator>
+
+        <description>&lt;p&gt;
+needs to move to a better home
+&lt;/p&gt;
+&lt;p&gt;
+better ubuntu install instructions plus test they work
+&lt;/p&gt;
+&lt;p&gt;
+&lt;tt&gt;apt-get install nodejs&lt;/tt&gt;
+&lt;/p&gt;
+&lt;p&gt;
+integrate with paster
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/2614#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/2618</link>
+        <guid isPermaLink="false">http://localhost/ticket/2618</guid>
+        <title>#2618: allow nested js resources</title>
+        <pubDate>Thu, 28 Jun 2012 10:07:43 GMT</pubDate>
+        
+        <dc:creator>toby</dc:creator>
+
+        <description></description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/2618#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/2626</link>
+        <guid isPermaLink="false">http://localhost/ticket/2626</guid>
+        <title>#2626: ff render issue in edit dataset</title>
+        <pubDate>Thu, 05 Jul 2012 14:43:39 GMT</pubDate>
+        
+        <dc:creator>toby</dc:creator>
+
+        <description>&lt;p&gt;
+&lt;a class="ext-link" href="http://localhost:5000/dataset/edit/2010-nigeria-budget"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://localhost:5000/dataset/edit/2010-nigeria-budget&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+the edit url button appears too high up
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/2626#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/2632</link>
+        <guid isPermaLink="false">http://localhost/ticket/2632</guid>
+        <title>#2632: check allowed helpers exist</title>
+        <pubDate>Mon, 09 Jul 2012 09:56:51 GMT</pubDate>
+        
+        <dc:creator>toby</dc:creator>
+
+        <description>&lt;p&gt;
+in lib helpers make sure the allowed function lists functions exist or throw an error.
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/2632#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/2633</link>
+        <guid isPermaLink="false">http://localhost/ticket/2633</guid>
+        <title>#2633: for dev always look for templates</title>
+        <pubDate>Mon, 09 Jul 2012 10:00:58 GMT</pubDate>
+        
+        <dc:creator>toby</dc:creator>
+
+        <description>&lt;p&gt;
+so we find newly created templates
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/2633#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/2634</link>
+        <guid isPermaLink="false">http://localhost/ticket/2634</guid>
+        <title>#2634: change log - helper function limited in 1.8</title>
+        <pubDate>Mon, 09 Jul 2012 10:04:08 GMT</pubDate>
+        
+        <dc:creator>toby</dc:creator>
+
+        <description>&lt;p&gt;
+make sure documented
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/2634#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/2638</link>
+        <guid isPermaLink="false">http://localhost/ticket/2638</guid>
+        <title>#2638: add a get from request param helper function</title>
+        <pubDate>Mon, 09 Jul 2012 14:36:37 GMT</pubDate>
+        
+        <dc:creator>toby</dc:creator>
+
+        <description></description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/2638#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/2646</link>
+        <guid isPermaLink="false">http://localhost/ticket/2646</guid>
+        <title>#2646: delete dataset</title>
+        <pubDate>Tue, 10 Jul 2012 11:41:06 GMT</pubDate>
+        
+        <dc:creator>toby</dc:creator>
+
+        <description>&lt;p&gt;
+make it so
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/2646#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/2647</link>
+        <guid isPermaLink="false">http://localhost/ticket/2647</guid>
+        <title>#2647: api bullshit button</title>
+        <pubDate>Tue, 10 Jul 2012 11:42:10 GMT</pubDate>
+        
+        <dc:creator>toby</dc:creator>
+
+        <description>&lt;p&gt;
+make it as a snippet calling thing like aron would love
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/2647#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/2652</link>
+        <guid isPermaLink="false">http://localhost/ticket/2652</guid>
+        <title>#2652: get qa working with the demo</title>
+        <pubDate>Tue, 10 Jul 2012 16:21:55 GMT</pubDate>
+        
+        <dc:creator>toby</dc:creator>
+
+        <description></description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/2652#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/2661</link>
+        <guid isPermaLink="false">http://localhost/ticket/2661</guid>
+        <title>#2661: delete dataset/group javascript confirm</title>
+        <pubDate>Wed, 11 Jul 2012 13:13:15 GMT</pubDate>
+        
+        <dc:creator>toby</dc:creator>
+
+        <description>&lt;p&gt;
+in 2375-demo-theme-development
+&lt;/p&gt;
+&lt;p&gt;
+templates/package/confirm_delete.html needs to be made to look nice note some writing in black
+&lt;/p&gt;
+&lt;p&gt;
+delete button needs nice home on dataset/edit
+&lt;/p&gt;
+&lt;p&gt;
+you can add js support add ?confirm=yes to url on dataset button to force delete
+&lt;/p&gt;
+&lt;p&gt;
+Please note delete is not yet implemented - but will be in the next few hours
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/2661#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/2664</link>
+        <guid isPermaLink="false">http://localhost/ticket/2664</guid>
+        <title>#2664: tags with : cause crazy error message on add dataset in demo</title>
+        <pubDate>Wed, 11 Jul 2012 14:55:03 GMT</pubDate>
+        
+        <dc:creator>toby</dc:creator>
+
+        <description></description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/2664#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/2665</link>
+        <guid isPermaLink="false">http://localhost/ticket/2665</guid>
+        <title>#2665: add dataset stages need to be form buttonable</title>
+        <pubDate>Wed, 11 Jul 2012 16:26:11 GMT</pubDate>
+        
+        <dc:creator>toby</dc:creator>
+
+        <description>&lt;p&gt;
+the stages snippet needs to be inside &amp;lt;form&amp;gt; so I can make some links buttons - eg stage 1 -&amp;gt; stage 2 I want to save the dataset not just move to add resource
+&lt;/p&gt;
+&lt;p&gt;
+if you can just move it within the form html leaving everything else the same - I can then add buttons and pass back for styling
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/2665#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/2666</link>
+        <guid isPermaLink="false">http://localhost/ticket/2666</guid>
+        <title>#2666: templates/package/resource_edit.html</title>
+        <pubDate>Thu, 12 Jul 2012 09:12:53 GMT</pubDate>
+        
+        <dc:creator>toby</dc:creator>
+
+        <description>&lt;p&gt;
+There is a new template for editing resources outside of the add dataset logic
+&lt;/p&gt;
+&lt;p&gt;
+this is the template it just throws some crap onto the page at the moment - we need to create a form - the form will end up with the usual data/edit stuff but for now you can use the resource to populate the form and I can then change it to use data - I just want to know which fields we'll have
+&lt;/p&gt;
+&lt;p&gt;
+templates/package/resource_edit.html
+&lt;/p&gt;
+&lt;p&gt;
+when done reassign to me and I'll get it functioning
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/2666#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/2667</link>
+        <guid isPermaLink="false">http://localhost/ticket/2667</guid>
+        <title>#2667: edit resource needs form</title>
+        <pubDate>Fri, 13 Jul 2012 09:01:43 GMT</pubDate>
+        
+        <dc:creator>toby</dc:creator>
+
+        <description>&lt;p&gt;
+I thought I'd made this ticket before but can't find it.  When we have a fully created dataset we need to be able to edit the resources.
+&lt;/p&gt;
+&lt;p&gt;
+template: package/resource_edit.html
+&lt;/p&gt;
+&lt;p&gt;
+when you've made a form reassign to me and I'll get it working
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/2667#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/2669</link>
+        <guid isPermaLink="false">http://localhost/ticket/2669</guid>
+        <title>#2669: style [Draft]</title>
+        <pubDate>Fri, 13 Jul 2012 10:08:30 GMT</pubDate>
+        
+        <dc:creator>toby</dc:creator>
+
+        <description>&lt;p&gt;
+I've added [Draft] to partial completed datasets in the package list and read  commit 6a8e74d0
+&lt;/p&gt;
+&lt;p&gt;
+templates/snippets/package_list.html
+&lt;/p&gt;
+&lt;p&gt;
+templates/package/read.html
+&lt;/p&gt;
+&lt;p&gt;
+do you want to style them in some way?
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/2669#changelog</comments>
+    </item><item>
+        <link>http://localhost/ticket/2671</link>
+        <guid isPermaLink="false">http://localhost/ticket/2671</guid>
+        <title>#2671: fix allow_partial_update</title>
+        <pubDate>Fri, 13 Jul 2012 12:46:58 GMT</pubDate>
+        
+        <dc:creator>toby</dc:creator>
+
+        <description>&lt;p&gt;
+need to be able to delete stuff explicitly
+&lt;/p&gt;
+</description>
+        <category>Results</category>
+        <comments>http://localhost/ticket/2671#changelog</comments>
+    </item>
+ </channel>
+</rss>

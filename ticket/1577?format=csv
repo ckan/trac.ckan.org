@@ -1,0 +1,209 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1577,Can't upload file with foreign chars in filename,dread,rgrp,"Looks like uploading a file with foreign characters fails due to encoding reasons.
+{{{
+URL: http://thedatahub.org/api/storage/auth/form/2011-12-19T124447/Ministerstvo-financ%C3%AD-%C4%8Cesk%C3%A9-republiky-_-P%C5%99%C3%ADprava-rozpo%C4%8Dtu.pdf
+Module weberror.errormiddleware:162 in __call__
+<<              __traceback_supplement__ = Supplement, self, environ
+                   sr_checker = ResponseStartChecker(start_response)
+                   app_iter = self.application(environ, sr_checker)
+                   return self.make_catching_iter(app_iter, environ, sr_checker)
+               except:
+>>  app_iter = self.application(environ, sr_checker)
+Module beaker.middleware:73 in __call__
+<<                                                     self.cache_manager)
+               environ[self.environ_key] = self.cache_manager
+               return self.app(environ, start_response)
+>>  return self.app(environ, start_response)
+Module beaker.middleware:152 in __call__
+<<                          headers.append(('Set-cookie', cookie))
+                   return start_response(status, headers, exc_info)
+               return self.wrap_app(environ, session_start_response)
+           
+           def _get_session(self):
+>>  return self.wrap_app(environ, session_start_response)
+Module routes.middleware:130 in __call__
+<<                  environ['SCRIPT_NAME'] = environ['SCRIPT_NAME'][:-1]
+               
+               response = self.app(environ, start_response)
+               
+               # Wrapped in try as in rare cases the attribute will be gone already
+>>  response = self.app(environ, start_response)
+Module pylons.wsgiapp:125 in __call__
+<<          
+               controller = self.resolve(environ, start_response)
+               response = self.dispatch(controller, environ, start_response)
+               
+               if 'paste.testing_variables' in environ and hasattr(response,
+>>  response = self.dispatch(controller, environ, start_response)
+Module pylons.wsgiapp:324 in dispatch
+<<          if log_debug:
+                   log.debug(""Calling controller class with WSGI interface"")
+               return controller(environ, start_response)
+           
+           def load_test_env(self, environ):
+>>  return controller(environ, start_response)
+Module ckan.lib.base:123 in __call__
+<<          # available in environ['pylons.routes_dict']    
+               try:
+                   return WSGIController.__call__(self, environ, start_response)
+               finally:
+                   model.Session.remove()
+>>  return WSGIController.__call__(self, environ, start_response)
+Module pylons.controllers.core:221 in __call__
+<<                  return response(environ, self.start_response)
+               
+               response = self._dispatch_call()
+               if not start_response_called:
+                   self.start_response = start_response
+>>  response = self._dispatch_call()
+Module pylons.controllers.core:172 in _dispatch_call
+<<              req.environ['pylons.action_method'] = func
+                   
+                   response = self._inspect_call(func)
+               else:
+                   if log_debug:
+>>  response = self._inspect_call(func)
+Module pylons.controllers.core:107 in _inspect_call
+<<                        func.__name__, args)
+               try:
+                   result = self._perform_call(func, args)
+               except HTTPException, httpe:
+                   if log_debug:
+>>  result = self._perform_call(func, args)
+Module pylons.controllers.core:60 in _perform_call
+<<          """"""Hide the traceback for everything above this method""""""
+               __traceback_hide__ = 'before_and_this'
+               return func(**args)
+           
+           def _inspect_call(self, func):
+>>  return func(**args)
+Module ckanext.storage.controller:2 in auth_form
+Module ckan.lib.jsonp:26 in jsonpify
+<<      Very much modelled after pylons.decorators.jsonify .
+           """"""
+           data = func(*args, **kwargs)
+           return to_jsonp(data)
+>>  data = func(*args, **kwargs)
+Module ckanext.storage.controller:301 in auth_form
+<<          method = 'POST'
+               authorize(method, bucket, label, c.userobj, self.ofs)
+               data = self._get_form_data(label)
+               return data
+>>  authorize(method, bucket, label, c.userobj, self.ofs)
+Module ckanext.storage.controller:79 in authorize
+<<      if method != 'GET':
+               # do not allow overwriting
+               if ofs.exists(bucket, key):
+                   abort(409)
+               # now check user stuff
+>>  if ofs.exists(bucket, key):
+Module ofs.remote.botostore:53 in exists
+<<          if bucket is None: 
+                   return False
+               return (label is None) or (label in bucket)
+           
+           def claim_bucket(self, bucket):
+>>  return (label is None) or (label in bucket)
+Module boto.s3.bucket:87 in __contains__
+<<      def __contains__(self, key_name):
+              return not (self.get_key(key_name) is None)
+       
+           def startElement(self, name, attrs, connection):
+>>  return not (self.get_key(key_name) is None)
+Module boto.s3.bucket:144 in get_key
+<<          response = self.connection.make_request('HEAD', self.name, key_name,
+                                                       headers=headers,
+                                                       query_args=query_args)
+               # Allow any success status (2xx) - for example this lets us
+               # support Range gets, which return status 206:
+>>  query_args=query_args)
+Module boto.s3.connection:388 in make_request
+<<          if isinstance(key, Key):
+                   key = key.name
+               path = self.calling_format.build_path_base(bucket, key)
+               boto.log.debug('path=%s' % path)
+               auth_path = self.calling_format.build_auth_path(bucket, key)
+>>  path = self.calling_format.build_path_base(bucket, key)
+Module boto.s3.connection:88 in build_path_base
+<<      def build_path_base(self, bucket, key=''):
+               return '/%s' % urllib.quote(key)
+       
+       class SubdomainCallingFormat(_CallingFormat):
+>>  return '/%s' % urllib.quote(key)
+Module urllib:1222 in quote
+<<              safe_map[c] = (c in safe) and c or ('%%%02X' % i)
+               _safemaps[cachekey] = safe_map
+           res = map(safe_map.__getitem__, s)
+           return ''.join(res)
+>>  res = map(safe_map.__getitem__, s)
+KeyError: u'\xed'
+CGI Variables
+AUTH_TYPE	'cookie'
+CONTENT_TYPE	'; charset=utf-8'
+DOCUMENT_ROOT	'/htdocs'
+GATEWAY_INTERFACE	'CGI/1.1'
+HTTP_ACCEPT	'*/*'
+HTTP_ACCEPT_CHARSET	'ISO-8859-1,utf-8;q=0.7,*;q=0.3'
+HTTP_ACCEPT_ENCODING	'gzip,deflate,sdch'
+HTTP_ACCEPT_LANGUAGE	'en-US,en;q=0.8'
+HTTP_CACHE_CONTROL	'max-age=259200'
+HTTP_CONNECTION	'keep-alive'
+HTTP_COOKIE	'thedatahub_net=27a7f095fcca1ea6b36df996d595e3278b16f4538862bf7f88d49e2000b9246547c8fd0e; auth_tkt=""f9c6ab2b0d9fcd71c4c2408bc12fab544eef1c45elenaibp!userid_type:unicode""; auth_tkt=""f9c6ab2b0d9fcd71c4c2408bc12fab544eef1c45elenaibp!userid_type:unicode""; ckan_user=elenaibp; ckan_display_name=""Elena Mondo""; ckan_apikey=decd48b1-49ee-4250-bff4-98ccca9c02a5; hide_welcome_message=1; __utma=119670349.1809834699.1323782464.1324293066.1324298316.4; __utmb=119670349.3.10.1324298316; __utmc=119670349; __utmz=119670349.1323782464.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+HTTP_HOST	'thedatahub.org'
+HTTP_REFERER	'http://thedatahub.org/dataset/edit/budget-library-czeck-republic'
+HTTP_USER_AGENT	'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/535.7 (KHTML, like Gecko) Chrome/16.0.912.63 Safari/535.7'
+HTTP_VIA	'1.1 localhost (squid/3.0.STABLE19)'
+HTTP_X_FORWARDED_FOR	'87.114.74.190'
+HTTP_X_REQUESTED_WITH	'XMLHttpRequest'
+PATH	'/usr/local/bin:/usr/bin:/bin'
+PATH_INFO	'/api/storage/auth/form/2011-12-19T124447/Ministerstvo-financ\xc3\xad-\xc4\x8cesk\xc3\xa9-republiky-_-P\xc5\x99\xc3\xadprava-rozpo\xc4\x8dtu.pdf'
+PATH_TRANSLATED	'/home/okfn/var/srvc/ckan.net/pyenv/bin/ckan.net.py/api/storage/auth/form/2011-12-19T124447/Ministerstvo-financ\xc3\xad-\xc4\x8cesk\xc3\xa9-republiky-_-P\xc5\x99\xc3\xadprava-rozpo\xc4\x8dtu.pdf'
+REMOTE_ADDR	'193.34.146.142'
+REMOTE_PORT	'55419'
+REMOTE_USER	u'elenaibp'
+REMOTE_USER_DATA	'userid_type:unicode'
+REMOTE_USER_TOKENS	['']
+REQUEST_METHOD	'GET'
+REQUEST_URI	'/api/storage/auth/form/2011-12-19T124447/Ministerstvo-financ%C3%AD-%C4%8Cesk%C3%A9-republiky-_-P%C5%99%C3%ADprava-rozpo%C4%8Dtu.pdf'
+SCRIPT_FILENAME	'/home/okfn/var/srvc/ckan.net/pyenv/bin/ckan.net.py'
+SCRIPT_URI	'http://thedatahub.org/api/storage/auth/form/2011-12-19T124447/Ministerstvo-financ\xc3\xad-\xc4\x8cesk\xc3\xa9-republiky-_-P\xc5\x99\xc3\xadprava-rozpo\xc4\x8dtu.pdf'
+SCRIPT_URL	'/api/storage/auth/form/2011-12-19T124447/Ministerstvo-financ\xc3\xad-\xc4\x8cesk\xc3\xa9-republiky-_-P\xc5\x99\xc3\xadprava-rozpo\xc4\x8dtu.pdf'
+SERVER_ADDR	'193.34.146.146'
+SERVER_ADMIN	'[no address given]'
+SERVER_NAME	'thedatahub.org'
+SERVER_PORT	'80'
+SERVER_PROTOCOL	'HTTP/1.0'
+SERVER_SIGNATURE	'<address>Apache/2.2.14 (Ubuntu) Server at thedatahub.org Port 80</address>\n'
+SERVER_SOFTWARE	'Apache/2.2.14 (Ubuntu)'
+WSGI Variables
+application	<beaker.middleware.CacheMiddleware object at 0x7f22601c7dd0>
+beaker.cache	<beaker.cache.CacheManager object at 0x7f22601c7b50>
+beaker.get_session	<bound method SessionMiddleware._get_session of <beaker.middleware.SessionMiddleware object at 0x7f22601c7a90>>
+beaker.session	{'_accessed_time': 1324298703.071357, '_creation_time': 1324293077.4139669}
+mod_wsgi.application_group	'ckan.net|'
+mod_wsgi.callable_object	'application'
+mod_wsgi.listener_host	''
+mod_wsgi.listener_port	'80'
+mod_wsgi.process_group	'ckan.net'
+mod_wsgi.reload_mechanism	'1'
+mod_wsgi.script_reloading	'1'
+mod_wsgi.version	(2, 8)
+paste.cookies	(<SimpleCookie: __utma='119670349.1809834699.1323782464.1324293066.1324298316.4' __utmb='119670349.3.10.1324298316' __utmc='119670349' __utmz='119670349.1323782464.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)' auth_tkt='f9c6ab2b0d9fcd71c4c2408bc12fab544eef1c45elenaibp!userid_type:unicode' ckan_apikey='decd48b1-49ee-4250-bff4-98ccca9c02a5' ckan_display_name='Elena Mondo' ckan_user='elenaibp' hide_welcome_message='1' thedatahub_net='27a7f095fcca1ea6b36df996d595e3278b16f4538862bf7f88d49e2000b9246547c8fd0e'>, 'thedatahub_net=27a7f095fcca1ea6b36df996d595e3278b16f4538862bf7f88d49e2000b9246547c8fd0e; auth_tkt=""f9c6ab2b0d9fcd71c4c2408bc12fab544eef1c45elenaibp!userid_type:unicode""; auth_tkt=""f9c6ab2b0d9fcd71c4c2408bc12fab544eef1c45elenaibp!userid_type:unicode""; ckan_user=elenaibp; ckan_display_name=""Elena Mondo""; ckan_apikey=decd48b1-49ee-4250-bff4-98ccca9c02a5; hide_welcome_message=1; _ _utma=119670349.1809834699.1323782464.1324293066.1324298316.4; __utmb=119670349.3.10...)|utmcmd=(none)')
+paste.registry	<paste.registry.Registry object at 0x7f226194df50>
+paste.throw_errors	True
+pylons.action_method	<bound method StorageAPIController.auth_form of <ckanext.storage.controller.StorageAPIController object at 0x7f2261dad990>>
+pylons.controller	<ckanext.storage.controller.StorageAPIController object at 0x7f2261dad990>
+pylons.environ_config	{'session': 'beaker.session', 'cache': 'beaker.cache'}
+pylons.pylons	<pylons.util.PylonsContext object at 0x7f2261daddd0>
+pylons.routes_dict	{'action': u'auth_form', 'controller': u'ckanext.storage.controller:StorageAPIController', 'label': u'2011-12-19T124447/Ministerstvo-financ\xed-\u010cesk\xe9-republiky-_-P\u0159\xedprava-rozpo\u010dtu.pdf'}
+repoze.who.identity	<repoze.who identity (hidden, dict-like) at 139785645747120>
+repoze.who.logger	<logging.Logger instance at 0x7f225e23c098>
+repoze.who.plugins	{'openid': <OpenIdIdentificationPlugin 139785625065680>, 'friendlyform': <FriendlyFormPlugin 139785618095248>, 'ckan.lib.authenticator:UsernamePasswordAuthenticator': <ckan.lib.authenticator.UsernamePasswordAuthenticator object at 0x7f2260874c10>, 'auth_tkt': <AuthTktCookiePlugin 139785625065808>, 'ckan.lib.authenticator:OpenIDAuthenticator': <ckan.lib.authenticator.OpenIDAuthenticator object at 0x7f2260874c90>}
+routes.route	<routes.route.Route object at 0x7f22601a1090>
+routes.url	<routes.util.URLGenerator object at 0x7f2261dadf50>
+webob._parsed_query_vars	(GET([]), '')
+webob.adhoc_attrs	{'language': 'en-us'}
+wsgi process	'Multiprocess'
+wsgi.file_wrapper	<built-in method file_wrapper of mod_wsgi.Adapter object at 0x7f2261da9af8>
+wsgiorg.routing_args	(<routes.util.URLGenerator object at 0x7f2261dadf50>, {'action': u'auth_form', 'controller': u'ckanext.storage.controller:StorageAPIController', 'label': u'2011-12-19T124447/Ministerstvo-financ\xed-\u010cesk\xe9-republiky-_-P\u0159\xedprava-rozpo\u010dtu.pdf'})
+}}}",defect,new,major,ckan-backlog,ckan,,,,ckan,none

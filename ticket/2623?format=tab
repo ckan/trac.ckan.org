@@ -1,0 +1,4 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2623	Organization join/authorization buttons weirdness	seanh	ross	"Enable the organizations and organizations_dataset plugins. Start CKAN. Login and create a new organization. Logout. Login with a different account that is a sysadmin. Go to the organization you just created with the other account. There are Edit and Join buttons. Click on the Edit button, and the Join button changes to Authorization.
+
+It should probably be an Authorization button right from the start if you are a sysadmin."	enhancement	closed	awaiting triage		ckan	invalid	organizations		ckan	none

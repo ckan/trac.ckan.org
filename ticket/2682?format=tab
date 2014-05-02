@@ -1,0 +1,4 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2682	CKAN's internal tracking counts each view twice, needs unit tests	seanh	seanh	"CKAN's internal tracking seems to count each page view twice, the problem appears to be with the SQL in the update_tracking() method in ckan/lib/cli.py.
+
+The internal tracking feature needs some tests, and some of the code could maybe do with some more explanatory comments, e.g. what is the intended difference between count and running_total?"	defect	closed	awaiting merge	ckan-v1.8	ckan	fixed			ckan	none

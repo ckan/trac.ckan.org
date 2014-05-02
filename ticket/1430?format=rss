@@ -1,0 +1,262 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1430: Documents get mixed between SOLR cores</title>
+    <link>http://localhost/ticket/1430</link>
+    <description>&lt;p&gt;
+On some occasions (apparently random), the documents indexed in a specific SOLR core get mixed with different site_ids.
+&lt;/p&gt;
+&lt;p&gt;
+E.g: We look for all documents in the testing.iatiregistry.org core, faceted by site_id. We would expect all documents to have site_id = iati_testing, but some of them have site_id = iatiregistry.org
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a class="ext-link" href="http://okfn-solr.fry-it.com:8080/solr/testing.iatiregistry.org/select?indent=on&amp;amp;version=2.2&amp;amp;q=*:*&amp;amp;fq=+state:active&amp;amp;facet=true&amp;amp;facet.field=site_id"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://okfn-solr.fry-it.com:8080/solr/testing.iatiregistry.org/select?indent=on&amp;amp;version=2.2&amp;amp;q=*:*&amp;amp;fq=+state:active&amp;amp;facet=true&amp;amp;facet.field=site_id&lt;/a&gt;
+&lt;/p&gt;
+&lt;pre class="wiki"&gt;&amp;lt;lst name="facet_fields"&amp;gt;
+&amp;lt;lst name="site_id"&amp;gt;
+&amp;lt;int name="iati_testing"&amp;gt;265&amp;lt;/int&amp;gt;
+&amp;lt;int name="iatiregistry.org"&amp;gt;255&amp;lt;/int&amp;gt;
+&amp;lt;/lst&amp;gt;
+&amp;lt;/lst&amp;gt;
+&lt;/pre&gt;&lt;p&gt;
+If we compare one of the records which disappeared from the "iati_testing" site_id in both the production and testing SOLR cores
+of the server, the records are exactly the same, including the indexed_ts property:
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a class="ext-link" href="http://okfn-solr.fry-it.com:8080/solr/iatiregistry.org/select?indent=on&amp;amp;version=2.2&amp;amp;q=id:97d1ab0d-b203-4757-8f4e-a0c84d2f759f&amp;amp;facet=true&amp;amp;facet.field=site_id"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://okfn-solr.fry-it.com:8080/solr/iatiregistry.org/select?indent=on&amp;amp;version=2.2&amp;amp;q=id:97d1ab0d-b203-4757-8f4e-a0c84d2f759f&amp;amp;facet=true&amp;amp;facet.field=site_id&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a class="ext-link" href="http://okfn-solr.fry-it.com:8080/solr/testing.iatiregistry.org/select?indent=on&amp;amp;version=2.2&amp;amp;q=id:97d1ab0d-b203-4757-8f4e-a0c84d2f759f&amp;amp;facet=true&amp;amp;facet.field=site_id"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://okfn-solr.fry-it.com:8080/solr/testing.iatiregistry.org/select?indent=on&amp;amp;version=2.2&amp;amp;q=id:97d1ab0d-b203-4757-8f4e-a0c84d2f759f&amp;amp;facet=true&amp;amp;facet.field=site_id&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+Note that the response from the URLs shown may vary, as the testing site could have been reindexed.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1430</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>amercader</dc:creator>
+
+      <pubDate>Thu, 03 Nov 2011 16:02:35 GMT</pubDate>
+      <title>attachment set</title>
+      <link>http://localhost/ticket/1430</link>
+      <guid isPermaLink="false">http://localhost/ticket/1430</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;attachment&lt;/strong&gt;
+                set to &lt;em&gt;jetty.requests.log&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Requests received after editing a dataset
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>amercader</dc:creator>
+
+      <pubDate>Thu, 03 Nov 2011 16:03:00 GMT</pubDate>
+      <title>attachment set</title>
+      <link>http://localhost/ticket/1430</link>
+      <guid isPermaLink="false">http://localhost/ticket/1430</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;attachment&lt;/strong&gt;
+                set to &lt;em&gt;jetty.stderrout.log&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+SOLR output after editing a dataset
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>amercader</dc:creator>
+
+      <pubDate>Thu, 03 Nov 2011 17:06:02 GMT</pubDate>
+      <title>cc changed</title>
+      <link>http://localhost/ticket/1430#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1430#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;cc&lt;/strong&gt;
+              &lt;em&gt;rgrp&lt;/em&gt; added
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+I've been digging more on this one.
+To reproduce it, you just have to edit the same dataset in both sites (production and testing). Just after editing the dataset, the search index will get mixed site_ids.
+&lt;/p&gt;
+&lt;p&gt;
+I checked the jetty logs (see attached files) and just after editing a dataset there are two POST requests to update the index. The request logs don't show the requests params so it's hard to tell what the second call does (it probably is the commit):
+&lt;a class="ext-link" href="https://bitbucket.org/okfn/ckan/src/97e1e90d66d7/ckan/lib/search/index.py#cl-144"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;https://bitbucket.org/okfn/ckan/src/97e1e90d66d7/ckan/lib/search/index.py#cl-144&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+In any case, it's clear that the problem may be related with the datasets in the two cores sharing the same id. We are currently using the dataset id as uniqueKey in SOLR, i.e in our schema.xml, we are defining:
+&lt;/p&gt;
+&lt;pre class="wiki"&gt;&amp;lt;uniqueKey&amp;gt;id&amp;lt;/uniqueKey&amp;gt;
+&lt;/pre&gt;&lt;p&gt;
+According to the SOLR docs:
+"If a document is added that contains the same value for this field as an existing document, the old document will be deleted."
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a class="ext-link" href="http://wiki.apache.org/solr/SchemaXml#The_Unique_Key_Field"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://wiki.apache.org/solr/SchemaXml#The_Unique_Key_Field&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+I would expect the uniqueKey not to be mixed between cores, but it looks like it happens otherwise. Maybe we should generate a solr_id specific to each document for each site, as described here:
+&lt;a class="ext-link" href="http://wiki.apache.org/solr/UniqueKey#UUID_techniques"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://wiki.apache.org/solr/UniqueKey#UUID_techniques&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+(Note that apart from the testing/production site use case, at some point sites involved in harvesting could also end up with datasets with the same id.)
+&lt;/p&gt;
+&lt;p&gt;
+Again, I'm not a SOLR expert, so the problem could be a completely different one!
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>nils.toedtmann</dc:creator>
+
+      <pubDate>Thu, 03 Nov 2011 18:44:57 GMT</pubDate>
+      <title>cc changed</title>
+      <link>http://localhost/ticket/1430#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/1430#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;cc&lt;/strong&gt;
+              &lt;em&gt;nils.toedtmann@…&lt;/em&gt; added
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>amercader</dc:creator>
+
+      <pubDate>Fri, 04 Nov 2011 18:25:38 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1430#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/1430#comment:3</guid>
+      <description>
+        &lt;p&gt;
+Right, more news on this front.
+&lt;/p&gt;
+&lt;p&gt;
+I've tested a patch which uses a hash of the dataset id and site_id to produce a unique id, and then configured the iati solr cores to use index_id as uniqueKey:
+&lt;a class="ext-link" href="https://bitbucket.org/okfn/ckan/changeset/855f5a452f60"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;https://bitbucket.org/okfn/ckan/changeset/855f5a452f60&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+Unfortunately, that did not solve the issue. Again, updating the same dataset in both apps messes things up. In this case, documents don't get replaced, but duplicated, so the new uniqueKey is working.
+&lt;/p&gt;
+&lt;p&gt;
+I am more inclined to think that this is caused by a misconfiguration in the SOLR instance in s046. This is the file where the two cores are configured:
+&lt;/p&gt;
+&lt;pre class="wiki"&gt;&amp;lt;solr persistent="true" sharedLib="lib"&amp;gt;
+ &amp;lt;cores adminPath="/admin/cores"&amp;gt;
+  &amp;lt;core name="testing.iatiregistry.org" instanceDir="testing.iatiregistry.org"&amp;gt;
+    &amp;lt;property name="dataDir" value="/usr/share/solr/testing.iatiregistry.org/data" /&amp;gt;
+  &amp;lt;/core&amp;gt;
+  &amp;lt;core name="iatiregistry.org" instanceDir="iatiregistry.org"&amp;gt;
+    &amp;lt;property name="dataDir" value="/usr/share/solr/iatiregistry.org/data" /&amp;gt;
+  &amp;lt;/core&amp;gt;
+ &amp;lt;/cores&amp;gt;
+&amp;lt;/solr&amp;gt;
+&lt;/pre&gt;&lt;p&gt;
+Following this paths: /usr/share/solr/iatiregistry.org symlinks to /etc/solr/iatiregistry.org, /etc/solr/iatiregistry.org/data is empty (as well as the testing equivalent).
+On the other hand, looking at the admin interface and at some errors that I got it seems that the data folder that both cores are using is /var/lib/solr/data/index
+&lt;/p&gt;
+&lt;p&gt;
+Maybe that's the problem?
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>pudo</dc:creator>
+
+      <pubDate>Fri, 04 Nov 2011 22:09:27 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1430#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/1430#comment:4</guid>
+      <description>
+        &lt;p&gt;
+You probably know this by know but the solrconfig.xml for both points to /var/lib/solr/data (line 71).
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>amercader</dc:creator>
+
+      <pubDate>Mon, 07 Nov 2011 10:02:24 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1430#comment:5</link>
+      <guid isPermaLink="false">http://localhost/ticket/1430#comment:5</guid>
+      <description>
+        &lt;p&gt;
+No, I didn't know it. Is this supposed to be the correct setting or should each core have its own data dir?
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Mon, 07 Nov 2011 12:05:23 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1430#comment:6</link>
+      <guid isPermaLink="false">http://localhost/ticket/1430#comment:6</guid>
+      <description>
+        &lt;p&gt;
+@pudo: brilliant spot. How did that misconfig end up there? Anyway, commenting out and rebooting means we do now have separate cores seems to fix it.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>amercader</dc:creator>
+
+      <pubDate>Mon, 07 Nov 2011 12:47:42 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/1430#comment:7</link>
+      <guid isPermaLink="false">http://localhost/ticket/1430#comment:7</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+As rgrp mentioned, we commented out the &amp;lt;dataDir&amp;gt; directive in the solrconfig.xml files and rebooted. That made the cores use the data dir they were supposed to (the one in solr.xml) and from the tests I made looks like it finally fixed the issue.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Fri, 16 Dec 2011 11:12:03 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1430#comment:8</link>
+      <guid isPermaLink="false">http://localhost/ticket/1430#comment:8</guid>
+      <description>
+        &lt;p&gt;
+Fixed in CKAN 1.5.1. Affects all previous CKANs that use SOLR in these circumstances.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

@@ -1,0 +1,35 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1477,[Super] Group refactor,kindly,kindly,"This is the implementation of the final draft in
+
+http://wiki.ckan.org/Groups_Refactor
+
+Steps to complete this will follow (somewhat) in the following order.
+
+Change package_group table to membership.
+  * model migration.
+  * simplify revisioning  
+  * Remove any sqlalchemy releations from groups.
+  * change logic functions
+  
+
+Single type per group
+   * migration add type to group table.
+  
+Add capacity table
+  * model migration.
+  * add to logic functions.
+  
+Allow other objects to be added to groups.
+  * change logic functions
+
+Adapt thedatahub.org to use new model.
+  * move auth groups over to groups/members
+  * change user_object roles to use groups? keep user object roles for time being.
+  * make create update package/group put the correct items in the group/members/capacity tables.
+  * work out how ui works.
+
+Create model for dgu.
+  * adapt auth functions to use auth.
+  * adapt package_create/update group_create/update to fill in the correct capacties/members.
+
+Adapt Iati, and potentially other custom instances.",enhancement,assigned,awaiting triage,,ckan,,,,ckan,none

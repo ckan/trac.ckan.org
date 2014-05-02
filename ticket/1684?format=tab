@@ -1,0 +1,4 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1684	Remove all config from ckanext-archiver	ross		"ckanext-archiver currently has a settings file (and a default) and it should be passed in all relevant information from the context.
+
+Remove all settings (ARCHIVE_DIR and MAX_CONTENT_LENGTH and others) and pass them in from CKAN."	enhancement	assigned	awaiting triage	ckan-backlog	ckan		[1d]		ckan	none

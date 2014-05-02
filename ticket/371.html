@@ -1,0 +1,663 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      #371 (The system shall monitor QoS against SLA)
+     – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="prev" href="998.html" title="Ticket #998" />
+        <link rel="last" href="23.html" title="Ticket #23" />
+        <link rel="help" href="../wiki/TracGuide.html" />
+        <link rel="alternate" href="371%3Fformat=csv" type="text/csv" class="csv" title="Comma-delimited Text" /><link rel="alternate" href="371%3Fformat=tab" type="text/tab-separated-values" class="tab" title="Tab-delimited Text" /><link rel="alternate" href="371%3Fformat=rss" type="application/rss+xml" class="rss" title="RSS Feed" />
+        <link rel="up" href="../report/23%3Fsort=newvalue&amp;asc=1&amp;page=1.html" />
+        <link rel="next" href="1025.html" title="Ticket #1025" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/ticket.css" type="text/css" />
+        <link rel="first" href="336.html" title="Ticket #336" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript">
+      var auto_preview_timeout=2.0;
+      var form_token="93d81ccf9a7bb1c456462f62";
+    </script>
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script><script type="text/javascript" src="../chrome/common/js/wikitoolbar.js"></script><script type="text/javascript" src="../chrome/common/js/resizer.js"></script><script type="text/javascript" src="../chrome/common/js/auto_preview.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("div.description").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $(".foldable").enableFolding(false, true);
+        var args = {realm: "ticket", id: 371, escape_newlines: 0}
+        $("#comment").autoPreview("/wiki_render", args, function(textarea, text, rendered) {
+            $("#ticketchange div.comment").html(rendered);
+            if (rendered)
+              $("#ticketchange").show();
+            else if ($("#ticketchange ul.changes").length == 0)
+              $("#ticketchange").hide();
+        });
+        $("#trac-comment-editor textarea").autoPreview("/wiki_render", args,
+                                                       function(textarea, text, rendered) {
+          var comment = $("#trac-comment-editor").next("div.comment");
+          comment.html(rendered);
+          if (rendered)
+            comment.show();
+          else
+            comment.hide();
+        });
+        $("#modify").parent().toggleClass("collapsed");
+        $(".trac-topnav a").click(function() { $("#modify").parent().removeClass("collapsed"); });
+        /* only enable control elements for the currently selected action */
+        var actions = $("#action input[name='action']");
+        function updateActionFields() {
+          actions.each(function () {
+            $(this).siblings().find("*[id]").enable($(this).checked());
+            $(this).siblings().filter("*[id]").enable($(this).checked());
+          });
+        }
+        actions.click(updateActionFields);
+        updateActionFields();
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="../wiki/TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li class="active"><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="998.html" title="Ticket #998">Previous Ticket</a></span></li><li><a href="../report/23%3Fsort=newvalue&amp;asc=1&amp;page=1.html">Back to Query</a></li><li class="last"><span><a class="next" href="1025.html" title="Ticket #1025">Next Ticket</a> &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="ticket">
+      <h1 id="trac-ticket-title">
+          <a href="371.html">Ticket #371</a>
+          <span class="status">(closed requirement: fixed)</span>
+      </h1>
+      <div id="ticket">
+  <div class="date">
+    <p>Opened <a class="timeline" href="../timeline%3Ffrom=2010-07-23T11:47:02Z&amp;precision=second.html" title="2010-07-23T11:47:02Z in Timeline">4 years</a> ago</p>
+    <p>Last modified <a class="timeline" href="../timeline%3Ffrom=2011-03-15T19:37:00Z&amp;precision=second.html" title="2011-03-15T19:37:00Z in Timeline">3 years</a> ago</p>
+  </div>
+  <h2 class="summary searchable">The system shall monitor QoS against SLA</h2>
+  <table class="properties">
+    <tr>
+      <th id="h_reporter">Reported by:</th>
+      <td headers="h_reporter" class="searchable">
+        <a href="../query%3Fstatus=!closed&amp;reporter=johnbywater.html">johnbywater</a>
+      </td>
+      <th id="h_owner">Owned by:</th>
+      <td headers="h_owner">
+        <a href="../query%3Fstatus=!closed&amp;owner=nils.toedtmann.html">nils.toedtmann</a>
+      </td>
+    </tr>
+    <tr>
+        <th id="h_priority">
+          Priority:
+        </th>
+        <td headers="h_priority">
+              <a href="../query%3Fstatus=!closed&amp;priority=critical.html">critical</a>
+        </td>
+        <th id="h_milestone">
+          Milestone:
+        </th>
+        <td headers="h_milestone">
+              <a class="closed milestone" href="../milestone/ckan-v1.4.html">ckan-v1.4</a>
+        </td>
+    </tr><tr>
+        <th id="h_component">
+          Component:
+        </th>
+        <td headers="h_component">
+              <a href="../query%3Fstatus=!closed&amp;component=ckan.html">ckan</a>
+        </td>
+        <th id="h_keywords">
+          Keywords:
+        </th>
+        <td headers="h_keywords" class="searchable">
+        </td>
+    </tr><tr>
+        <th id="h_cc">
+          Cc:
+        </th>
+        <td headers="h_cc" class="searchable">
+              nils.toedtmann@…
+        </td>
+        <th id="h_repo">
+          Repository:
+        </th>
+        <td headers="h_repo">
+              <a href="../query%3Fstatus=!closed.html"></a>
+        </td>
+    </tr><tr>
+        <th id="h_theme">
+          Theme:
+        </th>
+        <td headers="h_theme">
+              <a href="../query%3Fstatus=!closed.html"></a>
+        </td>
+        <th>
+        </th>
+        <td>
+        </td>
+    </tr>
+  </table>
+  <div class="description">
+    <h3 id="comment:description">
+      Description
+      <span class="lastmod" title="2010-07-28 19:41:05+00:00">
+        (last modified by johnbywater)
+        (<a href="371%3Faction=diff&amp;version=3.html">diff</a>)
+      </span>
+    </h3>
+    <div class="searchable">
+      <p>
+Requested by DGU.
+</p>
+
+    </div>
+  </div>
+</div>
+          
+
+        <div>
+          <h2 class="foldable">Change History</h2>
+          <div id="changelog">
+              <div class="change" id="trac-change-1">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:1" class="cnum">
+      <a href="371.html#comment:1">comment:1</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2010-07-23T11:55:51Z&amp;precision=second.html" title="2010-07-23T11:55:51Z in Timeline">4 years</a> ago by johnbywater
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Owner</strong>
+        set to <em>johnbywater</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-2">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:2" class="cnum">
+      <a href="371.html#comment:2">comment:2</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2010-07-27T09:39:12Z&amp;precision=second.html" title="2010-07-27T09:39:12Z in Timeline">4 years</a> ago by johnbywater
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Description</strong>
+        modified (<a href="371%3Faction=diff&amp;version=2.html">diff</a>)
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-3">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:3" class="cnum">
+      <a href="371.html#comment:3">comment:3</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2010-07-28T19:41:05Z&amp;precision=second.html" title="2010-07-28T19:41:05Z in Timeline">4 years</a> ago by johnbywater
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Type</strong>
+        changed from <em>enhancement</em> to <em>requirement</em>
+    </li><li>
+      <strong>businessvalue</strong>
+        set to <em>300</em>
+    </li><li>
+      <strong>Description</strong>
+        modified (<a href="371%3Faction=diff&amp;version=3.html">diff</a>)
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-4">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:4" class="cnum">
+      <a href="371.html#comment:4">comment:4</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2010-07-28T20:19:44Z&amp;precision=second.html" title="2010-07-28T20:19:44Z in Timeline">4 years</a> ago by johnbywater
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Status</strong>
+        changed from <em>new</em> to <em>closed</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-5">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:5" class="cnum">
+      <a href="371.html#comment:5">comment:5</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2010-07-28T20:20:35Z&amp;precision=second.html" title="2010-07-28T20:20:35Z in Timeline">4 years</a> ago by johnbywater
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Status</strong>
+        changed from <em>closed</em> to <em>reopened</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-6">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:6" class="cnum">
+      <a href="371.html#comment:6">comment:6</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2010-07-28T22:52:15Z&amp;precision=second.html" title="2010-07-28T22:52:15Z in Timeline">4 years</a> ago by johnbywater
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>businessvalue</strong>
+        changed from <em>300</em> to <em>1200</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-7">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:7" class="cnum">
+      <a href="371.html#comment:7">comment:7</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2010-07-30T09:43:18Z&amp;precision=second.html" title="2010-07-30T09:43:18Z in Timeline">4 years</a> ago by johnbywater
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Milestone</strong>
+        set to <em>v1.1</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-8">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:8" class="cnum">
+      <a href="371.html#comment:8">comment:8</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2010-07-30T09:49:17Z&amp;precision=second.html" title="2010-07-30T09:49:17Z in Timeline">4 years</a> ago by johnbywater
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Summary</strong>
+        changed from <em>Implement QoS monitoring</em> to <em>The system shall monitor QoS against SLA</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-9">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:9" class="cnum">
+      <a href="371.html#comment:9">comment:9</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2010-12-13T16:19:49Z&amp;precision=second.html" title="2010-12-13T16:19:49Z in Timeline">3 years</a> ago by nils.toedtmann
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Cc</strong>
+        <em>nils.toedtmann@…</em> added
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+(I know the term "QoS" as a very specific networking term about classifying and prioritising network traffic. I assume here it means <em>uptime</em>, <em>availability</em>, <em>performance monitoring</em>?)
+</p>
+<p>
+There seem to be are at least three monitors already in place: 
+</p>
+<ul><li><a class="ext-link" href="http://munin.okfn.org/"><span class="icon">​</span>http://munin.okfn.org/</a> on eu1 monitoring eu<a class="missing source" title="No default repository defined">[0-7]</a> and us1, gathering additional health information via locally installed daemons. Munin's notification subsystem is not configured.
+</li><li><a class="ext-link" href="http://nagios.hmg.ckan.net/"><span class="icon">​</span>http://nagios.hmg.ckan.net/</a> on hmg.ckan.net monitoring the CKAN-HMG service group (network monitoring only). Notfications are not configured (or?)
+</li><li>We have a <a class="ext-link" href="http://wasitup.com/"><span class="icon">​</span>http://wasitup.com/</a> account which is watching some OKFN services (e.g. {ca,de,www}.ckan.org, {blog,www}.okfn.org) and sending loads of alerts to sysadmin@…. Only checking for "HTTP 200 OK" and whether the response contains a configurable string.
+</li></ul><p>
+My 2ct: We should consolidate. What do we want?
+</p>
+<ul><li>A webservice like <a class="ext-link" href="https://www.pingdom.com/"><span class="icon">​</span>https://www.pingdom.com/</a> ($40/month incl 30 checks and 200 SMS, $0.5/month per extra check, $0.14-20/SMS) or <a class="ext-link" href="http://www.serverdensity.com/"><span class="icon">​</span>http://www.serverdensity.com/</a> ($10/server-month plus 5-10p/SMS)? 
+</li><li>Or run our own monitor (nagios, opsview, monin)? 
+</li></ul><p>
+In the latter case we want to have a separate machine which is not in on EC2 (but e.g. <a class="missing wiki">ByteMark?</a>), dedicated to monitoring only.
+</p>
+<p>
+We should also include root mails into the alert/notification policies. Root mails should be trimmed down to important warnings and errors only.
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-10">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:10" class="cnum">
+      <a href="371.html#comment:10">comment:10</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2010-12-13T16:23:09Z&amp;precision=second.html" title="2010-12-13T16:23:09Z in Timeline">3 years</a> ago by nils.toedtmann
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+The nagios fork <a class="ext-link" href="http://www.opsview.com/"><span class="icon">​</span>OPSview</a> might be worth a look.
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-11">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:11" class="cnum">
+      <a href="371.html#comment:11">comment:11</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2010-12-18T20:38:36Z&amp;precision=second.html" title="2010-12-18T20:38:36Z in Timeline">3 years</a> ago by nils.toedtmann
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+Replying to <a href="371.html#comment:9" title="Comment 9 for Ticket #371">nils.toedtmann</a>:
+</p>
+<blockquote class="citation">
+<p>
+There seem to be are at least three monitors already in place: 
+</p>
+</blockquote>
+<p>
+<br />
+Correction: at least four, we seem to have a Montastic account, too:<br />
+</p>
+<p>
+On 18/12/10 15:03, noreply@… wrote:
+</p>
+<pre class="wiki">Dear okfn,
+ 
+This is a monthly reminder that you have an account on Montastic, the
+website monitor service.
+ 
+### ACCOUNT INFORMATION
+Signup date: 2009-10-06
+Email you signup with: sysadmin@okfn.org
+ 
+### 20 WEBSITES MONITORED
+[OK] - http://www.ckan.net/
+[OK] - http://www.knowledgeforge.net/
+[OK] - http://okfn.org/
+[not monitored] - http://blog.okfn.org/
+[...]
+ 
+### EMAIL ALERT RECIPIENTS
+- sysadmin@okfn.org
+- rufus.pollock@okfn.org
+- martin.keenan@okfn.org
+[...]
+To make changes to your account or contact us, go to www.montastic.com.
+[...]
+</pre>
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-12">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:12" class="cnum">
+      <a href="371.html#comment:12">comment:12</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-01-07T14:23:45Z&amp;precision=second.html" title="2011-01-07T14:23:45Z in Timeline">3 years</a> ago by thejimmyg
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Owner</strong>
+        changed from <em>johnbywater</em> to <em>nils.toedtmann</em>
+    </li><li>
+      <strong>Status</strong>
+        changed from <em>reopened</em> to <em>new</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-13">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:13" class="cnum">
+      <a href="371.html#comment:13">comment:13</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-01-07T14:52:19Z&amp;precision=second.html" title="2011-01-07T14:52:19Z in Timeline">3 years</a> ago by thejimmyg
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+It is implied in this that the performance of sites should beat the QoS criteria, therefore closing <a class="closed ticket" href="485.html" title="story: Performance beats QoS criteria (closed: duplicate)">#485</a>. Ensuring this happens is an ongoing process.
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-14">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:14" class="cnum">
+      <a href="371.html#comment:14">comment:14</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-01-07T16:23:54Z&amp;precision=second.html" title="2011-01-07T16:23:54Z in Timeline">3 years</a> ago by thejimmyg
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+From <a class="closed ticket" href="440.html" title="task: Write and pass comprehensive performance tests (closed: duplicate)">#440</a> we'll also need to "Write and pass comprehensive performance tests"
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-15">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:15" class="cnum">
+      <a href="371.html#comment:15">comment:15</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-01-07T16:25:53Z&amp;precision=second.html" title="2011-01-07T16:25:53Z in Timeline">3 years</a> ago by thejimmyg
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+From <a class="closed ticket" href="395.html" title="task: Set up profiling to analyze performance issues (closed: duplicate)">#395</a>:
+</p>
+<p>
+At the moment, some pages within CKAN tend to load slowly. We should create a profiling setup in which we can measure response times for complete requests and individual methods calls.
+</p>
+<p>
+This could be used to identify bottlenecks and find an appropriate caching or tuning strategy to improve CKAN performance.
+</p>
+<p>
+NB: We should also agree on a maximum request latency.
+</p>
+<p>
+TODO: Read up on all those QoS tickets to avoid overlapping efforts.
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-16">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:16" class="cnum">
+      <a href="371.html#comment:16">comment:16</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-01-10T16:14:53Z&amp;precision=second.html" title="2011-01-10T16:14:53Z in Timeline">3 years</a> ago by anonymous
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+Mainly handled in <a class="ext-link" href="http://knowledgeforge.net/okfn/tasks/ticket/564"><span class="icon">​</span>http://knowledgeforge.net/okfn/tasks/ticket/564</a> now. Close here?
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-17">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:17" class="cnum">
+      <a href="371.html#comment:17">comment:17</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-03-15T19:37:00Z&amp;precision=second.html" title="2011-03-15T19:37:00Z in Timeline">3 years</a> ago by thejimmyg
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Status</strong>
+        changed from <em>new</em> to <em>closed</em>
+    </li><li>
+      <strong>Resolution</strong>
+        set to <em>fixed</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+Marking as closed since <a class="ext-link" href="http://knowledgeforge.net/okfn/tasks/ticket/600"><span class="icon">​</span>http://knowledgeforge.net/okfn/tasks/ticket/600</a> now takes on this ticket.
+</p>
+<p>
+I will check nils has added the new DGU Bytemark servers are added to Nagios.
+</p>
+
+    </div>
+
+              </div>
+          </div>
+        </div>
+      <div id="help"><strong>Note:</strong> See
+        <a href="../wiki/TracTickets.html">TracTickets</a> for help on using
+        tickets.</div>
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="first">
+          <a rel="nofollow" href="371%3Fformat=csv" class="csv">Comma-delimited Text</a>
+        </li><li>
+          <a rel="nofollow" href="371%3Fformat=tab" class="tab">Tab-delimited Text</a>
+        </li><li class="last">
+          <a rel="nofollow" href="371%3Fformat=rss" class="rss">RSS Feed</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

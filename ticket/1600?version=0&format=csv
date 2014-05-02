@@ -1,0 +1,7 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1600,[super] User guide with integrated help in the WUI,rgrp,,"Provide help to users in the WUI, with this linking to a detailed user guide.
+
+ * User guide (suggest at help.thedatahub.org (or possibly help.ckan.org)
+ * Snippets in the WUI with links to full user guide.
+  * Provide helper methods for creating these links with config options for setting path to user guide so that the link location can vary on install by install basis
+",enhancement,new,awaiting triage,ckan-v1.6,ckan,,,,ckan,none

@@ -1,0 +1,14 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1832,dataset purge API,dread,,"Purging datasets (deleting them fully, not just changing the state to 'deleted') is important for users testing dataset creation over the API on a test CKAN instance. 
+
+Without this, they need to resort to more difficult methods such as:
+ * cleaning and reloading the database
+ * setting the test datasets to state 'deleted' and also appending a suffix '_00' and incrementing the number until there is no clash of names.
+
+Requested for NHSIC.
+
+== Implementation ==
+
+ * This could slot into the Action API. 
+ * Of course we would need to ensure the user's had been given the specific right to purge.
+ * I suggest we log the full details of the dataset being purged.",enhancement,assigned,critical,ckan-backlog,ckan,,,,ckan,none

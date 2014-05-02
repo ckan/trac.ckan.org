@@ -1,0 +1,10 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+187,Full-text search,rgrp,rgrp,"Standard search should search notes field in addition to name, title and tags (discussed in ticket:108 but not done). For this to work we need proper text search since o/w we get poor ordering and lots of bad results.
+
+If we do this we need:
+  1. To weight across fields in a sensible way
+  2. We can also use proper text search on title or ...
+
+Easiest way to do this is to use existing facilities in dbs e.g. postgres has full text support since 8.3: http://www.postgresql.org/docs/8.3/static/textsearch.html
+
+Using this with sqlalchemy: http://lowmanio.co.uk/blog/entries/postgresql-full-text-search-and-sqlalchemy/",enhancement,new,critical,v1.0,ckan,,,,,

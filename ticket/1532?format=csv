@@ -1,0 +1,9 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1532,Registration with OpenID has misleading error message,dread,,"The log-in page says ""Login using Open ID"" and gives instructions for signing up. YET this is only available to users who've already added openid to their account. If you have not done this and then sign-in via OpenID (which is successful from the OpenID end) then you are told ""Login failed. Bad username or password."" in a flash message.
+
+Proposed solution (i don't know if this is possible):
+ * When you log-in for the first time via OpenID, it doesn't actually log you in in CKAN. It just sends you to the 'Create User' page with the OpenID field pre-filled, and puts up a flash message ""This OpenID account is not yet registered on thedatahub. Please complete your details."". This allows you to complete the registration and logs you in, and allows you to log-in directly with OpenID in the future.
+
+Alternatives:
+ * Just change the error message to be 'You need to register in CKAN first. Quote your OpenID in the registration form to use it in future.'
+ * Remove OpenID altogether",defect,closed,major,ckan-sprint-2011-12-19,ckan,fixed,,rgrp,ckan,none

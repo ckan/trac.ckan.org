@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2635: Non-destructive SOLR reindex</title>
+    <link>http://localhost/ticket/2635</link>
+    <description>&lt;p&gt;
+You can't run the search-index reindex on a live server because it will give us bad results for 2 to 3 hours while it runs. Can there be an option that doesn't delete the entire index at the start?
+&lt;/p&gt;
+&lt;p&gt;
+Instead it could just delete any items that don't exist any more, then delete them and regenerate them one by one. So the total number of datasets doesn't change much.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2635</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+ </channel>
+</rss>

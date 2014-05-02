@@ -1,0 +1,9 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1266	Timestamps without microseconds causing exception	dread	dread	"I'm not sure why some timestamps are missing microseconds in the ckan.net data, but plenty seem to. This causes this exception when viewing the package rss feed:
+{{{
+URL: http://ckan.net/package/history/sfk_publishing?format=atom&days=7
+In Module ckan.lib.helpers:227 in date_str_to_datetime
+WebApp Error: <type 'exceptions.ValueError'>: time data '2008-04-13T20:40:20' does not match format '%Y-%m-%dT%H:%M:%S.%f'
+}}}
+
+Only seen with ckan 1.4.3b"	defect	closed	critical	ckan-sprint-2011-10-28	ckan	fixed			ckan	none

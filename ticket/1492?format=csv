@@ -1,0 +1,7 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1492,Interference between extra and relationship fields in API,dread,kindly,"From Jan Kučera <elquenor@gmail.com>
+
+ I have also tried to use extras fields to store information about relationships between datasets. I found out that if you first add relationship using CKAN API into dataset relationships attribute and than you add extras field for the same relationship with key in format ""parent_of:dataset_name"" or ""child_of:dataset_name"", storing this extras field will clear all relationships in relationships attribute stored earlier.
+ 
+ I might be some kind of bug but I suppose you will know better. Is it possible to use relationships attribute and extras field for relationships at the same time?
+",defect,closed,minor,,ckan,wontfix,,,ckan,none

@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1037: More Robust Harvesting for DGU</title>
+    <link>http://localhost/ticket/1037</link>
+    <description>&lt;p&gt;
+CKAN's harvesting facility is now live on DGU but there are some major improvements that could be made to make it more robust and better fit the generic CKAN harvesting framework proposed in &lt;a class="closed ticket" href="http://localhost/ticket/987" title="defect: Common harvesting framework (closed: duplicate)"&gt;#987&lt;/a&gt;.
+&lt;/p&gt;
+&lt;p&gt;
+Some of the key issues:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Error reports do not currently contain the ID or title of the document with the error.
+&lt;/li&gt;&lt;li&gt;We only have "added" and "error" logging on jobs when we really need a report of "added", "updated", "not changed" and "errors" with the items in each referencing a real metadata document for which harvesting was attempted
+&lt;/li&gt;&lt;li&gt;We need deletion and editing of sources, without deleting the harvested documents or packages
+&lt;/li&gt;&lt;li&gt;We need a more robust harvesting mechanism than a cron job or we need to deal with the case of multiple cron jobs running at once.
+&lt;/li&gt;&lt;li&gt;We need to know the last time a list of documents was scheduled for harvest and the last time each one was fetched.
+&lt;/li&gt;&lt;/ul&gt;</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1037</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>thejimmyg</dc:creator>
+
+      <pubDate>Mon, 28 Mar 2011 09:47:18 GMT</pubDate>
+      <title>repo, theme, milestone set</title>
+      <link>http://localhost/ticket/1037#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1037#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;repo&lt;/strong&gt;
+                set to &lt;em&gt;ckan&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;theme&lt;/strong&gt;
+                set to &lt;em&gt;none&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                set to &lt;em&gt;ckan-v1.4-sprint-5&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>thejimmyg</dc:creator>
+
+      <pubDate>Mon, 04 Apr 2011 09:41:55 GMT</pubDate>
+      <title>owner changed</title>
+      <link>http://localhost/ticket/1037#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/1037#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;owner&lt;/strong&gt;
+              changed from &lt;em&gt;thejimmyg&lt;/em&gt; to &lt;em&gt;amercader&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>thejimmyg</dc:creator>
+
+      <pubDate>Mon, 18 Apr 2011 08:56:40 GMT</pubDate>
+      <title>milestone changed</title>
+      <link>http://localhost/ticket/1037#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/1037#comment:3</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan-v1.4-sprint-5&lt;/em&gt; to &lt;em&gt;ckan-v1.4-sprint-6&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+We spent last week integrating the new harvesting architecture and testing the code but there are still some areas that need looking at
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;The source type and label should be part of the plugin, not named in DGU.
+&lt;/li&gt;&lt;li&gt;Need warnings if a document changes but its date doesn't -&amp;gt; do we have these?
+&lt;/li&gt;&lt;li&gt;I noticed there are some tests in DGU, should these perhaps be in ckanext-harvest?
+&lt;/li&gt;&lt;li&gt;If active is False, the job should not be put on the queue
+&lt;/li&gt;&lt;li&gt;Log if the wrong type of URL is entered as an error the user can see
+&lt;/li&gt;&lt;li&gt;Deny if the source is already registered
+&lt;/li&gt;&lt;li&gt;Overwrite all extras, not just merge new ones.
+&lt;/li&gt;&lt;li&gt;During the import stage use iswms.py to add an extra during import if it is a WMS so that we can add a link to the WMS later &lt;a class="ext-link" href="https://gist.github.com/900878"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;https://gist.github.com/900878&lt;/a&gt;
+&lt;/li&gt;&lt;li&gt;Can errors/warnings be logged in the import stage? Do all fetched documents get passed to import in one go?
+&lt;/li&gt;&lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>thejimmyg</dc:creator>
+
+      <pubDate>Mon, 09 May 2011 10:40:01 GMT</pubDate>
+      <title>status changed; state, resolution set</title>
+      <link>http://localhost/ticket/1037#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/1037#comment:4</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;state&lt;/strong&gt;
+                set to &lt;em&gt;draft&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Closing this now, any outstanding small issues will be logged in new tickets.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

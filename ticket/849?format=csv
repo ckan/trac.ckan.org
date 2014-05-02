@@ -1,0 +1,2 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+849,Import extra CSS from main template,pudo,,"The CSS @import directive at the bottom of the main CKAN css file is not understood in all browsers, move this to a seperate import. ",defect,closed,major,,ckan,duplicate,,,,

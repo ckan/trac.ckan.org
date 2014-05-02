@@ -1,0 +1,6 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+982	Remove various pip-requirements versions	rgrp	dread	"We can just use the branch name to pull down specific versions of pip requirements so we don't need all the different versions in head.
+
+Remove them and update any client systems.
+
+Cost: 20m"	enhancement	closed	awaiting triage	ckan-v1.4-sprint-2	ckan	fixed	deployment			

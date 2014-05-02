@@ -1,0 +1,38 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+517,Standard domain model for entries,pudo,pudo,"cf. Tariqs mail
+
+{{{
+Publishing Entity:
+Publishing Entity Type: (Donor, Recipient, Community Data..)
+Donor
+Country
+Activity period:
+Verification status: enumeration of statuses (checked, not checked etc)
+Resource links: to the actual IATI record
+Number of activities: ...
+Date record updated:
+Date data updated:
+License: Need this field even if it may be a standard license
+
+So naively mashing these together, we get something like:
+
+Identifier
+Title
+Abstract
+Donor
+Country
+Publisher
+Publisher Type
+Verification Status
+Department
+Contact
+Contact e-mail
+Licence
+Resource format
+Resource URL
+Resource ID
+Activity period
+Number of activities
+Date record updated
+Date data updated
+}}}",requirement,closed,,iati-1,iati,fixed,,,,

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2899: Step 2 &gt; Save &amp; add another bug</title>
+    <link>http://localhost/ticket/2899</link>
+    <description>&lt;p&gt;
+Goto:
+&lt;/p&gt;
+&lt;ol&gt;&lt;li&gt;Add dataset
+&lt;/li&gt;&lt;/ol&gt;&lt;ol start="2"&gt;&lt;li&gt;Get to step 2
+&lt;/li&gt;&lt;/ol&gt;&lt;ol start="3"&gt;&lt;li&gt;Click "Save &amp;amp; add another" without adding any data
+&lt;/li&gt;&lt;/ol&gt;&lt;ol start="4"&gt;&lt;li&gt;Ends on step 3
+&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;
+Should: fail to validate and remain on step 2
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2899</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+ </channel>
+</rss>

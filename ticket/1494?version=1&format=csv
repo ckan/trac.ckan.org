@@ -1,0 +1,10 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1494,Setup templates for activity streams,seanh,seanh,"Implement a standard way of getting textual representations of activity streams, set up a template for each type of activity stream item and detail item.
+
+For a mockup of the kind of text messages we want, see:
+
+http://datahub.pudo.org/pudo
+
+(but note that this ticket is just for creating the texts themselves, not rendering then in an HTML page or RSS feed)
+
+",enhancement,new,awaiting triage,ckan-sprint-2011-12-05,ckan,,,,ckan,none

@@ -1,0 +1,6 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1539	Package forms auto-save	icmurray	icmurray	"Using the saved-draft feature, we enable auto-save for the package-new and package-edit forms.
+
+An AJAX call is made every N seconds, and the auto-saved blob is updated.
+
+note - we don't want to overwrite a previously save draft, but we will want to overwrite the last autosave."	enhancement	closed	major	ckan-v1.7	dgu	wontfix	dgu form refactor wizard #1525	dread kindly shevski	ckanext-dgu	none

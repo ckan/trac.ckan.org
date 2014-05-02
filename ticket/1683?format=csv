@@ -1,0 +1,6 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1683,Dataset search results - last item out of order,dread,dread,"On each page of package search results, all the items are neatly sorted apart from the last item of the page. SOLR gets the sorting of the results incorrect. 
+
+This is a known issue: https://issues.apache.org/jira/browse/SOLR-1777 affecting SOLR 1.4 only (which comes with Ubuntu 10.04)
+
+It is highlighted in CKAN test ckan/tests/functional/test_pagination.py:TestPaginationPackage of commit 39096ed54bda86d043521b08b2e14fc5e283a0ff which fails most of the time it is run (passes intermittently).",defect,closed,minor,ckan-sprint-2012-01-23,ckan,fixed,,,ckan,none

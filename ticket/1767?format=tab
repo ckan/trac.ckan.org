@@ -1,0 +1,7 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1767	Write end-to-end functional tests for tag vocabularies	johnglover	johnglover	"Need to test:
+ 
+ * API call to create new vocab
+ * API call to add tags with a given vocab
+ * API call to update tags
+ * Dummy plugin to test that updating tags works via WUI"	enhancement	closed	major	ckan-sprint-2012-02-20	ecportal	fixed	taxonomies [2d]		ckan	none

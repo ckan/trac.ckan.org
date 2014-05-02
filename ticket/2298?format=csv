@@ -1,0 +1,9 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2298,Add sort-by controls to the search results page,icmurray,icmurray,"Sort-by functionality was exposed through the package controller in [1].  But no controls were added to the search-page.
+
+ * What should the sortBy controls/widget look like?
+ * Which fields should be exposed?
+
+The above commit is in the release-1.6.1 branch, so this work is dependant upon release-1.6.1 from being merged into master.
+
+[1] https://github.com/okfn/ckan/commit/8685c6000d1cb211928b4dbc63990fb72d884f8c",enhancement,new,minor,ckan-v1.9,ckan,,[0.5-1d],,ckan,none

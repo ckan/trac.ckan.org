@@ -1,0 +1,19 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1270	Default site www.ckan.net is a redirect and loses POSTs	dread	dread	"The default site was www.ckan.net, which had an Apache 301 redirect to ckan.net, but the problem was urllib was not rePOSTing stuff. This affected search parameters:
+{{{
+In [1]: import ckanclient
+
+In [2]: c = ckanclient.CkanClient()
+
+In [3]: c2 = ckanclient.CkanClient('http://ckan.net/api')
+
+In [4]: c.package_search('', search_options={'groups':'openspending'})
+Out[4]: 
+{u'count': 2102,
+ u'results': <generator object _result_generator at 0x10168b1e0>}
+
+In [5]: c2.package_search('', search_options={'groups':'openspending'})
+Out[5]: {u'count': 29, u'results': <generator object _result_generator at 0x10168b410>}
+}}}
+
+Thanks to borior for finding this and raising it."	defect	closed	minor	ckan-sprint-2011-10-28	ckan	fixed			ckanclient	none

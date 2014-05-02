@@ -1,0 +1,13 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2318,Bug with Portugese translation and Javascript,rgrp,seanh,"If you switch to Portugese and try to add a resource on dataset edit it will fail. This is because there is a string translation in js_strings.html that has quotes in it. When this is inserted into the file this causes a js exception which then prevents any further js processing.
+
+Specifically:
+
+{{{
+CKAN.Strings.youHaveUnsavedChanges = ""Você tem alterações não salvas. Certifique-se de ter clicado ""Salvar Alterações"" abaixo antes de sair desta página."";
+Uncaught SyntaxError: Unexpected identifier
+}}}
+
+To fix is simple i imagine: need to escape "" correctly in js_strings.html (or translations used).
+
+I have temporarily patched this live in order to allow the hackday here to continue.",enhancement,closed,major,ckan-sprint-2012-04-30,ckan,fixed,,,ckan,none

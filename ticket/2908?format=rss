@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2908: Dataset related with image should retain aspect ratio</title>
+    <link>http://localhost/ticket/2908</link>
+    <description>&lt;p&gt;
+At the moment if you have an related item with an image associated to a dataset that appears in the side column it's resized but doesn't keep it's original aspect ratio.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2908</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>johnmartin</dc:creator>
+
+      <pubDate>Thu, 06 Sep 2012 11:32:50 GMT</pubDate>
+      <title>attachment set</title>
+      <link>http://localhost/ticket/2908</link>
+      <guid isPermaLink="false">http://localhost/ticket/2908</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;attachment&lt;/strong&gt;
+                set to &lt;em&gt;Screen Shot 2012-09-06 at 12.19.46.png&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

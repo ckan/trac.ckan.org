@@ -1,0 +1,17 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2766,prevent draft datasets making it to activity stream,shevski,seanh,"The new ckan creates datasets as part of a 3 phase process.  To allow for this partially created datasets can have a state that is 'draft' or 'draft-complete'.  These datasets should not be seen as active by the activity stream.
+
+
+If we click 'add dataset' and then complete the first phase of adding a dataset then we end up having a activity stream created.  When we add a resource in the next phase (add data) again an activity stream item xxx added resource to dataset is created
+
+
+We do not want these adding.  Essentially if a dataset has a state.startswith('draft') then we want the activity stream to ignore all actions involving it.
+
+
+finally when the state is changed form state.startswith('draft') to state=='active' we want a xxx has created dataset ... to be added to the stream.
+
+
+The best way to do this would be to branch from 2375-demo-theme-stable and get it to work there.
+
+
+Let me know if you need any help with this ticket or a better explanation of the problem.",enhancement,assigned,blocker,demo phase 4,ckan,,demo-theme,,ckan,none

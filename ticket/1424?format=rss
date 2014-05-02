@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1424: Openness notice should be clearer</title>
+    <link>http://localhost/ticket/1424</link>
+    <description>&lt;p&gt;
+ckan-discuss discussion suggests changes to the 'openness' indicator
+( &lt;a class="ext-link" href="http://lists.okfn.org/pipermail/ckan-discuss/2011-October/001786.html"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://lists.okfn.org/pipermail/ckan-discuss/2011-October/001786.html&lt;/a&gt; )
+&lt;/p&gt;
+&lt;p&gt;
+Dataset view page:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;If there is an explicit but non-OKD compliant license, such as CC-BY-NC, then this should be stated explicitly, perhaps: “This dataset is Not Open. License: Creative Commons Attribution Noncommerical. This is not an open license as it does not meet the Open Knowledge Definition.”
+&lt;/li&gt;&lt;li&gt;If the license is marked as “Other::License Not Specified”, then this should be stated explicitly, perhaps:
+“This dataset is Not Open. It is published without an explicit license, the publisher reserves all rights to the dataset.”
+&lt;/li&gt;&lt;li&gt;3. If the license field was left empty by the contributor of the Data Hub record, then again this should be stated explicitly, perhaps: “This dataset is Not Open. The license of this dataset is unknown or unspecified. Start an enquiry on &lt;a class="missing wiki"&gt;IsItOpenData?&lt;/a&gt; »
+&lt;/li&gt;&lt;li&gt;There is a bug so that non-open licenses doesn't have an openness notice.
+&lt;/li&gt;&lt;li&gt;If downloadable resources are not available, this should not affect 'openness' - check this has been removed.
+&lt;/li&gt;&lt;/ul&gt;</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1424</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+ </channel>
+</rss>

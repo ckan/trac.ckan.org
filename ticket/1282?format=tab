@@ -1,0 +1,22 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1282	JS and WUI tidy up	rgrp	rgrp	"Consolidate js. Remove cruft.
+
+ * Move stuff to vendor
+  * Have all vendor libs local (?)                                             
+  * jquery, jquery-ui etc
+ * Consolidate autocomplete to use jquery-ui
+  * package autocomplete (groups)
+  * tag autocomplete (package)
+  * user autocomplete (authz group create)
+   * turns out that authz group edit had autocomplete disabled so refactoring meant enabling ...
+ * Move forms.css into main  
+ * Remove tag cloud from front page (can be example going forward)
+ * Remove bookmarklet (since in wiki at: http://wiki.ckan.net/Managing_Data_Packages#How_Do_I_Install_the_CKAN_Bookmarklet.3F)
+ * Move name slug generation into standard js and clean up
+
+Possible:
+ 1. JS unit tests for the given pages ...
+ 2. Option to use external site to serve js and css (e.g. CDN)
+
+                                                       
+"	enhancement	closed	major	ckan-v1.5	ckan	fixed			ckan	none

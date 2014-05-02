@@ -1,0 +1,19 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+16	Update a file	rgrp	johnbywater	"== As a ==
+
+Authenticated user
+
+== I want to ==
+
+Update a file associated with a release
+
+== So that ==
+
+The file attributes are changed. File attributes are:
+  * (internal) id
+  * description
+  * source: (url usually)
+
+== Notes ==
+  * Permissions are as for package updating
+"	enhancement	closed	minor		ckan	invalid				

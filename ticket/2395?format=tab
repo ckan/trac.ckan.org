@@ -1,0 +1,6 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2395	paster db clean/init don't work when spatial extension enabled	dread		"If you have a spatial enabled database then if you don't disable the spatial extension in the CKAN config temporarily then you get errors when you run paster db clean and paster db init.
+
+Can't you just modify the clean and init functions to run without extensions enabled? 
+
+The wider problem is that extensions do their own inits every time you do load_environment, which seems crazy and inefficient to me, since this occurs every time a request comes into CKAN. But that is another problem/ticket."	defect	new	minor	ckan-backlog	ckan				ckan	none

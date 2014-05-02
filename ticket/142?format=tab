@@ -1,0 +1,15 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+142	Update User object with additional fields such as 'nickname'	dread	pudo	"Suggested fields:
+
+  * id, name (username/profile name), openid, email, password, extras (JsonType)
+    * + current items: apikey, about, created)
+    * current contents of name is usually openid and should migrate to openid field (could match based on starting with http://)
+  * May also want a fullname field (or perhaps that can
+just go in extras - may be better to have its own field as useful to search on this )
+
+Related changes (probably separate tickets):
+  * Improve user home page to include this additional information (and have it be editable)
+  * Use user 'name' (username) for home page links (rather than current user/<id>)
+  * Where we show lists of revisions, each revision author is now a link to the author's user page.
+
+Related to ticket:136 and ticket:138."	defect	closed	major		ckan	fixed				

@@ -1,0 +1,13 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+808	Allow i18n language choice on site (and possibly set automatically)	rgrp	pudo	"Allow choice of language on ckan instance.
+
+  * Configuration variable listing language choices (could try doing this automatically but recommend against this)
+  * Switcher option in UI (perhaps on user profile page)
+  * Default it automatically based on browser settings (?)
+
+Think this is high value (and cost is low)
+
+Cost: low (4h)
+
+
+"	enhancement	closed	critical	ckan-v1.4-sprint-2	ckan	fixed				

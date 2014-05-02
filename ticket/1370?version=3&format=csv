@@ -1,0 +1,14 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1370,Add a way to share datasets and see mentions of datasets on twitter (and elsewhere),rgrp,zephod,"As a visitor I want to share a link to a dataset I have found. I also want to see how many others have shared this (or mentioned it).
+
+ * Sharing platform: simplest option is probably twitter but could generalize to e.g. sharethis system which supports, facebook, twitter etc etc.
+  * Will need a config option for relevant API key e.g. ckan.sharethis.apikey
+ * Location: Put this at top of sidebar on dataset view (a better suggsetion?)
+ * Should show how many mentions / shares there are. (very important!)
+
+== Discussion ==
+
+ * (Tom and Ira and ...): do we really want this, versus e.g. proper follow extension?
+ * What about bringing conversation back in to CKAN. E.g. show all times this dataset (i.e. its url) was mentioned on twitter. If we do this I think this should be definite +1.
+ * Also, given our users, I think just doing twitter (identica) may be sufficient (how many people want to share links to datasets on facebook?)
+",enhancement,new,major,ckan-v1.6,ckan,,,,ckan,none

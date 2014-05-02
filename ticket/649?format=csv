@@ -1,0 +1,16 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+649,Introduce Authorization Groups in model,pudo,,"Authorization Groups:
+  * Rename UserObjectRole to SubjectObjectRole
+  * Create database migration to do the rename in DB 
+  * Make sure all the tests are passing again
+
+  (Doing this first seems more stable since we first want to ""re-gain"" exisiting functionality) 
+  
+  * Create authz.py and model tests for authorization_group-based auth
+      * tests: functional: create fixtures, do actual requests
+                 lib-tests: test for membership addition, removal, group-right additions affecting all members, group-right removal, group rights affecting non-members. 
+#  * Adapt model to get these passing
+  * Integration into existing controllers should be negligible but may want ot have tests
+      - do not want that. would mean design is broken 
+  * Need to create a new controller for editing authz groups (will have same permissions as any other object -- Reader, Editor, Administrator)
+",story,closed,,,,fixed,,,,

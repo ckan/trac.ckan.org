@@ -1,0 +1,19 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1714,DGU dataset view page,icmurray,icmurray,"Dataset read page for DGU
+
+Breakdown:
+
+ - [X] Fix missing title
+ - [X] Links to the social media stuff
+      - ""Share your app""
+      - ""Share your idea""
+      - ""Request new data""
+ - [ ] ~~Presentation of additional information should be broken into sections~~
+       Content is there.  Don't do anything until theming/design work is undertaken.
+ - [ ] ~~""More like this"": links to similar datasets.~~
+       Dropping
+ - [N] ~~Stars~~ (I think these are being removed)
+ - [ ] ~~Comments~~
+       Possible integration point with Drupal.  Needs it own ticket.
+ - [X] Give feedback to department
+ - [X] Tidy up the QA stars",enhancement,closed,major,ckan-sprint-2012-02-06,dgu,fixed,,,ckanext-dgu,none

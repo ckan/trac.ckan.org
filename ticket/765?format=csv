@@ -1,0 +1,6 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+765,Read-only mode - API usage,dread,,"All writes to the API are captured and you are returned an error explaining the reason.
+
+Possible errors: 
+ * 503 temporary maintenance
+ * 403 forbidden (if server if permanently read-only)",enhancement,assigned,awaiting triage,ckan-backlog,ckan,,,,ckan,none

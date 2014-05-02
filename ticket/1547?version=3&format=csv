@@ -1,0 +1,11 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1547,Add a search method to the IPackageController interface,amercader,amercader,"Add a search method to the IPackageController interface so extensions can modify the package results.
+Extensions implementing the IPackageController interface will get the results from a SOLR query, and after playing with them should return an object with the same structure (so it can be transparently used by the web UI, etc) I.e. results should be a list of package_dictize outputs:
+
+{{{
+{
+         'count': count,
+         'facets': facets,
+         'results': results
+     }
+}}}",enhancement,new,major,ckan-sprint-2011-12-19,ckan,,search,,ckan,none

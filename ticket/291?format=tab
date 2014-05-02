@@ -1,0 +1,21 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+291	Investigate search options encoding	dread	rgrp	"On ckan.net there is this unchecked-in 'temporary hack'. It seems to be to do with foreign characters in search options. See what its doing and if necessary, put check it in.
+
+
+{{{
+diff -r 813ad8b5de0b ckan/lib/search.py
+--- a/ckan/lib/search.py	Mon Mar 01 22:23:36 2010 +0100
++++ b/ckan/lib/search.py	Thu Apr 15 19:11:42 2010 +0200
+@@ -63,6 +63,9 @@
+     def query(self, options):
+         '''For the given search options, returns a query object.'''
+         self._options = options
++        # temporary hack!
++        if self._options.q:
++            self._options.q = self._options.q.encode('utf8')
+         general_terms, field_specific_terms = self._parse_query_string()
+ 
+         if not general_terms and \
+
+}}}
+"	defect	closed	minor		ckan	worksforme				

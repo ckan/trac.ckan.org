@@ -1,0 +1,188 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2733: Datastore logic functions</title>
+    <link>http://localhost/ticket/2733</link>
+    <description>&lt;h2 id="Wheredoesthedatago"&gt;Where does the data go?&lt;/h2&gt;
+&lt;p&gt;
+In a postgres database configured by the ckan.datastore_write_url config option which is a sqlalchemy url.
+&lt;/p&gt;
+&lt;p&gt;
+The user should have rights to create tables.
+&lt;/p&gt;
+&lt;h2 id="Whatstheapilike"&gt;Whats the api like?&lt;/h2&gt;
+&lt;p&gt;
+We will just implement it as logic functions like the rest of CKAN and will part of core.  After that we may add some nicer api functions that use these but that is a secondary concern.
+&lt;/p&gt;
+&lt;h2 id="Whataretheinitiallogicfunctions"&gt;What are the initial logic functions?&lt;/h2&gt;
+&lt;p&gt;
+datastore_create
+datastore_delete
+datastore_show
+&lt;/p&gt;
+&lt;h2 id="WhatistheJSONinputformatfordatastore_create"&gt;What is the JSON input format for datastore_create&lt;/h2&gt;
+&lt;p&gt;
+To begin with it can have the following keys. It is fairly consistent with Max Ogdens' gut servers.  Except adds resource_id.
+&lt;/p&gt;
+&lt;p&gt;
+{
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+resource_id: resource_id # the data is going to be stored against.
+fields: a list of dictionaries of fields/columns and their extra metadata.
+records: a list of dictionaries of the data eg  [{"dob": "2005", "some_stuff": ['a', b']}, ..]
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+}
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;The first row will be used to guess types not in the fields and the guessed types will be added to the headers permanently. Consecutive rows have to conform to the field definitions.
+&lt;/li&gt;&lt;li&gt;rows: can be empty so that you can just set the fields
+&lt;/li&gt;&lt;li&gt;fields are optional but needed if you want to do type hinting or add extra information for certain columns or to explicitly define ordering.
+&lt;/li&gt;&lt;/ul&gt;&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+eg  [{"id": "dob", "label": ""Date of Birth", "type": "timestamp" ,"concept": "day"}, {"name": "some_stuff":  ..].   A header items values can not be changed after it has been defined nor can the ordering of them be changed.  They can be extended though.
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;&lt;li&gt;Any error results in total failure!! For now pass back the actual error.
+&lt;/li&gt;&lt;li&gt;Should be transactional
+&lt;/li&gt;&lt;/ul&gt;&lt;h2 id="Whatjsondoesdatastore_deletetake"&gt;What json does datastore_delete take?&lt;/h2&gt;
+&lt;p&gt;
+{
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+resource_id: resource_id # the data is going to be deleted.
+filters: dictionary of matching conditions to delete
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+e.g  {'key1': 'a. 'key2': 'b'}  this will be equivalent to "delete from table where key1 = 'a' and key2 = 'b' "
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+No filters (either not present or not defined) then delete the table. If we want truncate then add truncate: true to truncate the table.
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+}
+&lt;/p&gt;
+&lt;h2 id="Whatjsondoesdatastore_showtake"&gt;What json does datastore_show take?&lt;/h2&gt;
+&lt;p&gt;
+{
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+resource_id: resource_id # the data is going to be selected.
+filters : dictionary of matching conditions to select
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+e.g  {'key1': 'a. 'key2': 'b'}  this will be equivalent to "select * from table where key1 = 'a' and key2 = 'b' "
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+q: full text query
+limit: limit the amount of rows to size default 100
+offset: offset the amount of rows
+fields:  list of fields return in that order, defaults (empty or not present) to all fields in fields order.
+sort: comma separated field names with ordering e.g "fieldname1, fieldname2 desc"
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+}
+&lt;/p&gt;
+&lt;p&gt;
+Some free code: &lt;a class="ext-link" href="https://gist.github.com/3163864"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;https://gist.github.com/3163864&lt;/a&gt;
+&lt;/p&gt;
+&lt;h2 id="Whatjsondoesdatastore_showreturn"&gt;What json does datastore_show return?&lt;/h2&gt;
+&lt;p&gt;
+{
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+fields: same type as datastore_create accepts (i.e. with metadata)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+offset: The same offset that was supplied in datastore_show
+limit: The original limit
+filters: The filters that were applied in data_show
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+total: # total matching records without size or offset ...
+# list of matching results
+records: [ same as what data_create takes
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+]
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+}
+&lt;/p&gt;
+&lt;p&gt;
+On error will return:
+&lt;/p&gt;
+&lt;p&gt;
+{
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+&lt;span class="underline"&gt;error&lt;/span&gt;: … sql error …
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+}
+&lt;/p&gt;
+&lt;h2 id="Whattypesareallowed"&gt;What types are allowed?&lt;/h2&gt;
+&lt;p&gt;
+Aim to support as many postgres/postgis types that have string representations.
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a class="ext-link" href="http://www.postgresql.org/docs/9.1/static/datatype.html"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://www.postgresql.org/docs/9.1/static/datatype.html&lt;/a&gt;
+&lt;a class="ext-link" href="http://www.postgresql.org/docs/9.1/static/sql-createdomain.html"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://www.postgresql.org/docs/9.1/static/sql-createdomain.html&lt;/a&gt;
+&lt;/p&gt;
+&lt;h2 id="IDs"&gt;IDs&lt;/h2&gt;
+&lt;p&gt;
+Each row in a table will be given an _id column which has an id generated by us which you can use in queries.
+&lt;/p&gt;
+&lt;h2 id="OtherFeatures"&gt;Other Features&lt;/h2&gt;
+&lt;p&gt;
+Each row will store the _full_text index of all the data in the row. At some later point there will most likely be a way to index fields add constraints etc.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2733</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>johnglover</dc:creator>
+
+      <pubDate>Mon, 30 Jul 2012 13:48:25 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/2733#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/2733#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/2733?action=diff&amp;amp;version=1"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

@@ -1,0 +1,9 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+207	Reimplement tag selection in jQuery	nickstenning	dread	"Remove the current dependency on Yahoo YUI toolkit for doing tag autocompletion on package edit forms.
+
+The (KForge-derived) behaviour files for CKAN can easily be switched to the new jQuery-based ones: see ticket:212. Once this is done, it would make sense to implement the tag-selection code with jQuery.
+
+Relevant pages include:
+
+ * http://bassistance.de/jquery-plugins/jquery-plugin-autocomplete/
+ * e.g. http://ckan.net/package/edit/acawiki"	enhancement	closed	minor	v1.0	ckan	fixed				

@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #987: Common harvesting framework</title>
+    <link>http://localhost/ticket/987</link>
+    <description>&lt;p&gt;
+We are now harvesting metadata from other sources in various places around CKAN. Such harvesting can include:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;CSW/WFS for INSPIRE/UKLII (yields CKAN packages)
+&lt;/li&gt;&lt;li&gt;Catalogue scraping for LOD2 experiments (yields RDF graphs)
+&lt;/li&gt;&lt;li&gt;Atom/DCat for LOD2 production (yields RDF graphs)
+&lt;/li&gt;&lt;li&gt;OAI-PMH for &lt;a class="ext-link" href="http://datadryad.org/"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://datadryad.org/&lt;/a&gt; and other dspace (yields CKAN packages)
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+We should aim to consolidate the harvesting clients into a common system that is easy to extend when needed and can be re-used in different scenarios.
+&lt;/p&gt;
+&lt;p&gt;
+In general, such a system would have the following stages:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Source selection: find what to download/scrape/harvest/parse
+&lt;/li&gt;&lt;li&gt;Index retrieval (i.e. package index)
+&lt;/li&gt;&lt;li&gt;Item retrieval (i.e. package entity)
+&lt;/li&gt;&lt;li&gt;(Optional: Serialization)
+&lt;/li&gt;&lt;li&gt;Normalisation
+&lt;/li&gt;&lt;li&gt;&lt;a class="missing wiki"&gt;Loading/Merging?&lt;/a&gt; into CKAN
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+Exisiting harvesters are at:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;CSW: &lt;a class="ext-link" href="https://bitbucket.org/okfn/ckanext-csw/src/"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;https://bitbucket.org/okfn/ckanext-csw/src/&lt;/a&gt;
+&lt;/li&gt;&lt;li&gt;Scraper+CKAN: &lt;a class="ext-link" href="https://bitbucket.org/pudo/dcat-tools/src/d5d96b06ec9a/dcat/crawl/"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;https://bitbucket.org/pudo/dcat-tools/src/d5d96b06ec9a/dcat/crawl/&lt;/a&gt;
+&lt;/li&gt;&lt;/ul&gt;</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/987</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>thejimmyg</dc:creator>
+
+      <pubDate>Wed, 20 Jul 2011 16:01:45 GMT</pubDate>
+      <title>status changed; repo, theme, resolution set</title>
+      <link>http://localhost/ticket/987#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/987#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;repo&lt;/strong&gt;
+                set to &lt;em&gt;ckan&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;theme&lt;/strong&gt;
+                set to &lt;em&gt;none&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;duplicate&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+This has largely been implemented now for publicdata.eu. There is a CREP &lt;a class="new ticket" href="http://localhost/ticket/1134" title="CREP: CREP0003: Description and Configuration of Harvesters (new)"&gt;#1134&lt;/a&gt; outstanding to take the harvesting to the next level so marking this one as duplicate for now.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

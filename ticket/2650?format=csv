@@ -1,0 +1,6 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2650,Description on resources not rendered as markdown,ross,ross,"When a resource doesn't have a description, it is rendered as markdown from the description of the dataset.
+
+If the resource does have a description it isn't rendered as markdown ..
+
+See http://thedatahub.org/dataset/wikipedia-e3-timestamp-position-modification/resource/d883ab44-07f4-4992-800a-3e4bf5d53a96",enhancement,closed,awaiting triage,ckan-v1.8,ckan,fixed,,,ckan,none

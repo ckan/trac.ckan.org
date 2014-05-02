@@ -1,0 +1,8 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+3029	JSONP parameter scuppers Search in API	dread	seanh	"{{{http://datahub.io/api/2/search/package?jsonp=jsonpcallback&q=canada}}} returns
+{{{
+{""count"": 0, ""results"": []}
+}}}
+I believe this worked in CKAN 1.4 or 1.5, but it is broken on 1.7.1, 1.8 and whatever demo.ckan.org is running. I suspect the jsonpcallback parameter is getting sent to SOLR.
+
+This bug prevents using javascript on another site to search CKAN (although hopefully the action API would work)."	defect	assigned	awaiting triage		ckan				ckan	none

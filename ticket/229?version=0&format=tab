@@ -1,0 +1,9 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+229	Resource hashes	dread	rgrp	"New field for resources - hash of the resource file.
+
+1. Which hash to use? Restrict to python hashlib and other major hash libraries.
+
+2. Should we use merkle trees?
+
+Thanks to Julien D'Assanges for the suggestion.
+"	enhancement	new	awaiting triage		ckan					

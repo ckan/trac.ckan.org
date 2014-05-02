@@ -1,0 +1,14 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+782	Add and remove users from sysadmin role from the command line	rgrp	pudo	"Need to be able to create (and remove) sysadmins easily (used to be able to do this via ini file but this functionality was removed a while back in authz system reorganization it seems).
+
+Suggest creating a new paster command as first step.
+
+{{{
+# user identifier = openid (?)
+paster sysadmin add {user identifier}
+paster sysadmin remove {user identifier}
+}}}
+
+Suggest this also be added to main CKAN docs.
+
+This should go into metastable as well as default so that it goes into the v1.2 release (can do this via a transplant from one branch to the other)"	defect	closed	critical	ckan-v1.3	component1	fixed				

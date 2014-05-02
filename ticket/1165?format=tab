@@ -1,0 +1,10 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1165	Add multi-site support to ckan	nils.toedtmann		"Currently, each ckan site needs its own ckan wsgi process. That eats a lot of resources where many ckan sites are served from one machine (e.g. eu3). 
+
+That would dramatically change if a ckan process could behave like multiple ckans (e.g. like Apache's ""<VirtualHost>"", or tracd). Depending on the ""Host:"" header in the HTTP1.1 request, it would choose which local ckan ini file to obey.
+
+I see two ways to constitute the map hostname-to-ini-file map:
+ * ckan reads a set of ini files, and each ini file declares which servers names it is responsible for
+ * In a global ini file, there are directives mapping servernames to ini files.
+
+In either case there should be a global ckan ini having the default settings for all local ckan sites. Each site ini could be very short then, just having e.g. title, name, database credentials, active plugins etc."	enhancement	new	awaiting triage	ckan-future	ckan		deployment	pudo james@… seb.bacon@…	ckan	none

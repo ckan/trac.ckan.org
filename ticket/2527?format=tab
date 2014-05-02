@@ -1,0 +1,10 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2527	Implement a method of loading templates into the demo site	aron.carroll	aron.carroll	"JavaScript needs to be able to insert html templates into the document.
+
+There are three common solutions to templating at the moment.
+
+ 1. Insert the html into <script> tags at the bottom of the page and pull them in using the DOM and innerHTML. This is a very simple solution but not very portable.
+ 2. Request the HTML snippets as plain text/html using XHR. This adds an extra HTTP request per template but is very clean. It would also be possible to inline the HTML into the JS at the minification stage for production.
+ 3. Include the HTML in JavaScript strings (horrible to maintain and bloats the js)
+
+It makes sense to keep these with the other templates so that we can take advantage of localisation where possible. This indicates 1 or 2."	enhancement	closed	major	ckan-sprint-2012-06-25	ckan	wontfix	demo-theme	toby	ckan	none

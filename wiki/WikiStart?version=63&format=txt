@@ -1,0 +1,39 @@
+= Welcome to the CKAN Software Project Issue Tracker =
+
+= Roadmap =
+
+ * Next release: [milestone:ckan-v1.4 CKAN v1.4]
+ * Current release: [milestone:ckan-v1.3 CKAN v1.3]
+ * Full Roadmap including sprints: [/roadmap Roadmap]
+
+= Code  =
+
+CKAN code is in a mercurial repository here:
+
+ * http://bitbucket.org/okfn/ckan
+ 
+= Project Processes and Policies =
+
+ * [http://wiki.okfn.org/Coding_Standards Coding standard]
+ * CheckinPolicy
+ * VersioningPolicy
+ * BranchingPolicy
+ * ReleaseProcess
+
+= Design Pages =
+
+ * PackageResources
+ * DataPkgUseCases
+ * UiReviewNotes
+ * [wiki:LOD2UseCases Use Cases for LOD2]
+ * AccessControl
+ * UseCasesResources
+ * SyncingInstances (and DistributingChanges)
+ * SearchEngine
+ * PushAlert
+ * BackgroundWorkers
+ * [wiki:Extensions Extensions]
+
+= User Interface =
+
+ * [wiki:UIRedesign2010 Redesign notes (December 2010)]

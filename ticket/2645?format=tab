@@ -1,0 +1,6 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2645	Update server setup to use local files	johnglover	johnglover	"Server setup scripts need to have two distinct steps:
+
+1) Download all files that aren't in RHEL repositories, create RPMs where necessary (python virtualenv).
+
+2) Install from local files."	enhancement	closed	major	ckan-ecportal	ecportal	fixed	[1d]		ckan	none

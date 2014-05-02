@@ -1,0 +1,15 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1540	Search API returns an error if empty parameters are provided	amercader	amercader	"Both in 1.5.1b:
+
+http://thedatahub.org/api/search/dataset?groups=lodcloud&title=
+
+and 1.5.2a (current master):
+
+http://test.ckan.net/api/search/dataset?groups=lodcloud&title=
+
+Although the error message in 1.5.2a is more verbose:
+
+
+""Bad request - Bad search option: HTTP code=400, reason=org.apache.lucene.queryParser.ParseException: Cannot parse 'groups:lodcloud title:': Encountered \""<EOF>\"" at line 1, column 22. Was expecting one of:     \""(\"" ...     \""*\"" ...     <QUOTED> ...     <TERM> ...     <PREFIXTERM> ...     <WILDTERM> ...     \""[\"" ...     \""{\"" ...     <NUMBER> ...""
+
+Some parameter validation before sending it to Solr should do the trick"	defect	closed	major	ckan-sprint-2012-01-09	ckan	fixed	search		ckan	none

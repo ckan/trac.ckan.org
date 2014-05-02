@@ -1,0 +1,10 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1734,[super] Updates on harvesting for UKLP,amercader,amercader,"Some changes are needed in ckanext-harvest to support the new piece of work in the UKLP harvesters, mainly related to the deletion of existing sources.
+
+ * #1726 Update harvesting model
+ * #1727 Add ""current"" field to harvesting objects
+ * #1728 Update UKLP harvesters
+ * #1733 Delete (inactivate) harvest sources
+
+At some point we also want to support a publisher model for the harvesting:
+ * #1731 Publisher support for harvesting",enhancement,closed,critical,ckan-v1.7,ckan,fixed,"harvesting, uklp",james.gardner@… david.raznick@…,ckan,none

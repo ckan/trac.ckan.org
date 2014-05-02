@@ -1,0 +1,38 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2552	Controlling access to features	ross	ross	"== Requirements ==
+
+To provide a freemium service it is necessary to be able to provide differing __levels__ of functionality based on the '''type''' of user (see #2550). These levels can be specific to the data hub but may require overriding functionality from core to provide these checks.
+
+Initial implementation should focus on limiting access to datastore disk space.
+
+== Interface ==
+
+These changes are currently only for the data hub and should be kept as much as possible within the data hub extension.
+
+
+== User Stories ==
+
+ * As a system component I want to find out if the current user has access to a feature (i.e. storage) and if so to what extent (xMb, xGb or unlimited).  
+
+* As a system administrator I don't expect to need to manage the levels of users '''or''' the features that this applies to.
+ 
+
+== Tasks ==
+
+[ ] Clarification of requirements
+
+[ ] Tests
+
+[ ] Code
+
+    [ ] Model
+
+    [ ] API
+  
+    [ ] UI
+
+[ ] Documentation
+
+
+== Estimates ==
+"	enhancement	accepted	awaiting triage	datahub-oct	ckan		tdh		ckan	none

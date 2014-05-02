@@ -1,0 +1,31 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1416,Registering with blank email can cause exception,dread,dread,"This might well be a bot, but not POSTing the email field should not cause an exception - it should be 400 and then the sysadmin doesn't get these nags.
+{{{
+http://www.publicdata.eu/user/register
+...
+Module ckan.controllers.user:79 in register
+<<              c.login = request.params.getone('login')
+                   c.fullname = request.params.getone('fullname')
+                   c.email = request.params.getone('email')
+                   if not model.User.check_name_available(c.login):
+                       h.flash_error(_(""That username is not available.""))
+>>  c.email = request.params.getone('email')
+Module webob.multidict:335 in getone
+<<          values were found.
+               """"""
+               return self._decode_value(self.multi.getone(self._encode_key(key)))
+       
+           def mixed(self):
+>>  return self._decode_value(self.multi.getone(self._encode_key(key)))
+Module webob.multidict:99 in getone
+<<          v = self.getall(key)
+               if not v:
+                   raise KeyError('Key not found: %r' % key)
+               if len(v) > 1:
+                   raise KeyError('Multiple values match %r: %r' % (key, v))
+>>  raise KeyError('Key not found: %r' % key)
+KeyError: ""Key not found: 'email'""
+}}}
+{{{
+HTTP_USER_AGENT	'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; MRA 4.3 (build 01218); .NET CLR 1.1.4322)'
+webob._parsed_post_vars	(MultiDict([('login', 'ahusernames9'), ('fullname', 'ahusernames9'), ('password1', '******'), ('password2', '******'), ('s', 'Sign up')]), <FakeCGIBody at 0xb9d7c5ec viewing MultiDict([('lo...p')])>)",defect,closed,trivial,ckan-sprint-2011-11-07,ckan,fixed,,,ckan,none

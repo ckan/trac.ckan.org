@@ -1,0 +1,10 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2412	More than one resource invalidatiing breaks dataset edit form	icmurray	zephod	"When attempting to add more than one resource at once, if more than one resource invalidates, this results in a js error, leaving the form in an inconsistent state.
+
+Repro:
+
+ 1. Go to /dataset/new
+ 2. Add a new resource.  Fill in one of the fields with an invalid value. eg - last_modified, or size...
+ 3. Add another resource, doing the same thing: make one of the fields invalid.
+ 4. Try to save the dataset.
+ 5. The entered resource information will be lost, and a js error ""Uncaught Error: Can't add the same model to a set twice,: backbone.js:586"" will be thrown."	defect	assigned	major	ckan-sprint-2012-06-25	ckan			rgrp kindly	ckan	none

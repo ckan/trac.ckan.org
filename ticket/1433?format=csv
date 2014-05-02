@@ -1,0 +1,6 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1433,Support SQLAlchemy 0.7,rgrp,kindly,"Why: current stable version of sqlalchemy. geoalchemy stuff required 0.7 and likely that some other things will require it soon.
+
+Probably requires work on vdm https://bitbucket.org/okfn/vdm
+
+NB: should have discussion before making 0.7 the default required version in CKAN core.",enhancement,closed,major,ckan-sprint-2011-11-21,ckan,fixed,,,ckan,none

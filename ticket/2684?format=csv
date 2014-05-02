@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2684,.js leaving forms warning,toby,aron.carroll,"I think it would be nice to have all form pages monitor their forms - excluding search ones - and if a field has changed then warn the user that they have not saved the form data but are leaving the page.
+
+This would help with things like changing resources on the add dataset resource form etc.",enhancement,closed,minor,demo phase 2,ckan,fixed,demo-theme,,ckan,none

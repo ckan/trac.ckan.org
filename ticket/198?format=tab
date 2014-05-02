@@ -1,0 +1,4 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+198	Change package and tag ids to uuids	dread	rgrp	"See how we did it already for other things.
+
+Note: on ckan.net older PackageRevision.id might not be identical to Package.id but this may need sorting at this point."	enhancement	closed	critical		ckan	fixed				

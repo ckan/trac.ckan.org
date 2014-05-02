@@ -1,0 +1,40 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+358	Resources in REST API	dread	rgrp	"(spun out of ticket:336)
+
+Resource added to model API at:
+
+api/rest/resource
+
+
+=== Example model request ===
+
+GET to: /api/2/rest/resource/a3dd8f64-9078-4f04-845c-e3f047125028
+
+returns:
+{{{
+ [{""id"": ""a3dd8f64-9078-4f04-845c-e3f047125028"",
+   ""package_id"": ""b8a325c8-af2a-43f3-8245-9db7d73dfbfe"",
+   ""URL"": ""http://scraperwiki.com/lincolnshire-councillors"", 
+   ""format"": ""CSV"", 
+   ""Description"": ""Scrape of www.lincs.gov/councillors.pdf by ScraperWiki."",
+   ""hash"": """", 
+   ""position"": 2
+ }]
+}}}
+
+== Authorization ==
+
+1. Have it generic (ie. not per resource) and use an action/role on system
+2. Require all resources to attach to packages an inherit their permissions (i.e. read/write etc if and only read/write on associated packages)
+3. Introduce Resource in authorization system (requires migration)
+
+Mixed model
+
+{{{
+Create / Edit:
+
+if resource associated to package:
+    check_permissions(package, update)
+else:
+    check_system_permissions(c.user, model.Action.Resouce Create/Update, model.System)
+}}}"	enhancement	closed	major	ckan-v1.5	ckan	duplicate			ckan	none

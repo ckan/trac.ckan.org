@@ -1,0 +1,38 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+333,CKAN front end requirements for package notifications,dread,,"== Use case: new package ==
+
+ 1. An external front-end system provides a web page with a list of packages. Each package has the option to edit it or and there is also a button to create a new package. 
+
+ 2. User: clicks 'new package'. 
+
+ 3. CKAN presents the package/new form to the user. 
+
+ 4. (After a couple of previews) User: clicks 'commit'. 
+
+ 5. Notification message goes from CKAN to the front-end detailing the new package.
+
+6. The user is redirected back to the front-end web page displaying the list of packages, which contains the new one.
+
+The notification message (step 5) has to get through to the front-end that the new package is created before the redirect (step 6). This suggests that the message sending needs to be *synchronous*, i.e. acknowledged by the front-end, before CKAN redirects the user to the front-end package listing page (step 6).
+
+In addition, this use case suggests the front-end listens for package notifications, to save another call to CKAN to get the package details, before the displaying the list of packages. If this isn't possible (see next use case) and it must listen for revision notifications instead, then perhaps it is worth including the full package details in the payload for the revision notification message. Would there be a problem with such a large message in the next use case, with 100 packages?
+
+== Use case: CKAN imports packages ==
+
+1. CKAN administrator runs a script that adds 100 new packages into CKAN. 
+
+2. CKAN sends notification message to front-end to report the new packages/revisions.
+
+3. Knowing there are new revisions, the front-end queries the CKAN revision interface to get the list of new packages.
+
+4. The front-end queries CKAN for each new package one-by-one.
+
+5. A new user request to the front-end will include the info about the new packages.
+
+The package addition could be achieved in 1 revision, 100 revisions or some compromise:
+
+ * If it is 1 revision then potentially there are problems displaying the long list of packages in the 'recent changes'. 
+
+ * If it is 100 revisions, then the notification webhook would be called 100 times, which creates unnecessary load on the front-end. Suppose each Webhook call-back (step 2) triggers the front-end to make a call to CKAN to get the latest revisions (step3), in this case it would make 100 calls, most of them fruitless, causing unnecessary load on CKAN.
+
+This use case suggests a bulk import of packages should go into one revision, and therefore generate one revision notification message and 100 package notification messages. The front-end client should listen to only revision messages.",enhancement,closed,awaiting triage,v1.1,ckan,wontfix,,,,

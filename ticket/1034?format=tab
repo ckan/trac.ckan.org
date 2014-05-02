@@ -1,0 +1,7 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1034	Flash message cached	dread		" 1. Login
+ (shows ckan home page with flash message ""Welcome back xyz"")
+ 2. Click away, to ""Add package"" say
+ 3. Click back to ckan ""Home"". 
+ It shows ""Welcome back xyz"" again - it shouldn't, I assume?
+ "	defect	closed	minor		ckan	duplicate			ckan	none

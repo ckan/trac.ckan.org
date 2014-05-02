@@ -1,0 +1,16 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1537,Package create form wizard,icmurray,icmurray,"Create the form wizard for the package-new form.
+
+Each section of the form will be a separate page as this was decided to be simpler than the alternative of making AJAX calls for validation at each stage. (*)
+
+ - separate pages for each section of the form
+ - validation carried out at each stage against the whole schema.  Each section/page declares a list of schema keys that need to validate for that section to validate, and thus move onto the next section.
+ - no draft saving to be performed in this ticket.
+
+(*) - although the javascript alternative will probably provide better UX (each step would require a page-load in the wizard approach), it was decided that:
+
+ - with the javascript approach it would be harder to test the workflow.
+ - with the javascript approach there would be additional work displaying validation correctly.  Although not that complicated, it was felt to add another point of failure.
+ - the multi-page wizard is quicker and easier to implement, and if it provided poor UX, then the javascript approach would be used instead.
+ - the multi-page wizard wouldn't preclude a javascript-tabbing create-form for other cases (where the wizard workflow wasn't such a good match, eg on the hedatahub.org)
+ - the multi-page wizard wouldn't preclude a javascript-tabbing edit-form.",enhancement,closed,major,ckan-v1.7,dgu,fixed,dgu form refactor wizard #1525,,ckanext-dgu,none

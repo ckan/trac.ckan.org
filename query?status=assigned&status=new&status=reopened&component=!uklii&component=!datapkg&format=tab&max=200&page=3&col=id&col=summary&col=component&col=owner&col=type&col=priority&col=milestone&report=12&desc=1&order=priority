@@ -1,0 +1,69 @@
+id	summary	component	owner	type	priority	milestone
+2901	Language Dropdown bug in footer with IE7	ckan		enhancement	minor	demo phase 5
+2906	Wrong flags in language dropdown	ckan		defect	minor	demo phase 5
+2947	Redirect to the resource page from /resource/{res-id}	ckan		enhancement	minor	
+2951	Paster command for building css from less	ckan		enhancement	minor	ckan 2.0
+2952	incorporate javascriopt translations into translations workflow	ckan	seanh	enhancement	minor	ckan 2.0
+2959	Changing a Group's name through the action api disassociates it from its datasets in the index	ckan	icmurray	defect	minor	ckan 2.0
+2996	Fix behaviour of View Profile button in user popover when already on user's profile	ckan		enhancement	minor	ckan 2.0
+3002	API v1/2 'legacy' search parameters must be escaped before they are put into a Solr query string	ckan		defect	minor	ckan-v1.8
+3026	Support icons on  nav_named_link	ckan	amercader	enhancement	minor	
+256	Package relationships - 3. Edit in WUI	ckan		requirement	major	ckan-backlog
+989	Extending the model from plugins	ckan	kindly	enhancement	major	ckan-future
+1041	Start Using the CKAN Wiki for Tutorial-style documentation	ckan	thejimmyg	enhancement	major	ckan-backlog
+1134	CREP0003: Description and Configuration of Harvesters	ckan		CREP	major	ckan-backlog
+1135	Changeset model for vdm	vdm	kindly	enhancement	major	
+1137	Remove need for statefulness in vdm	vdm	kindly	enhancement	major	
+1163	Improvements to Storage Extension	ckan	rgrp	enhancement	major	ckan-backlog
+1168	Test system for deb packaging	ckan	thejimmyg	enhancement	major	ckan-backlog
+1235	[super] Search Improvements	ckan		enhancement	major	ckan-future
+1244	Notes field carriage-returns converted to CRLF	ckan		enhancement	major	
+1257	Anti-Spam tools	ckan		enhancement	major	ckan-backlog
+1262	"Enforce ""create-user"" permission"	ckan		enhancement	major	ckan-backlog
+1286	Remove remaining formalchemy stuff	ckan		enhancement	major	ckan-backlog
+1311	Modal user register and login form	ckan	rgrp	enhancement	major	ckan-backlog
+1322	Action API improvements	ckan		enhancement	major	
+1343	[super] User related improvements (login, user pages etc)	ckan	rgrp	enhancement	major	ckan-backlog
+1352	Use logic functions instead of as_dict when indexing entities	ckan		enhancement	major	ckan-backlog
+1366	Search inside extra fields	ckan		defect	major	ckan-future
+1438	Action API - parameter discovery/checking	ckan		enhancement	major	ckan-future
+1439	Action API discoverablility	ckan		enhancement	major	ckan-backlog
+1447	disk space leakage	ckan	kindly	defect	major	ckan-backlog
+1460	Improve extensions documentation	ckan		enhancement	major	
+1489	Updating example theme/extension	ckan		enhancement	major	ckan-backlog
+1534	Change revisions to record userid rather than username	ckan		enhancement	major	ckan-backlog
+1542	Buttons to purge spam datasets and groups	ckan		enhancement	major	ckan-backlog
+1577	Can't upload file with foreign chars in filename	ckan	rgrp	defect	major	ckan-backlog
+1584	QA report improvements - 2.5d	ckan	johnglover	enhancement	major	ckan-backlog
+1588	QA - Give SPARQL endpoints a 4 star rating	ckan	johnglover	enhancement	major	ckan-backlog
+1589	QA - Give 5 star rating to datasets with link metadata	ckan	johnglover	enhancement	major	ckan-backlog
+1661	Wrong Routes version installed by CKAN package	ckan		defect	major	ckan-backlog
+1689	List deleted datasets in API	ckan	kindly	enhancement	major	
+1818	Spatial metadata editor	ckan	amercader	enhancement	major	ckan-future
+1827	'Register' link should be hidden if you not allowed to register	ckan		enhancement	major	ckan-backlog
+2279	Write tutorial for our DataStore API / Data Explorer	ckan	rgrp	enhancement	major	ckan-v1.8
+2331	Search should AND terms not OR terms	ckan	kindly	defect	major	ckan-sprint-2012-05-29
+2363	Documentation of best caching practice.	ckan	toby	enhancement	major	ckan-v1.8
+2405	Improvements to data viewer embed	ckan	icmurray	defect	major	ckan-v1.9
+2412	More than one resource invalidatiing breaks dataset edit form	ckan	zephod	defect	major	ckan-sprint-2012-06-25
+2635	Non-destructive SOLR reindex	ckan		enhancement	major	
+2641	Adapt spatial widgets to new theme	ckan	johnmartin	enhancement	major	demo phase 5
+2733	Datastore logic functions	ckan	johnglover	enhancement	major	ckan-v1.9
+2745	Password reset returns an exception if the key parameter is missing	ckan		defect	major	ckan-v1.9
+2790	logic.action.user_show is slow	ckan	kindly	enhancement	major	demo phase 4
+2818	Improve related item schema	ckan	seanh	defect	major	demo phase 4
+2887	"""Welcome to CKAN!"" on front page is untranslatable"	ckan		defect	major	ckan-v1.8.1
+2949	Reenable Data API button on the new theme	ckan	amercader	defect	major	
+2963	Timeout on tag pages with lots of datasets	ckan		defect	major	ckan-v1.8
+3011	Recline fixes and updates for CKAN 2.0	ckan	johnglover	enhancement	major	ckan 2.0
+3017	New stable branch for the demo server	ckan	johnglover	enhancement	major	ckan 2.0
+3019	Cannot delete dataset extras	ckan		defect	major	ckan 2.0
+1136	Move to SessionExtension in vdm	vdm	kindly	enhancement	critical	
+1198	Publisher hierarchy	ckan		enhancement	critical	ckan-backlog
+1466	Need to support https login for multiple instances as part of the CKAN package install	ckan		enhancement	critical	ckan-backlog
+1832	dataset purge API	ckan		enhancement	critical	ckan-backlog
+2686	enabling datastore & data API breaks recline	ckan		defect	critical	ckan-backlog
+2751	check translations for full demo site	ckan	toby	enhancement	critical	demo phase 5
+2582	Do not hide notes / readme on dataset pages	ckan		enhancement	blocker	ckan-v1.9
+2766	prevent draft datasets making it to activity stream	ckan	seanh	enhancement	blocker	demo phase 4
+2859	Fix the build	ckan	icmurray	defect	blocker	ckan-v1.8

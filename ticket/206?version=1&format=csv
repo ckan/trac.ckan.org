@@ -1,0 +1,14 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+206,UI review,nickstenning,nickstenning,"Investigate and list (on the wiki at wiki:UIReviewNotes) CKAN's UI issues, in particular:
+ 
+ * Form usability
+   * best example: http://ckan.net/package/new
+   * ""Extras"" fields
+   * Adding to groups (from group page or from package page?)
+
+ * Overview pages: reduction in visual noise and unnecessary elements.
+   * best example: package overview page
+   * consider openness/downloadability icons
+   * display common metadata fields in a more structured fashion?
+
+Est cost: 2 hrs.",enhancement,new,critical,v1.0,ckan,,,,,

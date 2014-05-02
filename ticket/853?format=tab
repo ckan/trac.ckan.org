@@ -1,0 +1,8 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+853	Client upload to storage without having primary storage keys	wwaites	wwaites	"Reverse engineer boto and work out how to get headers to support upload to google storage without holding api keys.
+
+This would lead to an extension to OFS.
+
+This analysis should inform (and go hand-in-hand) with the implementation of ticket:879 (Storage Auth API in CKAN).
+
+ * master ticket #852"	enhancement	closed	critical	ckan-v1.3-sprint-1	dpm	fixed				

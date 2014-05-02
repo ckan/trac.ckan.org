@@ -1,0 +1,362 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      #1393 (Don't skip search tests)
+     – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="prev" href="1358.html" title="Ticket #1358" />
+        <link rel="last" href="1534.html" title="Ticket #1534" />
+        <link rel="help" href="../wiki/TracGuide.html" />
+        <link rel="alternate" href="1393%3Fformat=csv" type="text/csv" class="csv" title="Comma-delimited Text" /><link rel="alternate" href="1393%3Fformat=tab" type="text/tab-separated-values" class="tab" title="Tab-delimited Text" /><link rel="alternate" href="1393%3Fformat=rss" type="application/rss+xml" class="rss" title="RSS Feed" />
+        <link rel="up" href="../query%3Fstatus=assigned&amp;status=new&amp;status=accepted&amp;status=reopened&amp;milestone=ckan-backlog&amp;group=status&amp;order=time.html" />
+        <link rel="next" href="1447.html" title="Ticket #1447" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/ticket.css" type="text/css" />
+        <link rel="first" href="143.html" title="Ticket #143" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript">
+      var auto_preview_timeout=2.0;
+      var form_token="93d81ccf9a7bb1c456462f62";
+    </script>
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script><script type="text/javascript" src="../chrome/common/js/wikitoolbar.js"></script><script type="text/javascript" src="../chrome/common/js/resizer.js"></script><script type="text/javascript" src="../chrome/common/js/auto_preview.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("div.description").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $(".foldable").enableFolding(false, true);
+        var args = {realm: "ticket", id: 1393, escape_newlines: 0}
+        $("#comment").autoPreview("/wiki_render", args, function(textarea, text, rendered) {
+            $("#ticketchange div.comment").html(rendered);
+            if (rendered)
+              $("#ticketchange").show();
+            else if ($("#ticketchange ul.changes").length == 0)
+              $("#ticketchange").hide();
+        });
+        $("#trac-comment-editor textarea").autoPreview("/wiki_render", args,
+                                                       function(textarea, text, rendered) {
+          var comment = $("#trac-comment-editor").next("div.comment");
+          comment.html(rendered);
+          if (rendered)
+            comment.show();
+          else
+            comment.hide();
+        });
+        $("#modify").parent().toggleClass("collapsed");
+        $(".trac-topnav a").click(function() { $("#modify").parent().removeClass("collapsed"); });
+        /* only enable control elements for the currently selected action */
+        var actions = $("#action input[name='action']");
+        function updateActionFields() {
+          actions.each(function () {
+            $(this).siblings().find("*[id]").enable($(this).checked());
+            $(this).siblings().filter("*[id]").enable($(this).checked());
+          });
+        }
+        actions.click(updateActionFields);
+        updateActionFields();
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="../wiki/TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li class="active"><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="1358.html" title="Ticket #1358">Previous Ticket</a></span></li><li><a href="../query%3Fstatus=assigned&amp;status=new&amp;status=accepted&amp;status=reopened&amp;milestone=ckan-backlog&amp;group=status&amp;order=time.html">Back to Query</a></li><li class="last"><span><a class="next" href="1447.html" title="Ticket #1447">Next Ticket</a> &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="ticket">
+      <h1 id="trac-ticket-title">
+          <a href="1393.html">Ticket #1393</a>
+          <span class="status">(assigned enhancement)</span>
+      </h1>
+      <div id="ticket">
+  <div class="date">
+    <p>Opened <a class="timeline" href="../timeline%3Ffrom=2011-10-13T11:30:53Z&amp;precision=second.html" title="2011-10-13T11:30:53Z in Timeline">3 years</a> ago</p>
+    <p>Last modified <a class="timeline" href="../timeline%3Ffrom=2011-11-01T13:19:50Z&amp;precision=second.html" title="2011-11-01T13:19:50Z in Timeline">3 years</a> ago</p>
+  </div>
+  <h2 class="summary searchable">Don't skip search tests</h2>
+  <table class="properties">
+    <tr>
+      <th id="h_reporter">Reported by:</th>
+      <td headers="h_reporter" class="searchable">
+        <a href="../query%3Fstatus=!closed&amp;reporter=dread.html">dread</a>
+      </td>
+      <th id="h_owner">Owned by:</th>
+      <td headers="h_owner">
+        <a href="../query%3Fstatus=!closed&amp;owner=johnglover.html">johnglover</a>
+      </td>
+    </tr>
+    <tr>
+        <th id="h_priority">
+          Priority:
+        </th>
+        <td headers="h_priority">
+              <a href="../query%3Fstatus=!closed&amp;priority=minor.html">minor</a>
+        </td>
+        <th id="h_milestone">
+          Milestone:
+        </th>
+        <td headers="h_milestone">
+              <a class="milestone" href="../milestone/ckan-backlog.html">ckan-backlog</a>
+        </td>
+    </tr><tr>
+        <th id="h_component">
+          Component:
+        </th>
+        <td headers="h_component">
+              <a href="../query%3Fstatus=!closed&amp;component=ckan.html">ckan</a>
+        </td>
+        <th id="h_keywords">
+          Keywords:
+        </th>
+        <td headers="h_keywords" class="searchable">
+        </td>
+    </tr><tr>
+        <th id="h_cc">
+          Cc:
+        </th>
+        <td headers="h_cc" class="searchable">
+              <a href="../query%3Fstatus=!closed&amp;cc=~johnglover.html">johnglover</a>
+        </td>
+        <th id="h_repo">
+          Repository:
+        </th>
+        <td headers="h_repo">
+              <a href="../query%3Fstatus=!closed&amp;repo=ckan.html">ckan</a>
+        </td>
+    </tr><tr>
+        <th id="h_theme">
+          Theme:
+        </th>
+        <td headers="h_theme">
+              <a href="../query%3Fstatus=!closed&amp;theme=none.html">none</a>
+        </td>
+        <th>
+        </th>
+        <td>
+        </td>
+    </tr>
+  </table>
+  <div class="description">
+    <h3 id="comment:description">
+      Description
+    </h3>
+    <div class="searchable">
+      <p>
+Now we don't use postgres search, all the tests involving search now don't need to be skipped when running on sqlite. Should help coders spot earlier if these tests break. 
+</p>
+
+    </div>
+  </div>
+</div>
+          
+
+        <div>
+          <h2 class="foldable">Change History</h2>
+          <div id="changelog">
+              <div class="change" id="trac-change-1">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:1" class="cnum">
+      <a href="1393.html#comment:1">comment:1</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-10-13T11:37:34Z&amp;precision=second.html" title="2011-10-13T11:37:34Z in Timeline">3 years</a> ago by dread
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Cc</strong>
+        <em>johnglover</em> added
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+I changed this:
+</p>
+<pre class="wiki">diff -r 47657581fc30 ckan/tests/__init__.py
+--- a/ckan/tests/__init__.py	Wed Oct 12 17:58:19 2011 +0100
++++ b/ckan/tests/__init__.py	Thu Oct 13 12:29:54 2011 +0100
+@@ -373,7 +373,7 @@
+     plugins.load('synchronous_search')
+ 
+ def is_search_supported():
+-    supported_db = "sqlite" not in config.get('sqlalchemy.url')
++    supported_db = True
+     return supported_db
+ 
+ def is_regex_supported():
+</pre><p>
+But there seems to be a problem finding the package when trying to index it:
+</p>
+<pre class="wiki">======================================================================
+ERROR: test suite for &lt;class 'ckan.tests.functional.test_search.TestSearch'&gt;
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/dread/hgroot/pyenv-ckan/lib/python2.6/site-packages/nose/suite.py", line 208, in run
+    self.setUp()
+  File "/home/dread/hgroot/pyenv-ckan/lib/python2.6/site-packages/nose/suite.py", line 291, in setUp
+    self.setupContext(ancestor)
+  File "/home/dread/hgroot/pyenv-ckan/lib/python2.6/site-packages/nose/suite.py", line 314, in setupContext
+    try_run(context, names)
+  File "/home/dread/hgroot/pyenv-ckan/lib/python2.6/site-packages/nose/util.py", line 478, in try_run
+    return func()
+  File "/home/dread/hgroot/ckan/ckan/tests/functional/test_search.py", line 21, in setup_class
+    CreateTestData.create_search_test_data()
+  File "/home/dread/hgroot/ckan/ckan/lib/create_test_data.py", line 66, in create_search_test_data
+    cls.create_arbitrary(search_items)
+  File "/home/dread/hgroot/ckan/ckan/lib/create_test_data.py", line 197, in create_arbitrary
+    model.repo.commit_and_remove()
+  File "/home/dread/hgroot/pyenv-ckan/src/vdm/vdm/sqlalchemy/tools.py", line 110, in commit_and_remove
+    self.commit()
+  File "/home/dread/hgroot/pyenv-ckan/src/vdm/vdm/sqlalchemy/tools.py", line 100, in commit
+    self.session.commit()
+  File "/home/dread/hgroot/pyenv-ckan/lib/python2.6/site-packages/sqlalchemy/orm/scoping.py", line 139, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/home/dread/hgroot/pyenv-ckan/lib/python2.6/site-packages/sqlalchemy/orm/session.py", line 614, in commit
+    self.transaction.commit()
+  File "/home/dread/hgroot/pyenv-ckan/lib/python2.6/site-packages/sqlalchemy/orm/session.py", line 385, in commit
+    self._prepare_impl()
+  File "/home/dread/hgroot/pyenv-ckan/lib/python2.6/site-packages/sqlalchemy/orm/session.py", line 361, in _prepare_impl
+    ext.before_commit(self.session)
+  File "/home/dread/hgroot/ckan/ckan/model/extension.py", line 103, in before_commit
+    methodcaller('before_commit', session)
+  File "/home/dread/hgroot/ckan/ckan/model/extension.py", line 38, in notify_observers
+    func(observer)
+  File "/home/dread/hgroot/ckan/ckan/model/modification.py", line 45, in before_commit
+    self.notify(obj, DomainObjectOperation.new)
+  File "/home/dread/hgroot/ckan/ckan/model/modification.py", line 70, in notify
+    observer.notify(entity, operation)
+  File "/home/dread/hgroot/ckan/ckan/lib/search/__init__.py", line 93, in notify
+    package_to_api1(entity, {'model': model}),
+  File "/home/dread/hgroot/ckan/ckan/lib/dictization/model_dictize.py", line 231, in package_to_api1
+    dictized = package_dictize(pkg, context)
+  File "/home/dread/hgroot/ckan/ckan/lib/dictization/model_dictize.py", line 118, in package_dictize
+    raise NotFound
+NotFound
+
+----------------------------------------------------------------------
+Ran 1 test in 2.734s
+
+FAILED (errors=1)
+
+</pre><p>
+Any ideas John?
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-2">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:2" class="cnum">
+      <a href="1393.html#comment:2">comment:2</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-10-13T12:26:05Z&amp;precision=second.html" title="2011-10-13T12:26:05Z in Timeline">3 years</a> ago by johnglover
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+Yes, there are a few of these problems with SQLite which is why the tests are being skipped currently. I'm not exactly sure of the reason, it seems that it sometimes drops tables from memory, but we haven't found a solution. Myself and David Raznick were going to spend some time looking at it but haven't had a chance yet.
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-3">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:3" class="cnum">
+      <a href="1393.html#comment:3">comment:3</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-11-01T13:19:50Z&amp;precision=second.html" title="2011-11-01T13:19:50Z in Timeline">3 years</a> ago by dread
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Owner</strong>
+        changed from <em>dread</em> to <em>johnglover</em>
+    </li><li>
+      <strong>Status</strong>
+        changed from <em>new</em> to <em>assigned</em>
+    </li><li>
+      <strong>Milestone</strong>
+        changed from <em>current-ckan-sprint-2011-11-07</em> to <em>ckan-backlog</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+Thanks John, reassigning to you for the future.
+</p>
+
+    </div>
+
+              </div>
+          </div>
+        </div>
+      <div id="help"><strong>Note:</strong> See
+        <a href="../wiki/TracTickets.html">TracTickets</a> for help on using
+        tickets.</div>
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="first">
+          <a rel="nofollow" href="1393%3Fformat=csv" class="csv">Comma-delimited Text</a>
+        </li><li>
+          <a rel="nofollow" href="1393%3Fformat=tab" class="tab">Tab-delimited Text</a>
+        </li><li class="last">
+          <a rel="nofollow" href="1393%3Fformat=rss" class="rss">RSS Feed</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

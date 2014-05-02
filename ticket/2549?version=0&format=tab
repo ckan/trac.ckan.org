@@ -1,0 +1,4 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2549	Merge organization logic into groups	ross	kindly	"There seems little point in keeping groups and organizations separate.  We should merge whatever we actually need from orgs into the group model and use that as default (regardless of which security option has been set up).
+
+Might also be cool if we could remove the need for membership and instead use FKs?"	enhancement	new	awaiting triage	ckan-v1.8	ckan				ckan	none

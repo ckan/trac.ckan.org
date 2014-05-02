@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #693: Support ETag in cache decorator</title>
+    <link>http://localhost/ticket/693</link>
+    <description>&lt;p&gt;
+... and make cache-control header optional
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/693</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>wwaites</dc:creator>
+
+      <pubDate>Mon, 11 Oct 2010 21:05:55 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/693#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/693#comment:1</guid>
+      <description>
+        &lt;p&gt;
+Fixed with cset:1e53d160abb6
+&lt;/p&gt;
+&lt;p&gt;
+If expires argument is set, Cache-Control headers get set -- so remove any values, default or otherwise from your configs.
+&lt;/p&gt;
+&lt;p&gt;
+ETag gets set to last-modified.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>wwaites</dc:creator>
+
+      <pubDate>Mon, 11 Oct 2010 21:06:28 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/693#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/693#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

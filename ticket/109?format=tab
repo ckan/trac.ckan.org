@@ -1,0 +1,11 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+109	Tag search in the REST API	dread	rgrp	"Similar to ticket:108 but for tags:
+
+/api/search/tag?q
+
+For tags search is extremely simple since you can only search by name.
+
+== Possible Extras ==
+
+  * Allow ""exotic"" ordering of results e.g. ordering by number of packages with that tag.
+  * Return this number with tag list."	enhancement	closed	awaiting triage		ckan	fixed				

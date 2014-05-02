@@ -1,0 +1,9 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+196,RDF URI to resolve on CKAN,dread,dread,"Provide RDF version of a package at the RDF URI:
+http://ckan.net/package/rdf/32000-naples-florida-businesses-kml
+
+See email on OKFN help:
+
+For the information to be Linked Data, the following URI (from the
+api.talis.com SPARQL call) should be resolvable to RDF, or an RDFa
+enhanced HTML page.",defect,closed,critical,v1.0,ckan,fixed,,,,

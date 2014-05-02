@@ -1,0 +1,6 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2722	Ordering or search of datasets of a group brings up 'no results'	shevski	aron.carroll	"1. go to a group, e.g. http://s031.okserver.org:2375/group/data-explorer
+2. Order by anything, e.g. choose 'popular' and click go
+3. ""sorry no datasets found"" message appears instead of ordering the group datasets in wanted order
+
+http://s031.okserver.org:2375/group/data-explorer?q=&sort=views_recent+desc"	defect	closed	awaiting triage	demo phase 3	ckan	fixed	demo-theme	aron.carroll	ckan	none

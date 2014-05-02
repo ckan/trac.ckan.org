@@ -1,0 +1,8 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1123,"Please re-package CKAN packages as ""noarch""",nils.toedtmann,dread,"... or, if the CKAN packages do contain architecture-specific binary code, build packages for i386 too. 
+
+Currently, http://apt-alpha.ckan.org/debian only offers packages for amd64, but e.g. ""m1.small"" EC2 instances are i386.
+
+We would need this in order to migrate the community instances to a packaged based CKAN.
+
+Rufus, pls prioritise.",requirement,closed,awaiting triage,,ckan,fixed,,rgrp,ckan,none

@@ -1,0 +1,23 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+770,Improve the paster harvester help command,johnbywater,thejimmyg,"Issue 1. Help command without arguments fails:
+
+$paster help --plugin ckan --config development.ini
+
+gives:
+
+EITHER
+
+Command help not recognized
+
+OR
+
+paster help: error: no such option: --plugin
+
+Issue 2: Harvester command with arguments fails.
+
+$ paster harvester
+Traceback (most recent call last):
+...
+    cmd = self.args[0]
+IndexError: list index out of range
+",defect,closed,trivial,ckan-v1.3,uklii,wontfix,,,,

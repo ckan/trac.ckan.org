@@ -1,0 +1,6 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1604	Get ckanext-moderatededits working with CKAN 1.5+ templates	dread		"ckanext-moderatededits requires an old and possibly development version of CKAN. It would be good to update it for later CKAN versions.
+
+According to the README, you need CKAN from branch feature-1141-moderated-edits-ajax but the changelog suggests this branch went into version 1.4.2. So it possibly works with 1.4.2 and 1.4.3(.1). But CKAN 1.5 has revamped templates, so the genshi stream filters definitely don't work.
+
+BTW history_ajax/read_ajax calls have been deprecated in CKAN since 1.5.2a and will need fixing up to use the Action API too as part of this."	enhancement	new	awaiting triage	ckan-backlog	ckan			johnglover	ckan	none

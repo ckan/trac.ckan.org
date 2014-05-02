@@ -1,0 +1,22 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+303	Package history & diff & feed to show changes to tags, extras and resources	dread	dread	"Currently a package's history page (/package/history/xyz) and related feed only shows changes to the core package i.e. ones which create a PackageResource. This doesn't include changes to tags, extras and resources. These need to be added.
+
+There is the complication that the 'diff' function doesn't currently work beyond PackageResource. Unless this is quick and simple to fix, I suggest we let the diff remain slightly broken for now.
+
+Rufus suggests alongside the existing methods:
+{{{
+pkg.all_revisions()
+pkg.diff()
+}}}
+we have ones which also include the related objects (tags, extras, resources):
+{{{
+pkg.all_revisions_full()
+pkg.diff_full()
+}}}
+You could have a function which returned these related objects. Ideas:
+{{{
+revobjlist = [ self, resources, extras ]
+list of tuples: (revobj, changed_revobjs)
+list of tuples: (revobj, {objtype: [changed_revobjs]})
+tuple: (rev1, {Package: [ object_id, object_id], PackageTag: [object_id, object_id2] ...}
+}}}"	defect	closed	major	v1.0	ckan	fixed				

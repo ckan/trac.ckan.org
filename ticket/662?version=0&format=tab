@@ -1,0 +1,6 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+662	Can't put entity that is returned by posting to package register	johnbywater		"It's because Package carries several out-of-band values, which are snagged on the way back out. Entity get response also can't be posted.
+
+However, post response can be re-posted (because it isn't the same as the register-post/entity-get responses.
+
+An issue for CKAN too."	bug	new	awaiting triage		ckan					

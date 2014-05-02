@@ -1,0 +1,10 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+104	View a package at a given version	rgrp	rgrp	"As a user i want to see a package at ""version"" X (NB: not revision X).
+
+  * When I visit e.g. /package/read/xyz?version=0.7 I should be shown package at version 0.7 (or a message saying no such version)
+  * Implementation:
+    * Find revision for this version (search revision history for when version field was last 0.7)
+    * Show pacakge at that revision (as in ticket:103)
+  * On history page also shows versions in list of revisions associated with the package
+
+"	enhancement	closed	major		ckan	fixed			ckan	none

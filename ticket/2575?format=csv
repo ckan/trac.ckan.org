@@ -1,0 +1,8 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2575,Licenses have i18n issues (was Inconsistent language on license dropdown),amercader,toby,"License titles at least for some of them need translating.  This wants to be done in a more efficient and simple manner than currently exists.
+
+the original problem was:
+
+The license dropdown on the dataset form shows titles in Swedish by default. Changing the language seems to default to English, but after refreshing the page a couple of times it shows a wrong language again.
+
+Thanks to pudo for reporting.",enhancement,closed,awaiting merge,ckan-v1.9,ckan,fixed,i18n,sean.hammond@… toby.dacre@…,ckan,none

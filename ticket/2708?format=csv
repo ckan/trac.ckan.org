@@ -1,0 +1,10 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2708,limit extra data for package/group show,toby,kindly,"    context['package_limits'] = { 'tags': 5,     <- get first 5
+                          'extras': 0,   <- get all
+                         }
+only get what you ask for have to be explicit
+
+    context['group_limits'] = {}   only main item
+
+
+start with datasets/groups expand if we like it",enhancement,new,awaiting triage,ckan-v1.9,ckan,,,,ckan,none

@@ -1,0 +1,17 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1206	"""Content-Type json"" header scuppers package POST"	dread	wwaites	"Compare these two requests to create a package:
+{{{
+curl http://test.ckan.net/api/rest/package -d '{name:""test""}' -H 'Content-Type: application/json' -H 'X-CKAN-API-KEY: tester'
+curl http://test.ckan.net/api/rest/package -d '{name:""test""}' -H 'X-CKAN-API-KEY: tester'
+}}}
+The second one gets the payload through (ckan log):
+{{{
+Retrieving request params: UnicodeMultiDict([('{name:""test""}', u'')])
+}}}
+But the first one causes a ServerError because the payload (name:""test"") doesn't make it to request.POST or request.params:
+{{{
+Retrieving request params: UnicodeMultiDict([])
+}}}
+The only difference is the ""ContentType: application/json"" header, which seems a reasonable thing to include. Javascript lib backbone.js (for example) inserts this automatically.
+
+So why does this header cause the payload to not get through to the request object?"	defect	closed	critical		ckan	fixed		rgrp	ckan	none

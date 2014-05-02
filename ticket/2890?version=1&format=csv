@@ -1,0 +1,24 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2890,Collect data previews and data store docs in one chapter,seanh,,"Currently there is this page:
+
+http://docs.ckan.org/en/latest/data-viewer.html
+
+which covers Recline Data Explorer and other kinds of data preview in CKAN. It is under the Publishing Datasets section in the documentation. I had to to a search for 'recline' to find it.
+
+Separately there is this page: http://docs.ckan.org/en/ckan-1.7.1/datastore.html which covers datastore, datastorer, and the data api.
+
+I suggest collecting this together in one chapter called 'Data Previews'. If I understand it right the general gist would be:
+
+CKAN has builtin previews of data resources on resource pages, enabled by default.
+
+Images, Google Documents, and web page resources will be loaded into embedded iframes for preview.
+
+Text-like files will be displayed raw.
+
+CSV or Excel files uploaded to CKAN will be previewed using Recline Data Explorer.
+
+Additionally, you can enable CKAN's DataStore, requires you to install ElasticSearch and nginx and put datastore.enabled=1 in your ini file. Lets you use the Data API to query data.
+
+Does having DataStore enabled mean you get preview of more types of resources? Any resource that's available via the Data API will be previewed using Recline, 
+
+You can install ckanext-datastorer, and then CSV and Excel files _linked to_ as CKAN resources will be previewed using Recline also. Requires celeryd.",enhancement,new,awaiting triage,,ckan,,docs,,ckan,none

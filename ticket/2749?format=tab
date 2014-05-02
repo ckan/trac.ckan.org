@@ -1,0 +1,10 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2749	page title issue with super() super()	toby	aron.carroll	"title broken for
+
+http://s031.okserver.org:2375/en/dataset/new_resource/gold-prices
+
+we have inherited the title from the extended page not from the base
+
+should be 'add data - ckan' not 'add data - create dataset - ckan'
+
+any idea how we fix this?"	enhancement	closed	awaiting triage	demo phase 5	ckan	fixed	demo-theme		ckan	none

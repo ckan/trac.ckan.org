@@ -1,0 +1,11 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+120,Security audit,dread,dread,"Look for all places where model is accessed and check authorization is checked.
+
+Close up known holes (with tests):
+
+ * search i/f
+ * package WUI commit
+
+Suggestions:
+
+* Search API takes user parameter.",enhancement,new,major,v0.10,ckan,,,,,

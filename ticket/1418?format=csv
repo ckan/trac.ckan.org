@@ -1,0 +1,2 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1418,If default language is not 'en' then you can't switch language to 'en',dread,dread,"e.g. cz.ckan.net has lang=cz but when you click on Home page link ""English"" it flashes message ""Language has been set to: English"" but the rest of the page is still Czech.",defect,closed,major,ckan-sprint-2011-10-28,ckan,duplicate,,,ckan,none

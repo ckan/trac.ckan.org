@@ -1,0 +1,21 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1019,Webhooks notification service,pudo,pudo,"We propose the following push approach using individual packages:
+
+1. New, updated and deleted packages are pushed to a url endpoint on Wordpress (WPURL). This endpoint will be a configuration option on the CKAN side. A POST or PUT http method will get used. The payload will be a json document of the following form:
+
+  {  
+    payload: The entity data as available from the REST API 
+    entity-type: 'Package', 
+    operation-type: 'create'|'update'|'delete' # one of these options 
+  }
+
+It will be sent as the body of the request with content-type set to application/json.
+
+2. The wordpress side will provide a 200 on success. Any other response will be taken as a failure. On failure, submission will be archived and failure logged and notified to system administrator. Submission can be resent later automatically by sysadmin after review.
+
+3. Pushes will happen continuously and approximately simultaneously with updates (a webhooks type model)
+
+4. [optional] CKAN side will support configuring authorization for basic authentication if applied on WP side.
+
+5. [optional] List queue status (including failures) on ckan adminstrative dashboard.
+",enhancement,closed,major,ckan-v1.4-sprint-3,ckan,fixed,,,,

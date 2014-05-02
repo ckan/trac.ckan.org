@@ -1,0 +1,4 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1309	Registering new user requires immediate login	zephod	zephod	"Registering a new user directs you to that user's profile page but does not log you in. There is an empty set of ""Recent changes"" and no ability to modify the page. Users must follow the login link in the top-right corner to continue.
+
+Registering a new user should immediately log you in."	enhancement	closed	minor	ckan-sprint-2011-09-12	ckan	duplicate			ckan	none

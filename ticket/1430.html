@@ -1,0 +1,531 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      #1430 (Documents get mixed between SOLR cores)
+     – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="prev" href="1429.html" title="Ticket #1429" />
+        <link rel="last" href="3030.html" title="Ticket #3030" />
+        <link rel="help" href="../wiki/TracGuide.html" />
+        <link rel="alternate" href="1430%3Fformat=csv" type="text/csv" class="csv" title="Comma-delimited Text" /><link rel="alternate" href="1430%3Fformat=tab" type="text/tab-separated-values" class="tab" title="Tab-delimited Text" /><link rel="alternate" href="1430%3Fformat=rss" type="application/rss+xml" class="rss" title="RSS Feed" />
+        <link rel="next" href="1431.html" title="Ticket #1431" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/ticket.css" type="text/css" />
+        <link rel="first" href="1.html" title="Ticket #1" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript">
+      var auto_preview_timeout=2.0;
+      var form_token="93d81ccf9a7bb1c456462f62";
+    </script>
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script><script type="text/javascript" src="../chrome/common/js/wikitoolbar.js"></script><script type="text/javascript" src="../chrome/common/js/resizer.js"></script><script type="text/javascript" src="../chrome/common/js/auto_preview.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("div.description").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $(".foldable").enableFolding(false, true);
+        var args = {realm: "ticket", id: 1430, escape_newlines: 0}
+        $("#comment").autoPreview("/wiki_render", args, function(textarea, text, rendered) {
+            $("#ticketchange div.comment").html(rendered);
+            if (rendered)
+              $("#ticketchange").show();
+            else if ($("#ticketchange ul.changes").length == 0)
+              $("#ticketchange").hide();
+        });
+        $("#trac-comment-editor textarea").autoPreview("/wiki_render", args,
+                                                       function(textarea, text, rendered) {
+          var comment = $("#trac-comment-editor").next("div.comment");
+          comment.html(rendered);
+          if (rendered)
+            comment.show();
+          else
+            comment.hide();
+        });
+        $("#modify").parent().toggleClass("collapsed");
+        $(".trac-topnav a").click(function() { $("#modify").parent().removeClass("collapsed"); });
+        /* only enable control elements for the currently selected action */
+        var actions = $("#action input[name='action']");
+        function updateActionFields() {
+          actions.each(function () {
+            $(this).siblings().find("*[id]").enable($(this).checked());
+            $(this).siblings().filter("*[id]").enable($(this).checked());
+          });
+        }
+        actions.click(updateActionFields);
+        updateActionFields();
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="../wiki/TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li class="active"><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="1429.html" title="Ticket #1429">Previous Ticket</a></span></li><li class="last"><span><a class="next" href="1431.html" title="Ticket #1431">Next Ticket</a> &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="ticket">
+      <h1 id="trac-ticket-title">
+          <a href="1430.html">Ticket #1430</a>
+          <span class="status">(closed defect: fixed)</span>
+      </h1>
+      <div id="ticket">
+  <div class="date">
+    <p>Opened <a class="timeline" href="../timeline%3Ffrom=2011-10-31T13:34:36Z&amp;precision=second.html" title="2011-10-31T13:34:36Z in Timeline">3 years</a> ago</p>
+    <p>Last modified <a class="timeline" href="../timeline%3Ffrom=2011-12-16T11:12:03Z&amp;precision=second.html" title="2011-12-16T11:12:03Z in Timeline">2 years</a> ago</p>
+  </div>
+  <h2 class="summary searchable">Documents get mixed between SOLR cores</h2>
+  <table class="properties">
+    <tr>
+      <th id="h_reporter">Reported by:</th>
+      <td headers="h_reporter" class="searchable">
+        <a href="../query%3Fstatus=!closed&amp;reporter=amercader.html">amercader</a>
+      </td>
+      <th id="h_owner">Owned by:</th>
+      <td headers="h_owner">
+      </td>
+    </tr>
+    <tr>
+        <th id="h_priority">
+          Priority:
+        </th>
+        <td headers="h_priority">
+              <a href="../query%3Fstatus=!closed&amp;priority=major.html">major</a>
+        </td>
+        <th id="h_milestone">
+          Milestone:
+        </th>
+        <td headers="h_milestone">
+              <a class="closed milestone" href="../milestone/ckan-sprint-2011-11-07.html">ckan-sprint-2011-11-07</a>
+        </td>
+    </tr><tr>
+        <th id="h_component">
+          Component:
+        </th>
+        <td headers="h_component">
+              <a href="../query%3Fstatus=!closed&amp;component=ckan.html">ckan</a>
+        </td>
+        <th id="h_keywords">
+          Keywords:
+        </th>
+        <td headers="h_keywords" class="searchable">
+              <a href="../query%3Fstatus=!closed&amp;keywords=~search.html">search</a>
+        </td>
+    </tr><tr>
+        <th id="h_cc">
+          Cc:
+        </th>
+        <td headers="h_cc" class="searchable">
+              <a href="../query%3Fstatus=!closed&amp;cc=~johnglover.html">johnglover</a>, <a href="../query%3Fstatus=!closed&amp;cc=~thejimmyg.html">thejimmyg</a>, <a href="../query%3Fstatus=!closed&amp;cc=~kindly.html">kindly</a>, <a href="../query%3Fstatus=!closed&amp;cc=~rgrp.html">rgrp</a>, nils.toedtmann@…
+        </td>
+        <th id="h_repo">
+          Repository:
+        </th>
+        <td headers="h_repo">
+              <a href="../query%3Fstatus=!closed&amp;repo=ckan.html">ckan</a>
+        </td>
+    </tr><tr>
+        <th id="h_theme">
+          Theme:
+        </th>
+        <td headers="h_theme">
+              <a href="../query%3Fstatus=!closed&amp;theme=none.html">none</a>
+        </td>
+        <th>
+        </th>
+        <td>
+        </td>
+    </tr>
+  </table>
+  <div class="description">
+    <h3 id="comment:description">
+      Description
+    </h3>
+    <div class="searchable">
+      <p>
+On some occasions (apparently random), the documents indexed in a specific SOLR core get mixed with different site_ids.
+</p>
+<p>
+E.g: We look for all documents in the testing.iatiregistry.org core, faceted by site_id. We would expect all documents to have site_id = iati_testing, but some of them have site_id = iatiregistry.org
+</p>
+<p>
+<a class="ext-link" href="http://okfn-solr.fry-it.com:8080/solr/testing.iatiregistry.org/select?indent=on&amp;version=2.2&amp;q=*:*&amp;fq=+state:active&amp;facet=true&amp;facet.field=site_id"><span class="icon">​</span>http://okfn-solr.fry-it.com:8080/solr/testing.iatiregistry.org/select?indent=on&amp;version=2.2&amp;q=*:*&amp;fq=+state:active&amp;facet=true&amp;facet.field=site_id</a>
+</p>
+<pre class="wiki">&lt;lst name="facet_fields"&gt;
+&lt;lst name="site_id"&gt;
+&lt;int name="iati_testing"&gt;265&lt;/int&gt;
+&lt;int name="iatiregistry.org"&gt;255&lt;/int&gt;
+&lt;/lst&gt;
+&lt;/lst&gt;
+</pre><p>
+If we compare one of the records which disappeared from the "iati_testing" site_id in both the production and testing SOLR cores
+of the server, the records are exactly the same, including the indexed_ts property:
+</p>
+<p>
+<a class="ext-link" href="http://okfn-solr.fry-it.com:8080/solr/iatiregistry.org/select?indent=on&amp;version=2.2&amp;q=id:97d1ab0d-b203-4757-8f4e-a0c84d2f759f&amp;facet=true&amp;facet.field=site_id"><span class="icon">​</span>http://okfn-solr.fry-it.com:8080/solr/iatiregistry.org/select?indent=on&amp;version=2.2&amp;q=id:97d1ab0d-b203-4757-8f4e-a0c84d2f759f&amp;facet=true&amp;facet.field=site_id</a>
+</p>
+<p>
+<a class="ext-link" href="http://okfn-solr.fry-it.com:8080/solr/testing.iatiregistry.org/select?indent=on&amp;version=2.2&amp;q=id:97d1ab0d-b203-4757-8f4e-a0c84d2f759f&amp;facet=true&amp;facet.field=site_id"><span class="icon">​</span>http://okfn-solr.fry-it.com:8080/solr/testing.iatiregistry.org/select?indent=on&amp;version=2.2&amp;q=id:97d1ab0d-b203-4757-8f4e-a0c84d2f759f&amp;facet=true&amp;facet.field=site_id</a>
+</p>
+<p>
+Note that the response from the URLs shown may vary, as the testing site could have been reindexed.
+</p>
+
+    </div>
+  </div>
+</div>
+          
+    <div id="attachments">
+        <h2 class="foldable">Attachments</h2>
+        <div>
+          <dl class="attachments">
+              <dt>
+    <a href="../attachment/ticket/1430/jetty.requests.log.html" title="View attachment">jetty.requests.log</a><a href="../raw-attachment/ticket/1430/jetty.requests.log" class="trac-rawlink" title="Download">​</a>
+       (<span title="210 bytes">210 bytes</span>) -
+      added by <em>amercader</em> <a class="timeline" href="../timeline%3Ffrom=2011-11-03T16:02:35Z&amp;precision=second.html" title="2011-11-03T16:02:35Z in Timeline">2 years</a> ago.
+  </dt>
+              <dd>
+                Requests received after editing a dataset
+              </dd>
+              <dt>
+    <a href="../attachment/ticket/1430/jetty.stderrout.log.html" title="View attachment">jetty.stderrout.log</a><a href="../raw-attachment/ticket/1430/jetty.stderrout.log" class="trac-rawlink" title="Download">​</a>
+       (<span title="6610 bytes">6.5 KB</span>) -
+      added by <em>amercader</em> <a class="timeline" href="../timeline%3Ffrom=2011-11-03T16:03:00Z&amp;precision=second.html" title="2011-11-03T16:03:00Z in Timeline">2 years</a> ago.
+  </dt>
+              <dd>
+                SOLR output after editing a dataset
+              </dd>
+          </dl>
+          
+        </div>
+    </div>
+
+        <div>
+          <h2 class="foldable">Change History</h2>
+          <div id="changelog">
+              <div class="change">
+                <h3 class="change">
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-11-03T16:02:35Z&amp;precision=second.html" title="2011-11-03T16:02:35Z in Timeline">2 years</a> ago by amercader
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Attachment</strong>
+        <a href="../attachment/ticket/1430/jetty.requests.log.html"><em>jetty.requests.log</em></a><a href="../raw-attachment/ticket/1430/jetty.requests.log" title="Download" class="trac-rawlink">​</a>
+          added
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+Requests received after editing a dataset
+</p>
+
+    </div>
+
+              </div>
+              <div class="change">
+                <h3 class="change">
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-11-03T16:03:00Z&amp;precision=second.html" title="2011-11-03T16:03:00Z in Timeline">2 years</a> ago by amercader
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Attachment</strong>
+        <a href="../attachment/ticket/1430/jetty.stderrout.log.html"><em>jetty.stderrout.log</em></a><a href="../raw-attachment/ticket/1430/jetty.stderrout.log" title="Download" class="trac-rawlink">​</a>
+          added
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+SOLR output after editing a dataset
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-1">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:1" class="cnum">
+      <a href="1430.html#comment:1">comment:1</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-11-03T17:06:02Z&amp;precision=second.html" title="2011-11-03T17:06:02Z in Timeline">2 years</a> ago by amercader
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Cc</strong>
+        <em>rgrp</em> added
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+I've been digging more on this one.
+To reproduce it, you just have to edit the same dataset in both sites (production and testing). Just after editing the dataset, the search index will get mixed site_ids.
+</p>
+<p>
+I checked the jetty logs (see attached files) and just after editing a dataset there are two POST requests to update the index. The request logs don't show the requests params so it's hard to tell what the second call does (it probably is the commit):
+<a class="ext-link" href="https://bitbucket.org/okfn/ckan/src/97e1e90d66d7/ckan/lib/search/index.py#cl-144"><span class="icon">​</span>https://bitbucket.org/okfn/ckan/src/97e1e90d66d7/ckan/lib/search/index.py#cl-144</a>
+</p>
+<p>
+In any case, it's clear that the problem may be related with the datasets in the two cores sharing the same id. We are currently using the dataset id as uniqueKey in SOLR, i.e in our schema.xml, we are defining:
+</p>
+<pre class="wiki">&lt;uniqueKey&gt;id&lt;/uniqueKey&gt;
+</pre><p>
+According to the SOLR docs:
+"If a document is added that contains the same value for this field as an existing document, the old document will be deleted."
+</p>
+<p>
+<a class="ext-link" href="http://wiki.apache.org/solr/SchemaXml#The_Unique_Key_Field"><span class="icon">​</span>http://wiki.apache.org/solr/SchemaXml#The_Unique_Key_Field</a>
+</p>
+<p>
+I would expect the uniqueKey not to be mixed between cores, but it looks like it happens otherwise. Maybe we should generate a solr_id specific to each document for each site, as described here:
+<a class="ext-link" href="http://wiki.apache.org/solr/UniqueKey#UUID_techniques"><span class="icon">​</span>http://wiki.apache.org/solr/UniqueKey#UUID_techniques</a>
+</p>
+<p>
+(Note that apart from the testing/production site use case, at some point sites involved in harvesting could also end up with datasets with the same id.)
+</p>
+<p>
+Again, I'm not a SOLR expert, so the problem could be a completely different one!
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-2">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:2" class="cnum">
+      <a href="1430.html#comment:2">comment:2</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-11-03T18:44:57Z&amp;precision=second.html" title="2011-11-03T18:44:57Z in Timeline">2 years</a> ago by nils.toedtmann
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Cc</strong>
+        <em>nils.toedtmann@…</em> added
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-3">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:3" class="cnum">
+      <a href="1430.html#comment:3">comment:3</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-11-04T18:25:38Z&amp;precision=second.html" title="2011-11-04T18:25:38Z in Timeline">2 years</a> ago by amercader
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+Right, more news on this front.
+</p>
+<p>
+I've tested a patch which uses a hash of the dataset id and site_id to produce a unique id, and then configured the iati solr cores to use index_id as uniqueKey:
+<a class="ext-link" href="https://bitbucket.org/okfn/ckan/changeset/855f5a452f60"><span class="icon">​</span>https://bitbucket.org/okfn/ckan/changeset/855f5a452f60</a>
+</p>
+<p>
+Unfortunately, that did not solve the issue. Again, updating the same dataset in both apps messes things up. In this case, documents don't get replaced, but duplicated, so the new uniqueKey is working.
+</p>
+<p>
+I am more inclined to think that this is caused by a misconfiguration in the SOLR instance in s046. This is the file where the two cores are configured:
+</p>
+<pre class="wiki">&lt;solr persistent="true" sharedLib="lib"&gt;
+ &lt;cores adminPath="/admin/cores"&gt;
+  &lt;core name="testing.iatiregistry.org" instanceDir="testing.iatiregistry.org"&gt;
+    &lt;property name="dataDir" value="/usr/share/solr/testing.iatiregistry.org/data" /&gt;
+  &lt;/core&gt;
+  &lt;core name="iatiregistry.org" instanceDir="iatiregistry.org"&gt;
+    &lt;property name="dataDir" value="/usr/share/solr/iatiregistry.org/data" /&gt;
+  &lt;/core&gt;
+ &lt;/cores&gt;
+&lt;/solr&gt;
+</pre><p>
+Following this paths: /usr/share/solr/iatiregistry.org symlinks to /etc/solr/iatiregistry.org, /etc/solr/iatiregistry.org/data is empty (as well as the testing equivalent).
+On the other hand, looking at the admin interface and at some errors that I got it seems that the data folder that both cores are using is /var/lib/solr/data/index 
+</p>
+<p>
+Maybe that's the problem?
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-4">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:4" class="cnum">
+      <a href="1430.html#comment:4">comment:4</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-11-04T22:09:27Z&amp;precision=second.html" title="2011-11-04T22:09:27Z in Timeline">2 years</a> ago by pudo
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+You probably know this by know but the solrconfig.xml for both points to /var/lib/solr/data (line 71). 
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-5">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:5" class="cnum">
+      <a href="1430.html#comment:5">comment:5</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-11-07T10:02:24Z&amp;precision=second.html" title="2011-11-07T10:02:24Z in Timeline">2 years</a> ago by amercader
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+No, I didn't know it. Is this supposed to be the correct setting or should each core have its own data dir?
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-6">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:6" class="cnum">
+      <a href="1430.html#comment:6">comment:6</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-11-07T12:05:23Z&amp;precision=second.html" title="2011-11-07T12:05:23Z in Timeline">2 years</a> ago by rgrp
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+@pudo: brilliant spot. How did that misconfig end up there? Anyway, commenting out and rebooting means we do now have separate cores seems to fix it.
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-7">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:7" class="cnum">
+      <a href="1430.html#comment:7">comment:7</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-11-07T12:47:42Z&amp;precision=second.html" title="2011-11-07T12:47:42Z in Timeline">2 years</a> ago by amercader
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Status</strong>
+        changed from <em>new</em> to <em>closed</em>
+    </li><li>
+      <strong>Resolution</strong>
+        set to <em>fixed</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+As rgrp mentioned, we commented out the &lt;dataDir&gt; directive in the solrconfig.xml files and rebooted. That made the cores use the data dir they were supposed to (the one in solr.xml) and from the tests I made looks like it finally fixed the issue.
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-8">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:8" class="cnum">
+      <a href="1430.html#comment:8">comment:8</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-12-16T11:12:03Z&amp;precision=second.html" title="2011-12-16T11:12:03Z in Timeline">2 years</a> ago by dread
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+Fixed in CKAN 1.5.1. Affects all previous CKANs that use SOLR in these circumstances.
+</p>
+
+    </div>
+
+              </div>
+          </div>
+        </div>
+      <div id="help"><strong>Note:</strong> See
+        <a href="../wiki/TracTickets.html">TracTickets</a> for help on using
+        tickets.</div>
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="first">
+          <a rel="nofollow" href="1430%3Fformat=csv" class="csv">Comma-delimited Text</a>
+        </li><li>
+          <a rel="nofollow" href="1430%3Fformat=tab" class="tab">Tab-delimited Text</a>
+        </li><li class="last">
+          <a rel="nofollow" href="1430%3Fformat=rss" class="rss">RSS Feed</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

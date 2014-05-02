@@ -1,0 +1,155 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1127	CREP0001: Formalise new feature discussion and definition using CREPs	sebbacon		"'''Proposer:''' Seb Bacon[[BR]]
+'''Seconder:''' Rufus Pollock[[BR]]
+[[BR]]
+
+== Abstract ==
+
+When adding major new features to CKAN, a longer, more formal discussion 
+will improve software design quality and documentation, better engage
+the wider community, and ensure the core team are up to date with
+latest developments.  
+
+I propose a formal process (CREP -- CKAN Revision and Enhancement Proposal) for making this happen.
+
+== The Problem ==
+
+The current workflow for introducing major new features into CKAN is
+very informal, typically based around one person's great idea, which
+they've discussed with one or two other people in the team.  The
+originator of the idea is typically the only person with access to 
+all the input they've had through such discussions.  Often, the only 
+location of this information is  in that person's head.
+
+However, there is a lot of experience embodied in the CKAN community
+which should be drawn on before making large design decisions.  This
+will lead to better software.  Additionally, building consensus in the
+community around a proposal before implementation ensures positive
+community engagement and buy-in to new features, making them more
+likely to be a success.
+
+We aren't great at documenting new features.  Documentation after
+coding is complete is an unrewarding experience for most programmers.
+Requiring skeleton documentation before code is written is a good
+discipline that can form the basis of better documentation in the
+future (e.g. by a writer rather than a programmer).
+
+== Specification ==
+
+Minor features don't require a CREP, and can just be entered in the
+issue tracking system as a bug or feature.  As a rule of thumb, a
+feature is major if it will take more than a day to implement, or is
+likely to involve matters of opinion in its design.
+
+A developer may decide that a CREP is too formal and long-winded. The 
+decision to write a CREP is at at their discretion; however, new 
+features MUST always be proposed via email, even if this is just a 
+couple of sentences.
+
+If a feature requires a CREP, the proposer should find a seconder
+for their idea.  This sanity check step happens before a CREP is
+written to ensure at least the possibility of consensus on the CREP.
+
+Next the proposer should write a CREP, starting by copying and pasting
+the [http://wiki.ckan.net/CKAN_Revision_and_Enhancement_Proposals template on the wiki] into a new Trac ticket.  This will be with a status of ""new"" and Type of ""CREP"".  The proposer should notify
+the [http://lists.okfn.org/mailman/listinfo/ckan-dev ckan-dev] mailing
+list, and possibly the
+[http://lists.okfn.org/mailman/listinfo/ckan-discuss ckan-discuss]
+list for less technical CREPs.
+
+The draft can be discussed via email, verbally, or via the trac
+ticket.  In any case, it is the proposer's responsibility to keep the
+CREP updated to reflect the current consensus.
+
+Once consensus has been reached, the ticket should be marked with the
+""accepted"" status and assigned to a CKAN release milestone.
+
+When an accepted CREP has been implemented, it should be resolved as
+""fixed"".
+
+If no consensus can be reached on a draft CREP, or for some reason an
+accepted CREP doesn't get completed, it should be marked as or ""wontfix"".
+
+If a completed CREP becomes obsolete, it should be marked as ""invalid"", 
+with a note pointing to the obsoleting ticket(s)
+
+== Why do it this way == 
+
+Given the distributed nature of the core team plus other volunteers,
+some kind of written procedure is necessary to ensure a fully
+documented and discussed proposal.
+
+The idea of ""Enhancement Proposals"" which can be semi-formally
+proposed and discussed prior to implementation is common in the Open
+Source world ([http://www.python.org/dev/peps/pep-0001/ PEPs],
+[http://dep.debian.net/ DEPs],
+[http://plone.org/documentation/glossary/plip PLIPs], to name three).
+
+Existing historic proposals exist, called CEPs.  The proposed system
+is called CREP (CKAN revision or enhancement proposal) to disambiguate
+it from the legacy proposals, and from the delicious fungus ''Boletus
+Edulis''.
+
+Giving a formal structure to the proposal is useful as it gives the
+community a means to identify a CREP that's not had sufficient thought
+or discussion.  An informal email thread can easily be lost and
+important questions (such as backwards compatibility) overlooked.  The
+use of the proposed template empowers any community member to ask the
+proposer to expand on rationale, deliverables, etc.
+
+The structure chosen is somewhere between Debian's and Plone's.  It
+aims to give a structure to the debate, a clear start at
+documentation, and also prompt some thinking about implementation and
+timescales.
+
+All this policy about structure should not be construed as mandatory.  
+In particular, the later fields in the CREP template regarding 
+Implementation Plan may be omitted if the author doesn't find them 
+helpful.
+
+Some projects (e.g. Debian) keep their enhancement proposals in a
+versioning repository; others (e.g. Plone) keep them in an issue
+tracking system.  Trac is proposed for CKAN because we already use it
+for small feature proposals and for team planning.  It seems unlikely
+that change tracking on an individual CREP will be useful; a CREP that
+changes sufficiently from its original form should probably be marked
+""obselete"" and a new CREP started.  Using an issue tracking system also
+means we can easily track CREPs by state.
+
+== Backwards Compatibility ==
+
+Some [https://bitbucket.org/okfn/ceps/src/76b274888bcf/cep/ legacy 
+enhancement proposals], called CEPs, have previously been started.
+
+They are currently all marked as ""active"".  Any which require
+discussion should be altered by the proposer to match the new CREP
+specification and submitted to trac.  The original CEP should be
+updated with a banner at the top pointing a reader to the new CREP.
+
+Any that are now obselete should be clearly marked as such in a banner
+at the top, pointing a reader to the trac for new CREPs.
+
+== Implementation plan ==
+
+=== Deliverables ===
+
+ * This CREP, agreed
+ * Support for proposed statuses in Trac
+ * Canned reports for listing CREPs in Trac
+
+=== Risks and mitigations ===
+
+ * That this CREP is agreed, but rarely acted on.  This risk can be
+   mitigated by nominating a CREP champion in the community or core
+   team, whose job it is to say ""where's the CREP for that?"" and
+   generally own the quality of CREPS
+
+=== Participants ===
+
+Seb Bacon: as current Documentation Czar (May 2011), responsible for 
+ensuring CREPs are up to date.
+
+=== Progress ===
+
+This document is the entire proposal.
+"	CREP	closed	awaiting triage		ckan	fixed			ckan	none

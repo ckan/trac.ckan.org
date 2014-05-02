@@ -1,0 +1,21 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+178	Excel package importer	dread	rgrp	"/tool
+New 'tools' section of the WUI with 'Excel package import' page.
+
+/tool/import
+Import page allows you to upload a file. The format of the required Excel file is described here. List of licenses provided for copy&paste.
+
+/tool/import/preview
+When you upload it, it gives you a simple preview of the file, offering import. Text as per Package Preview. 'import button' for completing process.
+
+File format:
+
+First row to have a cell value of 'name' or 'title' in it is the Title Row. It contains the field names, as per package. It includes:
+ * license - name of license
+ * tags - space separated
+ * groups - space separated
+ * anything - for extra key-values
+
+When importing, values are bound into the package fieldset, validated and displayed for the preview and synced to complete.
+
+User has to log in to use importer. Auth is checked for putting into groups."	enhancement	closed	critical	v0.11	ckan	fixed				

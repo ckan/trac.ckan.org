@@ -1,0 +1,7 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+989,Extending the model from plugins,pudo,kindly,"We need to support extending the model from plugins. This could involve: 
+ 
+ * Adding a plugin hook to extend the mapper
+ * Adding an upgrade hook for plugin schema migrations
+ * Documenting how this is to be done
+ * Find a way to avoid conflicts ",enhancement,new,major,ckan-future,ckan,,,,ckan,none

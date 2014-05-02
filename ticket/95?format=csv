@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+95,Add manifest support,rgrp,rgrp,"Support for listing files (manifest) contained within a package.
+
+Traditional manifests just list the files. Suggest in addition we have support for optional metadata in form of key, value pairs.",enhancement,closed,critical,,dpm,fixed,,,,

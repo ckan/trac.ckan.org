@@ -1,0 +1,8 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+110	Integrate groups into packages	dread	dread	" 1. Package needs a groups property (backref Group.packages).
+ 2. Put groups in the search api.
+ 3. Display them on the package, but not editable. (Only editable from the group page.)
+
+Follow up to ticket:105 (Groups).
+
+Cost: 1d"	enhancement	closed	critical	v0.10	ckan	fixed				

@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+854,Tests for authorization_group,dread,johnlawrenceaspden,"The coverage tool (run by buildbot in the ckan build) reports that only 24% of lines of ckan.controllers.authorization_group are run in tests and 38% of ckan.forms.authorization_group. This suggests a need for more tests.
+
+",defect,closed,major,ckan-v1.4-sprint-6,ckan,fixed,tests,,ckan,none

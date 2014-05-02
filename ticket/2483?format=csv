@@ -1,0 +1,10 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2483,Non-local resources should not have Download links,markw,,"At present, a resource which is just a URL link to an external resource has a 'Download' button on the resource page. This gives the misleading impression that the resource is stored locally.
+
+This is related to another small UI issue: I think the URL of a resource should be much more prominent, not buried in the 'Additional Information' table.
+
+Suggested fix:
+
+ * Put the URL prominently at the top of the resource page (above the preview) (and make it link to the resource)
+ * Disable the Download button unless the resource is stored locally.
+",enhancement,new,awaiting triage,ckan-v1.9,ckan,,,,ckan,none

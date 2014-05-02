@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #648: Enable lock-down of package creation</title>
+    <link>http://localhost/ticket/648</link>
+    <description>&lt;ul&gt;&lt;li&gt;copy exisiting tests, modify authz in setUp, adapt and extend tests
+&lt;ul&gt;&lt;li&gt;Problem: default_role_actions is read by init_db
+&lt;/li&gt;&lt;li&gt;Solution: nuke db after monkey-patching
+&lt;/li&gt;&lt;li&gt;role = model.Role('Reader'), del role.actions[...]
+&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+self.PRE_MAUTHZ_RULES = copy(mauthz.default_role_actions)
+mauthz.default_role_actions.remove((Role.READER, Action.CREATE))
+#raise Exception(mauthz.default_role_actions)
+model.Session.remove()
+model.repo.rebuild_db()
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;ol start="3"&gt;&lt;li&gt;Start from the functional
+&lt;ul&gt;&lt;li&gt;Both the api controllers and wui controllers to do
+&lt;/li&gt;&lt;li&gt;tests/function/test_authz.py extended to check CREATE in lockedDown mode. fails nicely.
+&lt;a class="ext-link" href="http://bitbucket.org/pudo/ckan-authz2"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://bitbucket.org/pudo/ckan-authz2&lt;/a&gt;
+&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;
+is_authorized(user, Action.Create, model.Package)
+&lt;/p&gt;
+&lt;p&gt;
+-&amp;gt; Doing this will put 'Package' in the context field of the user_object_role table. This will trigger SQLAlchemy to attempt a join towards &lt;a class="missing wiki"&gt;PackageRole?&lt;/a&gt; in all queries. Since for class-level role assignments there never is a &lt;a class="missing wiki"&gt;PackageRole?&lt;/a&gt; join table entry, this will never return any results.
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;cf branch "classes": &lt;a class="ext-link" href="http://bitbucket.org/pudo/ckan-authz2/src/6fd0475e0c66"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://bitbucket.org/pudo/ckan-authz2/src/6fd0475e0c66&lt;/a&gt;
+&lt;/li&gt;&lt;li&gt;No possibility of including "instance" column in inheritance decision.
+&lt;/li&gt;&lt;li&gt;Even if this can be cirumvented, it must happen on a per-query level and would require a major re-modelling.
+&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;have a ckan install that would not allow visitors to either list packages or list groups
+&lt;ul&gt;&lt;li&gt;two paths: create the listing, but for each group/pkg decide that you
+cannot show this
+&lt;/li&gt;&lt;li&gt;lock down the whole page (/package/list)
+&lt;ul&gt;&lt;li&gt;this is class-based, not object-based
+&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+is_authorized(user, Action.Package_Create, model.System())
+is_authorized(user, Action.Group_Create, model.System())
+&lt;/p&gt;
+&lt;p&gt;
+[Separating Package and Group roles may be useful going forward: &lt;a class="missing wiki"&gt;PackageEditor?&lt;/a&gt;, &lt;a class="missing wiki"&gt;GroupEditor?&lt;/a&gt; etc]
+&lt;/p&gt;
+&lt;ol start="4"&gt;&lt;li&gt;Find a standard way to lock down classes
+&lt;ul&gt;&lt;li&gt;possibly add default rows in user_object_role
+&lt;/li&gt;&lt;li&gt;introduce lock-down into controllers: group new, package new, REST equivalents,
+&lt;/li&gt;&lt;li&gt;confirm tests
+&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ol&gt;</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/648</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>pudo</dc:creator>
+
+      <pubDate>Sun, 19 Sep 2010 09:47:36 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/648#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/648#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+introduced in ckan-authz2 cset:934b30ec84fd
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

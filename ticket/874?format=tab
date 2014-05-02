@@ -1,0 +1,2 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+874	Extract solr search backend into an extension	pudo		Move the solr SearchBackend to a seperate code base, remove any mentions of the CKAN model. 	enhancement	closed	major	ckan-v1.3-sprint-2	ckan	fixed				

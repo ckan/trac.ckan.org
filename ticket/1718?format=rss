@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1718: Deprecated JS properties used</title>
+    <link>http://localhost/ticket/1718</link>
+    <description>&lt;p&gt;
+I get this warning when viewing the home page:
+&lt;/p&gt;
+&lt;pre class="wiki"&gt;event.layerX and event.layerY are broken and deprecated in WebKit. They will be removed from the engine in the near future.
+&lt;/pre&gt;&lt;p&gt;
+CKAN: latest master
+Browser: Chrome Ubuntu
+&lt;/p&gt;
+&lt;p&gt;
+Minor, but worth checking?
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1718</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Wed, 01 Feb 2012 10:56:12 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1718#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1718#comment:1</guid>
+      <description>
+        &lt;p&gt;
+WEll known issue. Just needs an upgrade in jquery to 1.7.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>icmurray</dc:creator>
+
+      <pubDate>Mon, 25 Jun 2012 13:59:08 GMT</pubDate>
+      <title>owner, status changed</title>
+      <link>http://localhost/ticket/1718#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/1718#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;owner&lt;/strong&gt;
+              changed from &lt;em&gt;zephod&lt;/em&gt; to &lt;em&gt;aron.carroll&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;assigned&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Re-assigned to aron for triage.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>aron.carroll</dc:creator>
+
+      <pubDate>Tue, 26 Jun 2012 09:34:40 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/1718#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/1718#comment:3</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;assigned&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+This was fixed at some point.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

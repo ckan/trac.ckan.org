@@ -1,0 +1,11 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1179,Support tag aliases,timmcnamara,,"A small number of tags are near-duplicates of each other.
+
+Perhaps we could support word stemming from NLTK and/or manual tag aliases:
+
+    statistics
+    statistik
+    ...
+    survey
+    surveying
+    surveys",enhancement,new,awaiting triage,ckan-backlog,ckan,,,,ckan,none

@@ -1,0 +1,12 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1133	command line rights manipulation doesn't work	johnlawrenceaspden		"It appears that the command
+
+$ paster rights add russianfan admin warandpeace
+
+has no effect, even though
+
+$ paster rights remove russianfan admin warandpeace
+
+works fine. This may be specific to something I've done, could someone confirm?
+
+If it's the case more generally, then I'm assuming this behaviour is untested? Tests should probably be added."	defect	closed	awaiting triage		ckan	worksforme			ckan	none

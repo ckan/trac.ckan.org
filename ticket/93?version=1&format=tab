@@ -1,0 +1,26 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+93	Access control for packages	rgrp	rgrp	"A user's ability to edit a package should be configurable by an admin. Propose there are 3 level of capability/action for a package:
+
+  * Admin
+  * Edit
+  * Read (optional at present since everything should be readable)
+
+Cost: 6d
+
+== Details ==
+
+  * A package Admin should be able to change the permissions for the package for others.
+  * A person registering a package (if logged in) automatically becomes an Admin for that package
+  * By default being an Admin implies Editor implies Reader
+  * By default edit rights are for everyone (as are read rights)
+  * A system administrator may alter the package Admins for any package (this is optional since now that we have web admin interface for editing of model/DB could do this via that route)
+
+=== Extras ===
+
+May wish to expand edit permissions in future to e.g.:
+
+  * Edit: core
+  * Edit: tags
+  * Edit: everything
+
+== Implementation Details =="	enhancement	new	critical	v0.10	ckan					

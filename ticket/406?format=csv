@@ -1,0 +1,15 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+406,Download sub-system,rgrp,pudo,"Factor out current downloader into dedicated download subpackage, abstract interface and make it pluggable so we can have downloaders loaded as per type of resource to download.
+
+  * Also rename InstallCommand -> DownloadCommand
+
+And we should support interactive retrieving of resources ...
+
+== Implementation Ideas ==
+
+{{{
+for resources in pkg.resources:
+    # datapkg/hg 
+    load_storage_handler(resource.format)
+}}}
+",requirement,closed,awaiting triage,datapkg-0.8,dpm,fixed,,,,

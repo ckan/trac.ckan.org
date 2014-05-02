@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2230: Tidy up of search facets code duplication</title>
+    <link>http://localhost/ticket/2230</link>
+    <description>&lt;p&gt;
+Because of a clash between two development branches there is some duplication of code to do with code facets (note: at the time of writing the code duplication exists only on the feature-1821-multilingual-extension branch, but this will be merged into master at some point):
+&lt;/p&gt;
+&lt;p&gt;
+The package_search() function is adding the search facets to the search results twice with two different data structures, with keys "facets" and "new_facets". It should be reduced to just the new facets (with the key changed to "facets").
+&lt;/p&gt;
+&lt;p&gt;
+Also the group and package controllers are adding both facets and new_facets to the context, should be new_facets only (but renamed to facets).
+&lt;/p&gt;
+&lt;p&gt;
+The facet_items() function in helpers.py should be removed, it uses the old facets structure and shouldn't be needed anymore with the new facets structure.
+&lt;/p&gt;
+&lt;p&gt;
+In facets.html, facet_sidebar() should be removed as it uses the old facets structure and facet_div() implements the same functionality but uses the new facets.
+&lt;/p&gt;
+&lt;p&gt;
+In facets.html, facet_list_items() will have to be updated to not use the facet_items() helper and to use the new facets structure instead.
+&lt;/p&gt;
+&lt;p&gt;
+Anywhere that "new_facets" appears it will have to be changed to "facets" (e.g. in the ckanext/multilingual/plugin.py.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2230</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>seanh</dc:creator>
+
+      <pubDate>Wed, 14 Mar 2012 16:55:39 GMT</pubDate>
+      <title>type, description changed</title>
+      <link>http://localhost/ticket/2230#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/2230#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;type&lt;/strong&gt;
+                changed from &lt;em&gt;enhancement&lt;/em&gt; to &lt;em&gt;refactor&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/2230?action=diff&amp;amp;version=1"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>seanh</dc:creator>
+
+      <pubDate>Wed, 14 Mar 2012 17:02:40 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/2230#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/2230#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/2230?action=diff&amp;amp;version=2"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>icmurray</dc:creator>
+
+      <pubDate>Mon, 28 May 2012 11:31:47 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/2230#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/2230#comment:3</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

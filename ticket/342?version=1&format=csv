@@ -1,0 +1,34 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+342,JSONP parameter in API,dread,dread,"== As a ==
+
+CKAN client using JQuery
+
+== I want to ==
+
+call the CKAN API and instead of receiving back JSON I get JSONP. i.e. ""%s(%s)"" % (callback, json_content)
+
+== Suggested implementation ==
+
+All API calls allow the JSONP 'callback' parameter to be specified in the request and this wraps the JSON response. See suggested patch to rest.py by Donovan Hide:
+
+http://knowledgeforge.net/ckan/trac/attachment/ticket/336/resource.patch
+
+== Test ==
+
+import re
+import unittest
+
+def test_jsonp_callback():
+  response = self.app.get('/api/search/resource/?url=http://www.scraperwiki.com&callback=jsoncallback')
+  match = re.match('jsoncallback\(.*\);',response)
+  self.assertTrue(match)
+
+  response = self.app.get('/api/search/resource/?url=http://www.scraperwiki.com')
+  match = re.match('jsoncallback\(.*\);',response)
+  self.assertFalse(match)
+
+I think the point needs to be made that JSONP only works for GET
+requests and not POST/PUT/DELETE, so there needs to be a check
+for that in the _finish_ok method.
+
+(thanks to Donovan Hide for test)",enhancement,new,awaiting triage,,ckan,,,,,

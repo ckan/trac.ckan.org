@@ -1,0 +1,18 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+407	Link to Scraperwiki	dread		"== As a ==
+
+user browsing a CKAN package which has a resource in a bad format
+
+== I want to ==
+
+be alerted to the possibility of scraping it on scraperwiki
+
+== Implementation ==
+This should be done in a CKAN extension. It should appear in a side-bar on the package read page.
+
+If the package does not have a resource with scraperwiki.com in the url, then it displays this message:
+
+Title: Scrape it[[BR]]
+Image: (Scraperwiki dumper truck)[[BR]]
+Body text: Could this data be in a better format? Why not use Scraperwiki to extract data from tables, Excel or PDF for everyone's benefit? You can [http://scraperwiki.com/market/request/ request] this data is scraped or even [http://scraperwiki.com/editor/ write the scraper] yourself.
+"	requirement	closed	awaiting triage		ckan	wontfix			ckan	none

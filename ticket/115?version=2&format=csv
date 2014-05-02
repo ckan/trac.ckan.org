@@ -1,0 +1,3 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+115,Access Control - wui constrained by model,dread,dread,"Based on a section of AccessControl design:
+Reading and writing to packages in the WUI and REST API are now dependent on the authz tables.",enhancement,new,major,v0.10,ckan,,,,,

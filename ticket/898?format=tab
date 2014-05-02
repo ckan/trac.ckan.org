@@ -1,0 +1,4 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+898	Changes stored indefinitely	dread	rgrp	"Every change to every object is being stored in memory, which could add up to quite a lot of memory.  
+
+This fixes it by making sure the objects are in a weakref.  https://bitbucket.org/kindly/vdm/changeset/8d5f91db641f"	defect	closed	awaiting triage		vdm	fixed				

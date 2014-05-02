@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1375: Define new package id before sending it to the IPackageController plugins</title>
+    <link>http://localhost/ticket/1375</link>
+    <description>&lt;p&gt;
+When creating a package, the package_create logic function sends the newly created package object to all plugins implementing the IPackageController interface
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a class="ext-link" href="https://bitbucket.org/okfn/ckan/src/93194933ea75/ckan/logic/action/create.py#cl-64"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;https://bitbucket.org/okfn/ckan/src/93194933ea75/ckan/logic/action/create.py#cl-64&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+At this point, the changes have not yet been commited and the id of the package is not set (It has a default value of make_uuid, which is set when commited). For this reason, plugins have no way of knowing the package id. E.g. the spatial query plugin needs to know this id to link the package extent to the actual package.
+&lt;/p&gt;
+&lt;p&gt;
+One possible solution would be to set the package id in the data dict received by package_create (if it's not defined):
+&lt;/p&gt;
+&lt;pre class="wiki"&gt;from ckan.model.types import make_uuid
+if not 'id' in data or not data['id']:
+   data['id'] = make_uuid()
+&lt;/pre&gt;</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1375</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>amercader</dc:creator>
+
+      <pubDate>Mon, 10 Oct 2011 15:20:08 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/1375#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1375#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Fixed in 888ed50c098d, using Session.flush() rather than the proposed one.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

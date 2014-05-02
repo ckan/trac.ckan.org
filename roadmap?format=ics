@@ -1,0 +1,72 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Edgewall Software//NONSGML Trac 0.12.3//EN
+METHOD:PUBLISH
+X-WR-CALNAME:CKAN - Roadmap
+BEGIN:VEVENT
+UID:</milestone/ckan-v1.8@localhost>
+DTSTAMP:20120601T000000Z
+DTSTART;VALUE=DATE:20120601
+SUMMARY:Milestone ckan-v1.8
+URL:http://localhost/milestone/ckan-v1.8
+END:VEVENT
+BEGIN:VEVENT
+UID:</milestone/ckan-sprint-2012-06-25@localhost>
+DTSTAMP:20120625T000000Z
+DTSTART;VALUE=DATE:20120625
+SUMMARY:Milestone ckan-sprint-2012-06-25
+URL:http://localhost/milestone/ckan-sprint-2012-06-25
+END:VEVENT
+BEGIN:VEVENT
+UID:</milestone/opendatasuite 1@localhost>
+DTSTAMP:20120701T000000Z
+DTSTART;VALUE=DATE:20120701
+SUMMARY:Milestone opendatasuite 1
+URL:http://localhost/milestone/opendatasuite%201
+END:VEVENT
+BEGIN:VEVENT
+UID:</milestone/ckanbuild@localhost>
+DTSTAMP:20120709T000000Z
+DTSTART;VALUE=DATE:20120709
+SUMMARY:Milestone ckanbuild
+URL:http://localhost/milestone/ckanbuild
+DESCRIPTION:A better way of deploying CKAN\, including deploying multiple i
+ nstances of CKAN on a single server\, and handling upgrades\, extensions\,
+  and themes. Likely based on a virtualenv in a debian package\, and ansibl
+ e. As far as possible we want there to be One True Way of installing CKAN\
+ , whether you're installing it on your laptop for development\, on a conti
+ nuous integration server to run the tests\, deployment of a single instanc
+ e\, or deployment of multiple instances. As far as possible the install in
+ structions for these different contexts should reuse the same ckanbuild co
+ mponents.\nhttp://ckan.okfnpad.org/ckanbuild\nhttps://github.com/okfn/ckan
+ build\nhttp://ansible.github.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:</milestone/datahub-july@localhost>
+DTSTAMP:20120714T000000Z
+DTSTART;VALUE=DATE:20120714
+SUMMARY:Milestone datahub-july
+URL:http://localhost/milestone/datahub-july
+END:VEVENT
+BEGIN:VEVENT
+UID:</milestone/datahub-oct@localhost>
+DTSTAMP:20121010T000000Z
+DTSTART;VALUE=DATE:20121010
+SUMMARY:Milestone datahub-oct
+URL:http://localhost/milestone/datahub-oct
+END:VEVENT
+BEGIN:VEVENT
+UID:</milestone/opendatasuite 2@localhost>
+DTSTAMP:20121010T000000Z
+DTSTART;VALUE=DATE:20121010
+SUMMARY:Milestone opendatasuite 2
+URL:http://localhost/milestone/opendatasuite%202
+END:VEVENT
+BEGIN:VEVENT
+UID:</milestone/ckan-v1.9@localhost>
+DTSTAMP:20130101T000000Z
+DTSTART;VALUE=DATE:20130101
+SUMMARY:Milestone ckan-v1.9
+URL:http://localhost/milestone/ckan-v1.9
+END:VEVENT
+END:VCALENDAR

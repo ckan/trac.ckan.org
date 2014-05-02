@@ -1,0 +1,941 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+    <html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      WikiProcessors (diff) – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="help" href="TracGuide.html" />
+        <link rel="up" href="WikiProcessors%3Faction=history.html" title="Page history" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/wiki.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/diff.css" type="text/css" />
+        <link rel="prev" href="WikiProcessors%3Faction=diff&amp;version=3.html" title="Version 3" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/diff.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="../chrome/common/css/diff.css" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last active"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="WikiProcessors%3Faction=diff&amp;version=3.html" title="Version 3">Previous Change</a></span></li><li><a href="WikiProcessors%3Faction=history.html" title="Page history">Wiki History</a></li><li class="last"><span class="missing">Next Change &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="wiki">
+      <h1>
+        Changes between
+          <a href="WikiProcessors%3Fversion=3.html">Version 3</a> and
+          <a href="WikiProcessors%3Fversion=4.html">Version 4</a> of
+          <a href="WikiProcessors%3Fversion=4.html">WikiProcessors</a>
+      </h1>
+      <form method="post" id="prefs" action="WikiProcessors%3Fversion=4.html"><div><input type="hidden" name="__FORM_TOKEN" value="93d81ccf9a7bb1c456462f62" /></div>
+        <div>
+          <input type="hidden" name="action" value="diff" />
+          <input type="hidden" name="version" value="4" />
+          <input type="hidden" name="old_version" value="3" />
+          
+  <label for="style">View differences</label>
+  <select id="style" name="style">
+    <option selected="selected" value="inline">inline</option>
+    <option value="sidebyside">side by side</option>
+  </select>
+  <div class="field">
+    <label><input type="radio" name="contextall" value="0" checked="checked" />
+             Show</label>
+      <label><input type="text" name="contextlines" id="contextlines" size="2" maxlength="3" value="2" />
+             lines around each change</label><br />
+    <label><input type="radio" name="contextall" value="1" />
+           Show the changes in full context</label>
+  </div>
+  <fieldset id="ignore">
+    <legend>Ignore:</legend>
+    <div class="field">
+      <input type="checkbox" id="ignoreblanklines" name="ignoreblanklines" />
+      <label for="ignoreblanklines">Blank lines</label>
+    </div>
+    <div class="field">
+      <input type="checkbox" id="ignorecase" name="ignorecase" />
+      <label for="ignorecase">Case changes</label>
+    </div>
+    <div class="field">
+      <input type="checkbox" id="ignorewhitespace" name="ignorewhitespace" />
+      <label for="ignorewhitespace">White space changes</label>
+    </div>
+  </fieldset>
+  <div class="buttons">
+    <input type="submit" name="update" value="Update" />
+  </div>
+
+        </div>
+      </form>
+      <dl id="overview">
+        <dt class="property time">Timestamp:</dt>
+        <dd class="time">
+            05/02/14 01:33:04 (<a class="timeline" href="../timeline%3Ffrom=2014-05-02T01:33:04Z&amp;precision=second.html" title="2014-05-02T01:33:04Z in Timeline">7 minutes</a> ago)
+        </dd>
+        <dt class="property author">Author:</dt>
+        <dd class="author">
+          trac
+        </dd>
+        <dt class="property message">Comment:</dt>
+        <dd class="message">
+          
+          <p>
+--
+</p>
+
+        </dd>
+      </dl>
+      <div class="diff">
+        <div class="legend" id="diff-legend">
+          <h3>Legend:</h3>
+          <dl>
+            <dt class="unmod"></dt><dd>Unmodified</dd>
+            <dt class="add"></dt><dd>Added</dd>
+            <dt class="rem"></dt><dd>Removed</dd>
+            <dt class="mod"></dt><dd>Modified</dd>
+          </dl>
+        </div>
+        <div class="diff">
+  <ul class="entries">
+      <li class="entry">
+        <h2 id="file0">
+          <a href="WikiProcessors%3Fversion=4.html">WikiProcessors</a>
+        </h2>
+        <table class="trac-diff inline" summary="Differences" cellspacing="0">
+              <colgroup><col class="lineno" /><col class="lineno" /><col class="content" /></colgroup>
+              <thead>
+                <tr>
+                  <th title="Version 3">
+                    <a href="WikiProcessors%3Fversion=3.html#L3">
+                      v3</a>
+                  </th>
+                  <th title="Version 4">
+                    <a href="WikiProcessors%3Fversion=4.html#L3">
+                      v4</a>
+                  </th>
+                  <td> </td>
+                </tr>
+              </thead>
+            <tbody class="unmod">
+                  <tr>
+                          <th>3</th><th>3</th><td class="l"><span>Processors are WikiMacros designed to provide alternative markup formats for the [TracWiki Wiki engine]. Processors can be thought of as ''macro functions to process user-edited text''. </span> </td>
+                  </tr><tr>
+                          <th>4</th><th>4</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>5</th><th> </th><td class="l"><span>The Wiki engine uses processors to allow using [wiki:WikiRestructuredText Restructured Text], [wiki:WikiHtml raw HTML] and [http://www.textism.com/tools/textile/ textile] in any Wiki text throughout Trac.</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>5</th><td class="r"><span>Wiki processors can be used in any Wiki text throughout Trac,</span> </td>
+                      </tr><tr>
+                        <th> </th><th>6</th><td class="r"><span>for various different purposes, like:</span> </td>
+                      </tr><tr>
+                        <th> </th><th>7</th><td class="r"><span>&nbsp;- [#CodeHighlightingSupport syntax highlighting] or for rendering text verbatim,</span> </td>
+                      </tr><tr>
+                        <th> </th><th>8</th><td class="r"><span>&nbsp;- rendering [#HTMLrelated Wiki markup inside a context], </span> </td>
+                      </tr><tr>
+                        <th> </th><th>9</th><td class="r"><span>&nbsp; &nbsp;like inside &lt;div&gt; blocks or &lt;span&gt; or within &lt;td&gt; or &lt;th&gt; table cells,</span> </td>
+                      </tr><tr>
+                        <th> </th><th>10</th><td class="r"><span>&nbsp;- using an alternative markup syntax, like [wiki:WikiHtml raw HTML] and</span> </td>
+                      </tr><tr>
+                        <th> </th><th>11</th><td class="r"><span>&nbsp; &nbsp;[wiki:WikiRestructuredText Restructured Text],</span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>12</th><td class="r"><span>&nbsp; &nbsp;or [http://www.textism.com/tools/textile/ textile]</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>6</th><th>13</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>7</th><th>14</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>8</th><th>15</th><td class="l"><span>== Using Processors ==</span> </td>
+                  </tr><tr>
+                          <th>9</th><th>16</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>10</th><th> </th><td class="l"><span>To use a processor on a block of text, use a Wiki code block, selecting a processor by name using ''shebang notation'' (#!), familiar to most UNIX users from scripts.</span> </td>
+                      </tr><tr>
+                        <th>11</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>12</th><th> </th><td class="l"><span>'''Example 1''' (''inserting raw HTML in a wiki text''):</span> </td>
+                      </tr><tr>
+                        <th>13</th><th> </th><td class="l"><span></span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>17</th><td class="r"><span>To use a processor on a block of text, first delimit the lines using</span> </td>
+                      </tr><tr>
+                        <th> </th><th>18</th><td class="r"><span>a Wiki ''code block'':</span> </td>
+                      </tr><tr>
+                        <th> </th><th>19</th><td class="r"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th> </th><th>20</th><td class="r"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th> </th><th>21</th><td class="r"><span>The lines</span> </td>
+                      </tr><tr>
+                        <th> </th><th>22</th><td class="r"><span>that should be processed...</span> </td>
+                      </tr><tr>
+                        <th> </th><th>23</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>24</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>25</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>26</th><td class="r"><span>Immediately after the `{{{` or on the line just below, </span> </td>
+                      </tr><tr>
+                        <th> </th><th>27</th><td class="r"><span>add `#!` followed by the ''processor name''.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>28</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>29</th><td class="r"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th> </th><th>30</th><td class="r"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th> </th><th>31</th><td class="r"><span>#!processorname</span> </td>
+                      </tr><tr>
+                        <th> </th><th>32</th><td class="r"><span>The lines</span> </td>
+                      </tr><tr>
+                        <th> </th><th>33</th><td class="r"><span>that should be processed...</span> </td>
+                      </tr><tr>
+                        <th> </th><th>34</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>35</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>36</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>37</th><td class="r"><span>This is the "shebang" notation, familiar to most UNIX users.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>38</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>39</th><td class="r"><span>Besides their content, some Wiki processors can also accept ''parameters'',</span> </td>
+                      </tr><tr>
+                        <th> </th><th>40</th><td class="r"><span>which are then given as `key=value` pairs after the processor name, </span> </td>
+                      </tr><tr>
+                        <th> </th><th>41</th><td class="r"><span>on the same line. If `value` has to contain space, as it's often the case for</span> </td>
+                      </tr><tr>
+                        <th> </th><th>42</th><td class="r"><span>the style parameter, a quoted string can be used (`key="value with space"`).</span> </td>
+                      </tr><tr>
+                        <th> </th><th>43</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>44</th><td class="r"><span>As some processors are meant to process Wiki markup, it's quite possible to</span> </td>
+                      </tr><tr>
+                        <th> </th><th>45</th><td class="r"><span>''nest'' processor blocks.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>46</th><td class="r"><span>You may want to indent the content of nested blocks for increased clarity,</span> </td>
+                      </tr><tr>
+                        <th> </th><th>47</th><td class="r"><span>this extra indentation will be ignored when processing the content.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>48</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>49</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>50</th><td class="r"><span>== Examples ==</span> </td>
+                      </tr><tr>
+                        <th> </th><th>51</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>52</th><td class="r"><span>||= Wiki Markup =||= Display =||</span> </td>
+                      </tr><tr>
+                        <th> </th><th>53</th><td class="r"><span>{{{#!td colspan=2 align=center style="border: none"</span> </td>
+                      </tr><tr>
+                        <th> </th><th>54</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>55</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; __Example 1__: Inserting raw HTML</span> </td>
+                      </tr><tr>
+                        <th> </th><th>56</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>57</th><td class="r"><span>|-----------------------------------------------------------------</span> </td>
+                      </tr><tr>
+                        <th> </th><th>58</th><td class="r"><span>{{{#!td style="border: none"</span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>59</th><td class="r"><span>{{{</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>14</th><th>60</th><td class="l"><span>{{{</span> </td>
+                  </tr><tr>
+                          <th>15</th><th>61</th><td class="l"><span>#!html</span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>16</th><th> </th><td class="l"><span>&lt;pre class="wiki"&gt;{{{</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>62</th><td class="r"><span>&lt;h1 style="color: grey"&gt;This is raw HTML&lt;/h1&gt;</span> </td>
+                      </tr><tr>
+                        <th> </th><th>63</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>64</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>65</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>66</th><td class="r"><span>{{{#!td valign=top style="border: none; padding-left: 2em"</span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>67</th><td class="r"><span>{{{</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>17</th><th>68</th><td class="l"><span>#!html</span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>18</th><th> </th><td class="l"><span>&amp;lt;h1 style="color: orange"&amp;gt;This is raw HTML&amp;lt;/h1&amp;gt;</span> </td>
+                      </tr><tr>
+                        <th>19</th><th> </th><td class="l"><span>}}}&lt;/pre&gt;</span> </td>
+                      </tr><tr>
+                        <th>20</th><th> </th><td class="l"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th>21</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>22</th><th> </th><td class="l"><span>'''Results in:'''</span> </td>
+                      </tr><tr>
+                        <th>23</th><th> </th><td class="l"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th>24</th><th> </th><td class="l"><span>#!html</span> </td>
+                      </tr><tr>
+                        <th>25</th><th> </th><td class="l"><span>&lt;h1 style="color: orange"&gt;This is raw HTML&lt;/h1&gt;</span> </td>
+                      </tr><tr>
+                        <th>26</th><th> </th><td class="l"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th>27</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>28</th><th> </th><td class="l"><span>Note that since 0.11, such blocks of HTML have to be self-contained, i.e. you can't start an HTML element in one block and close it later in a second block. Use div or span processors for achieving similar effect (see WikiHtml).</span> </td>
+                      </tr><tr>
+                        <th>29</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>30</th><th> </th><td class="l"><span>----</span> </td>
+                      </tr><tr>
+                        <th>31</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>32</th><th> </th><td class="l"><span>'''Example 2''' (''inserting Restructured Text in wiki text''):</span> </td>
+                      </tr><tr>
+                        <th>33</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>34</th><th> </th><td class="l"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th>35</th><th> </th><td class="l"><span>#!html</span> </td>
+                      </tr><tr>
+                        <th>36</th><th> </th><td class="l"><span>&lt;pre class="wiki"&gt;{{{</span> </td>
+                      </tr><tr>
+                        <th>37</th><th> </th><td class="l"><span>#!rst</span> </td>
+                      </tr><tr>
+                        <th>38</th><th> </th><td class="l"><span>A header</span> </td>
+                      </tr><tr>
+                        <th>39</th><th> </th><td class="l"><span>--------</span> </td>
+                      </tr><tr>
+                        <th>40</th><th> </th><td class="l"><span>This is some **text** with a footnote [*]_.</span> </td>
+                      </tr><tr>
+                        <th>41</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>42</th><th> </th><td class="l"><span>.. [*] This is the footnote.</span> </td>
+                      </tr><tr>
+                        <th>43</th><th> </th><td class="l"><span>}}}&lt;/pre&gt;</span> </td>
+                      </tr><tr>
+                        <th>44</th><th> </th><td class="l"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th>45</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>46</th><th> </th><td class="l"><span>'''Results in:'''</span> </td>
+                      </tr><tr>
+                        <th>47</th><th> </th><td class="l"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th>48</th><th> </th><td class="l"><span>#!rst</span> </td>
+                      </tr><tr>
+                        <th>49</th><th> </th><td class="l"><span>A header</span> </td>
+                      </tr><tr>
+                        <th>50</th><th> </th><td class="l"><span>--------</span> </td>
+                      </tr><tr>
+                        <th>51</th><th> </th><td class="l"><span>This is some **text** with a footnote [*]_.</span> </td>
+                      </tr><tr>
+                        <th>52</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>53</th><th> </th><td class="l"><span>.. [*] This is the footnote.</span> </td>
+                      </tr><tr>
+                        <th>54</th><th> </th><td class="l"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th>55</th><th> </th><td class="l"><span>----</span> </td>
+                      </tr><tr>
+                        <th>56</th><th> </th><td class="l"><span>'''Example 3''' (''inserting a block of C source code in wiki text''):</span> </td>
+                      </tr><tr>
+                        <th>57</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>58</th><th> </th><td class="l"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th>59</th><th> </th><td class="l"><span>#!html</span> </td>
+                      </tr><tr>
+                        <th>60</th><th> </th><td class="l"><span>&lt;pre class="wiki"&gt;{{{</span> </td>
+                      </tr><tr>
+                        <th>61</th><th> </th><td class="l"><span>#!c</span> </td>
+                      </tr><tr>
+                        <th>62</th><th> </th><td class="l"><span>int main(int argc, char *argv[])</span> </td>
+                      </tr><tr>
+                        <th>63</th><th> </th><td class="l"><span>{</span> </td>
+                      </tr><tr>
+                        <th>64</th><th> </th><td class="l"><span>&nbsp; printf("Hello World\n");</span> </td>
+                      </tr><tr>
+                        <th>65</th><th> </th><td class="l"><span>&nbsp; return 0;</span> </td>
+                      </tr><tr>
+                        <th>66</th><th> </th><td class="l"><span>}</span> </td>
+                      </tr><tr>
+                        <th>67</th><th> </th><td class="l"><span>}}}&lt;/pre&gt;</span> </td>
+                      </tr><tr>
+                        <th>68</th><th> </th><td class="l"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th>69</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>70</th><th> </th><td class="l"><span>'''Results in:'''</span> </td>
+                      </tr><tr>
+                        <th>71</th><th> </th><td class="l"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th>72</th><th> </th><td class="l"><span>#!c</span> </td>
+                      </tr><tr>
+                        <th>73</th><th> </th><td class="l"><span>int main(int argc, char *argv[])</span> </td>
+                      </tr><tr>
+                        <th>74</th><th> </th><td class="l"><span>{</span> </td>
+                      </tr><tr>
+                        <th>75</th><th> </th><td class="l"><span>&nbsp; printf("Hello World\n");</span> </td>
+                      </tr><tr>
+                        <th>76</th><th> </th><td class="l"><span>&nbsp; return 0;</span> </td>
+                      </tr><tr>
+                        <th>77</th><th> </th><td class="l"><span>}</span> </td>
+                      </tr><tr>
+                        <th>78</th><th> </th><td class="l"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th>79</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>80</th><th> </th><td class="l"><span>----</span> </td>
+                      </tr><tr>
+                        <th>81</th><th> </th><td class="l"><span></span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>69</th><td class="r"><span>&lt;h1 style="color: grey"&gt;This is raw HTML&lt;/h1&gt;</span> </td>
+                      </tr><tr>
+                        <th> </th><th>70</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>71</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>72</th><td class="r"><span>|-----------------------------------------------------------------</span> </td>
+                      </tr><tr>
+                        <th> </th><th>73</th><td class="r"><span>{{{#!td colspan=2 align=center style="border: none"</span> </td>
+                      </tr><tr>
+                        <th> </th><th>74</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>75</th><td class="r"><span>&nbsp; &nbsp; &nbsp;__Example 2__: Highlighted Python code in a &lt;div&gt; block with custom style</span> </td>
+                      </tr><tr>
+                        <th> </th><th>76</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>77</th><td class="r"><span>|-----------------------------------------------------------------</span> </td>
+                      </tr><tr>
+                        <th> </th><th>78</th><td class="r"><span>{{{#!td style="border: none"</span> </td>
+                      </tr><tr>
+                        <th> </th><th>79</th><td class="r"><span>&nbsp; {{{</span> </td>
+                      </tr><tr>
+                        <th> </th><th>80</th><td class="r"><span>&nbsp; {{{#!div style="background: #ffd; border: 3px ridge"</span> </td>
+                      </tr><tr>
+                        <th> </th><th>81</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>82</th><td class="r"><span>&nbsp; This is an example of embedded "code" block:</span> </td>
+                      </tr><tr>
+                        <th> </th><th>83</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>84</th><td class="r"><span>&nbsp; &nbsp; {{{</span> </td>
+                      </tr><tr>
+                        <th> </th><th>85</th><td class="r"><span>&nbsp; &nbsp; #!python</span> </td>
+                      </tr><tr>
+                        <th> </th><th>86</th><td class="r"><span>&nbsp; &nbsp; def hello():</span> </td>
+                      </tr><tr>
+                        <th> </th><th>87</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; return "world"</span> </td>
+                      </tr><tr>
+                        <th> </th><th>88</th><td class="r"><span>&nbsp; &nbsp; }}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>89</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>90</th><td class="r"><span>&nbsp; }}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>91</th><td class="r"><span>&nbsp; }}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>92</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>93</th><td class="r"><span>{{{#!td valign=top style="border: none; padding: 1em"</span> </td>
+                      </tr><tr>
+                        <th> </th><th>94</th><td class="r"><span>&nbsp; {{{#!div style="background: #ffd; border: 3px ridge"</span> </td>
+                      </tr><tr>
+                        <th> </th><th>95</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>96</th><td class="r"><span>&nbsp; This is an example of embedded "code" block:</span> </td>
+                      </tr><tr>
+                        <th> </th><th>97</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>98</th><td class="r"><span>&nbsp; &nbsp; {{{</span> </td>
+                      </tr><tr>
+                        <th> </th><th>99</th><td class="r"><span>&nbsp; &nbsp; #!python</span> </td>
+                      </tr><tr>
+                        <th> </th><th>100</th><td class="r"><span>&nbsp; &nbsp; def hello():</span> </td>
+                      </tr><tr>
+                        <th> </th><th>101</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; return "world"</span> </td>
+                      </tr><tr>
+                        <th> </th><th>102</th><td class="r"><span>&nbsp; &nbsp; }}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>103</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>104</th><td class="r"><span>&nbsp; }}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>105</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>106</th><td class="r"><span>|-----------------------------------------------------------------</span> </td>
+                      </tr><tr>
+                        <th> </th><th>107</th><td class="r"><span>{{{#!td colspan=2 align=center style="border: none"</span> </td>
+                      </tr><tr>
+                        <th> </th><th>108</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>109</th><td class="r"><span>&nbsp; &nbsp; &nbsp;__Example 3__: Searching tickets from a wiki page, by keywords.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>110</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>111</th><td class="r"><span>|-----------------------------------------------------------------</span> </td>
+                      </tr><tr>
+                        <th> </th><th>112</th><td class="r"><span>{{{#!td style="border: none"</span> </td>
+                      </tr><tr>
+                        <th> </th><th>113</th><td class="r"><span>&nbsp; {{{</span> </td>
+                      </tr><tr>
+                        <th> </th><th>114</th><td class="r"><span>&nbsp; {{{</span> </td>
+                      </tr><tr>
+                        <th> </th><th>115</th><td class="r"><span>&nbsp; #!html</span> </td>
+                      </tr><tr>
+                        <th> </th><th>116</th><td class="r"><span>&nbsp; &lt;form action="/query" method="get"&gt;&lt;div&gt;</span> </td>
+                      </tr><tr>
+                        <th> </th><th>117</th><td class="r"><span>&nbsp; &lt;input type="text" name="keywords" value="~" size="30"/&gt;</span> </td>
+                      </tr><tr>
+                        <th> </th><th>118</th><td class="r"><span>&nbsp; &lt;input type="submit" value="Search by Keywords"/&gt;</span> </td>
+                      </tr><tr>
+                        <th> </th><th>119</th><td class="r"><span>&nbsp; &lt;!-- To control what fields show up use hidden fields</span> </td>
+                      </tr><tr>
+                        <th> </th><th>120</th><td class="r"><span>&nbsp; &lt;input type="hidden" name="col" value="id"/&gt;</span> </td>
+                      </tr><tr>
+                        <th> </th><th>121</th><td class="r"><span>&nbsp; &lt;input type="hidden" name="col" value="summary"/&gt;</span> </td>
+                      </tr><tr>
+                        <th> </th><th>122</th><td class="r"><span>&nbsp; &lt;input type="hidden" name="col" value="status"/&gt;</span> </td>
+                      </tr><tr>
+                        <th> </th><th>123</th><td class="r"><span>&nbsp; &lt;input type="hidden" name="col" value="milestone"/&gt;</span> </td>
+                      </tr><tr>
+                        <th> </th><th>124</th><td class="r"><span>&nbsp; &lt;input type="hidden" name="col" value="version"/&gt;</span> </td>
+                      </tr><tr>
+                        <th> </th><th>125</th><td class="r"><span>&nbsp; &lt;input type="hidden" name="col" value="owner"/&gt;</span> </td>
+                      </tr><tr>
+                        <th> </th><th>126</th><td class="r"><span>&nbsp; &lt;input type="hidden" name="col" value="priority"/&gt;</span> </td>
+                      </tr><tr>
+                        <th> </th><th>127</th><td class="r"><span>&nbsp; &lt;input type="hidden" name="col" value="component"/&gt;</span> </td>
+                      </tr><tr>
+                        <th> </th><th>128</th><td class="r"><span>&nbsp; --&gt;</span> </td>
+                      </tr><tr>
+                        <th> </th><th>129</th><td class="r"><span>&nbsp; &lt;/div&gt;&lt;/form&gt;</span> </td>
+                      </tr><tr>
+                        <th> </th><th>130</th><td class="r"><span>&nbsp; }}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>131</th><td class="r"><span>&nbsp; }}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>132</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>133</th><td class="r"><span>{{{#!td valign=top style="border: none; padding: 1em"</span> </td>
+                      </tr><tr>
+                        <th> </th><th>134</th><td class="r"><span>&nbsp; {{{</span> </td>
+                      </tr><tr>
+                        <th> </th><th>135</th><td class="r"><span>&nbsp; #!html</span> </td>
+                      </tr><tr>
+                        <th> </th><th>136</th><td class="r"><span>&nbsp; &lt;form action="/query" method="get"&gt;&lt;div&gt;</span> </td>
+                      </tr><tr>
+                        <th> </th><th>137</th><td class="r"><span>&nbsp; &lt;input type="text" name="keywords" value="~" size="30"/&gt;</span> </td>
+                      </tr><tr>
+                        <th> </th><th>138</th><td class="r"><span>&nbsp; &lt;input type="submit" value="Search by Keywords"/&gt;</span> </td>
+                      </tr><tr>
+                        <th> </th><th>139</th><td class="r"><span>&nbsp; &lt;!-- To control what fields show up use hidden fields</span> </td>
+                      </tr><tr>
+                        <th> </th><th>140</th><td class="r"><span>&nbsp; &lt;input type="hidden" name="col" value="id"/&gt;</span> </td>
+                      </tr><tr>
+                        <th> </th><th>141</th><td class="r"><span>&nbsp; &lt;input type="hidden" name="col" value="summary"/&gt;</span> </td>
+                      </tr><tr>
+                        <th> </th><th>142</th><td class="r"><span>&nbsp; &lt;input type="hidden" name="col" value="status"/&gt;</span> </td>
+                      </tr><tr>
+                        <th> </th><th>143</th><td class="r"><span>&nbsp; &lt;input type="hidden" name="col" value="milestone"/&gt;</span> </td>
+                      </tr><tr>
+                        <th> </th><th>144</th><td class="r"><span>&nbsp; &lt;input type="hidden" name="col" value="version"/&gt;</span> </td>
+                      </tr><tr>
+                        <th> </th><th>145</th><td class="r"><span>&nbsp; &lt;input type="hidden" name="col" value="owner"/&gt;</span> </td>
+                      </tr><tr>
+                        <th> </th><th>146</th><td class="r"><span>&nbsp; &lt;input type="hidden" name="col" value="priority"/&gt;</span> </td>
+                      </tr><tr>
+                        <th> </th><th>147</th><td class="r"><span>&nbsp; &lt;input type="hidden" name="col" value="component"/&gt;</span> </td>
+                      </tr><tr>
+                        <th> </th><th>148</th><td class="r"><span>&nbsp; --&gt;</span> </td>
+                      </tr><tr>
+                        <th> </th><th>149</th><td class="r"><span>&nbsp; &lt;/div&gt;&lt;/form&gt;</span> </td>
+                      </tr><tr>
+                        <th> </th><th>150</th><td class="r"><span>&nbsp; }}}</span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>151</th><td class="r"><span>}}}</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>82</th><th>152</th><td class="l"><span>== Available Processors ==</span> </td>
+                  </tr>
+            </tbody><tbody class="add">
+                  <tr class="last first">
+                          <th> </th><th>153</th><td class="r"><ins></ins> </td>
+                  </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>83</th><th>154</th><td class="l"><span>The following processors are included in the Trac distribution:</span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>84</th><th> </th><td class="l"><span>&nbsp;* '''html''' -- Insert custom HTML in a wiki page. See WikiHtml.</span> </td>
+                      </tr><tr>
+                        <th>85</th><th> </th><td class="l"><span>&nbsp;* '''div''' -- Wrap an arbitrary Wiki content in a &lt;div&gt; element (''since 0.11''). See WikiHtml.</span> </td>
+                      </tr><tr>
+                        <th>86</th><th> </th><td class="l"><span>&nbsp;* '''span''' -- Wrap an arbitrary Wiki content in a &lt;span&gt; element (''since 0.11''). See also WikiHtml.</span> </td>
+                      </tr><tr>
+                        <th>87</th><th> </th><td class="l"><span>&nbsp;* '''rst''' -- Trac support for Restructured Text. See WikiRestructuredText.</span> </td>
+                      </tr><tr>
+                        <th>88</th><th> </th><td class="l"><span>&nbsp;* '''textile''' -- Supported if [http://cheeseshop.python.org/pypi/textile Textile] is installed. See [http://www.textism.com/tools/textile/ a Textile reference].</span> </td>
+                      </tr><tr>
+                        <th>89</th><th> </th><td class="l"><span>&nbsp;* '''comment''' -- Do not process the text in this section (i.e. contents exist only in the plain text - not in the rendered page).</span> </td>
+                      </tr><tr>
+                        <th>90</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>91</th><th> </th><td class="l"><span>=== Code Highlighting Support ===</span> </td>
+                      </tr><tr>
+                        <th>92</th><th> </th><td class="l"><span>Trac includes processors to provide inline [wiki:TracSyntaxColoring syntax highlighting] for the following languages:</span> </td>
+                      </tr><tr>
+                        <th>93</th><th> </th><td class="l"><span>&nbsp;* '''c''' -- C</span> </td>
+                      </tr><tr>
+                        <th>94</th><th> </th><td class="l"><span>&nbsp;* '''cpp''' -- C++</span> </td>
+                      </tr><tr>
+                        <th>95</th><th> </th><td class="l"><span>&nbsp;* '''python''' -- Python</span> </td>
+                      </tr><tr>
+                        <th>96</th><th> </th><td class="l"><span>&nbsp;* '''perl''' -- Perl</span> </td>
+                      </tr><tr>
+                        <th>97</th><th> </th><td class="l"><span>&nbsp;* '''ruby''' -- Ruby</span> </td>
+                      </tr><tr>
+                        <th>98</th><th> </th><td class="l"><span>&nbsp;* '''php''' -- PHP</span> </td>
+                      </tr><tr>
+                        <th>99</th><th> </th><td class="l"><span>&nbsp;* '''asp''' -- ASP</span> </td>
+                      </tr><tr>
+                        <th>100</th><th> </th><td class="l"><span>&nbsp;* '''java''' -- Java</span> </td>
+                      </tr><tr>
+                        <th>101</th><th> </th><td class="l"><span>&nbsp;* '''js''' -- Javascript</span> </td>
+                      </tr><tr>
+                        <th>102</th><th> </th><td class="l"><span>&nbsp;* '''sql''' -- SQL</span> </td>
+                      </tr><tr>
+                        <th>103</th><th> </th><td class="l"><span>&nbsp;* '''xml''' -- XML</span> </td>
+                      </tr><tr>
+                        <th>104</th><th> </th><td class="l"><span>&nbsp;* '''sh''' -- Bourne/Bash shell</span> </td>
+                      </tr><tr>
+                        <th>105</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>106</th><th> </th><td class="l"><span>'''Note:''' ''Trac relies on external software packages for syntax coloring. See TracSyntaxColoring for more info.''</span> </td>
+                      </tr><tr>
+                        <th>107</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>108</th><th> </th><td class="l"><span>By using the MIME type as processor, it is possible to syntax-highlight the same languages that are supported when browsing source code. For example, you can write:</span> </td>
+                      </tr><tr>
+                        <th>109</th><th> </th><td class="l"><span>{{{</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>155</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>156</th><td class="r"><span>|| '''`#!default`''' || Present the text verbatim in a preformatted text block. This is the same as specifying ''no'' processor name (and no `#!`) ||</span> </td>
+                      </tr><tr>
+                        <th> </th><th>157</th><td class="r"><span>|| '''`#!comment`''' || Do not process the text in this section (i.e. contents exist only in the plain text - not in the rendered page). ||</span> </td>
+                      </tr><tr>
+                        <th> </th><th>158</th><td class="r"><span>|||| ||</span> </td>
+                      </tr><tr>
+                        <th> </th><th>159</th><td class="r"><span>||||= '''HTML related''' =||</span> </td>
+                      </tr><tr>
+                        <th> </th><th>160</th><td class="r"><span>|| '''`#!html`''' || Insert custom HTML in a wiki page. ||</span> </td>
+                      </tr><tr>
+                        <th> </th><th>161</th><td class="r"><span>|| '''`#!htmlcomment`''' || Insert an HTML comment in a wiki page (''since 0.12''). ||</span> </td>
+                      </tr><tr>
+                        <th> </th><th>162</th><td class="r"><span>|| || Note that `#!html` blocks have to be ''self-contained'', i.e. you can't start an HTML element in one block and close it later in a second block. Use the following processors for achieving a similar effect.&nbsp; ||</span> </td>
+                      </tr><tr>
+                        <th> </th><th>163</th><td class="r"><span>|| '''`#!div`''' || Wrap an arbitrary Wiki content inside a &lt;div&gt; element (''since 0.11''). ||</span> </td>
+                      </tr><tr>
+                        <th> </th><th>164</th><td class="r"><span>|| '''`#!span`''' || Wrap an arbitrary Wiki content inside a &lt;span&gt; element (''since 0.11''). ||</span> </td>
+                      </tr><tr>
+                        <th> </th><th>165</th><td class="r"><span>|| '''`#!td`''' || Wrap an arbitrary Wiki content inside a &lt;td&gt; element (''since 0.12'') ||</span> </td>
+                      </tr><tr>
+                        <th> </th><th>166</th><td class="r"><span>|| '''`#!th`''' || Wrap an arbitrary Wiki content inside a &lt;th&gt; element (''since 0.12'') ||</span> </td>
+                      </tr><tr>
+                        <th> </th><th>167</th><td class="r"><span>|| '''`#!tr`''' || Can optionally be used for wrapping `#!td` and `#!th` blocks, either for specifying row attributes of better visual grouping (''since 0.12'') ||</span> </td>
+                      </tr><tr>
+                        <th> </th><th>168</th><td class="r"><span>|| || See WikiHtml for example usage and more details about these processors. ||</span> </td>
+                      </tr><tr>
+                        <th> </th><th>169</th><td class="r"><span>|||| ||</span> </td>
+                      </tr><tr>
+                        <th> </th><th>170</th><td class="r"><span>||||= '''Other Markups''' =||</span> </td>
+                      </tr><tr>
+                        <th> </th><th>171</th><td class="r"><span>|| '''`#!rst`''' || Trac support for Restructured Text. See WikiRestructuredText. ||</span> </td>
+                      </tr><tr>
+                        <th> </th><th>172</th><td class="r"><span>|| '''`#!textile`''' || Supported if [http://cheeseshop.python.org/pypi/textile Textile] is installed. See [http://www.textism.com/tools/textile/ a Textile reference]. ||</span> </td>
+                      </tr><tr>
+                        <th> </th><th>173</th><td class="r"><span>|||| ||</span> </td>
+                      </tr><tr>
+                        <th> </th><th>174</th><td class="r"><span>||||= '''Code Highlighting Support''' =||</span> </td>
+                      </tr><tr>
+                        <th> </th><th>175</th><td class="r"><span>|| '''`#!c`''' [[BR]] '''`#!cpp`''' (C++) [[BR]] '''`#!python`''' [[BR]] '''`#!perl`''' [[BR]] '''`#!ruby`''' [[BR]] '''`#!php`''' [[BR]] '''`#!asp`''' [[BR]] '''`#!java`''' [[BR]] '''`#!js`''' (Javascript) [[BR]] '''`#!sql`''' [[BR]] '''`#!xml`''' (XML or HTML) [[BR]] '''`#!sh`''' (!Bourne/Bash shell) [[BR]] '''etc.''' [[BR]] || Trac includes processors to provide inline syntax highlighting for source code in various languages. [[BR]] [[BR]] Trac relies on external software packages for syntax coloring, like [http://pygments.org Pygments]. [[BR]] [[BR]] See TracSyntaxColoring for information about which languages are supported and how to enable support for more languages. ||</span> </td>
+                      </tr><tr>
+                        <th> </th><th>176</th><td class="r"><span>|||| ||</span> </td>
+                      </tr><tr>
+                        <th> </th><th>177</th><td class="r"><span>||||= '''MIME Type Processors''' =||</span> </td>
+                      </tr><tr>
+                        <th> </th><th>178</th><td class="r"><span>|||| Using the MIME type as processor, it is possible to syntax-highlight the same languages that are supported when browsing source code. ||</span> </td>
+                      </tr><tr>
+                        <th> </th><th>179</th><td class="r"><span>{{{#!tr</span> </td>
+                      </tr><tr>
+                        <th> </th><th>180</th><td class="r"><span>{{{#!td</span> </td>
+                      </tr><tr>
+                        <th> </th><th>181</th><td class="r"><span>Some examples:</span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>182</th><td class="r"><span>&nbsp;{{{</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>110</th><th>183</th><td class="l"><span>{{{</span> </td>
+                  </tr><tr>
+                          <th>111</th><th>184</th><td class="l"><span>#!text/html</span> </td>
+                  </tr><tr>
+                          <th>112</th><th>185</th><td class="l"><span>&lt;h1&gt;text&lt;/h1&gt;</span> </td>
+                  </tr><tr>
+                          <th>113</th><th>186</th><td class="l"><span>}}}</span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>114</th><th> </th><td class="l"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th>115</th><th> </th><td class="l"><span></span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>187</th><td class="r"><span>&nbsp;}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>188</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>189</th><td class="r"><span>{{{#!td</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>116</th><th>190</th><td class="l"><span>The result will be syntax highlighted HTML code:</span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>117</th><th> </th><td class="l"><span><del></del>{{{</span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>191</th><td class="r"><span><ins>&nbsp;</ins>{{{</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>118</th><th>192</th><td class="l"><span>#!text/html</span> </td>
+                  </tr><tr>
+                          <th>119</th><th>193</th><td class="l"><span>&lt;h1&gt;text&lt;/h1&gt;</span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>120</th><th> </th><td class="l"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th>121</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>122</th><th> </th><td class="l"><span>The same is valid for all other mime types supported.</span> </td>
+                      </tr><tr>
+                        <th>123</th><th> </th><td class="l"><span></span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>194</th><td class="r"><span>&nbsp;}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>195</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>196</th><td class="r"><span>The same is valid for all other [TracSyntaxColoring#SyntaxColoringSupport mime types supported].</span> </td>
+                      </tr><tr>
+                        <th> </th><th>197</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>198</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>199</th><td class="r"><span>{{{#!td</span> </td>
+                      </tr><tr>
+                        <th> </th><th>200</th><td class="r"><span>&nbsp;{{{</span> </td>
+                      </tr><tr>
+                        <th> </th><th>201</th><td class="r"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th> </th><th>202</th><td class="r"><span>#!diff</span> </td>
+                      </tr><tr>
+                        <th> </th><th>203</th><td class="r"><span>--- Version 55</span> </td>
+                      </tr><tr>
+                        <th> </th><th>204</th><td class="r"><span>+++ Version 56</span> </td>
+                      </tr><tr>
+                        <th> </th><th>205</th><td class="r"><span>@@ -115,8 +115,9 @@</span> </td>
+                      </tr><tr>
+                        <th> </th><th>206</th><td class="r"><span>&nbsp; &nbsp; &nbsp;name='TracHelloWorld', version='1.0',</span> </td>
+                      </tr><tr>
+                        <th> </th><th>207</th><td class="r"><span>&nbsp; &nbsp; &nbsp;packages=find_packages(exclude=['*.tests*']),</span> </td>
+                      </tr><tr>
+                        <th> </th><th>208</th><td class="r"><span>-&nbsp; &nbsp; entry_points = """</span> </td>
+                      </tr><tr>
+                        <th> </th><th>209</th><td class="r"><span>-&nbsp; &nbsp; &nbsp; &nbsp; [trac.plugins]</span> </td>
+                      </tr><tr>
+                        <th> </th><th>210</th><td class="r"><span>-&nbsp; &nbsp; &nbsp; &nbsp; helloworld = myplugs.helloworld</span> </td>
+                      </tr><tr>
+                        <th> </th><th>211</th><td class="r"><span>-&nbsp; &nbsp; """,</span> </td>
+                      </tr><tr>
+                        <th> </th><th>212</th><td class="r"><span>+&nbsp; &nbsp; entry_points = {</span> </td>
+                      </tr><tr>
+                        <th> </th><th>213</th><td class="r"><span>+&nbsp; &nbsp; &nbsp; &nbsp; 'trac.plugins': [</span> </td>
+                      </tr><tr>
+                        <th> </th><th>214</th><td class="r"><span>+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'helloworld = myplugs.helloworld',</span> </td>
+                      </tr><tr>
+                        <th> </th><th>215</th><td class="r"><span>+&nbsp; &nbsp; &nbsp; &nbsp; ],</span> </td>
+                      </tr><tr>
+                        <th> </th><th>216</th><td class="r"><span>+&nbsp; &nbsp; },</span> </td>
+                      </tr><tr>
+                        <th> </th><th>217</th><td class="r"><span>&nbsp;)</span> </td>
+                      </tr><tr>
+                        <th> </th><th>218</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>219</th><td class="r"><span>&nbsp;}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>220</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>221</th><td class="r"><span>{{{#!td</span> </td>
+                      </tr><tr>
+                        <th> </th><th>222</th><td class="r"><span>'''`#!diff`''' has a particularly nice renderer:</span> </td>
+                      </tr><tr>
+                        <th> </th><th>223</th><td class="r"><span>&nbsp;{{{</span> </td>
+                      </tr><tr>
+                        <th> </th><th>224</th><td class="r"><span>#!diff</span> </td>
+                      </tr><tr>
+                        <th> </th><th>225</th><td class="r"><span>--- Version 55</span> </td>
+                      </tr><tr>
+                        <th> </th><th>226</th><td class="r"><span>+++ Version 56</span> </td>
+                      </tr><tr>
+                        <th> </th><th>227</th><td class="r"><span>@@ -115,8 +115,9 @@</span> </td>
+                      </tr><tr>
+                        <th> </th><th>228</th><td class="r"><span>&nbsp; &nbsp; &nbsp;name='TracHelloWorld', version='1.0',</span> </td>
+                      </tr><tr>
+                        <th> </th><th>229</th><td class="r"><span>&nbsp; &nbsp; &nbsp;packages=find_packages(exclude=['*.tests*']),</span> </td>
+                      </tr><tr>
+                        <th> </th><th>230</th><td class="r"><span>-&nbsp; &nbsp; entry_points = """</span> </td>
+                      </tr><tr>
+                        <th> </th><th>231</th><td class="r"><span>-&nbsp; &nbsp; &nbsp; &nbsp; [trac.plugins]</span> </td>
+                      </tr><tr>
+                        <th> </th><th>232</th><td class="r"><span>-&nbsp; &nbsp; &nbsp; &nbsp; helloworld = myplugs.helloworld</span> </td>
+                      </tr><tr>
+                        <th> </th><th>233</th><td class="r"><span>-&nbsp; &nbsp; """,</span> </td>
+                      </tr><tr>
+                        <th> </th><th>234</th><td class="r"><span>+&nbsp; &nbsp; entry_points = {</span> </td>
+                      </tr><tr>
+                        <th> </th><th>235</th><td class="r"><span>+&nbsp; &nbsp; &nbsp; &nbsp; 'trac.plugins': [</span> </td>
+                      </tr><tr>
+                        <th> </th><th>236</th><td class="r"><span>+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'helloworld = myplugs.helloworld',</span> </td>
+                      </tr><tr>
+                        <th> </th><th>237</th><td class="r"><span>+&nbsp; &nbsp; &nbsp; &nbsp; ],</span> </td>
+                      </tr><tr>
+                        <th> </th><th>238</th><td class="r"><span>+&nbsp; &nbsp; },</span> </td>
+                      </tr><tr>
+                        <th> </th><th>239</th><td class="r"><span>&nbsp;)</span> </td>
+                      </tr><tr>
+                        <th> </th><th>240</th><td class="r"><span>&nbsp;}}}</span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>241</th><td class="r"><span>}}}</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>124</th><th>242</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>125</th><th>243</th><td class="l"><span>For more processor macros developed and/or contributed by users, visit: </span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="WikiProcessors%3Fversion=3.html#L128">…</a></th>
+                  <th><a href="WikiProcessors%3Fversion=4.html#L246">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>128</th><th>246</th><td class="l"><span>&nbsp;* [th:WikiStart Trac Hacks] community site</span> </td>
+                  </tr><tr>
+                          <th>129</th><th>247</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>130</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>131</th><th> </th><td class="l"><span>== Advanced Topics: Developing Processor Macros ==</span> </td>
+                      </tr><tr>
+                        <th>132</th><th> </th><td class="l"><span><del>Developing processors is no different from Wiki macros. In fact they work the same way, only the usage syntax differs. See Wiki</del>Macros for more information.</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>248</th><td class="r"><span>Developing processors is no different from Wiki macros. </span> </td>
+                      </tr><tr>
+                        <th> </th><th>249</th><td class="r"><span>In fact they work the same way, only the usage syntax differs. </span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>250</th><td class="r"><span><ins>See WikiMacros#DevelopingCustom</ins>Macros for more information.</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>133</th><th>251</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>134</th><th>252</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody>
+        </table>
+      </li>
+  </ul>
+</div>
+      </div>
+  </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

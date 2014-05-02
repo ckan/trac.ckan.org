@@ -1,0 +1,14 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1287	NAVL validation errors - Junk fields should be listed explicitly	dread	thejimmyg	"When you create a package, but specify a key that is not allowed (e.g. 'relationships') then you get error message:
+
+{{{
+{""__junk"": [""The input field __junk was not expected.""]}
+}}}
+
+It should mention the actual key which is not expected. e.g.
+
+{{{
+{""relationships"": [""The input field 'relationships' was not expected.""]}
+}}}
+
+Kindly said that James' version of NAVL was better in this respect, so this might be best solved by moving to that."	enhancement	assigned	awaiting triage	ckan-backlog	ckan			thejimmyg kindly	ckan	none

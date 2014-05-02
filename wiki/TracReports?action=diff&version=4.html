@@ -1,0 +1,680 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+    <html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      TracReports (diff) – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="help" href="TracGuide.html" />
+        <link rel="up" href="TracReports%3Faction=history.html" title="Page history" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/wiki.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/diff.css" type="text/css" />
+        <link rel="prev" href="TracReports%3Faction=diff&amp;version=3.html" title="Version 3" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/diff.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="../chrome/common/css/diff.css" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last active"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="TracReports%3Faction=diff&amp;version=3.html" title="Version 3">Previous Change</a></span></li><li><a href="TracReports%3Faction=history.html" title="Page history">Wiki History</a></li><li class="last"><span class="missing">Next Change &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="wiki">
+      <h1>
+        Changes between
+          <a href="TracReports%3Fversion=3.html">Version 3</a> and
+          <a href="TracReports%3Fversion=4.html">Version 4</a> of
+          <a href="TracReports%3Fversion=4.html">TracReports</a>
+      </h1>
+      <form method="post" id="prefs" action="TracReports%3Fversion=4.html"><div><input type="hidden" name="__FORM_TOKEN" value="93d81ccf9a7bb1c456462f62" /></div>
+        <div>
+          <input type="hidden" name="action" value="diff" />
+          <input type="hidden" name="version" value="4" />
+          <input type="hidden" name="old_version" value="3" />
+          
+  <label for="style">View differences</label>
+  <select id="style" name="style">
+    <option selected="selected" value="inline">inline</option>
+    <option value="sidebyside">side by side</option>
+  </select>
+  <div class="field">
+    <label><input type="radio" name="contextall" value="0" checked="checked" />
+             Show</label>
+      <label><input type="text" name="contextlines" id="contextlines" size="2" maxlength="3" value="2" />
+             lines around each change</label><br />
+    <label><input type="radio" name="contextall" value="1" />
+           Show the changes in full context</label>
+  </div>
+  <fieldset id="ignore">
+    <legend>Ignore:</legend>
+    <div class="field">
+      <input type="checkbox" id="ignoreblanklines" name="ignoreblanklines" />
+      <label for="ignoreblanklines">Blank lines</label>
+    </div>
+    <div class="field">
+      <input type="checkbox" id="ignorecase" name="ignorecase" />
+      <label for="ignorecase">Case changes</label>
+    </div>
+    <div class="field">
+      <input type="checkbox" id="ignorewhitespace" name="ignorewhitespace" />
+      <label for="ignorewhitespace">White space changes</label>
+    </div>
+  </fieldset>
+  <div class="buttons">
+    <input type="submit" name="update" value="Update" />
+  </div>
+
+        </div>
+      </form>
+      <dl id="overview">
+        <dt class="property time">Timestamp:</dt>
+        <dd class="time">
+            05/02/14 01:33:04 (<a class="timeline" href="../timeline%3Ffrom=2014-05-02T01:33:04Z&amp;precision=second.html" title="2014-05-02T01:33:04Z in Timeline">6 minutes</a> ago)
+        </dd>
+        <dt class="property author">Author:</dt>
+        <dd class="author">
+          trac
+        </dd>
+        <dt class="property message">Comment:</dt>
+        <dd class="message">
+          
+          <p>
+--
+</p>
+
+        </dd>
+      </dl>
+      <div class="diff">
+        <div class="legend" id="diff-legend">
+          <h3>Legend:</h3>
+          <dl>
+            <dt class="unmod"></dt><dd>Unmodified</dd>
+            <dt class="add"></dt><dd>Added</dd>
+            <dt class="rem"></dt><dd>Removed</dd>
+            <dt class="mod"></dt><dd>Modified</dd>
+          </dl>
+        </div>
+        <div class="diff">
+  <ul class="entries">
+      <li class="entry">
+        <h2 id="file0">
+          <a href="TracReports%3Fversion=4.html">TracReports</a>
+        </h2>
+        <table class="trac-diff inline" summary="Differences" cellspacing="0">
+              <colgroup><col class="lineno" /><col class="lineno" /><col class="content" /></colgroup>
+              <thead>
+                <tr>
+                  <th title="Version 3">
+                    <a href="TracReports%3Fversion=3.html#L17">
+                      v3</a>
+                  </th>
+                  <th title="Version 4">
+                    <a href="TracReports%3Fversion=4.html#L17">
+                      v4</a>
+                  </th>
+                  <td> </td>
+                </tr>
+              </thead>
+            <tbody class="unmod">
+                  <tr>
+                          <th>17</th><th>17</th><td class="l"><span>&nbsp; ''This will make the query module the default handler for the “View Tickets” navigation item. We encourage you to try this configuration and report back what kind of features of reports you are missing, if any.''</span> </td>
+                  </tr><tr>
+                          <th>18</th><th>18</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="rem">
+                  <tr class="first">
+                          <th>19</th><th> </th><td class="l"><del>&nbsp; '''''You will almost definitely need to restart your httpd at this point.'''''</del> </td>
+                  </tr><tr class="last">
+                          <th>20</th><th> </th><td class="l"><del></del> </td>
+                  </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>21</th><th>19</th><td class="l"><span>A report consists of these basic parts:</span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>22</th><th> </th><td class="l"><span>&nbsp;* '''ID''' <del>--</del> Unique (sequential) identifier </span> </td>
+                      </tr><tr>
+                        <th>23</th><th> </th><td class="l"><span>&nbsp;* '''Title''' <del>&nbsp;--</del> Descriptive title</span> </td>
+                      </tr><tr>
+                        <th>24</th><th> </th><td class="l"><span>&nbsp;* '''Description''' <del>&nbsp;--</del> A brief description of the report, in WikiFormatting text.</span> </td>
+                      </tr><tr>
+                        <th>25</th><th> </th><td class="l"><span>&nbsp;* '''Report Body''' <del>--</del> List of results from report query, formatted according to the methods described below.</span> </td>
+                      </tr><tr>
+                        <th>26</th><th> </th><td class="l"><span>&nbsp;* '''Footer''' <del>--</del> Links to alternative download formats for this report.</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>20</th><td class="r"><span>&nbsp;* '''ID''' <ins>—</ins> Unique (sequential) identifier </span> </td>
+                      </tr><tr>
+                        <th> </th><th>21</th><td class="r"><span>&nbsp;* '''Title''' <ins>—</ins> Descriptive title</span> </td>
+                      </tr><tr>
+                        <th> </th><th>22</th><td class="r"><span>&nbsp;* '''Description''' <ins>—</ins> A brief description of the report, in WikiFormatting text.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>23</th><td class="r"><span>&nbsp;* '''Report Body''' <ins>—</ins> List of results from report query, formatted according to the methods described below.</span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>24</th><td class="r"><span>&nbsp;* '''Footer''' <ins>—</ins> Links to alternative download formats for this report.</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>27</th><th>25</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>28</th><th>26</th><td class="l"><span>== Changing Sort Order ==</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracReports%3Fversion=3.html#L32">…</a></th>
+                  <th><a href="TracReports%3Fversion=4.html#L30">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>32</th><th>30</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>33</th><th>31</th><td class="l"><span>== Changing Report Numbering ==</span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>34</th><th> </th><td class="l"><span>There may be instances where you need to change the ID of the report, perhaps to organize the reports better. At present this requires changes to the trac database. The ''report'' table has the following schema <del>(as of 0.10)</del>:</span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>32</th><td class="r"><span>There may be instances where you need to change the ID of the report, perhaps to organize the reports better. At present this requires changes to the trac database. The ''report'' table has the following schema <ins>''(since 0.10)''</ins>:</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>35</th><th>33</th><td class="l"><span>&nbsp;* id integer PRIMARY KEY</span> </td>
+                  </tr><tr>
+                          <th>36</th><th>34</th><td class="l"><span>&nbsp;* author text</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracReports%3Fversion=3.html#L44">…</a></th>
+                  <th><a href="TracReports%3Fversion=4.html#L42">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>44</th><th>42</th><td class="l"><span>Keep in mind that the integrity has to be maintained (i.e., ID has to be unique, and you don't want to exceed the max, since that's managed by SQLite someplace).</span> </td>
+                  </tr><tr>
+                          <th>45</th><th>43</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="add">
+                  <tr class="first">
+                          <th> </th><th>44</th><td class="r"><ins>You may also need to update or remove the report number stored in the report or query.</ins> </td>
+                  </tr><tr class="last">
+                          <th> </th><th>45</th><td class="r"><ins></ins> </td>
+                  </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>46</th><th>46</th><td class="l"><span>== Navigating Tickets ==</span> </td>
+                  </tr><tr>
+                          <th>47</th><th>47</th><td class="l"><span>Clicking on one of the report results will take you to that ticket. You can navigate through the results by clicking the ''Next Ticket'' or ''Previous Ticket'' links just below the main menu bar, or click the ''Back to Report'' link to return to the report page.</span> </td>
+                  </tr><tr>
+                          <th>48</th><th>48</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>49</th><th> </th><td class="l"><span>You can safely edit any of the tickets and continue to navigate through the results using the <del>Next/Previous/Back to Report</del> links after saving your results, but when you return to the report, there will be no hint about what has changed, as would happen if you were navigating a list of tickets obtained from a query (see TracQuery#NavigatingTickets). ''(since 0.11)''</span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>49</th><td class="r"><span>You can safely edit any of the tickets and continue to navigate through the results using the <ins>''!Next/Previous/Back to Report''</ins> links after saving your results, but when you return to the report, there will be no hint about what has changed, as would happen if you were navigating a list of tickets obtained from a query (see TracQuery#NavigatingTickets). ''(since 0.11)''</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>50</th><th>50</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>51</th><th>51</th><td class="l"><span>== Alternative Download Formats ==</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracReports%3Fversion=3.html#L56">…</a></th>
+                  <th><a href="TracReports%3Fversion=4.html#L56">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>56</th><th>56</th><td class="l"><span>=== Comma-delimited - CSV (Comma Separated Values) ===</span> </td>
+                  </tr><tr>
+                          <th>57</th><th>57</th><td class="l"><span>Export the report as plain text, each row on its own line, columns separated by a single comma (',').</span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>58</th><th> </th><td class="l"><span>'''Note:''' <del>Carriage returns, line feeds, and commas are stripped from column data to preserve the CSV structure</del>.</span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>58</th><td class="r"><span>'''Note:''' <ins>The output is fully escaped so carriage returns, line feeds, and commas will be preserved in the output</ins>.</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>59</th><th>59</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>60</th><th>60</th><td class="l"><span>=== Tab-delimited ===</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracReports%3Fversion=3.html#L72">…</a></th>
+                  <th><a href="TracReports%3Fversion=4.html#L72">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>72</th><th>72</th><td class="l"><span>A report is basically a single named SQL query, executed and presented by</span> </td>
+                  </tr><tr>
+                          <th>73</th><th>73</th><td class="l"><span>Trac.&nbsp; Reports can be viewed and created from a custom SQL expression directly</span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>74</th><th> </th><td class="l"><span>in <del>from </del>the web interface.</span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>74</th><td class="r"><span>in <ins></ins>the web interface.</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>75</th><th>75</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>76</th><th>76</th><td class="l"><span>Typically, a report consists of a SELECT-expression from the 'ticket' table,</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracReports%3Fversion=3.html#L99">…</a></th>
+                  <th><a href="TracReports%3Fversion=4.html#L99">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>99</th><th>99</th><td class="l"><span>See TracTickets for a detailed description of the column fields.</span> </td>
+                  </tr><tr>
+                          <th>100</th><th>100</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>101</th><th> </th><td class="l"><span>'''all active tickets, sorted by priority and time'''</span> </td>
+                      </tr><tr>
+                        <th>102</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>103</th><th> </th><td class="l"><span>'''Example:''' ''All active tickets, sorted by priority and time''</span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>101</th><td class="r"><span>Example: '''All active tickets, sorted by priority and time'''</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>104</th><th>102</th><td class="l"><span>{{{</span> </td>
+                  </tr><tr>
+                          <th>105</th><th>103</th><td class="l"><span>SELECT id AS ticket, status, severity, priority, owner, </span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>106</th><th> </th><td class="l"><span>&nbsp; &nbsp; &nbsp; &nbsp;time <del>as</del> created, summary FROM ticket </span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>104</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp;time <ins>AS</ins> created, summary FROM ticket </span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>107</th><th>105</th><td class="l"><span>&nbsp; WHERE status IN ('new', 'assigned', 'reopened')</span> </td>
+                  </tr><tr>
+                          <th>108</th><th>106</th><td class="l"><span>&nbsp; ORDER BY priority, time</span> </td>
+                  </tr><tr>
+                          <th>109</th><th>107</th><td class="l"><span>}}}</span> </td>
+                  </tr><tr>
+                          <th>110</th><th>108</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>111</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>112</th><th> </th><td class="l"><span>----</span> </td>
+                      </tr><tr>
+                        <th>113</th><th> </th><td class="l"><span></span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>109</th><td class="r"><span>---</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>114</th><th>110</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>115</th><th>111</th><td class="l"><span>== Advanced Reports: Dynamic Variables ==</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracReports%3Fversion=3.html#L140">…</a></th>
+                  <th><a href="TracReports%3Fversion=4.html#L136">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>140</th><th>136</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>141</th><th>137</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>142</th><th> </th><td class="l"><span>=== <del></del>Special/Constant Variables ===</span> </td>
+                      </tr><tr>
+                        <th>143</th><th> </th><td class="l"><span>There is one <del>''magic'' dynamic variable to allow practical reports, its value automatically set without having to change the URL</del>. </span> </td>
+                      </tr><tr>
+                        <th>144</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>145</th><th> </th><td class="l"><span>&nbsp;* $USER <del>--</del> Username of logged in user.</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>138</th><td class="r"><span>=== <ins>!</ins>Special/Constant Variables ===</span> </td>
+                      </tr><tr>
+                        <th> </th><th>139</th><td class="r"><span>There is one <ins>dynamic variable whose value is set automatically (the URL does not have to be changed) to allow practical reports</ins>. </span> </td>
+                      </tr><tr>
+                        <th> </th><th>140</th><td class="r"><span></span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>141</th><td class="r"><span>&nbsp;* $USER <ins>—</ins> Username of logged in user.</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>146</th><th>142</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>147</th><th>143</th><td class="l"><span>Example (''List all tickets assigned to me''):</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracReports%3Fversion=3.html#L165">…</a></th>
+                  <th><a href="TracReports%3Fversion=4.html#L161">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>165</th><th>161</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>166</th><th>162</th><td class="l"><span>=== Automatically formatted columns ===</span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>167</th><th> </th><td class="l"><span>&nbsp;* '''ticket''' -- Ticket ID number. Becomes a hyperlink to that ticket. </span> </td>
+                      </tr><tr>
+                        <th>168</th><th> </th><td class="l"><span>&nbsp;* '''created, modified, date, time''' -- Format cell as a date and/or time.</span> </td>
+                      </tr><tr>
+                        <th>169</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>170</th><th> </th><td class="l"><span>&nbsp;* '''description''' -- Ticket description field, parsed through the wiki engine.</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>163</th><td class="r"><span>&nbsp;* '''ticket''' — Ticket ID number. Becomes a hyperlink to that ticket. </span> </td>
+                      </tr><tr>
+                        <th> </th><th>164</th><td class="r"><span>&nbsp;* '''id''' — same as '''ticket''' above when '''realm''' is not set</span> </td>
+                      </tr><tr>
+                        <th> </th><th>165</th><td class="r"><span>&nbsp;* '''realm''' — together with '''id''', can be used to create links to other resources than tickets (e.g. a realm of ''wiki'' and an ''id'' to a page name will create a link to that wiki page)</span> </td>
+                      </tr><tr>
+                        <th> </th><th>166</th><td class="r"><span>&nbsp;* '''created, modified, date, time''' — Format cell as a date and/or time.</span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>167</th><td class="r"><span>&nbsp;* '''description''' — Ticket description field, parsed through the wiki engine.</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>171</th><th>168</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>172</th><th>169</th><td class="l"><span>'''Example:'''</span> </td>
+                  </tr><tr>
+                          <th>173</th><th>170</th><td class="l"><span>{{{</span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>174</th><th> </th><td class="l"><span>SELECT id as ticket, created, status, summary FROM ticket </span> </td>
+                      </tr><tr>
+                        <th>175</th><th> </th><td class="l"><span>}}}</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>171</th><td class="r"><span>SELECT id AS ticket, created, status, summary FROM ticket </span> </td>
+                      </tr><tr>
+                        <th> </th><th>172</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>173</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>174</th><td class="r"><span>Those columns can also be defined but marked as hidden, see [#column-syntax below].</span> </td>
+                      </tr><tr>
+                        <th> </th><th>175</th><td class="r"><span></span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>176</th><td class="r"><span>See trac:wiki/CookBook/Configuration/Reports for some example of creating reports for realms other than ''ticket''.</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>176</th><th>177</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>177</th><th>178</th><td class="l"><span>=== Custom formatting columns ===</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracReports%3Fversion=3.html#L179">…</a></th>
+                  <th><a href="TracReports%3Fversion=4.html#L180">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>179</th><th>180</th><td class="l"><span>assumed to be ''formatting hints'', affecting the appearance of the row.</span> </td>
+                  </tr><tr>
+                          <th>180</th><th>181</th><td class="l"><span>&nbsp;</span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>181</th><th> </th><td class="l"><span>&nbsp;* '''`__group__`''' -- Group results based on values in this column. Each group will have its own header and table.</span> </td>
+                      </tr><tr>
+                        <th>182</th><th> </th><td class="l"><span>&nbsp;* '''`__color__`''' -- Should be a numeric value ranging from 1 to 5 to select a pre-defined row color. Typically used to color rows by issue priority.</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>182</th><td class="r"><span>&nbsp;* '''`__group__`''' — Group results based on values in this column. Each group will have its own header and table.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>183</th><td class="r"><span>&nbsp;* '''`__grouplink__`''' — Make the header of each group a link to the specified URL. The URL is taken from the first row of each group.</span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>184</th><td class="r"><span>&nbsp;* '''`__color__`''' — Should be a numeric value ranging from 1 to 5 to select a pre-defined row color. Typically used to color rows by issue priority.</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>183</th><th>185</th><td class="l"><span>{{{</span> </td>
+                  </tr><tr>
+                          <th>184</th><th>186</th><td class="l"><span>#!html</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracReports%3Fversion=3.html#L191">…</a></th>
+                  <th><a href="TracReports%3Fversion=4.html#L193">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>191</th><th>193</th><td class="l"><span>&lt;/div&gt;</span> </td>
+                  </tr><tr>
+                          <th>192</th><th>194</th><td class="l"><span>}}}</span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>193</th><th> </th><td class="l"><span>&nbsp;* '''`__style__`''' <del>--</del> A custom CSS style expression to use for the current row. </span> </td>
+                      </tr><tr>
+                        <th>194</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>195</th><th> </th><td class="l"><span>'''Example:''' ''List active tickets, grouped by milestone, <del></del>colored by priority''</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>195</th><td class="r"><span>&nbsp;* '''`__style__`''' <ins>—</ins> A custom CSS style expression to use for the current row. </span> </td>
+                      </tr><tr>
+                        <th> </th><th>196</th><td class="r"><span></span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>197</th><td class="r"><span>'''Example:''' ''List active tickets, grouped by milestone, <ins>group header linked to milestone page, </ins>colored by priority''</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>196</th><th>198</th><td class="l"><span>{{{</span> </td>
+                  </tr><tr>
+                          <th>197</th><th>199</th><td class="l"><span>SELECT p.value AS __color__,</span> </td>
+                  </tr><tr>
+                          <th>198</th><th>200</th><td class="l"><span>&nbsp; &nbsp; &nbsp;t.milestone AS __group__,</span> </td>
+                  </tr>
+            </tbody><tbody class="add">
+                  <tr class="last first">
+                          <th> </th><th>201</th><td class="r"><ins>&nbsp; &nbsp; &nbsp;'../milestone/' || t.milestone AS __grouplink__,</ins> </td>
+                  </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>199</th><th>202</th><td class="l"><span>&nbsp; &nbsp; &nbsp;(CASE owner WHEN 'daniel' THEN 'font-weight: bold; background: red;' ELSE '' END) AS __style__,</span> </td>
+                  </tr><tr>
+                          <th>200</th><th>203</th><td class="l"><span>&nbsp; &nbsp; &nbsp; &nbsp;t.id AS ticket, summary</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracReports%3Fversion=3.html#L208">…</a></th>
+                  <th><a href="TracReports%3Fversion=4.html#L211">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>208</th><th>211</th><td class="l"><span>numeric representation from the ''enum'' table.</span> </td>
+                  </tr><tr>
+                          <th>209</th><th>212</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>210</th><th> </th><td class="l"><span>=== Changing layout of report rows ===<del></del></span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>213</th><td class="r"><span>=== Changing layout of report rows ===<ins>&nbsp;#column-syntax</ins></span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>211</th><th>214</th><td class="l"><span>By default, all columns on each row are display on a single row in the HTML</span> </td>
+                  </tr><tr>
+                          <th>212</th><th>215</th><td class="l"><span>report, possibly formatted according to the descriptions above. However, it's</span> </td>
+                  </tr><tr>
+                          <th>213</th><th>216</th><td class="l"><span>also possible to create multi-line report entries.</span> </td>
+                  </tr><tr>
+                          <th>214</th><th>217</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>215</th><th> </th><td class="l"><span>&nbsp;* '''`column_`''' -- ''Break row after this''. By appending an underscore ('_') to the column name, the remaining columns will be be continued on a second line.</span> </td>
+                      </tr><tr>
+                        <th>216</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>217</th><th> </th><td class="l"><span>&nbsp;* '''`_column_`''' -- ''Full row''. By adding an underscore ('_') both at the beginning and the end of a column name, the data will be shown on a separate row.</span> </td>
+                      </tr><tr>
+                        <th>218</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>219</th><th> </th><td class="l"><span>&nbsp;* '''`_column`'''&nbsp; --&nbsp; ''Hide data''. Prepending an underscore ('_') to a column name instructs Trac to hide the contents from the HTML output. This is useful for information to be visible only if downloaded in other formats (like CSV or RSS/XML).</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>218</th><td class="r"><span>&nbsp;* '''`column_`''' — ''Break row after this''. By appending an underscore ('_') to the column name, the remaining columns will be continued on a second line.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>219</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>220</th><td class="r"><span>&nbsp;* '''`_column_`''' — ''Full row''. By adding an underscore ('_') both at the beginning and the end of a column name, the data will be shown on a separate row.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>221</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>222</th><td class="r"><span>&nbsp;* '''`_column`''' — ''Hide data''. Prepending an underscore ('_') to a column name instructs Trac to hide the contents from the HTML output. This is useful for information to be visible only if downloaded in other formats (like CSV or RSS/XML).</span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>223</th><td class="r"><span>&nbsp; &nbsp;This can be used to hide any kind of column, even important ones required for identifying the resource, e.g. `id as _id` will hide the '''Id''' column but the link to the ticket will be present.</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>220</th><th>224</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>221</th><th>225</th><td class="l"><span>'''Example:''' ''List active tickets, grouped by milestone, colored by priority, with&nbsp; description and multi-line layout''</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracReports%3Fversion=3.html#L242">…</a></th>
+                  <th><a href="TracReports%3Fversion=4.html#L246">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>242</th><th>246</th><td class="l"><span>If you have added custom fields to your tickets (a feature since v0.8, see TracTicketsCustomFields), you can write a SQL query to cover them. You'll need to make a join on the ticket_custom table, but this isn't especially easy.</span> </td>
+                  </tr><tr>
+                          <th>243</th><th>247</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>244</th><th> </th><td class="l"><span>If you have tickets in the database ''before'' you declare the extra fields in trac.ini, there will be no associated data in the ticket_custom table. To get around this, use SQL's "LEFT OUTER JOIN" clauses. See <del>TracIniReportCustomFieldSample</del> for some examples.</span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>248</th><td class="r"><span>If you have tickets in the database ''before'' you declare the extra fields in trac.ini, there will be no associated data in the ticket_custom table. To get around this, use SQL's "LEFT OUTER JOIN" clauses. See <ins>[trac:TracIniReportCustomFieldSample TracIniReportCustomFieldSample]</ins> for some examples.</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>245</th><th>249</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>246</th><th>250</th><td class="l"><span>'''Note that you need to set up permissions in order to see the buttons for adding or editing reports.'''</span> </td>
+                  </tr>
+            </tbody>
+        </table>
+      </li>
+  </ul>
+</div>
+      </div>
+  </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

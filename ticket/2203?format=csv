@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2203,Data Viewer support for PDF,rgrp,kindly," * Boot viewer for format/mimetype: application/pdf, application/x-pdf, application/acrobat, applications/vnd.pdf, text/pdf, text/x-pdf
+ * propose we use pdf.js - https://github.com/mozilla/pdf.js
+ * We could also try iframing for browsers with native support but this seems more complex",enhancement,assigned,minor,ckan-v1.9,ckan,,[0.5d] volunteers small,,ckan,none

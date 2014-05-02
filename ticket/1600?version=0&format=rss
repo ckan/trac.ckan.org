@@ -1,0 +1,205 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1600: [super] User guide with integrated help in the WUI</title>
+    <link>http://localhost/ticket/1600</link>
+    <description>&lt;p&gt;
+Provide help to users in the WUI, with this linking to a detailed user guide.
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;User guide (suggest at help.thedatahub.org (or possibly help.ckan.org)
+&lt;/li&gt;&lt;li&gt;Snippets in the WUI with links to full user guide.
+&lt;ul&gt;&lt;li&gt;Provide helper methods for creating these links with config options for setting path to user guide so that the link location can vary on install by install basis
+&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1600</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Mon, 02 Jan 2012 03:00:27 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/1600#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1600#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1600?action=diff&amp;amp;version=1"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Mon, 23 Jan 2012 16:22:58 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1600#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/1600#comment:2</guid>
+      <description>
+        &lt;p&gt;
+Booted: &lt;a class="ext-link" href="https://github.com/okfn/help.thedatahub.org"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;https://github.com/okfn/help.thedatahub.org&lt;/a&gt;
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Tue, 24 Jan 2012 10:34:39 GMT</pubDate>
+      <title>milestone changed</title>
+      <link>http://localhost/ticket/1600#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/1600#comment:3</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan-v1.6&lt;/em&gt; to &lt;em&gt;current-ckan-sprint-2012-02-06&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Update (for reasons to do with CNAMES) repo is now:
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a class="ext-link" href="https://github.com/okfn/datahub-help"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;https://github.com/okfn/datahub-help&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+Pages are now deployed at (no theming yet!):
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a class="ext-link" href="http://help.thedatahub.org/"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://help.thedatahub.org/&lt;/a&gt;
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Thu, 02 Feb 2012 11:47:03 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1600#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/1600#comment:4</guid>
+      <description>
+        &lt;p&gt;
+Nice tutorial - that is one nice use case for the Data Hub we want to push. And good to be able to have context help in CKAN, with configurable URLs. I'm just wondering why boot another Sphinx, on top of our existing wiki.ckan.org, ckan.org &amp;amp; &lt;a class="missing wiki"&gt;ReadTheDocs?&lt;/a&gt; solution? Why has it changed from a couple of months ago when we redesigned the docs with Anna and we all decided that User Docs should live in the wiki.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Mon, 06 Feb 2012 10:37:04 GMT</pubDate>
+      <title>milestone changed</title>
+      <link>http://localhost/ticket/1600#comment:5</link>
+      <guid isPermaLink="false">http://localhost/ticket/1600#comment:5</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;current-ckan-sprint-2012-02-06&lt;/em&gt; to &lt;em&gt;ckan-v1.7&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Fri, 10 Feb 2012 18:06:51 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/1600#comment:6</link>
+      <guid isPermaLink="false">http://localhost/ticket/1600#comment:6</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1600?action=diff&amp;amp;version=6"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Mon, 02 Apr 2012 10:20:31 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/1600#comment:7</link>
+      <guid isPermaLink="false">http://localhost/ticket/1600#comment:7</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;wontfix&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Closing as wontfix atm since think this will either go to main manual or won't be done here. (Also did quite a lot of work).
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Mon, 02 Apr 2012 10:20:38 GMT</pubDate>
+      <title>status changed; resolution deleted</title>
+      <link>http://localhost/ticket/1600#comment:8</link>
+      <guid isPermaLink="false">http://localhost/ticket/1600#comment:8</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;closed&lt;/em&gt; to &lt;em&gt;reopened&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                &lt;em&gt;wontfix&lt;/em&gt; deleted
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Mon, 02 Apr 2012 10:20:44 GMT</pubDate>
+      <title>status changed; owner set</title>
+      <link>http://localhost/ticket/1600#comment:9</link>
+      <guid isPermaLink="false">http://localhost/ticket/1600#comment:9</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;owner&lt;/strong&gt;
+              set to &lt;em&gt;rgrp&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;reopened&lt;/em&gt; to &lt;em&gt;assigned&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Mon, 02 Apr 2012 10:20:51 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/1600#comment:10</link>
+      <guid isPermaLink="false">http://localhost/ticket/1600#comment:10</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;assigned&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;wontfix&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

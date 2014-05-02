@@ -1,0 +1,17 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2758	file storage gives error if config not available but no useful user information	toby	toby	"We get an error which should be improved the actual problem is this but not passed to user
+
+ ⇝ KeyError: 'ofs.impl'
+View as:   Interactive (full)  |  Text (full)  |  XML (full)
+Module ckan.controllers.storage:2 in auth_form         view
+Module ckan.lib.jsonp:26 in jsonpify         view
+>>  data = func(*args, **kwargs)
+Module ckan.controllers.storage:407 in auth_form         view
+>>  authorize(method, bucket, label, c.userobj, self.ofs)
+Module ckan.controllers.storage:200 in ofs         view
+>>  StorageAPIController._ofs_impl = get_ofs()
+Module ckan.controllers.storage:71 in get_ofs         view
+>>  storage_backend = config['ofs.impl']
+Module paste.registry:146 in __getitem__         view
+>>  return self._current_obj()[key]
+KeyError: 'ofs.impl'"	enhancement	new	awaiting triage	ckan-v1.9	ckan				ckan	none

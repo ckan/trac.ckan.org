@@ -1,0 +1,159 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+500	Exception from diff	dread		"Investigate exception occured occasionally in last couple of days on ckan.net:
+
+{{{
+WebApp Error: <type 'exceptions.AttributeError'>: 'NoneType' object has no attribute 'key' 					
+
+URL: http://ckan.net/revision/diff/dbtune-audioscrobbler?diff=66a47b9e-232a-4838-8674-66fa1a5c76e1&oldid=a99c98be-767a-4e49-9025-2472b2d18b9c
+Module weberror.errormiddleware:162 in __call__
+<<              __traceback_supplement__ = Supplement, self, environ
+                   sr_checker = ResponseStartChecker(start_response)
+                   app_iter = self.application(environ, sr_checker)
+                   return self.make_catching_iter(app_iter, environ, sr_checker)
+               except:
+>>  app_iter = self.application(environ, sr_checker)
+Module beaker.middleware:73 in __call__
+<<                                                     self.cache_manager)
+               environ[self.environ_key] = self.cache_manager
+               return self.app(environ, start_response)
+>>  return self.app(environ, start_response)
+Module beaker.middleware:152 in __call__
+<<                          headers.append(('Set-cookie', cookie))
+                   return start_response(status, headers, exc_info)
+               return self.wrap_app(environ, session_start_response)
+           
+           def _get_session(self):
+>>  return self.wrap_app(environ, session_start_response)
+Module routes.middleware:130 in __call__
+<<                  environ['SCRIPT_NAME'] = environ['SCRIPT_NAME'][:-1]
+               
+               response = self.app(environ, start_response)
+               
+               # Wrapped in try as in rare cases the attribute will be gone already
+>>  response = self.app(environ, start_response)
+Module pylons.wsgiapp:125 in __call__
+<<          
+               controller = self.resolve(environ, start_response)
+               response = self.dispatch(controller, environ, start_response)
+               
+               if 'paste.testing_variables' in environ and hasattr(response,
+>>  response = self.dispatch(controller, environ, start_response)
+Module pylons.wsgiapp:324 in dispatch
+<<          if log_debug:
+                   log.debug(""Calling controller class with WSGI interface"")
+               return controller(environ, start_response)
+           
+           def load_test_env(self, environ):
+>>  return controller(environ, start_response)
+Module ckan.lib.base:73 in __call__
+<<          # available in environ['pylons.routes_dict']    
+               try:
+                   return WSGIController.__call__(self, environ, start_response)
+               finally:
+                   model.Session.remove()
+>>  return WSGIController.__call__(self, environ, start_response)
+Module pylons.controllers.core:221 in __call__
+<<                  return response(environ, self.start_response)
+               
+               response = self._dispatch_call()
+               if not start_response_called:
+                   self.start_response = start_response
+>>  response = self._dispatch_call()
+Module pylons.controllers.core:172 in _dispatch_call
+<<              req.environ['pylons.action_method'] = func
+                   
+                   response = self._inspect_call(func)
+               else:
+                   if log_debug:
+>>  response = self._inspect_call(func)
+Module pylons.controllers.core:107 in _inspect_call
+<<                        func.__name__, args)
+               try:
+                   result = self._perform_call(func, args)
+               except HTTPException, httpe:
+                   if log_debug:
+>>  result = self._perform_call(func, args)
+Module pylons.controllers.core:60 in _perform_call
+<<          """"""Hide the traceback for everything above this method""""""
+               __traceback_hide__ = 'before_and_this'
+               return func(**args)
+           
+           def _inspect_call(self, func):
+>>  return func(**args)
+Module ckan.controllers.revision:119 in diff
+<<          c.revision_to = model.Session.query(model.Revision).get(
+                   request.params.getone('diff'))
+               diff = pkg.diff(c.revision_to, c.revision_from)
+               c.diff = diff.items()
+               c.diff.sort()
+>>  diff = pkg.diff(c.revision_to, c.revision_from)
+Module ckan.model.package:340 in diff
+<<                              display_id = to_obj_rev.tag.name
+                               elif obj_class.__name__ == 'PackageExtra':
+                                   display_id = to_obj_rev.key
+                               else:
+                                   display_id = related_obj_id[:4]
+>>  display_id = to_obj_rev.key
+AttributeError: 'NoneType' object has no attribute 'key'
+CGI Variables
+DOCUMENT_ROOT	'/htdocs'
+GATEWAY_INTERFACE	'CGI/1.1'
+HTTP_ACCEPT	'*/*'
+HTTP_ACCEPT_ENCODING	'gzip'
+HTTP_ACCEPT_LANGUAGE	'zh-cn,zh-tw'
+HTTP_CONNECTION	'close'
+HTTP_HOST	'ckan.net'
+HTTP_USER_AGENT	'Baiduspider+(+http://www.baidu.com/search/spider.htm)'
+PATH	'/usr/local/bin:/usr/bin:/bin'
+PATH_INFO	'/revision/diff/dbtune-audioscrobbler'
+PATH_TRANSLATED	'/home/okfn/var/srvc/ckan.net/pyenv/bin/ckan.net.py/revision/diff/dbtune-audioscrobbler'
+QUERY_STRING	'diff=66a47b9e-232a-4838-8674-66fa1a5c76e1&oldid=a99c98be-767a-4e49-9025-2472b2d18b9c'
+REMOTE_ADDR	'123.125.66.32'
+REMOTE_PORT	'63767'
+REQUEST_METHOD	'GET'
+REQUEST_URI	'/revision/diff/dbtune-audioscrobbler?diff=66a47b9e-232a-4838-8674-66fa1a5c76e1&oldid=a99c98be-767a-4e49-9025-2472b2d18b9c'
+SCRIPT_FILENAME	'/home/okfn/var/srvc/ckan.net/pyenv/bin/ckan.net.py'
+SCRIPT_URI	'http://ckan.net/revision/diff/dbtune-audioscrobbler'
+SCRIPT_URL	'/revision/diff/dbtune-audioscrobbler'
+SERVER_ADDR	'10.226.226.118'
+SERVER_ADMIN	'[no address given]'
+SERVER_NAME	'ckan.net'
+SERVER_PORT	'80'
+SERVER_PROTOCOL	'HTTP/1.1'
+SERVER_SIGNATURE	'<address>Apache/2.2.9 (Debian) mod_wsgi/2.5 Python/2.5.2 Server at ckan.net Port 80</address>\n'
+SERVER_SOFTWARE	'Apache/2.2.9 (Debian) mod_wsgi/2.5 Python/2.5.2'
+WSGI Variables
+application	<beaker.middleware.CacheMiddleware object at 0x9f603ec>
+beaker.cache	<beaker.cache.CacheManager object at 0x9f6042c>
+beaker.get_session	<bound method SessionMiddleware._get_session of <beaker.middleware.SessionMiddleware object at 0x9f602ac>>
+beaker.session	{'_accessed_time': 1282385101.4243281, '_creation_time': 1282385101.4243281}
+mod_wsgi.application_group	'ckan.net|'
+mod_wsgi.callable_object	'application'
+mod_wsgi.listener_host	''
+mod_wsgi.listener_port	'80'
+mod_wsgi.process_group	''
+mod_wsgi.reload_mechanism	'0'
+mod_wsgi.script_reloading	'1'
+mod_wsgi.version	(2, 5)
+paste.cookies	(<SimpleCookie: >, '')
+paste.parsed_querystring	([('diff', '66a47b9e-232a-4838-8674-66fa1a5c76e1'), ('oldid', 'a99c98be-767a-4e49-9025-2472b2d18b9c')], 'diff=66a47b9e-232a-4838-8674-66fa1a5c76e1&oldid=a99c98be-767a-4e49-9025-2472b2d18b9c')
+paste.registry	<paste.registry.Registry object at 0x104552ec>
+paste.throw_errors	True
+pylons.action_method	<bound method RevisionController.diff of <ckan.controllers.revision.RevisionController object at 0xfb17aec>>
+pylons.controller	<ckan.controllers.revision.RevisionController object at 0xfb17aec>
+pylons.environ_config	{'session': 'beaker.session', 'cache': 'beaker.cache'}
+pylons.pylons	<pylons.util.PylonsContext object at 0x10286d4c>
+pylons.routes_dict	{'action': u'diff', 'controller': u'revision', 'id': u'dbtune-audioscrobbler'}
+repoze.who.logger	<logging.Logger instance at 0xa16e0cc>
+repoze.who.plugins	{'openid': <OpenIdIdentificationPlugin 167584972>, 'auth_tkt': <AuthTktCookiePlugin 169253516>}
+routes.route	<routes.route.Route object at 0x9f3690c>
+routes.url	<routes.util.URLGenerator object at 0xfd8d7cc>
+webob._parsed_query_vars	(GET([('diff', '66a47b9e-232a-4838-8674-66fa1a5c76e1'), ('oldid', 'a99c98be-767a-4e49-9025-2472b2d18b9c')]), 'diff=66a47b9e-232a-4838-8674-66fa1a5c76e1&oldid=a99c98be-767a-4e49-9025-2472b2d18b9c')
+webob.adhoc_attrs	{'language': 'en-us'}
+wsgi process	'Multi process AND threads (?)'
+wsgi.file_wrapper	<built-in method file_wrapper of mod_wsgi.Adapter object at 0x103a5bf0>
+wsgiorg.routing_args	(<routes.util.URLGenerator object at 0xfd8d7cc>, {'action': u'diff', 'controller': u'revision', 'id': u'dbtune-audioscrobbler'})
+
+
+
+}}}"	defect	closed	awaiting triage	ckan-v1.2		duplicate				

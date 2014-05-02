@@ -1,0 +1,5 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2286,Upgrade to boostrap v2.0.2,zephod,zephod,"I minified bootstrap and apparently downgraded the version. This breaks things in Recline, and creates weird discrepancies (DGU uses 2.0.2 and had some problems importing HTML from TheDataHub core, for example.)
+
+ * Switch to the latest minifed CSS + JS
+ * QA-sweep the site, especially dataset/edit",enhancement,closed,minor,ckan-sprint-2012-04-16,ckan,fixed,,,ckan,none

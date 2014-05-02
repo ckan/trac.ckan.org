@@ -1,0 +1,12 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+205,Custom package importer,dread,rgrp,"Importer function is exposed to logged in users.
+
+Alongside specifying file to import, user chooses between 'form schemas' - 'basic' and 'government'. 
+ * Basic is as it is currently
+ * Government form has pre-defined Extra fields, careful validation of lots of fields, code formats/processes some field data for storage. e.g. searching for tag keywords.
+
+All fields should be in step with the government custom input form.
+
+For fields which have suggested values but the user can input his own value, this is achieved in the spreadsheet with two columns - the first being a drop-down and the second free text.
+
+Estimate: ",enhancement,closed,awaiting triage,,ckan,wontfix,,,,

@@ -1,0 +1,27 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+105,Package groups (view),rgrp,dread,"As a user I want to be able to create groups of packages.
+
+This functionality is different from tags:
+
+  * The ability to add a package to a given group is restricted whereas anyone can add a given tag to a package
+  * Specifically groups have owners and only the owners can add a package to that group
+
+Group properties
+  * id (primarykey, uuid style)
+  * name (restricted content - same rules as package)
+  * title (no restrictions)
+  * owners -- many:many with user object
+  * description (markdown)
+  * packages -- many:many with package object
+
+Don't version groups for now.
+
+Groups address in the WUI will be:
+  * /group     - browse list of groups (reuse list action)
+  * /group/list - same thing for now
+  * /group/<groupname> - display: group properties with links to packages. No links to user pages (yet).
+
+Group editing and searching will be another ticket.
+
+Cost: 3d
+",enhancement,new,critical,v0.10,ckan,,,,,

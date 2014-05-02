@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1154,Make ckan robust against solr failure,nils.toedtmann,johnglover,"According to pudo, a ckan with activated solr extension throws a 5xx when solr is unreachable. Instead, it should behave more like a ckan without ckanext-solr when this happens.
+
+",enhancement,closed,major,ckan-sprint-2011-10-28,ckan,fixed,search,pudo,ckanext-solr,none

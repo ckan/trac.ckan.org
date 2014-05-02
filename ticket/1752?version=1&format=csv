@@ -1,0 +1,9 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1752,DGU: collection of updates from feedback,icmurray,icmurray," - [x] hide black stars on the data-view page
+ - [x] Edit on view form (if you have the right permission)
+ - [x] RES_FORMAT ~> Resource Format
+ - [x] Map Based Search -> UK Location Map Based Search
+ - [x] Note at the top right expalining that these are seach filters (if they are) -> this requires ""add a dataset"" and ""other access"" to be moved to a different place (just some whitespace is fine)
+ - [x] Display publisher and provider (UKLP records only).
+ - [x] analysis of filter by OGL / non-OGL
+ - [x] provide /dump on the build server",enhancement,closed,major,ckan-sprint-2012-02-20,dgu,fixed,,,ckanext-dgu,none

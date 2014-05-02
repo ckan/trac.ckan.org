@@ -1,0 +1,2 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1473	max name length validators missing	dread	dread	Max length of package name and version field is 100 characters, but the validators seem to enforce this, although in the web interface the javascript limits typing in these fields, so it just affects the API really.	defect	new	minor	ckan-sprint-2011-11-21	ckan				ckan	none

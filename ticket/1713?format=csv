@@ -1,0 +1,8 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1713,DGU dataset search page,icmurray,icmurray,"Search results page of DGU.
+
+Breakdown:
+
+ [X] ensure faceting by group (publisher) works
+ [X] allow faceting by UKLP dataset type
+ [X] allow faceting by INSPIRE",enhancement,closed,major,ckan-sprint-2012-02-06,dgu,fixed,,,ckanext-dgu,none

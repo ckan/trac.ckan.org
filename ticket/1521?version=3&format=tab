@@ -1,0 +1,20 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1521	[super] Groups UI and UX improvements in v1.6 from Cygri	shevski		"Add search to groups: http://thedatahub.org/group
+Way to filter by activity, number of datasets; display number of users belonging to a group
+
+First to do: analysis & user stories
+
+== Improved groups ==
+
+From Richard Cyganiak.
+
+This is a set of proposals to make the groups feature more powerful. As a result, currently separate CKAN instances such as http://ie.ckan.net/ could be turned into a simple group on the [http://thedatahub.org Data Hub] without losing their separate identity.
+
+ * '''Group homepages:''' Make the group pages more attractive and welcoming as homepages. The main Data Hub homepage does a great job at this now – can the group pages be made more like that? They're quite uninformative and bland right now.
+ * '''Subdomains for groups:''' Enable subdomains such as <code>ie.thedatahub.org</code> as aliases for <code>thedatahub.org/group/ireland</code>
+ * '''Search within the group:''' Have a big search box that searches just within the group on the group page, with a look like on http://thedatahub.org/dataset
+ * Have an “'''Add a dataset to this group'''” link on the group page, perhaps in the sidebar.
+ * '''Navigation within the group:''' Have some more navigation starting points on the group page, e.g., the Tags + Resource Format sidebar from http://thedatahub.org/dataset
+ * '''Group documentation:''' Add the ability to add more “About this group” text, or pages like “FAQ” and “Extra field conventions”.
+  * The only place where one can currently put group-specific text is before the dataset list. Putting much text there is bad as it moves the datasets below the fold.
+  * Can the top-level sections of a group's description be automatically turned into separate pages that are linked from the sidebar? With headlines <code>About</code>, <code>Frequently Asked Questions</code> and <code>How to get involved</code>, we'd then get three links in the sidebar that point to <code>datahub.org/group/ireland/about</code>, <code>datahub.org/group/ireland/frequently-asked-questions</code>, <code>datahub.org/group/ireland/how-to-get-involved</code>."	enhancement	new	major	ckan-v1.6	ckan		ux		ckan	none

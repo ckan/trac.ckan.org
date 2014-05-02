@@ -1,0 +1,15 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1243,"[thedatahub.org] ""Upload Data"" should provide a nicer",timmcnamara,,"If someone who is not logged in clicks on ""Upload Data"", they are presented with
+
+{{{
+    Not authorized to upload files.
+}}}
+
+This is in emboldened red text. That is, the system is telling a user that they're doing something illegitimate, even though they're actually following an invitation from the main menu.
+
+I propose two options for resolving this:
+
+ 1. only display the ""Upload Data"" tab if someone is authorised to upload data
+ 2. if someone isn't logged int, provide a nice welcome message thanking them for wanting to upload data, but we only allow registered users to do so
+
+ENV: thedatahub.org, CKAN 1.4.2b",enhancement,closed,awaiting triage,,ckan,invalid,thedatahub ux storage,,ckan,none

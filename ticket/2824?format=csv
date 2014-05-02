@@ -1,0 +1,11 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2824,Multiple of the same Flag Issues,danieljohnlewis,,"There is some bizarre language flag issues.
+1) Log in to http://s031.okserver.org:2375/ (I'm logged in as danieljohnlewis)
+2) Visit the apps page: http://s031.okserver.org:2375/apps
+3) Have a look at the languages drop down, flags look fine (although Deutsche does have an EU flag rather than the German flag.. but that's irrelevant)
+4) Change filters to, say, type: Application and sort: Newest, and apply. Web address becomes: http://s031.okserver.org:2375/apps?page=1&type=application&sort=created_desc
+5) Look at the languages drop down: Flags are largely incorrect, with more than one country having the same flag.
+
+Please see the attached screenshot.
+
+Note: this was originally tested with Google Chrome on Linux (Ubuntu).",defect,closed,awaiting triage,demo phase 4,ckan,fixed,,aron.carroll,ckan,none

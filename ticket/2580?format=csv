@@ -1,0 +1,6 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2580,create resource validation,toby,kindly,"david I've got the add resource working but it is happy to add empty resources which implies that it isn't doing validation correctly.
+
+I'm not sure what the validation rules are so hard to test this - I'm coming through as an api call
+
+let me know if i can help",enhancement,closed,major,demo phase 1,ckan,fixed,demo-theme,,ckan,none

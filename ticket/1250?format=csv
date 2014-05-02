@@ -1,0 +1,11 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1250,Search results should be sorted by score rather than alphabetical,rgrp,pudo,"At the moment we sort search results alphabetically. While this is useful for doing 'browse' case where no search bad for all other cases.
+
+Adopt default sort order of 'score' though may wish to keep alphabetical for no search term (i.e. wildcard).
+
+Options:
+ * Default this in solr (no need to touch code) but fragile and affects everything ...
+ * Do it in code and default to score
+ * Do it in code and have alphabetical (on name or title?) when no criteria otherwise score
+
+Aside: may also wish to support search in query api but that is for later!",enhancement,closed,major,ckan-v1.5,ckan,fixed,,,ckan,none

@@ -1,0 +1,4 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2818	Improve related item schema	danieljohnlewis	seanh	"Problem: When creating a related item (e.g. a Visualisation), if you don't put in a URL it succeeds, but on the related items and apps pages it renders it as a link to the same page.
+Expected: Always require a URL and it should only submit
+if one is added"	defect	assigned	major	demo phase 4	ckan				ckan	none

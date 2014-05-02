@@ -1,0 +1,11 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1491,Visible strings need internationalisation,dread,seanh,"Sean spotted that some strings need internationalising, such as flash messages. Generally all strings that appear on the web front-end should be internationalised.
+
+Particular places that need i18n:
+
+* ckan/controllers/admin
+* ckan/lib/base
+
+Note: there are some exceptions, such as in i18n.py, very obscure error messages and stuff that only appears on the API.
+
+NB: there is a cost in making a string internationalisable (all our volunteers have to translate it), so we should not be too zealous. We should also look at the i18n/ckan.pot to see if any of the existing strings can be reused.",defect,closed,minor,,ckan,fixed,,,ckan,none

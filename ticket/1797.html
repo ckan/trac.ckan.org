@@ -1,0 +1,499 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      #1797 ([super] Webstore v2 - Integrated and based on ElasticSearch)
+     – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="prev" href="1796.html" title="Ticket #1796" />
+        <link rel="last" href="3030.html" title="Ticket #3030" />
+        <link rel="help" href="../wiki/TracGuide.html" />
+        <link rel="alternate" href="1797%3Fformat=csv" type="text/csv" class="csv" title="Comma-delimited Text" /><link rel="alternate" href="1797%3Fformat=tab" type="text/tab-separated-values" class="tab" title="Tab-delimited Text" /><link rel="alternate" href="1797%3Fformat=rss" type="application/rss+xml" class="rss" title="RSS Feed" />
+        <link rel="next" href="1798.html" title="Ticket #1798" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/ticket.css" type="text/css" />
+        <link rel="first" href="1.html" title="Ticket #1" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript">
+      var auto_preview_timeout=2.0;
+      var form_token="93d81ccf9a7bb1c456462f62";
+    </script>
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script><script type="text/javascript" src="../chrome/common/js/wikitoolbar.js"></script><script type="text/javascript" src="../chrome/common/js/resizer.js"></script><script type="text/javascript" src="../chrome/common/js/auto_preview.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("div.description").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $(".foldable").enableFolding(false, true);
+        var args = {realm: "ticket", id: 1797, escape_newlines: 0}
+        $("#comment").autoPreview("/wiki_render", args, function(textarea, text, rendered) {
+            $("#ticketchange div.comment").html(rendered);
+            if (rendered)
+              $("#ticketchange").show();
+            else if ($("#ticketchange ul.changes").length == 0)
+              $("#ticketchange").hide();
+        });
+        $("#trac-comment-editor textarea").autoPreview("/wiki_render", args,
+                                                       function(textarea, text, rendered) {
+          var comment = $("#trac-comment-editor").next("div.comment");
+          comment.html(rendered);
+          if (rendered)
+            comment.show();
+          else
+            comment.hide();
+        });
+        $("#modify").parent().toggleClass("collapsed");
+        $(".trac-topnav a").click(function() { $("#modify").parent().removeClass("collapsed"); });
+        /* only enable control elements for the currently selected action */
+        var actions = $("#action input[name='action']");
+        function updateActionFields() {
+          actions.each(function () {
+            $(this).siblings().find("*[id]").enable($(this).checked());
+            $(this).siblings().filter("*[id]").enable($(this).checked());
+          });
+        }
+        actions.click(updateActionFields);
+        updateActionFields();
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="../wiki/TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li class="active"><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="1796.html" title="Ticket #1796">Previous Ticket</a></span></li><li class="last"><span><a class="next" href="1798.html" title="Ticket #1798">Next Ticket</a> &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="ticket">
+      <h1 id="trac-ticket-title">
+          <a href="1797.html">Ticket #1797</a>
+          <span class="status">(closed enhancement: fixed)</span>
+      </h1>
+      <div id="ticket">
+  <div class="date">
+    <p>Opened <a class="timeline" href="../timeline%3Ffrom=2012-02-15T11:43:05Z&amp;precision=second.html" title="2012-02-15T11:43:05Z in Timeline">2 years</a> ago</p>
+    <p>Last modified <a class="timeline" href="../timeline%3Ffrom=2012-03-10T20:50:44Z&amp;precision=second.html" title="2012-03-10T20:50:44Z in Timeline">2 years</a> ago</p>
+  </div>
+  <h2 class="summary searchable">[super] Webstore v2 - Integrated and based on ElasticSearch</h2>
+  <table class="properties">
+    <tr>
+      <th id="h_reporter">Reported by:</th>
+      <td headers="h_reporter" class="searchable">
+        <a href="../query%3Fstatus=!closed&amp;reporter=rgrp.html">rgrp</a>
+      </td>
+      <th id="h_owner">Owned by:</th>
+      <td headers="h_owner">
+        <a href="../query%3Fstatus=!closed&amp;owner=rgrp.html">rgrp</a>
+      </td>
+    </tr>
+    <tr>
+        <th id="h_priority">
+          Priority:
+        </th>
+        <td headers="h_priority">
+              <a href="../query%3Fstatus=!closed&amp;priority=critical.html">critical</a>
+        </td>
+        <th id="h_milestone">
+          Milestone:
+        </th>
+        <td headers="h_milestone">
+              <a class="closed milestone" href="../milestone/ckan-sprint-2012-03-05.html">ckan-sprint-2012-03-05</a>
+        </td>
+    </tr><tr>
+        <th id="h_component">
+          Component:
+        </th>
+        <td headers="h_component">
+              <a href="../query%3Fstatus=!closed&amp;component=ckan.html">ckan</a>
+        </td>
+        <th id="h_keywords">
+          Keywords:
+        </th>
+        <td headers="h_keywords" class="searchable">
+              <a href="../query%3Fstatus=!closed&amp;keywords=~[4d].html">[4d]</a>
+        </td>
+    </tr><tr>
+        <th id="h_cc">
+          Cc:
+        </th>
+        <td headers="h_cc" class="searchable">
+        </td>
+        <th id="h_repo">
+          Repository:
+        </th>
+        <td headers="h_repo">
+              <a href="../query%3Fstatus=!closed&amp;repo=ckan.html">ckan</a>
+        </td>
+    </tr><tr>
+        <th id="h_theme">
+          Theme:
+        </th>
+        <td headers="h_theme">
+              <a href="../query%3Fstatus=!closed&amp;theme=none.html">none</a>
+        </td>
+        <th>
+        </th>
+        <td>
+        </td>
+    </tr>
+  </table>
+  <div class="description">
+    <h3 id="comment:description">
+      Description
+      <span class="lastmod" title="2012-03-10 20:47:49+00:00">
+        (last modified by rgrp)
+        (<a href="1797%3Faction=diff&amp;version=7.html">diff</a>)
+      </span>
+    </h3>
+    <div class="searchable">
+      <p>
+Main tasks:
+</p>
+<ul><li>Integrated seamlessly into CKAN (authorization etc)
+</li><li>Based off <a class="missing wiki">ElasticSearch?</a>
+</li></ul><p>
+Etherpad: <a class="ext-link" href="http://ckan.okfnpad.org/webstore"><span class="icon">​</span>http://ckan.okfnpad.org/webstore</a>
+</p>
+<h1 id="Tasks">Tasks</h1>
+<ul><li><del>New API point (config + controller) [0.75d]</del>
+<ul><li>/api/data/{resource-id}
+</li></ul></li><li><del>Authorization [0.5d]</del>
+</li><li><del>Documentation [0.25d]</del>
+</li><li><del>Upgrade data viewer to use ES [0.5d]</del>
+</li><li><del>Convert webstorer to new setup - <a class="ext-link" href="http://github.com/okfn/ckanext-webstorer"><span class="icon">​</span>http://github.com/okfn/ckanext-webstorer</a> [1d] - <a class="closed ticket" href="1753.html" title="enhancement: Last fixes of Webstorer + Deploy on the DataHub (closed: fixed)">#1753</a></del>
+<ul><li>See below
+</li></ul></li><li>"Create <a class="missing wiki">DataStore?</a> Resource" in Resource creation (??)
+<ul><li>Just creates a resource with blank url and datastore enabled (webstore_url non null)
+</li></ul></li><li><del>Tick box to enable <a class="missing wiki">DataStore?</a> in Resource edit form (for time being would just set webstore_url to any non-null/non-empty value)</del>
+<ul><li>Also need to use this info in <a class="missing wiki">DataStore?</a> extension?
+</li></ul></li><li><del>Create nice instructions on Resource page about using the <a class="missing wiki">DataStore?</a></del>
+</li><li><del>Rename webstore -&gt; datastore</del>
+</li><li><del>Deploy [0.5d]</del>
+</li></ul><h1 id="Details">Details</h1>
+<h2 id="LayoutonES">Layout on ES</h2>
+<pre class="wiki">elasticsearch/{index}/{type-id}
+
+index = ckan-{ckan-id}
+type-id = resource-id (1)
+</pre><h2 id="Requestpath">Request path</h2>
+<p>
+Req =&gt; Nginx =&gt; CKAN App (authz) =&gt; req to elasticsearch and returns results
+</p>
+<p>
+See as an example: <a class="ext-link" href="https://github.com/okfn/elastic-proxy"><span class="icon">​</span>https://github.com/okfn/elastic-proxy</a>
+</p>
+<h2 id="Questions">Questions</h2>
+<ol><li>How do we decide what to use in the viewer e.g. Webstore data versus <a class="missing wiki">DataProxy?</a>
+<ul><li>Check for existence of webstore_url on Resource (should really be webstore_enabled boolean or similar, however we stick with url for the time being because it exists and we avoid migration). If exists use Webstore o/w don't.
+</li></ul></li><li>How do we decide when webstore is activated
+<ul><li>Ans: see previous.
+</li></ul></li><li>Do we (and how do we) allow for resources which are just for webstores
+<ul><li>Ans: we have to set webstore_url = True ... on save. Or add a big button saying: "Create Blank Resource" ...
+</li></ul></li><li>How does webstorer work ...
+<ul><li>CSV import - NS: make sure we add e.g. rownum or <span class="underline">id</span> = rownum ...
+</li><li>Separate mini-service (webstorer.thedatahub.org ...)
+</li></ul></li><li>How do we selectively disable recline where not appropriate (e.g. query support makes no sense for <a class="missing wiki">DataProxy?</a>)
+<ul><li>Ans: do not bother at present. Focus on Webstore route.
+</li></ul></li><li>Where does geodata support come in (in Recline or separately)
+<ul><li>This is a separate issue
+</li></ul></li></ol><h2 id="UserStory1">User Story 1</h2>
+<p>
+User -&gt; CKAN instance -&gt; Add Dataset -&gt; Adds a Resource via uploading a CSV file -&gt; Save
+</p>
+<p>
+=&gt; Result = New Dataset + Resource + Data API to resource and nice Preview of the data
+</p>
+<p>
+Solution:
+</p>
+<ol><li>Allow normal upload process
+</li><li>Webstorer queue task which should get triggered by new resource. Check the resource and if it can convert into the associated resource webstore database.
+</li><li>Update the resource in some way (set webstore_url)
+</li></ol><h1 id="UserStories">User Stories</h1>
+<h2 id="UserStory2">User Story 2</h2>
+<p>
+User -&gt; CKAN instance -&gt; Add Dataset -&gt; Adds a Resource via linking to some remote file (CSV or otherwise) or uploading some data (CSV or otherwise)
+</p>
+<p>
+=&gt; Result = New Dataset + Resource + nice Preview of the data (wherever possible)
+</p>
+<h2 id="UserStory3">User Story 3</h2>
+<p>
+User -&gt; CKAN instance -&gt; Add Dataset -&gt; Adds a Resource which will be webstore database in CKAN -&gt; User saves data to this data store.
+</p>
+<p>
+=&gt; Result = New Dataset + Resource (Webstore resource) which can now be written to or read from by the user
+</p>
+<p>
+Solution: just create a resource with blank url (or better, have a new option to create webstore resource ...)
+</p>
+
+    </div>
+  </div>
+</div>
+          
+
+        <div>
+          <h2 class="foldable">Change History</h2>
+          <div id="changelog">
+              <div class="change" id="trac-change-1">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:1" class="cnum">
+      <a href="1797.html#comment:1">comment:1</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-02-15T11:44:35Z&amp;precision=second.html" title="2012-02-15T11:44:35Z in Timeline">2 years</a> ago by rgrp
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Keywords</strong>
+        <em>[3d]</em> added
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-2">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:2" class="cnum">
+      <a href="1797.html#comment:2">comment:2</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-02-29T21:16:59Z&amp;precision=second.html" title="2012-02-29T21:16:59Z in Timeline">2 years</a> ago by rgrp
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Keywords</strong>
+        <em>[4d]</em> added; <em>[3d]</em> removed
+    </li><li>
+      <strong>Description</strong>
+        modified (<a href="1797%3Faction=diff&amp;version=2.html">diff</a>)
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-3">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:3" class="cnum">
+      <a href="1797.html#comment:3">comment:3</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-02-29T21:18:24Z&amp;precision=second.html" title="2012-02-29T21:18:24Z in Timeline">2 years</a> ago by rgrp
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Description</strong>
+        modified (<a href="1797%3Faction=diff&amp;version=3.html">diff</a>)
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+New API endpoint, Authorization and documentation done and merged to master. Time so far. 1.5d. <a class="ext-link" href="https://github.com/okfn/ckan/commit/a054071e2e29e70e7cfa69df8c117ad5d5871a24"><span class="icon">​</span>https://github.com/okfn/ckan/commit/a054071e2e29e70e7cfa69df8c117ad5d5871a24</a>
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-4">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:4" class="cnum">
+      <a href="1797.html#comment:4">comment:4</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-03-04T11:19:41Z&amp;precision=second.html" title="2012-03-04T11:19:41Z in Timeline">2 years</a> ago by rgrp
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Description</strong>
+        modified (<a href="1797%3Faction=diff&amp;version=4.html">diff</a>)
+    </li><li>
+      <strong>Milestone</strong>
+        changed from <em>ckan-v1.7</em> to <em>current-ckan-sprint-2012-03-05</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-5">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:5" class="cnum">
+      <a href="1797.html#comment:5">comment:5</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-03-04T12:20:39Z&amp;precision=second.html" title="2012-03-04T12:20:39Z in Timeline">2 years</a> ago by rgrp
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Description</strong>
+        modified (<a href="1797%3Faction=diff&amp;version=5.html">diff</a>)
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+Data Viewer support for new <a class="missing wiki">DataStore?</a> in <a class="ext-link" href="https://github.com/okfn/ckan/commit/9ab8b0283bb086eb4cd663ff73c27066bdd3c79a"><span class="icon">​</span>https://github.com/okfn/ckan/commit/9ab8b0283bb086eb4cd663ff73c27066bdd3c79a</a>
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-6">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:6" class="cnum">
+      <a href="1797.html#comment:6">comment:6</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-03-05T00:47:44Z&amp;precision=second.html" title="2012-03-05T00:47:44Z in Timeline">2 years</a> ago by rgrp
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Description</strong>
+        modified (<a href="1797%3Faction=diff&amp;version=6.html">diff</a>)
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-7">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:7" class="cnum">
+      <a href="1797.html#comment:7">comment:7</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-03-10T20:47:49Z&amp;precision=second.html" title="2012-03-10T20:47:49Z in Timeline">2 years</a> ago by rgrp
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Status</strong>
+        changed from <em>new</em> to <em>closed</em>
+    </li><li>
+      <strong>Resolution</strong>
+        set to <em>fixed</em>
+    </li><li>
+      <strong>Description</strong>
+        modified (<a href="1797%3Faction=diff&amp;version=7.html">diff</a>)
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+All done!!
+</p>
+<p>
+Help for data api done in <a class="ext-link" href="https://github.com/okfn/ckan/commit/1d8e464f8542d4c33286bb93f4de50060665799f"><span class="icon">​</span>https://github.com/okfn/ckan/commit/1d8e464f8542d4c33286bb93f4de50060665799f</a>
+</p>
+<p>
+Checkbox for datastore enabled in <a class="ext-link" href="https://github.com/okfn/ckan/commit/3f1320cd92ae0e775fde1b5eada156260c55e0a6"><span class="icon">​</span>https://github.com/okfn/ckan/commit/3f1320cd92ae0e775fde1b5eada156260c55e0a6</a>
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-8">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:8" class="cnum">
+      <a href="1797.html#comment:8">comment:8</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-03-10T20:50:44Z&amp;precision=second.html" title="2012-03-10T20:50:44Z in Timeline">2 years</a> ago by rgrp
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+Merge fix <a class="ext-link" href="https://github.com/okfn/ckan/commit/476a5bd32a3fac5d2dd85614f5d86c79f4ff6547"><span class="icon">​</span>https://github.com/okfn/ckan/commit/476a5bd32a3fac5d2dd85614f5d86c79f4ff6547</a>
+</p>
+
+    </div>
+
+              </div>
+          </div>
+        </div>
+      <div id="help"><strong>Note:</strong> See
+        <a href="../wiki/TracTickets.html">TracTickets</a> for help on using
+        tickets.</div>
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="first">
+          <a rel="nofollow" href="1797%3Fformat=csv" class="csv">Comma-delimited Text</a>
+        </li><li>
+          <a rel="nofollow" href="1797%3Fformat=tab" class="tab">Tab-delimited Text</a>
+        </li><li class="last">
+          <a rel="nofollow" href="1797%3Fformat=rss" class="rss">RSS Feed</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1591,Upgrade CKAN 1.5 instances,dread,dread,"CKAN 1.5 installations need to be upgrade to 1.5.1.
+
+Working methodically through the CKANs on http://datacatalogs.org/group/ckan :
+
+At 1.5:
+ * ckan-brazil http://br.ckan.net/ s057
+ * ckan_ireland http://ie.ckan.net/ s057
+ * cz-ckan-net http://cz.ckan.net/ s057
+ * datakilder-no http://no.ckan.net/ s057
+ * data_gov_uk http://catalogue.data.gov.uk/ 
+ * datacatalogs-org http://datacatalogs.org/
+
+Other versions:
+ * berlin-open-data http://daten.berlin.de/ CKAN hidden
+ * ckan-italia http://it.ckan.net/ 1.3.3b
+ * ckan-poland http://pl.ckan.net/ Down
+ * data-norge-no http://data.norge.no/ CKAN hidden
+ * datadotgc-ca http://datadotgc.ca/ http://ca.ckan.net/ 1.4.2a 
+ * datagm http://www.datagm.org.uk/ 1.3.3
+ * datagov-ru http://datagov.ru/ CKAN hidden
+ * datospublicos-org http://datospublicos.org/ 1.4.2
+ * iati-registry http://iatiregistry.org/ 1.5.1c
+ * katalog-offene-daten-oesterreich http://offener.datenkatalog.at/ 1.3.3b
+ * nosdonnees_fr http://www.nosdonnees.fr/ 1.3.1a
+ * opengov-fi http://opengov.fi/ CKAN hidden
+ * opengov_es http://opengov.es/ 1.2
+ * publicdata-eu http://publicdata.eu/ 1.4.2a
+ * the-data-hub http://thedatahub.org/ 1.5.1
+ * helsinki_finland http://hri.fi/ CKAN hidden
+
+Now deleted from datacatalogs.org:
+ * ckan-belgium http://be.ckan.net/ Migrated
+ * si-ckan-net http://si.ckan.net/ migrated
+ * gr-ckan-net http://gr.ckan.net/ Migrated
+ * hu-ckan-net http://hu.ckan.net/ Migrated
+ * ckan-lithuania http://lt.ckan.net/ Migrated
+",enhancement,new,awaiting triage,ckan-sprint-2012-01-09,ckan,,,,ckan,none

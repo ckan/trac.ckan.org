@@ -1,0 +1,8 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2943,Issues with the demo,dominik,,"This issue collects issues related to the latest merged of the datastore and the iframe preview. Please do not use it for issues that are unrelated to these merges.
+
+Issues so far:
+
+ * Chrome does not resize iframe after a full refresh/ on first load
+ * Opera cannot show a recline preview (0 records).
+ * The pdf preview does not load in IE 9.",enhancement,new,awaiting triage,,ckan,,,,ckan,none

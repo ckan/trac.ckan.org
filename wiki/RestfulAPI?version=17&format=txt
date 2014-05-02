@@ -1,0 +1,54 @@
+= The CKAN RESTful API =
+
+== URIs ==
+
+ * !http://ckan.net/api/rest/package/list
+ * !http://ckan.net/api/rest/package/create/:name
+ * !http://ckan.net/api/rest/package/update/:name
+ * !http://ckan.net/api/rest/package/read/:name
+
+e.g. to get a list of all packages on CKAN visit:
+
+http://www.ckan.net/api/rest/package/list
+
+== Data Formats ==
+
+|| '''Request''' || HTTP Parameters ||
+|| '''Response''' || JSON ||
+
+== POST Method Params ==
+
+=== Create POST ===
+
+|| '''Name''' || '''Value''' ||
+|| name || lower case  alphanumeric string, optionally with dashes and underscores, string length at least 2 characters ||
+
+=== Update POST ===
+
+|| '''Name''' || '''Value''' ||
+|| name || established name string (can't be updated) ||
+|| title || string ||
+|| url || string ||
+|| download_url || string ||
+|| licences || list of license ids ||
+|| tags || space-separated list of tag strings ||
+|| notes || multi-line string ||
+|| log_message || string ||
+
+
+== Methods ==
+ 
+|| '''Action''' || '''Methods''' || 
+|| list || GET ||
+|| create || POST ||
+|| update || POST ||
+|| read || GET ||
+
+== Status Codes ==
+ 
+|| '''Action-Method''' || '''Success''' || '''Exception''' ||
+|| list GET || 200 || 400 Invalid Request, 404 Not Found ||
+|| create POST || 200 || 400 Invalid Request, 409 Conflict ||
+|| update POST || 200 || 400 Invalid Request ||
+|| read GET || 200 || 404 Not Found ||
+

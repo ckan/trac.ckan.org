@@ -1,0 +1,7 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+823	Etags cache doesn't update when only non-core package fields changed.	dread	dread	"1. Create a package.
+2. Edit package and add a resource.
+3. View package in browser - no sign of the resource - ERROR.
+4. View package in API - resource is there.
+
+Reason: hash doesn't change because package.revision only takes account of core fields."	defect	closed	major		ckan	fixed				

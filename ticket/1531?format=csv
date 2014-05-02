@@ -1,0 +1,6 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1531,Update group create/update so you can add capacities and group types.,kindly,kindly,"The new members table needs a way so you can add arbitrary domain objects against them.
+
+We need to extend the group schema to accept types, and instead of just being able to add packages to groups add members with their capacities that associated with different table rows.
+
+4d",enhancement,closed,awaiting triage,ckan-sprint-2012-01-09,ckan,fixed,4d,,ckan,none

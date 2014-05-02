@@ -1,0 +1,15 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+938,Message flashing / notification in WUI,rgrp,pudo,"Good user interfaces provide feedback to users. We should provide more feedback about the success / failure of actions using message flashing (see http://flask.pocoo.org/docs/patterns/flashing/).
+
+We already do some of this (slightly poorly), e.g. on adding an authorization the app says: ""X authorization added"".
+
+== Implementation ==
+
+ * Standardize this process and add section to html for this purpose.
+ * Already done in other OKFN apps e.g. yourtopia.net, wheredoesmymoneygo and commentonit
+ * Testing: suggest keeping this very simple
+
+== Estimate ==
+
+ * Cost: 0.5h (html etc) + 1h to do some integration
+",enhancement,closed,major,ckan-v1.4-sprint-1,ckan,fixed,ux wui minibites,,,

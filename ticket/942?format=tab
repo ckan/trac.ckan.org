@@ -1,0 +1,2 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+942	Fix SERP pager argument passing	pudo	pudo	"It only passes ""q"", but the whole query must be serialized. "	defect	closed	critical	ckan-v1.4-sprint-1	ckan	fixed				

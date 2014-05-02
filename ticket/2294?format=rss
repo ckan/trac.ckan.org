@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2294: Unauthorized action on Data API gets 302 rather than 401 or similar</title>
+    <link>http://localhost/ticket/2294</link>
+    <description>&lt;p&gt;
+Well known issue that 401 *in API* end up with 302 redirect to login page (which makes no sense and is very confusing for clients).
+&lt;/p&gt;
+&lt;p&gt;
+Fix this by ensuring that error messsages on API get passed through correctly.
+&lt;/p&gt;
+&lt;p&gt;
+Minor because affect is annoying but not terminal
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2294</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>kindly</dc:creator>
+
+      <pubDate>Mon, 25 Jun 2012 11:33:23 GMT</pubDate>
+      <title>status, milestone changed; owner set</title>
+      <link>http://localhost/ticket/2294#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/2294#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;owner&lt;/strong&gt;
+              set to &lt;em&gt;kindly&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;assigned&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan-v1.8&lt;/em&gt; to &lt;em&gt;ckan-v1.9&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

@@ -1,0 +1,2 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+893,ExtrasField should not overwrite more specific extras,pudo,,"At the moment, ExtrasField cannot be used in conjunction with more specific extra fields, such as TextExtraField or SuggestTextExtraField.",defect,closed,major,ckan-v1.4,ckan,wontfix,,dread,,

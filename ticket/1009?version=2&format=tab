@@ -1,0 +1,7 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1009	Improvements to user accounts sytem	rgrp	pudo	" * Forgot password (email a new password)
+ * Confirm email
+ * Do not show register page if you are logged in (redirect to home page)
+ * ticket:1010 - listing of users.
+  * Do not use /user for general user account home page (either user normal user page /user/{id} or /user/myaccount)
+"	enhancement	new	awaiting triage	ckan-v1.5	ckan					

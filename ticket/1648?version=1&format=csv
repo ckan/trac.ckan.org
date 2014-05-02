@@ -1,0 +1,6 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1648,Clarify that additional info = extra fields + add guidance,shevski,,"Super ticket: #1506
+
+Need to decide which term to use and then have the same for editing as well as viewing a dataset.
+
+In creating/editing a dataset, want more explanation about adding extra fields (probably as a tooltip or similar).. i.e. that this let's you add extra custom metadata such as 'location: uk' which is then searchable etc",enhancement,new,awaiting triage,ckan-backlog,ckan,,ux,,ckan,none

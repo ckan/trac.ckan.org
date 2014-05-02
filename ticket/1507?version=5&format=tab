@@ -1,0 +1,7 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1507	Minor fixes to dataset add on Group edit form - 0.5d	rgrp	zephod	"Group edit dataset add form needs some work
+
+  * Dataset name is not cleared when you add
+  * No way to remove item from list of datasets to be added if I make a mistake
+  * (2nd Apr 2012) It now seems that option to add multiple datasets at once has disappeared (perhaps during the CSS/HTML refactor ...)
+"	enhancement	assigned	awaiting triage	current-ckan-sprint-2012-03-05	ckan		ux [0.5d]		ckan	none

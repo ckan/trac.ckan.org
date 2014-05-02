@@ -1,0 +1,10 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+892	Make stored data available in WUI - 0.5d	pudo	johnglover	"Once we have storage, make the data available in the following ways: 
+
+ * Now have a cached_url field can show in the frontend ...
+ * Add a [<a href=""${cached_url}"">cached</a>] link to right of real url on resource listing on dataset page.
+ * On resource page: will not add it yet.
+   * At the moment no clear place to pu this given nice big download button (could put in list of items on left but that does not seem right and note that it will turn up in big list of info at bottom)
+ * Add test (?)
+ * Deploy
+"	enhancement	assigned	major	current-ckan-sprint-2012-01-09	ckan				ckan	none

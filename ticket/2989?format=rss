@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2989: "Add dataset to organization" should auto-select the organization</title>
+    <link>http://localhost/ticket/2989</link>
+    <description>&lt;p&gt;
+'Add dataset to organization' button, when you get through to the third stage of the new dataset form the organization you came from is not selected.
+&lt;/p&gt;
+&lt;p&gt;
+I don't see any option to choose the group when adding or updating a dataset, but if I add a dataset via the "Add dataset to group" button on a group's page, then the dataset seems to get added to that group. (And I can also add/remove existing datasets by editing the group.) I wonder if organizations should work the same way, instead of having an Organization drop-down when creating or updating a dataset. The add dataset page needs to somehow indicate that you're adding a dataset to a certain group or organization though, doesn't currently.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2989</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+ </channel>
+</rss>

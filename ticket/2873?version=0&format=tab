@@ -1,0 +1,9 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2873	ckanext-qa: Incorrect Dataset Openness Scores	danieljohnlewis		"QA Extension gives wrong score for Datasets.
+
+This was found when testing on s031, but I imagine this is more widely applicable. It was giving a 4 star score to a dataset which contained a CSV file and an HTML link.
+
+The way that I understand it is:
+3 Stars: Suitable for CSV accessible over HTTP
+4 stars: Datasets will have resources which are either RDF files (in any format: XML, Turtle, N3, JSON-LD), or are SPARQL API Endpoints, or are HTML files (either linked or uploaded) which are embedded with RDFa/Microformats/Microdata <-- requires mime-type analysis, and if HTML file then analysis of the doctype
+5 stars: The resources will contain fully dereference-able URIs (i.e. their URIs are accessible over HTTP) <- quite difficult to automate, but certainly possible."	defect	new	awaiting triage		ckan				ckanext-qa	none

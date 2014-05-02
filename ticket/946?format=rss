@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #946: No default system rights</title>
+    <link>http://localhost/ticket/946</link>
+    <description>&lt;p&gt;
+CKAN currently comes out of the box being uneditable. We'd like to encourage people to have open CKANs and therefore by default init the db with this right:
+&lt;/p&gt;
+&lt;pre class="wiki"&gt;visitor -&amp;gt; is editor on -&amp;gt; System system
+&lt;/pre&gt;</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/946</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Fri, 04 Feb 2011 15:29:28 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/946#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/946#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Fixed in cset:a30c31b9009d
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Fri, 04 Feb 2011 15:29:43 GMT</pubDate>
+      <title>milestone set</title>
+      <link>http://localhost/ticket/946#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/946#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                set to &lt;em&gt;ckan-v1.3&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

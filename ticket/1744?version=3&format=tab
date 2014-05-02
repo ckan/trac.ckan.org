@@ -1,0 +1,17 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1744	UX improvements to dataset edit as of Dec 2011	rgrp	zephod	"Super ticket: #1506
+
+  * Fix (i.e. allow / show) name editing on dataset edit.
+    * Fix the slugify so it does not overwrite if i change title after fixing name.
+    * Make slugify encourage people to use shorter names. Either by cutting off (not so good) or showing a warning and saying something like 'hey you may want to cut this down. Hit edit to customize the dataset name now'
+  * Show edit summary form again, at least on edit pages (and prefill it for create to something sensible like: Creating dataset {title} {name})
+  * Fix drop down for resource types in resource add/edit to limit to fixed set of options (as per http://wiki.ckan.org/Domain_Model/Resource)
+    * See also http://lists.okfn.org/pipermail/ckan-discuss/2011-December/001860.html
+  * Allow reordering of resources (or: and this is somewhat more complex but possibly simpler: allow editing of a resource_order field and we use that to sort resources (this is more like wordpress page_order -- these two options could become the same if we just hijack the existing position field on the join table and get rid of ordereredlist extension))
+    * Alternative/complement: forget ordering of resources and just allow for simple search on dataset page (do it in pure js). Would still need a default ordering (with editing of extra fields could allow users to add a position field to each resource)
+  * Merge Groups and Tags into main Edit section (no point having them on their own and most people will miss this).
+  * Radically simplify set of licenses - #1359
+  * Clarify that additional info = extra fields + add guidance - #1648 (minor? wontfix?)
+  * ~~""Unsaved changes"" warning briefly when you click ""Save"" #1735~~
+  * ""Unsaved changed"" typo on dataset edit page
+  * Force format field to be lower case (with a little bit of javascript!)"	enhancement	new	major	ckan-sprint-2012-02-20	ckan				ckan	none

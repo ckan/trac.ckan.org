@@ -1,0 +1,23 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+9	Register new package	johnbywater	somebody	"== As a ==
+
+Authenticated User
+
+== I want to ==
+
+Create/register a package
+
+== So that ==
+
+The package will be listed in the system and visible to users
+
+== Notes ==
+  * Full package registration process may be broken down into:
+    1. Creating a package by provision of minimal attributes:
+      1. name: unique and web-usable
+      2. auto-generation of default values such as:
+        1. date-registered (today's date)
+        2. first owner (one owner should be created corresponding to the authenticated user performing this action)
+      3. (?) auto-generate a default release
+    2. updating the created package -> ../UseCase12
+"	enhancement	closed	major	milestone1	ckan	fixed				

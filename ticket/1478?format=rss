@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1478: change package_group to members table</title>
+    <link>http://localhost/ticket/1478</link>
+    <description>&lt;p&gt;
+This will comprise of the following steps.
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;model migration.
+&lt;/li&gt;&lt;li&gt;simplify revisioning
+&lt;/li&gt;&lt;li&gt;Remove any sqlalchemy relations from groups.
+&lt;/li&gt;&lt;li&gt;change logic functions
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+estimate 2d
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1478</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>kindly</dc:creator>
+
+      <pubDate>Tue, 06 Dec 2011 08:44:14 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1478#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1478#comment:1</guid>
+      <description>
+        &lt;p&gt;
+completed in about 2.8 days.
+&lt;/p&gt;
+&lt;p&gt;
+cset:58b7a09328111b97da7d8ac65b4710b94dac54e3
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>kindly</dc:creator>
+
+      <pubDate>Tue, 06 Dec 2011 11:57:34 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/1478#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/1478#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

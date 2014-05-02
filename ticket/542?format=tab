@@ -1,0 +1,7 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+542	'Show and Tell' page customization using cookie + js	rgrp	wwaites	"To allow for full page caching even on customized pages for logged in users we can use cookie+javascript techniques as described here: http://www.ibm.com/developerworks/web/library/wa-rails2/
+
+In the first place we just need to apply this to:
+
+  * You are logged in as
+  * Package/group edit/authz tabs"	task	closed				fixed				

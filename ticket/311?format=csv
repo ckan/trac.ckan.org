@@ -1,0 +1,8 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+311,Reordering of package resources can lead to integri,rgrp,dread,"Created a new package resource line and then moved it up above existing one and hit save. Result: 500 error. In logs have:
+
+{{{
+[Sat May 08 21:55:41 2010] [error] [client 86.26.8.30] Error - <class 'sqlalchemy.exceptions.IntegrityError'>: (IntegrityError) duplicate key value violates unique constraint ""package_resource_revision_pkey"", referer: http://ckan.net/package/edit/cofog
+[Sat May 08 21:55:41 2010] [error] [client 86.26.8.30]  'INSERT INTO package_resource_revision (id, package_id, url, format, description, hash, position, state, revision_id, continuity_id) VALUES (%(id)s, %(package_id)s, %(url)s, %(format)s, %(description)s, %(hash)s, %(position)s, %(state)s, %(revision_id)s, %(continuity_id)s)' {'hash': '', 'description': 'The Treasury record of COFOG functions. ', 'format': 'XLS', 'url': 'http://www.hm-treasury.gov.uk/d/cofog_definitions_coins250609.xls', 'package_id': '8482334d-fe2e-4285-9114-5243130f80c0', 'state': 'active', 'continuity_id': '8bf302db-8a80-47d3-b5dc-bc07512a3928', 'position': 3, 'revision_id': 'e4e2cb2d-4bd5-414e-b646-e484f174d9ab', 'id': '8bf302db-8a80-47d3-b5dc-bc07512a3928'}, referer: http://ckan.net/package/edit/cofog
+}}}
+",defect,closed,critical,v1.1,ckan,fixed,,,,

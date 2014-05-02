@@ -1,0 +1,18 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2231	Base harvester broken on 1.6.1	amercader	amercader	"On its current version, ckanext-harvest passed a custom schema to package_create and package_update to allow defining an id for new packages (the same as in remote ckan instances) [1]
+
+Recent changes in the logic layer have made that the context object is no longer directly read from the context, but only get from plugins [2]. This makes the schema sent from ckanext-harvest to be ignored and the harvesting fails because the id field is not expected
+
+{{{
+ValidationError: {'Id': u'The input field id was not expected.'}
+}}}
+
+We need a way to either:
+
+ 1. Be more flexible accepting schemas on the logic functions
+ 2. Modify the harvester plugin to implement the necessary interface
+
+
+[1] https://github.com/okfn/ckanext-harvest/blob/master/ckanext/harvest/harvesters/base.py#L115
+
+[2] https://github.com/okfn/ckan/blob/0c07d3be846777318b35c31325215dff00e99313/ckan/logic/action/create.py#L38"	defect	closed	critical	ckan-sprint-2012-04-02	ckan	fixed	harvest logic		ckan	none

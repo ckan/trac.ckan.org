@@ -1,0 +1,7 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2780,way for admins to undelete datasets,shevski,toby,"Since admins can see deleted datasets - there should be a way for them
+a) to know they are currently deleted & not viewable by normal users - ticket: #2779
+b) way to undelete such datasets - this ticket
+
+I suggest a button on the edit form instead of the delete button
+i.e. remove normal delete button with 'deleted dataset, only admins can view' with undelete button next to the message?",enhancement,new,awaiting triage,demo phase 4,ckan,,demo-theme,aron.carroll,ckan,none

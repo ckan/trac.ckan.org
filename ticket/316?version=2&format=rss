@@ -1,0 +1,253 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #316: Search URL escaping</title>
+    <link>http://localhost/ticket/316</link>
+    <description>&lt;p&gt;
+If you search for unescaped characters such as '`' (backtick) in the URL in Chrome then you get a 500 error.
+&lt;/p&gt;
+&lt;p&gt;
+e.g.
+&lt;a class="ext-link" href="http://www.ckan.net/package/search?q=fjdkf2B%C2%B4gfhgfkgf{gpk"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://www.ckan.net/package/search?q=fjdkf2B%C2%B4gfhgfkgf{gpk&lt;/a&gt;
+fjdkf2B´gfhgfkgf{gpk
+&lt;/p&gt;
+&lt;p&gt;
+returns this exception:
+&lt;/p&gt;
+&lt;pre class="wiki"&gt;URL: http://www.ckan.net/package/search?q=fjdkf%2B%C2%B4gfhgfkgf%7Bg%C2%B4pk&amp;amp;search=Search+Packages+%C2%BB
+Module weberror.errormiddleware:162 in __call__
+&amp;lt;&amp;lt;              __traceback_supplement__ = Supplement, self, environ
+                   sr_checker = ResponseStartChecker(start_response)
+                   app_iter = self.application(environ, sr_checker)
+                   return self.make_catching_iter(app_iter, environ, sr_checker)
+               except:
+&amp;gt;&amp;gt;  app_iter = self.application(environ, sr_checker)
+Module repoze.who.middleware:107 in __call__
+&amp;lt;&amp;lt;          wrapper = StartResponseWrapper(start_response)
+               app_iter = app(environ, wrapper.wrap_start_response)
+               # The challenge decider almost(?) always needs information from the
+&amp;gt;&amp;gt;  app_iter = app(environ, wrapper.wrap_start_response)
+Module beaker.middleware:73 in __call__
+&amp;lt;&amp;lt;                                                     self.cache_manager)
+               environ[self.environ_key] = self.cache_manager
+               return self.app(environ, start_response)
+&amp;gt;&amp;gt;  return self.app(environ, start_response)
+Module beaker.middleware:152 in __call__
+&amp;lt;&amp;lt;                          headers.append(('Set-cookie', cookie))
+                   return start_response(status, headers, exc_info)
+               return self.wrap_app(environ, session_start_response)
+           def _get_session(self):
+&amp;gt;&amp;gt;  return self.wrap_app(environ, session_start_response)
+Module routes.middleware:130 in __call__
+&amp;lt;&amp;lt;                  environ['SCRIPT_NAME'] = environ['SCRIPT_NAME'][:-1]
+               response = self.app(environ, start_response)
+               # Wrapped in try as in rare cases the attribute will be gone already
+&amp;gt;&amp;gt;  response = self.app(environ, start_response)
+Module pylons.wsgiapp:125 in __call__
+&amp;lt;&amp;lt;
+               controller = self.resolve(environ, start_response)
+               response = self.dispatch(controller, environ, start_response)
+               if 'paste.testing_variables' in environ and hasattr(response,
+&amp;gt;&amp;gt;  response = self.dispatch(controller, environ, start_response)
+Module pylons.wsgiapp:324 in dispatch
+&amp;lt;&amp;lt;          if log_debug:
+                   log.debug("Calling controller class with WSGI interface")
+               return controller(environ, start_response)
+           def load_test_env(self, environ):
+&amp;gt;&amp;gt;  return controller(environ, start_response)
+Module ckan.lib.base:50 in __call__
+&amp;lt;&amp;lt;          # available in environ['pylons.routes_dict']
+               try:
+                   return WSGIController.__call__(self, environ, start_response)
+               finally:
+                   model.Session.remove()
+&amp;gt;&amp;gt;  return WSGIController.__call__(self, environ, start_response)
+Module pylons.controllers.core:221 in __call__
+&amp;lt;&amp;lt;                  return response(environ, self.start_response)
+               response = self._dispatch_call()
+               if not start_response_called:
+                   self.start_response = start_response
+&amp;gt;&amp;gt;  response = self._dispatch_call()
+Module pylons.controllers.core:172 in _dispatch_call
+&amp;lt;&amp;lt;              req.environ['pylons.action_method'] = func
+                   response = self._inspect_call(func)
+               else:
+                   if log_debug:
+&amp;gt;&amp;gt;  response = self._inspect_call(func)
+Module pylons.controllers.core:107 in _inspect_call
+&amp;lt;&amp;lt;                        func.__name__, args)
+               try:
+                   result = self._perform_call(func, args)
+               except HTTPException, httpe:
+                   if log_debug:
+&amp;gt;&amp;gt;  result = self._perform_call(func, args)
+Module pylons.controllers.core:60 in _perform_call
+&amp;lt;&amp;lt;          """Hide the traceback for everything above this method"""
+               __traceback_hide__ = 'before_and_this'
+               return func(**args)
+           def _inspect_call(self, func):
+&amp;gt;&amp;gt;  return func(**args)
+Module ckan.controllers.package:52 in search
+&amp;lt;&amp;lt;                  collection=query,
+                       page=request.params.get('page', 1),
+                       items_per_page=50
+                   )
+                   # filter out ranks from the query result
+&amp;gt;&amp;gt;  items_per_page=50
+Module webhelpers.paginate:333 in __init__
+&amp;lt;&amp;lt;              self.item_count = item_count
+               else:
+                   self.item_count = len(self.collection)
+               # Compute the number of the first and last available page
+&amp;gt;&amp;gt;  self.item_count = len(self.collection)
+Module webhelpers.paginate:204 in __len__
+&amp;lt;&amp;lt;      def __len__(self):
+               return self.obj.count()
+       # Since the items on a page are mainly a list we subclass the "list" type
+&amp;gt;&amp;gt;  return self.obj.count()
+Module sqlalchemy.orm.query:1094 in count
+&amp;lt;&amp;lt;              q = q.params(params)
+               q = q._legacy_select_kwargs(**kwargs)
+               return q._count()
+           def _count(self):
+&amp;gt;&amp;gt;  return q._count()
+Module sqlalchemy.orm.query:1103 in _count
+&amp;lt;&amp;lt;          """
+               return self._col_aggregate(sql.literal_column('1'), sql.func.count, nested_cols=list(self.mapper.primary_key))
+           def _col_aggregate(self, col, func, nested_cols=None):
+&amp;gt;&amp;gt;  return self._col_aggregate(sql.literal_column('1'), sql.func.count, nested_cols=list(self.mapper.primary_key))
+Module sqlalchemy.orm.query:1125 in _col_aggregate
+&amp;lt;&amp;lt;          if self._autoflush and not self._populate_existing:
+                   self.session._autoflush()
+               return self.session.scalar(s, params=self._params, mapper=self.mapper)
+           def compile(self):
+&amp;gt;&amp;gt;  return self.session.scalar(s, params=self._params, mapper=self.mapper)
+Module sqlalchemy.orm.session:635 in scalar
+&amp;lt;&amp;lt;          engine = self.get_bind(mapper, clause=clause, instance=instance)
+               return self.__connection(engine, close_with_result=True).scalar(clause, params or {})
+           def close(self):
+&amp;gt;&amp;gt;  return self.__connection(engine, close_with_result=True).scalar(clause, params or {})
+Module sqlalchemy.engine.base:834 in scalar
+&amp;lt;&amp;lt;          """
+               return self.execute(object, *multiparams, **params).scalar()
+           def statement_compiler(self, statement, **kwargs):
+&amp;gt;&amp;gt;  return self.execute(object, *multiparams, **params).scalar()
+Module sqlalchemy.engine.base:844 in execute
+&amp;lt;&amp;lt;          for c in type(object).__mro__:
+                   if c in Connection.executors:
+                       return Connection.executors[c](self, object, multiparams, params)
+               else:
+                   raise exceptions.InvalidRequestError("Unexecutable object type: " + str(type(object)))
+&amp;gt;&amp;gt;  return Connection.executors[c](self, object, multiparams, params)
+Module sqlalchemy.engine.base:895 in execute_clauseelement
+&amp;lt;&amp;lt;          else:
+                   keys = None
+               return self._execute_compiled(elem.compile(dialect=self.dialect, column_keys=keys, inline=len(params) &amp;gt; 1), distilled_params=params)
+           def _execute_compiled(self, compiled, multiparams=None, params=None, distilled_params=None):
+&amp;gt;&amp;gt;  return self._execute_compiled(elem.compile(dialect=self.dialect, column_keys=keys, inline=len(params) &amp;gt; 1), distilled_params=params)
+Module sqlalchemy.engine.base:907 in _execute_compiled
+&amp;lt;&amp;lt;          context.pre_execution()
+               self.__execute_raw(context)
+               context.post_execution()
+               self._autocommit(context)
+&amp;gt;&amp;gt;  self.__execute_raw(context)
+Module sqlalchemy.engine.base:916 in __execute_raw
+&amp;lt;&amp;lt;              self._cursor_executemany(context.cursor, context.statement, context.parameters, context=context)
+               else:
+                   self._cursor_execute(context.cursor, context.statement, context.parameters[0], context=context)
+           def _execute_ddl(self, ddl, params, multiparams):
+&amp;gt;&amp;gt;  self._cursor_execute(context.cursor, context.statement, context.parameters[0], context=context)
+Module sqlalchemy.engine.base:958 in _cursor_execute
+&amp;lt;&amp;lt;              self.engine.logger.info(repr(parameters))
+               try:
+                   self.dialect.do_execute(cursor, statement, parameters, context=context)
+               except Exception, e:
+                   self._handle_dbapi_exception(e, statement, parameters, cursor)
+&amp;gt;&amp;gt;  self.dialect.do_execute(cursor, statement, parameters, context=context)
+Module sqlalchemy.engine.default:133 in do_execute
+&amp;lt;&amp;lt;      def do_execute(self, cursor, statement, parameters, context=None):
+               cursor.execute(statement, parameters)
+           def is_disconnect(self, e):
+&amp;gt;&amp;gt;  cursor.execute(statement, parameters)
+UnicodeEncodeError: 'ascii' codec can't encode character u'\xb4' in position 6: ordinal not in range(128)
+&lt;/pre&gt;</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/316</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Wed, 19 May 2010 10:45:59 GMT</pubDate>
+      <title>summary changed</title>
+      <link>http://localhost/ticket/316#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/316#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;summary&lt;/strong&gt;
+                changed from &lt;em&gt;Search URL encoding issue&lt;/em&gt; to &lt;em&gt;Search URL escaping&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Thu, 20 May 2010 14:46:41 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/316#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/316#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/316?action=diff&amp;amp;version=2"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+This exception occurs for ckan.net with just this one character:
+&lt;a class="ext-link" href="http://ckan.net/package/search?q=%C2"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://ckan.net/package/search?q=%C2&lt;/a&gt;
+(you can wget it)
+&lt;/p&gt;
+&lt;p&gt;
+But I can't recreate it on my machine. Maybe it's a version issue.
+&lt;/p&gt;
+&lt;p&gt;
+The client that is making all these crazy calls is googlebot.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>thejimmyg</dc:creator>
+
+      <pubDate>Wed, 08 Dec 2010 17:59:37 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/316#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/316#comment:3</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+I've just tested this on ckan.net and it gives a sensible message:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+There was an error while searching. Please try another search term.
+&lt;/p&gt;
+&lt;/blockquote&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

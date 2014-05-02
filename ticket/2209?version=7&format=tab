@@ -1,0 +1,23 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2209	Object->RDF mapping	ross	ross	"Super is [1649]
+
+We need to provide customisable mappings between CKAN models and RDF. This needs to be easily configurable for different clients and should take into account objects related to the model being mapped.
+
+Current contenders for impl are:
+
+1. ordf.org's Object Description Mapper (which uses OWL)
+
+2. RDFAlchemy, although this looks like it may result in fixed mappings
+
+3. A custom scheme with a simple json file
+
+4. A template based approach using Genshi templates?
+
+Approach is to get a mapping complete of the attributes directly in the package class, and then provide mappings for related objects (tags/resources etc).
+
+We'll then need to be able to publish the RDF to a triplestore.
+
+
+See http://ckan.okfnpad.org/rdfmapping for further analysis.
+
+"	enhancement	new	awaiting triage	ckan-sprint-2012-03-19	ckan		[?d]		ckan	none

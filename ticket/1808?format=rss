@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1808: Translation of content on dataset view pages</title>
+    <link>http://localhost/ticket/1808</link>
+    <description>&lt;p&gt;
+All data is that is translatable should be translated when viewed.
+&lt;/p&gt;
+&lt;p&gt;
+This includes tag names will be  ID codes. When viewing a dataset page, look up the current language of the interface (ckan_lang or something in the environs) and display the string for the tag in that language.
+&lt;/p&gt;
+&lt;p&gt;
+Related to the dataset view extension points for translation, recently added by kindly/=.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1808</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>kindly</dc:creator>
+
+      <pubDate>Mon, 20 Feb 2012 15:10:10 GMT</pubDate>
+      <title>description, summary changed; keywords set</title>
+      <link>http://localhost/ticket/1808#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1808#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;keywords&lt;/strong&gt;
+              &lt;em&gt;4d&lt;/em&gt; added
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1808?action=diff&amp;amp;version=1"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;summary&lt;/strong&gt;
+                changed from &lt;em&gt;Translation of eurovoc tags on dataset view pages&lt;/em&gt; to &lt;em&gt;Translation of content on dataset view pages&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>seanh</dc:creator>
+
+      <pubDate>Mon, 05 Mar 2012 15:37:14 GMT</pubDate>
+      <title>milestone changed</title>
+      <link>http://localhost/ticket/1808#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/1808#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan-sprint-2012-03-05&lt;/em&gt; to &lt;em&gt;current-ckan-sprint-2012-03-19&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>seanh</dc:creator>
+
+      <pubDate>Wed, 07 Mar 2012 19:00:04 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/1808#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/1808#comment:3</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

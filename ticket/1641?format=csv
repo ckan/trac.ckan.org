@@ -1,0 +1,52 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1641,ckanext-archiver: Content-length header not reliable to check if resource has been modified,amercader,amercader,"The download task in ckanext-archiver performs a HEAD request on the resource URL and checks if the ""Content-Type"" and ""Content-Length"" headers differ from the values stored to see if the resource needs to be updated [1].
+
+The ""Content-Length"" header, although widely used, is not mandatory and some servers don't provide it, e.g.:
+
+{{{
+$ curl -I http://portfolio.theglobalfund.org/en/IATI/Activities?countryCode=AFG
+HTTP/1.1 200 OK
+Cache-Control: private
+Transfer-Encoding: chunked
+Content-Type: text/xml
+Vary: Accept-Encoding
+Server: Microsoft-IIS/7.5
+Set-Cookie: ASP.NET_SessionId=3qhqekddgmre0kmk5cynq0sy; path=/; HttpOnly
+X-AspNetMvc-Version: 3.0
+content-disposition: attachment; filename=AFG_IATI_12012012.xml
+X-AspNet-Version: 4.0.30319
+X-Powered-By: ASP.NET
+Date: Thu, 12 Jan 2012 12:36:43 GMT
+}}}
+
+Also worth noting that [http://docs.python-requests.org/ requests], the python library that uses ckanext-archiver, sets an ""Accept-Encoding: gzip"" header by default, which depending on the configuration of the remote web server, may prevent the ""Content-Length"" server from being sent, e.g.:
+
+{{{
+$ curl -H ""Accept-Encoding: gzip"" -I http://iatistandard.org/published-temp/adb-activities.xml
+HTTP/1.1 200 OK
+Date: Thu, 12 Jan 2012 12:12:46 GMT
+Server: Apache
+Last-Modified: Mon, 28 Nov 2011 15:55:35 GMT
+Accept-Ranges: bytes
+Vary: Accept-Encoding
+Content-Encoding: gzip
+Content-Type: application/xml
+
+curl -I http://iatistandard.org/published-temp/adb-activities.xml
+HTTP/1.1 200 OK
+Date: Thu, 12 Jan 2012 11:56:23 GMT
+Server: Apache
+Last-Modified: Mon, 28 Nov 2011 15:55:35 GMT
+Accept-Ranges: bytes
+Content-Length: 2686720
+Vary: Accept-Encoding
+Content-Type: application/xml
+}}}
+
+All this can lead to some resources never getting updated, and of course the size property of the resource not being set.
+
+As we need to download the resource anyway, it would be better to check if the real length of the data has been modified (and store it).
+
+
+
+[1] https://github.com/okfn/ckanext-archiver/blob/0a189262dca4ab5b286fb6a02b4ab8a201f639f3/ckanext/archiver/tasks.py#L72",enhancement,closed,minor,ckan-sprint-2012-01-23,ckan,fixed,"storage, archiver",johnglover kindly,ckan,none

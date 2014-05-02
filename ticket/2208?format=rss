@@ -1,0 +1,246 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2208: Export strings from ckan and ckanext-ecportal to combined pot file</title>
+    <link>http://localhost/ticket/2208</link>
+    <description>&lt;p&gt;
+All strings from the ckanext-ecportal extension (and from CKAN core) need to be exported to a pot file to send to tenforce.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2208</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>seanh</dc:creator>
+
+      <pubDate>Mon, 19 Mar 2012 13:49:26 GMT</pubDate>
+      <title>milestone changed</title>
+      <link>http://localhost/ticket/2208#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/2208#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan-sprint-2012-03-19&lt;/em&gt; to &lt;em&gt;current-ckan-sprint-2012-04-02&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>seanh</dc:creator>
+
+      <pubDate>Tue, 20 Mar 2012 13:58:00 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/2208#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/2208#comment:2</guid>
+      <description>
+        &lt;p&gt;
+I've attached a ckan.pot file. To make it, I edited setup.py in CKAN core like this:
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a class="ext-link" href="https://gist.github.com/2135849"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;https://gist.github.com/2135849&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+and then ran python setup.py extract_messages. (And I had ckanext-ecportal installed at ~/pyenv/src/ckanext-ecportal.)
+&lt;/p&gt;
+&lt;p&gt;
+I guess I may need to run this again when the ckanext-ecportal source is finalised, so leaving this ticket open for now.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>seanh</dc:creator>
+
+      <pubDate>Mon, 02 Apr 2012 13:54:43 GMT</pubDate>
+      <title>summary, milestone changed</title>
+      <link>http://localhost/ticket/2208#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/2208#comment:3</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;summary&lt;/strong&gt;
+                changed from &lt;em&gt;Translation of ckanext-ecportal extension&lt;/em&gt; to &lt;em&gt;Export strings from ckan and ckanext-ecportal to combined pot file&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan-sprint-2012-04-02&lt;/em&gt; to &lt;em&gt;current-ckan-sprint-2012-04-16&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>seanh</dc:creator>
+
+      <pubDate>Mon, 02 Apr 2012 14:17:41 GMT</pubDate>
+      <title>keywords set</title>
+      <link>http://localhost/ticket/2208#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/2208#comment:4</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;keywords&lt;/strong&gt;
+              &lt;em&gt;[0.5d]&lt;/em&gt; added
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>seanh</dc:creator>
+
+      <pubDate>Mon, 02 Apr 2012 14:17:59 GMT</pubDate>
+      <title>keywords changed</title>
+      <link>http://localhost/ticket/2208#comment:5</link>
+      <guid isPermaLink="false">http://localhost/ticket/2208#comment:5</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;keywords&lt;/strong&gt;
+              &lt;em&gt;[15&lt;/em&gt; &lt;em&gt;minutes]&lt;/em&gt; added; &lt;em&gt;[0.5d]&lt;/em&gt; removed
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>seanh</dc:creator>
+
+      <pubDate>Mon, 16 Apr 2012 12:20:42 GMT</pubDate>
+      <title>milestone changed</title>
+      <link>http://localhost/ticket/2208#comment:6</link>
+      <guid isPermaLink="false">http://localhost/ticket/2208#comment:6</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan-sprint-2012-04-16&lt;/em&gt; to &lt;em&gt;current-ckan-sprint-2012-04-30&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>seanh</dc:creator>
+
+      <pubDate>Tue, 01 May 2012 13:02:22 GMT</pubDate>
+      <title>milestone changed</title>
+      <link>http://localhost/ticket/2208#comment:7</link>
+      <guid isPermaLink="false">http://localhost/ticket/2208#comment:7</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan-sprint-2012-04-30&lt;/em&gt; to &lt;em&gt;current-ckan-sprint-2012-05-15&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>seanh</dc:creator>
+
+      <pubDate>Tue, 01 May 2012 13:29:41 GMT</pubDate>
+      <title>priority changed</title>
+      <link>http://localhost/ticket/2208#comment:8</link>
+      <guid isPermaLink="false">http://localhost/ticket/2208#comment:8</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;priority&lt;/strong&gt;
+                changed from &lt;em&gt;awaiting triage&lt;/em&gt; to &lt;em&gt;minor&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>seanh</dc:creator>
+
+      <pubDate>Wed, 16 May 2012 08:56:59 GMT</pubDate>
+      <title>milestone changed</title>
+      <link>http://localhost/ticket/2208#comment:9</link>
+      <guid isPermaLink="false">http://localhost/ticket/2208#comment:9</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan-sprint-2012-05-15&lt;/em&gt; to &lt;em&gt;current-ckan-sprint-2012-05-29&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>seanh</dc:creator>
+
+      <pubDate>Mon, 28 May 2012 11:51:29 GMT</pubDate>
+      <title>milestone changed</title>
+      <link>http://localhost/ticket/2208#comment:10</link>
+      <guid isPermaLink="false">http://localhost/ticket/2208#comment:10</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;current-ckan-sprint-2012-05-29&lt;/em&gt; to &lt;em&gt;current-ckan-sprint-2012-06-25&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>seanh</dc:creator>
+
+      <pubDate>Mon, 28 May 2012 17:31:17 GMT</pubDate>
+      <title>attachment set</title>
+      <link>http://localhost/ticket/2208</link>
+      <guid isPermaLink="false">http://localhost/ticket/2208</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;attachment&lt;/strong&gt;
+                set to &lt;em&gt;ckan.pot&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Combined ckan core (release-v1.7.1 branch) and ckanext-ecportal (master branch) pot file, created 2012-05-28
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>seanh</dc:creator>
+
+      <pubDate>Tue, 29 May 2012 12:46:44 GMT</pubDate>
+      <title>attachment set</title>
+      <link>http://localhost/ticket/2208</link>
+      <guid isPermaLink="false">http://localhost/ticket/2208</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;attachment&lt;/strong&gt;
+                set to &lt;em&gt;de_fr_es_it_pl_empty_po_files.zip&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Empty ckan.po files for de, fr, es, it and pl, corresponding to the combined pot file from 2012-05-28
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>seanh</dc:creator>
+
+      <pubDate>Wed, 13 Jun 2012 14:06:11 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/2208#comment:11</link>
+      <guid isPermaLink="false">http://localhost/ticket/2208#comment:11</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

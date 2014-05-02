@@ -1,0 +1,241 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1178	Local storage issue with ckanext-storage	fccoelho		"I have followed the instruction for installation a configuration of ckanext-storage, but I am getting this error when I try to access the /storage/upload url:
+
+URL: http://ckan.emap.fgv.br/storage/upload
+Module weberror.errormiddleware:162 in __call__
+<<              __traceback_supplement__ = Supplement, self, environ
+                   sr_checker = ResponseStartChecker(start_response)
+                   app_iter = self.application(environ, sr_checker)
+                   return self.make_catching_iter(app_iter, environ, sr_checker)
+               except:
+>>  app_iter = self.application(environ, sr_checker)
+Module beaker.middleware:73 in __call__
+<<                                                     self.cache_manager)
+               environ[self.environ_key] = self.cache_manager
+               return self.app(environ, start_response)
+>>  return self.app(environ, start_response)
+Module beaker.middleware:152 in __call__
+<<                          headers.append(('Set-cookie', cookie))
+                   return start_response(status, headers, exc_info)
+               return self.wrap_app(environ, session_start_response)
+          
+           def _get_session(self):
+>>  return self.wrap_app(environ, session_start_response)
+Module routes.middleware:130 in __call__
+<<                  environ['SCRIPT_NAME'] = environ['SCRIPT_NAME'][:-1]
+              
+               response = self.app(environ, start_response)
+              
+               # Wrapped in try as in rare cases the attribute will be gone already
+>>  response = self.app(environ, start_response)
+Module pylons.wsgiapp:124 in __call__
+<<                  return ['%s' % paste.registry.restorer.get_request_id(environ)]
+              
+               controller = self.resolve(environ, start_response)
+               response = self.dispatch(controller, environ, start_response)
+              
+>>  controller = self.resolve(environ, start_response)
+Module pylons.wsgiapp:263 in resolve
+<<          if self.log_debug:
+                   log.debug(""Resolved URL to controller: %r"", controller)
+               return self.find_controller(controller)
+          
+           def find_controller(self, controller):
+>>  return self.find_controller(controller)
+Module ckan.config.environment:39 in find_controller
+<<          # Check to see if its a dotted name
+               if '.' in controller or ':' in controller:
+                   mycontroller = pkg_resources.EntryPoint.parse('x=%s' % controller).load(False)
+                   self.controller_classes[controller] = mycontroller
+                   return mycontroller
+>>  mycontroller = pkg_resources.EntryPoint.parse('x=%s' % controller).load(False)
+Module pkg_resources:1954 in load
+<<      def load(self, require=True, env=None, installer=None):
+               if require: self.require(env, installer)
+               entry = __import__(self.module_name, globals(),globals(), ['__name__'])
+               for attr in self.attrs:
+                   try:
+>>  entry = __import__(self.module_name, globals(),globals(), ['__name__'])
+Module ?:87 in <module>
+<<  class StorageAPIController(BaseController):
+           ofs = get_ofs()
+          
+>>  class StorageAPIController(BaseController):
+Module ?:88 in StorageAPIController
+<<  class StorageAPIController(BaseController):
+           ofs = get_ofs()
+          
+           @jsonpify
+>>  ofs = get_ofs()
+Module ?:69 in get_ofs
+<<              continue
+               kw[k[4:]] = v
+           ofs = get_impl(storage_backend)(**kw)
+           return ofs
+>>  ofs = get_impl(storage_backend)(**kw)
+Module ofs.local.pairtreestore:26 in __init__
+<<          self.hashing_type = hashing_type
+               self.shorty_length = shorty_length
+               self._open_store()
+          
+           def _open_store(self):
+>>  self._open_store()
+Module ofs.local.pairtreestore:30 in _open_store
+<<      def _open_store(self):
+               if self.hashing_type:
+                   self._store = PairtreeStorageClient(self.uri_base, self.storage_dir, shorty_length=self.shorty_length, hashing_type=self.hashing_type)
+               else:
+                   self._store = PairtreeStorageClient(self.uri_base, self.storage_dir, shorty_length=shorty_length)
+>>  self._store = PairtreeStorageClient(self.uri_base, self.storage_dir, shorty_length=self.shorty_length, hashing_type=self.hashing_type)
+Module pairtree.pairtree_client:91 in __init__
+<<          self._decode = re.compile(r""\^(..)"", re.U)
+              
+               self._init_store()
+      
+           def __char2hex(self, m):
+>>  self._init_store()
+Module pairtree.pairtree_client:264 in _init_store
+<<                      self.uri_base = prefix
+                   else:
+                       raise NotAPairtreeStoreException
+      
+               if not os.path.isdir(self.store_dir):
+>>  raise NotAPairtreeStoreException
+NotAPairtreeStoreException:
+CGI Variables
+AUTH_TYPE 	'cookie'
+DOCUMENT_ROOT 	'/etc/apache2/htdocs'
+GATEWAY_INTERFACE 	'CGI/1.1'
+HTTP_ACCEPT 	'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+HTTP_ACCEPT_CHARSET 	'ISO-8859-1,utf-8;q=0.7,*;q=0.7'
+HTTP_ACCEPT_ENCODING 	'gzip, deflate'
+HTTP_ACCEPT_LANGUAGE 	'pt-br,pt;q=0.8,en-us;q=0.5,en;q=0.3'
+HTTP_CONNECTION 	'keep-alive'
+HTTP_COOKIE 	'__utma=4669863.1260802706.1295364409.1306935693.1306960483.86; __utmz=4669863.1295364409.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); SESS61faf7f7d2406929b2f9eb4cbfff17d2=a3306f5d1194cf0d8a51dbf7b42c1259; ckan=d4951177ef995d92f0f987d481bd9180aa0f89e4518921db9cd9b6ac75fdd3fab4a25d06; auth_tkt=""c6c3c3e0b3fe7bb765356659992760b24da43221flavio!userid_type:unicode""; auth_tkt=""c6c3c3e0b3fe7bb765356659992760b24da43221flavio!userid_type:unicode""; ckan_user=""flavio""; ckan_display_name=""Fl\xc3\xa1vio Code\xc3\xa7o Coelho""; ckan_apikey=""c139718d-918f-4a2b-b219-e33cb05cbe23""; __utmc=4669863; hide_welcome_message=1'
+HTTP_HOST 	'ckan.emap.fgv.br'
+HTTP_KEEP_ALIVE 	'115'
+HTTP_USER_AGENT 	'Mozilla/5.0 (X11; Linux x86_64; rv:2.0.1) Gecko/20100101 Firefox/4.0.1'
+PATH_INFO 	'/storage/upload'
+PATH_TRANSLATED 	'/home/flavio/var/srvc/ckan.emap.fgv.br/pyenv/bin/ckan.emap.fgv.br.py/storage/upload'
+REMOTE_ADDR 	'10.250.48.110'
+REMOTE_PORT 	'57426'
+REMOTE_USER 	u'flavio'
+REMOTE_USER_DATA 	'userid_type:unicode'
+REMOTE_USER_TOKENS 	['']
+REQUEST_METHOD 	'GET'
+REQUEST_URI 	'/storage/upload'
+SCRIPT_FILENAME 	'/home/flavio/var/srvc/ckan.emap.fgv.br/pyenv/bin/ckan.emap.fgv.br.py'
+SERVER_ADDR 	'10.252.2.60'
+SERVER_ADMIN 	'[no address given]'
+SERVER_NAME 	'ckan.emap.fgv.br'
+SERVER_PORT 	'80'
+SERVER_PROTOCOL 	'HTTP/1.1'
+SERVER_SIGNATURE 	'<address>Apache/2.2.16 (Debian) Server at ckan.emap.fgv.br Port 80</address>\n'
+SERVER_SOFTWARE 	'Apache/2.2.16 (Debian)'
+WSGI Variables
+application 	<beaker.middleware.CacheMiddleware object at 0x7fc2999a6cd0>
+beaker.cache 	<beaker.cache.CacheManager object at 0x7fc2999a6d90>
+beaker.get_session 	<bound method SessionMiddleware._get_session of <beaker.middleware.SessionMiddleware object at 0x7fc2999a6d10>>
+beaker.session 	{'locale': u'pt_BR', '_accessed_time': 1307373458.4790759, '_creation_time': 1302605470.0245121}
+mod_wsgi.application_group 	'dck093|'
+mod_wsgi.callable_object 	'application'
+mod_wsgi.handler_script 	''
+mod_wsgi.input_chunked 	'0'
+mod_wsgi.listener_host 	''
+mod_wsgi.listener_port 	'80'
+mod_wsgi.process_group 	'ckan'
+mod_wsgi.request_handler 	'wsgi-script'
+mod_wsgi.script_reloading 	'1'
+mod_wsgi.version 	(3, 3)
+paste.cookies 	(<SimpleCookie: SESS61faf7f7d2406929b2f9eb4cbfff17d2='a3306f5d1194cf0d8a51dbf7b42c1259' __utma='4669863.1260802706.1295364409.1306935693.1306960483.86' __utmc='4669863' __utmz='4669863.1295364409.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)' auth_tkt='c6c3c3e0b3fe7bb765356659992760b24da43221flavio!userid_type:unicode' ckan='d4951177ef995d92f0f987d481bd9180aa0f89e4518921db9cd9b6ac75fdd3fab4a25d06' ckan_apikey='c139718d-918f-4a2b-b219-e33cb05cbe23' ckan_display_name='Fl\xc3\xa1vio Code\xc3\xa7o Coelho' ckan_user='flavio' hide_welcome_message='1'>, '__utma=4669863.1260802706.1295364409.1306935693.1306960483.86; __utmz=4669863.1295364409.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); SESS61faf7f7d2406929b2f9eb4cbfff17d2=a3306f5d1194cf0d8a51dbf7b42c1259; ckan=d4951177ef995d92f0f987d481bd9180aa0f89e4518921db9cd9b6ac75fdd3fab4a25d06; auth_tkt=""c6c3c3e0b3fe7bb765356659992760b24da43221flavio!userid _type:unicode""; auth_tkt=""c6c3c3e0b3fe7bb765356659992760b24da43221fla...lcome_message=1')
+paste.registry 	<paste.registry.Registry object at 0x7fc299de4f50>
+paste.throw_errors 	True
+pylons.environ_config 	{'session': 'beaker.session', 'cache': 'beaker.cache'}
+pylons.pylons 	<pylons.util.PylonsContext object at 0x7fc299e27d50>
+pylons.routes_dict 	{'action': u'index', 'controller': u'ckanext.storage.controller:StorageController'}
+repoze.who.identity 	<repoze.who identity (hidden, dict-like) at 140473773131872>
+repoze.who.logger 	<logging.Logger instance at 0x7fc2999a3b48>
+repoze.who.plugins 	{'openid': <OpenIdIdentificationPlugin 140473779397008>, 'friendlyform': <FriendlyFormPlugin 140473777417040>, 'ckan.lib.authenticator:UsernamePasswordAuthenticator': <ckan.lib.authenticator.UsernamePasswordAuthenticator object at 0x7fc299b93a50>, 'auth_tkt': <AuthTktCookiePlugin 140473779397136>, 'ckan.lib.authenticator:OpenIDAuthenticator': <ckan.lib.authenticator.OpenIDAuthenticator object at 0x7fc299b934d0>}
+routes.route 	<routes.route.Route object at 0x7fc299864090>
+routes.url 	<routes.util.URLGenerator object at 0x7fc299e27ed0>
+webob._parsed_query_vars 	(GET([]), '')
+webob.adhoc_attrs 	{'language': 'en-us'}
+wsgi process 	'Multi process AND threads (?)'
+wsgi.file_wrapper 	<built-in method file_wrapper of mod_wsgi.Adapter object at 0x7fc299dae4e0>
+wsgi.version 	(1, 1)
+wsgiorg.routing_args 	(<routes.util.URLGenerator object at 0x7fc299e27ed0>, {'action': u'index', 'controller': u'ckanext.storage.controller:StorageController'})
+Reply
+	
+Reply to all
+	
+Forward
+		
+	
+Reply to all
+paste@localhost to fccoelho
+	
+show details 10:17 (2 hours ago)
+	
+- Show quoted text -
+CGI Variables
+AUTH_TYPE 	'cookie'
+DOCUMENT_ROOT 	'/etc/apache2/htdocs'
+GATEWAY_INTERFACE 	'CGI/1.1'
+HTTP_ACCEPT 	'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+HTTP_ACCEPT_CHARSET 	'ISO-8859-1,utf-8;q=0.7,*;q=0.7'
+HTTP_ACCEPT_ENCODING 	'gzip, deflate'
+HTTP_ACCEPT_LANGUAGE 	'pt-br,pt;q=0.8,en-us;q=0.5,en;q=0.3'
+HTTP_CONNECTION 	'keep-alive'
+HTTP_COOKIE 	'__utma=4669863.1260802706.1295364409.1306935693.1306960483.86; __utmz=4669863.1295364409.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); SESS61faf7f7d2406929b2f9eb4cbfff17d2=a3306f5d1194cf0d8a51dbf7b42c1259; ckan=d4951177ef995d92f0f987d481bd9180aa0f89e4518921db9cd9b6ac75fdd3fab4a25d06; auth_tkt=""c6c3c3e0b3fe7bb765356659992760b24da43221flavio!userid_type:unicode""; auth_tkt=""c6c3c3e0b3fe7bb765356659992760b24da43221flavio!userid_type:unicode""; ckan_user=""flavio""; ckan_display_name=""Fl\xc3\xa1vio Code\xc3\xa7o Coelho""; ckan_apikey=""c139718d-918f-4a2b-b219-e33cb05cbe23""; __utmc=4669863; hide_welcome_message=1'
+HTTP_HOST 	'ckan.emap.fgv.br'
+HTTP_KEEP_ALIVE 	'115'
+HTTP_USER_AGENT 	'Mozilla/5.0 (X11; Linux x86_64; rv:2.0.1) Gecko/20100101 Firefox/4.0.1'
+PATH_INFO 	'/storage/upload'
+PATH_TRANSLATED 	'/home/flavio/var/srvc/ckan.emap.fgv.br/pyenv/bin/ckan.emap.fgv.br.py/storage/upload'
+REMOTE_ADDR 	'10.250.48.110'
+REMOTE_PORT 	'57429'
+REMOTE_USER 	u'flavio'
+REMOTE_USER_DATA 	'userid_type:unicode'
+REMOTE_USER_TOKENS 	['']
+REQUEST_METHOD 	'GET'
+REQUEST_URI 	'/storage/upload'
+SCRIPT_FILENAME 	'/home/flavio/var/srvc/ckan.emap.fgv.br/pyenv/bin/ckan.emap.fgv.br.py'
+SERVER_ADDR 	'10.252.2.60'
+SERVER_ADMIN 	'[no address given]'
+SERVER_NAME 	'ckan.emap.fgv.br'
+SERVER_PORT 	'80'
+SERVER_PROTOCOL 	'HTTP/1.1'
+SERVER_SIGNATURE 	'<address>Apache/2.2.16 (Debian) Server at ckan.emap.fgv.br Port 80</address>\n'
+SERVER_SOFTWARE 	'Apache/2.2.16 (Debian)'
+WSGI Variables
+application 	<beaker.middleware.CacheMiddleware object at 0x7fc2999a6cd0>
+beaker.cache 	<beaker.cache.CacheManager object at 0x7fc2999a6d90>
+beaker.get_session 	<bound method SessionMiddleware._get_session of <beaker.middleware.SessionMiddleware object at 0x7fc2999a6d10>>
+beaker.session 	{'locale': u'pt_BR', '_accessed_time': 1307373466.085686, '_creation_time': 1302605470.0245121}
+mod_wsgi.application_group 	'dck093|'
+mod_wsgi.callable_object 	'application'
+mod_wsgi.handler_script 	''
+mod_wsgi.input_chunked 	'0'
+mod_wsgi.listener_host 	''
+mod_wsgi.listener_port 	'80'
+mod_wsgi.process_group 	'ckan'
+mod_wsgi.request_handler 	'wsgi-script'
+mod_wsgi.script_reloading 	'1'
+mod_wsgi.version 	(3, 3)
+paste.cookies 	(<SimpleCookie: SESS61faf7f7d2406929b2f9eb4cbfff17d2='a3306f5d1194cf0d8a51dbf7b42c1259' __utma='4669863.1260802706.1295364409.1306935693.1306960483.86' __utmc='4669863' __utmz='4669863.1295364409.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)' auth_tkt='c6c3c3e0b3fe7bb765356659992760b24da43221flavio!userid_type:unicode' ckan='d4951177ef995d92f0f987d481bd9180aa0f89e4518921db9cd9b6ac75fdd3fab4a25d06' ckan_apikey='c139718d-918f-4a2b-b219-e33cb05cbe23' ckan_display_name='Fl\xc3\xa1vio Code\xc3\xa7o Coelho' ckan_user='flavio' hide_welcome_message='1'>, '__utma=4669863.1260802706.1295364409.1306935693.1306960483.86; __utmz=4669863.1295364409.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); SESS61faf7f7d2406929b2f9eb4cbfff17d2=a3306f5d1194cf0d8a51dbf7b42c1259; ckan=d4951177ef995d92f0f987d481bd9180aa0f89e4518921db9cd9b6ac75fdd3fab4a25d06; auth_tkt=""c6c3c3e0b3fe7bb765356659992760b24da43221flavio!userid _type:unicode""; auth_tkt=""c6c3c3e0b3fe7bb765356659992760b24da43221fla...lcome_message=1')
+paste.registry 	<paste.registry.Registry object at 0x7fc29a9da850>
+paste.throw_errors 	True
+pylons.environ_config 	{'session': 'beaker.session', 'cache': 'beaker.cache'}
+pylons.pylons 	<pylons.util.PylonsContext object at 0x7fc29a9ef950>
+pylons.routes_dict 	{'action': u'index', 'controller': u'ckanext.storage.controller:StorageController'}
+repoze.who.identity 	<repoze.who identity (hidden, dict-like) at 140473790084352>
+repoze.who.logger 	<logging.Logger instance at 0x7fc2999a3b48>
+repoze.who.plugins 	{'openid': <OpenIdIdentificationPlugin 140473779397008>, 'friendlyform': <FriendlyFormPlugin 140473777417040>, 'ckan.lib.authenticator:UsernamePasswordAuthenticator': <ckan.lib.authenticator.UsernamePasswordAuthenticator object at 0x7fc299b93a50>, 'auth_tkt': <AuthTktCookiePlugin 140473779397136>, 'ckan.lib.authenticator:OpenIDAuthenticator': <ckan.lib.authenticator.OpenIDAuthenticator object at 0x7fc299b934d0>}
+routes.route 	<routes.route.Route object at 0x7fc299864090>
+routes.url 	<routes.util.URLGenerator object at 0x7fc29a9efcd0>
+webob._parsed_query_vars 	(GET([]), '')
+webob.adhoc_attrs 	{'language': 'en-us'}
+wsgi process 	'Multi process AND threads (?)'
+wsgi.file_wrapper 	<built-in method file_wrapper of mod_wsgi.Adapter object at 0x7fc29a9d7d50>
+wsgi.version 	(1, 1)
+wsgiorg.routing_args 	(<routes.util.URLGenerator object at 0x7fc29a9efcd0>, {'action': u'index', 'controller': u'ckanext.storage.controller:StorageController'})"	defect	closed	awaiting triage		ckan	fixed	storage		ckan	none

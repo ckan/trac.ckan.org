@@ -1,0 +1,12 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1437,JSONP parameter in Action API,dread,dread,"Action API needs JSONP support - be able to return responses encapsulated in a function of a supplied name. This is important for remote sites running javascript to interact with a CKAN site.
+
+Specifying the callback parameter is the way we've achieved JSONP with the RESTful and Search APIs. It should work like this:
+{{{
+curl http://test.ckan.net/api/action/package_show?callback=jsoncallback -d '{""id"": ""fd788e57-dce4-481c-832d-497235bf9f78""}'
+}}}
+
+Or maybe the callback should be specified in the payload in the context or data_dict?
+
+(My understanding is that CORS is similar - when more browsers support it, can we drop JSONP?)
+",defect,assigned,major,current-ckan-sprint-2011-11-07,ckan,,,zephod kindly,ckan,none

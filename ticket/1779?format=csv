@@ -1,0 +1,2 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1779,Add multilingual translation table.,kindly,kindly,"A new table with 3 columns should be added. term, term_tranlastion, language_code.  This table will be used for all translations, including tags.  The table should have indexs on both the term and (term, language_code) combination.",enhancement,closed,awaiting triage,ckan-sprint-2012-02-20,ecportal,fixed,2d,,ckan,none

@@ -1,0 +1,15 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2605,Problem with user.get_groups,ross,ross,"From DR at DGU
+
+Basically get_groups() appears to cache its results, but this falls
+down when subsequent calls are in a different session. We get this
+when saving a dataset. get_groups() first gets called in the
+controller when it is trying to work out what permissions the user
+has. It later gets called, and by this time c.userobj is detached, so
+get_groups() fails.
+
+I'm working around this by refreshing c.userobj (from c.user) before
+calling get_groups(), but I wonder if the get_groups caching could
+detect the detached session and bypass the cache in this case?
+
+diff at https://gist.github.com/3003117",enhancement,accepted,awaiting triage,ckan-v1.8,ckan,,,,ckan,none

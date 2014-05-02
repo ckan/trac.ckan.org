@@ -1,0 +1,18 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+11	Delete package	johnbywater	johnbywater	"== As a ==
+
+Authenticated user
+
+== I want to ==
+
+Delete a package
+
+== So that ==
+
+So that the package is no longer displayed for visitors of the site
+
+== Notes ==
+
+  * The permissions for this action are the same as for updating the package details (see ticket:10)
+  * When a package is deleted it is put in an inactive state and is invisible to users and vistors of the service. However its name remains reserved and it may be undeleted or purged by the service administrator
+"	enhancement	new	major	milestone-3	ckan					

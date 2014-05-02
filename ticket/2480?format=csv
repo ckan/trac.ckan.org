@@ -1,0 +1,5 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2480,Better message when dataset has no resources,markw,,"If a dataset has no resources the resources list currently says
+'(none)'.
+
+Here is a suggested improvement, provided that a maintainer is named: 'There are no data resources here yet. For information about this data, contact the dataset maintainer.'",enhancement,new,awaiting triage,ckan-v1.9,ckan,,,,ckan,none

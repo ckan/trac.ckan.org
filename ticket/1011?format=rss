@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1011: Make pluggable AuthzGroups implementation</title>
+    <link>http://localhost/ticket/1011</link>
+    <description>&lt;p&gt;
+I have a requirement to allow an external source to define the groups of which a user is a member.
+&lt;/p&gt;
+&lt;p&gt;
+I propose to create an IAuthzUserGroups plugin interface that allows an extension to arbitrarily extend the list of &lt;a class="missing wiki"&gt;AuthzGroups?&lt;/a&gt; that a user is in.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1011</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>sebbacon</dc:creator>
+
+      <pubDate>Sun, 27 Feb 2011 15:15:32 GMT</pubDate>
+      <title>summary changed</title>
+      <link>http://localhost/ticket/1011#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1011#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;summary&lt;/strong&gt;
+                changed from &lt;em&gt;Make groups implementation pluggable&lt;/em&gt; to &lt;em&gt;Make pluggable AuthzGroups implementation&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>sebbacon</dc:creator>
+
+      <pubDate>Sun, 27 Feb 2011 15:23:55 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1011#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/1011#comment:2</guid>
+      <description>
+        &lt;p&gt;
+On reflection, may as well make a Plugin interface called IAuthorizer, which allows customisation of get_authorization_groups, get_roles, and is_authorized....
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Sun, 27 Feb 2011 15:48:19 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1011#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/1011#comment:3</guid>
+      <description>
+        &lt;p&gt;
+I agree that IAuthorizer is useful but not sure how it addresses the requirement of the ticket. &lt;a class="missing wiki"&gt;AuthorizationGroups?&lt;/a&gt; are already editable via the web interface at /authorizationgroup
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>sebbacon</dc:creator>
+
+      <pubDate>Sun, 27 Feb 2011 16:37:29 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1011#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/1011#comment:4</guid>
+      <description>
+        &lt;p&gt;
+The "external source" is an Oauth service.  We need to lookup user groups from that service.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>sebbacon</dc:creator>
+
+      <pubDate>Sun, 27 Feb 2011 16:53:20 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1011#comment:5</link>
+      <guid isPermaLink="false">http://localhost/ticket/1011#comment:5</guid>
+      <description>
+        &lt;p&gt;
+Proposed implementation at &lt;a class="ext-link" href="https://bitbucket.org/okfn/ckan/changeset/187e65afb35f"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;https://bitbucket.org/okfn/ckan/changeset/187e65afb35f&lt;/a&gt;
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>sebbacon</dc:creator>
+
+      <pubDate>Mon, 28 Feb 2011 09:18:18 GMT</pubDate>
+      <title>milestone changed</title>
+      <link>http://localhost/ticket/1011#comment:6</link>
+      <guid isPermaLink="false">http://localhost/ticket/1011#comment:6</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan-v1.4-sprint-2&lt;/em&gt; to &lt;em&gt;ckan-v1.4-sprint-3&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>sebbacon</dc:creator>
+
+      <pubDate>Fri, 04 Mar 2011 13:26:46 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/1011#comment:7</link>
+      <guid isPermaLink="false">http://localhost/ticket/1011#comment:7</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Merged to default &lt;a class="ext-link" href="https://bitbucket.org/okfn/ckan/changeset/e8217c317a8e"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;https://bitbucket.org/okfn/ckan/changeset/e8217c317a8e&lt;/a&gt;
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

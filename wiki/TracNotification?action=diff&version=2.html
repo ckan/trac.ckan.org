@@ -1,0 +1,400 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+    <html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      TracNotification (diff) – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="help" href="TracGuide.html" />
+        <link rel="up" href="TracNotification%3Faction=history.html" title="Page history" />
+        <link rel="next" href="TracNotification%3Faction=diff&amp;version=3.html" title="Version 3" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/wiki.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/diff.css" type="text/css" />
+        <link rel="prev" href="TracNotification%3Faction=diff&amp;version=1.html" title="Version 1" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/diff.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="../chrome/common/css/diff.css" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last active"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="TracNotification%3Faction=diff&amp;version=1.html" title="Version 1">Previous Change</a></span></li><li><a href="TracNotification%3Faction=history.html" title="Page history">Wiki History</a></li><li class="last"><span><a class="next" href="TracNotification%3Faction=diff&amp;version=3.html" title="Version 3">Next Change</a> &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="wiki">
+      <h1>
+        Changes between
+          <a href="TracNotification%3Fversion=1.html">Version 1</a> and
+          <a href="TracNotification%3Fversion=2.html">Version 2</a> of
+          <a href="TracNotification%3Fversion=2.html">TracNotification</a>
+      </h1>
+      <form method="post" id="prefs" action="TracNotification%3Fversion=2.html"><div><input type="hidden" name="__FORM_TOKEN" value="93d81ccf9a7bb1c456462f62" /></div>
+        <div>
+          <input type="hidden" name="action" value="diff" />
+          <input type="hidden" name="version" value="2" />
+          <input type="hidden" name="old_version" value="1" />
+          
+  <label for="style">View differences</label>
+  <select id="style" name="style">
+    <option selected="selected" value="inline">inline</option>
+    <option value="sidebyside">side by side</option>
+  </select>
+  <div class="field">
+    <label><input type="radio" name="contextall" value="0" checked="checked" />
+             Show</label>
+      <label><input type="text" name="contextlines" id="contextlines" size="2" maxlength="3" value="2" />
+             lines around each change</label><br />
+    <label><input type="radio" name="contextall" value="1" />
+           Show the changes in full context</label>
+  </div>
+  <fieldset id="ignore">
+    <legend>Ignore:</legend>
+    <div class="field">
+      <input type="checkbox" id="ignoreblanklines" name="ignoreblanklines" />
+      <label for="ignoreblanklines">Blank lines</label>
+    </div>
+    <div class="field">
+      <input type="checkbox" id="ignorecase" name="ignorecase" />
+      <label for="ignorecase">Case changes</label>
+    </div>
+    <div class="field">
+      <input type="checkbox" id="ignorewhitespace" name="ignorewhitespace" />
+      <label for="ignorewhitespace">White space changes</label>
+    </div>
+  </fieldset>
+  <div class="buttons">
+    <input type="submit" name="update" value="Update" />
+  </div>
+
+        </div>
+      </form>
+      <dl id="overview">
+        <dt class="property time">Timestamp:</dt>
+        <dd class="time">
+            07/30/07 11:26:42 (<a class="timeline" href="../timeline%3Ffrom=2007-07-30T11:26:42Z&amp;precision=second.html" title="2007-07-30T11:26:42Z in Timeline">7 years</a> ago)
+        </dd>
+        <dt class="property author">Author:</dt>
+        <dd class="author">
+          trac
+        </dd>
+        <dt class="property message">Comment:</dt>
+        <dd class="message">
+          
+          <p>
+--
+</p>
+
+        </dd>
+      </dl>
+      <div class="diff">
+        <div class="legend" id="diff-legend">
+          <h3>Legend:</h3>
+          <dl>
+            <dt class="unmod"></dt><dd>Unmodified</dd>
+            <dt class="add"></dt><dd>Added</dd>
+            <dt class="rem"></dt><dd>Removed</dd>
+            <dt class="mod"></dt><dd>Modified</dd>
+          </dl>
+        </div>
+        <div class="diff">
+  <ul class="entries">
+      <li class="entry">
+        <h2 id="file0">
+          <a href="TracNotification%3Fversion=2.html">TracNotification</a>
+        </h2>
+        <table class="trac-diff inline" summary="Differences" cellspacing="0">
+              <colgroup><col class="lineno" /><col class="lineno" /><col class="content" /></colgroup>
+              <thead>
+                <tr>
+                  <th title="Version 1">
+                    <a href="TracNotification%3Fversion=1.html#L2">
+                      v1</a>
+                  </th>
+                  <th title="Version 2">
+                    <a href="TracNotification%3Fversion=2.html#L2">
+                      v2</a>
+                  </th>
+                  <td> </td>
+                </tr>
+              </thead>
+            <tbody class="unmod">
+                  <tr>
+                          <th>2</th><th>2</th><td class="l"><span>[[TracGuideToc]]</span> </td>
+                  </tr><tr>
+                          <th>3</th><th>3</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>4</th><th> </th><td class="l"><span>Trac supports <del>basic notification for ticket changes using</del> email. </span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>4</th><td class="r"><span>Trac supports <ins>notification about ticket changes via</ins> email. </span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>5</th><th>5</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>6</th><th> </th><td class="l"><span>Email notification is useful to keep users up-to-date on tickets/issues of interest, and also provides a convenient way to post <del>ticket changes to a dedicated mailing list. '''Note:''' As an example, this is how the [http://lists.edgewall.com/archive/trac-tickets/ Trac-tickets] mailing list works</del>.</span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>6</th><td class="r"><span>Email notification is useful to keep users up-to-date on tickets/issues of interest, and also provides a convenient way to post <ins>all ticket changes to a dedicated mailing list. For example, this is how the [http://lists.edgewall.com/archive/trac-tickets/ Trac-tickets] mailing list is set up</ins>.</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>7</th><th>7</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>8</th><th>8</th><td class="l"><span>Disabled by default, notification can be activated and configured in [wiki:TracIni trac.ini].</span> </td>
+                  </tr><tr>
+                          <th>9</th><th>9</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>10</th><th> </th><td class="l"><span>== Receiving Notification <del></del>==</span> </td>
+                      </tr><tr>
+                        <th>11</th><th> </th><td class="l"><span>When reporting a new ticket or adding a comment, enter a valid email address in the ''reporter'', ''<del>editor'' or ''cc'' field. Trac will automatically send you an email when changes are made to the ticket</del>.</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>10</th><td class="r"><span>== Receiving Notification <ins>Mails </ins>==</span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>11</th><td class="r"><span>When reporting a new ticket or adding a comment, enter a valid email address in the ''reporter'', ''<ins>assigned to/owner'' or ''cc'' field. Trac will automatically send you an email when changes are made to the ticket (depending on how notification is configured)</ins>.</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>12</th><th>12</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>13</th><th>13</th><td class="l"><span>This is useful to keep up-to-date on an issue or enhancement request that interests you.</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracNotification%3Fversion=1.html#L19">…</a></th>
+                  <th><a href="TracNotification%3Fversion=2.html#L19">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>19</th><th>19</th><td class="l"><span>&nbsp;* '''smtp_enabled''': Enable email notification.</span> </td>
+                  </tr><tr>
+                          <th>20</th><th>20</th><td class="l"><span>&nbsp;* '''smtp_server''': SMTP server used for notification messages.</span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>21</th><th> </th><td class="l"><span>&nbsp;* '''smtp_user''': (''<del>requires [milestone:0.9 0.9]'') u</del>ser name for authentication SMTP account.</span> </td>
+                      </tr><tr>
+                        <th>22</th><th> </th><td class="l"><span>&nbsp;* '''smtp_password''': (''<del>requires [milestone:0.9 0.9]'') p</del>assword for authentication SMTP account.</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>21</th><td class="r"><span>&nbsp;* '''smtp_user''': (''<ins>since 0.9'') U</ins>ser name for authentication SMTP account.</span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>22</th><td class="r"><span>&nbsp;* '''smtp_password''': (''<ins>since 0.9'') P</ins>assword for authentication SMTP account.</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>23</th><th>23</th><td class="l"><span>&nbsp;* '''smtp_from''': Email address to use for ''Sender''-headers in notification emails.</span> </td>
+                  </tr><tr>
+                          <th>24</th><th>24</th><td class="l"><span>&nbsp;* '''smtp_replyto''': Email address to use for ''Reply-To''-headers in notification emails.</span> </td>
+                  </tr>
+            </tbody><tbody class="add">
+                  <tr class="last first">
+                          <th> </th><th>25</th><td class="r"><ins>&nbsp;* '''smtp_default_domain''': (''since 0.10'') Append the specified domain to addresses that do not contain one. Fully qualified addresses are not modified. The default domain is appended to all username/login for which an email address cannot be found from the user settings.</ins> </td>
+                  </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>25</th><th>26</th><td class="l"><span>&nbsp;* '''smtp_always_cc''': List of email addresses to always send notifications to. ''Typically used to post ticket changes to a dedicated mailing list.''</span> </td>
+                  </tr>
+            </tbody><tbody class="add">
+                  <tr class="last first">
+                          <th> </th><th>27</th><td class="r"><ins>&nbsp;* '''smtp_always_bcc''': (''since 0.10'') List of email addresses to always send notifications to, but keeps addresses not visible from other recipients of the notification email </ins> </td>
+                  </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>26</th><th>28</th><td class="l"><span>&nbsp;* '''always_notify_reporter''':&nbsp; Always send notifications to any address in the reporter field.</span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>27</th><th> </th><td class="l"><span>&nbsp;* '''always_notify_owner''': (''requires [milestone:0.9 0.9]'') Always send notifications to the address in the owner field.</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>29</th><td class="r"><span>&nbsp;* '''always_notify_owner''': (''since 0.9'') Always send notifications to the address in the owner field.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>30</th><td class="r"><span>&nbsp;* '''always_notify_updater''': (''since 0.10'') Always send a notification to the updater of a ticket.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>31</th><td class="r"><span>&nbsp;* '''use_public_cc''': (''since 0.10'') Addresses in To: (owner, reporter) and Cc: lists are visible by all recipients (default is ''Bcc:'' - hidden copy).</span> </td>
+                      </tr><tr>
+                        <th> </th><th>32</th><td class="r"><span>&nbsp;* '''use_short_addr''': (''since 0.10'') Enable delivery of notifications to addresses that do not contain a domain (i.e. do not end with ''@&lt;domain.com&gt;'').This option is useful for intranets, where the SMTP server can handle local addresses and map the username/login to a local mailbox. See also `smtp_default_domain`. Do not use this option with a public SMTP server. </span> </td>
+                      </tr><tr>
+                        <th> </th><th>33</th><td class="r"><span>&nbsp;* '''mime_encoding''': (''since 0.10'') E-mail notifications are always sent in 7-bit mode. This option allows to select the MIME encoding scheme. Supported values:</span> </td>
+                      </tr><tr>
+                        <th> </th><th>34</th><td class="r"><span>&nbsp; &nbsp;* `base64`: default value, works with any kind of content. May cause some issues with touchy anti-spam/anti-virus engines.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>35</th><td class="r"><span>&nbsp; &nbsp;* `qp` or `quoted-printable`: best for european languages (more compact than base64), not recommended for non-ASCII text (less compact than base64)</span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>36</th><td class="r"><span>&nbsp; &nbsp;* `none`: no encoding. Use with plain english only (ASCII). E-mails with non-ASCII chars won't be delivered. </span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>28</th><th>37</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>29</th><th>38</th><td class="l"><span>Either '''smtp_from''' or '''smtp_replyto''' (or both) ''must'' be set, otherwise Trac refuses to send notification mails.</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracNotification%3Fversion=1.html#L65">…</a></th>
+                  <th><a href="TracNotification%3Fversion=2.html#L74">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>65</th><th>74</th><td class="l"><span>My Project &lt;http://myproj.example.com/&gt;</span> </td>
+                  </tr><tr>
+                          <th>66</th><th>75</th><td class="l"><span>}}}</span> </td>
+                  </tr>
+            </tbody><tbody class="add">
+                  <tr class="first">
+                          <th> </th><th>76</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>77</th><td class="r"><ins>== Troubleshooting ==</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>78</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>79</th><td class="r"><ins>If you cannot get the notification working, first make sure the log is activated and have a look at the log to find if an error message has been logged. See TracLogging for help about the log feature.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>80</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>81</th><td class="r"><ins>Notification errors are not reported through the web interface, so the user who submit a change or a new ticket never gets notified about a notification failure. The Trac administrator needs to look at the log to find the error trace.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>82</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>83</th><td class="r"><ins>=== ''Permission denied'' error ===</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>84</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>85</th><td class="r"><ins>Typical error message:</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>86</th><td class="r"><ins>{{{</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>87</th><td class="r"><ins>&nbsp; ...</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>88</th><td class="r"><ins>&nbsp; File ".../smtplib.py", line 303, in connect</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>89</th><td class="r"><ins>&nbsp; &nbsp; raise socket.error, msg</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>90</th><td class="r"><ins>&nbsp; error: (13, 'Permission denied')</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>91</th><td class="r"><ins>}}}</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>92</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>93</th><td class="r"><ins>This error usually comes from a security settings on the server: many Linux distributions do not let the web server (Apache, ...) to post email message to the local SMTP server.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>94</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>95</th><td class="r"><ins>Many users get confused when their manual attempts to contact the SMTP server succeed:</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>96</th><td class="r"><ins>{{{</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>97</th><td class="r"><ins>telnet localhost 25</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>98</th><td class="r"><ins>}}}</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>99</th><td class="r"><ins>The trouble is that a regular user may connect to the SMTP server, but the web server cannot:</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>100</th><td class="r"><ins>{{{</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>101</th><td class="r"><ins>sudo -u www-data telnet localhost 25</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>102</th><td class="r"><ins>}}}</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>103</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>104</th><td class="r"><ins>In such a case, you need to configure your server so that the web server is authorize to post to the SMTP server. The actual settings depend on your Linux distribution and current security policy. You may find help browsing the Trac MailingList archive.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>105</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>106</th><td class="r"><ins>Relevant ML threads:</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>107</th><td class="r"><ins>&nbsp;* SELinux: http://article.gmane.org/gmane.comp.version-control.subversion.trac.general/7518</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>108</th><td class="r"><ins>&nbsp;</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>109</th><td class="r"><ins>=== ''Suspected spam'' error ===</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>110</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>111</th><td class="r"><ins>Some SMTP servers may reject the notification email sent by Trac.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>112</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>113</th><td class="r"><ins>The default Trac configuration uses Base64 encoding to send emails to the recipients. The whole body of the email is encoded, which sometimes trigger ''false positive'' SPAM detection on sensitive email servers. In such an event, it is recommended to change the default encoding to "quoted-printable" using the `mime_encoding` option.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>114</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>115</th><td class="r"><ins>Quoted printable enconding works better with languages that use one of the Latin charsets. For Asian charsets, it is recommended to stick with the Base64 encoding.</ins> </td>
+                  </tr><tr class="last">
+                          <th> </th><th>116</th><td class="r"><ins></ins> </td>
+                  </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>67</th><th>117</th><td class="l"><span>----</span> </td>
+                  </tr><tr>
+                          <th>68</th><th>118</th><td class="l"><span>See also: TracTickets, TracIni, TracGuide</span> </td>
+                  </tr>
+            </tbody>
+        </table>
+      </li>
+  </ul>
+</div>
+      </div>
+  </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

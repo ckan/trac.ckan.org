@@ -1,0 +1,7 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2313,Deprecate old facet data structures and related functions.,icmurray,icmurray,"In branch feature-1821-multilingual-extension, a new faceting datastructure was introduced.  This makes the old one and related functions obsolete.  These have been marked as deprecated for the 1.7 release, and should be removed for the 1.8 release.
+
+ * helpers.py:facet_items()
+ * facets.html:facet_sidebar()
+ * uses of c.facets (rather than c.new_facets)
+",enhancement,closed,awaiting merge,ckan-v1.8,ckan,fixed,deprecate deprecation,seanh,ckan,none

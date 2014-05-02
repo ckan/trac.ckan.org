@@ -1,0 +1,7 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1342	Home controller does not capture SearchError exceptions	amercader	johnglover	"If there is a problem with the SOLR connection,the home page just shows a 500 Server error, instead of a notice (the package controller shows a notice when visiting http://localhost:5000/dataset).
+
+Steps to reproduce:
+
+* Change the solr_url parameter in the ini file to something non-existant
+* Visit http://localhost:5000"	defect	closed	critical	ckan-sprint-2011-10-10	ckan	fixed	search		ckan	none

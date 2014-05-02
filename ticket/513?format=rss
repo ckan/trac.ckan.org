@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #513: Creating a package with API should warn if there are incorrect fields</title>
+    <link>http://localhost/ticket/513</link>
+    <description>&lt;p&gt;
+When you create a package using the API, you might get a core field name wrong e.g. 'title' mispelt as 'titel' or 'groups' (which can't be specified in package creation). Currently that field will be ignored by the API. It should warn or give an error, rather than give 200 OK.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/513</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Thu, 13 Jan 2011 11:12:11 GMT</pubDate>
+      <title>priority, component set</title>
+      <link>http://localhost/ticket/513#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/513#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;priority&lt;/strong&gt;
+                set to &lt;em&gt;awaiting triage&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;component&lt;/strong&gt;
+                set to &lt;em&gt;ckan&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Thu, 14 Apr 2011 09:45:29 GMT</pubDate>
+      <title>status changed; repo, theme, resolution set</title>
+      <link>http://localhost/ticket/513#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/513#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;repo&lt;/strong&gt;
+                set to &lt;em&gt;ckan&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;theme&lt;/strong&gt;
+                set to &lt;em&gt;none&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;wontfix&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+In enh-1046-dictize-the-api we remove the distinction of extras, so we can't do this.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

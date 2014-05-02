@@ -1,0 +1,6 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1735,"""Unsaved changes"" warning briefly when you click ""Save""",dread,zephod,"Super ticket #1744
+
+If you edit a dataset, simply add a tag and click on ""Save"" then you get the message ""You have unsaved changed. Make sure to click 'Save Changes' below before leaving this page."" inserted whilst the submission takes place. (This is because the click moves focus away from the tag field). This (reasonably common) edge-case could usefully be squashed.
+
+Also note typo: ""unsaved changed""",enhancement,new,minor,,ckan,,ux,,ckan,none

@@ -1,0 +1,169 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2867,1.8 url_for error,ross,,"From: <thedatahub.org@s077.okserver.org>
+Date: Thu, Aug 16, 2012 at 10:30 AM
+Subject: WebApp Error: <class 'routes.util.GenerationException'>: url_for can only return a string, got unicode instead: https://ckannet-storage.commondatastorage.googleapis.com/file/fd3e00d9-eb0d-479b-8303-38909e5400ca?Signature=cmuU3CzRHQ86F3aZ0gljxv%2B3IqQ%3D&Expires=1345109432&AWSAccessKeyId=GOOGC6OU3AYPNY47B66M&x-goog-meta-uploaded-by=d5c8ed25-70de-4035-b29d-ddbe363913c6
+To: ckan-sysadmin@okfn.org, kindly@gmail.com
+
+
+URL: http://ckan.net/storage/f/file/fd3e00d9-eb0d-479b-8303-38909e5400ca
+Module weberror.errormiddleware:162 in __call__
+<<              __traceback_supplement__ = Supplement, self, environ
+                   sr_checker = ResponseStartChecker(start_response)
+                   app_iter = self.application(environ, sr_checker)
+                   return self.make_catching_iter(app_iter, environ, sr_checker)
+               except:
+>>  app_iter = self.application(environ, sr_checker)
+Module beaker.middleware:73 in __call__
+<<                                                     self.cache_manager)
+               environ[self.environ_key] = self.cache_manager
+               return self.app(environ, start_response)
+>>  return self.app(environ, start_response)
+Module beaker.middleware:155 in __call__
+<<                          headers.append(('Set-cookie', cookie))
+                   return start_response(status, headers, exc_info)
+               return self.wrap_app(environ, session_start_response)
+       
+           def _get_session(self):
+>>  return self.wrap_app(environ, session_start_response)
+Module routes.middleware:131 in __call__
+<<                                               r'\1', oldpath)
+               
+               response = self.app(environ, start_response)
+               
+               # Wrapped in try as in rare cases the attribute will be gone already
+>>  response = self.app(environ, start_response)
+Module pylons.wsgiapp:125 in __call__
+<<          
+               controller = self.resolve(environ, start_response)
+               response = self.dispatch(controller, environ, start_response)
+               
+               if 'paste.testing_variables' in environ and hasattr(response,
+>>  response = self.dispatch(controller, environ, start_response)
+Module pylons.wsgiapp:324 in dispatch
+<<          if log_debug:
+                   log.debug(""Calling controller class with WSGI interface"")
+               return controller(environ, start_response)
+           
+           def load_test_env(self, environ):
+>>  return controller(environ, start_response)
+Module ckan.lib.base:239 in __call__
+<<          try:
+                   res = WSGIController.__call__(self, environ, start_response)
+               finally:
+                   model.Session.remove()
+>>  res = WSGIController.__call__(self, environ, start_response)
+Module pylons.controllers.core:221 in __call__
+<<                  return response(environ, self.start_response)
+               
+               response = self._dispatch_call()
+               if not start_response_called:
+                   self.start_response = start_response
+>>  response = self._dispatch_call()
+Module pylons.controllers.core:172 in _dispatch_call
+<<              req.environ['pylons.action_method'] = func
+                   
+                   response = self._inspect_call(func)
+               else:
+                   if log_debug:
+>>  response = self._inspect_call(func)
+Module pylons.controllers.core:107 in _inspect_call
+<<                        func.__name__, args)
+               try:
+                   result = self._perform_call(func, args)
+               except HTTPException, httpe:
+                   if log_debug:
+>>  result = self._perform_call(func, args)
+Module pylons.controllers.core:60 in _perform_call
+<<          """"""Hide the traceback for everything above this method""""""
+               __traceback_hide__ = 'before_and_this'
+               return func(**args)
+           
+           def _inspect_call(self, func):
+>>  return func(**args)
+Module ckan.controllers.storage:190 in file
+<<              return fapp(request.environ, self.start_response)
+               else:
+                   h.redirect_to(file_url)
+>>  h.redirect_to(file_url)
+Module ckan.lib.helpers:57 in redirect_to
+<<      if are_there_flash_messages():
+               kw['__no_cache__'] = True
+           return _redirect_to(url_for(*args, **kw))
+       
+       def url(*args, **kw):
+>>  return _redirect_to(url_for(*args, **kw))
+Module ckan.lib.helpers:79 in url_for
+<<          # fix ver to include the slash
+               kw['ver'] = '/%s' % ver
+           my_url = _routes_default_url_for(*args, **kw)
+           kw['__ckan_no_root'] = no_root
+           return _add_i18n_to_url(my_url, locale=locale, **kw)
+>>  my_url = _routes_default_url_for(*args, **kw)
+Module routes.util:265 in url_for
+<<      if not isinstance(url, str) and url is not None:
+               raise GenerationException(""url_for can only return a string, got ""
+                               ""unicode instead: %s"" % url)
+           if url is None:
+               raise GenerationException(
+>>  ""unicode instead: %s"" % url)
+GenerationException: url_for can only return a string, got unicode instead: https://ckannet-storage.commondatastorage.googleapis.com/file/fd3e00d9-eb0d-479b-8303-38909e5400ca?Signature=cmuU3CzRHQ86F3aZ0gljxv%2B3IqQ%3D&Expires=1345109432&AWSAccessKeyId=GOOGC6OU3AYPNY47B66M&x-goog-meta-uploaded-by=d5c8ed25-70de-4035-b29d-ddbe363913c6
+CGI Variables
+CKAN_CURRENT_URL	'/storage/f/file/fd3e00d9-eb0d-479b-8303-38909e5400ca'
+CKAN_LANG	'en'
+CKAN_LANG_IS_DEFAULT	True
+CONTENT_TYPE	'; charset=utf-8'
+DOCUMENT_ROOT	'/etc/apache2/htdocs'
+GATEWAY_INTERFACE	'CGI/1.1'
+HTTP_ACCEPT	'*/*'
+HTTP_ACCEPT_CHARSET	'utf-8;q=0.7,iso-8859-1;q=0.2,*;q=0.1'
+HTTP_CONNECTION	'close'
+HTTP_HOST	'ckan.net'
+HTTP_USER_AGENT	'Mozilla/5.0 (compatible; Ezooms/1.0; ezooms.bot@gmail.com)'
+PATH_INFO	'/storage/f/file/fd3e00d9-eb0d-479b-8303-38909e5400ca'
+PATH_TRANSLATED	'/etc/ckan/datahub/apache.wsgi/storage/f/file/fd3e00d9-eb0d-479b-8303-38909e5400ca'
+REMOTE_ADDR	'127.0.0.1'
+REMOTE_PORT	'37236'
+REQUEST_METHOD	'GET'
+REQUEST_URI	'/storage/f/file/fd3e00d9-eb0d-479b-8303-38909e5400ca'
+SCRIPT_FILENAME	'/etc/ckan/datahub/apache.wsgi'
+SERVER_ADDR	'127.0.0.1'
+SERVER_ADMIN	'[no address given]'
+SERVER_NAME	'ckan.net'
+SERVER_PORT	'80'
+SERVER_PROTOCOL	'HTTP/1.0'
+SERVER_SIGNATURE	'<address>Apache/2.2.22 (Ubuntu) Server at ckan.net Port 80</address>\n'
+SERVER_SOFTWARE	'Apache/2.2.22 (Ubuntu)'
+WSGI Variables
+application	<beaker.middleware.CacheMiddleware object at 0x7f5312a51650>
+beaker.cache	<beaker.cache.CacheManager object at 0x7f5312a51790>
+beaker.get_session	<bound method SessionMiddleware._get_session of <beaker.middleware.SessionMiddleware object at 0x7f5312a516d0>>
+beaker.session	{'_accessed_time': 1345109433.273328, '_creation_time': 1345109433.273328}
+mod_wsgi.application_group	'ckan.net|'
+mod_wsgi.callable_object	'application'
+mod_wsgi.handler_script	''
+mod_wsgi.input_chunked	'0'
+mod_wsgi.listener_host	''
+mod_wsgi.listener_port	'8080'
+mod_wsgi.process_group	'datahub'
+mod_wsgi.request_handler	'wsgi-script'
+mod_wsgi.script_reloading	'1'
+mod_wsgi.version	(3, 3)
+paste.cookies	(<SimpleCookie: >, '')
+paste.registry	<paste.registry.Registry object at 0x7f5303b05610>
+paste.throw_errors	True
+pylons.action_method	<bound method StorageController.file of <ckan.controllers.storage.StorageController object at 0x7f530891fa10>>
+pylons.controller	<ckan.controllers.storage.StorageController object at 0x7f530891fa10>
+pylons.environ_config	{'session': 'beaker.session', 'cache': 'beaker.cache'}
+pylons.pylons	<pylons.util.PylonsContext object at 0x7f52f864f850>
+pylons.routes_dict	{'action': u'file', 'controller': u'ckan.controllers.storage:StorageController', 'label': u'file/fd3e00d9-eb0d-479b-8303-38909e5400ca'}
+repoze.who.logger	<logging.Logger object at 0x7f53127b2b50>
+repoze.who.plugins	{'openid': <OpenIdIdentificationPlugin 139994769488336>, 'friendlyform': <FriendlyFormPlugin 139994769488528>, 'ckan.lib.authenticator:UsernamePasswordAuthenticator': <ckan.lib.authenticator.UsernamePasswordAuthenticator object at 0x7f5312d893d0>, 'auth_tkt': <AuthTktCookiePlugin 139994771858704>, 'ckan.lib.authenticator:OpenIDAuthenticator': <ckan.lib.authenticator.OpenIDAuthenticator object at 0x7f5312d89350>}
+routes.route	<routes.route.Route object at 0x7f531296e690>
+routes.url	<routes.util.URLGenerator object at 0x7f52f82cd450>
+webob._parsed_query_vars	(GET([]), '')
+webob.adhoc_attrs	{'language': 'en-us'}
+wsgi process	'Multi process AND threads (?)'
+wsgi.file_wrapper	<built-in method file_wrapper of mod_wsgi.Adapter object at 0x7f52f5870cd8>
+wsgi.version	(1, 1)
+wsgiorg.routing_args	(<routes.util.URLGenerator object at 0x7f52f82cd450>, {'action': u'file', 'controller': u'ckan.controllers.storage:StorageController', 'label': u'file/fd3e00d9-eb0d-479b-8303-38909e5400ca'})
+",enhancement,new,awaiting merge,,ckan,,,,ckan,none

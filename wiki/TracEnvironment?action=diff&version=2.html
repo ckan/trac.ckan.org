@@ -1,0 +1,456 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+    <html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      TracEnvironment (diff) – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="help" href="TracGuide.html" />
+        <link rel="up" href="TracEnvironment%3Faction=history.html" title="Page history" />
+        <link rel="next" href="TracEnvironment%3Faction=diff&amp;version=3.html" title="Version 3" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/wiki.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/diff.css" type="text/css" />
+        <link rel="prev" href="TracEnvironment%3Faction=diff&amp;version=1.html" title="Version 1" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/diff.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="../chrome/common/css/diff.css" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last active"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="TracEnvironment%3Faction=diff&amp;version=1.html" title="Version 1">Previous Change</a></span></li><li><a href="TracEnvironment%3Faction=history.html" title="Page history">Wiki History</a></li><li class="last"><span><a class="next" href="TracEnvironment%3Faction=diff&amp;version=3.html" title="Version 3">Next Change</a> &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="wiki">
+      <h1>
+        Changes between
+          <a href="TracEnvironment%3Fversion=1.html">Version 1</a> and
+          <a href="TracEnvironment%3Fversion=2.html">Version 2</a> of
+          <a href="TracEnvironment%3Fversion=2.html">TracEnvironment</a>
+      </h1>
+      <form method="post" id="prefs" action="TracEnvironment%3Fversion=2.html"><div><input type="hidden" name="__FORM_TOKEN" value="93d81ccf9a7bb1c456462f62" /></div>
+        <div>
+          <input type="hidden" name="action" value="diff" />
+          <input type="hidden" name="version" value="2" />
+          <input type="hidden" name="old_version" value="1" />
+          
+  <label for="style">View differences</label>
+  <select id="style" name="style">
+    <option selected="selected" value="inline">inline</option>
+    <option value="sidebyside">side by side</option>
+  </select>
+  <div class="field">
+    <label><input type="radio" name="contextall" value="0" checked="checked" />
+             Show</label>
+      <label><input type="text" name="contextlines" id="contextlines" size="2" maxlength="3" value="2" />
+             lines around each change</label><br />
+    <label><input type="radio" name="contextall" value="1" />
+           Show the changes in full context</label>
+  </div>
+  <fieldset id="ignore">
+    <legend>Ignore:</legend>
+    <div class="field">
+      <input type="checkbox" id="ignoreblanklines" name="ignoreblanklines" />
+      <label for="ignoreblanklines">Blank lines</label>
+    </div>
+    <div class="field">
+      <input type="checkbox" id="ignorecase" name="ignorecase" />
+      <label for="ignorecase">Case changes</label>
+    </div>
+    <div class="field">
+      <input type="checkbox" id="ignorewhitespace" name="ignorewhitespace" />
+      <label for="ignorewhitespace">White space changes</label>
+    </div>
+  </fieldset>
+  <div class="buttons">
+    <input type="submit" name="update" value="Update" />
+  </div>
+
+        </div>
+      </form>
+      <dl id="overview">
+        <dt class="property time">Timestamp:</dt>
+        <dd class="time">
+            07/30/07 11:26:42 (<a class="timeline" href="../timeline%3Ffrom=2007-07-30T11:26:42Z&amp;precision=second.html" title="2007-07-30T11:26:42Z in Timeline">7 years</a> ago)
+        </dd>
+        <dt class="property author">Author:</dt>
+        <dd class="author">
+          trac
+        </dd>
+        <dt class="property message">Comment:</dt>
+        <dd class="message">
+          
+          <p>
+--
+</p>
+
+        </dd>
+      </dl>
+      <div class="diff">
+        <div class="legend" id="diff-legend">
+          <h3>Legend:</h3>
+          <dl>
+            <dt class="unmod"></dt><dd>Unmodified</dd>
+            <dt class="add"></dt><dd>Added</dd>
+            <dt class="rem"></dt><dd>Removed</dd>
+            <dt class="mod"></dt><dd>Modified</dd>
+          </dl>
+        </div>
+        <div class="diff">
+  <ul class="entries">
+      <li class="entry">
+        <h2 id="file0">
+          <a href="TracEnvironment%3Fversion=2.html">TracEnvironment</a>
+        </h2>
+        <table class="trac-diff inline" summary="Differences" cellspacing="0">
+              <colgroup><col class="lineno" /><col class="lineno" /><col class="content" /></colgroup>
+              <thead>
+                <tr>
+                  <th title="Version 1">
+                    <a href="TracEnvironment%3Fversion=1.html#L1">
+                      v1</a>
+                  </th>
+                  <th title="Version 2">
+                    <a href="TracEnvironment%3Fversion=2.html#L1">
+                      v2</a>
+                  </th>
+                  <td> </td>
+                </tr>
+              </thead>
+            <tbody class="mod">
+                      <tr class="first">
+                        <th>1</th><th> </th><td class="l"><span>= T<del>rac Storage - The</del> Environment =</span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>1</th><td class="r"><span>= T<ins>he Trac</ins> Environment =</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>2</th><th>2</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>3</th><th> </th><td class="l"><span>Trac uses a directory structure and a database for storing project data.<del></del></span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>3</th><td class="r"><span>Trac uses a directory structure and a database for storing project data.<ins>&nbsp;The directory is referred to as the “environment”.</ins></span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>4</th><th>4</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>5</th><th>5</th><td class="l"><span>== Creating an Environment ==</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracEnvironment%3Fversion=1.html#L11">…</a></th>
+                  <th><a href="TracEnvironment%3Fversion=2.html#L11">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>11</th><th>11</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>12</th><th>12</th><td class="l"><span>[wiki:TracAdmin trac-admin] will ask you for the name of the project, the</span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>13</th><th> </th><td class="l"><span>database connection string (explained below), and <del>where your subversion</del></span> </td>
+                      </tr><tr>
+                        <th>14</th><th> </th><td class="l"><span><del>repository is located</del>.</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>13</th><td class="r"><span>database connection string (explained below), and <ins>the type and path to</ins></span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>14</th><td class="r"><span><ins>your source code repository</ins>.</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>15</th><th>15</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>16</th><th> </th><td class="l"><span>&nbsp; ''Note: The web server user will require file system write permission to</span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>16</th><td class="r"><span>''Note: The web server user will require file system write permission to </span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>17</th><th>17</th><td class="l"><span>the environment directory and all the files inside. Please remember to set</span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>18</th><th> </th><td class="l"><span>the appropriate permissions. The same applies to the Subversion<del></del></span> </td>
+                      </tr><tr>
+                        <th>19</th><th> </th><td class="l"><span>repository, although Trac will only require read access as long as you're</span> </td>
+                      </tr><tr>
+                        <th>20</th><th> </th><td class="l"><span><del></del>not using the BDB file system.''</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>18</th><td class="r"><span>the appropriate permissions. The same applies to the Subversion<ins>&nbsp;repository </ins></span> </td>
+                      </tr><tr>
+                        <th> </th><th>19</th><td class="r"><span>Trac is eventually using, although Trac will only require read access as long </span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>20</th><td class="r"><span><ins>as you're </ins>not using the BDB file system.''</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>21</th><th>21</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>22</th><th>22</th><td class="l"><span>== Database Connection Strings ==</span> </td>
+                  </tr><tr>
+                          <th>23</th><th>23</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>24</th><th> </th><td class="l"><span>Since version 0.9, Trac supports both [http://sqlite.org/ SQLite] and</span> </td>
+                      </tr><tr>
+                        <th>25</th><th> </th><td class="l"><span>[http://www.postgresql.org/ PostgreSQL] as database backends.&nbsp; The default</span> </td>
+                      </tr><tr>
+                        <th>26</th><th> </th><td class="l"><span>is to use SQLite, which is probably sufficient for most projects. The database file</span> </td>
+                      </tr><tr>
+                        <th>27</th><th> </th><td class="l"><span>is then stored in the environment directory, and can easily be</span> </td>
+                      </tr><tr>
+                        <th>28</th><th> </th><td class="l"><span>[wiki:TracBackup backed up] together with the rest of the environment.</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>24</th><td class="r"><span>Since version 0.9, Trac supports both [http://sqlite.org/ SQLite],</span> </td>
+                      </tr><tr>
+                        <th> </th><th>25</th><td class="r"><span>[http://www.postgresql.org/ PostgreSQL] and [http://mysql.com/ MySQL] as</span> </td>
+                      </tr><tr>
+                        <th> </th><th>26</th><td class="r"><span>database backends.&nbsp; The default is to use SQLite, which is probably sufficient</span> </td>
+                      </tr><tr>
+                        <th> </th><th>27</th><td class="r"><span>for most projects. The database file is then stored in the environment</span> </td>
+                      </tr><tr>
+                        <th> </th><th>28</th><td class="r"><span>directory, and can easily be [wiki:TracBackup backed up] together with the</span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>29</th><td class="r"><span>rest of the environment.</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>29</th><th>30</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>30</th><th>31</th><td class="l"><span>The connection string for an embedded SQLite database is:</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracEnvironment%3Fversion=1.html#L33">…</a></th>
+                  <th><a href="TracEnvironment%3Fversion=2.html#L34">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>33</th><th>34</th><td class="l"><span>}}}</span> </td>
+                  </tr><tr>
+                          <th>34</th><th>35</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>35</th><th> </th><td class="l"><span>If you want to use PostgreSQL <del>instead, you'll have to use a different</del></span> </td>
+                      </tr><tr>
+                        <th>36</th><th> </th><td class="l"><span>connection string. For example, to connect to a database on the same</span> </td>
+                      </tr><tr>
+                        <th>37</th><th> </th><td class="l"><span>machine called `trac`, that allows access to the user `johndoe` with</span> </td>
+                      </tr><tr>
+                        <th>38</th><th> </th><td class="l"><span><del></del>the password `letmein`, use:</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>36</th><td class="r"><span>If you want to use PostgreSQL <ins>or MySQL instead, you'll have to use a</ins></span> </td>
+                      </tr><tr>
+                        <th> </th><th>37</th><td class="r"><span>different connection string. For example, to connect to a PostgreSQL</span> </td>
+                      </tr><tr>
+                        <th> </th><th>38</th><td class="r"><span>database on the same machine called `trac`, that allows access to the</span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>39</th><td class="r"><span><ins>user `johndoe` with </ins>the password `letmein`, use:</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>39</th><th>40</th><td class="l"><span>{{{</span> </td>
+                  </tr><tr>
+                          <th>40</th><th>41</th><td class="l"><span>postgres://johndoe:letmein@localhost/trac</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracEnvironment%3Fversion=1.html#L48">…</a></th>
+                  <th><a href="TracEnvironment%3Fversion=2.html#L49">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>48</th><th>49</th><td class="l"><span>Note that with PostgreSQL you will have to create the database before running</span> </td>
+                  </tr><tr>
+                          <th>49</th><th>50</th><td class="l"><span>`trac-admin initenv`.</span> </td>
+                  </tr>
+            </tbody><tbody class="add">
+                  <tr class="first">
+                          <th> </th><th>51</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>52</th><td class="r"><ins>And make sure PostgreSQl DB name is "trac". What worked for me:</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>53</th><td class="r"><ins>And didn't work uppercase trac-user-name</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>54</th><td class="r"><ins>{{{</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>55</th><td class="r"><ins>sudo su - postgres -c createdb trac</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>56</th><td class="r"><ins>sudo su - postgres -c psql trac</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>57</th><td class="r"><ins>CREATE USER trac-user-name WITH PASSWORD 'trac-pass-name';</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>58</th><td class="r"><ins>}}}</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>59</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>60</th><td class="r"><ins>(Just to remind you, if you don't have a sudo/su setup, you just need to do the createdb and psql statements. That threw me the first couple of times I read this.)</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>61</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>62</th><td class="r"><ins>== Source Code Repository ==</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>63</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>64</th><td class="r"><ins>You'll first have to provide the ''type'' of your repository (e.g. `svn` for Subversion,</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>65</th><td class="r"><ins>which is the default), then the ''path'' where the repository is located.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>66</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>67</th><td class="r"><ins>If you don't want to use Trac with a source code repository, simply leave the ''path'' empty</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>68</th><td class="r"><ins>(the ''type'' information doesn't matter, then).</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>69</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>70</th><td class="r"><ins>For some systems, it is possible to specify not only the path to the repository,</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>71</th><td class="r"><ins>but also a ''scope'' within the repository. Trac will then only show information</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>72</th><td class="r"><ins>related to the files and changesets below that scope. The Subversion backend for</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>73</th><td class="r"><ins>Trac supports this; for other types, check the corresponding plugin's documentation.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>74</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>75</th><td class="r"><ins>Example of a configuration for a Subversion repository:</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>76</th><td class="r"><ins>{{{</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>77</th><td class="r"><ins>[trac]</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>78</th><td class="r"><ins>repository_type = svn</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>79</th><td class="r"><ins>repository_dir = /path/to/your/repository</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>80</th><td class="r"><ins>}}}</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>81</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>82</th><td class="r"><ins>The configuration for a scoped Subversion repository would be:</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>83</th><td class="r"><ins>{{{</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>84</th><td class="r"><ins>[trac]</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>85</th><td class="r"><ins>repository_type = svn</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>86</th><td class="r"><ins>repository_dir = /path/to/your/repository/scope/within/repos</ins> </td>
+                  </tr><tr class="last">
+                          <th> </th><th>87</th><td class="r"><ins>}}}</ins> </td>
+                  </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>50</th><th>88</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>51</th><th>89</th><td class="l"><span>== Directory Structure ==</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracEnvironment%3Fversion=1.html#L67">…</a></th>
+                  <th><a href="TracEnvironment%3Fversion=2.html#L105">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>67</th><th>105</th><td class="l"><span>&nbsp;* `wiki-macros` - Environment-specific [wiki:WikiMacros Wiki macros].</span> </td>
+                  </tr><tr>
+                          <th>68</th><th>106</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="add">
+                  <tr class="first">
+                          <th> </th><th>107</th><td class="r"><ins>&nbsp; '''Note: don't confuse a Trac environment directory with the source code repository directory.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>108</th><td class="r"><ins>It happens that the above structure is loosely modelled after the Subversion repository directory </ins> </td>
+                  </tr><tr>
+                          <th> </th><th>109</th><td class="r"><ins>structure, but they are not and ''must not'' be located at the same place.'''</ins> </td>
+                  </tr><tr class="last">
+                          <th> </th><th>110</th><td class="r"><ins></ins> </td>
+                  </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>69</th><th>111</th><td class="l"><span>----</span> </td>
+                  </tr><tr>
+                          <th>70</th><th>112</th><td class="l"><span>See also: TracAdmin, TracBackup, TracIni, TracGuide</span> </td>
+                  </tr>
+            </tbody>
+        </table>
+      </li>
+  </ul>
+</div>
+      </div>
+  </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

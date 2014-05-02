@@ -1,0 +1,492 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      #1128 (Upload Scotland gov data)
+     – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="prev" href="1127.html" title="Ticket #1127" />
+        <link rel="last" href="3030.html" title="Ticket #3030" />
+        <link rel="help" href="../wiki/TracGuide.html" />
+        <link rel="alternate" href="1128%3Fformat=csv" type="text/csv" class="csv" title="Comma-delimited Text" /><link rel="alternate" href="1128%3Fformat=tab" type="text/tab-separated-values" class="tab" title="Tab-delimited Text" /><link rel="alternate" href="1128%3Fformat=rss" type="application/rss+xml" class="rss" title="RSS Feed" />
+        <link rel="next" href="1129.html" title="Ticket #1129" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/ticket.css" type="text/css" />
+        <link rel="first" href="1.html" title="Ticket #1" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript">
+      var auto_preview_timeout=2.0;
+      var form_token="93d81ccf9a7bb1c456462f62";
+    </script>
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script><script type="text/javascript" src="../chrome/common/js/wikitoolbar.js"></script><script type="text/javascript" src="../chrome/common/js/resizer.js"></script><script type="text/javascript" src="../chrome/common/js/auto_preview.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("div.description").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $(".foldable").enableFolding(false, true);
+        var args = {realm: "ticket", id: 1128, escape_newlines: 0}
+        $("#comment").autoPreview("/wiki_render", args, function(textarea, text, rendered) {
+            $("#ticketchange div.comment").html(rendered);
+            if (rendered)
+              $("#ticketchange").show();
+            else if ($("#ticketchange ul.changes").length == 0)
+              $("#ticketchange").hide();
+        });
+        $("#trac-comment-editor textarea").autoPreview("/wiki_render", args,
+                                                       function(textarea, text, rendered) {
+          var comment = $("#trac-comment-editor").next("div.comment");
+          comment.html(rendered);
+          if (rendered)
+            comment.show();
+          else
+            comment.hide();
+        });
+        $("#modify").parent().toggleClass("collapsed");
+        $(".trac-topnav a").click(function() { $("#modify").parent().removeClass("collapsed"); });
+        /* only enable control elements for the currently selected action */
+        var actions = $("#action input[name='action']");
+        function updateActionFields() {
+          actions.each(function () {
+            $(this).siblings().find("*[id]").enable($(this).checked());
+            $(this).siblings().filter("*[id]").enable($(this).checked());
+          });
+        }
+        actions.click(updateActionFields);
+        updateActionFields();
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="../wiki/TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li class="active"><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="1127.html" title="Ticket #1127">Previous Ticket</a></span></li><li class="last"><span><a class="next" href="1129.html" title="Ticket #1129">Next Ticket</a> &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="ticket">
+      <h1 id="trac-ticket-title">
+          <a href="1128.html">Ticket #1128</a>
+          <span class="status">(closed task: fixed)</span>
+      </h1>
+      <div id="ticket">
+  <div class="date">
+    <p>Opened <a class="timeline" href="../timeline%3Ffrom=2011-05-06T20:04:53Z&amp;precision=second.html" title="2011-05-06T20:04:53Z in Timeline">3 years</a> ago</p>
+    <p>Last modified <a class="timeline" href="../timeline%3Ffrom=2011-07-13T14:40:28Z&amp;precision=second.html" title="2011-07-13T14:40:28Z in Timeline">3 years</a> ago</p>
+  </div>
+  <h2 class="summary searchable">Upload Scotland gov data</h2>
+  <table class="properties">
+    <tr>
+      <th id="h_reporter">Reported by:</th>
+      <td headers="h_reporter" class="searchable">
+        <a href="../query%3Fstatus=!closed&amp;reporter=dread.html">dread</a>
+      </td>
+      <th id="h_owner">Owned by:</th>
+      <td headers="h_owner">
+        <a href="../query%3Fstatus=!closed&amp;owner=dread.html">dread</a>
+      </td>
+    </tr>
+    <tr>
+        <th id="h_priority">
+          Priority:
+        </th>
+        <td headers="h_priority">
+              <a href="../query%3Fstatus=!closed&amp;priority=major.html">major</a>
+        </td>
+        <th id="h_milestone">
+          Milestone:
+        </th>
+        <td headers="h_milestone">
+              <a class="closed milestone" href="../milestone/ckan-sprint-2011-10-28.html">ckan-sprint-2011-10-28</a>
+        </td>
+    </tr><tr>
+        <th id="h_component">
+          Component:
+        </th>
+        <td headers="h_component">
+              <a href="../query%3Fstatus=!closed&amp;component=ckan.html">ckan</a>
+        </td>
+        <th id="h_keywords">
+          Keywords:
+        </th>
+        <td headers="h_keywords" class="searchable">
+        </td>
+    </tr><tr>
+        <th id="h_cc">
+          Cc:
+        </th>
+        <td headers="h_cc" class="searchable">
+        </td>
+        <th id="h_repo">
+          Repository:
+        </th>
+        <td headers="h_repo">
+              <a href="../query%3Fstatus=!closed&amp;repo=ckan.html">ckan</a>
+        </td>
+    </tr><tr>
+        <th id="h_theme">
+          Theme:
+        </th>
+        <td headers="h_theme">
+              <a href="../query%3Fstatus=!closed&amp;theme=none.html">none</a>
+        </td>
+        <th>
+        </th>
+        <td>
+        </td>
+    </tr>
+  </table>
+  <div class="description">
+    <h3 id="comment:description">
+      Description
+    </h3>
+    <div class="searchable">
+      <p>
+Upload to ckan.net:
+<a class="ext-link" href="https://sites.google.com/site/scotlandsdata/"><span class="icon">​</span>https://sites.google.com/site/scotlandsdata/</a>
+</p>
+
+    </div>
+  </div>
+</div>
+          
+    <div id="attachments">
+        <h2 class="foldable">Attachments</h2>
+        <div>
+          <dl class="attachments">
+              <dt>
+    <a href="../attachment/ticket/1128/scotland-2010-10-18.csv.html" title="View attachment">scotland-2010-10-18.csv</a><a href="../raw-attachment/ticket/1128/scotland-2010-10-18.csv" class="trac-rawlink" title="Download">​</a>
+       (<span title="10358 bytes">10.1 KB</span>) -
+      added by <em>dread</em> <a class="timeline" href="../timeline%3Ffrom=2011-07-13T14:39:53Z&amp;precision=second.html" title="2011-07-13T14:39:53Z in Timeline">3 years</a> ago.
+  </dt>
+              <dd>
+                Data with title column added in manually
+              </dd>
+          </dl>
+          
+        </div>
+    </div>
+
+        <div>
+          <h2 class="foldable">Change History</h2>
+          <div id="changelog">
+              <div class="change" id="trac-change-1">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:1" class="cnum">
+      <a href="1128.html#comment:1">comment:1</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-05-16T09:25:34Z&amp;precision=second.html" title="2011-05-16T09:25:34Z in Timeline">3 years</a> ago by dread
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Milestone</strong>
+        changed from <em>ckan-v1.4-sprint-7</em> to <em>ckan-v1.5-sprint-1</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-2">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:2" class="cnum">
+      <a href="1128.html#comment:2">comment:2</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-05-23T10:42:37Z&amp;precision=second.html" title="2011-05-23T10:42:37Z in Timeline">3 years</a> ago by dread
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Milestone</strong>
+        changed from <em>ckan-v1.5-sprint-1</em> to <em>ckan-v1.5-sprint-2</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-3">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:3" class="cnum">
+      <a href="1128.html#comment:3">comment:3</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-06-06T09:25:48Z&amp;precision=second.html" title="2011-06-06T09:25:48Z in Timeline">3 years</a> ago by dread
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Milestone</strong>
+        changed from <em>ckan-v1.5-sprint-2</em> to <em>ckan-v1.5-sprint-3</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-4">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:4" class="cnum">
+      <a href="1128.html#comment:4">comment:4</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-06-21T14:00:32Z&amp;precision=second.html" title="2011-06-21T14:00:32Z in Timeline">3 years</a> ago by dread
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Milestone</strong>
+        changed from <em>ckan-v1.5-sprint-3</em> to <em>ckan-v1.5</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-5">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:5" class="cnum">
+      <a href="1128.html#comment:5">comment:5</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-07-08T11:47:02Z&amp;precision=second.html" title="2011-07-08T11:47:02Z in Timeline">3 years</a> ago by shevski
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Milestone</strong>
+        changed from <em>ckan-v1.5</em> to <em>ckan-current-sprint</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-6">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:6" class="cnum">
+      <a href="1128.html#comment:6">comment:6</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-07-13T14:36:43Z&amp;precision=second.html" title="2011-07-13T14:36:43Z in Timeline">3 years</a> ago by dread
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Status</strong>
+        changed from <em>new</em> to <em>closed</em>
+    </li><li>
+      <strong>Resolution</strong>
+        set to <em>fixed</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+Loader in ckanext/bin/loadscotland.py.
+Done upload to ckan.net:
+</p>
+<pre class="wiki">(pyenv-ckanext)dread@dread-laptop:~/hgroot/ckanext$ scotland_loader -k xyz -H http://ckan.net/api /home/dread/ckan-local/data/scotland-2010-10-18.csv
+/home/dread/hgroot/pyenv-ckanext/lib/python2.6/site-packages/pylons/templating.py:610: UserWarning: Unbuilt egg for setuptools [unknown version] (/usr/lib/python2.6/dist-packages)
+  Engine = entry_point.load()
+No handlers could be found for logger "vdm"
+2011-07-13 15:29:17,983 INFO  [ckanext.importlib.loader] Loading scottish_neighbourhood_statistics
+2011-07-13 15:29:20,109 INFO  [ckanext.importlib.loader] ...creating package
+2011-07-13 15:29:22,089 INFO  [ckanext.importlib.loader] Loading traveline_scotland
+2011-07-13 15:29:24,579 INFO  [ckanext.importlib.loader] ...creating package
+2011-07-13 15:29:27,045 INFO  [ckanext.importlib.loader] Loading sqa_qualifications
+2011-07-13 15:29:30,869 INFO  [ckanext.importlib.loader] ...creating package
+2011-07-13 15:29:32,561 INFO  [ckanext.importlib.loader] Loading scotxed
+2011-07-13 15:29:34,017 INFO  [ckanext.importlib.loader] ...creating package
+2011-07-13 15:29:35,286 INFO  [ckanext.importlib.loader] Loading iscjis_vocabularies
+2011-07-13 15:29:36,592 INFO  [ckanext.importlib.loader] ...creating package
+2011-07-13 15:29:37,782 INFO  [ckanext.importlib.loader] Loading ecare_multi-agency_store_data_model_and_vocabulary
+2011-07-13 15:29:39,043 INFO  [ckanext.importlib.loader] ...creating package
+2011-07-13 15:29:40,267 INFO  [ckanext.importlib.loader] Loading digital_archive_scottish_archive_network
+2011-07-13 15:29:41,690 INFO  [ckanext.importlib.loader] ...creating package
+2011-07-13 15:29:43,727 INFO  [ckanext.importlib.loader] Loading the_scottish_register_of_tartans
+2011-07-13 15:29:45,159 INFO  [ckanext.importlib.loader] ...creating package
+2011-07-13 15:29:46,816 INFO  [ckanext.importlib.loader] Loading scotlands_images
+2011-07-13 15:29:48,563 INFO  [ckanext.importlib.loader] ...creating package
+2011-07-13 15:29:49,983 INFO  [ckanext.importlib.loader] Loading national_library_of_scotland
+2011-07-13 15:29:51,709 INFO  [ckanext.importlib.loader] ...creating package
+2011-07-13 15:29:53,122 INFO  [ckanext.importlib.loader] Loading scottish_government_statistics
+2011-07-13 15:29:55,857 INFO  [ckanext.importlib.loader] ...creating package
+2011-07-13 15:29:57,118 INFO  [ckanext.importlib.loader] Loading scotbis
+2011-07-13 15:29:58,883 INFO  [ckanext.importlib.loader] ...creating package
+2011-07-13 15:30:00,264 INFO  [ckanext.importlib.loader] Loading historic_scotland
+2011-07-13 15:30:02,086 INFO  [ckanext.importlib.loader] ...creating package
+2011-07-13 15:30:03,609 INFO  [ckanext.importlib.loader] Loading scheduled_monuments_in_scotland
+2011-07-13 15:30:05,057 INFO  [ckanext.importlib.loader] ...creating package
+2011-07-13 15:30:06,987 INFO  [ckanext.importlib.loader] Loading scotlands_house_prices_service_consumer_information
+2011-07-13 15:30:08,687 INFO  [ckanext.importlib.loader] ...creating package
+2011-07-13 15:30:09,932 INFO  [ckanext.importlib.loader] Loading air_quality_in_scotland
+2011-07-13 15:30:11,278 INFO  [ckanext.importlib.loader] ...creating package
+2011-07-13 15:30:12,637 INFO  [ckanext.importlib.loader] Loading river_and_coastal_flooding_updates_for_scotland
+2011-07-13 15:30:13,940 INFO  [ckanext.importlib.loader] ...creating package
+2011-07-13 15:30:15,637 INFO  [ckanext.importlib.loader] Loading public_contracts_scotland
+2011-07-13 15:30:17,280 INFO  [ckanext.importlib.loader] ...creating package
+2011-07-13 15:30:18,666 INFO  [ckanext.importlib.loader] Loading scottish_government_consultations
+2011-07-13 15:30:20,673 INFO  [ckanext.importlib.loader] ...creating package
+2011-07-13 15:30:22,234 INFO  [ckanext.importlib.loader] Loading scottish_public_health_observatory
+2011-07-13 15:30:24,025 INFO  [ckanext.importlib.loader] ...creating package
+2011-07-13 15:30:26,297 INFO  [ckanext.importlib.loader] Loading scotlands_information_landscape
+2011-07-13 15:30:28,308 INFO  [ckanext.importlib.loader] ...creating package
+2011-07-13 15:30:29,758 INFO  [ckanext.importlib.loader] Loading isd_scotland
+2011-07-13 15:30:31,847 INFO  [ckanext.importlib.loader] ...creating package
+2011-07-13 15:30:33,074 INFO  [ckanext.importlib.loader] Loading scotlandspeople
+2011-07-13 15:30:34,541 INFO  [ckanext.importlib.loader] ...creating package
+2011-07-13 15:30:35,754 INFO  [ckanext.importlib.loader] Loading general_register_office_for_scotland_statistics
+2011-07-13 15:30:37,273 INFO  [ckanext.importlib.loader] ...creating package
+2011-07-13 15:30:39,330 INFO  [ckanext.importlib.loader] Loading baseline_scotland_-_groundwater_chemistry_data
+2011-07-13 15:30:40,716 INFO  [ckanext.importlib.loader] ...creating package
+2011-07-13 15:30:41,919 INFO  [ckanext.importlib.loader] Loading the_centre_for_the_study_of_retailing_in_scotland_data_sets
+2011-07-13 15:30:43,275 INFO  [ckanext.importlib.loader] ...creating package
+2011-07-13 15:30:44,515 INFO  [ckanext.importlib.loader] Loading growing_up_in_scotland
+2011-07-13 15:30:46,215 INFO  [ckanext.importlib.loader] ...creating package
+2011-07-13 15:30:47,582 INFO  [ckanext.importlib.loader] Loading scottish_parliament_msp_allowances
+2011-07-13 15:30:49,580 INFO  [ckanext.importlib.loader] ...creating package
+2011-07-13 15:30:51,272 INFO  [ckanext.importlib.loader] Loading scottish_government_ministerial_hospitality
+2011-07-13 15:30:53,764 INFO  [ckanext.importlib.loader] ...creating package
+2011-07-13 15:30:55,642 INFO  [ckanext.importlib.loader] Loading scottish_government_expenditure_over_25000
+2011-07-13 15:30:58,012 INFO  [ckanext.importlib.loader] ...creating package
+2011-07-13 15:30:59,674 INFO  [ckanext.importlib.loader] Loading scottish_local_government_financial_statistics
+2011-07-13 15:31:01,869 INFO  [ckanext.importlib.loader] ...creating package
+2011-07-13 15:31:03,382 INFO  [ckanext.importlib.loader] Loading scottish_government_disclosure_of_high_earners
+2011-07-13 15:31:07,086 INFO  [ckanext.importlib.loader] ...creating package
+2011-07-13 15:31:11,493 INFO  [ckanext.importlib.loader] Loading scotlands_places
+2011-07-13 15:31:14,452 INFO  [ckanext.importlib.loader] ...creating package
+2011-07-13 15:31:31,743 INFO  [ckanext.importlib.loader] Loading scottish_national_heritage_facts
+2011-07-13 15:31:36,223 INFO  [ckanext.importlib.loader] ...creating package
+2011-07-13 15:31:37,830 INFO  [ckanext.importlib.loader] Loading scottish_natural_spaces
+2011-07-13 15:31:40,245 INFO  [ckanext.importlib.loader] ...creating package
+2011-07-13 15:31:41,764 INFO  [ckanext.importlib.loader] Loading scotland_national_address_gazetteer
+2011-07-13 15:31:43,810 INFO  [ckanext.importlib.loader] ...creating package
+2011-07-13 15:31:45,069 INFO  [ckanext.importlib.loader] Loading scottish_environment_protection_agency
+2011-07-13 15:31:47,975 INFO  [ckanext.importlib.loader] ...creating package
+2011-07-13 15:31:49,525 INFO  [ckanext.importlib.loader] Loading traffic_scotland
+2011-07-13 15:31:52,396 INFO  [ckanext.importlib.loader] ...creating package
+</pre>
+    </div>
+
+              </div>
+              <div class="change">
+                <h3 class="change">
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-07-13T14:39:53Z&amp;precision=second.html" title="2011-07-13T14:39:53Z in Timeline">3 years</a> ago by dread
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Attachment</strong>
+        <a href="../attachment/ticket/1128/scotland-2010-10-18.csv.html"><em>scotland-2010-10-18.csv</em></a><a href="../raw-attachment/ticket/1128/scotland-2010-10-18.csv" title="Download" class="trac-rawlink">​</a>
+          added
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+Data with title column added in manually
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-7">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:7" class="cnum">
+      <a href="1128.html#comment:7">comment:7</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-07-13T14:40:28Z&amp;precision=second.html" title="2011-07-13T14:40:28Z in Timeline">3 years</a> ago by dread
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+Note, I added a title column and made one or two minor corrections that I spotted - see attached CSV for the result.
+</p>
+
+    </div>
+
+              </div>
+          </div>
+        </div>
+      <div id="help"><strong>Note:</strong> See
+        <a href="../wiki/TracTickets.html">TracTickets</a> for help on using
+        tickets.</div>
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="first">
+          <a rel="nofollow" href="1128%3Fformat=csv" class="csv">Comma-delimited Text</a>
+        </li><li>
+          <a rel="nofollow" href="1128%3Fformat=tab" class="tab">Tab-delimited Text</a>
+        </li><li class="last">
+          <a rel="nofollow" href="1128%3Fformat=rss" class="rss">RSS Feed</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

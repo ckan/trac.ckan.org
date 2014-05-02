@@ -1,0 +1,802 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+    <html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      TracFastCgi (diff) – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="help" href="TracGuide.html" />
+        <link rel="up" href="TracFastCgi%3Faction=history.html" title="Page history" />
+        <link rel="next" href="TracFastCgi%3Faction=diff&amp;version=3.html" title="Version 3" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/wiki.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/diff.css" type="text/css" />
+        <link rel="prev" href="TracFastCgi%3Faction=diff&amp;version=1.html" title="Version 1" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/diff.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="../chrome/common/css/diff.css" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last active"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="TracFastCgi%3Faction=diff&amp;version=1.html" title="Version 1">Previous Change</a></span></li><li><a href="TracFastCgi%3Faction=history.html" title="Page history">Wiki History</a></li><li class="last"><span><a class="next" href="TracFastCgi%3Faction=diff&amp;version=3.html" title="Version 3">Next Change</a> &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="wiki">
+      <h1>
+        Changes between
+          <a href="TracFastCgi%3Fversion=1.html">Version 1</a> and
+          <a href="TracFastCgi%3Fversion=2.html">Version 2</a> of
+          <a href="TracFastCgi%3Fversion=2.html">TracFastCgi</a>
+      </h1>
+      <form method="post" id="prefs" action="TracFastCgi%3Fversion=2.html"><div><input type="hidden" name="__FORM_TOKEN" value="93d81ccf9a7bb1c456462f62" /></div>
+        <div>
+          <input type="hidden" name="action" value="diff" />
+          <input type="hidden" name="version" value="2" />
+          <input type="hidden" name="old_version" value="1" />
+          
+  <label for="style">View differences</label>
+  <select id="style" name="style">
+    <option selected="selected" value="inline">inline</option>
+    <option value="sidebyside">side by side</option>
+  </select>
+  <div class="field">
+    <label><input type="radio" name="contextall" value="0" checked="checked" />
+             Show</label>
+      <label><input type="text" name="contextlines" id="contextlines" size="2" maxlength="3" value="2" />
+             lines around each change</label><br />
+    <label><input type="radio" name="contextall" value="1" />
+           Show the changes in full context</label>
+  </div>
+  <fieldset id="ignore">
+    <legend>Ignore:</legend>
+    <div class="field">
+      <input type="checkbox" id="ignoreblanklines" name="ignoreblanklines" />
+      <label for="ignoreblanklines">Blank lines</label>
+    </div>
+    <div class="field">
+      <input type="checkbox" id="ignorecase" name="ignorecase" />
+      <label for="ignorecase">Case changes</label>
+    </div>
+    <div class="field">
+      <input type="checkbox" id="ignorewhitespace" name="ignorewhitespace" />
+      <label for="ignorewhitespace">White space changes</label>
+    </div>
+  </fieldset>
+  <div class="buttons">
+    <input type="submit" name="update" value="Update" />
+  </div>
+
+        </div>
+      </form>
+      <dl id="overview">
+        <dt class="property time">Timestamp:</dt>
+        <dd class="time">
+            07/30/07 11:26:42 (<a class="timeline" href="../timeline%3Ffrom=2007-07-30T11:26:42Z&amp;precision=second.html" title="2007-07-30T11:26:42Z in Timeline">7 years</a> ago)
+        </dd>
+        <dt class="property author">Author:</dt>
+        <dd class="author">
+          trac
+        </dd>
+        <dt class="property message">Comment:</dt>
+        <dd class="message">
+          
+          <p>
+--
+</p>
+
+        </dd>
+      </dl>
+      <div class="diff">
+        <div class="legend" id="diff-legend">
+          <h3>Legend:</h3>
+          <dl>
+            <dt class="unmod"></dt><dd>Unmodified</dd>
+            <dt class="add"></dt><dd>Added</dd>
+            <dt class="rem"></dt><dd>Removed</dd>
+            <dt class="mod"></dt><dd>Modified</dd>
+          </dl>
+        </div>
+        <div class="diff">
+  <ul class="entries">
+      <li class="entry">
+        <h2 id="file0">
+          <a href="TracFastCgi%3Fversion=2.html">TracFastCgi</a>
+        </h2>
+        <table class="trac-diff inline" summary="Differences" cellspacing="0">
+              <colgroup><col class="lineno" /><col class="lineno" /><col class="content" /></colgroup>
+              <thead>
+                <tr>
+                  <th title="Version 1">
+                    <a href="TracFastCgi%3Fversion=1.html#L4">
+                      v1</a>
+                  </th>
+                  <th title="Version 2">
+                    <a href="TracFastCgi%3Fversion=2.html#L4">
+                      v2</a>
+                  </th>
+                  <td> </td>
+                </tr>
+              </thead>
+            <tbody class="unmod">
+                  <tr>
+                          <th>4</th><th>4</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>5</th><th>5</th><td class="l"><span>== Simple Apache configuration ==</span> </td>
+                  </tr>
+            </tbody><tbody class="add">
+                  <tr class="first">
+                          <th> </th><th>6</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>7</th><td class="r"><ins>There are two FastCGI modules commonly available for Apache: `mod_fastcgi` and</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>8</th><td class="r"><ins>`mod_fcgid`.&nbsp; The `FastCgiIpcDir` and `FastCgiConfig` directives discussed</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>9</th><td class="r"><ins>below are `mod_fastcgi` directives; the `DefaultInitEnv` is a `mod_fgcid`</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>10</th><td class="r"><ins>directive.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>11</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>12</th><td class="r"><ins>For `mod_fastcgi`, add the following to an appropriate Apache configuration</ins> </td>
+                  </tr><tr class="last">
+                          <th> </th><th>13</th><td class="r"><ins>file:</ins> </td>
+                  </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>6</th><th>14</th><td class="l"><span>{{{</span> </td>
+                  </tr><tr>
+                          <th>7</th><th>15</th><td class="l"><span># Enable fastcgi for .fcgi files</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracFastCgi%3Fversion=1.html#L14">…</a></th>
+                  <th><a href="TracFastCgi%3Fversion=2.html#L22">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>14</th><th>22</th><td class="l"><span>LoadModule fastcgi_module /usr/lib/apache2/modules/mod_fastcgi.so</span> </td>
+                  </tr><tr>
+                          <th>15</th><th>23</th><td class="l"><span>}}}</span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>16</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>17</th><th> </th><td class="l"><span>You can either setup the `TRAC_ENV` as an overall default:</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>24</th><td class="r"><span>Setting `FastCgiIpcDir` is optional if the default is suitable. Note that the `LoadModule` line must be after the `IfModule` group.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>25</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>26</th><td class="r"><span>Configure `ScriptAlias` or similar options as described in TracCgi, but</span> </td>
+                      </tr><tr>
+                        <th> </th><th>27</th><td class="r"><span>calling `trac.fcgi` instead of `trac.cgi`.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>28</th><td class="r"><span></span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>29</th><td class="r"><span>You can set up the `TRAC_ENV` as an overall default:</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>18</th><th>30</th><td class="l"><span>{{{</span> </td>
+                  </tr><tr>
+                          <th>19</th><th>31</th><td class="l"><span>FastCgiConfig -initial-env TRAC_ENV=/path/to/env/trac</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracFastCgi%3Fversion=1.html#L25">…</a></th>
+                  <th><a href="TracFastCgi%3Fversion=2.html#L37">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>25</th><th>37</th><td class="l"><span>}}}</span> </td>
+                  </tr><tr>
+                          <th>26</th><th>38</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>27</th><th> </th><td class="l"><span>Configure `ScriptAlias` or similar options as described in TracCgi, but calling `trac.fcgi` instead of `trac.cgi`.</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>39</th><td class="r"><span>But neither of these will work for `mod_fcgid`.&nbsp; A similar but partial</span> </td>
+                      </tr><tr>
+                        <th> </th><th>40</th><td class="r"><span>solution for `mod_fcgid` is:</span> </td>
+                      </tr><tr>
+                        <th> </th><th>41</th><td class="r"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th> </th><th>42</th><td class="r"><span>DefaultInitEnv TRAC_ENV /path/to/env/trac/</span> </td>
+                      </tr><tr>
+                        <th> </th><th>43</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>44</th><td class="r"><span>But this cannot be used in `Directory` or `Location` context, which makes it</span> </td>
+                      </tr><tr>
+                        <th> </th><th>45</th><td class="r"><span>difficult to support multiple projects.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>46</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>47</th><td class="r"><span>A better method which works for both of these modules (and for&nbsp; [http://www.lighttpd.net/ lighttpd] and CGI as well), because it involves</span> </td>
+                      </tr><tr>
+                        <th> </th><th>48</th><td class="r"><span>no server configuration settings for environment variables, is to set one</span> </td>
+                      </tr><tr>
+                        <th> </th><th>49</th><td class="r"><span>of the variables in `trac.fcgi`, e.g.:</span> </td>
+                      </tr><tr>
+                        <th> </th><th>50</th><td class="r"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th> </th><th>51</th><td class="r"><span>import os</span> </td>
+                      </tr><tr>
+                        <th> </th><th>52</th><td class="r"><span>os.environ['TRAC_ENV'] = "/path/to/projectenv"</span> </td>
+                      </tr><tr>
+                        <th> </th><th>53</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>54</th><td class="r"><span>or</span> </td>
+                      </tr><tr>
+                        <th> </th><th>55</th><td class="r"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th> </th><th>56</th><td class="r"><span>import os</span> </td>
+                      </tr><tr>
+                        <th> </th><th>57</th><td class="r"><span>os.environ['TRAC_ENV_PARENT_DIR'] = "/path/to/project/parent/dir"</span> </td>
+                      </tr><tr>
+                        <th> </th><th>58</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>59</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>60</th><td class="r"><span>Using this method, different projects can be supported by using different</span> </td>
+                      </tr><tr>
+                        <th> </th><th>61</th><td class="r"><span>`.fcgi` scripts with different `ScriptAliases`, copying and appropriately</span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>62</th><td class="r"><span>renaming `trac.fcgi` and adding the above code to create each such script.</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>28</th><th>63</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>29</th><th>64</th><td class="l"><span>== Simple Lighttpd Configuration ==</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracFastCgi%3Fversion=1.html#L48">…</a></th>
+                  <th><a href="TracFastCgi%3Fversion=2.html#L83">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>48</th><th>83</th><td class="l"><span>}}}</span> </td>
+                  </tr><tr>
+                          <th>49</th><th>84</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>50</th><th> </th><td class="l"><span>Note that you will need to add a new entry to `fastcgi.server` for each separate Trac instance that you wish to run. Alternatively, you may use the `TRAC_ENV_PARENT_DIR` variable instead of `TRAC_ENV` as described&nbsp; above.</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>85</th><td class="r"><span>Note that you will need to add a new entry to `fastcgi.server` for each separate Trac instance that you wish to run. Alternatively, you may use the `TRAC_ENV_PARENT_DIR` variable instead of `TRAC_ENV` as described above,</span> </td>
+                      </tr><tr>
+                        <th> </th><th>86</th><td class="r"><span>and you may set one of the two in `trac.fcgi` instead of in `lighttpd.conf`</span> </td>
+                      </tr><tr>
+                        <th> </th><th>87</th><td class="r"><span>using `bin-environment` (as in the section above on Apache configuration).</span> </td>
+                      </tr><tr>
+                        <th> </th><th>88</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>89</th><td class="r"><span>For using two projects with lighttpd add the following to your `lighttpd.conf`:</span> </td>
+                      </tr><tr>
+                        <th> </th><th>90</th><td class="r"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th> </th><th>91</th><td class="r"><span>fastcgi.server = ("/first" =&gt;</span> </td>
+                      </tr><tr>
+                        <th> </th><th>92</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;("first" =&gt;</span> </td>
+                      </tr><tr>
+                        <th> </th><th>93</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ("socket" =&gt; "/tmp/trac-fastcgi-first.sock",</span> </td>
+                      </tr><tr>
+                        <th> </th><th>94</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"bin-path" =&gt; "/path/to/cgi-bin/trac.fcgi",</span> </td>
+                      </tr><tr>
+                        <th> </th><th>95</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"check-local" =&gt; "disable",</span> </td>
+                      </tr><tr>
+                        <th> </th><th>96</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"bin-environment" =&gt;</span> </td>
+                      </tr><tr>
+                        <th> </th><th>97</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;("TRAC_ENV" =&gt; "/path/to/projenv-first")</span> </td>
+                      </tr><tr>
+                        <th> </th><th>98</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; )</span> </td>
+                      </tr><tr>
+                        <th> </th><th>99</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ),</span> </td>
+                      </tr><tr>
+                        <th> </th><th>100</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "/second" =&gt;</span> </td>
+                      </tr><tr>
+                        <th> </th><th>101</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ("second" =&gt;</span> </td>
+                      </tr><tr>
+                        <th> </th><th>102</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ("socket" =&gt; "/tmp/trac-fastcgi-second.sock",</span> </td>
+                      </tr><tr>
+                        <th> </th><th>103</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"bin-path" =&gt; "/path/to/cgi-bin/trac.fcgi",</span> </td>
+                      </tr><tr>
+                        <th> </th><th>104</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"check-local" =&gt; "disable",</span> </td>
+                      </tr><tr>
+                        <th> </th><th>105</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"bin-environment" =&gt;</span> </td>
+                      </tr><tr>
+                        <th> </th><th>106</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;("TRAC_ENV" =&gt; "/path/to/projenv-second")</span> </td>
+                      </tr><tr>
+                        <th> </th><th>107</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; )</span> </td>
+                      </tr><tr>
+                        <th> </th><th>108</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; )</span> </td>
+                      </tr><tr>
+                        <th> </th><th>109</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; )</span> </td>
+                      </tr><tr>
+                        <th> </th><th>110</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>111</th><td class="r"><span>Note that field values are different.&nbsp; If you prefer setting the environment</span> </td>
+                      </tr><tr>
+                        <th> </th><th>112</th><td class="r"><span>variables in the `.fcgi` scripts, then copy/rename `trac.fcgi`, e.g., to</span> </td>
+                      </tr><tr>
+                        <th> </th><th>113</th><td class="r"><span>`first.fcgi` and `second.fcgi`, and reference them in the above settings.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>114</th><td class="r"><span>Note that the above will result in different processes in any event, even</span> </td>
+                      </tr><tr>
+                        <th> </th><th>115</th><td class="r"><span>if both are running from the same `trac.fcgi` script.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>116</th><td class="r"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th> </th><th>117</th><td class="r"><span>#!html</span> </td>
+                      </tr><tr>
+                        <th> </th><th>118</th><td class="r"><span>&lt;p style="background: #fdc; border: 2px solid #d00; font-style: italic; padding: 0 .5em; margin: 1em 0;"&gt;</span> </td>
+                      </tr><tr>
+                        <th> </th><th>119</th><td class="r"><span>&lt;strong&gt;Note from c00i90wn:&lt;/strong&gt; It's very important the order on which server.modules are loaded, if mod_auth is not loaded &lt;strong&gt;BEFORE&lt;/strong&gt; mod_fastcgi, then the server will fail to authenticate the user.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>120</th><td class="r"><span>&lt;/p&gt;</span> </td>
+                      </tr><tr>
+                        <th> </th><th>121</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>122</th><td class="r"><span>For authentication you should enable mod_auth in lighttpd.conf 'server.modules', select auth.backend and auth rules:</span> </td>
+                      </tr><tr>
+                        <th> </th><th>123</th><td class="r"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th> </th><th>124</th><td class="r"><span>server.modules&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = (</span> </td>
+                      </tr><tr>
+                        <th> </th><th>125</th><td class="r"><span>...</span> </td>
+                      </tr><tr>
+                        <th> </th><th>126</th><td class="r"><span>&nbsp; "mod_auth",</span> </td>
+                      </tr><tr>
+                        <th> </th><th>127</th><td class="r"><span>...</span> </td>
+                      </tr><tr>
+                        <th> </th><th>128</th><td class="r"><span>)</span> </td>
+                      </tr><tr>
+                        <th> </th><th>129</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>130</th><td class="r"><span>auth.backend&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= "htpasswd"</span> </td>
+                      </tr><tr>
+                        <th> </th><th>131</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>132</th><td class="r"><span># Separated password files for each project</span> </td>
+                      </tr><tr>
+                        <th> </th><th>133</th><td class="r"><span># See "Conditional Configuration" in</span> </td>
+                      </tr><tr>
+                        <th> </th><th>134</th><td class="r"><span># http://trac.lighttpd.net/trac/file/branches/lighttpd-merge-1.4.x/doc/configuration.txt</span> </td>
+                      </tr><tr>
+                        <th> </th><th>135</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>136</th><td class="r"><span>$HTTP["url"] =~ "^/first/" {</span> </td>
+                      </tr><tr>
+                        <th> </th><th>137</th><td class="r"><span>&nbsp; auth.backend.htpasswd.userfile = "/path/to/projenv-first/htpasswd.htaccess"</span> </td>
+                      </tr><tr>
+                        <th> </th><th>138</th><td class="r"><span>}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>139</th><td class="r"><span>$HTTP["url"] =~ "^/second/" {</span> </td>
+                      </tr><tr>
+                        <th> </th><th>140</th><td class="r"><span>&nbsp; auth.backend.htpasswd.userfile = "/path/to/projenv-second/htpasswd.htaccess"</span> </td>
+                      </tr><tr>
+                        <th> </th><th>141</th><td class="r"><span>}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>142</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>143</th><td class="r"><span># Enable auth on trac URLs, see</span> </td>
+                      </tr><tr>
+                        <th> </th><th>144</th><td class="r"><span># http://trac.lighttpd.net/trac/file/branches/lighttpd-merge-1.4.x/doc/authentication.txt</span> </td>
+                      </tr><tr>
+                        <th> </th><th>145</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>146</th><td class="r"><span>auth.require = ("/first/login" =&gt;</span> </td>
+                      </tr><tr>
+                        <th> </th><th>147</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ("method"&nbsp; =&gt; "basic",</span> </td>
+                      </tr><tr>
+                        <th> </th><th>148</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"realm"&nbsp; &nbsp;=&gt; "First project",</span> </td>
+                      </tr><tr>
+                        <th> </th><th>149</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"require" =&gt; "valid-user"</span> </td>
+                      </tr><tr>
+                        <th> </th><th>150</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ),</span> </td>
+                      </tr><tr>
+                        <th> </th><th>151</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "/second/login" =&gt;</span> </td>
+                      </tr><tr>
+                        <th> </th><th>152</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ("method"&nbsp; =&gt; "basic",</span> </td>
+                      </tr><tr>
+                        <th> </th><th>153</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"realm"&nbsp; &nbsp;=&gt; "Second project",</span> </td>
+                      </tr><tr>
+                        <th> </th><th>154</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"require" =&gt; "valid-user"</span> </td>
+                      </tr><tr>
+                        <th> </th><th>155</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; )</span> </td>
+                      </tr><tr>
+                        <th> </th><th>156</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;)</span> </td>
+                      </tr><tr>
+                        <th> </th><th>157</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>158</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>159</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>160</th><td class="r"><span>Note that lighttpd (I use version 1.4.3) stopped if password file doesn't exist.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>161</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>162</th><td class="r"><span>Note that lighttpd doesn't support 'valid-user' in versions prior to 1.3.16.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>163</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>164</th><td class="r"><span>Conditional configuration is also useful for mapping static resources, i.e. serving out images and CSS directly instead of through FastCGI:</span> </td>
+                      </tr><tr>
+                        <th> </th><th>165</th><td class="r"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th> </th><th>166</th><td class="r"><span># Aliasing functionality is needed</span> </td>
+                      </tr><tr>
+                        <th> </th><th>167</th><td class="r"><span>server.modules += ("mod_alias")</span> </td>
+                      </tr><tr>
+                        <th> </th><th>168</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>169</th><td class="r"><span># Setup an alias for the static resources</span> </td>
+                      </tr><tr>
+                        <th> </th><th>170</th><td class="r"><span>alias.url = ("/trac/chrome/common" =&gt; "/usr/share/trac/htdocs")</span> </td>
+                      </tr><tr>
+                        <th> </th><th>171</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>172</th><td class="r"><span># Use negative lookahead, matching all requests that ask for any resource under /trac, EXCEPT in</span> </td>
+                      </tr><tr>
+                        <th> </th><th>173</th><td class="r"><span># /trac/chrome/common, and use FastCGI for those</span> </td>
+                      </tr><tr>
+                        <th> </th><th>174</th><td class="r"><span>$HTTP["url"] =~ "^/trac(?!/chrome/common)" {</span> </td>
+                      </tr><tr>
+                        <th> </th><th>175</th><td class="r"><span># Even if you have other fastcgi.server declarations for applications other than Trac, do NOT use += here</span> </td>
+                      </tr><tr>
+                        <th> </th><th>176</th><td class="r"><span>fastcgi.server = ("/trac" =&gt;</span> </td>
+                      </tr><tr>
+                        <th> </th><th>177</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;("trac" =&gt;</span> </td>
+                      </tr><tr>
+                        <th> </th><th>178</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;("socket" =&gt; "/tmp/trac-fastcgi.sock",</span> </td>
+                      </tr><tr>
+                        <th> </th><th>179</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "bin-path" =&gt; "/path/to/cgi-bin/trac.fcgi",</span> </td>
+                      </tr><tr>
+                        <th> </th><th>180</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "check-local" =&gt; "disable",</span> </td>
+                      </tr><tr>
+                        <th> </th><th>181</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "bin-environment" =&gt;</span> </td>
+                      </tr><tr>
+                        <th> </th><th>182</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ("TRAC_ENV" =&gt; "/path/to/projenv")</span> </td>
+                      </tr><tr>
+                        <th> </th><th>183</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;)</span> </td>
+                      </tr><tr>
+                        <th> </th><th>184</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;)</span> </td>
+                      </tr><tr>
+                        <th> </th><th>185</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;)</span> </td>
+                      </tr><tr>
+                        <th> </th><th>186</th><td class="r"><span>}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>187</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>188</th><td class="r"><span>The technique can be easily adapted for use with multiple projects by creating aliases for each of them, and wrapping the fastcgi.server declarations inside conditional configuration blocks.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>189</th><td class="r"><span>Also there is another way to handle multiple projects and it's to use TRAC_ENV_PARENT_DIR instead of TRAC_ENV and use global auth, let's see an example:</span> </td>
+                      </tr><tr>
+                        <th> </th><th>190</th><td class="r"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th> </th><th>191</th><td class="r"><span>#&nbsp; This is for handling multiple projects</span> </td>
+                      </tr><tr>
+                        <th> </th><th>192</th><td class="r"><span>&nbsp; alias.url&nbsp; &nbsp; &nbsp; &nbsp;= ( "/trac/" =&gt; "/path/to/trac/htdocs/" )</span> </td>
+                      </tr><tr>
+                        <th> </th><th>193</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>194</th><td class="r"><span>&nbsp; fastcgi.server += ("/projects"&nbsp; =&gt;</span> </td>
+                      </tr><tr>
+                        <th> </th><th>195</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ("trac" =&gt;</span> </td>
+                      </tr><tr>
+                        <th> </th><th>196</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (</span> </td>
+                      </tr><tr>
+                        <th> </th><th>197</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "socket" =&gt; "/tmp/trac.sock",</span> </td>
+                      </tr><tr>
+                        <th> </th><th>198</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "bin-path" =&gt; "/path/to/cgi-bin/trac.fcgi",</span> </td>
+                      </tr><tr>
+                        <th> </th><th>199</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "check-local" =&gt; "disable",</span> </td>
+                      </tr><tr>
+                        <th> </th><th>200</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "bin-environment" =&gt;</span> </td>
+                      </tr><tr>
+                        <th> </th><th>201</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ("TRAC_ENV_PARENT_DIR" =&gt; "/path/to/parent/dir/of/projects/" )</span> </td>
+                      </tr><tr>
+                        <th> </th><th>202</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; )</span> </td>
+                      </tr><tr>
+                        <th> </th><th>203</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; )</span> </td>
+                      </tr><tr>
+                        <th> </th><th>204</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; )</span> </td>
+                      </tr><tr>
+                        <th> </th><th>205</th><td class="r"><span>#And here starts the global auth configuration</span> </td>
+                      </tr><tr>
+                        <th> </th><th>206</th><td class="r"><span>&nbsp; auth.backend = "htpasswd"</span> </td>
+                      </tr><tr>
+                        <th> </th><th>207</th><td class="r"><span>&nbsp; auth.backend.htpasswd.userfile = "/path/to/unique/htpassword/file/trac.htpasswd"</span> </td>
+                      </tr><tr>
+                        <th> </th><th>208</th><td class="r"><span>&nbsp; $HTTP["url"] =~ "^/projects/.*/login$" {</span> </td>
+                      </tr><tr>
+                        <th> </th><th>209</th><td class="r"><span>&nbsp; &nbsp; auth.require = ("/" =&gt;</span> </td>
+                      </tr><tr>
+                        <th> </th><th>210</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(</span> </td>
+                      </tr><tr>
+                        <th> </th><th>211</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"method"&nbsp; =&gt; "basic",</span> </td>
+                      </tr><tr>
+                        <th> </th><th>212</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"realm"&nbsp; &nbsp;=&gt; "trac",</span> </td>
+                      </tr><tr>
+                        <th> </th><th>213</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"require" =&gt; "valid-user"</span> </td>
+                      </tr><tr>
+                        <th> </th><th>214</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;)</span> </td>
+                      </tr><tr>
+                        <th> </th><th>215</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;)</span> </td>
+                      </tr><tr>
+                        <th> </th><th>216</th><td class="r"><span>&nbsp; }</span> </td>
+                      </tr><tr>
+                        <th> </th><th>217</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>218</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>219</th><td class="r"><span>Changing date/time format also supported by lighttpd over environment variable LC_TIME</span> </td>
+                      </tr><tr>
+                        <th> </th><th>220</th><td class="r"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th> </th><th>221</th><td class="r"><span>fastcgi.server = ("/trac" =&gt;</span> </td>
+                      </tr><tr>
+                        <th> </th><th>222</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;("trac" =&gt;</span> </td>
+                      </tr><tr>
+                        <th> </th><th>223</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;("socket" =&gt; "/tmp/trac-fastcgi.sock",</span> </td>
+                      </tr><tr>
+                        <th> </th><th>224</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "bin-path" =&gt; "/path/to/cgi-bin/trac.fcgi",</span> </td>
+                      </tr><tr>
+                        <th> </th><th>225</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "check-local" =&gt; "disable",</span> </td>
+                      </tr><tr>
+                        <th> </th><th>226</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "bin-environment" =&gt;</span> </td>
+                      </tr><tr>
+                        <th> </th><th>227</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ("TRAC_ENV" =&gt; "/path/to/projenv",</span> </td>
+                      </tr><tr>
+                        <th> </th><th>228</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "LC_TIME" =&gt; "ru_RU")</span> </td>
+                      </tr><tr>
+                        <th> </th><th>229</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;)</span> </td>
+                      </tr><tr>
+                        <th> </th><th>230</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;)</span> </td>
+                      </tr><tr>
+                        <th> </th><th>231</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;)</span> </td>
+                      </tr><tr>
+                        <th> </th><th>232</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>233</th><td class="r"><span>For details about languages specification see TracFaq question 2.13.</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>51</th><th>234</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>52</th><th>235</th><td class="l"><span>Other important information like [http://trac.lighttpd.net/trac/wiki/TracInstall this updated TracInstall page], [wiki:TracCgi#MappingStaticResources and this] are useful for non-fastcgi specific installation aspects.</span> </td>
+                  </tr><tr>
+                          <th>53</th><th>236</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="add">
+                  <tr class="first">
+                          <th> </th><th>237</th><td class="r"><ins>If you use trac-0.9, read [http://lists.edgewall.com/archive/trac/2005-November/005311.html about small bug]</ins> </td>
+                  </tr><tr class="last">
+                          <th> </th><th>238</th><td class="r"><ins></ins> </td>
+                  </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>54</th><th>239</th><td class="l"><span>Relaunch lighttpd, and browse to `http://yourhost.example.org/trac` to access Trac.</span> </td>
+                  </tr>
+            </tbody><tbody class="add">
+                  <tr class="first">
+                          <th> </th><th>240</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>241</th><td class="r"><ins>Note about running lighttpd with reduced permissions:</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>242</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>243</th><td class="r"><ins>&nbsp; If nothing else helps and trac.fcgi doesn't start with lighttpd settings __server.username = "www-data"__, __server.groupname = "www-data"__, then in the `bin-environment` section set `PYTHON_EGG_CACHE` to the home directory of `www-data` or some other directory accessible to this account for writing.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>244</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>245</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>246</th><td class="r"><ins>== Simple LiteSpeed Configuration ==</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>247</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>248</th><td class="r"><ins>The FastCGI front-end was developed primarily for use with alternative webservers, such as [http://www.litespeedtech.com/ LiteSpeed].</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>249</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>250</th><td class="r"><ins>LiteSpeed web server is an event-driven asynchronous Apache replacement designed from the ground-up to be secure, scalable, and operate with minimal resources. LiteSpeed can operate directly from an Apache config file and is targeted for business-critical environments.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>251</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>252</th><td class="r"><ins>Setup</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>253</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>254</th><td class="r"><ins>1) Please make sure you have first have a working install of a Trac project. Test install with “tracd” first.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>255</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>256</th><td class="r"><ins>2) Create a Virtual Host for this setup. From now on we will refer to this vhost as TracVhost. For this tutorial we will be assuming that your trac project will be accessible via:</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>257</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>258</th><td class="r"><ins>{{{</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>259</th><td class="r"><ins>http://yourdomain.com/trac/</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>260</th><td class="r"><ins>}}}</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>261</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>262</th><td class="r"><ins>3) Go “TracVhost → External Apps” tab and create a new “External Application”.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>263</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>264</th><td class="r"><ins>{{{</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>265</th><td class="r"><ins>Name: MyTracFCGI&nbsp; &nbsp; &nbsp; &nbsp; </ins> </td>
+                  </tr><tr>
+                          <th> </th><th>266</th><td class="r"><ins>Address: uds://tmp/lshttpd/mytracfcgi.sock</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>267</th><td class="r"><ins>Max Connections: 10</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>268</th><td class="r"><ins>Environment: TRAC_ENV=/fullpathto/mytracproject/ &lt;--- path to root folder of trac project</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>269</th><td class="r"><ins>Initial Request Timeout (secs): 30</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>270</th><td class="r"><ins>Retry Timeout (secs): 0</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>271</th><td class="r"><ins>Persistent Connection&nbsp; &nbsp;Yes</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>272</th><td class="r"><ins>Connection Keepalive Timeout: 30</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>273</th><td class="r"><ins>Response Bufferring: No </ins> </td>
+                  </tr><tr>
+                          <th> </th><th>274</th><td class="r"><ins>Auto Start: Yes</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>275</th><td class="r"><ins>Command: /usr/share/trac/cgi-bin/trac.fcgi&nbsp; &lt;--- path to trac.fcgi</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>276</th><td class="r"><ins>Back Log: 50</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>277</th><td class="r"><ins>Instances: 10</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>278</th><td class="r"><ins>}}}</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>279</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>280</th><td class="r"><ins>4) Optional. If you need to use htpasswd based authentication. Go to “TracVhost → Security” tab and create a new security “Realm”.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>281</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>282</th><td class="r"><ins>{{{</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>283</th><td class="r"><ins>DB Type: Password File</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>284</th><td class="r"><ins>Realm Name: MyTracUserDB&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;--- any name you wish and referenced later</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>285</th><td class="r"><ins>User DB Location: /fullpathto/htpasswd &lt;--- path to your htpasswd file</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>286</th><td class="r"><ins>}}}</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>287</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>288</th><td class="r"><ins>If you don’t have a htpasswd file or don’t know how to create the entries within one, go to http://sherylcanter.com/encrypt.php, to generate the user:password combos.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>289</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>290</th><td class="r"><ins>5) Go to “PythonVhost → Contexts” and create a new “FCGI Context”.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>291</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>292</th><td class="r"><ins>{{{</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>293</th><td class="r"><ins>URI: /trac/&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;--- URI path to bind to python fcgi app we created&nbsp; &nbsp; </ins> </td>
+                  </tr><tr>
+                          <th> </th><th>294</th><td class="r"><ins>Fast CGI App: [VHost Level] MyTractFCGI&nbsp; &lt;--- select the trac fcgi extapp we just created</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>295</th><td class="r"><ins>Realm: TracUserDB&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;--- only if (4) is set. select ream created in (4)</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>296</th><td class="r"><ins>}}}</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>297</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>298</th><td class="r"><ins>6) Modify /fullpathto/mytracproject/conf/trac.ini</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>299</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>300</th><td class="r"><ins>{{{</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>301</th><td class="r"><ins>#find/set base_rul, url, and link variables</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>302</th><td class="r"><ins>base_url = http://yourdomain.com/trac/ &lt;--- base url to generate correct links to</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>303</th><td class="r"><ins>url = http://yourdomain.com/trac/&nbsp; &nbsp; &nbsp; &lt;--- link of project</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>304</th><td class="r"><ins>link = http://yourdomain.com/trac/&nbsp; &nbsp; &nbsp;&lt;--- link of graphic logo</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>305</th><td class="r"><ins>}}}</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>306</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>307</th><td class="r"><ins>7) Restart LiteSpeed, “lswsctrl restart”, and access your new Trac project at: </ins> </td>
+                  </tr><tr>
+                          <th> </th><th>308</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>309</th><td class="r"><ins>{{{</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>310</th><td class="r"><ins>http://yourdomain.com/trac/</ins> </td>
+                  </tr><tr class="last">
+                          <th> </th><th>311</th><td class="r"><ins>}}}</ins> </td>
+                  </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>55</th><th>312</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>56</th><th>313</th><td class="l"><span>----</span> </td>
+                  </tr>
+            </tbody>
+        </table>
+      </li>
+  </ul>
+</div>
+      </div>
+  </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

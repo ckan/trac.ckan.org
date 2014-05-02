@@ -1,0 +1,11 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+833	Administrative dashboard extension	rgrp		"Create an admin dashboard as /admin/ allowing for admin operations and overview.
+
+Possible features:
+  * Purge revisions (or sets of revisions)
+  * Purge objects
+  * Overview of activity
+
+Currently have an admin section using the formalchemy admin controller to provide basic editing of model objects. This can still be used but located at /admin/model/.
+
+https://bitbucket.org/okfn/ckanext-admin"	enhancement	new	awaiting triage	ckan-v1.4	ckan					

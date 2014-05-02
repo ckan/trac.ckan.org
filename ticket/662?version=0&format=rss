@@ -1,0 +1,316 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #662: Can't put entity that is returned by posting to package register</title>
+    <link>http://localhost/ticket/662</link>
+    <description>&lt;p&gt;
+It's because Package carries several out-of-band values, which are snagged on the way back out. Entity get response also can't be posted.
+&lt;/p&gt;
+&lt;p&gt;
+However, post response can be re-posted (because it isn't the same as the register-post/entity-get responses.
+&lt;/p&gt;
+&lt;p&gt;
+An issue for CKAN too.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/662</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Wed, 13 Oct 2010 17:31:19 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/662#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/662#comment:1</guid>
+      <description>
+        &lt;p&gt;
+I agree we should not have the 'read-only' things like Ratings in the default returned Package Entity. What do you think of having a parameter to be able to get these if you want them though?
+&lt;/p&gt;
+&lt;p&gt;
+Do you mean you *can* re-post the *entity* post response?
+&lt;/p&gt;
+&lt;p&gt;
+Not sure what you mean by "An issue for CKAN too."?
+&lt;/p&gt;
+&lt;p&gt;
+In addition to this ticket, what do you think about changing the behaviour of the Package Entity PUT/POST, so that you replace the entire Package, not just the fields you specify? So you don't keep left-over values, just because you didn't specify them as null?
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>johnbywater</dc:creator>
+
+      <pubDate>Wed, 13 Oct 2010 18:15:27 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/662#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/662#comment:2</guid>
+      <description>
+        &lt;p&gt;
+It might be natural for the locator of the rating for a package to be "/package/{id}/rating".
+&lt;/p&gt;
+&lt;p&gt;
+I've got not idea what I meant by "An issue for CKAN too."  I may have intended to log this againt ckanclient. Anyway, it seems to be just a CKAN thing. :-)
+&lt;/p&gt;
+&lt;p&gt;
+I think I would like to do this:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+$data = c.package_register_post({'name': 'example'})
+$data&lt;a class="missing wiki"&gt;title?&lt;/a&gt; = 'Example'
+c.package_entity_put($data&lt;a class="missing wiki"&gt;id?&lt;/a&gt;, $data)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+and this:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+$data = c.package_entity_get('example')
+$data&lt;a class="missing wiki"&gt;title?&lt;/a&gt; = 'Example'
+c.package_entity_put($data&lt;a class="missing wiki"&gt;id?&lt;/a&gt;, $data)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+I don't think either work. We could write a test for each.
+&lt;/p&gt;
+&lt;p&gt;
+I think this does work:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+$data = c.package_entity_get('example')
+$data = c.package_entity_put($data&lt;a class="missing wiki"&gt;id?&lt;/a&gt;, $data)
+$data&lt;a class="missing wiki"&gt;title?&lt;/a&gt; = 'Old Example'
+c.package_entity_put($data&lt;a class="missing wiki"&gt;id?&lt;/a&gt;, $data)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Which is inconsistent. The reason is that the data returned by the update operation ("entity put") isn't given the same treatment as the read and create operations, which adds various read-only values.
+&lt;/p&gt;
+&lt;p&gt;
+That's as far as I got. I inferred that one or several of the read-only values, when present in the update request data, cause the update to fail. I'm not sure how it fails. Rather than cutting down the response data, we could make the update call more robust. One fix would pick out from the request package data only the attributes that are permitted. A alternative fix would make what ever is choking on the extra values ignore them. I mean, ids are read-only, but we wouldn't want to reject an update because it has an id in the data. We do need to be careful about loading up the package entity data, but the 'id' is read-only and we aren't going to quible about that being present in the data of an update request (even if it doesn't match the referenced entity).
+&lt;/p&gt;
+&lt;p&gt;
+I would rather not support "replace the entire package" with especial functionality and documentation. I think the model create/update/delete, where update is "set attributes" is sufficient, simple, and fairly optimal. To obliterate all registerd values without deleting, I would get the package entity data, loop over the keys and set the values to &lt;em&gt;, [] or {} depending on the type, and then PUT the entity. We could write a test for that.
+&lt;/em&gt;&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>wwaites</dc:creator>
+
+      <pubDate>Mon, 01 Nov 2010 15:07:15 GMT</pubDate>
+      <title>priority changed</title>
+      <link>http://localhost/ticket/662#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/662#comment:3</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;priority&lt;/strong&gt;
+                changed from &lt;em&gt;awaiting triage&lt;/em&gt; to &lt;em&gt;blocker&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>wwaites</dc:creator>
+
+      <pubDate>Mon, 01 Nov 2010 15:08:57 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/662#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/662#comment:4</guid>
+      <description>
+        &lt;p&gt;
+Ran into this with RDF export (that then updates the CKAN package with LOD2-compatible extras from the results). Cannot use ckanclient.package_entity_put(ckanclient.package_entity_get("ckan")).
+&lt;/p&gt;
+&lt;p&gt;
+Is this related to the modifications htat are showing up in the changelog with no apparent package (the package that should be appearing there is "ckan" itself)
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Mon, 01 Nov 2010 16:28:22 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/662#comment:5</link>
+      <guid isPermaLink="false">http://localhost/ticket/662#comment:5</guid>
+      <description>
+        &lt;p&gt;
+Yes we all agree this needs fixing it.
+&lt;/p&gt;
+&lt;p&gt;
+I'm tempted by John's 'permissive' suggestion of ignoring these 'read-only' values, but to avoid confusion we should except with a 400 error if the user has changed these values.
+&lt;/p&gt;
+&lt;p&gt;
+Read only fields: 'id', 'relationships', 'ratings_average', 'ratings_count', 'ckan_url'
+&lt;/p&gt;
+&lt;p&gt;
+Use cases for changes between GET package, PUT package:
+&lt;/p&gt;
+&lt;ol&gt;&lt;li&gt;package unchanged - 200 OK
+&lt;/li&gt;&lt;li&gt;user changes id, ckan_url, relationships, ratings_* expecting that value to change - 400 error.
+&lt;/li&gt;&lt;li&gt;just license changes (but not license_id) - 400 error
+&lt;/li&gt;&lt;li&gt;both license and license_id change in step - 200 OK
+&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;
+Does that sound reasonable John and Will?
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Mon, 22 Nov 2010 21:07:23 GMT</pubDate>
+      <title>owner, milestone set</title>
+      <link>http://localhost/ticket/662#comment:6</link>
+      <guid isPermaLink="false">http://localhost/ticket/662#comment:6</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;owner&lt;/strong&gt;
+              set to &lt;em&gt;rgrp&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                set to &lt;em&gt;ckan v1.3&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Wed, 12 Jan 2011 12:42:52 GMT</pubDate>
+      <title>type changed</title>
+      <link>http://localhost/ticket/662#comment:7</link>
+      <guid isPermaLink="false">http://localhost/ticket/662#comment:7</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;type&lt;/strong&gt;
+                changed from &lt;em&gt;bug&lt;/em&gt; to &lt;em&gt;defect&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Mon, 07 Feb 2011 09:11:52 GMT</pubDate>
+      <title>description, milestone changed</title>
+      <link>http://localhost/ticket/662#comment:8</link>
+      <guid isPermaLink="false">http://localhost/ticket/662#comment:8</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/662?action=diff&amp;amp;version=8"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan-v1.3&lt;/em&gt; to &lt;em&gt;ckan-v1.4&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Thu, 10 Feb 2011 13:33:10 GMT</pubDate>
+      <title>owner changed</title>
+      <link>http://localhost/ticket/662#comment:9</link>
+      <guid isPermaLink="false">http://localhost/ticket/662#comment:9</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;owner&lt;/strong&gt;
+              changed from &lt;em&gt;rgrp&lt;/em&gt; to &lt;em&gt;sebbacon&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Now part of 'model/validation/forms' meta-ticket &lt;a class="closed ticket" href="http://localhost/ticket/961" title="enhancement: [super] Refactoring of forms, validation and model synchronization (closed: fixed)"&gt;#961&lt;/a&gt; so reassigning to Seb.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Thu, 10 Mar 2011 11:07:39 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/662#comment:10</link>
+      <guid isPermaLink="false">http://localhost/ticket/662#comment:10</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+We want this fixed for CLG customer (DGU), so have put in a quick fix into branch 3.1.2 cset:0010a709edf0 (and merged to default) as a stopgap whilst new forms are on their way.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Fri, 25 Mar 2011 18:07:23 GMT</pubDate>
+      <title>status changed; repo, theme set; resolution deleted</title>
+      <link>http://localhost/ticket/662#comment:11</link>
+      <guid isPermaLink="false">http://localhost/ticket/662#comment:11</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;repo&lt;/strong&gt;
+                set to &lt;em&gt;ckan&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;closed&lt;/em&gt; to &lt;em&gt;reopened&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;theme&lt;/strong&gt;
+                set to &lt;em&gt;none&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                &lt;em&gt;fixed&lt;/em&gt; deleted
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Bug: license_id field is assigned the value of the 'license' parameter.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Fri, 25 Mar 2011 18:07:43 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/662#comment:12</link>
+      <guid isPermaLink="false">http://localhost/ticket/662#comment:12</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;reopened&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+license bug fixed in cset:00038ef33c45
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

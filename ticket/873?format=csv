@@ -1,0 +1,2 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+873,ONS loader assigns packages to same package even when dept name added manually,dread,dread,"e.g. national_child_measurement_programme had no department but ""Information Centre for Health and Social Care"" for agency, and TNA inferred it should be under department DoH. But now the next ONS update to this series expects a blank department, so creates a new package national_child_measurement_programme_.",defect,closed,critical,,ckan,fixed,,,,

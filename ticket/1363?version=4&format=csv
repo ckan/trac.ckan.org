@@ -1,0 +1,18 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1363,Add task_status table to store qa/archiever/webstore information that does not need to be versioned.,kindly,johnglover,"{{{
+table: task_status
+
+id
+entity_id
+entity_type
+task_type
+key
+value
+last_updated
+state
+
+unique(entity_id, task_type, key)
+
+example keys:
+last_task_id
+}}}",enhancement,assigned,awaiting triage,ckan-current-sprint,ckan,,,,ckan,none

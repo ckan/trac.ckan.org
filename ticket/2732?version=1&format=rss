@@ -1,0 +1,259 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2732: New file upload functionality</title>
+    <link>http://localhost/ticket/2732</link>
+    <description>&lt;p&gt;
+We should simplify upload and storage of files, initially only to local storage with archiver eventually being fixed to archive data externally. WIP pad is &lt;a class="ext-link" href="http://ckan.okfnpad.org/uploads"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://ckan.okfnpad.org/uploads&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+_Simplifying uploads_
+&lt;/p&gt;
+&lt;p&gt;
+Currently uploads are too painful/difficult/fiddly to use and/or configure.  We want to simplify uploads so that they are done directly to the CKAN server, without support for remote services (S3 etc) and/or the dependencies it introduces.
+&lt;/p&gt;
+&lt;p&gt;
+We want to fix:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;File uploads themselves
+&lt;/li&gt;&lt;li&gt;Storage of uploaded files
+&lt;/li&gt;&lt;li&gt;Notification of the upload to other components
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+_File uploads_
+&lt;/p&gt;
+&lt;p&gt;
+Things file upload should do:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Allow sysadmin to disable
+&lt;/li&gt;&lt;li&gt;Allow auth'ed users to upload
+&lt;/li&gt;&lt;li&gt;Store whatever they send on disk, and store DB entry linking the file to the person
+&lt;/li&gt;&lt;li&gt;When creating the resource, the user should be able to choose from all of the files
+they have uploaded but not yet associated with a resource. This will allow for bulk
+upload and then a delayed association.  Whenver a user creates a resource they
+either upload a file now, or see previously uploaded files.
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+? Can we do the upload asynchronously and then associated uploaded key with the
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+resource before the save ? What happens if the user tries to submit before asymc upload finishes ? Should we delay them?
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+_File storage_
+&lt;/p&gt;
+&lt;p&gt;
+File storage should be local to the CKAN install, and not a remote service.  Any archiving to remove storage providers should be outside of the main request.
+&lt;/p&gt;
+&lt;p&gt;
+File storage should:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;allow moving data, a sysadmin should be able to move the storage root and change configuration and  have the system continue running (i.e. don't store absolute paths).
+&lt;/li&gt;&lt;li&gt;provide maintainability, it should be easy to determine which old files are not associated with resources  and thus can be cleaned up.
+&lt;/li&gt;&lt;li&gt;allow for collection of information (i.e. estimate of storate space used)
+&lt;/li&gt;&lt;li&gt;check whether there is enough space and handling the conequences cleanly
+&lt;/li&gt;&lt;li&gt;ensure files to be written only underneath its own root folder, checks should be made after any path generation that the file begins with the location of the file storage.
+&lt;/li&gt;&lt;li&gt;Have a configurable maximum accepted blob size during upload.
+&lt;/li&gt;&lt;li&gt;Should store what meta-data was provided with the upload, such as mimetype.
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+Somewhere in the DB we should store ...
+&lt;/p&gt;
+&lt;p&gt;
+|Column|Notes|
+|id|An identifier|
+|owner|The owning user, who uploaded the file|
+|path|The path (from the 'storage root') to the file|
+|size|The size in bytes of the file on disk|
+|mimetype|The mimetype of the file, as provided by the uploader|
+|upload_date|When the data was uploaded|
+|resource|The ID of the resource it belongs to. A unidirectional relationship.|
+&lt;/p&gt;
+&lt;p&gt;
+Generating paths should try and separate the files, perhaps based on username of the owner, or some other mechanism to avoid a single folder full of files.
+&lt;/p&gt;
+&lt;p&gt;
+_Notifications_
+&lt;/p&gt;
+&lt;p&gt;
+We need to make sure that it is possible to notify other components within the system that an upload has taken place, or at least make it easy for them to be notified.  The primary use case for this is to notify the component that will translate/upload certain formats to the data store.
+&lt;/p&gt;
+&lt;p&gt;
+We could do this based on the post-upload update to the file model (i.e. when we record the total received size of the file).
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2732</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>ross</dc:creator>
+
+      <pubDate>Tue, 24 Jul 2012 08:59:02 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/2732#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/2732#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/2732?action=diff&amp;amp;version=1"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>ross</dc:creator>
+
+      <pubDate>Tue, 24 Jul 2012 09:00:44 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/2732#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/2732#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/2732?action=diff&amp;amp;version=2"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>ross</dc:creator>
+
+      <pubDate>Tue, 24 Jul 2012 09:02:10 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/2732#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/2732#comment:3</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/2732?action=diff&amp;amp;version=3"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>ross</dc:creator>
+
+      <pubDate>Tue, 24 Jul 2012 09:07:31 GMT</pubDate>
+      <title>status changed</title>
+      <link>http://localhost/ticket/2732#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/2732#comment:4</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;accepted&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>ross</dc:creator>
+
+      <pubDate>Tue, 24 Jul 2012 09:14:31 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/2732#comment:5</link>
+      <guid isPermaLink="false">http://localhost/ticket/2732#comment:5</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/2732?action=diff&amp;amp;version=5"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>ross</dc:creator>
+
+      <pubDate>Tue, 24 Jul 2012 09:27:28 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/2732#comment:6</link>
+      <guid isPermaLink="false">http://localhost/ticket/2732#comment:6</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/2732?action=diff&amp;amp;version=6"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>ross</dc:creator>
+
+      <pubDate>Tue, 24 Jul 2012 09:27:56 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/2732#comment:7</link>
+      <guid isPermaLink="false">http://localhost/ticket/2732#comment:7</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/2732?action=diff&amp;amp;version=7"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>ross</dc:creator>
+
+      <pubDate>Tue, 24 Jul 2012 09:35:09 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/2732#comment:8</link>
+      <guid isPermaLink="false">http://localhost/ticket/2732#comment:8</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/2732?action=diff&amp;amp;version=8"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>ross</dc:creator>
+
+      <pubDate>Tue, 24 Jul 2012 09:35:46 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/2732#comment:9</link>
+      <guid isPermaLink="false">http://localhost/ticket/2732#comment:9</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/2732?action=diff&amp;amp;version=9"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>ross</dc:creator>
+
+      <pubDate>Mon, 03 Sep 2012 09:07:50 GMT</pubDate>
+      <title>status, milestone changed; owner deleted</title>
+      <link>http://localhost/ticket/2732#comment:10</link>
+      <guid isPermaLink="false">http://localhost/ticket/2732#comment:10</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;owner&lt;/strong&gt;
+              &lt;em&gt;ross&lt;/em&gt; deleted
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;accepted&lt;/em&gt; to &lt;em&gt;assigned&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan-v1.9&lt;/em&gt; to &lt;em&gt;ckan-backlog&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

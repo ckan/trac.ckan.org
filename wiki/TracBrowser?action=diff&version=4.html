@@ -1,0 +1,448 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+    <html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      TracBrowser (diff) – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="help" href="TracGuide.html" />
+        <link rel="up" href="TracBrowser%3Faction=history.html" title="Page history" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/wiki.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/diff.css" type="text/css" />
+        <link rel="prev" href="TracBrowser%3Faction=diff&amp;version=3.html" title="Version 3" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/diff.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="../chrome/common/css/diff.css" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last active"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="TracBrowser%3Faction=diff&amp;version=3.html" title="Version 3">Previous Change</a></span></li><li><a href="TracBrowser%3Faction=history.html" title="Page history">Wiki History</a></li><li class="last"><span class="missing">Next Change &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="wiki">
+      <h1>
+        Changes between
+          <a href="TracBrowser%3Fversion=3.html">Version 3</a> and
+          <a href="TracBrowser%3Fversion=4.html">Version 4</a> of
+          <a href="TracBrowser%3Fversion=4.html">TracBrowser</a>
+      </h1>
+      <form method="post" id="prefs" action="TracBrowser%3Fversion=4.html"><div><input type="hidden" name="__FORM_TOKEN" value="93d81ccf9a7bb1c456462f62" /></div>
+        <div>
+          <input type="hidden" name="action" value="diff" />
+          <input type="hidden" name="version" value="4" />
+          <input type="hidden" name="old_version" value="3" />
+          
+  <label for="style">View differences</label>
+  <select id="style" name="style">
+    <option selected="selected" value="inline">inline</option>
+    <option value="sidebyside">side by side</option>
+  </select>
+  <div class="field">
+    <label><input type="radio" name="contextall" value="0" checked="checked" />
+             Show</label>
+      <label><input type="text" name="contextlines" id="contextlines" size="2" maxlength="3" value="2" />
+             lines around each change</label><br />
+    <label><input type="radio" name="contextall" value="1" />
+           Show the changes in full context</label>
+  </div>
+  <fieldset id="ignore">
+    <legend>Ignore:</legend>
+    <div class="field">
+      <input type="checkbox" id="ignoreblanklines" name="ignoreblanklines" />
+      <label for="ignoreblanklines">Blank lines</label>
+    </div>
+    <div class="field">
+      <input type="checkbox" id="ignorecase" name="ignorecase" />
+      <label for="ignorecase">Case changes</label>
+    </div>
+    <div class="field">
+      <input type="checkbox" id="ignorewhitespace" name="ignorewhitespace" />
+      <label for="ignorewhitespace">White space changes</label>
+    </div>
+  </fieldset>
+  <div class="buttons">
+    <input type="submit" name="update" value="Update" />
+  </div>
+
+        </div>
+      </form>
+      <dl id="overview">
+        <dt class="property time">Timestamp:</dt>
+        <dd class="time">
+            05/02/14 01:33:04 (<a class="timeline" href="../timeline%3Ffrom=2014-05-02T01:33:04Z&amp;precision=second.html" title="2014-05-02T01:33:04Z in Timeline">7 minutes</a> ago)
+        </dd>
+        <dt class="property author">Author:</dt>
+        <dd class="author">
+          trac
+        </dd>
+        <dt class="property message">Comment:</dt>
+        <dd class="message">
+          
+          <p>
+--
+</p>
+
+        </dd>
+      </dl>
+      <div class="diff">
+        <div class="legend" id="diff-legend">
+          <h3>Legend:</h3>
+          <dl>
+            <dt class="unmod"></dt><dd>Unmodified</dd>
+            <dt class="add"></dt><dd>Added</dd>
+            <dt class="rem"></dt><dd>Removed</dd>
+            <dt class="mod"></dt><dd>Modified</dd>
+          </dl>
+        </div>
+        <div class="diff">
+  <ul class="entries">
+      <li class="entry">
+        <h2 id="file0">
+          <a href="TracBrowser%3Fversion=4.html">TracBrowser</a>
+        </h2>
+        <table class="trac-diff inline" summary="Differences" cellspacing="0">
+              <colgroup><col class="lineno" /><col class="lineno" /><col class="content" /></colgroup>
+              <thead>
+                <tr>
+                  <th title="Version 3">
+                    <a href="TracBrowser%3Fversion=3.html#L2">
+                      v3</a>
+                  </th>
+                  <th title="Version 4">
+                    <a href="TracBrowser%3Fversion=4.html#L2">
+                      v4</a>
+                  </th>
+                  <td> </td>
+                </tr>
+              </thead>
+            <tbody class="unmod">
+                  <tr>
+                          <th>2</th><th>2</th><td class="l"><span>[[TracGuideToc]]</span> </td>
+                  </tr><tr>
+                          <th>3</th><th>3</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>4</th><th> </th><td class="l"><span>The Trac repository browser can be used to browse directories </span> </td>
+                      </tr><tr>
+                        <th>5</th><th> </th><td class="l"><span>and specific revisions of files stored in the repository of the configured</span> </td>
+                      </tr><tr>
+                        <th>6</th><th> </th><td class="l"><span>version control system.</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>4</th><td class="r"><span>The Trac repository browser can be used to browse specific revisions of directories </span> </td>
+                      </tr><tr>
+                        <th> </th><th>5</th><td class="r"><span>and files stored in the repositories associated with the Trac environment.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>6</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>7</th><td class="r"><span>''(since 0.12)'': </span> </td>
+                      </tr><tr>
+                        <th> </th><th>8</th><td class="r"><span>At the top-level of the repository browser is the '''Repository Index''', </span> </td>
+                      </tr><tr>
+                        <th> </th><th>9</th><td class="r"><span>listing all the configured repositories. </span> </td>
+                      </tr><tr>
+                        <th> </th><th>10</th><td class="r"><span>Each repository has a name which is used as a path prefix in a </span> </td>
+                      </tr><tr>
+                        <th> </th><th>11</th><td class="r"><span>"virtual" file hierarchy encompassing all the available repositories.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>12</th><td class="r"><span>One of the repositories can be configured with an empty name; this is the default repository.&nbsp; When such a default repository is present, its top-level files and directories </span> </td>
+                      </tr><tr>
+                        <th> </th><th>13</th><td class="r"><span>are also listed, in a '''Default Repository''' section placed before the </span> </td>
+                      </tr><tr>
+                        <th> </th><th>14</th><td class="r"><span>repository index. If the default repository is the only repository associated </span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>15</th><td class="r"><span>with the Trac environment the '''Repository Index''' will be omitted ^[#note-multirepos (1)]^.</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>7</th><th>16</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>8</th><th>17</th><td class="l"><span>Directory entries are displayed in a list with sortable columns. The list </span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>9</th><th> </th><td class="l"><span>entries can be sorted by ''<del>name'', ''size'' or ''age</del>'' by clicking on the column</span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>18</th><td class="r"><span>entries can be sorted by ''<ins>Name'', ''Size'', ''Age'' or ''Author</ins>'' by clicking on the column</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>10</th><th>19</th><td class="l"><span>headers. The sort order can be reversed by clicking on a given column</span> </td>
+                  </tr><tr>
+                          <th>11</th><th>20</th><td class="l"><span>header again.</span> </td>
+                  </tr><tr>
+                          <th>12</th><th>21</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>13</th><th>22</th><td class="l"><span>The browser can be used to navigate through the directory structure </span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>14</th><th> </th><td class="l"><span>by clicking on the directory names. Clicking on a file name will show</span> </td>
+                      </tr><tr>
+                        <th>15</th><th> </th><td class="l"><span>the contents of the file. Clicking on the revision number of a file or</span> </td>
+                      </tr><tr>
+                        <th>16</th><th> </th><td class="l"><span>directory will take you to the TracRevisionLog for that file.</span> </td>
+                      </tr><tr>
+                        <th>17</th><th> </th><td class="l"><span>Note that there's also a ''Revision Log'' navigation link that will do</span> </td>
+                      </tr><tr>
+                        <th>18</th><th> </th><td class="l"><span>the same for the path currently being examined.</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>23</th><td class="r"><span>by clicking on the directory names. </span> </td>
+                      </tr><tr>
+                        <th> </th><th>24</th><td class="r"><span>Clicking on a file name will show the contents of the file. </span> </td>
+                      </tr><tr>
+                        <th> </th><th>25</th><td class="r"><span>Clicking on the revision number of a file or directory will take </span> </td>
+                      </tr><tr>
+                        <th> </th><th>26</th><td class="r"><span>you to the TracRevisionLog for that file.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>27</th><td class="r"><span>Note that there's also a ''Revision Log'' navigation link that will do the </span> </td>
+                      </tr><tr>
+                        <th> </th><th>28</th><td class="r"><span>same for the path currently being examined.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>29</th><td class="r"><span>Clicking on the ''diff'' icon after revision number will display the changes made </span> </td>
+                      </tr><tr>
+                        <th> </th><th>30</th><td class="r"><span>to the files modified in that revision.</span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>31</th><td class="r"><span>Clicking on the ''Age'' of the file - will take you to that changeset in the timeline.</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>19</th><th>32</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>20</th><th>33</th><td class="l"><span>It's also possible to browse directories or files as they were in history,</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracBrowser%3Fversion=3.html#L23">…</a></th>
+                  <th><a href="TracBrowser%3Fversion=4.html#L36">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>23</th><th>36</th><td class="l"><span>the ''View revision'' input field at the top of the page.</span> </td>
+                  </tr><tr>
+                          <th>24</th><th>37</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>25</th><th> </th><td class="l"><span>''(since 0.11)'':</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>38</th><td class="r"><span>The color bar next to the ''Age'' column gives a visual indication of the age</span> </td>
+                      </tr><tr>
+                        <th> </th><th>39</th><td class="r"><span>of the last change to a file or directory, following the convention that</span> </td>
+                      </tr><tr>
+                        <th> </th><th>40</th><td class="r"><span>'''[[span(style=color:#88f,blue)]]''' is oldest and '''[[span(style=color:#f88,red)]]'''</span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>41</th><td class="r"><span>is newest, but this can be [TracIni#browser-section configured].</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>26</th><th>42</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>27</th><th> </th><td class="l"><span>At the top of the browser page, there's a <del></del>drop-down menu which you can use </span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>43</th><td class="r"><span>At the top of the browser page, there's a <ins>''Visit'' </ins>drop-down menu which you can use </span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>28</th><th>44</th><td class="l"><span>to select some interesting places in the repository, for example branches or tags. </span> </td>
+                  </tr><tr>
+                          <th>29</th><th>45</th><td class="l"><span>This is sometimes referred to as the ''browser quickjump'' facility.</span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>30</th><th> </th><td class="l"><span>The precise meaning and content of this menu depends on your backend.</span> </td>
+                      </tr><tr>
+                        <th>31</th><th> </th><td class="l"><span>For Subversion, this list contains by default a few branches (`trunk` and any sub-folder of the latest `branches` top-level folder) and a few tags (any sub-folder of the latest `tags` top-level folder). This can be [TracIni#svn-section configured] for more advanced cases.</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>46</th><td class="r"><span>The precise meaning and content of this menu depends on your repository backend.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>47</th><td class="r"><span>For Subversion, this list contains by default the top-level trunk directory </span> </td>
+                      </tr><tr>
+                        <th> </th><th>48</th><td class="r"><span>and sub-directories of the top-level branches and tags directories </span> </td>
+                      </tr><tr>
+                        <th> </th><th>49</th><td class="r"><span>(`/trunk`, `/branches/*`, and `/tags/*`).&nbsp; This can be [TracIni#svn-section configured] </span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>50</th><td class="r"><span>for more advanced cases.</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>32</th><th>51</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>33</th><th> </th><td class="l"><span>If you're using a Javascript enabled brower, you'll be able to expand and collapse folders in-place by clicking on the arrow head at the right side of a folder. Alternatively, the keyboard can also be used for this: use 'j' and 'k' to go to the next or previous entry, and 'o' (or 'Enter') to toggle between expanded and collapsed state of the selected folder or for visiting the selected file.</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>52</th><td class="r"><span>If you're using a Javascript enabled browser, you'll be able to expand and </span> </td>
+                      </tr><tr>
+                        <th> </th><th>53</th><td class="r"><span>collapse directories in-place by clicking on the arrow head at the right side of a </span> </td>
+                      </tr><tr>
+                        <th> </th><th>54</th><td class="r"><span>directory. Alternatively, the [trac:TracKeys keyboard] can also be used for this: </span> </td>
+                      </tr><tr>
+                        <th> </th><th>55</th><td class="r"><span>&nbsp;- use `'j'` and `'k'` to select the next or previous entry, starting with the first</span> </td>
+                      </tr><tr>
+                        <th> </th><th>56</th><td class="r"><span>&nbsp;- `'o'` (open) to toggle between expanded and collapsed state of the selected </span> </td>
+                      </tr><tr>
+                        <th> </th><th>57</th><td class="r"><span>&nbsp; &nbsp;directory or for visiting the selected file </span> </td>
+                      </tr><tr>
+                        <th> </th><th>58</th><td class="r"><span>&nbsp;- `'v'` (view, visit) and `'&lt;Enter&gt;'`, same as above</span> </td>
+                      </tr><tr>
+                        <th> </th><th>59</th><td class="r"><span>&nbsp;- `'r'` can be used to force the reload of an already expanded directory</span> </td>
+                      </tr><tr>
+                        <th> </th><th>60</th><td class="r"><span>&nbsp;- `'A'` can be used to directly visit a file in annotate (blame) mode</span> </td>
+                      </tr><tr>
+                        <th> </th><th>61</th><td class="r"><span>&nbsp;- `'L'` to view the log for the selected entry</span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>62</th><td class="r"><span>If no row has been selected using `'j'` or `'k'` these keys will operate on the entry under the mouse.</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>34</th><th>63</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>35</th><th> </th><td class="l"><span>For the Subversion backend, some additional features are available:</span> </td>
+                      </tr><tr>
+                        <th>36</th><th> </th><td class="l"><span>&nbsp;- support for `svn:needs-lock` property</span> </td>
+                      </tr><tr>
+                        <th>37</th><th> </th><td class="l"><span>&nbsp;- support for `svn:externals` property (which can be [TracIni#svn:externals-section configured])</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>64</th><td class="r"><span>{{{#!comment</span> </td>
+                      </tr><tr>
+                        <th> </th><th>65</th><td class="r"><span>MMM: I guess that some keys are upper case and some lower to avoid conflicts with browser defined keys.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>66</th><td class="r"><span>I find for example in Firefox and IE on windows that 'a' works as well as 'A' but 'l' does not work for 'L'.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>67</th><td class="r"><span>&nbsp;cboos: 'l' is reserved for Vim like behavior, see #7867</span> </td>
+                      </tr><tr>
+                        <th> </th><th>68</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>69</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>70</th><td class="r"><span>For the Subversion backend, some advanced additional features are available:</span> </td>
+                      </tr><tr>
+                        <th> </th><th>71</th><td class="r"><span>&nbsp;- The `svn:needs-lock` property will be displayed</span> </td>
+                      </tr><tr>
+                        <th> </th><th>72</th><td class="r"><span>&nbsp;- Support for the `svn:mergeinfo` property showing the merged and eligible information</span> </td>
+                      </tr><tr>
+                        <th> </th><th>73</th><td class="r"><span>&nbsp;- Support for browsing the `svn:externals` property </span> </td>
+                      </tr><tr>
+                        <th> </th><th>74</th><td class="r"><span>&nbsp; &nbsp;(which can be [TracIni#svn:externals-section configured])</span> </td>
+                      </tr><tr>
+                        <th> </th><th>75</th><td class="r"><span>&nbsp;- The `svn:mime-type` property is used to select the syntax highlighter for rendering </span> </td>
+                      </tr><tr>
+                        <th> </th><th>76</th><td class="r"><span>&nbsp; &nbsp;the file. For example, setting `svn:mime-type` to `text/html` will ensure the file is </span> </td>
+                      </tr><tr>
+                        <th> </th><th>77</th><td class="r"><span>&nbsp; &nbsp;highlighted as HTML, regardless of the file extension. It also allows selecting the character </span> </td>
+                      </tr><tr>
+                        <th> </th><th>78</th><td class="r"><span>&nbsp; &nbsp;encoding used in the file content. For example, if the file content is encoded in UTF-8, </span> </td>
+                      </tr><tr>
+                        <th> </th><th>79</th><td class="r"><span>&nbsp; &nbsp;set `svn:mime-type` to `text/html;charset=utf-8`. The `charset=` specification overrides the </span> </td>
+                      </tr><tr>
+                        <th> </th><th>80</th><td class="r"><span>&nbsp; &nbsp;default encoding defined in the `default_charset` option of the `[trac]` section </span> </td>
+                      </tr><tr>
+                        <th> </th><th>81</th><td class="r"><span>&nbsp; &nbsp;of [TracIni#trac-section trac.ini].</span> </td>
+                      </tr><tr>
+                        <th> </th><th>82</th><td class="r"><span>{{{#!comment</span> </td>
+                      </tr><tr>
+                        <th> </th><th>83</th><td class="r"><span>MMM: I found this section a bit hard to understand. I changed the first item as I understood that well.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>84</th><td class="r"><span>but I think the other items could be changed also</span> </td>
+                      </tr><tr>
+                        <th> </th><th>85</th><td class="r"><span>&nbsp;cboos: in the meantime, I've added the ''advanced'' word as a hint this can be a bit complex...</span> </td>
+                      </tr><tr>
+                        <th> </th><th>86</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>87</th><td class="r"><span></span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>38</th><th>88</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>39</th><th>89</th><td class="l"><span>----</span> </td>
+                  </tr>
+            </tbody><tbody class="add">
+                  <tr class="first">
+                          <th> </th><th>90</th><td class="r"><ins>{{{#!div style="font-size:85%"</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>91</th><td class="r"><ins>[=#note-multirepos (1)] -&nbsp; This means that after upgrading a single-repository Trac of version </ins> </td>
+                  </tr><tr>
+                          <th> </th><th>92</th><td class="r"><ins>0.11 (or below) to a multi-repository Trac (0.12), the repository browser will look and feel </ins> </td>
+                  </tr><tr>
+                          <th> </th><th>93</th><td class="r"><ins>the same, that single repository becoming automatically the "default" repository.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>94</th><td class="r"><ins>}}}</ins> </td>
+                  </tr><tr class="last">
+                          <th> </th><th>95</th><td class="r"><ins></ins> </td>
+                  </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>40</th><th>96</th><td class="l"><span>See also: TracGuide, TracChangeset, TracFineGrainedPermissions</span> </td>
+                  </tr>
+            </tbody>
+        </table>
+      </li>
+  </ul>
+</div>
+      </div>
+  </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2294,Unauthorized action on Data API gets 302 rather than 401 or similar,rgrp,kindly,"Well known issue that 401 *in API* end up with 302 redirect to login page (which makes no sense and is very confusing for clients).
+
+Fix this by ensuring that error messsages on API get passed through correctly.
+
+Minor because affect is annoying but not terminal",defect,assigned,minor,ckan-v1.9,ckan,,,,ckan,none

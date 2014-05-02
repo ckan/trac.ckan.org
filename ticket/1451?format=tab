@@ -1,0 +1,8 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1451	Reintegrate download stats on dataset and resource view page - 0.5d	johnglover	johnglover	" * css class: resource-url-analytics
+ * Assign to the link tag (a) everywhere we want to count (dataset, resource view) - 0.25d
+ * Display counts in same place ...
+
+And deploy on http://thedatahub.org/ - 0.25d
+
+Possible: Also move analytics extension into core (decided not to)."	enhancement	closed	major	ckan-sprint-2012-01-09	ckan	fixed	ux	dread rgrp	ckan	none

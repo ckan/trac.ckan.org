@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #343: Packages referred by ID in API</title>
+    <link>http://localhost/ticket/343</link>
+    <description>&lt;p&gt;
+When you do a Package Search or query a Package Relationship in the API version 2, the response refers to packages by name, not by ID.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/343</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>johnbywater</dc:creator>
+
+      <pubDate>Tue, 29 Jun 2010 15:06:58 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/343#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/343#comment:1</guid>
+      <description>
+        &lt;p&gt;
+Regarding the package search, if I do:
+&lt;/p&gt;
+&lt;p&gt;
+$ paster db clean &amp;amp;&amp;amp; paster db init &amp;amp;&amp;amp; paster create-test-data
+&lt;/p&gt;
+&lt;p&gt;
+and then:
+&lt;/p&gt;
+&lt;p&gt;
+$ paster serve development.ini &amp;amp;
+&lt;/p&gt;
+&lt;p&gt;
+and then:
+&lt;/p&gt;
+&lt;p&gt;
+$ curl &lt;a class="ext-link" href="http://127.0.0.1:5000/api/1/search/package?name=warandpeace"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://127.0.0.1:5000/api/1/search/package?name=warandpeace&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+I get:
+&lt;/p&gt;
+&lt;p&gt;
+{"count": 1, "results": &lt;a class="missing wiki"&gt;warandpeace?&lt;/a&gt;}
+&lt;/p&gt;
+&lt;p&gt;
+and with:
+&lt;/p&gt;
+&lt;p&gt;
+$ curl &lt;a class="ext-link" href="http://127.0.0.1:5000/api/2/search/package?name=warandpeace"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://127.0.0.1:5000/api/2/search/package?name=warandpeace&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+I get:
+&lt;/p&gt;
+&lt;p&gt;
+{"count": 1, "results": &lt;a class="missing wiki"&gt;c90b6c00-9496-4c8c-b7fa-7bdd3ef65c72?&lt;/a&gt;}
+&lt;/p&gt;
+&lt;p&gt;
+Am I missing something?
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>johnbywater</dc:creator>
+
+      <pubDate>Wed, 30 Jun 2010 10:09:18 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/343#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/343#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/343?action=diff&amp;amp;version=2"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>johnbywater</dc:creator>
+
+      <pubDate>Wed, 30 Jun 2010 10:11:39 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/343#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/343#comment:3</guid>
+      <description>
+        &lt;p&gt;
+Okay, so in version 2, names were still being used in the relationships part of the packages entity. But I don't know why these entities can't be retrieved independently, and references to the entities returned in representations of the entities which reference them.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>johnbywater</dc:creator>
+
+      <pubDate>Fri, 02 Jul 2010 10:27:00 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/343#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/343#comment:4</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      ReleaseProcess – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="help" href="TracGuide.html" />
+        <link rel="alternate" href="ReleaseProcess%3Fversion=12&amp;format=txt" type="text/x-trac-wiki" title="Plain Text" />
+        <link rel="up" href="ReleaseProcess.html" title="View latest version" />
+        <link rel="next" href="ReleaseProcess%3Fversion=13.html" title="Version 13" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/wiki.css" type="text/css" />
+        <link rel="prev" href="ReleaseProcess%3Fversion=11.html" title="Version 11" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("#content").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $("#content").find(".wikianchor").each(function() {
+          $(this).addAnchor(babel.format(_("Link to #%(id)s"), {id: $(this).attr('id')}));
+        });
+        $(".foldable").enableFolding(true, true);
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last active"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="pagepath" class="noprint">
+  <a class="pathentry first" title="View WikiStart" href="../wiki.1.html">wiki:</a><a class="pathentry" href="ReleaseProcess.html" title="View ReleaseProcess">ReleaseProcess</a>
+</div>
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="ReleaseProcess%3Fversion=11.html" title="Version 11">Previous Version</a></span></li><li><a href="ReleaseProcess.html" title="View latest version">View Latest Version</a></li><li class="last"><span><a class="next" href="ReleaseProcess%3Fversion=13.html" title="Version 13">Next Version</a> &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="wiki">
+        <br />
+        <table id="info" summary="Revision info">
+          <tbody>
+            <tr><th scope="row">Version 12 (modified by dread, <a class="timeline" href="../timeline%3Ffrom=2011-02-18T14:30:49Z&amp;precision=second.html" title="2011-02-18T14:30:49Z in Timeline">3 years</a> ago)
+               (<a href="ReleaseProcess%3Faction=diff&amp;version=12.html">diff</a>)</th></tr>
+            <tr><td class="message">
+              <p>
+--
+</p>
+
+            </td></tr>
+          </tbody>
+        </table>
+      <div class="wikipage searchable">
+        
+          
+          
+          <div id="wikipage"><h1 id="AboutCKANReleases">About CKAN Releases</h1>
+<p>
+The OKF aims to make releases CKAN regularly - minor points every two months. Find releases at: <a class="ext-link" href="http://pypi.python.org/pypi/ckan"><span class="icon">​</span>PyPI</a>. See the changes at on the <a class="ext-link" href="http://knowledgeforge.net/ckan/doc/ckan/CHANGELOG.html"><span class="icon">​</span>Changelog</a>.
+</p>
+<p>
+See also: <a class="wiki" href="VersioningPolicy.html">VersioningPolicy</a>
+</p>
+<h1 id="ApproachingCKANrelease-alpharelease">Approaching CKAN release - alpha release</h1>
+<ol><li>Change the version number to the next version alpha in ckan/<span class="underline">init</span>.py e.g. 1.2a
+</li><li>Commit and push this change.
+</li><li>Bring metastable branch in line with default: 
+<pre class="wiki">$ hg up -C metastable
+$ hg merge -r default
+$ nosetests ckan/tests
+$ hg ci -m '[merge] from release 1.1a.'
+$ hg push
+</pre></li></ol><h1 id="DoingaCKANrelease">Doing a CKAN release</h1>
+<ol><li>Test the code satisfactorily.
+</li><li>Summarise the tickets going in this release in the ckan/doc/CHANGELOG.rst
+</li><li>Remove the pre-release letter in the version number in ckan/<span class="underline">init</span>.py e.g. 1.1c -&gt; 1.1
+</li><li>Commit this change.
+</li><li>Compile the docs:
+<pre class="wiki">$ python setup.py build_sphinx
+</pre></li><li>Upload docs to PyPI. If this is the first time you'll want sphinx-pypi-upload installed:
+<pre class="wiki">$ easy_install sphinx-pypi-upload
+</pre>then do the upload:
+<pre class="wiki">$ python setup.py upload_sphinx
+</pre>Check it is displayed at: <a class="ext-link" href="http://packages.python.org/ckan/"><span class="icon">​</span>http://packages.python.org/ckan/</a>
+</li><li>Tag the repo with the version number (commits change). (add -f to the tag if you want to overwrite a previous tag with this release) e.g.
+<pre class="wiki">$ hg tag ckan-1.1 -m 'Release 1.1'
+$ hg push
+</pre></li><li>Upload the release to PyPI (If you make a mistake, you can always go into PyPI, remove the release file and then reupload it.) 
+<pre class="wiki">python setup.py sdist upload
+</pre></li><li>Bring metastable branch in line with default: 
+<pre class="wiki">$ hg up -C metastable
+$ hg merge -r default
+$ nosetests ckan/tests
+$ hg ci -m '[merge] from release 1.1.'
+$ hg push
+</pre></li><li>Merge the release to the bitbucket i18n repo and recreate the pot:
+<pre class="wiki">???
+</pre></li><li>If there have been any unreleased changes to vdm, make sure you release that too.
+</li></ol><h1 id="ckanclientreleases">ckanclient releases</h1>
+<ol><li>Increase version number in ckanclient/<span class="underline">init</span>.py
+</li><li>Add a changelog for this new version in ckanclient/<span class="underline">init</span>.py
+</li><li>Check-in the changes
+</li><li>Tag the version:
+<pre class="wiki"> $ hg tag "ckanclient-v0.5"
+</pre></li><li>Create a PYPI config file (~/.pypirc) if necessary:
+<pre class="wiki">[distutils]
+index-servers =
+  pypi
+
+[pypi]
+#repository: http://www.python.org/pypi
+username: joebloggs
+password: mypassword
+</pre></li><li>Produce the distribution and upload to PYPI
+<pre class="wiki">$ python setup.py sdist upload
+</pre></li><li>See the upload here: <a class="ext-link" href="http://www.python.org/pypi/ckanclient"><span class="icon">​</span>http://www.python.org/pypi/ckanclient</a>
+</li><li>Check that the setup.py for various branches of CKAN have the new version in their range (as appropriate).
+</li><li>Check that the various pip-requirements.txt files also match the new version (as appropriate).
+</li></ol><h1 id="vdmreleases">vdm releases</h1>
+<ol><li>Increase version number in vdm/<span class="underline">init</span>.py
+</li><li>Add a changelog for this new version in vdm/CHANGELOG.txt
+</li><li>Check-in the changes
+</li><li>Tag the version:
+<pre class="wiki"> $ hg tag "vdm-0.8"
+</pre></li><li>Create a PYPI config file (~/.pypirc) if necessary:
+<pre class="wiki">[distutils]
+index-servers =
+  pypi
+
+[pypi]
+#repository: http://www.python.org/pypi
+username: joebloggs
+password: mypassword
+</pre></li><li>Produce the distribution and upload to PYPI
+<pre class="wiki">$ python setup.py sdist upload
+</pre></li><li>See the upload here: <a class="ext-link" href="http://www.python.org/pypi/vdm"><span class="icon">​</span>http://www.python.org/pypi/vdm</a>
+</li><li>Check that the setup.py for various branches of CKAN have the new version in their range (as appropriate).
+</li><li>Check that the various pip-requirements.txt files also match the new version (as appropriate).
+</li></ol></div>
+        
+        
+      </div>
+      
+
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="last first">
+          <a rel="nofollow" href="ReleaseProcess%3Fversion=12&amp;format=txt">Plain Text</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      SolrInterface – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="help" href="TracGuide.html" />
+        <link rel="alternate" href="SolrInterface%3Fversion=2&amp;format=txt" type="text/x-trac-wiki" title="Plain Text" />
+        <link rel="up" href="SolrInterface.html" title="View latest version" />
+        <link rel="next" href="SolrInterface%3Fversion=3.html" title="Version 3" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/wiki.css" type="text/css" />
+        <link rel="prev" href="SolrInterface%3Fversion=1.html" title="Version 1" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("#content").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $("#content").find(".wikianchor").each(function() {
+          $(this).addAnchor(babel.format(_("Link to #%(id)s"), {id: $(this).attr('id')}));
+        });
+        $(".foldable").enableFolding(true, true);
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last active"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="pagepath" class="noprint">
+  <a class="pathentry first" title="View WikiStart" href="../wiki.1.html">wiki:</a><a class="pathentry" href="SolrInterface.html" title="View SolrInterface">SolrInterface</a>
+</div>
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="SolrInterface%3Fversion=1.html" title="Version 1">Previous Version</a></span></li><li><a href="SolrInterface.html" title="View latest version">View Latest Version</a></li><li class="last"><span><a class="next" href="SolrInterface%3Fversion=3.html" title="Version 3">Next Version</a> &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="wiki">
+        <br />
+        <table id="info" summary="Revision info">
+          <tbody>
+            <tr><th scope="row">Version 2 (modified by dread, <a class="timeline" href="../timeline%3Ffrom=2010-02-23T11:22:30Z&amp;precision=second.html" title="2010-02-23T11:22:30Z in Timeline">4 years</a> ago)
+               (<a href="SolrInterface%3Faction=diff&amp;version=2.html">diff</a>)</th></tr>
+            <tr><td class="message">
+              <p>
+--
+</p>
+
+            </td></tr>
+          </tbody>
+        </table>
+      <div class="wikipage searchable">
+        
+          
+          
+          <div id="wikipage"><h1 id="SOLRInterface">SOLR Interface</h1>
+<h2 id="UseCases">Use Cases</h2>
+<p>
+As an admin of a CKAN instance I want to have the facility to use SOLR, both alongside and as a replacement for the existing full text search in CKAN.
+</p>
+<h2 id="Design">Design</h2>
+<p>
+There are two main options for getting data into SOLR:
+</p>
+<ul><li>POST the records to SOLR in XML format (<a class="ext-link" href="http://wiki.apache.org/solr/UpdateXmlMessages"><span class="icon">​</span>docs</a>)
+</li><li>Direct connection Setup SOLR (<a class="ext-link" href="http://wiki.apache.org/solr/DataImportHandler"><span class="icon">​</span>docs</a>)
+<ul><li>Provide SELECT statements to do queries
+</li><li>Process is initiated by doing a GET to a particular SOLR URL
+</li></ul></li></ul><p>
+The preference is for the first option as the abstraction provides more flexibility in the db and more control about what gets indexed.
+</p>
+<p>
+When to index a package? Currently we index it on database after_insert and after_update triggers. But this might seriously slow down a large data import since the indexing requires a POST over the internet. Maybe keep the triggers, but for a batch import we can turn them off and then manually run the indexing. Alternatively store up changes and do an hourly cron.
+</p>
+<h2 id="Tickets">Tickets</h2>
+<ul><li>Get a SOLR instance running locally and/or eu1, using basic config.
+</li><li>Get indexing and searching working with name and title fields only:
+<ul><li>Harness one of the three python SOLR libraries to send SOLR Update XML of CKAN Packages (triggered on the command-line). 
+</li><li>Write tests for SOLR by sending data with SOLR library and using JSON interface for queries.
+</li></ul></li><li>Get it working with all package fields, optimising the field descriptions in schema.xml. 
+</li><li>Trigger the indexing sensibly (as decided above).
+</li><li>Provide option to connect CKAN's search WUI to SOLR back-end.
+</li><li>Developer docs - description of how to setup SOLR and provide link to schema.xml in developer docs.
+</li></ul></div>
+        
+        
+      </div>
+      
+
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="last first">
+          <a rel="nofollow" href="SolrInterface%3Fversion=2&amp;format=txt">Plain Text</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

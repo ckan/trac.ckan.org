@@ -1,0 +1,12 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2771	Documentation and examples for IDatasetForm and IGroupForm	seanh	seanh	"Add minimal, working IDatasetForm and IGroupForm example extensions to core, with tests.
+
+The IDatasetForm example should use tag vocabularies (two birds with one stone)
+
+The IDatasetForm and IGroupForm docs are not very good (and are somewhat spread around different doc chapters), fix them up, and reference the new working examples.
+
+Tab Vocabularies docs should reference IDatasetForm example.
+
+When using convert_to/from_extras() you have to remove any free extras from the form or it won't work, this needs to be documented (in the docstring maybe)
+
+There have been recent changes to the schemas that IDatasetForm and IGroupForm use, make sure the docs are up to date."	enhancement	new	awaiting triage	ckan-v1.8	ckan		docs		ckan	none

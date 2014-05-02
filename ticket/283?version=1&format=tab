@@ -1,0 +1,14 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+283	Manage deletions of unwanted packages	dread	rgrp	"== Use case ==
+
+As a user I want to notify the CKAN admins of a spammed or unsuitable package for deletion.
+
+== Suggested solution ==
+
+In the package view side-bar, there is a note: ""To have this package completely removed, contact the [ca.ckan.net administrators admin@ca.ckan.net].""
+
+== Other solutions ==
+
+A more complicated solution would be to allow packages to be tagged for deletion, which would auto-alert administrators, and allow easier administration of this. But this might be overkill. 
+
+c.f. http://en.wikipedia.org/wiki/Deleting_an_article"	enhancement	new	awaiting triage		ckan					

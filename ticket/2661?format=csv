@@ -1,0 +1,10 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2661,delete dataset/group javascript confirm,toby,aron.carroll,"in 2375-demo-theme-development
+
+templates/package/confirm_delete.html needs to be made to look nice note some writing in black
+
+delete button needs nice home on dataset/edit
+
+you can add js support add ?confirm=yes to url on dataset button to force delete
+
+Please note delete is not yet implemented - but will be in the next few hours",enhancement,closed,major,demo phase 2,ckan,fixed,demo-theme,,ckan,none

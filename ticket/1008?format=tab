@@ -1,0 +1,6 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1008	eval() of user display name in template head	pudo	rgrp	"We're currently setting the user preferences links via a javascript snippet that also evals the name. This should be removed as we're not displaying the user name any longer. 
+
+We should also have page fragment caching in Genshi, which is not currently implmented. 
+
+cf. http://api.rubyonrails.org/classes/ActionController/Caching/Fragments.html"	defect	closed	major	ckan-v1.4-sprint-2	ckan	fixed		rgrp		

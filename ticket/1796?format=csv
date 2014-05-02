@@ -1,0 +1,8 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1796,Get rid of lxml dependency,dread,ross,"lxml is used in CKAN core in two places:
+ * ckan/lib/helpers.py:239 Parsing Markdown and ensuring it is valid XML (i.e. tags close nicely so the HTML of the rest of the CKAN page is not disruptable).
+ * reading the SOLR config XML to determine what version it is.
+
+Both of these could be done with xml.dom built into Python and would save us a sizeable and slightly problematic dependency.
+
+lxml is needed by these extensions: ckanext-inspire, ckanext-harvest, ckanext-csw & ckanext-wordpresser, so we'd have to add this to their requirements.",enhancement,closed,awaiting triage,ckan-future,ckan,fixed,,rgrp kindly,ckan,none

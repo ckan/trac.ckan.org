@@ -1,0 +1,6 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1588	QA - Give SPARQL endpoints a 4 star rating	johnglover	johnglover	"Super: #1594
+
+From Richard Cyganiak on the CKAN Discuss list:
+
+Besides considering the media type of resources, it would also make sense to check for the presence of a SPARQL endpoint. SPARQL endpoints are recorded for more than 300 datasets on the Data Hub using the pseudo-type ""api/sparql"". A few more are recorded with the format ""SPARQL"". I suggest that datasets with such resources should also be considered for the fourth star."	enhancement	new	major	ckan-v1.6	ckan		qa		ckan	none

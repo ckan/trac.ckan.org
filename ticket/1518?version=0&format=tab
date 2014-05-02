@@ -1,0 +1,8 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1518	CKAN Upload fails if filename has spaces in it	markbrough		"E.g. uploading a file with spaces in it:
+OECD Monthly Exchange Rates.zip
+
+Gives a 404 Not Found response to the following file:
+http://test.ckan.org/api/storage/metadata/2011-12-05T193046/OECD%20Monthly%20Exchange%20Rates.zip
+
+The upload wheel keeps spinning and the user is not informed that the upload has failed."	defect	new	major		ckan				ckanext-upload	none

@@ -1,0 +1,575 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+    <html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      TracQuery (diff) – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="help" href="TracGuide.html" />
+        <link rel="up" href="TracQuery%3Faction=history.html" title="Page history" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/wiki.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/diff.css" type="text/css" />
+        <link rel="prev" href="TracQuery%3Faction=diff&amp;version=3.html" title="Version 3" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/diff.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="../chrome/common/css/diff.css" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last active"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="TracQuery%3Faction=diff&amp;version=3.html" title="Version 3">Previous Change</a></span></li><li><a href="TracQuery%3Faction=history.html" title="Page history">Wiki History</a></li><li class="last"><span class="missing">Next Change &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="wiki">
+      <h1>
+        Changes between
+          <a href="TracQuery%3Fversion=3.html">Version 3</a> and
+          <a href="TracQuery%3Fversion=4.html">Version 4</a> of
+          <a href="TracQuery%3Fversion=4.html">TracQuery</a>
+      </h1>
+      <form method="post" id="prefs" action="TracQuery%3Fversion=4.html"><div><input type="hidden" name="__FORM_TOKEN" value="93d81ccf9a7bb1c456462f62" /></div>
+        <div>
+          <input type="hidden" name="action" value="diff" />
+          <input type="hidden" name="version" value="4" />
+          <input type="hidden" name="old_version" value="3" />
+          
+  <label for="style">View differences</label>
+  <select id="style" name="style">
+    <option selected="selected" value="inline">inline</option>
+    <option value="sidebyside">side by side</option>
+  </select>
+  <div class="field">
+    <label><input type="radio" name="contextall" value="0" checked="checked" />
+             Show</label>
+      <label><input type="text" name="contextlines" id="contextlines" size="2" maxlength="3" value="2" />
+             lines around each change</label><br />
+    <label><input type="radio" name="contextall" value="1" />
+           Show the changes in full context</label>
+  </div>
+  <fieldset id="ignore">
+    <legend>Ignore:</legend>
+    <div class="field">
+      <input type="checkbox" id="ignoreblanklines" name="ignoreblanklines" />
+      <label for="ignoreblanklines">Blank lines</label>
+    </div>
+    <div class="field">
+      <input type="checkbox" id="ignorecase" name="ignorecase" />
+      <label for="ignorecase">Case changes</label>
+    </div>
+    <div class="field">
+      <input type="checkbox" id="ignorewhitespace" name="ignorewhitespace" />
+      <label for="ignorewhitespace">White space changes</label>
+    </div>
+  </fieldset>
+  <div class="buttons">
+    <input type="submit" name="update" value="Update" />
+  </div>
+
+        </div>
+      </form>
+      <dl id="overview">
+        <dt class="property time">Timestamp:</dt>
+        <dd class="time">
+            05/02/14 01:33:04 (<a class="timeline" href="../timeline%3Ffrom=2014-05-02T01:33:04Z&amp;precision=second.html" title="2014-05-02T01:33:04Z in Timeline">7 minutes</a> ago)
+        </dd>
+        <dt class="property author">Author:</dt>
+        <dd class="author">
+          trac
+        </dd>
+        <dt class="property message">Comment:</dt>
+        <dd class="message">
+          
+          <p>
+--
+</p>
+
+        </dd>
+      </dl>
+      <div class="diff">
+        <div class="legend" id="diff-legend">
+          <h3>Legend:</h3>
+          <dl>
+            <dt class="unmod"></dt><dd>Unmodified</dd>
+            <dt class="add"></dt><dd>Added</dd>
+            <dt class="rem"></dt><dd>Removed</dd>
+            <dt class="mod"></dt><dd>Modified</dd>
+          </dl>
+        </div>
+        <div class="diff">
+  <ul class="entries">
+      <li class="entry">
+        <h2 id="file0">
+          <a href="TracQuery%3Fversion=4.html">TracQuery</a>
+        </h2>
+        <table class="trac-diff inline" summary="Differences" cellspacing="0">
+              <colgroup><col class="lineno" /><col class="lineno" /><col class="content" /></colgroup>
+              <thead>
+                <tr>
+                  <th title="Version 3">
+                    <a href="TracQuery%3Fversion=3.html#L7">
+                      v3</a>
+                  </th>
+                  <th title="Version 4">
+                    <a href="TracQuery%3Fversion=4.html#L7">
+                      v4</a>
+                  </th>
+                  <td> </td>
+                </tr>
+              </thead>
+            <tbody class="unmod">
+                  <tr>
+                          <th>7</th><th>7</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>8</th><th>8</th><td class="l"><span>== Filters ==</span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>9</th><th> </th><td class="l"><span>When you first go to the query page the default filters will display all open tickets, or if you're logged in it will display open tickets assigned to you.&nbsp; Current filters can be removed by clicking the button to the right with the minus sign on the label.&nbsp; New filters are added from the pulldown list in the bottom-right corner of the filters box.&nbsp; Filters with either a text box or a pulldown menu of options can be added multiple times to perform an ''or'' of the criteria.</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>9</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>10</th><td class="r"><span>When you first go to the query page the default filter will display tickets relevant to you:</span> </td>
+                      </tr><tr>
+                        <th> </th><th>11</th><td class="r"><span>&nbsp;* If logged in then all open tickets it will display open tickets assigned to you.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>12</th><td class="r"><span>&nbsp;* If not logged in but you have specified a name or email address in the preferences then it will display all open tickets where your email (or name if email not defined) is in the CC list.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>13</th><td class="r"><span>&nbsp;* If not logged and no name/email defined in the preferences then all open issues are displayed.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>14</th><td class="r"><span></span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>15</th><td class="r"><span>Current filters can be removed by clicking the button to the left with the minus sign on the label.&nbsp; New filters are added from the pulldown lists at the bottom corners of the filters box ('And' conditions on the left, 'Or' conditions on the right).&nbsp; Filters with either a text box or a pulldown menu of options can be added multiple times to perform an ''or'' of the criteria.</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>10</th><th>16</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>11</th><th>17</th><td class="l"><span>You can use the fields just below the filters box to group the results based on a field, or display the full description for each ticket.</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracQuery%3Fversion=3.html#L16">…</a></th>
+                  <th><a href="TracQuery%3Fversion=4.html#L22">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>16</th><th>22</th><td class="l"><span>Clicking on one of the query results will take you to that ticket.&nbsp; You can navigate through the results by clicking the ''Next Ticket'' or ''Previous Ticket'' links just below the main menu bar, or click the ''Back to Query'' link to return to the query page.&nbsp; </span> </td>
+                  </tr><tr>
+                          <th>17</th><th>23</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>18</th><th> </th><td class="l"><span>You can safely edit any of the tickets and continue to navigate through the results using the ''<del>Next/Previous/Back to Query'' links after saving your results.&nbsp; When you return to the query ''any tickets which was</del> edited'' will be displayed with italicized text.&nbsp; If one of the tickets was edited such that [[html(&lt;span style="color: grey"&gt;it no longer matches the query criteria &lt;/span&gt;)]] the text will also be greyed. Lastly, if '''a new ticket matching the query criteria has been created''', it will be shown in bold. </span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>24</th><td class="r"><span>You can safely edit any of the tickets and continue to navigate through the results using the ''<ins>!Next/Previous/Back to Query'' links after saving your results.&nbsp; When you return to the query ''any tickets which were</ins> edited'' will be displayed with italicized text.&nbsp; If one of the tickets was edited such that [[html(&lt;span style="color: grey"&gt;it no longer matches the query criteria &lt;/span&gt;)]] the text will also be greyed. Lastly, if '''a new ticket matching the query criteria has been created''', it will be shown in bold. </span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>19</th><th>25</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>20</th><th>26</th><td class="l"><span>The query results can be refreshed and cleared of these status indicators by clicking the ''Update'' button again.</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracQuery%3Fversion=3.html#L22">…</a></th>
+                  <th><a href="TracQuery%3Fversion=4.html#L28">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>22</th><th>28</th><td class="l"><span>== Saving Queries ==</span> </td>
+                  </tr><tr>
+                          <th>23</th><th>29</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>24</th><th> </th><td class="l"><span>While Trac does not yet allow saving a named query and somehow making it available in a navigable list, you can save references to queries in Wiki content, as described below.</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>30</th><td class="r"><span>Trac allows you to save the query as a named query accessible from the reports module. To save a query ensure that you have ''Updated'' the view and then click the ''Save query'' button displayed beneath the results.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>31</th><td class="r"><span>You can also save references to queries in Wiki content, as described below.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>32</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>33</th><td class="r"><span>''Note:'' one way to easily build queries like the ones below, you can build and test the queries in the Custom report module and when ready - click ''Save query''. This will build the query string for you. All you need to do is remove the extra line breaks.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>34</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>35</th><td class="r"><span>''Note:'' you must have the '''REPORT_CREATE''' permission in order to save queries to the list of default reports. The ''Save query'' button will only appear if you are logged in as a user that has been granted this permission. If your account does not have permission to create reports, you can still use the methods below to save a query.</span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>36</th><td class="r"><span></span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>25</th><th>37</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>26</th><th>38</th><td class="l"><span>=== Using TracLinks ===</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracQuery%3Fversion=3.html#L29">…</a></th>
+                  <th><a href="TracQuery%3Fversion=4.html#L41">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>29</th><th>41</th><td class="l"><span>{{{</span> </td>
+                  </tr><tr>
+                          <th>30</th><th>42</th><td class="l"><span>[query:status=new|assigned|reopened&amp;version=1.0 Active tickets against 1.0]</span> </td>
+                  </tr>
+            </tbody><tbody class="rem">
+                  <tr class="last first">
+                          <th>31</th><th> </th><td class="l"><del></del> </td>
+                  </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>32</th><th>43</th><td class="l"><span>}}}</span> </td>
+                  </tr><tr>
+                          <th>33</th><th>44</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracQuery%3Fversion=3.html#L40">…</a></th>
+                  <th><a href="TracQuery%3Fversion=4.html#L51">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>40</th><th>51</th><td class="l"><span>{{{</span> </td>
+                  </tr><tr>
+                          <th>41</th><th>52</th><td class="l"><span>[query:?status=new&amp;status=assigned&amp;status=reopened&amp;group=owner Assigned tickets by owner]</span> </td>
+                  </tr>
+            </tbody><tbody class="rem">
+                  <tr class="last first">
+                          <th>42</th><th> </th><td class="l"><del></del> </td>
+                  </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>43</th><th>53</th><td class="l"><span>}}}</span> </td>
+                  </tr><tr>
+                          <th>44</th><th>54</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracQuery%3Fversion=3.html#L48">…</a></th>
+                  <th><a href="TracQuery%3Fversion=4.html#L58">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>48</th><th>58</th><td class="l"><span>=== Using the `[[TicketQuery]]` Macro ===</span> </td>
+                  </tr><tr>
+                          <th>49</th><th>59</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>50</th><th> </th><td class="l"><span>The <del>TicketQuery</del> macro lets you display lists of tickets matching certain criteria anywhere you can use WikiFormatting.</span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>60</th><td class="r"><span>The <ins>[trac:TicketQuery TicketQuery]</ins> macro lets you display lists of tickets matching certain criteria anywhere you can use WikiFormatting.</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>51</th><th>61</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>52</th><th>62</th><td class="l"><span>Example:</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracQuery%3Fversion=3.html#L58">…</a></th>
+                  <th><a href="TracQuery%3Fversion=4.html#L68">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>58</th><th>68</th><td class="l"><span>&nbsp; [[TicketQuery(version=0.6|0.7&amp;resolution=duplicate)]]</span> </td>
+                  </tr><tr>
+                          <th>59</th><th>69</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>60</th><th> </th><td class="l"><span>Just like the [wiki:TracQuery#UsingTracLinks query: wiki links], the parameter of this macro expects a query string formatted according to the rules of the simple [wiki:TracQuery#QueryLanguage ticket query language].</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>70</th><td class="r"><span>Just like the [wiki:TracQuery#UsingTracLinks query: wiki links], the parameter of this macro expects a query string formatted according to the rules of the simple [wiki:TracQuery#QueryLanguage ticket query language]. This also allows displaying the link and description of a single ticket:</span> </td>
+                      </tr><tr>
+                        <th> </th><th>71</th><td class="r"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th> </th><th>72</th><td class="r"><span>[[TicketQuery(id=123)]]</span> </td>
+                      </tr><tr>
+                        <th> </th><th>73</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>74</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>75</th><td class="r"><span>This is displayed as:</span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>76</th><td class="r"><span>&nbsp; [[TicketQuery(id=123)]]</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>61</th><th>77</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>62</th><th>78</th><td class="l"><span>A more compact representation without the ticket summaries is also available:</span> </td>
+                  </tr><tr>
+                          <th>63</th><th>79</th><td class="l"><span>{{{</span> </td>
+                  </tr><tr>
+                          <th>64</th><th>80</th><td class="l"><span>[[TicketQuery(version=0.6|0.7&amp;resolution=duplicate, compact)]]</span> </td>
+                  </tr>
+            </tbody><tbody class="rem">
+                  <tr class="last first">
+                          <th>65</th><th> </th><td class="l"><del></del> </td>
+                  </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>66</th><th>81</th><td class="l"><span>}}}</span> </td>
+                  </tr><tr>
+                          <th>67</th><th>82</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracQuery%3Fversion=3.html#L69">…</a></th>
+                  <th><a href="TracQuery%3Fversion=4.html#L84">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>69</th><th>84</th><td class="l"><span>&nbsp; [[TicketQuery(version=0.6|0.7&amp;resolution=duplicate, compact)]]</span> </td>
+                  </tr><tr>
+                          <th>70</th><th>85</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>71</th><th> </th><td class="l"><span>Finally<del>&nbsp;if you wish to receive only the number of defects that match the query using</del> the ``count`` parameter.</span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>86</th><td class="r"><span>Finally<ins>, if you wish to receive only the number of defects that match the query, use</ins> the ``count`` parameter.</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>72</th><th>87</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>73</th><th>88</th><td class="l"><span>{{{</span> </td>
+                  </tr><tr>
+                          <th>74</th><th>89</th><td class="l"><span>[[TicketQuery(version=0.6|0.7&amp;resolution=duplicate, count)]]</span> </td>
+                  </tr>
+            </tbody><tbody class="rem">
+                  <tr class="last first">
+                          <th>75</th><th> </th><td class="l"><del></del> </td>
+                  </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>76</th><th>90</th><td class="l"><span>}}}</span> </td>
+                  </tr><tr>
+                          <th>77</th><th>91</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracQuery%3Fversion=3.html#L79">…</a></th>
+                  <th><a href="TracQuery%3Fversion=4.html#L93">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>79</th><th>93</th><td class="l"><span>&nbsp; [[TicketQuery(version=0.6|0.7&amp;resolution=duplicate, count)]]</span> </td>
+                  </tr><tr>
+                          <th>80</th><th>94</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="add">
+                  <tr class="first">
+                          <th> </th><th>95</th><td class="r"><ins>=== Customizing the ''table'' format ===</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>96</th><td class="r"><ins>You can also customize the columns displayed in the table format (''format=table'') by using ''col=&lt;field&gt;'' - you can specify multiple fields and what order they are displayed by placing pipes (`|`) between the columns like below:</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>97</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>98</th><td class="r"><ins>{{{</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>99</th><td class="r"><ins>[[TicketQuery(max=3,status=closed,order=id,desc=1,format=table,col=resolution|summary|owner|reporter)]]</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>100</th><td class="r"><ins>}}}</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>101</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>102</th><td class="r"><ins>This is displayed as:</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>103</th><td class="r"><ins>[[TicketQuery(max=3,status=closed,order=id,desc=1,format=table,col=resolution|summary|owner|reporter)]]</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>104</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>105</th><td class="r"><ins>==== Full rows ====</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>106</th><td class="r"><ins>In ''table'' format you can also have full rows by using ''rows=&lt;field&gt;'' like below:</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>107</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>108</th><td class="r"><ins>{{{</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>109</th><td class="r"><ins>[[TicketQuery(max=3,status=closed,order=id,desc=1,format=table,col=resolution|summary|owner|reporter,rows=description)]]</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>110</th><td class="r"><ins>}}}</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>111</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>112</th><td class="r"><ins>This is displayed as:</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>113</th><td class="r"><ins>[[TicketQuery(max=3,status=closed,order=id,desc=1,format=table,col=resolution|summary|owner|reporter,rows=description)]]</ins> </td>
+                  </tr><tr class="last">
+                          <th> </th><th>114</th><td class="r"><ins></ins> </td>
+                  </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>81</th><th>115</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>82</th><th>116</th><td class="l"><span>=== Query Language ===</span> </td>
+                  </tr><tr>
+                          <th>83</th><th>117</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>84</th><th> </th><td class="l"><span>`query:` TracLinks and the `[[TicketQuery]]` macro both use a mini “query language” for specifying query filters. Basically, the filters are separated by ampersands (`&amp;`). Each filter then consists of the ticket field name, an operator, and one or more values. More than one value are separated by a pipe (`|`), meaning that the filter matches any of the values.<del></del></span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>118</th><td class="r"><span>`query:` TracLinks and the `[[TicketQuery]]` macro both use a mini “query language” for specifying query filters. Basically, the filters are separated by ampersands (`&amp;`). Each filter then consists of the ticket field name, an operator, and one or more values. More than one value are separated by a pipe (`|`), meaning that the filter matches any of the values.<ins>&nbsp;To include a literal `&amp;` or `|` in a value, escape the character with a backslash (`\`).</ins></span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>85</th><th>119</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>86</th><th>120</th><td class="l"><span>The available operators are:</span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>87</th><th> </th><td class="l"><span>|| '''<del>=''' || the field content exactly matches the</del> one of the values ||</span> </td>
+                      </tr><tr>
+                        <th>88</th><th> </th><td class="l"><span>|| '''<del>~=</del>''' || the field content contains one or more of the values ||</span> </td>
+                      </tr><tr>
+                        <th>89</th><th> </th><td class="l"><span>|| '''<del>!^=</del>''' || the field content starts with one of the values ||</span> </td>
+                      </tr><tr>
+                        <th>90</th><th> </th><td class="l"><span>|| '''<del>$=</del>''' || the field content ends with one of the values ||</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>121</th><td class="r"><span>|| '''<ins>`=`''' || the field content exactly matches</ins> one of the values ||</span> </td>
+                      </tr><tr>
+                        <th> </th><th>122</th><td class="r"><span>|| '''<ins>`~=`</ins>''' || the field content contains one or more of the values ||</span> </td>
+                      </tr><tr>
+                        <th> </th><th>123</th><td class="r"><span>|| '''<ins>`^=`</ins>''' || the field content starts with one of the values ||</span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>124</th><td class="r"><span>|| '''<ins>`$=`</ins>''' || the field content ends with one of the values ||</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>91</th><th>125</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>92</th><th>126</th><td class="l"><span>All of these operators can also be negated:</span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>93</th><th> </th><td class="l"><span>|| '''!=''' || the field content matches none of the values ||</span> </td>
+                      </tr><tr>
+                        <th>94</th><th> </th><td class="l"><span>|| '''!~=''' || the field content does not contain any of the values ||</span> </td>
+                      </tr><tr>
+                        <th>95</th><th> </th><td class="l"><span>|| '''!!^=''' || the field content does not start with any of the values ||</span> </td>
+                      </tr><tr>
+                        <th>96</th><th> </th><td class="l"><span>|| '''!$=''' || the field content does not end with any of the values ||</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>127</th><td class="r"><span>|| '''`!=`''' || the field content matches none of the values ||</span> </td>
+                      </tr><tr>
+                        <th> </th><th>128</th><td class="r"><span>|| '''`!~=`''' || the field content does not contain any of the values ||</span> </td>
+                      </tr><tr>
+                        <th> </th><th>129</th><td class="r"><span>|| '''`!^=`''' || the field content does not start with any of the values ||</span> </td>
+                      </tr><tr>
+                        <th> </th><th>130</th><td class="r"><span>|| '''`!$=`''' || the field content does not end with any of the values ||</span> </td>
+                      </tr><tr>
+                        <th> </th><th>131</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>132</th><td class="r"><span>The date fields `created` and `modified` can be constrained by using the `=` operator and specifying a value containing two dates separated by two dots (`..`). Either end of the date range can be left empty, meaning that the corresponding end of the range is open. The date parser understands a few natural date specifications like "3 weeks ago", "last month" and "now", as well as Bugzilla-style date specifications like "1d", "2w", "3m" or "4y" for 1 day, 2 weeks, 3 months and 4 years, respectively. Spaces in date specifications can be left out to avoid having to quote the query string. </span> </td>
+                      </tr><tr>
+                        <th> </th><th>133</th><td class="r"><span>|| '''`created=2007-01-01..2008-01-01`''' || query tickets created in 2007 ||</span> </td>
+                      </tr><tr>
+                        <th> </th><th>134</th><td class="r"><span>|| '''`created=lastmonth..thismonth`''' || query tickets created during the previous month ||</span> </td>
+                      </tr><tr>
+                        <th> </th><th>135</th><td class="r"><span>|| '''`modified=1weekago..`''' || query tickets that have been modified in the last week ||</span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>136</th><td class="r"><span>|| '''`modified=..30daysago`''' || query tickets that have been inactive for the last 30 days ||</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>97</th><th>137</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>98</th><th>138</th><td class="l"><span>----</span> </td>
+                  </tr>
+            </tbody>
+        </table>
+      </li>
+  </ul>
+</div>
+      </div>
+  </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

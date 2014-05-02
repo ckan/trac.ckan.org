@@ -1,0 +1,6 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2275	Implement group logos	seanh		"Groups should be able to specify a URL to an image file for a group logo, the image will be shown on the group page and the pages of datasets that belong to the group.
+
+Actually uploading an image file (rather than giving a URL) and cropping and resizing the file will be done later, for now just give a URL.
+
+Further customisation of group pages (CSS, templates) also for later."	enhancement	new	awaiting triage	ckan-sprint-2012-04-16	ckan		[2d]		ckan	none

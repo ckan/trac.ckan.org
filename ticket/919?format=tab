@@ -1,0 +1,5 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+919	Package preview contains API & datapkg instructions	dread	dread	"1. Edit a package
+2. Hit 'preview'.
+
+The preview contains the section ""CKAN API / datapkg"" which seems irrelevant at this point. Looking at ckan.net previews, the Comments section only appears when you view a package and not when you preview it. This seems more sensible - can this be done for the ""CKAN API / datapkg"" section too?"	enhancement	closed	awaiting triage	ckan-v1.4-sprint-6	ckan	fixed		rgrp	ckan	none

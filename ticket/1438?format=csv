@@ -1,0 +1,22 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1438,Action API - parameter discovery/checking,dread,,"Many actions in the Action API require parameters. What params are needed should be listed and checked. Because currently, if you get them wrong you simply get a useless 500 error.
+
+Currently they are listed in the docs, extracted from the code manually.
+
+So you could GET /action/api/package_list to receive not only the help text, but a list of arguments.
+
+And if you send an extra or missing argument then an intelligent error message can be returned.
+
+= implementation =
+
+How about some sort of decorator on the action function:
+{{{
+@logic_params(id, offset, limit)
+def get_package_list(context, data_dict):
+    ...
+}}}
+This would do the param checking, and is there a way to extract these params from the function? Or do a registration of the logic function?
+
+I'd certainly like to keep the list of the list of params for the function with the function, for ease of reading the code.
+
+Another good thing would be to pass in the params named as themselves, rather than having them contained in the data_dict.",enhancement,new,major,ckan-future,ckan,,,kindly,ckan,none

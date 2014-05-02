@@ -1,0 +1,13 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1322	Action API improvements	dread		"Focusing on improving Action API as the v3 API:
+
+ * have an optional parameter of the data_dict called ""options"".  Options would contain items that would get passed into the context. e.g. {{{{""options"" : {""ref_package_by"": ""id""}}. }}}
+ * instead of using API version to change the way packages are referenced, use the ref_package_by.
+ * All package_show, group_show etc. to accept an object 'name' as an alternative to object 'id'.
+ * Action API is v3 of api, replacement for v1 & v2. Default for most urls is still v1, but if url is /api/action then default to v3.
+
+Next steps:
+ * Add search API (package, resource, 
+ * Add Util API
+ * Clarify JSONP still applies
+ * Add doc strings, clarifying parameters"	enhancement	assigned	major		ckan			kindly	ckan	none

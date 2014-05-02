@@ -1,0 +1,34 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2551	Feature metrics	ross	ross	"
+== Requirements ==
+
+Would be useful if we could extend the Google Analytics extension to push track events to GA so that we can determine how the system is being used, and where we can optimise the workflow.
+
+Assuming it isn't configured to be off, track events should be added to some key action buttons so that the information on what users are doing is logged for analysis.
+
+
+== Interface ==
+
+This could possibly just be a list of JS calls to $('x').click(_gaq.push('track'...))
+
+
+== User Stories ==
+
+ * As a developer I would like to know which components of the system are used the most so I can streamline the processes.
+
+ * As a support developer I would like to know which parts add complexity to the system for minimal gain and could possibly be removed, de-prioritised.
+
+
+== Tasks ==
+
+[ ] Analysis/Clarification
+
+[ ] Code/Config changes
+
+[ ] Documentation
+
+
+== Estimates ==
+
+
+"	enhancement	accepted	awaiting triage	datahub-oct	ckan				ckan	none

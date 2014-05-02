@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2859: Fix the build</title>
+    <link>http://localhost/ticket/2859</link>
+    <description>&lt;p&gt;
+The requires files have been removed.  These were required by buildkit.
+&lt;/p&gt;
+&lt;p&gt;
+We've lost the information regarding which packages were already in ubuntu repos, which conflicted and which were missing.  But perhaps we can just package everything up.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2859</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+ </channel>
+</rss>

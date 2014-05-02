@@ -1,0 +1,362 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      #1197 (Add JavaScript guide for CKAN)
+     – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="prev" href="1196.html" title="Ticket #1196" />
+        <link rel="last" href="3030.html" title="Ticket #3030" />
+        <link rel="help" href="../wiki/TracGuide.html" />
+        <link rel="alternate" href="1197%3Fformat=csv" type="text/csv" class="csv" title="Comma-delimited Text" /><link rel="alternate" href="1197%3Fformat=tab" type="text/tab-separated-values" class="tab" title="Tab-delimited Text" /><link rel="alternate" href="1197%3Fformat=rss" type="application/rss+xml" class="rss" title="RSS Feed" />
+        <link rel="next" href="1198.html" title="Ticket #1198" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/ticket.css" type="text/css" />
+        <link rel="first" href="1.html" title="Ticket #1" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript">
+      var auto_preview_timeout=2.0;
+      var form_token="93d81ccf9a7bb1c456462f62";
+    </script>
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script><script type="text/javascript" src="../chrome/common/js/wikitoolbar.js"></script><script type="text/javascript" src="../chrome/common/js/resizer.js"></script><script type="text/javascript" src="../chrome/common/js/auto_preview.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("div.description").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $(".foldable").enableFolding(false, true);
+        var args = {realm: "ticket", id: 1197, escape_newlines: 0}
+        $("#comment").autoPreview("/wiki_render", args, function(textarea, text, rendered) {
+            $("#ticketchange div.comment").html(rendered);
+            if (rendered)
+              $("#ticketchange").show();
+            else if ($("#ticketchange ul.changes").length == 0)
+              $("#ticketchange").hide();
+        });
+        $("#trac-comment-editor textarea").autoPreview("/wiki_render", args,
+                                                       function(textarea, text, rendered) {
+          var comment = $("#trac-comment-editor").next("div.comment");
+          comment.html(rendered);
+          if (rendered)
+            comment.show();
+          else
+            comment.hide();
+        });
+        $("#modify").parent().toggleClass("collapsed");
+        $(".trac-topnav a").click(function() { $("#modify").parent().removeClass("collapsed"); });
+        /* only enable control elements for the currently selected action */
+        var actions = $("#action input[name='action']");
+        function updateActionFields() {
+          actions.each(function () {
+            $(this).siblings().find("*[id]").enable($(this).checked());
+            $(this).siblings().filter("*[id]").enable($(this).checked());
+          });
+        }
+        actions.click(updateActionFields);
+        updateActionFields();
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="../wiki/TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li class="active"><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="1196.html" title="Ticket #1196">Previous Ticket</a></span></li><li class="last"><span><a class="next" href="1198.html" title="Ticket #1198">Next Ticket</a> &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="ticket">
+      <h1 id="trac-ticket-title">
+          <a href="1197.html">Ticket #1197</a>
+          <span class="status">(closed enhancement: wontfix)</span>
+      </h1>
+      <div id="ticket">
+  <div class="date">
+    <p>Opened <a class="timeline" href="../timeline%3Ffrom=2011-06-23T03:50:32Z&amp;precision=second.html" title="2011-06-23T03:50:32Z in Timeline">3 years</a> ago</p>
+    <p>Last modified <a class="timeline" href="../timeline%3Ffrom=2012-06-18T11:52:37Z&amp;precision=second.html" title="2012-06-18T11:52:37Z in Timeline">23 months</a> ago</p>
+  </div>
+  <h2 class="summary searchable">Add JavaScript guide for CKAN</h2>
+  <table class="properties">
+    <tr>
+      <th id="h_reporter">Reported by:</th>
+      <td headers="h_reporter" class="searchable">
+        <a href="../query%3Fstatus=!closed&amp;reporter=timmcnamara.html">timmcnamara</a>
+      </td>
+      <th id="h_owner">Owned by:</th>
+      <td headers="h_owner">
+      </td>
+    </tr>
+    <tr>
+        <th id="h_priority">
+          Priority:
+        </th>
+        <td headers="h_priority">
+              <a href="../query%3Fstatus=!closed&amp;priority=awaiting+triage.html">awaiting triage</a>
+        </td>
+        <th id="h_milestone">
+          Milestone:
+        </th>
+        <td headers="h_milestone">
+              <a class="milestone" href="../milestone/ckan-backlog.html">ckan-backlog</a>
+        </td>
+    </tr><tr>
+        <th id="h_component">
+          Component:
+        </th>
+        <td headers="h_component">
+              <a href="../query%3Fstatus=!closed&amp;component=ckan.html">ckan</a>
+        </td>
+        <th id="h_keywords">
+          Keywords:
+        </th>
+        <td headers="h_keywords" class="searchable">
+              <a href="../query%3Fstatus=!closed&amp;keywords=~ui.html">ui</a>
+        </td>
+    </tr><tr>
+        <th id="h_cc">
+          Cc:
+        </th>
+        <td headers="h_cc" class="searchable">
+        </td>
+        <th id="h_repo">
+          Repository:
+        </th>
+        <td headers="h_repo">
+              <a href="../query%3Fstatus=!closed&amp;repo=ckan.html">ckan</a>
+        </td>
+    </tr><tr>
+        <th id="h_theme">
+          Theme:
+        </th>
+        <td headers="h_theme">
+              <a href="../query%3Fstatus=!closed&amp;theme=none.html">none</a>
+        </td>
+        <th>
+        </th>
+        <td>
+        </td>
+    </tr>
+  </table>
+  <div class="description">
+    <h3 id="comment:description">
+      Description
+    </h3>
+    <div class="searchable">
+      <p>
+A new library, <a class="ext-link" href="http://blog.optimizely.com/introducing-guidersjs-an-open-source-guider-e"><span class="icon">​</span>guiders.js</a>, has been open sourced that seems to be great at unobtrusively introducing new users to features of websites.
+</p>
+<p>
+The library drives Optimizely's website. The GitHub repo is here: <a class="ext-link" href="https://github.com/jeff-optimizely/Guiders-JS"><span class="icon">​</span>https://github.com/jeff-optimizely/Guiders-JS</a>
+</p>
+<p>
+Some examples:
+</p>
+<p>
+<a style="padding:0; border:none" href="http://posterous.com/getfile/files.posterous.com/temp-2011-06-22/BnlgHDvhjpFfqbwvprsIaklqrpdgJyebfuhxajbDhmvnFgzdzzCJdvluJFki/Screen_shot_2011-06-22_at_6.42.21_PM.png.scaled500.png"><img src="http://posterous.com/getfile/files.posterous.com/temp-2011-06-22/BnlgHDvhjpFfqbwvprsIaklqrpdgJyebfuhxajbDhmvnFgzdzzCJdvluJFki/Screen_shot_2011-06-22_at_6.42.21_PM.png.scaled500.png" alt="http://posterous.com/getfile/files.posterous.com/temp-2011-06-22/BnlgHDvhjpFfqbwvprsIaklqrpdgJyebfuhxajbDhmvnFgzdzzCJdvluJFki/Screen_shot_2011-06-22_at_6.42.21_PM.png.scaled500.png" title="http://posterous.com/getfile/files.posterous.com/temp-2011-06-22/BnlgHDvhjpFfqbwvprsIaklqrpdgJyebfuhxajbDhmvnFgzdzzCJdvluJFki/Screen_shot_2011-06-22_at_6.42.21_PM.png.scaled500.png" /></a>
+</p>
+<p>
+<a style="padding:0; border:none" href="http://s3.amazonaws.com/files.posterous.com/temp-2011-06-22/CpvlcinkrxhtnAHfGtEHhxyGkraqlFmCjcnztFuugagBGxmBjCdwuquHpvEB/promo_gmail.png?AWSAccessKeyId=AKIAJFZAE65UYRT34AOQ&amp;Expires=1308801019&amp;Signature=DJWDgj7fmyq7K3ve177H7DPwKdw%3D"><img src="http://s3.amazonaws.com/files.posterous.com/temp-2011-06-22/CpvlcinkrxhtnAHfGtEHhxyGkraqlFmCjcnztFuugagBGxmBjCdwuquHpvEB/promo_gmail.png?AWSAccessKeyId=AKIAJFZAE65UYRT34AOQ&amp;Expires=1308801019&amp;Signature=DJWDgj7fmyq7K3ve177H7DPwKdw%3D" alt="http://s3.amazonaws.com/files.posterous.com/temp-2011-06-22/CpvlcinkrxhtnAHfGtEHhxyGkraqlFmCjcnztFuugagBGxmBjCdwuquHpvEB/promo_gmail.png" title="http://s3.amazonaws.com/files.posterous.com/temp-2011-06-22/CpvlcinkrxhtnAHfGtEHhxyGkraqlFmCjcnztFuugagBGxmBjCdwuquHpvEB/promo_gmail.png" /></a>
+</p>
+
+    </div>
+  </div>
+</div>
+          
+
+        <div>
+          <h2 class="foldable">Change History</h2>
+          <div id="changelog">
+              <div class="change" id="trac-change-1">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:1" class="cnum">
+      <a href="1197.html#comment:1">comment:1</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-06-15T15:30:36Z&amp;precision=second.html" title="2012-06-15T15:30:36Z in Timeline">23 months</a> ago by seanh
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Milestone</strong>
+        set to <em>ckan-backlog</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-2">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:2" class="cnum">
+      <a href="1197.html#comment:2">comment:2</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-06-18T09:04:16Z&amp;precision=second.html" title="2012-06-18T09:04:16Z in Timeline">23 months</a> ago by toby
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+personally I'm against these for 4 reasons
+</p>
+<p>
+a) The site should be self explanatory and if it is not this is a failure of design
+</p>
+<p>
+b) a cookie would be needed to prevent these happening all the time - cookies are bad as they interfere with caching proxies.
+</p>
+<p>
+c) I find stuff like this patronising/annoying for the user
+</p>
+<p>
+d) They are a maintenance burden for ckan as we do not have a single instance
+</p>
+<p>
+Therefore I'd suggest closing this as a won't fix - I agree this is just a personal view point and therefore am not going to actually close the ticket but just record my opinion.
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-3">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:3" class="cnum">
+      <a href="1197.html#comment:3">comment:3</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-06-18T11:28:23Z&amp;precision=second.html" title="2012-06-18T11:28:23Z in Timeline">23 months</a> ago by seanh
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+Hi Toby, yes I think I agree with you, it reminds me of when I install new Android apps on my phone, some of them start off by bothering me with some sort of guided tour or long instructional text, I hate this and always skip through without reading it, expecting to be able to figure out the interface for myself.
+</p>
+<p>
+The one thing that something like this could be useful is, rather than showing someone how to use the site, showing them what the site is capable of so they can assess whether it meets their needs/is something they're interested in. However, we already have a good guided tour of this type on ckan.org/features, those pages are really pretty good.
+</p>
+<p>
+Close this as wontfix?
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-4">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:4" class="cnum">
+      <a href="1197.html#comment:4">comment:4</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-06-18T11:41:15Z&amp;precision=second.html" title="2012-06-18T11:41:15Z in Timeline">23 months</a> ago by toby
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+Thinking horrible thoughts, there was a rumour of a ckan tour, for something like that this would be useful.
+</p>
+<p>
+Not sure where that plan is at?  if there is a ticket for it maybe link to this one and close?
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-5">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:5" class="cnum">
+      <a href="1197.html#comment:5">comment:5</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-06-18T11:52:37Z&amp;precision=second.html" title="2012-06-18T11:52:37Z in Timeline">23 months</a> ago by seanh
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Status</strong>
+        changed from <em>new</em> to <em>closed</em>
+    </li><li>
+      <strong>Resolution</strong>
+        set to <em>wontfix</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+AFAIK there isn't a ticket for that, it was something originally requested as part of the demo site, but since the devs think it's a horrible idea I don't think it's going to happen, easiest way to make a CKAN tour would be a series of static pages like the one we already have on ckan.org, I think that combined with a real functioning demo site probably meets the requirement.
+</p>
+<p>
+Anyway, closing this as wontfix
+</p>
+
+    </div>
+
+              </div>
+          </div>
+        </div>
+      <div id="help"><strong>Note:</strong> See
+        <a href="../wiki/TracTickets.html">TracTickets</a> for help on using
+        tickets.</div>
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="first">
+          <a rel="nofollow" href="1197%3Fformat=csv" class="csv">Comma-delimited Text</a>
+        </li><li>
+          <a rel="nofollow" href="1197%3Fformat=tab" class="tab">Tab-delimited Text</a>
+        </li><li class="last">
+          <a rel="nofollow" href="1197%3Fformat=rss" class="rss">RSS Feed</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

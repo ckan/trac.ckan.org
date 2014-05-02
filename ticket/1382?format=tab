@@ -1,0 +1,2 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1382	Deleted resources are present for harvested package	thejimmyg	thejimmyg	Perhaps the importer deletes them before re-importing. We shouldn't have deleted resources, so let's investigate.	defect	new	minor	ckan-backlog	uklii				ckan	harvesting

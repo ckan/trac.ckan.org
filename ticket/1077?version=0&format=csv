@@ -1,0 +1,12 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1077,Switch to new vdm changeset model,rgrp,kindly,"Have developed a new ""changeset"" based model for revisioning in vdm. This has several advantages:
+
+ * Much simpler
+ * Cleaner separation of continuity from changesets
+  * Supports certain operations that are impossible now (e.g. deleting all changes to a particular object irrespective of whether other objects were changed in same revisions).
+ * Easier support for pending state and similar behaviour
+ * Almost identical API
+
+== Implementation ==
+
+ * The main challenge with this change is schema and data migration",enhancement,new,awaiting triage,ckan-v1.5,ckan,,,,ckan,none

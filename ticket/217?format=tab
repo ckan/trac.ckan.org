@@ -1,0 +1,10 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+217	UI Review - Search results	dread	nickstenning	"Package search results page [/package/search?q=something]
+ * need clearer delineation between search entry form and results.
+ * 0 results needs to be clearer, and the alternative suggestion: 'would you like to create a new package' needs to not look like a search result.
+ * ""N tags found"" -- why do I care? this should be presented as ""filter results by tag"" -- very unlikely that I'm looking for a tag: I'm looking for a package, but tags might help me narrow down my search.
+ * tags should be displayed more like the way they're displayed when you add them to a package (i.e. blue 'tag' background)
+ * filter out particular tags
+ * tag cloud?
+ * copywriting: ""Packages - Search"" -> ""Search packages""
+"	enhancement	closed	critical	v0.11	ckan	fixed				

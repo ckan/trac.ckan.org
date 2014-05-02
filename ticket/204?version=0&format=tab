@@ -1,0 +1,56 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+204	Custom package input form	dread	rgrp	"Form has fields suitable for government data.
+(related to custom excel importer ticket)
+
+Each form schemas is made available (or not) in the pylons config, along with the default schema for new packages. If there is more than just the 'basic' schema available then the 'new package' form has at the top a drop-down to select the schema with a 'switch' button. This submits the form's current data and parameter schema=xyz and the form arrives back populated with the existing options. No data should be lost switching views.
+
+When you edit a package it detects the schema based on the extra fields that are present.
+
+On submission, during validation, warn if a field isn't completed (unless it's optional - agency, maintainer, maintainer_email)
+
+=== Simple fields ===
+
+name, title, notes, author, author_email, maintainer, maintainer_email, license (default OKFN Open::Crown Copyright),
+co_id, precision, taxonomy url, agency
+
+=== Field data processed ===
+
+ * tags - in addition to words entered here, search for known keywords in other fields: title, notes, department, agency, geographic coverage & categories.
+
+=== Date fields ===
+
+Date format: machine readable. Can be specific or vague: year or month/year or day/month/year.
+
+ * date_released
+
+ * data_updated
+
+ * temporal_coverage_from, temporal_coverage_to - two date fields combined
+
+=== Strict selection ===
+
+Drop down combo
+
+ * department
+
+=== Selection or free text ===
+
+Editable combo
+
+ * update_frequency - selections: neverm weekly, monthly, annually, discontinued
+
+ * geographic_granularity - selections: national, regional, local authority, ward, point
+
+ * temporal_granularity - selections: yes, months, weeks, days, hours, point
+
+=== Specialised fields ===
+
+ * geographic_coverage - UI is tick boxes. store a comma separated list of all that apply from: england, scotland, wales, northern ireland, overseas, global
+
+(Idea for future version: Select the most relevant one from a choice of OS hierarchical geographic IDs in the UK. Stored in the database as the RDF URI. Question - what to do beyond the UK?)
+
+* national_statisic - UI is check box, store as 'Yes' or 'No'
+
+* resources - use standard table, but suggestions for file type are: RDF, CSV, SPARQL, REST, XBRL, SDMX, Other XML, HTML+RDFa, XLS, DOC. Have warning label saying it is not ideal to have PDF, zip or html targets.
+
+* Categories - multi values from strict selection of ONS categories. Stored as comma-separated."	enhancement	new	blocker		ckan					

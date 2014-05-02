@@ -1,0 +1,15 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+962,Improvements to data preview extension,rgrp,rgrp,"Basic implementation done (and deployed):
+
+https://bitbucket.org/okfn/ckanext-datapreview
+
+However plenty to improve, e.g.
+
+ * Support more formats (use external systems for preview?)
+  * json (!)
+  * html (trivial!)
+  * sparql
+  * ...
+ * Do not display preview if no preview
+
+Also suggest reworking to use external services rather than doing preview 'in house' (doing in house places heavy reliance on data proxy service and on converting data to a standard format).",enhancement,closed,critical,ckan-v1.4-sprint-5,ckan,fixed,extension,,ckan,none

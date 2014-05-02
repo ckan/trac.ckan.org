@@ -1,0 +1,6 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1542	Buttons to purge spam datasets and groups	dread		"A sysadmin should be able to easily examine a suspect group or package, determine if it was created by a spammer (as opposed to being a legitimate object that has been graffitied by a spammer) and purge it.
+
+The existing two-stage revision delete is currently unreliable and perhaps too laborious.
+
+Olav and Richard have needs along this line."	enhancement	new	major	ckan-backlog	ckan				ckan	none

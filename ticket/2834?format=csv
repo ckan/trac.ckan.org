@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2834,Defer all publish calls until all modules have been initialised,aron.carroll,,"Currently if a module uses sandbox.publish() in its initilaize() function then any modules initialised afterwards will miss the event.
+
+We should queue all calls to .publish() in the pubsub module in an array until all modules have loaded then iterate over and execute them.",enhancement,new,minor,demo phase 4,ckan,,,,ckan,none

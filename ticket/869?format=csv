@@ -1,0 +1,6 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+869,Add plugin interface to allow editing and extending of config by extensions,rgrp,rgrp,"Use case: extensions need to add to template and public search paths if they wish to have templates or extra static files (such as js etc).
+
+Allowing plugins to edit the config dictionary on load would allow this (and more!).
+
+Are there any security considerations here? (Is is bad to allow extensions to make arbitrary changes to the config information?)",enhancement,closed,critical,ckan-v1.3-sprint-1,ckan,fixed,,,,

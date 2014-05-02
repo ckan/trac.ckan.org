@@ -1,0 +1,13 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+321,Delegate authentication to Drupal,johnbywater,johnbywater,"When CKAN is included in a Drupal front-end, CKAN edit pages are used in a slave-mode, such that authentication is delegated to the Drupal front-end user model.
+
+The Drupal front-end shall provide:
+
+1. Login page - fixed location, can authenticate users, on successful  authentication sets auth cookie and redirects to HTTP_REFERER.
+
+2. Access control resource - fixed location, can authorise users, on receipt of valid auth cookie return message listing account details and permitted actions.
+
+3. Access denied page - fixed location, static resource, gently 
+indicates what has happened, and how to ask for permission.
+
+",enhancement,new,critical,v1.1,ckan,,,,,

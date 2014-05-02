@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2902: genshi is used in Group controller</title>
+    <link>http://localhost/ticket/2902</link>
+    <description>&lt;p&gt;
+The Group controller uses the genshi module where it may be better for it to use Markup() in the template.
+&lt;/p&gt;
+&lt;p&gt;
+See &lt;a class="ext-link" href="https://github.com/okfn/ckan/pull/117/files#r1524863"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;https://github.com/okfn/ckan/pull/117/files#r1524863&lt;/a&gt;
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2902</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+ </channel>
+</rss>

@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1321,Flash message deferred,dread,dread,"When you reset a password, the flash message saying ""check your email"" sometimes doesn't display on the next page. You then click on the link in your email and it displays on that page (i.e. too late).
+
+Seen this on thedatahub.org. To do with the proxy caching?",defect,closed,major,ckan-sprint-2011-10-24,ckan,fixed,,shevski,ckan,none

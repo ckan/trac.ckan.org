@@ -1,0 +1,10 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2400,Password reset fails,amercader,,"One user reports that after resetting the password via the reset form he was unable to log in again. He did have an email address associated and received the reset email. After updating his password, login failed
+
+{{{
+""Login failed. Bad username or password. (Or if using OpenID, it hasn't been associated with a user account.)""
+}}}
+
+
+
+",defect,closed,major,ckan-sprint-2012-05-29,ckan,worksforme,,,ckan,none

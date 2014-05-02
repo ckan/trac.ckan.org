@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      SyncingInstances – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="help" href="TracGuide.html" />
+        <link rel="alternate" href="SyncingInstances%3Fversion=2&amp;format=txt" type="text/x-trac-wiki" title="Plain Text" />
+        <link rel="up" href="SyncingInstances.html" title="View latest version" />
+        <link rel="next" href="SyncingInstances%3Fversion=3.html" title="Version 3" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/wiki.css" type="text/css" />
+        <link rel="prev" href="SyncingInstances%3Fversion=1.html" title="Version 1" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("#content").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $("#content").find(".wikianchor").each(function() {
+          $(this).addAnchor(babel.format(_("Link to #%(id)s"), {id: $(this).attr('id')}));
+        });
+        $(".foldable").enableFolding(true, true);
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last active"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="pagepath" class="noprint">
+  <a class="pathentry first" title="View WikiStart" href="../wiki.1.html">wiki:</a><a class="pathentry" href="SyncingInstances.html" title="View SyncingInstances">SyncingInstances</a>
+</div>
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="SyncingInstances%3Fversion=1.html" title="Version 1">Previous Version</a></span></li><li><a href="SyncingInstances.html" title="View latest version">View Latest Version</a></li><li class="last"><span><a class="next" href="SyncingInstances%3Fversion=3.html" title="Version 3">Next Version</a> &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="wiki">
+        <br />
+        <table id="info" summary="Revision info">
+          <tbody>
+            <tr><th scope="row">Version 2 (modified by dread, <a class="timeline" href="../timeline%3Ffrom=2010-02-08T17:38:24Z&amp;precision=second.html" title="2010-02-08T17:38:24Z in Timeline">4 years</a> ago)
+               (<a href="SyncingInstances%3Faction=diff&amp;version=2.html">diff</a>)</th></tr>
+            <tr><td class="message">
+              <p>
+--
+</p>
+
+            </td></tr>
+          </tbody>
+        </table>
+      <div class="wikipage searchable">
+        
+          
+          
+          <div id="wikipage"><h1 id="Syncing">Syncing</h1>
+<h2 id="Scenarios">Scenarios</h2>
+<ul><li>1-way: On setup, Server A's packages are copied to Server B. On sync, changes to packages on Server A are transferred to Server B.
+</li></ul><ul><li>2-way: On setup, packages from each server is copied to the other. On sync, changes on each are transferred to the other.
+</li></ul><p>
+We will focus now on 1-way, leaving 2-way for the future.
+</p>
+<h2 id="Requirements">Requirements</h2>
+<ul><li>Merging of changes from both machines. If there is a conflict then it is logged and a result is chosen.
+</li></ul><ul><li>Use of Server A and Server B continues undisturbed during sync.
+</li></ul><h2 id="Issues">Issues</h2>
+<ul><li>Clashes of package/tag/group names.
+</li></ul><ul><li>Sync between CKAN instances of different versions of ckan &amp; vdm.
+</li></ul><ul><li>Unversioned objects - make versioned? User, Group, Authz, Rating.
+</li></ul><ul><li>How to test system.
+</li></ul><h2 id="Usecases">Use cases</h2>
+<ul><li>First sync - all packages and revisions are copied from Server A to Server B.
+</li></ul><ul><li>Subsequent sync after package changes on A and/or B.
+</li></ul><ul><li>Sync after package purged on A. (Package also purged on B.)
+</li></ul><ul><li>Sync after package purged on B. (Package not recreated on B.)
+</li></ul><ul><li>Server B syncs at different times from a third server.
+</li></ul><ul><li><a class="missing wiki">Package/Tag/Group?</a> name on Server A clashes with an existing one on Server B. Log all of them. Merge tag and group. Not sure about package.
+</li></ul><ul><li>Objects on Server A with restricted authz are by default editable on Server B.
+</li></ul><h2 id="Operation">Operation</h2>
+<h3 id="Firstsync-10am">First sync - 10am</h3>
+<p>
+Server B asks "Give me all your revisions and unrevisioned objects."
+</p>
+<p>
+Server A replies "Rev1 and associated revisions Pkg1Rev1, Pkg2Rev1, !PkgTagRev1, !PkgResource1; Rev2 with Pkg1Rev2; Tag1; User1; !PackageGroup1; Group1; ratings"
+</p>
+<p>
+Server B creates Rev1, Pkg1Rev1, Pkg2Rev1, Pkg1Rev2, Pkg1, Pkg2, !PkgTagRev1, !PkgResource1, Tag1, User1, Auth, !PackageGroup1, Group1. UUIDs are the same as Server A.
+</p>
+<p>
+Server B updates search vectors for Pkg1 and Pkg2.
+</p>
+<p>
+Server records the time of the sync - 10am.
+</p>
+<h3 id="Meanwhile-10.20am">Meanwhile - 10.20am</h3>
+<p>
+On Server A, user updates Pkg1 twice, creating Rev2/Pkg1Rev3 and Rev3/Pkg1Rev4PkgTagRev2. User1 updates his name.
+</p>
+<h3 id="Meanwhile-10.40am">Meanwhile - 10.40am</h3>
+<p>
+On Server B, user updates Pkg1 once, creating Pkg1Rev5.
+</p>
+<h3 id="Sesequentsync">Sesequent sync</h3>
+<p>
+Server B asks "Give me revisions and diffs since 10am."
+</p>
+<p>
+Server A replies Rev2/Pkg1Rev3, Rev3/Pkg1Rev4 and gives diff of Pkg1Rev2 -&gt; Pkg1Rev4
+</p>
+<p>
+Server B looks at its own revisions since 10am and sees Pkg1 now has two heads. It calculates diff of Pkg1Rev2 -&gt; Pkg1Rev5.
+</p>
+<p>
+Server B takes Pkg1Rev2 and applies the two diffs in the order of priority, logging any conflicts, calling the result Pkg1Rev6.
+</p>
+<h2 id="Tickets">Tickets</h2>
+<ul><li>Sync set-up stored in config file (server URI). Last sync status stored in local db.
+</li></ul><ul><li>Repository method 'all_revs_since'. It returns all revisions since a time/revision (or since the beginning).
+</li></ul><ul><li>Object method 'diff'. It returns a Diff object which is the diff of two ObjectResources. Already exists for Package, but need for PackageTag, PackageExtra
+</li></ul><ul><li>Revision method 'serialize'.
+</li></ul><ul><li>Diff method 'serialize'.
+</li></ul><ul><li>API access to revisions: /api/rest/revision?since=ab49f348-fd23-ae3c
+</li></ul><ul><li>API access to diffs?: /api/rest/package?diff-from&amp;diff-to=ab49f348-fd23-ae3c
+</li></ul><ul><li>API access to unrevisioned objects?
+</li></ul><ul><li>Repository method 'import_revisions'. It takes serialised revisions and diffs and creates revision objects exactly matching spec.
+</li></ul><ul><li>Object method 'merge_diffs'. It takes an original object and two diffs that apply to it and applies them both in a new revision.
+</li></ul></div>
+        
+        
+      </div>
+      
+
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="last first">
+          <a rel="nofollow" href="SyncingInstances%3Fversion=2&amp;format=txt">Plain Text</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

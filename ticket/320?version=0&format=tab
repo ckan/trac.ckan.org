@@ -1,0 +1,12 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+320	site_title configuration variable which is used in template	rgrp	rgrp	"As a sysadmin I want to configure basic site title information for use in the site templates.
+
+Implementation:
+
+  * site_title config variable
+  * use in head title and in main site title/logo section
+  * Also all other pages (e.g. index, about) which talk about CKAN
+    * Is this needed? Would it not be better for people who want to customize the site to simply overwrite those templates?
+
+Questions:
+  * Do we want a site_logo variable whic his use for site title/logo section instead of site_title if site_logo defined?"	enhancement	new	awaiting triage		ckan					

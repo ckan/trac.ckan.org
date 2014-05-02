@@ -1,0 +1,25 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1192	Convert CKAN Sphinx docs into admin/reference manual	annapowellsmith	annapowellsmith	"As part of the general documentation overhaul (ticket:1142) we (APS and RGRP) want to convert the current Sphinx docs into:
+
+ * An Admin Manual which is task-based and aims to cover everything a developer would need to know to set up and customize a CKAN install. 
+ * A Reference Manual which is the primary source of reference for CKAN software - this includes API docs. 
+
+The current chapters of the Sphinx docs should be moved as follows:
+
+ * index.rst - copy some stuff from README.txt, keep short
+ * README.txt - split out installation - stop symlinking in, keep separate, write new intro in index.rst 
+ * [NEW] install.rst - new file on installation
+ * [NEW] theming.rst - move over from wiki
+ * api - will stay (gradually move tutorials/getting started to wiki.ckan.net user guide)
+ * i18n.rst: internationlization. say we have x langauges. just set lang config option. if your lang not there yet see wiki page for how to prepare a translation file
+ * design.rst - REMOVE (can copy some over if you can be bothered to http://wiki.ckan.net/Vision (all philosophical stuff should go!))
+ * loaders.rst: move to wiki.ckan.net/Using_Loaders
+ * feeds.rst: move to User Manual (CKAN_Feeds or just Feeds)
+ * importer.rst: remove (don't even copy)
+ * forms.rst: remove (ping david read and ckan-dev asking for replacement documentation -- do we need this in core ckan -- do we want pure js ...?). Suggest we start with (stub out) http://wiki.ckan.net/Customizing_Forms
+ * forms-integration.rst: remove
+ * model.rst: leave but move to reference (only for core devs)
+ * load-testing.rst -> move to http://wiki.ckan.net/Load_Testing
+ * distributed.rst -> remove
+ * admin.html should consolidate with authorization.html (some of authorization.html is probably in ref section but howto in main manual) <-- high priority
+ * deb.html -> go into reference (query james gardner on list about moving this to wiki?)"	task	closed	major	ckan-sprint-2011-10-28	ckan	fixed			ckanclient	none

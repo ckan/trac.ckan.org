@@ -1,0 +1,2 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2927,Test new package/group/organization type URLs support,seanh,,"IPackageForm, IGroupForm and IOrganizationForm allow you to define e.g. new package types with new top-level URLs, but the example extensions don't have tests for this yet.",enhancement,new,awaiting triage,ckan 2.0,ckan,,,,ckan,none

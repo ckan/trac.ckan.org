@@ -1,0 +1,8 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2873	ckanext-qa: dataset summary incorrect	danieljohnlewis	toby	"
+
+For example see:  http://s031.okserver.org:2375/qa/dataset/five_stars
+
+Which has: Example dataset as a score of: 4 After examination of the dataset (  http://s031.okserver.org:2375/dataset/example-dataset ) it is made up of a CSV and an HTML file.
+
+"	defect	assigned	awaiting triage	demo phase 4	ckan				ckanext-qa	none

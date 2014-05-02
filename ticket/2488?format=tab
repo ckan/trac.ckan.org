@@ -1,0 +1,7 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2488	Group update via API fails validation with organization and publisher profile enabled	johnglover	johnglover	"Reported on IRC by 'floapps'.
+
+ * when posting a group update with {packages: [package-1, package-2, etc.]}, getting ValidationError: {'Packages': {'name': ['Missing value']}}, although package objects did contain a name field
+ * same API call worked with organization and publisher profile disabled
+ * also worked if added a form_to_db_schema_options function which used default_update_group_schema for api updates instead of default_group_schema
+ * tried on both 1.7 and 1.7.1b"	defect	closed	major	ckan-sprint-2012-06-25	ckan	worksforme			ckan	none

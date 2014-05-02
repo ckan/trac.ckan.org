@@ -1,0 +1,5 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2775	Add bin/less to paster serve command	aron.carroll	toby	"Ideally the ./bin/less command would be run when the server is started.
+
+ * Also it would be good to have a paster command to build the production CSS with {{{ ./bin/less --production }}
+ * The command could also detect missing node binaries and redirect to the documentation."	enhancement	new	minor	demo phase 4	ckan				ckan	none

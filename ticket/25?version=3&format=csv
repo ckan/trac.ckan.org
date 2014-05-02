@@ -1,0 +1,9 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+25,Autocompletion (and suggestion) of package tags when adding tags to a package,johnbywater,johnbywater,"== Notes ==
+
+  * Currently have a text box where users can add space separated tags
+  * Tags should auto-complete in a manner similar to delicious
+  * would also be good to have a list of suggested tags. This could either be:
+    * [simpler] a list below the tag box chosen by existing popularity  or
+    * [more complex] a list of suggestions that updates as you add tags (based again on popularity but 'filtered/reranked' to reflect choices so far).
+    * For first attempt to should probably just go for the simpler option.",enhancement,new,critical,v0.6,ckan,,,,,

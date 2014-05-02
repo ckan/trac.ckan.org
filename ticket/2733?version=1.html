@@ -1,0 +1,325 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      #2733 (Datastore logic functions)
+     – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="prev" href="2732.html" title="Ticket #2732" />
+        <link rel="last" href="3030.html" title="Ticket #3030" />
+        <link rel="help" href="../wiki/TracGuide.html" />
+        <link rel="alternate" href="2733%3Fversion=1&amp;format=csv" type="text/csv" class="csv" title="Comma-delimited Text" /><link rel="alternate" href="2733%3Fversion=1&amp;format=tab" type="text/tab-separated-values" class="tab" title="Tab-delimited Text" /><link rel="alternate" href="2733%3Fversion=1&amp;format=rss" type="application/rss+xml" class="rss" title="RSS Feed" />
+        <link rel="next" href="2734.html" title="Ticket #2734" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/ticket.css" type="text/css" />
+        <link rel="first" href="1.html" title="Ticket #1" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript">
+      var auto_preview_timeout=2.0;
+      var form_token="93d81ccf9a7bb1c456462f62";
+    </script>
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script><script type="text/javascript" src="../chrome/common/js/wikitoolbar.js"></script><script type="text/javascript" src="../chrome/common/js/resizer.js"></script><script type="text/javascript" src="../chrome/common/js/auto_preview.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("div.description").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $(".foldable").enableFolding(false, true);
+        var args = {realm: "ticket", id: 2733, escape_newlines: 0}
+        $("#comment").autoPreview("/wiki_render", args, function(textarea, text, rendered) {
+            $("#ticketchange div.comment").html(rendered);
+            if (rendered)
+              $("#ticketchange").show();
+            else if ($("#ticketchange ul.changes").length == 0)
+              $("#ticketchange").hide();
+        });
+        $("#trac-comment-editor textarea").autoPreview("/wiki_render", args,
+                                                       function(textarea, text, rendered) {
+          var comment = $("#trac-comment-editor").next("div.comment");
+          comment.html(rendered);
+          if (rendered)
+            comment.show();
+          else
+            comment.hide();
+        });
+        $("#modify").parent().toggleClass("collapsed");
+        $(".trac-topnav a").click(function() { $("#modify").parent().removeClass("collapsed"); });
+        /* only enable control elements for the currently selected action */
+        var actions = $("#action input[name='action']");
+        function updateActionFields() {
+          actions.each(function () {
+            $(this).siblings().find("*[id]").enable($(this).checked());
+            $(this).siblings().filter("*[id]").enable($(this).checked());
+          });
+        }
+        actions.click(updateActionFields);
+        updateActionFields();
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="../wiki/TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li class="active"><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="2732.html" title="Ticket #2732">Previous Ticket</a></span></li><li class="last"><span><a class="next" href="2734.html" title="Ticket #2734">Next Ticket</a> &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="ticket">
+      <h1 id="trac-ticket-title">
+          <a href="2733.html">Ticket #2733</a>
+          <span class="status">(new enhancement)</span>
+              — at <a href="2733%3Fversion=1.html#comment:1">Version 1</a>
+      </h1>
+      <div id="ticket">
+  <div class="date">
+    <p>Opened <a class="timeline" href="../timeline%3Ffrom=2012-07-23T15:54:46Z&amp;precision=second.html" title="2012-07-23T15:54:46Z in Timeline">22 months</a> ago</p>
+    <p>Last modified <a class="timeline" href="../timeline%3Ffrom=2012-07-30T13:48:25Z&amp;precision=second.html" title="2012-07-30T13:48:25Z in Timeline">21 months</a> ago</p>
+  </div>
+  <h2 class="summary searchable">Datastore logic functions</h2>
+  <table class="properties">
+    <tr>
+      <th id="h_reporter">Reported by:</th>
+      <td headers="h_reporter" class="searchable">
+        <a href="../query%3Fstatus=!closed&amp;reporter=johnglover.html">johnglover</a>
+      </td>
+      <th id="h_owner">Owned by:</th>
+      <td headers="h_owner">
+        <a href="../query%3Fstatus=!closed&amp;owner=johnglover.html">johnglover</a>
+      </td>
+    </tr>
+    <tr>
+        <th id="h_priority">
+          Priority:
+        </th>
+        <td headers="h_priority">
+              <a href="../query%3Fstatus=!closed&amp;priority=major.html">major</a>
+        </td>
+        <th id="h_milestone">
+          Milestone:
+        </th>
+        <td headers="h_milestone">
+              <a class="milestone" href="../milestone/ckan-v1.9.html">ckan-v1.9</a>
+        </td>
+    </tr><tr>
+        <th id="h_component">
+          Component:
+        </th>
+        <td headers="h_component">
+              <a href="../query%3Fstatus=!closed&amp;component=ckan.html">ckan</a>
+        </td>
+        <th id="h_keywords">
+          Keywords:
+        </th>
+        <td headers="h_keywords" class="searchable">
+        </td>
+    </tr><tr>
+        <th id="h_cc">
+          Cc:
+        </th>
+        <td headers="h_cc" class="searchable">
+        </td>
+        <th id="h_repo">
+          Repository:
+        </th>
+        <td headers="h_repo">
+              <a href="../query%3Fstatus=!closed&amp;repo=ckan.html">ckan</a>
+        </td>
+    </tr><tr>
+        <th id="h_theme">
+          Theme:
+        </th>
+        <td headers="h_theme">
+              <a href="../query%3Fstatus=!closed&amp;theme=none.html">none</a>
+        </td>
+        <th>
+        </th>
+        <td>
+        </td>
+    </tr>
+  </table>
+  <div class="description">
+    <h3 id="comment:description">
+      Description
+      <span class="lastmod" title="2012-07-30 13:48:25+00:00">
+        (last modified by johnglover)
+        (<a href="2733%3Faction=diff&amp;version=1.html">diff</a>)
+      </span>
+    </h3>
+    <div class="searchable">
+      <h2 id="Wheredoesthedatago">Where does the data go?</h2>
+<p>
+In a postgres database configured by the ckan.datastore_write_url config option which is a sqlalchemy url. 
+</p>
+<p>
+The user should have rights to create tables.
+</p>
+<h2 id="Whatstheapilike">Whats the api like?</h2>
+<p>
+We will just implement it as logic functions like the rest of CKAN and will part of core.  After that we may add some nicer api functions that use these but that is a secondary concern.
+</p>
+<h2 id="Whataretheinitiallogicfunctions">What are the initial logic functions?</h2>
+<ul><li>datastore_create
+</li><li>datastore_delete
+</li><li>datastore_show
+</li></ul><h2 id="WhatistheJSONinputformatfordatastore_create">What is the JSON input format for datastore_create</h2>
+<p>
+To begin with it can have the following keys. It is fairly consistent with Max Ogdens' gut servers.  Except adds resource_id.
+</p>
+<pre class="wiki">{
+resource_id: resource_id # the data is going to be stored against.
+fields: a list of dictionaries of fields/columns and their extra metadata.
+records: a list of dictionaries of the data eg  [{"dob": "2005", "some_stuff": ['a', b']}, ..]
+}
+</pre><ul><li>The first row will be used to guess types not in the fields and the guessed types will be added to the headers permanently. Consecutive rows have to conform to the field definitions.
+</li><li>rows: can be empty so that you can just set the fields
+</li><li>fields are optional but needed if you want to do type hinting or add extra information for certain columns or to explicitly define ordering.  
+</li></ul><p>
+eg:  [{"id": "dob", "type": "timestamp" }, {"id": "some_stuff", "type": "text"},  ...].
+A header items values can not be changed after it has been defined nor can the ordering of them be changed.  They can be extended though.
+</p>
+<ul><li>Any error results in total failure!! For now pass back the actual error.
+</li><li>Should be transactional
+</li></ul><h2 id="Whatjsondoesdatastore_deletetake">What json does datastore_delete take?</h2>
+<pre class="wiki">{
+resource_id: resource_id # the data is going to be deleted.
+filters: dictionary of matching conditions to delete
+    e.g  {'key1': 'a. 'key2': 'b'}  this will be equivalent to "delete from table where key1 = 'a' and key2 = 'b' ".
+    No filters (either not present or not defined) then delete the table. If we want truncate then add truncate: true to truncate the table.
+}
+</pre><h2 id="Whatjsondoesdatastore_searchtake">What json does datastore_search take?</h2>
+<pre class="wiki">{
+resource_id: resource_id # the data is going to be selected.
+filters : dictionary of matching conditions to select
+    e.g  {'key1': 'a. 'key2': 'b'}  this will be equivalent to "select * from table where key1 = 'a' and key2 = 'b' "
+q: full text query
+limit: limit the amount of rows to size default 100
+offset: offset the amount of rows
+fields:  list of fields return in that order, defaults (empty or not present) to all fields in fields order.
+sort: comma separated field names with ordering e.g "fieldname1, fieldname2 desc"
+}
+</pre><p>
+Some free code: <a class="ext-link" href="https://gist.github.com/3163864"><span class="icon">​</span>https://gist.github.com/3163864</a>
+</p>
+<h2 id="Whatjsondoesdatastore_searchreturn">What json does datastore_search return?</h2>
+<pre class="wiki">{
+fields: same type as datastore_create accepts (i.e. with metadata)
+offset: The same offset that was supplied in datastore_show
+limit: The original limit
+filters: The filters that were applied in data_show
+total: # total matching records without size or offset
+records: [same as data_create] # list of matching results
+}
+</pre><p>
+On error will return:
+</p>
+<pre class="wiki">{
+__error__: … sql error …
+}
+</pre><h2 id="Whattypesareallowed">What types are allowed?</h2>
+<p>
+Aim to support as many postgres/postgis types that have string representations.
+</p>
+<p>
+<a class="ext-link" href="http://www.postgresql.org/docs/9.1/static/datatype.html"><span class="icon">​</span>http://www.postgresql.org/docs/9.1/static/datatype.html</a>
+</p>
+<p>
+<a class="ext-link" href="http://www.postgresql.org/docs/9.1/static/sql-createdomain.html"><span class="icon">​</span>http://www.postgresql.org/docs/9.1/static/sql-createdomain.html</a> 
+</p>
+<h2 id="IDs">IDs</h2>
+<p>
+Each row in a table will be given an _id column which has an id generated by us which you can use in queries.
+</p>
+<h2 id="OtherFeatures">Other Features</h2>
+<p>
+Each row will store the _full_text index of all the data in the row. At some later point there will most likely be a way to index fields add constraints etc.
+</p>
+
+    </div>
+  </div>
+</div>
+        <div>
+          <h2 class="foldable">Change History</h2>
+          <div id="changelog">
+              <div class="change" id="trac-change-1">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:1" class="cnum">
+      <a href="2733%3Fversion=1.html#comment:1">comment:1</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-07-30T13:48:25Z&amp;precision=second.html" title="2012-07-30T13:48:25Z in Timeline">21 months</a> ago by johnglover
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Description</strong>
+        modified (<a href="2733%3Faction=diff&amp;version=1.html">diff</a>)
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+          </div>
+        </div>
+      <div id="help"><strong>Note:</strong> See
+        <a href="../wiki/TracTickets.html">TracTickets</a> for help on using
+        tickets.</div>
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="first">
+          <a rel="nofollow" href="2733%3Fversion=1&amp;format=csv" class="csv">Comma-delimited Text</a>
+        </li><li>
+          <a rel="nofollow" href="2733%3Fversion=1&amp;format=tab" class="tab">Tab-delimited Text</a>
+        </li><li class="last">
+          <a rel="nofollow" href="2733%3Fversion=1&amp;format=rss" class="rss">RSS Feed</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

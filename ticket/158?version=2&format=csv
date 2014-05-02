@@ -1,0 +1,16 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+158,Add 'extras' to REST API,dread,dread," * Ensure you can add/change/delete extra fields from packages using the REST API. 
+ * Update API docs to cover this.
+
+On Package get, ensure separation of extra attributes from other attributes.
+
+What is the meaning of posting an incomplete dictionary (updating a package)?
+Option 1 - if field not present, leave field alone
+ * Delete field if field value is None
+
+Option 2 - user must supply all fields
+ * Delete field if field absent
+
+Prefer option 1. Document this.
+
+Follows on from ticket:152",enhancement,new,major,v0.11,ckan,,,,,

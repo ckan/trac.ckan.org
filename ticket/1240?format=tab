@@ -1,0 +1,18 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1240	[super] API v4	rgrp	kindly	"(Just creating this ticket as somewhere to keep notes)
+
+ * Decide on REST api versus action API
+  * Do we want to support both?
+ * Tidying
+  * Unify on /api/v{version num}/... structure (do we want a default option that points to current default? e.g. /api/default/ ...)
+  * extras merged into normal field list in package
+  * Get rid of /rest/ so just have api/v1/package
+  * Get rid of separation of search api from 'rest' api
+   * Propose that GET on REST index is search e.g. /package/?q=...
+    * This is also resolves issue whereby GET at root returns whole package set (a *bad* idea) as this would now become the matchall search query (with a default limit on items returned)
+ * Resource read/write in API (separate from package)
+  * Does this need authorization work?
+ * user/account API - read/write
+ * Remove autocomplete -- can just use search
+  * Do not worry about backwards compat as should only be used in our js (if others using it too bad!)
+"	enhancement	assigned	awaiting triage	ckan-backlog	ckan				ckan	none

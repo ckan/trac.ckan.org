@@ -1,0 +1,21 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+335,Post-package-edit redirect to configurable URL,dread,dread,"== As a ==
+
+third-party interface to a CKAN instance
+
+== I want to ==
+
+link to CKAN's package creation/editing pages. On 'commit', have the user redirected back to a URL in my interface that I can control. Also, when the package is created new, I need to be told what the new package's name is on return.
+
+== Design ==
+
+ 1. The 'return URL' is passed as a parameter to CKAN.
+ 2. CKAN substitutes the package name into the return URL.
+ 
+== Example ==
+
+Front-end links to:
+!http://ca.ckan.net/package/new?return_to=http://datadotgc.ca/dataset/<NAME> (but with the parameter URL-encoded)
+
+When finished editing and the user commits, CKAN redirects the user to: !http://datadotgc.ca/dataset/pollution_data
+",enhancement,closed,blocker,v1.1,ckan,fixed,,,,

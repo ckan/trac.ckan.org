@@ -1,0 +1,12 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2996,Fix behaviour of View Profile button in user popover when already on user's profile,seanh,,"The user popovers that appear when you hover the mouse over a user in an activity stream include a View Profile button that takes you to that user's profile page. If you are already on that user's profile page then it simply reloads the same page, but it sends you to the Datasets tab if you were on another tab.
+
+Possible solutions:
+
+Don't show button if already on user's page?
+
+Button just makes popover disappear, if already on user's page?
+
+Button does reload the page, but reloads the same tab (datasets, followers, activity stream) that you were on.
+
+Marking this low priority",enhancement,new,minor,ckan 2.0,ckan,,frontend,,ckan,none

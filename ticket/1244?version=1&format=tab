@@ -1,0 +1,30 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1244	Notes field carriage-returns converted to CRLF	dread		"When you edit a package in the web form, if the notes field had {{{\n}}} as the End Of Line symbol, it gets lost when you preview or save the package, and the notes field is displayed all on one line.
+
+This can be seen when editing annakarenina (as created by 'paster create-test-data'). The diff shows for example:
+{{{
+- Some test notes
++ Some test notes
+?                +
+}}}
+but it would more clearly be shown as:
+{{{
+- Some test notes\n
++ Some test notes
+?                ++
+}}}
+
+This is a significant problem with DGU, since a lot comes in via the API.
+
+It's not clear what we should do about it. We could standardise on \n or \r\n when the form submission comes in. Do different browsers on different platforms do different things with EOLs?
+
+== Analysis ==
+
+Displaying the package: the Markdown processor respects both EOLs when displaying the field, putting each line in a <p> tag.
+
+Creating the package edit form: placed into <textfield>. 
+
+Browser displaying package edit form: <textfield> displays \n and \r\n as EOL. But \n\n gets compressed to one EOL. But on submission, both are returned as \r\n.
+
+Receiving the edited package: Somewhere along the line the EOL gets converted to \n\n.
+"	enhancement	new	major	ckan-sprint-2011-11-07	ckan				ckan	none

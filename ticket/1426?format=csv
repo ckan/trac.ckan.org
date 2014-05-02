@@ -1,0 +1,2 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1426,Validation errors cause 409 not 400 response,dread,dread,"Validation error is incorrect arguments, so should be a ""400 Bad Request"" response. ""409 Conflict"" is for when there is a conflict creating two resources with the same identifier. Yet we get 409 for all validation errors.",defect,closed,minor,ckan-sprint-2011-10-28,ckan,invalid,,,ckan,none

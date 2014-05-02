@@ -1,0 +1,5 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2856,server error when clicking on deleted app link,shevski,toby,"1. go to http://s031.okserver.org:2375/user/okfn
+2. Click on activity stream
+3. Click on 'Deletion test' related item that's linked to in entries 1 & 2
+4. Server error",defect,closed,awaiting triage,demo phase 3,ckan,fixed,,,ckan,none

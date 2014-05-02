@@ -1,0 +1,27 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2764,Simplify filestore,rgrp,,"Definitely do:
+
+ * Local file filestore: Remove pairtree (and OFS) and do something very simple
+ * 
+
+Options:
+
+ 1. Local file only. Allow for uploaders to GS / S3 in the background 
+   * Advantages: simpler, if local upload can do progress bars etc etc
+   * Disadvantages: strain for web-app (upload a 2GB file what happens)
+    * This is probably fixable ...
+ 2. Stick with how we are  
+
+=== New filestore without pairtree ===
+
+Each uploaded file is located on disk at:
+
+{uuid}/{filename}
+
+Alternative:
+
+yyyy/mm/dd/{uuid}/{filename}
+
+Need the uuid to avoid collisions.
+
+Metadata: Store no metadata.",enhancement,closed,awaiting triage,,ckan,duplicate,,,ckan,none

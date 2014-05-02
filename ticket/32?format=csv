@@ -1,0 +1,12 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+32,View a tag,rgrp,rgrp,"== As a ==
+
+Visitor
+
+== I want to ==
+
+View a tag's page which should list all packages associated with that tag (or link to a page containing that list).
+
+== Notes ==
+
+  * The tags should have a nice primary url such as /tag/<tag-name> (could also use the plural i.e. /tag/<tag-name>)",enhancement,closed,major,v0.3,ckan,fixed,,,,

@@ -1,0 +1,5 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+775,Search warning,dread,pudo,"We're getting this warning a great deal on live servers. Is these really a sign of the system not operating correctly or can we reduce the level to an INFO?
+
+e.g. hmg.ckan.net
+2010-10-29 17:12:08,613 WARNI [ckan.lib.search.common] NOOP Index: id,package_id,url,format,description,hash,position",task,new,,,,,,,,

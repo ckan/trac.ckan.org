@@ -1,0 +1,8 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1463	QA extension no-longer works with packaged CKAN 1.5	thejimmyg		"The extension needs upgrading:
+
+    No module named webstore.database
+
+The other option is to delay this functionality and merge with the publisher dashboards after the group refactor.
+
+John, David Raznick, David Read, Ira, what do you think?"	defect	closed	awaiting triage	ckan-sprint-2011-11-21	ckan	wontfix			ckan	none

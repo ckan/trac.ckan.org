@@ -1,0 +1,5 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+946,No default system rights,dread,pudo,"CKAN currently comes out of the box being uneditable. We'd like to encourage people to have open CKANs and therefore by default init the db with this right:
+{{{
+visitor -> is editor on -> System system
+}}}",defect,closed,critical,ckan-v1.3,ckan,fixed,,,,

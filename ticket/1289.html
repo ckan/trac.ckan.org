@@ -1,0 +1,293 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      #1289 (Remove 'relationships')
+     – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="prev" href="1269.html" title="Ticket #1269" />
+        <link rel="last" href="1780.html" title="Ticket #1780" />
+        <link rel="help" href="../wiki/TracGuide.html" />
+        <link rel="alternate" href="1289%3Fformat=csv" type="text/csv" class="csv" title="Comma-delimited Text" /><link rel="alternate" href="1289%3Fformat=tab" type="text/tab-separated-values" class="tab" title="Tab-delimited Text" /><link rel="alternate" href="1289%3Fformat=rss" type="application/rss+xml" class="rss" title="RSS Feed" />
+        <link rel="up" href="../query%3Fstatus=closed&amp;milestone=ckan-backlog&amp;group=resolution&amp;order=time.html" />
+        <link rel="next" href="1306.html" title="Ticket #1306" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/ticket.css" type="text/css" />
+        <link rel="first" href="819.html" title="Ticket #819" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript">
+      var auto_preview_timeout=2.0;
+      var form_token="93d81ccf9a7bb1c456462f62";
+    </script>
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script><script type="text/javascript" src="../chrome/common/js/wikitoolbar.js"></script><script type="text/javascript" src="../chrome/common/js/resizer.js"></script><script type="text/javascript" src="../chrome/common/js/auto_preview.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("div.description").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $(".foldable").enableFolding(false, true);
+        var args = {realm: "ticket", id: 1289, escape_newlines: 0}
+        $("#comment").autoPreview("/wiki_render", args, function(textarea, text, rendered) {
+            $("#ticketchange div.comment").html(rendered);
+            if (rendered)
+              $("#ticketchange").show();
+            else if ($("#ticketchange ul.changes").length == 0)
+              $("#ticketchange").hide();
+        });
+        $("#trac-comment-editor textarea").autoPreview("/wiki_render", args,
+                                                       function(textarea, text, rendered) {
+          var comment = $("#trac-comment-editor").next("div.comment");
+          comment.html(rendered);
+          if (rendered)
+            comment.show();
+          else
+            comment.hide();
+        });
+        $("#modify").parent().toggleClass("collapsed");
+        $(".trac-topnav a").click(function() { $("#modify").parent().removeClass("collapsed"); });
+        /* only enable control elements for the currently selected action */
+        var actions = $("#action input[name='action']");
+        function updateActionFields() {
+          actions.each(function () {
+            $(this).siblings().find("*[id]").enable($(this).checked());
+            $(this).siblings().filter("*[id]").enable($(this).checked());
+          });
+        }
+        actions.click(updateActionFields);
+        updateActionFields();
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="../wiki/TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li class="active"><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="1269.html" title="Ticket #1269">Previous Ticket</a></span></li><li><a href="../query%3Fstatus=closed&amp;milestone=ckan-backlog&amp;group=resolution&amp;order=time.html">Back to Query</a></li><li class="last"><span><a class="next" href="1306.html" title="Ticket #1306">Next Ticket</a> &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="ticket">
+      <h1 id="trac-ticket-title">
+          <a href="1289.html">Ticket #1289</a>
+          <span class="status">(closed CREP: wontfix)</span>
+      </h1>
+      <div id="ticket">
+  <div class="date">
+    <p>Opened <a class="timeline" href="../timeline%3Ffrom=2011-08-24T17:21:42Z&amp;precision=second.html" title="2011-08-24T17:21:42Z in Timeline">3 years</a> ago</p>
+    <p>Last modified <a class="timeline" href="../timeline%3Ffrom=2011-09-29T16:53:31Z&amp;precision=second.html" title="2011-09-29T16:53:31Z in Timeline">3 years</a> ago</p>
+  </div>
+  <h2 class="summary searchable">Remove 'relationships'</h2>
+  <table class="properties">
+    <tr>
+      <th id="h_reporter">Reported by:</th>
+      <td headers="h_reporter" class="searchable">
+        <a href="../query%3Fstatus=!closed&amp;reporter=dread.html">dread</a>
+      </td>
+      <th id="h_owner">Owned by:</th>
+      <td headers="h_owner">
+      </td>
+    </tr>
+    <tr>
+        <th id="h_priority">
+          Priority:
+        </th>
+        <td headers="h_priority">
+              <a href="../query%3Fstatus=!closed&amp;priority=awaiting+triage.html">awaiting triage</a>
+        </td>
+        <th id="h_milestone">
+          Milestone:
+        </th>
+        <td headers="h_milestone">
+              <a class="milestone" href="../milestone/ckan-backlog.html">ckan-backlog</a>
+        </td>
+    </tr><tr>
+        <th id="h_component">
+          Component:
+        </th>
+        <td headers="h_component">
+              <a href="../query%3Fstatus=!closed&amp;component=ckan.html">ckan</a>
+        </td>
+        <th id="h_keywords">
+          Keywords:
+        </th>
+        <td headers="h_keywords" class="searchable">
+        </td>
+    </tr><tr>
+        <th id="h_cc">
+          Cc:
+        </th>
+        <td headers="h_cc" class="searchable">
+              <a href="../query%3Fstatus=!closed&amp;cc=~kindly.html">kindly</a>, <a href="../query%3Fstatus=!closed&amp;cc=~rgrp.html">rgrp</a>, <a href="../query%3Fstatus=!closed&amp;cc=~thejimmyg.html">thejimmyg</a>
+        </td>
+        <th id="h_repo">
+          Repository:
+        </th>
+        <td headers="h_repo">
+              <a href="../query%3Fstatus=!closed&amp;repo=ckan.html">ckan</a>
+        </td>
+    </tr><tr>
+        <th id="h_theme">
+          Theme:
+        </th>
+        <td headers="h_theme">
+              <a href="../query%3Fstatus=!closed&amp;theme=none.html">none</a>
+        </td>
+        <th>
+        </th>
+        <td>
+        </td>
+    </tr>
+  </table>
+  <div class="description">
+    <h3 id="comment:description">
+      Description
+    </h3>
+    <div class="searchable">
+      <h2 id="Abstract">Abstract</h2>
+<p>
+Package Relationships have not taken off in the 18 months we've had them in the API. There are some issues with them and we need to spend more time improving them or consider getting rid of them.
+</p>
+<h2 id="TheProblem">The Problem</h2>
+<p>
+Original use cases are expressed here: <a class="assigned ticket" href="253.html" title="enhancement: Package relationships (assigned)">#253</a> Here are comments about how we could handle these specific examples better:
+</p>
+<ol><li>groups of packages - maybe better with a custom tag?
+</li><li>fragment resources - soon to be covered by 'kind' resource field <a class="closed ticket" href="957.html" title="enhancement: new &#34;kind &#34; field added to resources (closed: wontfix)">#957</a>
+</li></ol><p>
+3&amp;5. derived resource - better to have some sort of resource relationship perhaps?
+</p>
+<ol start="4"><li>linked resource - again better to have some sort of resource relationship perhaps?
+</li></ol><p>
+Outstanding issues needing serious effort to fix:
+</p>
+<ul><li><a class="assigned ticket" href="256.html" title="requirement: Package relationships - 3. Edit in WUI (assigned)">#256</a> Editing them in Web UI (not done yet)
+</li><li><a class="new ticket" href="1288.html" title="defect: Package edit/creation can't include 'relationships' field (new)">#1288</a> Package edit/creation can't include 'relationships' field
+</li></ul><h2 id="Specification">Specification</h2>
+<p>
+Remove relationships from model, API, tests, Web UI. Data migration to remove from db.
+</p>
+<h2 id="Whydoitthisway">Why do it this way</h2>
+<p>
+Getting frustrated having problems with the code, when it's not used much. Often asked about what it's for, but rarely used. Seems an overly complicated design.
+</p>
+<h2 id="BackwardsCompatibility">Backwards Compatibility</h2>
+<p>
+n/a
+</p>
+<h2 id="Implementationplan">Implementation plan</h2>
+<h3 id="Deliverables">Deliverables</h3>
+<p>
+See Specification
+</p>
+<h3 id="Risksandmitigations">Risks and mitigations</h3>
+<p>
+Risk: a customer suddenly wants this, and the new ways to relate resources are not in place yet.
+</p>
+<p>
+Mitigation: discuss this decision thoroughly to make sure we are confident the use cases are not important. Discuss with team, ckan-discuss and specifically the LOD people who have some related packages on thedatahub.org.
+</p>
+<h3 id="Participants">Participants</h3>
+<p>
+David Read
+</p>
+<h3 id="Progress">Progress</h3>
+<p>
+Not yet.
+</p>
+
+    </div>
+  </div>
+</div>
+          
+
+        <div>
+          <h2 class="foldable">Change History</h2>
+          <div id="changelog">
+              <div class="change" id="trac-change-1">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:1" class="cnum">
+      <a href="1289.html#comment:1">comment:1</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-09-29T16:53:31Z&amp;precision=second.html" title="2011-09-29T16:53:31Z in Timeline">3 years</a> ago by dread
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Status</strong>
+        changed from <em>new</em> to <em>closed</em>
+    </li><li>
+      <strong>Resolution</strong>
+        set to <em>wontfix</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+Discussions have not resolved this either way. Decided to leave it like it is for now.
+</p>
+
+    </div>
+
+              </div>
+          </div>
+        </div>
+      <div id="help"><strong>Note:</strong> See
+        <a href="../wiki/TracTickets.html">TracTickets</a> for help on using
+        tickets.</div>
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="first">
+          <a rel="nofollow" href="1289%3Fformat=csv" class="csv">Comma-delimited Text</a>
+        </li><li>
+          <a rel="nofollow" href="1289%3Fformat=tab" class="tab">Tab-delimited Text</a>
+        </li><li class="last">
+          <a rel="nofollow" href="1289%3Fformat=rss" class="rss">RSS Feed</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,2 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1826,weight queries so that title is more important than rest of body,kindly,kindly,Currently everything is considered equally when doing a normal search. Use dismax when there is not a fielded search to get round this. This is part of the work for #1822 as the dismax option is needed for multilingual search.,enhancement,closed,awaiting triage,ckan-sprint-2012-03-05,ckan,fixed,0.75d,,ckan,none

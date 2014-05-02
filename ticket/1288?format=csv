@@ -1,0 +1,14 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1288,Package edit/creation can't include 'relationships' field,dread,,"When you create or edit a package (via the API), you aren't able to specify the relationships it has. (If you do you get 409 {{{ {""__junk"": [""The input field __junk was not expected.""]} }}})
+
+The normal way to create relationships is via /api/rest/relationships/ and this works. But when you GET a package, the dictionary lists all relationship details. So this bug creates a problem for editing a package that has relationships - you want to GET it, make any edits and then PUT it back. The work-around is to delete the 'relationships' key from the dict before you PUT it back.
+
+== Options ==
+
+Ideally, CKAN would read the 'relationships' key and make the necessary changes. This is a chunk of work.
+
+Another good option is to allow an unchanged 'relationships' value, but barf it is edited. This is also a chunk of work.
+
+A bad option would be to just ignore the 'relationships' value, since users will get frustrated changing this value and wonder why it never saves, not understanding it is different to all the rest, without error message.
+
+A final option is to get rid of relationships altogether.",defect,new,minor,ckan-backlog,ckan,,,,ckan,none

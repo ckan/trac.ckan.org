@@ -1,0 +1,14 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1494,API call for getting a user's public activity stream as rendered rtext,seanh,seanh,"This could be implemented as a separate API call, or the rendered text versions of the activities could be added into the JSON returned by the existing API call.
+
+This requires setting up templates for rendering activity streams items and detail items as nice, human-readable text.
+
+There are some open questions, e.g.: Do we want the entire activity stream rendered as a block of plain text? As HTML? Or do we want a list of JSON objects, where each object contains its textual and/or HTML representations as fields?
+
+Activity stream items and their related detail items are separate objects that each have their own textual representations.
+
+For a mockup of the kind of text messages we want, see:
+
+http://datahub.pudo.org/pudo
+
+but note that this ticket is just for creating the text snippets themselves, not rendering then in an HTML page or RSS feed. Also the mockup only show activity items and not their detail items.",enhancement,new,awaiting triage,ckan-v1.6,ckan,,,,ckan,none

@@ -1,0 +1,9 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1404	Search Page UI improvements	zephod	zephod	"[Refactored] :: Follows on from #1506 UX changes.
+
+  * Declutter the sidebar. No yellow box.
+  * Facets to go on the left, rather than the right. More logical flow.
+  * Did you know you can search by author? Probably not. Find a nice way of presenting extended search options.
+  * Make Datasets in the search page look more like Datasets on the groups pages (ie. like awesome sexy search results).
+    * Update that look-and-feel to include the new resource icons created in #1506
+"	enhancement	closed	awaiting triage	ckan-v1.7	ckan	wontfix			ckan	none

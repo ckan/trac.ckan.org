@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1817,Importer for EC publisher info,johnglover,johnglover," * write importer for publisher info (currently in JSON format), add to ckanext-ecportal
+ * add group translations to translations table
+ * run on test server",enhancement,new,major,ckan-sprint-2012-03-05,ecportal,,0.5d,,ckan,none

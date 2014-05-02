@@ -1,0 +1,12 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2742	admin authz styling	toby	johnmartin	"http://localhost:5000/ckan-admin/authz
+
+you need to be an admin
+
+paster sysadmin add <username> -c dev.ini
+
+like #2741 we need other admin links
+
+you may want to make the inputs use your form macros - I've just done a basic port
+
+also we will need to get all the tables done but looks like we need to get auth groups working for that"	enhancement	closed	awaiting triage	demo phase 5	ckan	fixed	demo-theme		ckan	none

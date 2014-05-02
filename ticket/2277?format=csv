@@ -1,0 +1,2 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2277,Use the new atom feeds in IATI,icmurray,icmurray,Atom feeds have been implemented in core in #1593.  The IATI-specific implementation can now be removed when IATI move to CKAN >= 1.6.1,refactor,new,minor,ckan-backlog,ckan,,iati atom feeds,amercader rgrp,ckanext-iati,none

@@ -1,0 +1,8 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+79,Improvements to package search,rgrp,rgrp,"Several things:
+
+  * Default package search (used e.g. on front page) should deal well with multiple items: ""abc xyz"" means search for both abc and xyz (as separate searches)
+  * Should automatically display a list of matching tags in a line at top with number of associated packages
+  * have an option to only search for fully open material (or openly licensed material ...)
+
+Since we should be moving to a more sophisticated search solution anyway (to allow prioritisation etc) maybe we should cautious as to what we do now.",enhancement,new,minor,,ckan,,,,,

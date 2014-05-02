@@ -1,0 +1,2 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2414	Remove LXML as a dependency on core CKAN	ross	ross	Core CKAN currently has a dependency on LXML and it would be nice if we could remove it (although this *may* be indirectly through genshi).	enhancement	closed	awaiting merge	ckan-sprint-2012-06-25	ckan	fixed			ckan	none

@@ -1,0 +1,6 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1395	"""Import Error: cannot import name UnicodeMultiDict"" when installing ckan from source"	seanh		"At the ''paster db init'' command when installing ckan from source I get the error ''""Import Error: cannot import name UnicodeMultiDict""'' (happens with both ckan 1.4.2 and today's latest bleeding edge code, on Ubuntu 10.04.3).
+
+UnicodeMultiDict has been removed in a recent version of python-webob, and the ''pip install ... lucid_missing.txt'' causes a too-new version of python-webob to be installed into ckan's virtualenv (the new webob gets installed as a dependency of formalchemy).
+
+I manually did ''pip uninstall webob'' and then ran ''paster db init'' again and it worked."	defect	closed	awaiting triage		ckan	fixed		dread	ckan	none

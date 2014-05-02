@@ -1,0 +1,11 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1802	Investigate CKAN deployment on Windows	dread	dread	"See how possible it is to run CKAN on a Windows server.
+
+Plan:
+ * Get CKAN code and dependencies installed on Windows
+   * ideally as similar to standard package install as possible
+   * virtualenv/pip should work
+   * try Cygwin to help
+   * SOLR and Postgres could potentially run on other servers if necessary.
+ * Try to run on Apache
+ * See if there are any issues"	enhancement	closed	critical	ckan-sprint-2012-03-05	ckan	fixed	[5d] [a:2.25d]	rgrp	ckan	none

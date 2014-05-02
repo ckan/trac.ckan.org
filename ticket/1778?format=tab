@@ -1,0 +1,6 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1778	Replace classmethod's with module-level functions	seanh	seanh	"In many places we have @classmethods where simple module-level functions would do (and would be more idiomatic in Python), e.g. the {{{get()}}} classmethods in the model/ classes.
+
+Doing it with module functions lets us type module.function() instead of module.Class.method().
+
+In many cases we're importing classes directly with {{{from module import Class}}} and then doing {{{Class.method()}}}, but {{{from module import foo}}} is bad style: http://docs.python.org/dev/howto/doanddont.html"	enhancement	assigned	awaiting triage	ckan-future	ckan		refactoring		ckan	none

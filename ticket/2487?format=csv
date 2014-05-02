@@ -1,0 +1,2 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2487,Don't preview text/html,johnglover,johnglover,"Quite a few of the current test dataset resources have their format incorrectly specified as text/html. Attempting to preview these results in the browser trying to automatically download the resource, so for now we will not preview this format.",enhancement,closed,major,ckan-sprint-2012-06-25,ecportal,fixed,,,ckan,none

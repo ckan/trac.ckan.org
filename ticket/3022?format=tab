@@ -1,0 +1,2 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+3022	setup_template_variables method of IDatasetForm never called	amercader	amercader	On the package controller the package_type is not passed to the lookup function, so the setup_template_variables defined on the extensions is never called	defect	closed	awaiting triage	ckan 2.0	ckan	fixed			ckan	none

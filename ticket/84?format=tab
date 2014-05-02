@@ -1,0 +1,9 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+84	Revert support on versioned objects	rgrp	kindly	"Basic revert in the classic wiki form is already support by purging a Revision. However may wish to support:
+
+  1. Cases where multiple objects changed in a revision but only want to revert 1 (low priority)
+  2. Want to revert but have reversion as a new revision of that object.
+
+Seems low priority at present.
+
+Cost: ?"	enhancement	assigned	minor	ckan-future	vdm				ckan	none

@@ -1,0 +1,10 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+75,"Record and display package ""usage"" information",rgrp,dread,"  * Number of package page visits on ckan (can we get this straight from google analytics)
+  * Number of times url or download url is used - now ticket:937 (Record download stats for resoures)
+
+How do we do this?
+
+  * Google analytics will miss a lot of this usage (and how do we get that data out anyway)
+  * Could use javascript but again misses usage.
+  * One option is to redirect link but that is kind of nasty (but may be only option ...)
+",enhancement,closed,critical,,ckan,duplicate,,,,

@@ -1,0 +1,8 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+533	The performance of CKAN shall scale	johnbywater		"CKAN uses a database. We can put the database on another machine and then clone the CKAN machine. Then there are two machines calling the database and converting SQL results into HTTP responses.
+
+How many machines can you have before the database becomes the bottleneck? At that point, what QoS can be obtained with normal hardware?
+
+Afterwards, can CKAN be made to scale further than this with a little development? Can its Postgres database be mirrored in realtime? Or can we change SQL writes (create/updates) to write to many databases?
+
+Are there any other options for scaling the persistence mechanism?"	requirement	closed	awaiting triage	ckan-v1.3	ckan	invalid				

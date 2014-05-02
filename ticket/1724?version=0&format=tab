@@ -1,0 +1,6 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1724	Update tag_list() logic action function for taxonomies	seanh		"Currently ckan/logic/action/get.py has a tag_list() function that (I think) just returns all tags in the CKAN instance that the user has access to.
+
+An option should be added to this to get only tags for a particular vocabulary. Also when the function is called without the option, perhaps it should only return the free tags that don't belong to any vocabulary.
+
+Might also want a logic function to get tags for a given dataset and vocabulary?"	enhancement	new	awaiting triage	ckan-v1.6	ckan		taxonomies		ckan	none

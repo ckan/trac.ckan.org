@@ -1,0 +1,10 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+877,File upload in WUI (extension),rgrp,rgrp,"Support uploading files to a storage system from WUI with a simple upload form.
+
+=== Implementation ===
+
+  * Implement as an [wiki:Extensions Extension]
+  * Locate at /upload
+  * Add new system action/permission (FILE_UPLOAD) and restrict by default to logged in users
+  * Use OFS + boto -> generate form key (and create the bucket if it doesn't exist? Or do we assume bucket already exists)
+  * This wants to be tied in to general package workflow. See parent ticket:852.",enhancement,closed,critical,ckan-v1.4-sprint-2,DGU,fixed,,,,

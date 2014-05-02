@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1179: Support tag aliases</title>
+    <link>http://localhost/ticket/1179</link>
+    <description>&lt;p&gt;
+A small number of tags are near-duplicates of each other.
+&lt;/p&gt;
+&lt;p&gt;
+Perhaps we could support word stemming from NLTK and/or manual tag aliases:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+statistics
+statistik
+...
+survey
+surveying
+surveys
+&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1179</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>seanh</dc:creator>
+
+      <pubDate>Fri, 15 Jun 2012 15:32:12 GMT</pubDate>
+      <title>milestone set</title>
+      <link>http://localhost/ticket/1179#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1179#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                set to &lt;em&gt;ckan-backlog&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

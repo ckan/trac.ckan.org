@@ -1,0 +1,32 @@
+= SOLR Interface =
+
+== Use Cases ==
+As a user of a CKAN instance I want to be able to make complicated searches, referencing the data fields.
+
+== Design == 
+
+Search technology - Apache SOLR is selected
+
+Architecture: SOLR to work both alongside and as a replacement for the existing full text search in CKAN.
+
+There are two main options for getting data into SOLR:
+
+ * POST the records to SOLR in XML format ([http://wiki.apache.org/solr/UpdateXmlMessages docs])
+ * Direct connection Setup SOLR ([http://wiki.apache.org/solr/DataImportHandler docs])
+  * Provide SELECT statements to do queries
+  * Process is initiated by doing a GET to a particular SOLR URL
+
+The preference is for the first option as the abstraction provides more flexibility in the db and more control about what gets indexed.
+
+When to index a package? Currently we index it on database after_insert and after_update triggers. But this might seriously slow down a large data import since the indexing requires a POST over the internet. Maybe keep the triggers, but for a batch import we can turn them off and then manually run the indexing. Alternatively store up changes and do an hourly cron.
+
+== Tickets ==
+
+ 1 Get a SOLR instance running, using basic config.
+ 2 Get indexing and searching working with name and title fields only:
+   * Harness one of the three python SOLR libraries to send SOLR Update XML of CKAN Packages (triggered on the command-line). 
+   * Write tests for SOLR by sending data with SOLR library and using JSON interface for queries.
+ 3 Get it working with all package fields, optimising the field descriptions in schema.xml. 
+ 4 Trigger the indexing sensibly (as decided above).
+ 5 Provide option to connect CKAN's search WUI to SOLR back-end.
+ 6 CKAN Developer docs - description of how to setup SOLR link and schema.xml.

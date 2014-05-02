@@ -1,0 +1,9 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2505,Docs improvements for 1.7.1,amercader,amercader,"There are some areas where the documentation could use some improvement and it would be good to have it available for 1.7.1.
+
+ * Add an introduction to harvesting support
+ * Add an introduction to CSW support
+ * Better upgrade docs: Some users suggested improvements to the upgrade docs on the list [1]. Also we should mention how the upgrade would work for point point releases
+ * Source install: see #2406
+
+[1] http://lists.okfn.org/pipermail/ckan-dev/2012-May/002178.html",enhancement,closed,major,ckan-sprint-2012-06-25,ckan,fixed,docs,sean.hammond@…,ckan,none

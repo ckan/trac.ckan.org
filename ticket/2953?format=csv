@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2953,Server error in template directories,dominik,,"If you go to: /{any template dir} for example /home or /related, a Server errror occurs. 
+
+IOError: [Errno 21] Is a directory: u'/../venv/src/ckan/ckan/templates/home'",defect,closed,awaiting triage,,ckan,fixed,"500, server error, templates",,ckan,none

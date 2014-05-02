@@ -1,0 +1,17 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+826,Resource 'extra' fields,dread,kindly,"There are a number of extra properties we want to store in a resource: 
+
+ * resource size (in bytes, no. triples etc.) - https://trac.dataco.coi.gov.uk/projects/datagov/ticket/673
+ * resource hash is 'static' (default) or 'changeable' - https://trac.dataco.coi.gov.uk/projects/datagov/ticket/674
+ * alternative link (e.g. TNA Web Archive) to use the link is broken - https://trac.dataco.coi.gov.uk/projects/datagov/ticket/173
+
+i.e. this is a much needed enhancement
+
+Need to be able to read/write these values in web interface and API.
+
+(At some point we may wish to have custom form widgets for these new fields in the resource table, but let's leave this for the future.)
+
+= Implementation =
+
+I suggest these are arbitrary key/value pairs, just like package extras, reusing PackageExtra code as much as possible.
+(Other much more radical alternative is to move model to RDF.)",enhancement,closed,critical,ckan-v1.4-sprint-1,ckan,fixed,,thejimmyg,ckan,none

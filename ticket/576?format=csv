@@ -1,0 +1,6 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+576,CKAN Requires Old Version of SQLAlchemy,wwaites,sebbacon,"Requires 0.4. 0.5 is a maintenance branch, 0.6 is current.
+
+VDM appears to work correctly (all the tests pass) with 0.5. CKAN does not -- requires more investigation to determine exactly why.
+
+It would actually be nice to be able to run with 0.6 or 0.5, though 0.6 will require some changes to VDM as well",defect,closed,major,ckan-v1.3,ckan,fixed,,,,

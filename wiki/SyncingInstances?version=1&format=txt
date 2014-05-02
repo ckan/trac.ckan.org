@@ -1,0 +1,91 @@
+= Syncing =
+
+== Scenarios ==
+
+ * 1-way: On setup, Server A's packages are copied to Server B. On sync, changes to packages on Server A are transferred to Server B.
+
+ * 2-way: On setup, packages from each server is copied to the other. On sync, changes on each are transferred to the other.
+
+We will focus now on 1-way.
+
+== Requirements ==
+
+Merging of changes from both machines. If there is a conflict then it is logged and a result is chosen.
+
+== Use cases ==
+
+ * First sync - all packages and revisions are copied from Server A to Server B.
+
+ * Subsequent sync after package changes on A and/or B.
+
+ * Sync after package purged on A. (Package also purged on B.)
+
+ * Sync after package purged on B. (Package not recreated on B.)
+
+ * Sync between CKAN instances of different versions of ckan & vdm.
+
+ * Server B syncs at different times from Server C.
+
+ * Package/Tag/Group name on Server A clashes with an existing one on Server B. Log all of them. Merge tag and group. Not sure about package.
+
+ * Use of Server A and Server B continues undisturbed during sync.
+
+ * Objects on Server A with restricted authz are by default editable on Server B.
+
+== Issues ==
+
+ * Unversioned objects - make versioned? User, Group, Authz, Rating.
+
+ * How to test system.
+
+ * Clashes of package names.
+
+== Operation ==
+
+=== First sync - 10am ===
+
+Server B asks "Give me all your revisions and unrevisioned objects."
+
+Server A replies "Rev1 and associated revisions Pkg1Rev1, Pkg2Rev1, !PkgTagRev1, !PkgResource1; Rev2 with Pkg1Rev2; Tag1; User1; !PackageGroup1; Group1; ratings"
+
+Server B creates Rev1, Pkg1Rev1, Pkg2Rev1, Pkg1Rev2, Pkg1, Pkg2, !PkgTagRev1, !PkgResource1, Tag1, User1, Auth, !PackageGroup1, Group1. UUIDs are the same as Server A.
+
+Server B updates search vectors for Pkg1 and Pkg2.
+
+Server records the time of the sync - 10am.
+
+=== Meanwhile - 10.20am ===
+
+On Server A, user updates Pkg1 twice, creating Rev2/Pkg1Rev3 and Rev3/Pkg1Rev4PkgTagRev2. User1 updates his name.
+
+=== Meanwhile - 10.40am ===
+
+On Server B, user updates Pkg1 once, creating Pkg1Rev5.
+
+=== Sesequent sync ===
+
+Server B asks "Give me revisions and diffs since 10am."
+
+Server A replies Rev2/Pkg1Rev3, Rev3/Pkg1Rev4 and gives diff of Pkg1Rev2 -> Pkg1Rev4
+
+Server B looks at its own revisions since 10am and sees Pkg1 now has two heads. It calculates diff of Pkg1Rev2 -> Pkg1Rev5.
+
+Server B takes Pkg1Rev2 and applies the two diffs in the order of priority, logging any conflicts, calling the result Pkg1Rev6.
+
+== Tickets ==
+
+ * Repository method 'all_revs_since'. It returns all revisions since a time/revision (or since the beginning).
+
+ * Object method 'diff'. It returns a Diff object which is the diff of two !ObjectResources. Already exists for Package, but need for !PackageTag, !PackageExtra
+
+ * Revision method 'serialize'.
+
+ * Diff method 'serialize'.
+
+ * API access to revisions: /api/rest/revision?since=ab49f348-fd23-ae3c
+
+ * API access to diffs: /api/
+
+ * Repository method 'import_revisions'. It takes serialised revisions and diffs and creates 
+
+ * Object method 'merge_diffs'. It takes an original object and two diffs that apply to it and applies them both in a new revision.

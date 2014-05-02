@@ -1,0 +1,212 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      TracUnicode – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="help" href="TracGuide.html" />
+        <link rel="alternate" href="TracUnicode%3Fversion=1&amp;format=txt" type="text/x-trac-wiki" title="Plain Text" />
+        <link rel="up" href="TracUnicode.html" title="View latest version" />
+        <link rel="next" href="TracUnicode%3Fversion=2.html" title="Version 2" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/wiki.css" type="text/css" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("#content").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $("#content").find(".wikianchor").each(function() {
+          $(this).addAnchor(babel.format(_("Link to #%(id)s"), {id: $(this).attr('id')}));
+        });
+        $(".foldable").enableFolding(true, true);
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last active"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="pagepath" class="noprint">
+  <a class="pathentry first" title="View WikiStart" href="../wiki.1.html">wiki:</a><a class="pathentry" href="TracUnicode.html" title="View TracUnicode">TracUnicode</a>
+</div>
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span class="missing">&larr; Previous Version</span></li><li><a href="TracUnicode.html" title="View latest version">View Latest Version</a></li><li class="last"><span><a class="next" href="TracUnicode%3Fversion=2.html" title="Version 2">Next Version</a> &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="wiki">
+        <br />
+        <table id="info" summary="Revision info">
+          <tbody>
+            <tr><th scope="row">Version 1 (modified by trac, <a class="timeline" href="../timeline%3Ffrom=2006-05-13T12:08:45Z&amp;precision=second.html" title="2006-05-13T12:08:45Z in Timeline">8 years</a> ago)
+               (<a href="TracUnicode%3Faction=diff&amp;version=1.html">diff</a>)</th></tr>
+            <tr><td class="message">
+              <p>
+--
+</p>
+
+            </td></tr>
+          </tbody>
+        </table>
+      <div class="wikipage searchable">
+        
+          
+          
+          <div id="wikipage"><h1 id="UnicodeSupportinTrac">Unicode Support in Trac</h1>
+<p>
+Trac stores all text using UTF-8 encoding, including text in tickets and wiki pages. 
+</p>
+<p>
+As such, it supports most (all?) commonly used character encodings.
+</p>
+<h2 id="Examples">Examples</h2>
+<p>
+Please keep sorted order when you add an entry.
+</p>
+<h3 id="Arabic">Arabic</h3>
+<p>
+تراك يقوم بحفظ كل الكلمات باستخدام صيغة UTF-8، بما في ذلك الكلمات المستخدمة في صفحات  التيكت والويكي.
+</p>
+<h3 id="Bulgarian">Bulgarian</h3>
+<p>
+Българският език работи ли?
+</p>
+<h3 id="Česky">Česky</h3>
+<p>
+Čeština v kódování UTF-8, žádný problém.
+</p>
+<h3 id="Chinese">Chinese</h3>
+<p>
+Traditional: <em>繁體中文, 許功蓋會育</em>; Simplified: <em>简体中文，许功盖会育</em>
+</p>
+<h3 id="English">English</h3>
+<p>
+Yes indeed, Trac supports English. Fully.
+</p>
+<h3 id="Français">Français</h3>
+<p>
+<em>Il est possible d'écrire en Français : à, ç, û, ...</em>
+</p>
+<h3 id="German">German</h3>
+<p>
+Trac-Wiki muß auch deutsche Umlaute richtig anzeigen: ö, ä, ü, ...
+</p>
+<h3 id="Greek">Greek</h3>
+<p>
+Τα Ελληνικά υποστηρίζονται επαρκώς επίσης.
+</p>
+<h3 id="Hebrew">Hebrew</h3>
+<p>
+אני יכול לאכול זכוכית וזה לא מזיק לי
+</p>
+<h3 id="Icelandic">Icelandic</h3>
+<p>
+<em>Ævar sagði við ömmu sína: Sjáðu hvað ég er stór''
+</em></p>
+<h3 id="Japanese">Japanese</h3>
+<p>
+<em>漢字 ひらがな カタカナ ﾊﾝｶｸｶﾅ</em>
+</p>
+<h3 id="Korean">Korean</h3>
+<p>
+<em>이번에는 한글로 써보겠습니다. 잘 보이나요?</em>
+</p>
+<h3 id="PersianFarsi">Persian (Farsi)</h3>
+<p>
+این یک متن فارسی است ولی از چپ به راست
+</p>
+<h3 id="Polish">Polish</h3>
+<p>
+Pchnąć w tę łódź jeża lub ośm skrzyń fig
+</p>
+<h3 id="Portuguese">Portuguese</h3>
+<p>
+É possível guardar caracteres especias da língua portuguesa, incluindo o símbolo da moeda européia '€', trema 'ü', crase 'à', agudos 'áéíóú', circunflexos 'âêô', til 'ãõ', cedilha 'ç', ordinais 'ªº', grau '°¹²³'.
+</p>
+<h3 id="Russian">Russian</h3>
+<p>
+Проверка русского языка: кажется работает...
+</p>
+<h3 id="Serbian">Serbian</h3>
+<p>
+Podržan, uprkos činjenici da se za njegovo pisanje koriste чак два алфабета.
+</p>
+<h3 id="Slovenian">Slovenian</h3>
+<p>
+Ta suhi škafec pušča vodo že od nekdaj!
+</p>
+<h3 id="Spanish">Spanish</h3>
+<p>
+Esto es un pequeño texto en Español, ahora una con acentó
+</p>
+<h3 id="Swedish">Swedish</h3>
+<p>
+<em>Räven raskar över isen med luva på.</em>
+</p>
+<h3 id="Thai">Thai</h3>
+<p>
+Trac แสดงภาษาไทยได้อย่างถูกต้อง!
+</p>
+<h3 id="Ukrainian">Ukrainian</h3>
+<p>
+Перевірка української мови...
+</p>
+</div>
+        
+        
+      </div>
+      
+
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="last first">
+          <a rel="nofollow" href="TracUnicode%3Fversion=1&amp;format=txt">Plain Text</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

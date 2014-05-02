@@ -1,0 +1,2 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2670	model.Group.get_children_groups returns deleted groups	dread	ross	I believe it should only return active ones. On DGU we see deleted publishers popping up.	defect	closed	awaiting merge	ckan-v1.8	ckan	fixed			ckan	none

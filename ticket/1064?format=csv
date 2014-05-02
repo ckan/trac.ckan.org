@@ -1,0 +1,3 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1064,Remove Workers from ckanext-queue,amercader,,"The current implementation of Workers in ckanext-queue is broken. Basically the various consume / callback functions expect three arguments (routing_key, operation, payload) when they are in fact receiving only two of them (message_data, message).
+This is fairly easy to fix, but the question is if Workers add an extra complexity to use the messaging library directly.",defect,closed,awaiting triage,,ckan,duplicate,,friedrich.lindenberg@… james@… james,ckanext-queue,none

@@ -1,0 +1,18 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1712,DGU /data page,icmurray,dread,"CKAN provides the /data page page of data.gov.uk
+
+Breakdown of tasks:
+
+ [-] Analysis / refinement of spec.
+ [-] Log-in / register as publisher
+     (Links in place, waiting on publisher form)
+ [ ] Population of ""browse by publisher""
+     ? - how should this be generated?  CMS?  Recent activity? Size?
+ [ ] Browse by nation
+ [ ] Featured datasets
+     ? - how should this be generated?  CMS?  Recent activity?  Quality measurement?
+ [ ] Tag cloud
+ [ ] Developers section
+     ? - No longer need to link to catalogue.gov.uk ? Will the API be exposed through data.gov.uk
+ still through catalogue.gov.uk.  I think the latter makes most sense.
+     ? - What about the dumps?  Where will they be located? (http://data.gov.uk/data/dumps OR http://catalogue.data.gov.uk/dump/ as it is now.  Again, I think the latter.)",enhancement,new,major,ckan-sprint-2012-02-06,dgu,,,,ckanext-dgu,none

@@ -1,0 +1,4 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2624	Organizations breaks dataset tag editing	seanh	ross	"Enable the organizations and organizations_dataset plugins, login to ckan, create a group, create a dataset and add it to the group. Edit the dataset, add some tags to it. The new tags are not saved when you submit.
+
+Disable the organizations and organizations_dataset plugins and tag editing works again."	enhancement	closed	major	ckan-v1.8	ckan	fixed	organizations cmap		ckan	none

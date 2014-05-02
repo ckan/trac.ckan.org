@@ -1,0 +1,23 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1249,Exclude script tag from extraction for i18n,rgrp,pudo,"Currently have this script section put in for i18n. It shouldn't be. 
+
+{{{
+<script type=""text/javascript"">
+//<![CDATA[
+(function($){
+    $.fn.ajaxCreateSlug = function(name, url) {
+        var title = this;
+        var updater = {
+            init: function(title, name) {
+                // Add a new element where the validity of the package name can be displayed
+                this.name_field = name;
+                this.title_field = title;
+                this.name_field.parent().append('<div id=""package_name_valid_msg""></div>');
+                this.title_field.blur(this.title_change_handler())
+                this.title_field.keyup(this.title_change_handler())
+                this.name_field.keyup(this.name_change_handler());
+                this.name_field.blur(this.name_blur_handler());
+                this.url = url;
+            },
+....
+}}}",enhancement,closed,major,ckan-v1.5,ckan,fixed,,,ckan,none

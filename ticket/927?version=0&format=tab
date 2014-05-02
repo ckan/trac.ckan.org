@@ -1,0 +1,15 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+927	Improvements to CKAN documentation (meta-ticket)	rgrp	Stiivi	"List of improvements to CKAN documentation (result of ticket:904). Should convert most items into sub-tickets as we go along.
+
+== Major ==
+
+ * Make blog.ckan.org into ckan.org and move ckan.org to ckan.org/trac
+ * Document caching system - ticket:841
+ * Document config better
+ * Howto guide for writing an extension
+
+== Miscellaneous ==
+
+ * Data proxy documentation: move it to packages.python.org/dataproxy
+ * List dataapi extensions on http://ckan.org/wiki/Extensions (Name, summary string + point to pypi page ...)
+"	enhancement	new	critical	ckan-v1.4	ckan					

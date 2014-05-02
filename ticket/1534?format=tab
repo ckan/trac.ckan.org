@@ -1,0 +1,8 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1534	Change revisions to record userid rather than username	rgrp		"The use of username is problematic because username's can change.
+
+ * Change all revision creation code to use user id (simplest is to change c.author field in lib/base.py (?))
+  * (?) Add a field ipaddr for ip address of anonymous users? (or just keep putting this in author field on Revision and then acception that those won't match when we do a look up against user table)
+ * Change user view page to look up against user id rather than name
+ * Perform migration on existing Revision objects
+   * Match should probably be against both openid and username when searching Revisions' author field (especially true on CKAN where some people have already changed their username from being their openid)"	enhancement	new	major	ckan-backlog	ckan				ckan	none

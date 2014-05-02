@@ -1,0 +1,17 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1032	[super] Resources in WUI	rgrp	rgrp	"Add resources into Web User Interface.
+
+ * Locate at: /dataset/{dataset}/resource/{id}
+ * CRUD
+ * Authorization
+
+Done:
+
+ * ~~#945 - Richer resources - Resource Groups, new fields, improved UI~~
+ * ~~#1445 - Resource View page in WUI~~
+ * ~~#1450 - Dataset view pages to match~~
+
+Moved to superticket #1506: 
+
+ * #978 - Edit Resource Extras in Web UI
+"	enhancement	closed	major	ckan-v1.6	ckan	fixed			ckan	none

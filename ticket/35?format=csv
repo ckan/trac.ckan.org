@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+35,IP Address for non-logged in users is always 127.0.0.1 when deployed behind a proxy (e.g. on ckan.net),rgrp,rgrp,"When IP address is used to identify non-logged in users (for example on create and editing of packages) it is always 127.0.0.1 when using a reverse proxy (standard deployment configuration on a production machine and used e.g. on http://www.ckan.net).
+
+This could be corrected by using HTTP_X_FORWARDED_FOR when available.",defect,closed,minor,v0.4,ckan,fixed,,,,

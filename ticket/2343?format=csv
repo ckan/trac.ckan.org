@@ -1,0 +1,5 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2343,Convert all non-free metadata fields to vocabulary fields,johnglover,johnglover," * convert non-free fields to vocab fields (eg: interoperability_level)
+ * store values as JSON files in the ecportal repo
+ * translate output on dataset view page
+ * add tests",enhancement,closed,major,ckan-sprint-2012-05-15,ecportal,fixed,[1d],,ckan,none

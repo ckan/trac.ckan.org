@@ -1,0 +1,361 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #371: Implement QoS monitoring</title>
+    <link>http://localhost/ticket/371</link>
+    <description>&lt;p&gt;
+Requested by RS.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/371</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>johnbywater</dc:creator>
+
+      <pubDate>Fri, 23 Jul 2010 11:55:51 GMT</pubDate>
+      <title>owner set</title>
+      <link>http://localhost/ticket/371#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/371#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;owner&lt;/strong&gt;
+              set to &lt;em&gt;johnbywater&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>johnbywater</dc:creator>
+
+      <pubDate>Tue, 27 Jul 2010 09:39:12 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/371#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/371#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/371?action=diff&amp;amp;version=2"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>johnbywater</dc:creator>
+
+      <pubDate>Wed, 28 Jul 2010 19:41:05 GMT</pubDate>
+      <title>type, description changed; businessvalue set</title>
+      <link>http://localhost/ticket/371#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/371#comment:3</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;type&lt;/strong&gt;
+                changed from &lt;em&gt;enhancement&lt;/em&gt; to &lt;em&gt;requirement&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;businessvalue&lt;/strong&gt;
+                set to &lt;em&gt;300&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/371?action=diff&amp;amp;version=3"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>johnbywater</dc:creator>
+
+      <pubDate>Wed, 28 Jul 2010 20:19:44 GMT</pubDate>
+      <title>status changed</title>
+      <link>http://localhost/ticket/371#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/371#comment:4</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>johnbywater</dc:creator>
+
+      <pubDate>Wed, 28 Jul 2010 20:20:35 GMT</pubDate>
+      <title>status changed</title>
+      <link>http://localhost/ticket/371#comment:5</link>
+      <guid isPermaLink="false">http://localhost/ticket/371#comment:5</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;closed&lt;/em&gt; to &lt;em&gt;reopened&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>johnbywater</dc:creator>
+
+      <pubDate>Wed, 28 Jul 2010 22:52:15 GMT</pubDate>
+      <title>businessvalue changed</title>
+      <link>http://localhost/ticket/371#comment:6</link>
+      <guid isPermaLink="false">http://localhost/ticket/371#comment:6</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;businessvalue&lt;/strong&gt;
+                changed from &lt;em&gt;300&lt;/em&gt; to &lt;em&gt;1200&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>johnbywater</dc:creator>
+
+      <pubDate>Fri, 30 Jul 2010 09:43:18 GMT</pubDate>
+      <title>milestone set</title>
+      <link>http://localhost/ticket/371#comment:7</link>
+      <guid isPermaLink="false">http://localhost/ticket/371#comment:7</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                set to &lt;em&gt;v1.1&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>johnbywater</dc:creator>
+
+      <pubDate>Fri, 30 Jul 2010 09:49:17 GMT</pubDate>
+      <title>summary changed</title>
+      <link>http://localhost/ticket/371#comment:8</link>
+      <guid isPermaLink="false">http://localhost/ticket/371#comment:8</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;summary&lt;/strong&gt;
+                changed from &lt;em&gt;Implement QoS monitoring&lt;/em&gt; to &lt;em&gt;The system shall monitor QoS against SLA&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>nils.toedtmann</dc:creator>
+
+      <pubDate>Mon, 13 Dec 2010 16:19:49 GMT</pubDate>
+      <title>cc set</title>
+      <link>http://localhost/ticket/371#comment:9</link>
+      <guid isPermaLink="false">http://localhost/ticket/371#comment:9</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;cc&lt;/strong&gt;
+              &lt;em&gt;nils.toedtmann@…&lt;/em&gt; added
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+(I know the term "QoS" as a very specific networking term about classifying and prioritising network traffic. I assume here it means &lt;em&gt;uptime&lt;/em&gt;, &lt;em&gt;availability&lt;/em&gt;, &lt;em&gt;performance monitoring&lt;/em&gt;?)
+&lt;/p&gt;
+&lt;p&gt;
+There seem to be are at least three monitors already in place:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;a class="ext-link" href="http://munin.okfn.org/"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://munin.okfn.org/&lt;/a&gt; on eu1 monitoring eu&lt;a class="missing source" title="No default repository defined"&gt;[0-7]&lt;/a&gt; and us1, gathering additional health information via locally installed daemons. Munin's notification subsystem is not configured.
+&lt;/li&gt;&lt;li&gt;&lt;a class="ext-link" href="http://nagios.hmg.ckan.net/"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://nagios.hmg.ckan.net/&lt;/a&gt; on hmg.ckan.net monitoring the CKAN-HMG service group (network monitoring only). Notfications are not configured (or?)
+&lt;/li&gt;&lt;li&gt;We have a &lt;a class="ext-link" href="http://wasitup.com/"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://wasitup.com/&lt;/a&gt; account which is watching some OKFN services (e.g. {ca,de,www}.ckan.org, {blog,www}.okfn.org) and sending loads of alerts to sysadmin@…. Only checking for "HTTP 200 OK" and whether the response contains a configurable string.
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+My 2ct: We should consolidate. What do we want?
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;A webservice like &lt;a class="ext-link" href="https://www.pingdom.com/"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;https://www.pingdom.com/&lt;/a&gt; ($40/month incl 30 checks and 200 SMS, $0.5/month per extra check, $0.14-20/SMS) or &lt;a class="ext-link" href="http://www.serverdensity.com/"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://www.serverdensity.com/&lt;/a&gt; ($10/server-month plus 5-10p/SMS)?
+&lt;/li&gt;&lt;li&gt;Or run our own monitor (nagios, opsview, monin)?
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+In the latter case we want to have a separate machine which is not in on EC2 (but e.g. &lt;a class="missing wiki"&gt;ByteMark?&lt;/a&gt;), dedicated to monitoring only.
+&lt;/p&gt;
+&lt;p&gt;
+We should also include root mails into the alert/notification policies. Root mails should be trimmed down to important warnings and errors only.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>nils.toedtmann</dc:creator>
+
+      <pubDate>Mon, 13 Dec 2010 16:23:09 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/371#comment:10</link>
+      <guid isPermaLink="false">http://localhost/ticket/371#comment:10</guid>
+      <description>
+        &lt;p&gt;
+The nagios fork &lt;a class="ext-link" href="http://www.opsview.com/"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;OPSview&lt;/a&gt; might be worth a look.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>nils.toedtmann</dc:creator>
+
+      <pubDate>Sat, 18 Dec 2010 20:38:36 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/371#comment:11</link>
+      <guid isPermaLink="false">http://localhost/ticket/371#comment:11</guid>
+      <description>
+        &lt;p&gt;
+Replying to &lt;a href="http://localhost/ticket/371#comment:9" title="Comment 9 for Ticket #371"&gt;nils.toedtmann&lt;/a&gt;:
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;p&gt;
+There seem to be are at least three monitors already in place:
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;br /&gt;
+Correction: at least four, we seem to have a Montastic account, too:&lt;br /&gt;
+&lt;/p&gt;
+&lt;p&gt;
+On 18/12/10 15:03, noreply@… wrote:
+&lt;/p&gt;
+&lt;pre class="wiki"&gt;Dear okfn,
+This is a monthly reminder that you have an account on Montastic, the
+website monitor service.
+### ACCOUNT INFORMATION
+Signup date: 2009-10-06
+Email you signup with: sysadmin@okfn.org
+### 20 WEBSITES MONITORED
+[OK] - http://www.ckan.net/
+[OK] - http://www.knowledgeforge.net/
+[OK] - http://okfn.org/
+[not monitored] - http://blog.okfn.org/
+[...]
+### EMAIL ALERT RECIPIENTS
+- sysadmin@okfn.org
+- rufus.pollock@okfn.org
+- martin.keenan@okfn.org
+[...]
+To make changes to your account or contact us, go to www.montastic.com.
+[...]
+&lt;/pre&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>thejimmyg</dc:creator>
+
+      <pubDate>Fri, 07 Jan 2011 14:23:45 GMT</pubDate>
+      <title>owner, status changed</title>
+      <link>http://localhost/ticket/371#comment:12</link>
+      <guid isPermaLink="false">http://localhost/ticket/371#comment:12</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;owner&lt;/strong&gt;
+              changed from &lt;em&gt;johnbywater&lt;/em&gt; to &lt;em&gt;nils.toedtmann&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;reopened&lt;/em&gt; to &lt;em&gt;new&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>thejimmyg</dc:creator>
+
+      <pubDate>Fri, 07 Jan 2011 14:52:19 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/371#comment:13</link>
+      <guid isPermaLink="false">http://localhost/ticket/371#comment:13</guid>
+      <description>
+        &lt;p&gt;
+It is implied in this that the performance of sites should beat the QoS criteria, therefore closing &lt;a class="closed ticket" href="http://localhost/ticket/485" title="story: Performance beats QoS criteria (closed: duplicate)"&gt;#485&lt;/a&gt;. Ensuring this happens is an ongoing process.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>thejimmyg</dc:creator>
+
+      <pubDate>Fri, 07 Jan 2011 16:23:54 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/371#comment:14</link>
+      <guid isPermaLink="false">http://localhost/ticket/371#comment:14</guid>
+      <description>
+        &lt;p&gt;
+From &lt;a class="closed ticket" href="http://localhost/ticket/440" title="task: Write and pass comprehensive performance tests (closed: duplicate)"&gt;#440&lt;/a&gt; we'll also need to "Write and pass comprehensive performance tests"
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>thejimmyg</dc:creator>
+
+      <pubDate>Fri, 07 Jan 2011 16:25:53 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/371#comment:15</link>
+      <guid isPermaLink="false">http://localhost/ticket/371#comment:15</guid>
+      <description>
+        &lt;p&gt;
+From &lt;a class="closed ticket" href="http://localhost/ticket/395" title="task: Set up profiling to analyze performance issues (closed: duplicate)"&gt;#395&lt;/a&gt;:
+&lt;/p&gt;
+&lt;p&gt;
+At the moment, some pages within CKAN tend to load slowly. We should create a profiling setup in which we can measure response times for complete requests and individual methods calls.
+&lt;/p&gt;
+&lt;p&gt;
+This could be used to identify bottlenecks and find an appropriate caching or tuning strategy to improve CKAN performance.
+&lt;/p&gt;
+&lt;p&gt;
+NB: We should also agree on a maximum request latency.
+&lt;/p&gt;
+&lt;p&gt;
+TODO: Read up on all those QoS tickets to avoid overlapping efforts.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>anonymous</dc:creator>
+
+      <pubDate>Mon, 10 Jan 2011 16:14:53 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/371#comment:16</link>
+      <guid isPermaLink="false">http://localhost/ticket/371#comment:16</guid>
+      <description>
+        &lt;p&gt;
+Mainly handled in &lt;a class="ext-link" href="http://knowledgeforge.net/okfn/tasks/ticket/564"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://knowledgeforge.net/okfn/tasks/ticket/564&lt;/a&gt; now. Close here?
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>thejimmyg</dc:creator>
+
+      <pubDate>Tue, 15 Mar 2011 19:37:00 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/371#comment:17</link>
+      <guid isPermaLink="false">http://localhost/ticket/371#comment:17</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Marking as closed since &lt;a class="ext-link" href="http://knowledgeforge.net/okfn/tasks/ticket/600"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://knowledgeforge.net/okfn/tasks/ticket/600&lt;/a&gt; now takes on this ticket.
+&lt;/p&gt;
+&lt;p&gt;
+I will check nils has added the new DGU Bytemark servers are added to Nagios.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

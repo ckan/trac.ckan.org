@@ -1,0 +1,185 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #189: Multiple download urls</title>
+    <link>http://localhost/ticket/189</link>
+    <description>&lt;p&gt;
+See also: &lt;a class="wiki" href="http://localhost/wiki/PackageResources"&gt;PackageResources&lt;/a&gt; which defines a 'distribution' as a package's payload (perhaps with metadata). In our case, at least within CKAN, the representation of the distribution will just be the reference to get it (plus some minor metadata).
+&lt;/p&gt;
+&lt;h2 id="Asa"&gt;As a&lt;/h2&gt;
+&lt;p&gt;
+User (package editor and package user)
+&lt;/p&gt;
+&lt;h2 id="Iwantto"&gt;I want to&lt;/h2&gt;
+&lt;p&gt;
+(package editor)
+Associate multiple distributions with a package.
+&lt;/p&gt;
+&lt;p&gt;
+(package user)
+Easily have access to multiple distributions of a package should they exist.
+&lt;/p&gt;
+&lt;h2 id="Implementation"&gt;Implementation&lt;/h2&gt;
+&lt;p&gt;
+There is an object called 'Distribution' with the following attributes:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;url (text) (required in UI, but not in db table)
+&lt;/li&gt;&lt;li&gt;format (text)
+&lt;/li&gt;&lt;li&gt;description (text)
+&lt;/li&gt;&lt;li&gt;package (association) - a distribution is always associated with 1 package
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+A package's list of distributions will have an order which is preserved. The first in the list will be known as the 'default distribution'.
+&lt;/p&gt;
+&lt;h3 id="Howtoreplacedownloadurl"&gt;How to replace download url&lt;/h3&gt;
+&lt;p&gt;
+download_url removed and replaced as a proxy attribute. Read returns the url of the default distribution. Write changes the url of the default distribution. Ensures backward compatibility.
+&lt;/p&gt;
+&lt;p&gt;
+REST API has new attribute in package dictionary 'distributions' - an ordered list.
+&lt;/p&gt;
+&lt;p&gt;
+In WUI, replace download url in package read with a table  of the distributions.
+&lt;/p&gt;
+&lt;p&gt;
+In the WUI package edit, be able to add/remove/edit/reorder distributions.
+&lt;/p&gt;
+&lt;h2 id="Example"&gt;Example&lt;/h2&gt;
+&lt;p&gt;
+Example part of package:
+&lt;/p&gt;
+&lt;h3 id="Distributions:"&gt;Distributions:&lt;/h3&gt;
+&lt;table class="wiki"&gt;
+&lt;tr&gt;&lt;td&gt; http://some.com/pollution.pdf &lt;/td&gt;&lt;td&gt; PDF &lt;/td&gt;&lt;td&gt; Original report
+&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt; http://some.com/pollution.csv &lt;/td&gt;&lt;td&gt; csv &lt;/td&gt;&lt;td&gt; Original data
+&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt; http://some.com/pollution &lt;/td&gt;&lt;td&gt; sparql &lt;/td&gt;&lt;td&gt; Linked version of data
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;
+Existing data to be migrated to new structure.
+&lt;/p&gt;
+&lt;p&gt;
+Cost: 4 days
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/189</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Mon, 16 Nov 2009 17:35:58 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/189#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/189#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/189?action=diff&amp;amp;version=1"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Tue, 17 Nov 2009 10:27:20 GMT</pubDate>
+      <title>priority, description changed</title>
+      <link>http://localhost/ticket/189#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/189#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;priority&lt;/strong&gt;
+                changed from &lt;em&gt;awaiting triage&lt;/em&gt; to &lt;em&gt;critical&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/189?action=diff&amp;amp;version=2"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Mon, 23 Nov 2009 13:06:28 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/189#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/189#comment:3</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/189?action=diff&amp;amp;version=3"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Mon, 23 Nov 2009 13:18:25 GMT</pubDate>
+      <title>owner changed</title>
+      <link>http://localhost/ticket/189#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/189#comment:4</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;owner&lt;/strong&gt;
+              changed from &lt;em&gt;rgrp&lt;/em&gt; to &lt;em&gt;dread&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Fri, 04 Dec 2009 11:11:51 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/189#comment:5</link>
+      <guid isPermaLink="false">http://localhost/ticket/189#comment:5</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+All done in 5 days in:
+cset:5c7f0ebd728c
+cset:20374a1ee763
+cset:02ce73aef595
+cset:36eda4112f72
+cset:dd285dd1b821
+&lt;/p&gt;
+&lt;p&gt;
+Also made relevant changes in importer, create-search-test-data and data4nr. It wasn't clear that download_url could be made a SA proxy, so instead put download_url proxy in the REST interface to maintain compatibility with existing clients.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Thu, 04 Feb 2010 12:02:41 GMT</pubDate>
+      <title>milestone set</title>
+      <link>http://localhost/ticket/189#comment:6</link>
+      <guid isPermaLink="false">http://localhost/ticket/189#comment:6</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                set to &lt;em&gt;v0.11&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

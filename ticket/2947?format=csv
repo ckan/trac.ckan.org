@@ -1,0 +1,7 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2947,Redirect to the resource page from /resource/{res-id},dominik,,"Use story:
+As a user of the datasore I want to be able to put the resource id without the dataset name in a url and see the resource page.
+
+Proposed redirect:
+
+/resource/{res-id} -> dataset/foo-bar/resource/{res-id}",enhancement,new,minor,,ckan,,,,ckan,none

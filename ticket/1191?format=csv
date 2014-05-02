@@ -1,0 +1,2 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1191,Unicode in user password gives 500 error on user registration,dread,dread,"Create/register a user with a unicode character in the password. It creates the user, but the redirect to the user page doesn't work and results in 500 error.",defect,closed,minor,ckan-v1.5-sprint-3,ckan,fixed,,,ckan,none

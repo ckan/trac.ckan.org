@@ -1,0 +1,2 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+292	PackageResources are created new on every package edit	dread	dread	When you edit a package, all of its resources are deleted and a fresh set created. This causes all history of them to be lost.	defect	closed	blocker	v1.0	ckan	fixed				

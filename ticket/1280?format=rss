@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1280: fix sqlalchemy so that it works with postgres 9.0</title>
+    <link>http://localhost/ticket/1280</link>
+    <description>&lt;p&gt;
+After the ckan migrate process, sqlalcehmy reflect does not work and causes an error when reflecting indexes.  A bug report needs to be put into sqlalchemy.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1280</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Thu, 09 Feb 2012 11:24:30 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/1280#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1280#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+David tells me that this was fixed in CKAN when we moved to SQLAlchemy 0.7 &lt;a class="closed ticket" href="http://localhost/ticket/1433" title="enhancement: Support SQLAlchemy 0.7 (closed: fixed)"&gt;#1433&lt;/a&gt; which went into CKAN 1.5.1.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

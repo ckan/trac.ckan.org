@@ -1,0 +1,5 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1355	Package extras property does not include the newly created ones	amercader		"The extras in the package object sent to the extensions after editing (https://bitbucket.org/okfn/ckan/src/01efd5649c10/ckan/logic/action/update.py#cl-226) do not include the newly added.
+
+
+"	defect	new	awaiting triage	ckan-backlog	ckan			david.raznick@…	ckan	none

@@ -1,0 +1,2 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1113,lists in extras serialized wrongly on get with the api.,kindly,kindly,Lists are being converted to unicode and then translated into a json when getting from the api.,defect,closed,awaiting triage,,ckan,fixed,,,ckan,none

@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #897: "New package" highlighted in Navigator when searching</title>
+    <link>http://localhost/ticket/897</link>
+    <description>&lt;p&gt;
+On ckan.net 1.3.1b, click on "Search" in the Navigator. Now both "Search" and "New Package" are highlighted.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/897</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Thu, 13 Jan 2011 10:25:33 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/897#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/897#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;duplicate&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Same as &lt;a class="closed ticket" href="http://localhost/ticket/870" title="defect: Menu items not selecting correctly (closed: fixed)"&gt;#870&lt;/a&gt;
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

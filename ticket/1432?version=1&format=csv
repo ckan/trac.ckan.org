@@ -1,0 +1,5 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1432,[super] Data processing system for CKAN and Webstore,rgrp,,"Super ticket: #1190
+
+A data processing system which utilizes the  Webstore. One could
+get a long way with simple javascript running in the browser for development with this javascript then run offline using something like nodejs. Alternatively one could allow one to specify a url to e.g. a python file which would then be run in a sandbox (with access to some specified set of python modules)",enhancement,new,awaiting triage,,ckan,,,,ckan,none

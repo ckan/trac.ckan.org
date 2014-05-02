@@ -1,0 +1,4 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1775	Enable adding tags to controlled vocabularies via API	seanh	seanh	"When creating or updating a Vocabulary via the API, the user should be able to pass in a list of tags that will replace the vocabulary's current tags.
+
+If they just want to change the vocabulary name, there should be a way to do that without deleting all its tags but without having to pass the complete list of tags to the API either."	enhancement	new	awaiting triage	current-ckan-sprint-2012-02-20	ckan		taxonomies		ckan	none

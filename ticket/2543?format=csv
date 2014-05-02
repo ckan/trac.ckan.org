@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2543,facet.sort is not available in the package_search action,icmurray,,"Not all solr facet parameters are available through the pcakage_search action.  In particular, `facet.sort` has been asked for; but this ticket should check to see if there are other parameters that would be easy to add too.
+
+See: http://wiki.apache.org/solr/SimpleFacetParameters#facet.sort",enhancement,new,awaiting triage,ckan-v1.9,ckan,,,rgrp,ckan,none

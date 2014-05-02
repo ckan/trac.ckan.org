@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1465,Upgrade the harvester to support publishers properly,thejimmyg,,"At the moment most of the harvesting functionality is only available to sysadmins. This is fine for most cases but going forward we will need to grant each publisher access to their own sources, harvest objects and harvest object errors. This will probably be done based on the groups refactor.
+
+One more pressing concern is giving DGU publishers the ability to make calls to /harvest/object/id. We want them to be able to see documents that faild validation and also to see *all* errors in each document.",enhancement,closed,awaiting triage,ckan-v1.7,ckan,fixed,,,ckan,none

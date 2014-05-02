@@ -1,0 +1,6 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+762,Permanently Read-Only CKAN instance,dread,,"A CKAN is used just for distributing metadata. Updates may still arrive through direct db manipulation, e.g.:
+ * another (but writable) CKAN instance is connected to the same db
+ * restoring database dumps from another CKAN db
+
+",story,closed,,,,invalid,,,,

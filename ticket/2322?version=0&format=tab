@@ -1,0 +1,17 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2322	Convenience offset on end of resource urls: /raw, /api	rgrp	kindly	"{{{
+/dataset/{id}/resource/{resource-id}/raw
+
+=> redirects to resource url (download)
+}}}
+
+
+{{{
+/dataset/{id}/resource/{resource-id}/api[/....]
+
+=> either redirects or directly serves /api/data/{resource-id}
+}}}
+
+Assigning for kindly for review.
+
+These would take about 20m to implement and would be *very* convenient from my experience of using the data API."	enhancement	new	awaiting triage	ckan-sprint-2012-04-30	ckan				ckan	none

@@ -1,0 +1,6 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+851,Link Checking,wwaites,wwaites,"revisit link checker from http://knowledgeforge.net/ckan/ckanext/file/tip/ckanext/link_checker.py
+
+revisit ollyc's parallel work
+
+look at how this gets used in practice (maybe deprecate in favour of curate tool (suitably wrapped to hide details from the user)",defect,closed,major,ckan-v1.3-sprint-1,DGU,fixed,,,,

@@ -1,0 +1,9 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+956,Add a resource group table.,kindly,kindly,"We need a way to group resources by various different factors. The most important of which is timeseries.
+
+The model will look like
+
+Package  <o2m>  resource_group <o2m> resource
+
+The use cases to this are outlined in this email. http://lists.okfn.org/pipermail/ckan-discuss/2011-February/000887.html
+",enhancement,closed,awaiting triage,ckan-v1.4-sprint-2,ckan,fixed,,,,

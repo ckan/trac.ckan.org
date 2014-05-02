@@ -1,0 +1,7 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+715,The group list page shall show the group title *or* group name,johnbywater,rgrp,"Symptom #1: Groups without titles don't get a clickable link, because there is no text. Defaulting to the group name would solve this trouble.
+Symptom #2: Package groups drop-down list show's 'None' when a group doesn't have a title.
+
+Therefore, we need to centralize presentation of group title, so it defers to group name. And we need tests.
+
+Also please sort groups by title on group list page.",defect,closed,critical,ckan-v1.4-sprint-2,ckan,fixed,wui ux,,,

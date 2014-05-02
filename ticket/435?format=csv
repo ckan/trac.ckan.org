@@ -1,0 +1,6 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+435,Switching between ckan instances causes orphaned postgres processes,dread,thejimmyg,"Analysis using pg_top reveals orphaed processes:
+
+https://trac.dataco.coi.gov.uk/projects/datagov/ticket/460#comment:6
+
+This followed switching ckan instances on the dgu machine. Do these hang around forever clogging up a db server? Can switching between instances be smoothed to avoid this?",defect,closed,awaiting triage,ckan-v1.4,ckan,wontfix,,,,

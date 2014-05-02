@@ -1,0 +1,2 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1372,Refactor archiver to work as a celery task,johnglover,johnglover,Take the resource archiver (currently part of ckanext-qa) and make it into a standalone extension that works as a celery task.,refactor,closed,major,ckan-sprint-2011-10-24,ckan,fixed,queue,,ckan,none

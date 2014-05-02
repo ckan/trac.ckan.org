@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1147,Add expired_id to all revision tables.,kindly,kindly,"Revision tables need expired_id to make querying history AND pending changes more efficient.
+
+This involves making a session extension and a large table migration.",enhancement,closed,awaiting triage,ckan-v1.5-sprint-1,ckan,fixed,,,ckan,none

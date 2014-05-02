@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #182: Improve openness icons</title>
+    <link>http://localhost/ticket/182</link>
+    <description>&lt;p&gt;
+Tick and cross aren't clear enough. Propose:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Icon for downloadability (nothing if absent ...(?))
+&lt;/li&gt;&lt;li&gt;Icon for open license? (Need something if closed ...)
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+Cost: 2h (?)
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/182</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Mon, 23 Nov 2009 13:18:02 GMT</pubDate>
+      <title>owner deleted</title>
+      <link>http://localhost/ticket/182#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/182#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;owner&lt;/strong&gt;
+              &lt;em&gt;dread&lt;/em&gt; deleted
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Tue, 06 Apr 2010 15:18:36 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/182#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/182#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Done as part of UI overhaul for v0.11 around xmas. Current openness icons seem good enough.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

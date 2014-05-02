@@ -1,0 +1,2 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+326	Centralise importation of json library	dread	dread	Later versions of python use json which is better than simplejson, but it must be kept as an option for compatibility. So centralise the import of json to ckan.lib.helpers.	task	closed	minor	v1.1	ckan	fixed				

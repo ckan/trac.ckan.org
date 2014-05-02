@@ -1,0 +1,6 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2852	better message for trying to refresh inactive sources in harvest	shevski	toby	"Currently if you try to refresh (i.e. schedule the harvester to re-run) an inactive source (one who's state is 'withdrawn' - e.g. http://s031.okserver.org:2375/harvest/3feea629-32d8-4431-9957-9f31d32864f1)
+
+you get the error message: ""An error occurred: [Can not create jobs on inactive sources]""
+
+This could be better and not red, e.g. and info box (maybe yellow) saying that ""Cannot re-run harvesting on inactive sources. Please first change the status to 'active'"""	enhancement	closed	awaiting triage	demo phase 3	ckan	fixed	demo-theme	amercader	ckan	none

@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1500,Slug API calls tidy up,dread,dread," * API call documented but don't exist any more: dataset create_slug
+ * API call not documented but exists: is_slug_valid
+ * API call not documented, badly sited in API and using custom code in controller (not logic layer): /package/autocomplete",defect,closed,minor,ckan-sprint-2011-12-05,ckan,fixed,,,ckan,none

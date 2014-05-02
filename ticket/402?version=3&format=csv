@@ -1,0 +1,16 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+402,Write archival/caching worker,pudo,pudo,"Write a worker that scans all packages in a ckan instance and uploads the data to storage.ckan.net or another suitable storage system.
+
+  * Naming scheme?
+    * Bucket: {ckan-instance-id}-{package-name}? {ckan-instance-id}-{package-id}?
+      * What happens if names change
+    * File: filename? hash?
+  * Store hash back on ckan instance?
+
+The caching worker will consumer update notifications and fetch packages. 
+
+Extra points for: 
+
+ * Properly checking for source file modification (Last-modified, Etag)  
+ * Using PIP VCS Backends for retrieval
+ * OFS/S3 Storage ",task,new,critical,ckan-v1.3,ckan,,,,,

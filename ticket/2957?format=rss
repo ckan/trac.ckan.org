@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2957: New datastore on postgres prior to 9.0</title>
+    <link>http://localhost/ticket/2957</link>
+    <description>&lt;p&gt;
+The &lt;tt&gt;&lt;/tt&gt;GRANT SELECT ON ALL&lt;tt&gt;&lt;/tt&gt; and &lt;tt&gt;&lt;/tt&gt;ALTER DEFAULT PRIVILEGES&lt;tt&gt;&lt;/tt&gt; are not available in Postgres prior to version 9.0.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2957</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+ </channel>
+</rss>

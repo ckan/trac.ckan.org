@@ -1,0 +1,12 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1483	Tasks sometimes fail to update task_status table when trying to report a failure	johnglover	johnglover	"The error reports do not have a ""value"".  The original task in the task status table is not made and it tries to make a new task, but can't.
+
+Issue: why is the original task_status entry not made?
+
+kindly: there is a chance of course that the task is quicker than the plugin to get to the point where it needs to update the table.
+
+kindly: so we may have to find a way to update the task status before we run the task.
+
+kindly: I think you can supply a task_id to celery. i.e we make our own guid as the task id. So we can use that one to populate the task status.
+
+"	defect	new	minor	ckan-sprint-2011-12-05	ckan		task		ckan	none

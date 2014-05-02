@@ -1,0 +1,13 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+700,Groups in package form,dread,pudo,"Editing groups in forms doesn't work for me, with latest code from this morning:
+
+ 1. Clean db
+ 2. paster create-test-data
+ 3. paster sysadmin create http://davidread.myopenid.com/
+ 4. paster serve development.ini
+ 5. In browser, log in to CKAN
+ 6. Create new package: name=abc group=Roger's books
+ 7. [Preview] - yes group appears
+ 8. [Save] - shows package and group hasn't appeared ERROR
+ 9. Check http://127.0.0.1:5000/api/rest/package/abc and reedit package it also doesn't appear here either.
+",bug,new,blocker,iati-3,ckan,,,,,

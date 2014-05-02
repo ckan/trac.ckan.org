@@ -1,0 +1,11 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+441	CKAN read-only state	dread	dread	"When performing maintenance on CKAN it may be necessary to make CKAN obviously read-only, telling the users and restricting access to 'edit' pages.
+
+Examples of use:
+ * Administrator wants to upgrade CKAN or move it to another server. During this time the database is being administered and either edits are lost or can't be done.
+ * A CKAN is used just for distributing metadata and so is always read-only. Updates may still arrive through direct db manipulation, e.g.:
+   * another (but writable) CKAN instance is connected to the same db
+   * restoring database dumps from another CKAN db
+ * Should a security be breached, all editing could be stopped
+
+"	requirement	closed	awaiting triage	ckan-v1.3	ckan	duplicate				

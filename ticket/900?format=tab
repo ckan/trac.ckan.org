@@ -1,0 +1,4 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+900	Intermittent error with new revision not having id	dread		"There are still some intermittent errors due to objects not having a revision_id, if you save an object at the same time as the revision.  We add the uuid earlier to fix this.    https://bitbucket.org/kindly/vdm/changeset/0050d023ca4e.
+
+From David Raznick"	defect	closed	awaiting triage		ckan	fixed				

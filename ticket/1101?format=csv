@@ -1,0 +1,8 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1101,Integrate googlanalytics into site nav,sebbacon,,"There's a stats plugin (e.g. at http://trac.ckan.org/ticket/832).
+
+Output from the googleanalytics plugin should append to that page, if the stats plugin is present.
+
+Possibly the stats plugin and the googleanalytics plugin should be merged?
+
+Finally, if the stats plugin is active, then a link to the stats page should be added to the main site footer.",enhancement,new,awaiting triage,ckan-backlog,ckan,,,,ckanext-stats,none

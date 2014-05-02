@@ -1,0 +1,2 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1497,Suppress benign warnings,dread,dread,We really shouldn't have lots of benign stuff printed on stderr when we run every command. It confuses users and hides important stuff.,enhancement,closed,minor,ckan-sprint-2011-12-05,ckan,fixed,,,ckan,none

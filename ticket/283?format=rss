@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #283: Manage deletions of unwanted packages</title>
+    <link>http://localhost/ticket/283</link>
+    <description>&lt;h2 id="Usecase"&gt;Use case&lt;/h2&gt;
+&lt;p&gt;
+As a user I want to notify the CKAN admins of a spammed or unsuitable package for deletion.
+&lt;/p&gt;
+&lt;h2 id="Suggestedsolution"&gt;Suggested solution&lt;/h2&gt;
+&lt;p&gt;
+In the package view side-bar, there is a note: "To have this package completely removed, contact the [ca.ckan.net administrators admin@…]."
+&lt;/p&gt;
+&lt;h2 id="Othersolutions"&gt;Other solutions&lt;/h2&gt;
+&lt;p&gt;
+A more complicated solution would be to allow packages to be tagged for deletion, which would auto-alert administrators, and allow easier administration of this. But this might be overkill.
+&lt;/p&gt;
+&lt;p&gt;
+c.f. &lt;a class="ext-link" href="http://en.wikipedia.org/wiki/Deleting_an_article"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://en.wikipedia.org/wiki/Deleting_an_article&lt;/a&gt;
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/283</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Thu, 08 Apr 2010 08:36:57 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/283#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/283#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/283?action=diff&amp;amp;version=1"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Can I *strongly* suggest we just use the existing perfectly-good-system for flagging stuff called "tags" :)
+&lt;/p&gt;
+&lt;p&gt;
+I suggest we have agree in the community a standard set of "meta" tags for this kind of stuff. E.g. i'm already using the "duplicate" tag for marking duplicates (I also add in notes the link to duplicate package but that's optional). So I suggest we:
+&lt;/p&gt;
+&lt;ol&gt;&lt;li&gt;Create "reserved" tag prefix "meta"
+&lt;/li&gt;&lt;li&gt;Create following specific tags (suggestions/comments welcome):
+&lt;/li&gt;&lt;/ol&gt;&lt;ul&gt;&lt;li&gt;meta.duplicate - duplicate of another package. If possible
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+indicate in notes or an extras field (to be decided) what it is
+duplicate of
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;meta.spam
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+Editors can then just visit &lt;a class="ext-link" href="http://ckan.net/tag/read/meta.spam"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://ckan.net/tag/read/meta.spam&lt;/a&gt; and
+work through list of packages there.
+&lt;/p&gt;
+&lt;p&gt;
+If "push" notifications are required as well as "pull" then I suggest this be put in an external service (e.g. rss2email) rather than integrated into CKAN core.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Fri, 22 Jul 2011 09:05:26 GMT</pubDate>
+      <title>status changed; repo, theme, resolution set</title>
+      <link>http://localhost/ticket/283#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/283#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;repo&lt;/strong&gt;
+                set to &lt;em&gt;ckan&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;theme&lt;/strong&gt;
+                set to &lt;em&gt;none&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;wontfix&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

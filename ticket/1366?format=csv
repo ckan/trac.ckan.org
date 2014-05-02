@@ -1,0 +1,10 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1366,Search inside extra fields,dread,,"SOLR search doesn't support searching for part of an extra field, but it does for other fields.
+
+i.e. title=""One Two Three"" matches q=one AND q=title:one
+and geographic_coverage=""England Scotland"" matches q=England BUT NOT q=geographic_coverage:England
+
+This problem emerged when we went to SOLR in #1275 (CKAN 1.5a). Tests were skipped.
+
+This is could be a problem for DGU and maybe elsewhere.
+",defect,assigned,major,ckan-future,ckan,,,,ckan,none

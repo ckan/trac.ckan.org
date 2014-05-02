@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1285,Errors cause emails,dread,,"Currently a sysadmin gets an email when an exception is not caught. But there are occasions when we DO want to catch an exception so we can fail nicely for the user, but the sysadmin STILL gets an email to know to fix something.
+e.g. if there is an exception when search indexes a package. You want to catch the exception and still run any other notify calls.
+",enhancement,assigned,minor,ckan-future,ckan,,,,ckan,none

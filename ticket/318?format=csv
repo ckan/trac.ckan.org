@@ -1,0 +1,21 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+318,Insufficient validation of resource URIs,wwaites,johnglover,"The CKAN instance on data.gov.uk serves invalid URIs out of its API.
+
+For example the following can be found,
+
+http://uk.sitestat.com/homeoffice/rds/s?rds.hosb0509tabsxls&ns_type=pdf&ns_url=[http://www.homeoffice.gov.uk/rds/pdfs09/hosb0509tabs.xls]
+
+In this URI, the : and / characters after the ? in the query part are invalid according to section 3.4 of RFC2396
+
+Also URIs are not stripped of whitespace at the end.
+
+This causes problems when other software with a more correct interpretation of what a valid URI is attempts to consume data from CKAN. In this instance the Talis triplestore complains about such URIs.
+
+""Be liberal in what you accept and conservative in what you send"" would seem apt.
+
+== Actions ==
+
+  * Validation of urls as part of form entry or data loading
+    * Need to consider situation where this should happen out-of-band (i.e. we allow load even with invalid data and then flag bad dates in separate validation process). In general doubtful that we should do this here because url invalidity is such a big deal
+  * This code should support analysis of existing data so we can go through existing database and find invalid urls
+    * Also useful to have this so we can do out of band validation ",defect,closed,major,ckan-sprint-2011-10-28,ckan,fixed,,,ckan,none

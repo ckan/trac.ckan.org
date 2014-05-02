@@ -1,0 +1,6 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+992	Use X-forwarded-for whenever it is available to set remote IP address	rgrp	rgrp	"At the moment we only use X-forwarded to determine remote user address when remote-addr header is 127.0.0.1. However if a site is behind a cache remote_addr will always be the IP of the cache.
+
+We should fix this by using x-forwarded-for header whenever available and only use remote-addr when it is not available.
+
+Cost: 10m"	defect	closed	minor	ckan-v1.3	ckan	fixed	bitesize			

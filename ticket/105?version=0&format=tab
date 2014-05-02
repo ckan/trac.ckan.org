@@ -1,0 +1,12 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+105	Package groups/collections	rgrp	rgrp	"As a user I want to be able to create groups of packages.
+
+This functionality is different from tags:
+
+  * The ability to add a package to a given group is restricted whereas anyone can add a given tag to a package
+  * Specifically groups have owners and only the owners can add a package to that group
+
+Groups will be a first-order domain object in the wui.
+
+Cost: 3d
+"	enhancement	new	awaiting triage		ckan					

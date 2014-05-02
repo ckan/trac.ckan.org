@@ -1,0 +1,10 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+163	Regularly put CKAN RDF on Talis CC	dread	rgrp	"Related to:
+ticket:90 Link to RDF version of CKAN data on Talis Connected Commons
+
+Regularly re-upload the CKAN RDF data to Talis CC.
+
+In the long run may wish to only re-convert packages changed since the last upload. However given relatively smaller size of full dataset this optimization is probably not yet required.
+
+Cost: ? (1d+ depending on e.g. how easy integration with Talis CC is)
+"	enhancement	new	major		ckan					

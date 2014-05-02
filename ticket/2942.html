@@ -1,0 +1,315 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      #2942 (API POST barfs on interesting Content-Type headers)
+     – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="prev" href="2941.html" title="Ticket #2941" />
+        <link rel="last" href="3030.html" title="Ticket #3030" />
+        <link rel="help" href="../wiki/TracGuide.html" />
+        <link rel="alternate" href="2942%3Fformat=csv" type="text/csv" class="csv" title="Comma-delimited Text" /><link rel="alternate" href="2942%3Fformat=tab" type="text/tab-separated-values" class="tab" title="Tab-delimited Text" /><link rel="alternate" href="2942%3Fformat=rss" type="application/rss+xml" class="rss" title="RSS Feed" />
+        <link rel="next" href="2943.html" title="Ticket #2943" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/ticket.css" type="text/css" />
+        <link rel="first" href="1.html" title="Ticket #1" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript">
+      var auto_preview_timeout=2.0;
+      var form_token="93d81ccf9a7bb1c456462f62";
+    </script>
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script><script type="text/javascript" src="../chrome/common/js/wikitoolbar.js"></script><script type="text/javascript" src="../chrome/common/js/resizer.js"></script><script type="text/javascript" src="../chrome/common/js/auto_preview.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("div.description").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $(".foldable").enableFolding(false, true);
+        var args = {realm: "ticket", id: 2942, escape_newlines: 0}
+        $("#comment").autoPreview("/wiki_render", args, function(textarea, text, rendered) {
+            $("#ticketchange div.comment").html(rendered);
+            if (rendered)
+              $("#ticketchange").show();
+            else if ($("#ticketchange ul.changes").length == 0)
+              $("#ticketchange").hide();
+        });
+        $("#trac-comment-editor textarea").autoPreview("/wiki_render", args,
+                                                       function(textarea, text, rendered) {
+          var comment = $("#trac-comment-editor").next("div.comment");
+          comment.html(rendered);
+          if (rendered)
+            comment.show();
+          else
+            comment.hide();
+        });
+        $("#modify").parent().toggleClass("collapsed");
+        $(".trac-topnav a").click(function() { $("#modify").parent().removeClass("collapsed"); });
+        /* only enable control elements for the currently selected action */
+        var actions = $("#action input[name='action']");
+        function updateActionFields() {
+          actions.each(function () {
+            $(this).siblings().find("*[id]").enable($(this).checked());
+            $(this).siblings().filter("*[id]").enable($(this).checked());
+          });
+        }
+        actions.click(updateActionFields);
+        updateActionFields();
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="../wiki/TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li class="active"><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="2941.html" title="Ticket #2941">Previous Ticket</a></span></li><li class="last"><span><a class="next" href="2943.html" title="Ticket #2943">Next Ticket</a> &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="ticket">
+      <h1 id="trac-ticket-title">
+          <a href="2942.html">Ticket #2942</a>
+          <span class="status">(closed defect: wontfix)</span>
+      </h1>
+      <div id="ticket">
+  <div class="date">
+    <p>Opened <a class="timeline" href="../timeline%3Ffrom=2012-09-25T17:12:36Z&amp;precision=second.html" title="2012-09-25T17:12:36Z in Timeline">19 months</a> ago</p>
+    <p>Last modified <a class="timeline" href="../timeline%3Ffrom=2012-09-25T22:12:24Z&amp;precision=second.html" title="2012-09-25T22:12:24Z in Timeline">19 months</a> ago</p>
+  </div>
+  <h2 class="summary searchable">API POST barfs on interesting Content-Type headers</h2>
+  <table class="properties">
+    <tr>
+      <th id="h_reporter">Reported by:</th>
+      <td headers="h_reporter" class="searchable">
+        <a href="../query%3Fstatus=!closed&amp;reporter=dread.html">dread</a>
+      </td>
+      <th id="h_owner">Owned by:</th>
+      <td headers="h_owner">
+        <a href="../query%3Fstatus=!closed&amp;owner=dread.html">dread</a>
+      </td>
+    </tr>
+    <tr>
+        <th id="h_priority">
+          Priority:
+        </th>
+        <td headers="h_priority">
+              <a href="../query%3Fstatus=!closed&amp;priority=minor.html">minor</a>
+        </td>
+        <th id="h_milestone">
+          Milestone:
+        </th>
+        <td headers="h_milestone">
+              <a class="missing milestone"></a>
+        </td>
+    </tr><tr>
+        <th id="h_component">
+          Component:
+        </th>
+        <td headers="h_component">
+              <a href="../query%3Fstatus=!closed&amp;component=ckan.html">ckan</a>
+        </td>
+        <th id="h_keywords">
+          Keywords:
+        </th>
+        <td headers="h_keywords" class="searchable">
+        </td>
+    </tr><tr>
+        <th id="h_cc">
+          Cc:
+        </th>
+        <td headers="h_cc" class="searchable">
+        </td>
+        <th id="h_repo">
+          Repository:
+        </th>
+        <td headers="h_repo">
+              <a href="../query%3Fstatus=!closed&amp;repo=ckan.html">ckan</a>
+        </td>
+    </tr><tr>
+        <th id="h_theme">
+          Theme:
+        </th>
+        <td headers="h_theme">
+              <a href="../query%3Fstatus=!closed&amp;theme=none.html">none</a>
+        </td>
+        <th>
+        </th>
+        <td>
+        </td>
+    </tr>
+  </table>
+  <div class="description">
+    <h3 id="comment:description">
+      Description
+    </h3>
+    <div class="searchable">
+      <p>
+When POSTing to the API, if specified, the 'Content-Type' header must be blank or 'application/x-www-form-urlencoded'. Otherwise we get an error like: "Bad request - JSON Error: Could not extract request body data: Bad content type: \'; charset=utf-8\'""
+</p>
+<p>
+The problem is that this is a very reasonable header to send. Indeed requests 0.14 sends this particular header.
+</p>
+<p>
+This affects all versions of CKAN.
+</p>
+<p>
+This is due to webob/requests.py:1248 being pretty basic.
+</p>
+
+    </div>
+  </div>
+</div>
+          
+
+        <div>
+          <h2 class="foldable">Change History</h2>
+          <div id="changelog">
+              <div class="change" id="trac-change-1">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:1" class="cnum">
+      <a href="2942.html#comment:1">comment:1</a>
+    </span>
+                          <span>follow-up:</span>
+      <a href="2942.html#comment:2">↓ 2</a>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-09-25T22:06:31Z&amp;precision=second.html" title="2012-09-25T22:06:31Z in Timeline">19 months</a> ago by dread
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Status</strong>
+        changed from <em>new</em> to <em>closed</em>
+    </li><li>
+      <strong>Resolution</strong>
+        set to <em>wontfix</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+Unfortunately with a few hours hacking I couldn't find a way to get this version of <a class="missing wiki">WebOb?</a> to cope with this header. 
+</p>
+<p>
+The line I think it goes wrong is <tt>ctype = env.get('CONTENT_TYPE', 'application/x-www-form-urlencoded')</tt> in request.py, and the commented line above looks right, but wipes the request data for some reason. I tried intercepting the bad header and deleting it, but I couldn't do that before <a class="missing wiki">WebOb?</a> processed it, and couldn't persuade <a class="missing wiki">WebOb?</a> to reprocess it once the header was edited.
+</p>
+<p>
+I did write a failing test though if that is useful to someone in the future:
+</p>
+<pre class="wiki">diff --git a/ckan/tests/functional/api/test_api.py b/ckan/tests/functional/api/t
+index 539d184..b4cc4ce 100644
+--- a/ckan/tests/functional/api/test_api.py
++++ b/ckan/tests/functional/api/test_api.py
+@@ -49,6 +49,18 @@ class TestApi3(Api3TestCase, ApiTestCase):
+         assert_in('Bad request - JSON Error: No request body data',
+                   res.body)
+ 
++    def test_content_type_headers_can_be_sent(self):
++        '''#2942 Webob can only cope with very specific Content-Type header
++        values, so this tests that a work-around is in place.
++
++        This particular header value is the default for 'requests' 0.14.
++        '''
++        offset = self.offset('/action/package_search')
++        params = '%s=1' % json.dumps({'q': 'russian'})
++        headers = {'Content-Type': '; charset=utf-8'}
++        res = self.app.post(offset, params=params, headers=headers,
++                            status=[200])
++
+</pre><p>
+There is a clear error to the user:
+</p>
+<pre class="wiki">&gt;&gt;&gt; requests.post('http://datahub.io/api/action/package_list', data='{}').content
+'"Bad request - JSON Error: Could not extract request body data: Bad content type: \'; charset=utf-8\'"'
+</pre><p>
+The advice to users of requests would be to ensure they specify the content-type as follows:
+</p>
+<pre class="wiki">&gt;&gt;&gt; requests.post('http://datahub.io/api/action/package_list', data='{}', headers={'content-type': 'application/x-www-form-urlencoded'}).content
+</pre>
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-2">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:2" class="cnum">
+      <a href="2942.html#comment:2">comment:2</a>
+    </span>
+                        in reply to:
+      <a href="2942.html#comment:1">↑ 1</a>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-09-25T22:12:24Z&amp;precision=second.html" title="2012-09-25T22:12:24Z in Timeline">19 months</a> ago by dread
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <blockquote class="citation">
+<pre class="wiki">&gt;&gt;&gt; requests.post('http://datahub.io/api/action/package_list', data='{}', headers={'content-type': 'application/x-www-form-urlencoded'}).content
+</pre></blockquote>
+<p>
+Or even better:
+</p>
+<pre class="wiki">&gt;&gt;&gt; requests.post('http://datahub.io/api/action/package_list', data='{}', headers={'content-type': 'application/json'}).content
+</pre>
+    </div>
+
+              </div>
+          </div>
+        </div>
+      <div id="help"><strong>Note:</strong> See
+        <a href="../wiki/TracTickets.html">TracTickets</a> for help on using
+        tickets.</div>
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="first">
+          <a rel="nofollow" href="2942%3Fformat=csv" class="csv">Comma-delimited Text</a>
+        </li><li>
+          <a rel="nofollow" href="2942%3Fformat=tab" class="tab">Tab-delimited Text</a>
+        </li><li class="last">
+          <a rel="nofollow" href="2942%3Fformat=rss" class="rss">RSS Feed</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

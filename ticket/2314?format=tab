@@ -1,0 +1,10 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2314	parse_rfc_2822 tests failing in some timezones	seanh	icmurray	"These two tests:
+
+ckan.tests.lib.test_helpers.TestHelpers.test_parse_rfc_2822_gmt_case
+
+ckan.tests.lib.test_helpers.TestHelpers.test_parse_rfc_2822_with_offset
+
+have been failing in certain timezones. In the UK they pass, if you're in Germany they'll fail.
+
+The function being tested uses datetime.datetime.fromtimestamp() which uses the local time, but the tests compare the results against hardcoded strings, so the tests cannot work in different timezones."	defect	closed	major	ckan-sprint-2012-05-15	ckan	fixed	[0.5d]		ckan	none

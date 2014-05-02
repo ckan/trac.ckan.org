@@ -1,0 +1,6 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1543	Pagination links in the dataset listings don't keep the current filters	amercader	johnglover	"E.g.
+Pagination links on this page don't include groups=lodcloud
+http://thedatahub.org/dataset?groups=lodcloud
+
+Not sure if related to #1501 (probably not)"	defect	closed	major	ckan-sprint-2012-01-09	ckan	fixed		johnglover	ckan	none

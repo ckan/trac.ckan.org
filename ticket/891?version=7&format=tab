@@ -1,0 +1,48 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+891	Resource download worker daemon	pudo	johnglover	"Superticket: #1397
+
+Write a worker daemon to download all resources from a CKAN instance to a local repository. 
+
+== Questions == 
+
+ * Do we only want to download openly licensed information? ANS: no, we do everything (though do need to think about this re. IP issues)
+ * Should we have clever ways to dump APIs? ANS: no.
+ * Do we respect robots.txt even for openly licensed information? ANS: No (we're not crawling we're archiving)
+ * Use HTTP/1.1 Caching headers? ANS: if not changed since we last updated don't bother to recache. 
+  * Complete support for ETags
+  * Expires, Max-Age etc. 
+ * Check 
+
+== Functionality == 
+
+ * Download files via HTTP, HTTPS (will not do FTP)
+
+Process:
+
+ 1. [Archiver.Update checks queue (automated as part of celery)]
+ 2. Open url and get any info from resource on cache / content-length etc
+  1. If FAILURE status: update task_status table (could retry if not more than 3 failures so far). Report task failure in celery
+  2. Check headers for content-length and content-type ...
+    * IF: content-length > max_content_length: EXIT (store outcomes on task_status, and update resource with size and content-type and any other info we get?)
+    * ELSE: check content-type.
+      * IF: NOT data stuff (e.g. text/html) then EXIT. (store outcomes and info on resource)
+      * ELSE: archive it (compute md5 hash etc)
+    * IF: get hash from headers and hash unchanged GOTO step 4
+    * IF: get content-length and content-length unchanged GOTO step 4
+    * IF: max-age / expires / other cache headers show this has not changed since last check GOTO step 4
+ 3. Archive it: connect to storage system and store it. Bucket: from config, Key: /archive/{timestamp}/{resourceid}/filename.ext
+  * Add cache url to resource and updated date
+  * Add other relevant info to resource such as md5, content-type etc
+ 4. Update task_status
+  
+== Optional functionality ==
+
+ * If result object is HTML, search for references to ""proper data"" (CSV download pages etc.)
+ * Download from POST forms (accepting licenses or weird proprietary systems) 
+ * Support running on Google Apps Engine to save traffic costs.
+
+== Existing work == 
+
+ * https://bitbucket.org/okfn/ckanext-qa/overview
+ * out of date: https://bitbucket.org/pudo/ckanextarchive - Old archiver extension, largely experimental. 
+ * out of date: https://bitbucket.org/ollyc/ckan/changeset/1b16fbe9aa65 - Openness scores by ollyc"	task	assigned	critical	ckan-sprint-2011-10-24	ckan		queue		ckan	none

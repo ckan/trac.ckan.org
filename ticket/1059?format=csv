@@ -1,0 +1,2 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1059,Loader coping better with poor search indexing,dread,dread,"Loader currently checks for same name, but also should check for name_, name__ etc.",defect,closed,critical,ckan-v1.4-sprint-5,ckan,fixed,,,ckanext-importlib,none

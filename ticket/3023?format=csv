@@ -1,0 +1,2 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+3023,New methods on IPackageController to provide access to the data_dict,amercader,amercader,Extension hooking into the edit and create methods of the IPackageController interface receive the package object. This may not include all the fields that came from the form. The new extension points will pass the validated data_dict so extensions can have access to it,enhancement,new,awaiting triage,,ckan,,,kindly,ckan,none

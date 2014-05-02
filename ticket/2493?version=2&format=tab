@@ -1,0 +1,14 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2493	Demo site 404 needs some love	toby	aron.carroll	"templates/error_document_template.html
+
+I've converted the 404 page to the new style but we probably want to serve this as a 'full page' ie content is 100% page width not sidebar and primary content
+
+just go to a non-existant url to see
+
+Discusion:
+
+https://okfn.basecamphq.com/projects/9558659-demo-ckan-front-end/posts/63374042/
+
+Implementation:
+
+http://s031.okserver.org:2375/404"	enhancement	accepted	minor	current-ckan-sprint-2012-06-25	ckan		demo-theme		ckan	none

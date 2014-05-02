@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #819: Tag autocompletion widget broken</title>
+    <link>http://localhost/ticket/819</link>
+    <description>&lt;p&gt;
+The widget for tag autocompletion is broken in various ways.
+&lt;/p&gt;
+&lt;p&gt;
+For example, if I edit a package that is tagged "music", and just tab through the form fields to get to the Author field, then the widget changes to "industrial-music" as I tab through it.
+&lt;/p&gt;
+&lt;p&gt;
+Or if the tag is "foo bar" and I hit alt-right to jump to the end of the text field (with the intent of adding a third tag), then the contents change to "foo barbecue".
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/819</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>cygri</dc:creator>
+
+      <pubDate>Wed, 17 Nov 2010 14:40:23 GMT</pubDate>
+      <title>component changed</title>
+      <link>http://localhost/ticket/819#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/819#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;component&lt;/strong&gt;
+                changed from &lt;em&gt;component1&lt;/em&gt; to &lt;em&gt;ckan&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Wed, 12 Jan 2011 12:43:33 GMT</pubDate>
+      <title>type changed</title>
+      <link>http://localhost/ticket/819#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/819#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;type&lt;/strong&gt;
+                changed from &lt;em&gt;bug&lt;/em&gt; to &lt;em&gt;defect&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>thejimmyg</dc:creator>
+
+      <pubDate>Wed, 20 Jul 2011 15:48:44 GMT</pubDate>
+      <title>repo, theme, milestone set</title>
+      <link>http://localhost/ticket/819#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/819#comment:3</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;repo&lt;/strong&gt;
+                set to &lt;em&gt;ckan&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;theme&lt;/strong&gt;
+                set to &lt;em&gt;none&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                set to &lt;em&gt;ckan-backlog&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>thejimmyg</dc:creator>
+
+      <pubDate>Tue, 06 Dec 2011 11:37:15 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/819#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/819#comment:4</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+This issue is fixed. Further improvements to the UX of the autocomplete will be dealt with in other tickets.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

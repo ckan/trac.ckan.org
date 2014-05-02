@@ -1,0 +1,21 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2,Register as user on the service,johnbywater,somebody,"== As a ==
+
+Visitor
+
+== I want to ==
+
+Be able to register as a user on the service
+
+== So that ==
+
+One can login and be an authenticated user and perform the actions that only authenticated users can perform
+
+== Notes ==
+
+  * Registration involves the provisional of a minimal set of user details, namely:
+    1. username (unique in lifetime of the service)
+    2. fullname
+    3. email
+    4. password
+",enhancement,closed,major,milestone1,ckan,fixed,,,,

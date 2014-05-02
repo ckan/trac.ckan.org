@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      UiReviewNotes – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="help" href="TracGuide.html" />
+        <link rel="alternate" href="UiReviewNotes%3Fformat=txt" type="text/x-trac-wiki" title="Plain Text" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/wiki.css" type="text/css" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("#content").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $("#content").find(".wikianchor").each(function() {
+          $(this).addAnchor(babel.format(_("Link to #%(id)s"), {id: $(this).attr('id')}));
+        });
+        $(".foldable").enableFolding(true, true);
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last active"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="pagepath" class="noprint">
+  <a class="pathentry first" title="View WikiStart" href="../wiki.1.html">wiki:</a><a class="pathentry" href="UiReviewNotes.html" title="View UiReviewNotes">UiReviewNotes</a>
+</div>
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><a href="WikiStart.html">Start Page</a></li><li><a href="TitleIndex.html">Index</a></li><li class="last"><a href="UiReviewNotes%3Faction=history.html">History</a></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="wiki">
+      <div class="wikipage searchable">
+        
+          
+          <div class="trac-modifiedby">
+            <span><a href="UiReviewNotes%3Faction=diff&amp;version=2.html" title="Version 2 by dread">Last modified</a> <a class="timeline" href="../timeline%3Ffrom=2009-12-15T12:37:14Z&amp;precision=second.html" title="2009-12-15T12:37:14Z in Timeline">4 years</a> ago</span>
+            <span class="trac-print">Last modified on 12/15/09 12:37:14</span>
+          </div>
+          <div id="wikipage"><h1 id="CKANUIReview">CKAN UI Review</h1>
+<p>
+All these points have been converted into <a class="closed ticket" href="../ticket/214.html" title="enhancement: UI Review - General template (closed: fixed)">ticket:214</a> - <a class="closed ticket" href="../ticket/227.html" title="enhancement: UI Review - General checks (closed: fixed)">ticket:227</a>.
+</p>
+<p>
+General points
+</p>
+<ul><li>GUIDs are ugly. Can we, per default, display them truncated?
+</li><li>"You're currently in the X section" is largely unhelpful. Try and work out what the user might *actually* be doing, and suggest possible next steps/alternative actions, without such a stilted writing style.
+</li><li>Set meaningful title attributes on navigation links.
+</li><li>Do we really need to display "About CKAN" everywhere? Doesn't it get a little tired?
+</li><li>Perhaps an academic point, but users in general think of model objects as collections: /groups and /tags rather than /group and /tag. At the very least make the plural versions forward to the singular versions.
+</li><li>Not so keen on URLS such as /package/edit/mypackagename. These seem to be task-oriented rather than resource oriented (which would be /package/mypackagename/edit), and unstable: there is a common root for /package/edit/mypackage and /package/history/mypackage which is not reflected in the URL structure.
+</li><li>The "FAQ and Guide" is anything but.
+</li><li>There is huge inconsistency in the titles of pages across the site: to give one example "Edit Package:&#34; vs &#34;Package: mypkg [not linked]" vs "History - mypkg [linked to package page]"
+</li></ul><p>
+Home <a href="../index.html">/</a>
+</p>
+<ul><li>'Login via OpenID' -&gt; 'Login with OpenID'?
+</li></ul><ul><li>Make clearer possible actions on home page. Maybe move explanatory para below {search, browse recents, add} options?
+</li></ul><ul><li>Search
+<ul><li>allow clicking on 'only openly licensed'/'only downloadable' to select/deselect checkboxes: make them &lt;label&gt;s.
+</li><li>cut 'only's -- use word 'filter' instead
+</li><li>doesn't appear to match substrings!? A search for 'anna' doesn't return match the 'annakarenina' package.
+</li><li>autocomplete package names?
+</li></ul></li></ul><p>
+        
+</p>
+<ul><li>Search results page
+<ul><li>See below under "Packages:&#34; -&gt; &#34;Package search results page:"
+</li></ul></li></ul><ul><li>Recently changed
+<ul><li>What's with the blank entries?
+</li><li>Could we make this neater? Tabulate the information, and cut down on the visual impact of less relevant data (time, @-signs, etc).
+</li><li>"More..." what? -- make it clearer what this does.
+</li><li>/revision needs copyediting.
+</li></ul></li></ul><p>
+        
+Packages
+</p>
+<ul><li>Packages landing page <a href="http://localhost/package">package</a>
+<ul><li>Booooooring! Can we show some 'hottest'/'most recent' package lists here? Or something? Anything!
+</li><li>Propose three-column package listing: two lists of highest-scorers on some metric and last column is an invitation to register a new package, with a little copy explaining what's involved and why you'd want to.
+</li><li>Why can I search packages from the home page but not immediately from the packages index page? It's not like there's anything else going on here... Move contents of /package/search to here. This to go above the three-col stuff suggested above.
+</li></ul></li></ul><p>
+        
+</p>
+<ul><li>Package search results page <a href="http://localhost/package/search?q=something">package/search</a>
+<ul><li>need clearer delineation between search entry form and results.
+</li><li>0 results needs to be clearer, and the alternative suggestion: 'would you like to create a new package' needs to not look like a search result.
+</li><li>openness/downloadability ticks/crosses are totally inscrutable to non-techies (those who don't know about the title attribute). need better icons, and a key in a box on RHS.
+</li><li>maybe highlight two-tick entries with a particular colour, but the open knowledge badge is horrendous, and breaks visual cadence.
+</li><li>results data should be tabulated, with the project names and descriptions made most prominent. &lt;li&gt; blobs are unnecessary visual noise.
+</li><li>"N tags found" -- why do I care? this should be presented as "filter results by tag" -- very unlikely that I'm looking for a tag: I'm looking for a package, but tags might help me narrow down my search.
+</li><li>tags should be displayed more like the way they're displayed when you add them to a package (i.e. blue 'tag' background)
+</li><li>maybe links should go on the full titles? package names are less important to a user scanning the list: they could have less visual impact and come after the readable title.
+</li><li>pagination is currently lost in amongst the results list. needs to be *much* more obvious, and should appear top and bottom, or at the very least at the bottom!
+</li><li>copywriting: "Packages - Search" -&gt; "Find a package"
+</li></ul></li></ul><ul><li>"Browse packages" <a href="http://localhost/package/list">package/list</a>
+<ul><li>Same comments as package search listing in general.
+</li><li>Should have filter by name (à la KForge alphanum widget) and also by tag: list of most common tags in box on RHS?
+</li></ul></li></ul><p>
+        
+</p>
+<ul><li>Package page <a href="http://localhost/package/mypackagename">package/mypackagename</a>
+<ul><li>In general: a huge amount of visual and typographic noise: "Package:" is redundant.
+</li><li>"{edit}", "{history}" -- ugly, and it's not clear that these are primary actions on this page. Notably, why on earth is "make an enquiry with Is It Open?" bigger than these?
+</li><li>Openness/downloadability icons: need help, as discussed earlier
+</li><li>"Rating:" redundant, as is the second set of stars -- why can't both the display and rate widget
+</li><li>"Metadata:" technospeak, probably redundant.
+</li><li>&lt;li&gt; bullets add nothing.
+</li><li>Title, Version, URL can probably go in one line.
+</li><li>Resources can be made more prominent.
+</li><li>Author, author email and Maintainer, maintainer email can be merged.
+</li><li>Groups, tags in little boxes?
+</li><li>Notes made more delineated -- Markdown has the capacity to look like other parts of the page: perhaps monospace the typeface?
+</li><li>Don't show extras unless there are any.
+</li></ul></li></ul><p>
+        
+</p>
+<ul><li>Package edit page <a href="http://localhost/package/edit/mypackagename">package/edit/mypackagename</a>
+<ul><li>Fields could be grouped.
+</li><li>Inconsistent capitalisation (Url -&gt; URL).
+</li><li>Tag editor appears to break occasionally.
+</li><li>Perhaps move to two column forms to save vertical space?
+</li><li>Notes field to monospace?
+</li><li>Extras fields need some jQuery love -- shouldn't have a fixed number available.
+</li><li>Typography is a bit of a mess.
+</li></ul></li></ul><p>
+        
+</p>
+<ul><li>Package history page <a href="http://localhost/package/history/mypackagename">package/history/mypackagename</a>
+<ul><li>"Revisions" is redundant
+</li><li>"Compare" button is in a ridiculous place. It should be above/below (both) the table, but not *in* it!
+</li><li>Ditto to overall "Recent Changes" page comments w.r.t. timestamps, GUIDs, and (if poss) author links.
+</li></ul></li></ul><p>
+Tags
+</p>
+<ul><li>Tags landing page <a href="http://localhost/tag">tag</a>
+<ul><li>Currently this page serves *no* purpose other than to get in the way. Why can't I *both* search for tags *and* browse the list of tags right here? (In fact they're the same operation as far as a user is concerned).
+</li><li>Big cloud of tags (sorted by popularity/usage?) filterable with a search box.
+</li></ul></li></ul><p>
+        
+</p>
+<ul><li>Tags search page <a href="http://localhost/tag/search">tag/search</a> and list <a href="http://localhost/tag/list">tag/list</a> are both redundant and should be merged straight into <a href="http://localhost/tag">tag</a>.
+</li></ul><p>
+Groups
+</p>
+<ul><li>Groups landing page <a href="http://localhost/group">group</a>
+<ul><li>Yeesh! What's up with the typography for "Just login..."?
+</li><li>Propose another three column thing with (say) largest/most active groups and a "create your own group" column, with (again) a little copy explaining how/why you'd do this, and also that you'll need to log in before you can. Cut the scary italics.
+</li><li>Another case of &lt;li&gt; bullets adding nothing.
+</li></ul></li></ul><p>
+        
+Repository History <a href="http://localhost/revision">revision</a>
+</p>
+<ul><li>What is this page called? "Recent Changes", "Repository History", "/revision": standardise. Between the link in the nav and the page &lt;title&gt; particularly, but the route is also important. Perhaps /changes or something similar?
+</li><li>Pagination has similar issues to elsewhere. Also, most obvious here, is the fact that we don't need to display a link to every possible page. Please can we limit it to, say, a dozen nearby pages and an ellipsis.
+</li><li>Without looking at dates, its not clear whether I'm seeing most recent or oldest changes. Change pagination to say "Older"/"More recent" rather than "Previous"/"Next".
+</li><li>Table layout is pretty ugly (yes, I'm aware this is my fault).
+</li><li>Timestamps are horribly unreadable. At the absolute minimum get rid of the micros.
+</li><li>Can we link to an author page?
+</li><li>Atom feed should have a feed icon!
+</li><li>Why are we adding another &lt;link rel="alternate"&gt; to this page? We already have one for recent changes on every page in the site and the one we're adding has a less descriptive title. Which is correct? Use that one as a feed for every page.
+</li></ul></div>
+        
+        
+      </div>
+      
+
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="last first">
+          <a rel="nofollow" href="UiReviewNotes%3Fformat=txt">Plain Text</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

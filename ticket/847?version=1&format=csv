@@ -1,0 +1,18 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+847,CKAN search using SOLR backend,rgrp,pudo,"This is a meta-ticket to pull together all the work on SOLR as a backend for CKAN search. (Work on SOLR search has been going on since March of 2010).
+
+3 key aspects of this:
+
+  * Index package information in SOLR - ticket:353 - SOLR search indexing (index CKAN)
+    * Synchronously (generify Search Index update method to support SOLR or postgres?) - #317: Make search pluggable
+    * Asynchroously: via worker with queue
+     * #324 Search indexing using notifications
+     * #669: Refactor Solr (indexer) to become a generic worker
+  * In core support using SOLR backend as well as postgres for queries
+    * #317: Make search pluggable (?)
+  * Integrate into WUI (if changes needed)
+   * #672 - Facets in CKAN search results
+
+Extras:
+
+  * Solr index testing tool #431",enhancement,new,critical,ckan-v1.3-sprint-1,ckan,,,,,

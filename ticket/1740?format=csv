@@ -1,0 +1,14 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1740,Get rid of `from module import ...`,seanh,,"It's really bad to do {{{from module import *}}} and CKAN has a lot of them. I suggest a three-pronged approach:
+
+1. Don't add any more of them.
+
+2. When you're programming if you see an easy opportunity to remove one then do so.
+
+3. At some point we should task someone to go through the code and remove them all (which is what this ticket is for), but this will be a big job and may break things.
+
+We should also get rid of most or all of the {{{from module import foo}}} and {{{from module import foo, bar}}} statements.
+
+I think the right thing to do is just {{{import module}}} and then use {{{module.foo}}} in your code. But if you find yourself doing {{{module.foo.bar}}} then you may have a code smell.
+
+See: http://docs.python.org/dev/howto/doanddont.html",enhancement,new,awaiting triage,ckan-future,ckan,,refactoring,,ckan,none

@@ -1,0 +1,6 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2894,Empty lists get stripped from package dicst in package_show(),seanh,,"If there's an IDatasetForm plugin active with a form_to_db_schema(), then packages with e.g. no extras get the 'extras' key entirely stripped by the validation in package_show, which causes some tests to crash, e.g. in ckan/tests/functional/api/test_activity.py (if the tests are run with a suitable IDatasetForm plugin active).
+
+If a package has no extras the dict returned by package_show should still have an 'extras' key with an empty list as the value.
+
+Suspect this also effects packages with no tags, no groups, etc.",defect,new,awaiting triage,ckan-v1.8.1,ckan,,,,ckan,none

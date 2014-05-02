@@ -1,0 +1,18 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1352,Use logic functions instead of as_dict when indexing entities,amercader,,"The current search implementation uses the output of the the as_dict method of the domain Package object to update the index
+
+https://bitbucket.org/okfn/ckan/src/56c79e3fc44c/ckan/lib/search/index.py#cl-48
+
+It also uses package_to_api1 in the SynchronousSearch plugin:
+
+https://bitbucket.org/okfn/ckan/src/f9dfb0506594/ckan/lib/search/__init__.py#cl-93
+
+This prevents extensions from being able to index custom properties (e.g. faceting by custom extras not included in the model).
+
+The search should use the logic function to get the package properties:
+
+{{{
+get_action('package_show')(context,data_dict)
+}}}
+
+",enhancement,new,major,ckan-backlog,ckan,,search,david.raznick@… john.glover@…,ckan,none

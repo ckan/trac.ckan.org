@@ -1,0 +1,5 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1168,Test system for deb packaging,dread,thejimmyg,"Get buildbot to:
+ * build the deb packages
+ * install them into a fresh virtual machine
+ * run smoke tests on the installed ckan",enhancement,assigned,major,ckan-backlog,ckan,,,,ckan,none

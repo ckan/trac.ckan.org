@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+65,Add version attribute to package,rgrp,rgrp,"It is essential packages have a version attribute to assist in tracking releases etc (and to allow compatibility with other packaging systems e.g. distutils which is being used by datapkg).
+
+cost: 2h",enhancement,closed,blocker,v0.9,ckan,fixed,,,,

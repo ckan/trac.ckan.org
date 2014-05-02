@@ -1,0 +1,7 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+871	Check whether localhost-only exim installtions need upgrading too	nils.toedtmann		"The infamous [http://www.exim.org/lurker/message/20101207.215955.bb32d4f2.en.html exim bug] only needs one mail with prepared headers to travel through a exim system infect it. All local processes could do that, and some services (e.g. cron, webapps) send messages and might be convinced by malicious remote users to produce evil headers. 
+
+We should either rule out that this could happen on our systems, or upgrade all exims regardless of whether they are localhost-only or not.
+
+BTW did we already run a rootkit checker like [http://rkhunter.sourceforge.net/ Rootkit hunter] on eu1? If not we should maybe do it now - there was already an exploit out in the wild. ByteMark has (a) already observed infections and (b) notified us because they remotely fingerprinted our mailer to be exim<4.70 (our EHLO banner contains the exim version), just as anyone could. 
+"	defect	closed	awaiting triage		ckan	invalid		rgrp wwaites		

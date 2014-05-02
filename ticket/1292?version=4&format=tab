@@ -1,0 +1,11 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1292	Internationalization improvements	dread	dread	" * Review process of releases and updating strings (pot) and translations (po) files
+   * c.f. http://lists.okfn.org/pipermail/ckan-dev/2011-May/000718.html
+ * Get language changing thing to get home page to mostly work - push to key strings translated (or don't advertise the translation?)
+ * Review long list of strings for improvement
+   * Consolidate any?
+   * Get rid of i18n for strings in api
+   * Try and remove javascript
+   * Add in extensions
+ * #1374 Fix switching to en from other default language
+ * #1417 Fix browser language detection"	enhancement	new	major	ckan-backlog	ckan				ckan	none

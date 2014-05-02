@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1099,strange interactions between two browsers while playing with authz groups,johnlawrenceaspden,,"While playing with the authorization groups, trying to design tests, I found that it was necessary to log in as two different users with two different browsers. Often actions of one user would cause server errors in the other user's browser.
+
+I don't have a reproducible test case, but it happens fairly often so it shouldn't be too difficult to get one.",defect,closed,awaiting triage,,ckan,wontfix,,,ckan,none

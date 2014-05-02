@@ -1,0 +1,8 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1688	API for changing the permissions on an object	dread	dread	"We need an API for changing the authorization (permissions) on a model object.
+
+This was neglected in #1253 because of various changes to authz were looming. But six months later it still hasn't been done.
+
+Suggest this is just moving _add_user_object_role from ckan/lib/base.py to the logic layer, but no doubt it will be more complicated.
+
+Estimate: 3 days"	enhancement	closed	critical	ckan-sprint-2012-02-06	ckan	fixed		philipp.laemmel@…	ckan	none

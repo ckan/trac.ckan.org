@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2958,Uploading files with unicode characters in filename fails in CKAN 1.7 and 1.8,seanh,,"e.g. 2012_08(주요국가).xls
+
+I tested in CKAN 2.0 and it seemed to work fine there.",defect,new,awaiting triage,ckan-v1.8,ckan,,,,ckan,none

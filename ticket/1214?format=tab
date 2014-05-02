@@ -1,0 +1,9 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1214	API improvements (following javascript use)	dread	dread	"Notes on the CKAN API from Aron:
+ * Server returns text/html for errors even when ""Accept: application/json"" header is set.
+ * DELETE package request requires a Content-Length? Should be 405 Method Not Allowed?
+ * Tag returned as a JSON object when updating but as a string when requesting. Same with ""extras"" content.
+ * How to remove key from ""extras"" object? Passing None as described in the docs is invalid JSON and using null doesn't work.
+ * Tags return package names rather than ids when querying GET /tag/{id}
+ * Doesn't return rendered_text property on package update.
+ * Relationships use ""object"" key rather than id or package_id."	defect	closed	major		ckan	worksforme		aron@…	ckan	none

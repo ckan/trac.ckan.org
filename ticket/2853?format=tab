@@ -1,0 +1,8 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2853	unclear error message in refreshing harvest source	shevski	toby	"Tried to refresh the datagm harvest source to get error message:
+
+""An error occurred: [There already is an unrun job for this source]""
+
+This is unclear and not sure why it created an error. We should have something informative such as ""A harvest has already been scheduled for this source""
+
+Do we have a date/time for when this has been scheduled that we can display?"	enhancement	closed	awaiting triage	demo phase 3	ckan	fixed	demo-theme	amercader	ckan	none

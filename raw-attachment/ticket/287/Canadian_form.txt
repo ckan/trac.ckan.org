@@ -1,0 +1,261 @@
+[Re-worked fairly extensively 29 Mar 2010 - LB]
+
+Sections of this document:
+
+1. General Notes
+2. Proposed format for 'Register a New Package' form
+3. List of Federal Ministries
+4. List of Federal Agencies
+5. List of license types
+
+
+1. GENERAL NOTES
+-----------------------------
+
+We like the UK form a lot (http://ca.ckan.net/package/new?package_form=gov) but would like to rearrange the order of fields and would also like to drop a few unnecessary fields.
+
+Here are the fields that can be dropped (or hidden, whichever is easier):
+
+External reference
+Geographic coverage
+Temporal granularity
+National statistic
+Precision
+Taxonomy URL
+Author / Author email
+Maintainer
+
+
+
+2. Proposed Format for 'Register a  New Package' Form
+--------------------------------------------------------------------------------
+
+In this section, [square brackets] indicate technical notes/questions. Otherwise, all text should be displayed on the form (including instructions above/before fields and examples below/after).
+
+
+Short Unique Name (required) 
+Insert a short, descriptive title here, using only 'a-z', '0-9' and '-_'. Must be lowercase; no spaces allowed.
+______________________________
+(Example: geogratis-radarsat-mosaic)
+
+Title 
+Insert a more descriptive title - ideally the same as that used on the government website.
+_______________________________
+(Example: RADARSAT Ortho-rectified Mosaic of Canada, Lambert Conformal Conic, 1000 Metres)
+
+URL
+[Is it possible to add a default  'http://' to the URL & Resources  fields? Seems like it might reduce  error & make data entry a bit  quicker to boot.]
+The link to the government web page where the data is described and located. Do not link to the dataset itself.
+http://_________________________
+(Example: http://geogratis.cgdi.gc.ca/geogratis/en/collection/detail.do?id=9369)    
+
+Resources
+The link to the actual data set (if available)
+http://_________________________
+(Example: http://geogratis.cgdi.gc.ca/geogratis/en/collection/metadata.do;jsessionid=C7EC7276E2CC15D6A5201FA98F19406D?id=9369)
+
+ Format 
+Describe the format type, e.g. XML, CSV, SHAPE, etc.
+_______________
+
+ Description 
+ A description of the data. Feel free to copy the description on the government website.
+
+ Hash
+For über data geeks - if you don't know what this means, just leave it blank.
+
+
+Date Released
+Please enter in YYYY-MM-DD format.
+______________________________
+(Example: 2009-01-15)
+
+Date Updated
+Please enter in YYYY-MM-DD  format.
+______________________________
+(Example: 2010-04-12)
+
+Update frequency (only if available)
+______________________________
+(Example: monthly)
+
+Years covered [was 'Temporal coverage' in UK form]
+Please enter in YYYY - YYYY format.
+[David R: Can we validate these fields to force them to be entered as YYYY?]
+________ - ________
+(Example: 1992 - 1995)
+
+
+License 
+Select the license type.
+[drop-down…  See list at bottom of this document. Note: We will need to add to this over time.]
+
+Notes 
+A  more detailed description of the data can go here. Feel free to copy  & paste from the government website.
+___________________________
+
+Tags  (space separated list)     
+Include tags you think are descriptive and appropriate. Tags are space separated; to  join two words together, use a dash (-) or underscore (_).
+___________________________
+(Example:  radar radar-imagery radarsat-1 satellite-imagery mosaic  spectral-engineering geogratis canada gcmd earth-science)
+
+
+Level of Government [was 'Geographic granularity' in UK form]
+What level of government produced this data?
+[Pull-down menu with the following options: Federal, Provincial/Territorial, Regional, Municipal, Other - please specify]
+____ [pull-down] _____  or Other: ___ [text field] ___
+
+Federal Ministry (if applicable) [was 'Department' in UK form]
+Indicate the ministry responsible for the data.
+ [pull-down + other field]
+
+Federal Agency [was 'Agency' in UK form]
+Indicate the agency responsible for the data.
+[Can we make this a pull-down menu + other field? List appended below.]
+
+Maintainer email 
+Include an email address for the ministry or agency responsible for maintaining the data (if available).
+______________________
+
+
+
+3. LIST OF FEDERAL MINISTRIES
+------------------------------------------------
+Agriculture and Agri-Food
+Canadian Heritage
+Citizenship and Immigration
+Environment
+Finance
+Fisheries and Oceans
+Foreign Affairs and International Trade
+Health
+Human Resources and Social Development
+Indian and Northern Affairs
+Industry
+Intergovernmental Affairs
+Justice
+National Defence
+Natural Resources
+Public Safety
+Public Works and Government Services
+Transport
+Veterans Affairs
+Western Economic Diversification
+
+
+4. LIST OF FEDERAL AGENCIES
+----------------------------------------------
+
+    * Air Transport Security Authority
+    * Artists and Producers Professional Relations Tribunal
+    * Atlantic Canada Opportunities Agency
+    * Atlantic Pilotage Authority
+    * Atomic Energy of Canada Limited
+    * Auditor General
+    * Bank of Canada
+    * Border Services Agency
+    * Business Development Bank of Canada
+    * Business Service Centres
+    * Canada Information Office
+    * Canada Lands Company
+    * Canada-Newfoundland Offshore Petroleum Board
+    * Canada-Nova Scotia Offshore Petroleum Board
+    * Canada Post Corporation
+    * Canadian Broadcasting Corporation
+    * Cape Breton Development Office
+    * Centre for Occupational Health and Safety
+    * Centre on Substance Abuse
+    * Climate Change Secretariat
+    * Commercial Corporation
+    * Competition Bureau
+    * Competition Tribunal
+    * Copyright Board
+    * Correctional Service
+    * Council for the Arts
+    * Courts Administration Service
+    * Cultural Property Export Review Board
+    * Dairy Commission
+    * Defence Construction Canada
+    * Defence Research and Development Canada
+    * Deposit Insurance Corporation
+    * Economic Development Agency for Quebec Regions
+    * Elections Canada
+    * Enterprise Cape Breton Corporation
+    * Environment and Sustainable Development Commissioner
+    * Environmental Assessment Agency
+    * Environmental Protection Review Canada
+    * Ethics Commissioner
+    * Export Development Canada
+    * Federal Bridge Corporation Limited
+    * Federal Judicial Affairs Commissioner
+    * Federal Science for Sustainable Development
+    * Financial Consumer Agency
+    * Firearms Centre
+    * Food Inspection Agency
+    * Freshwater Fish Marketing Corporation
+    * Grain Commission
+    * Human Rights Commission
+    * Human Rights Tribunal
+    * Industrial Relations Board
+    * Institutes of Health Research
+    * Intergovernmental Conference Secretariat
+    * International Development Agency
+    * International Trade Tribunal
+    * Library and Archives Canada
+    * Mortgage and Housing Corporation
+    * National Capital Commission
+    * National Film Board
+    * National Parole Board
+    * National Research Council
+    * National Round Table on the Environment and the Economy
+    * National Search and Rescue Secretariat
+    * Natural Sciences and Engineering Research Council of Canada
+    * Northern Pipeline Agency
+    * Nuclear Safety Commission
+    * Official Languages Commissioner
+    * Pari-Mutuel Agency
+    * Parks Canada
+    * Pension Plan Investment Board
+    * Polar Commission
+    * Police College
+    * Privacy Commissioner of Canada
+    * Public Health Agency of Canada
+    * Public Service Commission of Canada
+    * Radio-Television and Telecommunications Commission
+    * Revenue Agency
+    * Review Tribunals Commissioner
+    * Royal Canadian Mint
+    * School of Public Service
+    * Social Sciences and Humanities Research Council
+    * Space Agency
+    * Standards Council of Canada
+    * Statistics Canada
+    * Tourism Commission
+    * Transportation Agency
+    * Transportation Safety Board
+    * Treasury Board Secretariat
+    * VIA Rail Canada
+    * Wheat Board 
+
+
+5. LIST OF LICENSE TYPES
+----------------------------------------
+
+None 
+I don't know
+Other
+Canadian Crown Copy Right 
+Geogratis License Agreement 
+No Fee Unrestricted Agriculture Canada License 
+Statistic Canada DLI License 
+Open Data Commons Public Domain Dedication and License 
+Creative Commons CCZero 
+Creative Commons Attribution 
+Creative Commons Attribution-ShareAlike 
+GNU Free Documentation License (GFDL)
+
+Background links - not important unless you are curious...
+Geogratis  Licence Agreement - http://geogratis.cgdi.gc.ca/geogratis/en/licence.jsp;jsessionid=F15D6495B46D656AD5862DE2B3424474
+No  Fee Unrestricted Agrigculture and Agri-Food Canada Licence Agreement For  Government Geographic  Data - http://www4.agr.gc.ca/AAFC-AAC/display-afficher.do?id=1226945498401&lang=eng
+StatsCan  Data Liberation Initiative (DLI) License
+

@@ -1,0 +1,2 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2655,updating datasets loses data,shevski,toby,"Editing and saving a resource wipes the data from the dataset. Happened with http://demo.ckan.org/dataset/my-tes I clicked on edit, changed a tag, clicked update and the data was gone!",defect,closed,blocker,,ckan,fixed,demo-theme,,ckan,none

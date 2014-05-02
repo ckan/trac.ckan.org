@@ -1,0 +1,14 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1375,Define new package id before sending it to the IPackageController plugins,amercader,amercader,"When creating a package, the package_create logic function sends the newly created package object to all plugins implementing the IPackageController interface
+
+https://bitbucket.org/okfn/ckan/src/93194933ea75/ckan/logic/action/create.py#cl-64
+
+At this point, the changes have not yet been commited and the id of the package is not set (It has a default value of make_uuid, which is set when commited). For this reason, plugins have no way of knowing the package id. E.g. the spatial query plugin needs to know this id to link the package extent to the actual package.
+
+One possible solution would be to set the package id in the data dict received by package_create (if it's not defined):
+
+{{{
+from ckan.model.types import make_uuid
+if not 'id' in data or not data['id']:
+   data['id'] = make_uuid()
+}}}",enhancement,closed,awaiting triage,ckan-sprint-2011-10-10,ckan,fixed,,,ckan,none

@@ -1,0 +1,14 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1601,[super] Well integrated Geo-spatial support including search,rgrp,amercader,"Need thoughts from Adria and James. RP thoughts
+
+ * Integration into WUI search: #1469
+ * JS Editor for adding/editing spatial attribute: #1818
+ * Theme/template hook for adding the map e.g. on dataset page (or elsewhere)
+ * Clear Documentation
+ * Deployment
+ * Announce post
+ * (?) Map page for stats section showing location of datasets
+
+Extras (probably separate):
+
+ * csw support ...",enhancement,new,awaiting triage,ckan-v1.7,ckan,,,,ckan,none

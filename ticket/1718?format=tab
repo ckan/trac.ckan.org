@@ -1,0 +1,9 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1718	Deprecated JS properties used	dread	aron.carroll	"I get this warning when viewing the home page:
+{{{
+event.layerX and event.layerY are broken and deprecated in WebKit. They will be removed from the engine in the near future.
+}}}
+CKAN: latest master
+Browser: Chrome Ubuntu
+
+Minor, but worth checking?"	defect	closed	minor		ckan	fixed			ckan	none

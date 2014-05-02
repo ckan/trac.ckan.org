@@ -1,0 +1,46 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1065	[super] Change Authorization System	johnlawrenceaspden		"Child tickets
+
+ * #1198 Publisher hierarchy
+ * #1050 Authz lib improvement and refactor of ckan/lib/authztool.py
+ * #1004 Group creation instructions missing
+ * #1099 Strange interactions between two browsers while playing with authz groups
+ * #1115 can have two authzgroups with the same name
+ * #1133 command line rights manipulation doesn't work
+ * #1138 minor navigations behave inconsistently
+
+Old ticket description:
+
+ 1. Change name of AuthzGroup to UserGroup to reflect what it is for
+
+ 2. Get rid of Roles, and replace them with direct assignment of actions, even though there are many actions, and extensions can add arbitrary ones.
+  * Debatable whether we should cut the number of actions to correspond to the three roles defined by the base system.
+  * Have a method of finding roles (or, in future, actions) relevant to a given protection object (e.g. FILE-UPLOAD(ER) not relevant to Packages)
+
+ 3. Change UserGroups so that they can have a hierarchical structure, 
+
+== More info on Hierarchy change ==
+
+e.g. UserGroup NHS contains the User nhsysadmin, as well as the 
+UserGroups SURREY and BERKS, which themselves contain users.
+
+One user in SURREY is Simon the Sysadmin, who has permissions on the whole system. His permissions should not leak out to other users or groups, and user permissions generally should not.
+
+Each Group has permissions over various objects.
+
+A user has permissions in his own right, and also has the permissions of his own group, and of all the groups contained in his group, and so on recursively.
+
+
+Algorithm:
+
+possible(user, action, package):
+   if user has permission for action on package
+      or any of have that permission
+         or any of his groups group-children (but not user-children), and so on recursively have the permission.
+
+
+
+
+
+
+"	enhancement	new	major	ckan-v1.4-sprint-6	ckan			dread	ckan	none

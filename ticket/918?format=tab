@@ -1,0 +1,8 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+918	Package preview doesn't show tags or groups	dread	memespring	"1. Edit any package
+2. Hit 'preview'
+Notice that the preview at the bottom doesn't show what tags or groups the package is in. 
+
+This is because the new design of the package view only has this info in the sidebar, which is not displayed in the preview.
+
+One might argue that this is ok because the tag is not a central part of the metadata, only used for searching, so it is ok not to preview it. But I wanted to check that this change was a conscious decision."	defect	closed	major		ckan	invalid		rgrp	ckan	none

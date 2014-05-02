@@ -1,0 +1,9 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+405,Retrieval options for package resources,rgrp,pudo,"Download Command (was install command) should support the following modes: 
+
+ * Download only the first listed resource (current behaviour, slightly arbitrary) 
+ * Download resources by interactive selection 
+ * Download resources by MIME type (cf #235) 
+ * Download all resources. 
+
+",requirement,new,awaiting triage,datapkg-0.8,dpm,,,,,

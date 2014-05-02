@@ -1,0 +1,15 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+31,Add a comment to a package,rgrp,somebody,"== As a ==
+
+Registered user
+
+== I want to ==
+
+Add a comment to a package
+
+== Notes ==
+
+  * The comment should be tagged with the username of the person making the comment
+  * Should we allow comments per release as well as per package? '''No''' for the time being.
+  * Comments will be 'flat' and '''not''' threaded (at least for the present)
+  * Comments should be plain text and so html should be escaped (in the future we might look to use some kind of formatter such as markdown)",enhancement,closed,minor,,ckan,wontfix,,,,

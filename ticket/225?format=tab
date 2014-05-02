@@ -1,0 +1,4 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+225	UI Review - swap URL order	dread	rgrp	"Not so keen on URLS such as /package/edit/mypackagename. These seem to be task-oriented rather than resource oriented (which would be /package/mypackagename/edit), and unstable: there is a common root for /package/edit/mypackage and /package/history/mypackage which is not reflected in the URL structure.
+
+"	enhancement	closed	awaiting triage		ckan	invalid			ckan	none

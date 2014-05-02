@@ -1,0 +1,2 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1014,"Decouple oAuth repoze extension from DataNO, write tests",sebbacon,sebbacon,"The current oAuth extension tightly couples repoze.who, ckan, and data.no.  These components should be decoupled; they also need more tests",defect,closed,awaiting triage,ckan-v1.4-sprint-3,DGU,fixed,,,,

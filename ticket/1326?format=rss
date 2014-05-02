@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1326: Write a set of auth plugin functions to integrate with Druapl</title>
+    <link>http://localhost/ticket/1326</link>
+    <description>&lt;p&gt;
+Ticket &lt;a class="closed ticket" href="http://localhost/ticket/787" title="task: Auth API (closed: fixed)"&gt;#787&lt;/a&gt; described join auth between CKAN and Drupal. The authentication part is live and implemented. This ticket is a placeholder for work that will be needed in the new auth system to link authorization functions to Drupal. It is dependent on the groups refactor.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1326</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+ </channel>
+</rss>

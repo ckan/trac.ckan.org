@@ -1,0 +1,371 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      #1192 (Convert CKAN Sphinx docs into admin/reference manual)
+     – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="prev" href="1191.html" title="Ticket #1191" />
+        <link rel="last" href="3030.html" title="Ticket #3030" />
+        <link rel="help" href="../wiki/TracGuide.html" />
+        <link rel="alternate" href="1192%3Fformat=csv" type="text/csv" class="csv" title="Comma-delimited Text" /><link rel="alternate" href="1192%3Fformat=tab" type="text/tab-separated-values" class="tab" title="Tab-delimited Text" /><link rel="alternate" href="1192%3Fformat=rss" type="application/rss+xml" class="rss" title="RSS Feed" />
+        <link rel="next" href="1193.html" title="Ticket #1193" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/ticket.css" type="text/css" />
+        <link rel="first" href="1.html" title="Ticket #1" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript">
+      var auto_preview_timeout=2.0;
+      var form_token="93d81ccf9a7bb1c456462f62";
+    </script>
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script><script type="text/javascript" src="../chrome/common/js/wikitoolbar.js"></script><script type="text/javascript" src="../chrome/common/js/resizer.js"></script><script type="text/javascript" src="../chrome/common/js/auto_preview.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("div.description").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $(".foldable").enableFolding(false, true);
+        var args = {realm: "ticket", id: 1192, escape_newlines: 0}
+        $("#comment").autoPreview("/wiki_render", args, function(textarea, text, rendered) {
+            $("#ticketchange div.comment").html(rendered);
+            if (rendered)
+              $("#ticketchange").show();
+            else if ($("#ticketchange ul.changes").length == 0)
+              $("#ticketchange").hide();
+        });
+        $("#trac-comment-editor textarea").autoPreview("/wiki_render", args,
+                                                       function(textarea, text, rendered) {
+          var comment = $("#trac-comment-editor").next("div.comment");
+          comment.html(rendered);
+          if (rendered)
+            comment.show();
+          else
+            comment.hide();
+        });
+        $("#modify").parent().toggleClass("collapsed");
+        $(".trac-topnav a").click(function() { $("#modify").parent().removeClass("collapsed"); });
+        /* only enable control elements for the currently selected action */
+        var actions = $("#action input[name='action']");
+        function updateActionFields() {
+          actions.each(function () {
+            $(this).siblings().find("*[id]").enable($(this).checked());
+            $(this).siblings().filter("*[id]").enable($(this).checked());
+          });
+        }
+        actions.click(updateActionFields);
+        updateActionFields();
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="../wiki/TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li class="active"><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="1191.html" title="Ticket #1191">Previous Ticket</a></span></li><li class="last"><span><a class="next" href="1193.html" title="Ticket #1193">Next Ticket</a> &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="ticket">
+      <h1 id="trac-ticket-title">
+          <a href="1192.html">Ticket #1192</a>
+          <span class="status">(closed task: fixed)</span>
+      </h1>
+      <div id="ticket">
+  <div class="date">
+    <p>Opened <a class="timeline" href="../timeline%3Ffrom=2011-06-17T15:29:53Z&amp;precision=second.html" title="2011-06-17T15:29:53Z in Timeline">3 years</a> ago</p>
+    <p>Last modified <a class="timeline" href="../timeline%3Ffrom=2011-08-01T09:37:42Z&amp;precision=second.html" title="2011-08-01T09:37:42Z in Timeline">3 years</a> ago</p>
+  </div>
+  <h2 class="summary searchable">Convert CKAN Sphinx docs into admin/reference manual</h2>
+  <table class="properties">
+    <tr>
+      <th id="h_reporter">Reported by:</th>
+      <td headers="h_reporter" class="searchable">
+        <a href="../query%3Fstatus=!closed&amp;reporter=annapowellsmith.html">annapowellsmith</a>
+      </td>
+      <th id="h_owner">Owned by:</th>
+      <td headers="h_owner">
+        <a href="../query%3Fstatus=!closed&amp;owner=annapowellsmith.html">annapowellsmith</a>
+      </td>
+    </tr>
+    <tr>
+        <th id="h_priority">
+          Priority:
+        </th>
+        <td headers="h_priority">
+              <a href="../query%3Fstatus=!closed&amp;priority=major.html">major</a>
+        </td>
+        <th id="h_milestone">
+          Milestone:
+        </th>
+        <td headers="h_milestone">
+              <a class="closed milestone" href="../milestone/ckan-sprint-2011-10-28.html">ckan-sprint-2011-10-28</a>
+        </td>
+    </tr><tr>
+        <th id="h_component">
+          Component:
+        </th>
+        <td headers="h_component">
+              <a href="../query%3Fstatus=!closed&amp;component=ckan.html">ckan</a>
+        </td>
+        <th id="h_keywords">
+          Keywords:
+        </th>
+        <td headers="h_keywords" class="searchable">
+        </td>
+    </tr><tr>
+        <th id="h_cc">
+          Cc:
+        </th>
+        <td headers="h_cc" class="searchable">
+        </td>
+        <th id="h_repo">
+          Repository:
+        </th>
+        <td headers="h_repo">
+              <a href="../query%3Fstatus=!closed&amp;repo=ckanclient.html">ckanclient</a>
+        </td>
+    </tr><tr>
+        <th id="h_theme">
+          Theme:
+        </th>
+        <td headers="h_theme">
+              <a href="../query%3Fstatus=!closed&amp;theme=none.html">none</a>
+        </td>
+        <th>
+        </th>
+        <td>
+        </td>
+    </tr>
+  </table>
+  <div class="description">
+    <h3 id="comment:description">
+      Description
+    </h3>
+    <div class="searchable">
+      <p>
+As part of the general documentation overhaul (<a class="closed ticket" href="1142.html" title="enhancement: [super] Major Overhaul and Extension of CKAN Documentation (closed: fixed)">ticket:1142</a>) we (APS and RGRP) want to convert the current Sphinx docs into:
+</p>
+<ul><li>An Admin Manual which is task-based and aims to cover everything a developer would need to know to set up and customize a CKAN install. 
+</li><li>A Reference Manual which is the primary source of reference for CKAN software - this includes API docs. 
+</li></ul><p>
+The current chapters of the Sphinx docs should be moved as follows:
+</p>
+<ul><li>index.rst - copy some stuff from README.txt, keep short
+</li><li>README.txt - split out installation - stop symlinking in, keep separate, write new intro in index.rst 
+</li><li>[NEW] install.rst - new file on installation
+</li><li>[NEW] theming.rst - move over from wiki
+</li><li>api - will stay (gradually move tutorials/getting started to wiki.ckan.net user guide)
+</li><li>i18n.rst: internationlization. say we have x langauges. just set lang config option. if your lang not there yet see wiki page for how to prepare a translation file
+</li><li>design.rst - REMOVE (can copy some over if you can be bothered to <a class="ext-link" href="http://wiki.ckan.net/Vision"><span class="icon">​</span>http://wiki.ckan.net/Vision</a> (all philosophical stuff should go!))
+</li><li>loaders.rst: move to wiki.ckan.net/Using_Loaders
+</li><li>feeds.rst: move to User Manual (CKAN_Feeds or just Feeds)
+</li><li>importer.rst: remove (don't even copy)
+</li><li>forms.rst: remove (ping david read and ckan-dev asking for replacement documentation -- do we need this in core ckan -- do we want pure js ...?). Suggest we start with (stub out) <a class="ext-link" href="http://wiki.ckan.net/Customizing_Forms"><span class="icon">​</span>http://wiki.ckan.net/Customizing_Forms</a>
+</li><li>forms-integration.rst: remove
+</li><li>model.rst: leave but move to reference (only for core devs)
+</li><li>load-testing.rst -&gt; move to <a class="ext-link" href="http://wiki.ckan.net/Load_Testing"><span class="icon">​</span>http://wiki.ckan.net/Load_Testing</a>
+</li><li>distributed.rst -&gt; remove
+</li><li>admin.html should consolidate with authorization.html (some of authorization.html is probably in ref section but howto in main manual) &lt;-- high priority
+</li><li>deb.html -&gt; go into reference (query james gardner on list about moving this to wiki?)
+</li></ul>
+    </div>
+  </div>
+</div>
+          
+
+        <div>
+          <h2 class="foldable">Change History</h2>
+          <div id="changelog">
+              <div class="change" id="trac-change-1">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:1" class="cnum">
+      <a href="1192.html#comment:1">comment:1</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-06-17T19:07:32Z&amp;precision=second.html" title="2011-06-17T19:07:32Z in Timeline">3 years</a> ago by dread
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+I really think forms are a key asset of CKAN, and keeping the docs about customising and integrating them is important - i.e. forms.rst and forms-integration.rst. There are ideas being suggested for replacing bits of front-end, but forms hard to do, and David's new system is a significant offering on top of the CKAN back-end, so it seems crazy to me to abandon it.
+</p>
+<p>
+forms.rst has been updated by David Raznick in the release_v1.4.1 branch.
+</p>
+<p>
+i18n.rst - include here the creation of the pot file, deploying a translation, transifex admin
+</p>
+<p>
+load-testing.rst - I think performance should be mentioned in the glossy guide (some sort of basic metrics of speed profile, to return web pages, run searches and API operations, for 100 or 1000 packages, on a given spec machine) and have it based on a report showing how we measured it. The report would look a bit like this file, and it might do as a stub, but it seems pretty lacking.
+</p>
+<p>
+distributed.rst - agreed, remove.
+</p>
+<p>
+design.rst - agreed, delete.
+</p>
+<p>
+loaders.rst / loader_scripts.rst - yes move to wiki
+</p>
+<p>
+feeds.rst - this should be split into a tutorial for the wiki and the reference page left in sphinx
+</p>
+<p>
+importer.rst - this should be moved to ckanext-importer/doc
+</p>
+<p>
+admin.html - this has already gone in 1.4.1
+</p>
+<p>
+authorization.rst - This is a bit jumbled. We're talking about changes to the code, so maybe not worth working hard to make this good, so I suggest leaving it, but delete the boring section "Requirements and Use Cases".
+</p>
+<p>
+deb.rst - this is an administrator task, so should stay why move this to the wiki?
+</p>
+<p>
+buildbot.rst - ok to stay here?
+</p>
+<p>
+vm.rst - I assume there's no problem with this
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-2">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:2" class="cnum">
+      <a href="1192.html#comment:2">comment:2</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-07-08T14:31:08Z&amp;precision=second.html" title="2011-07-08T14:31:08Z in Timeline">3 years</a> ago by thejimmyg
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Milestone</strong>
+        set to <em>ckan-backlog</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+This is now a child ticket of <a class="closed ticket" href="1142.html" title="enhancement: [super] Major Overhaul and Extension of CKAN Documentation (closed: fixed)">#1142</a>
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-3">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:3" class="cnum">
+      <a href="1192.html#comment:3">comment:3</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-07-20T15:14:23Z&amp;precision=second.html" title="2011-07-20T15:14:23Z in Timeline">3 years</a> ago by thejimmyg
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Milestone</strong>
+        changed from <em>ckan-backlog</em> to <em>ckan-current-sprint</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-4">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:4" class="cnum">
+      <a href="1192.html#comment:4">comment:4</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-08-01T09:37:42Z&amp;precision=second.html" title="2011-08-01T09:37:42Z in Timeline">3 years</a> ago by rgrp
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Status</strong>
+        changed from <em>new</em> to <em>closed</em>
+    </li><li>
+      <strong>Resolution</strong>
+        set to <em>fixed</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+Marking this as closed as Anna has completed and this is now deployed at <a class="ext-link" href="http://docs.ckan.org/"><span class="icon">​</span>http://docs.ckan.org/</a>.
+</p>
+
+    </div>
+
+              </div>
+          </div>
+        </div>
+      <div id="help"><strong>Note:</strong> See
+        <a href="../wiki/TracTickets.html">TracTickets</a> for help on using
+        tickets.</div>
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="first">
+          <a rel="nofollow" href="1192%3Fformat=csv" class="csv">Comma-delimited Text</a>
+        </li><li>
+          <a rel="nofollow" href="1192%3Fformat=tab" class="tab">Tab-delimited Text</a>
+        </li><li class="last">
+          <a rel="nofollow" href="1192%3Fformat=rss" class="rss">RSS Feed</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

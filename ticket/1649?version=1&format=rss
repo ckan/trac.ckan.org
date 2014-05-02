@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1649: Verify RDF Extension (ckanext-rdf) works</title>
+    <link>http://localhost/ticket/1649</link>
+    <description>&lt;ul&gt;&lt;li&gt;Make sure that the extension works as it should and isn't broken on current releases [3d]
+&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;Make it work with the EC schema, including extras [2d]
+&lt;/li&gt;&lt;/ul&gt;</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1649</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>ross</dc:creator>
+
+      <pubDate>Mon, 16 Jan 2012 10:18:35 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/1649#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1649#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1649?action=diff&amp;amp;version=1"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Sun, 04 Mar 2012 11:32:46 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1649#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/1649#comment:2</guid>
+      <description>
+        &lt;p&gt;
+A general comment: I wonder if we can pull the *core* part of that extension into core and strip out any external dependencies like rdflib. Specifically the 80% use of this extension is the DCAT read/write:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Get a Dataset / Resource etc as DCAT RDF (I'd suggest we *just* supply something simple like n3 or even json-ld (see below))
+&lt;/li&gt;&lt;li&gt;(Possibly not even essential) Consuming Dataset info in that format
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+And even more radical solution would be to simply use json-ld: &lt;a class="ext-link" href="http://json-ld.org/"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://json-ld.org/&lt;/a&gt; which would then just involve minors mods to our json output.
+&lt;/p&gt;
+&lt;p&gt;
+Having this in core (with option to enable?) would be a nice 80/20 (it was this feature that everyone asked for at the LOD meetup -- no-one mentioned SPARQL).
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>ross</dc:creator>
+
+      <pubDate>Mon, 05 Mar 2012 14:09:47 GMT</pubDate>
+      <title>status changed; milestone set</title>
+      <link>http://localhost/ticket/1649#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/1649#comment:3</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;assigned&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                set to &lt;em&gt;current-ckan-sprint-2012-03-19&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>ross</dc:creator>
+
+      <pubDate>Mon, 12 Mar 2012 10:19:37 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1649#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/1649#comment:4</guid>
+      <description>
+        &lt;p&gt;
+After looking at some options via &lt;a class="ext-link" href="http://trac.ckan.org/ticket/2209"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://trac.ckan.org/ticket/2209&lt;/a&gt; I think a simple RDF template or triple in an internal ckanext-semweb might indeed be the most appropriate way forward with this.
+&lt;/p&gt;
+&lt;p&gt;
+n3 sounds useful, but given we could allow people to specify an RDF template we may as well do that as well as it would then suffice for ecportal who appear to want rdf as well.
+&lt;/p&gt;
+&lt;p&gt;
+Will check out json-ld as an option too.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Mon, 12 Mar 2012 11:09:58 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1649#comment:5</link>
+      <guid isPermaLink="false">http://localhost/ticket/1649#comment:5</guid>
+      <description>
+        &lt;p&gt;
+Can you elucidate on this template idea? I was thiking we want specification/configto be in the form of mappings (e.g. field X is really type Y etc rather than a specific piece of rdf/xml or n3) though perhaps that makes more sense. Let's centralize discussion on this in &lt;a class="closed ticket" href="http://localhost/ticket/2209" title="enhancement: Object-&amp;gt;RDF mapping (closed: fixed)"&gt;#2209&lt;/a&gt;.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>ross</dc:creator>
+
+      <pubDate>Mon, 28 May 2012 11:41:14 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/1649#comment:6</link>
+      <guid isPermaLink="false">http://localhost/ticket/1649#comment:6</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;assigned&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

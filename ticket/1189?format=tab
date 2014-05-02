@@ -1,0 +1,4 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1189	Spideroak support in CKAN Storage	timmcnamara		"[http://spideroak.com Spideroak] is a bulk storage platform by a company that releases quite a lot of [https://spideroak.com/code free software], has an extensive [https://spideroak.com/diy/ developer API] with pricing of $10/100GB/month.
+
+The data store is optimised for bulk data storage and retrieval. This is the kind of use case that CKAN packages require. We don't need low latency. We are after low cost, high reliability solution."	enhancement	closed	awaiting triage		ckan	invalid	storage ext		ckan	none

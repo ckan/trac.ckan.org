@@ -1,0 +1,8 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1439	Action API discoverablility	dread		"A good service API needs to be discoverable, so you are not always having to refer to the documentation html.
+
+Maybe /api/action should return a list of actions available? (Currently this returns a 404.) 
+ * It would be nice to sort these into get/create/update/delete.
+ * #1438 Parameters for each of the actions must be discoverable too
+
+/api/action/{action_name} should also return the help text / parameters allowable. (Currently this returns 400 error)"	enhancement	new	major	ckan-backlog	ckan			kindly	ckan	none

@@ -1,0 +1,10 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1454	postgres search code/data removal	dread	dread	"We made SOLR the main and only supported way to do CKAN search three
+months ago (#1275), but I notice that we still have remnants of the
+postgres full-text search hanging around:
+ * model code (ckan/model/search_index.py)
+ * table in the database (package_search)
+The presence of these still create sqlalchemy warnings and add to our
+db, (& db backups etc), so it would be good to get rid of them if we
+are not using them. John says this can probably be removed
+"	enhancement	closed	minor	ckan-sprint-2011-11-21	ckan	fixed			ckan	none

@@ -1,0 +1,2 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+3007	Adding a dataset creates multiple activities	seanh		Adding a new dataset creates multiple activity stream activities, e.g. seanh created the dataset foo, seanh add the resource bar to the dataset foo, and seanh updated the dataset foo are all created when I add a new dataset. I wonder if these can be collapsed into a single activity.	enhancement	new	awaiting triage	ckan 2.0	ckan		activity_streams		ckan	none

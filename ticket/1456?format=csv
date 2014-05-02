@@ -1,0 +1,2 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1456,Use resource description instead of name if both are present,amercader,amercader,"If a resource has both description and name the name is used. Descriptions are generally more, well, descriptive, so let's use those.",enhancement,closed,minor,ckan-sprint-2011-11-21,ckan,fixed,ux,,ckan,none

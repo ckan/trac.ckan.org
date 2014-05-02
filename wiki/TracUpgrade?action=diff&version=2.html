@@ -1,0 +1,329 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+    <html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      TracUpgrade (diff) – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="help" href="TracGuide.html" />
+        <link rel="up" href="TracUpgrade%3Faction=history.html" title="Page history" />
+        <link rel="next" href="TracUpgrade%3Faction=diff&amp;version=3.html" title="Version 3" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/wiki.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/diff.css" type="text/css" />
+        <link rel="prev" href="TracUpgrade%3Faction=diff&amp;version=1.html" title="Version 1" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/diff.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="../chrome/common/css/diff.css" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last active"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="TracUpgrade%3Faction=diff&amp;version=1.html" title="Version 1">Previous Change</a></span></li><li><a href="TracUpgrade%3Faction=history.html" title="Page history">Wiki History</a></li><li class="last"><span><a class="next" href="TracUpgrade%3Faction=diff&amp;version=3.html" title="Version 3">Next Change</a> &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="wiki">
+      <h1>
+        Changes between
+          <a href="TracUpgrade%3Fversion=1.html">Version 1</a> and
+          <a href="TracUpgrade%3Fversion=2.html">Version 2</a> of
+          <a href="TracUpgrade%3Fversion=2.html">TracUpgrade</a>
+      </h1>
+      <form method="post" id="prefs" action="TracUpgrade%3Fversion=2.html"><div><input type="hidden" name="__FORM_TOKEN" value="93d81ccf9a7bb1c456462f62" /></div>
+        <div>
+          <input type="hidden" name="action" value="diff" />
+          <input type="hidden" name="version" value="2" />
+          <input type="hidden" name="old_version" value="1" />
+          
+  <label for="style">View differences</label>
+  <select id="style" name="style">
+    <option selected="selected" value="inline">inline</option>
+    <option value="sidebyside">side by side</option>
+  </select>
+  <div class="field">
+    <label><input type="radio" name="contextall" value="0" checked="checked" />
+             Show</label>
+      <label><input type="text" name="contextlines" id="contextlines" size="2" maxlength="3" value="2" />
+             lines around each change</label><br />
+    <label><input type="radio" name="contextall" value="1" />
+           Show the changes in full context</label>
+  </div>
+  <fieldset id="ignore">
+    <legend>Ignore:</legend>
+    <div class="field">
+      <input type="checkbox" id="ignoreblanklines" name="ignoreblanklines" />
+      <label for="ignoreblanklines">Blank lines</label>
+    </div>
+    <div class="field">
+      <input type="checkbox" id="ignorecase" name="ignorecase" />
+      <label for="ignorecase">Case changes</label>
+    </div>
+    <div class="field">
+      <input type="checkbox" id="ignorewhitespace" name="ignorewhitespace" />
+      <label for="ignorewhitespace">White space changes</label>
+    </div>
+  </fieldset>
+  <div class="buttons">
+    <input type="submit" name="update" value="Update" />
+  </div>
+
+        </div>
+      </form>
+      <dl id="overview">
+        <dt class="property time">Timestamp:</dt>
+        <dd class="time">
+            07/30/07 11:26:42 (<a class="timeline" href="../timeline%3Ffrom=2007-07-30T11:26:42Z&amp;precision=second.html" title="2007-07-30T11:26:42Z in Timeline">7 years</a> ago)
+        </dd>
+        <dt class="property author">Author:</dt>
+        <dd class="author">
+          trac
+        </dd>
+        <dt class="property message">Comment:</dt>
+        <dd class="message">
+          
+          <p>
+--
+</p>
+
+        </dd>
+      </dl>
+      <div class="diff">
+        <div class="legend" id="diff-legend">
+          <h3>Legend:</h3>
+          <dl>
+            <dt class="unmod"></dt><dd>Unmodified</dd>
+            <dt class="add"></dt><dd>Added</dd>
+            <dt class="rem"></dt><dd>Removed</dd>
+            <dt class="mod"></dt><dd>Modified</dd>
+          </dl>
+        </div>
+        <div class="diff">
+  <ul class="entries">
+      <li class="entry">
+        <h2 id="file0">
+          <a href="TracUpgrade%3Fversion=2.html">TracUpgrade</a>
+        </h2>
+        <table class="trac-diff inline" summary="Differences" cellspacing="0">
+              <colgroup><col class="lineno" /><col class="lineno" /><col class="content" /></colgroup>
+              <thead>
+                <tr>
+                  <th title="Version 1">
+                    <a href="TracUpgrade%3Fversion=1.html#L14">
+                      v1</a>
+                  </th>
+                  <th title="Version 2">
+                    <a href="TracUpgrade%3Fversion=2.html#L14">
+                      v2</a>
+                  </th>
+                  <td> </td>
+                </tr>
+              </thead>
+            <tbody class="unmod">
+                  <tr>
+                          <th>14</th><th>14</th><td class="l"><span>Get the new version of Trac, either by downloading an offical release package or by checking it out from the [http://projects.edgewall.com/trac/wiki/SubversionRepository Subversion repository].</span> </td>
+                  </tr><tr>
+                          <th>15</th><th>15</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="add">
+                  <tr class="first">
+                          <th> </th><th>16</th><td class="r"><ins>If you're doing a major version upgrade (such as from 0.8 to 0.9), it is ''highly'' recommended that you first remove the existing Trac code. To do this, you need to delete the `trac` directory from the Python `lib/site-packages` directory. You may also want to remove the Trac `cgi-bin`, `htdocs`, `templates` and `wiki-default` directories that are commonly found in a directory called `share/trac` (the exact location depends on your platform).</ins> </td>
+                  </tr><tr class="last">
+                          <th> </th><th>17</th><td class="r"><ins></ins> </td>
+                  </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>16</th><th>18</th><td class="l"><span>If you have a source distribution, you need to run</span> </td>
+                  </tr><tr>
+                          <th>17</th><th>19</th><td class="l"><span>{{{</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracUpgrade%3Fversion=1.html#L20">…</a></th>
+                  <th><a href="TracUpgrade%3Fversion=2.html#L22">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>20</th><th>22</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>21</th><th>23</th><td class="l"><span>to install the new version. If you've downloaded the Windows installer, you execute it, and so on.</span> </td>
+                  </tr>
+            </tbody><tbody class="rem">
+                  <tr class="first">
+                          <th>22</th><th> </th><td class="l"><del></del> </td>
+                  </tr><tr class="last">
+                          <th>23</th><th> </th><td class="l"><del>In any case, if you're doing a major version upgrade (such as from 0.8 to 0.9), it is ''highly'' recommended that you first remove the existing Trac code. To do this, you need to delete the `trac` directory from the Python `lib/site-packages` directory. You may also want to remove the Trac `cgi-bin`, `htdocs` and `templates` directories that are commonly found in a directory called `share/trac` (the exact location depends on your platform).</del> </td>
+                  </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>24</th><th>24</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>25</th><th>25</th><td class="l"><span>=== Upgrade the Trac Environment ===</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracUpgrade%3Fversion=1.html#L54">…</a></th>
+                  <th><a href="TracUpgrade%3Fversion=2.html#L54">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>54</th><th>54</th><td class="l"><span>The following sections discuss any extra actions that may need to be taken to upgrade to specific versions of Trac.</span> </td>
+                  </tr><tr>
+                          <th>55</th><th>55</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="add">
+                  <tr class="first">
+                          <th> </th><th>56</th><td class="r"><ins>== From 0.9.x to 0.10.x ==</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>57</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>58</th><td class="r"><ins>Due to some changes in the Wiki syntax, you may notice that certain parts of your pages no longer work as expected:</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>59</th><td class="r"><ins>&nbsp;* Previously, links to images would result in that image being embedded into the page. Since 0.10, links to images remain plain links. If you want to embed an image in the page, use the `[[Image]]` macro.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>60</th><td class="r"><ins>&nbsp;* You can no longer use `%20` in wiki links to encode spaces. Instead, you should quote the name containing spaces (for example, use `wiki:"My page"` instead of `wiki:My%20page`.)</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>61</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>62</th><td class="r"><ins>Several enhancements have been made to the version control subsystem, in particular for the support of scoped repositories has been improved. </ins> </td>
+                  </tr><tr>
+                          <th> </th><th>63</th><td class="r"><ins>It is recommended that you perform a [TracAdmin#InteractiveMode trac-admin] '''`resync`''' operation to take advantage of these improvements.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>64</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>65</th><td class="r"><ins>Also note that the argument list of the [TracAdmin trac-admin] '''`initenv`''' command has changed: there's a new argument for determining the type of version control system. The old usage was:</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>66</th><td class="r"><ins>{{{</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>67</th><td class="r"><ins>&nbsp; &nbsp;initenv &lt;projectname&gt; &lt;db&gt; &lt;repospath&gt; &lt;templatepath&gt;</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>68</th><td class="r"><ins>}}}</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>69</th><td class="r"><ins>The new usage is:</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>70</th><td class="r"><ins>{{{</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>71</th><td class="r"><ins>&nbsp; &nbsp;initenv &lt;projectname&gt; &lt;db&gt; &lt;repostype&gt; &lt;repospath&gt; &lt;templatepath&gt;</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>72</th><td class="r"><ins>}}}</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>73</th><td class="r"><ins>If you're using any scripts that automate the creation of Trac environments, you will need to update them. If you're using Subversion, specify `svn` for the `&lt;repostype&gt;` argument.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>74</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>75</th><td class="r"><ins>== From 0.9.3 to 0.9.4 ==</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>76</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>77</th><td class="r"><ins>There is a bug in Pysqlite 1.x that causes reports using the "%" character for `LIKE` clauses or date formatting to fail.&nbsp; You will need to use escape the percent characters with another: "%%".</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>78</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>79</th><td class="r"><ins>== From 0.9.x to 0.9.3 or later ==</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>80</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>81</th><td class="r"><ins>If you are using plugins you might need to upgrade them. See http://projects.edgewall.com/trac/milestone/0.9.3 for further details.</ins> </td>
+                  </tr><tr class="last">
+                          <th> </th><th>82</th><td class="r"><ins></ins> </td>
+                  </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>56</th><th>83</th><td class="l"><span>== From 0.9-beta to 0.9 ==</span> </td>
+                  </tr><tr>
+                          <th>57</th><th>84</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracUpgrade%3Fversion=1.html#L83">…</a></th>
+                  <th><a href="TracUpgrade%3Fversion=2.html#L110">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>83</th><th>110</th><td class="l"><span>}}}</span> </td>
+                  </tr><tr>
+                          <th>84</th><th>111</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="add">
+                  <tr class="first">
+                          <th> </th><th>112</th><td class="r"><ins>To update multiple database files at once on linux you may use the following command (replace {{{/var/trac}}} withe the location where your trac installtions reside):</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>113</th><td class="r"><ins>{{{</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>114</th><td class="r"><ins>&nbsp;$ find /var/trac/ -iname "trac.db" | xargs -i bash -c "mv {} {}.2; sqlite {}.2 .dump | sqlite3 {};"</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>115</th><td class="r"><ins>}}}</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>116</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>117</th><td class="r"><ins>Remember the give the webserver write permission to trac.db.</ins> </td>
+                  </tr><tr class="last">
+                          <th> </th><th>118</th><td class="r"><ins></ins> </td>
+                  </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>85</th><th>119</th><td class="l"><span>After testing that the conversion was successful, the `trac2.db` file can be deleted. For more information on the SQLite upgrade see http://www.sqlite.org/version3.html.</span> </td>
+                  </tr><tr>
+                          <th>86</th><th>120</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody>
+        </table>
+      </li>
+  </ul>
+</div>
+      </div>
+  </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

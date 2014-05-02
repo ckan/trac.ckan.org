@@ -1,0 +1,27 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1347	Exception caused by New Group form POST with bad formed parameter	dread	dread	"Exception caused by bots POSTing 'new group' form, but with bad (old-style) parameters.
+{{{
+<type 'exceptions.ValueError'>: invalid literal for int() with base 10: 'cache'
+...
+Module ckan.controllers.group:102 in new
+<<          if context['save'] and not data:
+                   return self._save_new(context)
+               
+               data = data or {}
+>>  return self._save_new(context)
+Module ckan.controllers.group:152 in _save_new
+<<          try:
+                   data_dict = clean_dict(unflatten(
+                       tuplize_dict(parse_params(request.params))))
+                   context['message'] = data_dict.get('log_message', '')
+                   group = create.group_create(data_dict, context)
+>>  tuplize_dict(parse_params(request.params))))
+Module ckan.logic:57 in tuplize_dict
+<<          for num, key in enumerate(key_list):
+                   if num % 2 == 1:
+                       key_list[num] = int(key)
+               tuplized_dict[tuple(key_list)] = value
+           return tuplized_dict
+>>  key_list[num] = int(key)
+ValueError: invalid literal for int() with base 10: 'cache'
+}}}"	defect	closed	minor	ckan-sprint-2011-10-28	ckan	fixed			ckan	none

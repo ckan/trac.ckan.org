@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2518,Create EC ODP CKAN release branch,johnglover,johnglover," * branch from 1.7.1
+ * apply CKAN patches that are current part of installation instructions
+ * create i18n patch so custom i18n directories can be specified via a config option",enhancement,closed,major,ckan-sprint-2012-06-25,ecportal,fixed,,,ckan,none

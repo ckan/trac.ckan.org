@@ -1,0 +1,15 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+852	Dataset upload feature (master ticket)	wwaites	wwaites	"* Upload - http://ckan.okfnpad.org/storage
+  * Create a package -> add a resource -> Oh, i haven't uploaded yet, 'upload here' ...
+  * ckan.net/upload/ -> standard upload form
+    * OFS + boto -> generate form key (and create the bucket if it doesn't exist? Or do we assume bucket already exists)
+    * ckan.net/api/utils/
+  * We want CKAN extension
+
+2 (4) use cases: (With and without access to auth keys.)
+  * upload form on ckan.ne (by default with key)
+  * datapkg upload (client) (by default without key) (plumbing done)
+
+1. Upload form on ckan.net (with access to keys)
+2. API for getting credentials for upload from ckan.net api (deprecate storage.ckan.net)
+"	defect	new	major	ckan-v1.3-sprint-1	DGU					

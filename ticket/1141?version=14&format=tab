@@ -1,0 +1,102 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1141	[super] Moderated Edits User Interface	johnglover		"'''Proposer''': John Glover[[BR]]
+'''Seconder''': James Gardner
+
+== Abstract ==
+
+We are trying to achieve these goals:
+ * To get people involved with making edits to CKAN metadata.
+ * To have an ownership model as to who can moderate and validate these changes
+ * To not put too huge a burden on these owners.
+
+This feature allows anyone to edit a package and create a new revision, but requires an owner/moderator to approve a revision before it is are made ""official"".
+
+There have been a lot of discussions around the revisioning system side of this ticket (CREP 0002) and I think these are now largely resolved. We now want to discuss the user interface.
+
+== The Problem ==
+
+We require the following functionality:
+
+ * Allow a group of changes to be stored as a new revision.
+ * Allow a linear stack of ""community"" revisions. 
+ * Provide a way for the editor and moderator to compare previous revisions to the current one.
+ * When a moderator approves a change it creates a new revision flagged ""moderated"" (this is analogous to a merge commit)
+ * Provide a way for the editor and moderator comment on revisions if necessary.
+
+Extra features:
+ * Need a way to summarise the changes (as part of the preview perhaps)
+ * Sysadmin needs to purge a revision completely
+
+== Specification ==
+
+
+
+=== UI/UX ===
+
+UI Mockup:
+
+[[Image(ModeratedEdits2.png)]]
+
+
+Revisions:
+
+ * Revisions are per package rather than per field.
+ * Internally CKAN has separate revisions for resources, extras and package metadata.  From a user's point of view this could be confusing to expose, so everything that they see on a package form when they hit save is a single revision.
+
+On the Edit page:
+
+  * We have a panel on the right, listing all the revisions with the current moderated one selected. Moderated revisions are highligted in some way (red and bold?).
+  * The values displayed in the form are by default populated from the latest revision (whether community or moderated)
+  * Under each field is a ""shadow"", showing the value of the field in the revision selected in the panel, if it is different from the value in the field. By default the shadow values are populated from the latest moderated revision which is the one selected in the revision panel by default too.
+  * When you change the value of a field, a shadow may appear or disappear accordingly. If they disappear a box saying that they are the same replaces it
+  * If you want to edit values from a previous revision, you first select that revision to get the shadows populated. There is a button named ""Replace fields with values from this revision"" under the revision list. You click this, a warning pops up and then you say ""Yes"". You then select the moderated revision again.
+  * We also allow package comments the same way as the todo extension works at the moment. Additionally, we need to be able to differentiate between what the moderator wrote and what a community member wrote, and so we may need to make a small change to the todo extension to facilitate this.
+  * In addition to package comments, each revision will have a revision log (analogous to a commit message).
+
+=== Technical Details ===
+
+ * This CREP will result in a new CKAN extension.
+ * It depends heavily on the new revisioning system (CREP0002), some of the details of which are yet to be finalised. 
+ * This CREP therefore requires working closely with David Raznick to come up with an API that the UI AJAX calls can use.
+ * We will then use suitable test data to mimic these API calls until CREP0002 is ready.
+
+== Why do it this way == 
+
+This hopefully provides a clear and consistent mechanism allowing both a community member to make new revisions and a moderator to view and approve revisions, with largely the same UI/UX.
+
+== Implementation plan ==
+
+=== Deliverables ===
+
+A new CKAN extension, consisting of:
+
+ * Code: Python, HTML, CSS, Javascript
+ * Unit tests
+ * Localization
+ * Documentation
+
+=== Participants ===
+
+John Glover to do it.
+
+=== Progress ===
+
+John has implemented the bulk of this UI. Just some things to tidy up before it is complete:
+
+ * Genshi stream filters to be updated with CKAN 1.5 / 1.5.1 templates
+ * history_ajax / read_ajax to be replaced with calls to Action API (or Util REST API)
+
+I've split these two off into a new ticket #1604.
+
+=== Related Progress ===
+
+The Todo extension is written and available at: [https://bitbucket.org/johnglover/ckanext-todo].
+
+In the section 'The Problem', under extra features, we mention a need for the sysadmin to be able to purge a revision already. This is already done.
+
+
+=== See also ===
+
+
+#1129 Backend work
+"	CREP	closed	major	ckan-backlog	ckan	fixed	ui		ckan	none

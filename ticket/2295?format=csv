@@ -1,0 +1,3 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2295,Migrate CKAN packaging and apt.ckan.org from dgu-buildbot,icmurray,icmurray," * Create Jenkins task for packaging CKAN
+ * ... and publishing to s3://apt.ckan.org",enhancement,closed,awaiting triage,ckan-sprint-2012-04-16,ckan,fixed,,,ckan,none

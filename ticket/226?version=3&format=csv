@@ -1,0 +1,14 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+226,UI Review - History,dread,nickstenning,"Repository History [/revision]
+ * What is this page called? ""Recent Changes"", ""Repository History"", ""/revision"": standardise. Between the link in the nav and the page <title> particularly, but the route is also important. Perhaps /changes or something similar?
+   * Will change page title on /revision/ to Revision History. Will not change route for the time being.
+ * ~~needs copyediting.~~
+ * ~~Pagination has similar issues to elsewhere. Also, most obvious here, is the fact that we don't need to display a link to every possible page. Please can we limit it to, say, a dozen nearby pages and an ellipsis.~~
+ * ~~Without looking at dates, its not clear whether I'm seeing most recent or oldest changes. Change pagination to say ""Older""/""More recent"" rather than ""Previous""/""Next"".~~ (wontfix: now have text saying we are showing most recent changes)
+ * Table layout is pretty ugly (yes, I'm aware this is my fault).
+   * wontfix - nothing better at the moment
+ * Timestamps are horribly unreadable. At the absolute minimum get rid of the micros. Hover for more detail? 
+ * Can we link to an author page? Yes!
+ * ~~Atom feed should have a feed icon!~~
+ * Why are we adding another <link rel=""alternate""> to this page? We already have one for recent changes on every page in the site and the one we're adding has a less descriptive title. Which is correct? Use that one as a feed for every page.
+",enhancement,new,critical,v1.1,ckan,,,,,

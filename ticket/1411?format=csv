@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1411,Force resource format to be lower case (also mimetype),rgrp,zephod,"Format should be lowercase. Automatically lower case (for extra points have a bit of javascript to force lower case when entering).
+
+ * Even more points: do a update on thedatahub repo to make all format lower case (or script this as an update?)",enhancement,new,awaiting triage,ckan-backlog,ckan,,,,ckan,none

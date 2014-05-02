@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      TracModPython – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="help" href="TracGuide.html" />
+        <link rel="alternate" href="TracModPython%3Fversion=1&amp;format=txt" type="text/x-trac-wiki" title="Plain Text" />
+        <link rel="up" href="TracModPython.html" title="View latest version" />
+        <link rel="next" href="TracModPython%3Fversion=2.html" title="Version 2" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/wiki.css" type="text/css" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("#content").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $("#content").find(".wikianchor").each(function() {
+          $(this).addAnchor(babel.format(_("Link to #%(id)s"), {id: $(this).attr('id')}));
+        });
+        $(".foldable").enableFolding(true, true);
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last active"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="pagepath" class="noprint">
+  <a class="pathentry first" title="View WikiStart" href="../wiki.1.html">wiki:</a><a class="pathentry" href="TracModPython.html" title="View TracModPython">TracModPython</a>
+</div>
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span class="missing">&larr; Previous Version</span></li><li><a href="TracModPython.html" title="View latest version">View Latest Version</a></li><li class="last"><span><a class="next" href="TracModPython%3Fversion=2.html" title="Version 2">Next Version</a> &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="wiki">
+        <br />
+        <table id="info" summary="Revision info">
+          <tbody>
+            <tr><th scope="row">Version 1 (modified by trac, <a class="timeline" href="../timeline%3Ffrom=2006-05-13T12:08:45Z&amp;precision=second.html" title="2006-05-13T12:08:45Z in Timeline">8 years</a> ago)
+               (<a href="TracModPython%3Faction=diff&amp;version=1.html">diff</a>)</th></tr>
+            <tr><td class="message">
+              <p>
+--
+</p>
+
+            </td></tr>
+          </tbody>
+        </table>
+      <div class="wikipage searchable">
+        
+          
+          
+          <div id="wikipage"><h1 id="Tracandmod_python">Trac and mod_python</h1>
+<p>
+Trac supports <a class="ext-link" href="http://www.modpython.org/"><span class="icon">​</span>mod_python</a>, which speeds up Trac's response times considerably and permits use of many Apache features not possible with <a class="wiki" href="TracStandalone.html">tracd</a>/mod_proxy.
+</p>
+<h2 id="Simpleconfiguration">Simple configuration</h2>
+<p>
+If you just installed mod_python, you may have to add a line to load the module in the Apache configuration:
+</p>
+<pre class="wiki">LoadModule python_module modules/mod_python.so
+</pre><p>
+A simple setup of Trac on mod_python looks like this:
+</p>
+<pre class="wiki">&lt;Location /projects/myproject&gt;
+   SetHandler mod_python
+   PythonHandler trac.web.modpython_frontend 
+   PythonOption TracEnv /var/trac/myproject
+   PythonOption TracUriRoot /projects/myproject
+&lt;/Location&gt;
+</pre><p>
+Note that the option <tt>TracUriRoot</tt> may or may not be necessary in your setup. Try without first, and if the URLs produced by Trac look wrong or if Trac does not seem to recognize the URLs correctly, add the <tt>TracUriRoot</tt> option.
+</p>
+<p>
+Configuring authentication works the same as for <a class="wiki" href="TracCgi.html#AddingAuthentication">CGI</a>:
+</p>
+<pre class="wiki">&lt;Location "/projects/myproject/login"&gt;
+  AuthType Basic
+  AuthName "myproject"
+  AuthUserFile /var/trac/myproject/.htaccess
+  Require valid-user
+&lt;/Location&gt;
+</pre><p>
+If the Trac installation isn't installed in your Python path, you'll have to tell Apache where to find the Trac mod_python handler  using the <tt>PythonPath</tt> directive:
+</p>
+<pre class="wiki">&lt;Location /projects/myproject&gt;
+  ...
+  PythonPath "sys.path + ['/path/to/trac']"
+  ...
+&lt;/Location&gt;
+</pre><h2 id="Settingupmultipleprojects">Setting up multiple projects</h2>
+<p>
+The Trac mod_python handler handler supports a configuration option similar to Subversion's <tt>SvnParentPath</tt>, called <tt>TracEnvParentDir</tt>:
+</p>
+<pre class="wiki">&lt;Location /projects&gt;
+  SetHandler mod_python
+  PythonHandler trac.web.modpython_frontend 
+  PythonOption TracEnvParentDir /var/trac
+  PythonOption TracUriRoot /projects
+&lt;/Location&gt;
+</pre><p>
+When you request the <tt>/projects</tt> URL, you will get a listing of all subdirectories of the directory you set as <tt>TracEnvParentDir</tt>. Selecting any project in the list will bring you to the corresponding Trac environment.
+</p>
+<p>
+If you don't want to have the subdirectory listing as your projects home page you can use a
+</p>
+<pre class="wiki">&lt;LocationMatch "/.+/"&gt;
+</pre><p>
+This will instruct Apache to use mod_python for all locations different from root while having the possibility of placing a custom home page for root in your DocumentRoot folder.
+</p>
+<p>
+You can also use the same authentication realm for all of the projects using a <tt>&lt;LocationMatch&gt;</tt> directive:
+</p>
+<pre class="wiki">&lt;LocationMatch "/[^/]+/login"&gt;
+  AuthType Basic
+  AuthName "Trac"
+  AuthUserFile /var/trac/.htaccess
+  Require valid-user
+&lt;/LocationMatch&gt;
+</pre><h2 id="VirtualHostConfiguration">Virtual Host Configuration</h2>
+<p>
+Below is the sample configuration required to set up your trac as a virtual server (i.e. when you access it at the URLs like
+http://trac.mycompany.com):
+</p>
+<pre class="wiki">&lt;VirtualHost * &gt;
+    DocumentRoot /var/trac/myproject
+    ServerName trac.mycompany.com
+    &lt;Directory /&gt;
+        SetHandler mod_python
+        PythonHandler trac.web.modpython_frontend
+        PythonOption TracEnv /var/trac/myproject
+        PythonOption TracUriRoot /
+    &lt;/Directory&gt;
+    &lt;Location /login&gt;
+        AuthType Basic
+        AuthName "MyCompany Trac Server"
+        AuthUserFile /var/trac/myproject/.htusers
+        Require valid-user
+    &lt;/Location&gt;
+&lt;/VirtualHost&gt;
+</pre><h2 id="Troubleshooting">Troubleshooting</h2>
+<h3 id="Formsubmissionproblems">Form submission problems</h3>
+<p>
+If you're experiencing problems submitting some of the forms in Trac (a common problem is that you get redirected to the start page after submission), check whether your <tt>DocumentRoot</tt> contains a folder or file with the same path that you mapped the mod_python handler to. For some reason, mod_python gets confused when it is mapped to a location that also matches a static resource.
+</p>
+<h3 id="Using.htaccess">Using .htaccess</h3>
+<p>
+Although it may seem trivial to rewrite the above configuration as a directory in your document root with a <tt>.htaccess</tt> file, this does not work. Apache will append a "/" to any Trac URLs, which interferes with its correct operation.
+</p>
+<p>
+It may be possible to work around this with mod_rewrite, but I failed to get this working. In all, it is more hassle than it is worth. Stick to the provided instructions. :)
+</p>
+<h3 id="Win32Issues">Win32 Issues</h3>
+<p>
+If you run trac with mod_python (3.1.3 or 3.1.4) on Windows, 
+uploading attachments will <strong>not</strong> work.
+This is a known problem which we can't solve cleanly at the Trac level.
+</p>
+<p>
+However, there is a workaround for this at the mod_python level, 
+which is to apply the following patch <a class="ext-link" href="http://projects.edgewall.com/trac/attachment/ticket/554/util_py.patch"><span class="icon">​</span>attachment:ticket:554:util_py.patch</a> 
+to the (Lib/site-packages)/modpython/util.py file.
+</p>
+<p>
+If you don't have the <tt>patch</tt> command, that file can be replaced with the <a class="ext-link" href="http://svn.apache.org/viewcvs.cgi/httpd/mod_python/trunk/lib/python/mod_python/util.py?rev=103562&amp;view=markup"><span class="icon">​</span>fixed util.py</a> (fix which, although done prior to the 3.1.4 release, is <em>not</em> 
+present in 3.1.4).
+</p>
+<h3 id="OSXissues">OS X issues</h3>
+<p>
+When using mod_python on OS X you will not be able to restart Apache using <tt>apachectl restart</tt>. This is apparently fixed in mod_python 3.2, but there's also a patch available for earlier versions <a class="ext-link" href="http://www.dscpl.com.au/projects/vampire/patches.html"><span class="icon">​</span>here</a>.
+</p>
+<hr />
+<p>
+See also <a class="wiki" href="TracGuide.html">TracGuide</a>, <a class="wiki" href="TracInstall.html">TracInstall</a>, <a class="wiki" href="TracCgi.html">TracCgi</a>, <a class="wiki" href="TracFastCgi.html">TracFastCgi</a>
+</p>
+</div>
+        
+        
+      </div>
+      
+
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="last first">
+          <a rel="nofollow" href="TracModPython%3Fversion=1&amp;format=txt">Plain Text</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,7 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+572	Write CKAN package from metadata document	johnbywater	johnbywater	"The attributes we need to read in are being defined here:
+http://okfnpad.org/uklii
+
+The design advice is to prepare, test, and maintain a dictionary of XPaths for each of the attributes.
+
+Work effort is to be directed to the maintainability of the XPath statements. We need to know which are needed for which documents, and to have a way of preventing cruft."	story	closed		ckan-v1.3						

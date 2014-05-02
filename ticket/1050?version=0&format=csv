@@ -1,0 +1,11 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1050,refactoring of ckan/lib/authztool.py,johnlawrenceaspden,,"start looking at ckan/lib/authztool.py
+
+various administrative options are only available from the command line.
+
+This file should be refactored so that the relevant methods are callable from code, in preparations for the creation of a web gui administrative interface.
+
+The extracted methods should live in a new file ckan/lib/authz.py, called from authztool.py, which should do all command line parsing and printing.
+
+Tests should be made.
+",defect,new,awaiting triage,,ckan,,,,ckan,none

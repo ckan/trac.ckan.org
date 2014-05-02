@@ -1,0 +1,9 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1478	change package_group to members table	kindly	kindly	"This will comprise of the following steps.
+
+  * model migration.
+  * simplify revisioning  
+  * Remove any sqlalchemy relations from groups.
+  * change logic functions
+
+estimate 2d"	enhancement	closed	awaiting triage	ckan-sprint-2011-12-05	ckan	fixed			ckan	none

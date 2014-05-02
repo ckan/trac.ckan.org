@@ -1,0 +1,343 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+    <html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      TracNotification (diff) – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="help" href="TracGuide.html" />
+        <link rel="up" href="TracNotification%3Faction=history.html" title="Page history" />
+        <link rel="next" href="TracNotification%3Faction=diff&amp;version=4.html" title="Version 4" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/wiki.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/diff.css" type="text/css" />
+        <link rel="prev" href="TracNotification%3Faction=diff&amp;version=2.html" title="Version 2" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/diff.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="../chrome/common/css/diff.css" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last active"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="TracNotification%3Faction=diff&amp;version=2.html" title="Version 2">Previous Change</a></span></li><li><a href="TracNotification%3Faction=history.html" title="Page history">Wiki History</a></li><li class="last"><span><a class="next" href="TracNotification%3Faction=diff&amp;version=4.html" title="Version 4">Next Change</a> &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="wiki">
+      <h1>
+        Changes between
+          <a href="TracNotification%3Fversion=2.html">Version 2</a> and
+          <a href="TracNotification%3Fversion=3.html">Version 3</a> of
+          <a href="TracNotification%3Fversion=3.html">TracNotification</a>
+      </h1>
+      <form method="post" id="prefs" action="TracNotification%3Fversion=3.html"><div><input type="hidden" name="__FORM_TOKEN" value="93d81ccf9a7bb1c456462f62" /></div>
+        <div>
+          <input type="hidden" name="action" value="diff" />
+          <input type="hidden" name="version" value="3" />
+          <input type="hidden" name="old_version" value="2" />
+          
+  <label for="style">View differences</label>
+  <select id="style" name="style">
+    <option selected="selected" value="inline">inline</option>
+    <option value="sidebyside">side by side</option>
+  </select>
+  <div class="field">
+    <label><input type="radio" name="contextall" value="0" checked="checked" />
+             Show</label>
+      <label><input type="text" name="contextlines" id="contextlines" size="2" maxlength="3" value="2" />
+             lines around each change</label><br />
+    <label><input type="radio" name="contextall" value="1" />
+           Show the changes in full context</label>
+  </div>
+  <fieldset id="ignore">
+    <legend>Ignore:</legend>
+    <div class="field">
+      <input type="checkbox" id="ignoreblanklines" name="ignoreblanklines" />
+      <label for="ignoreblanklines">Blank lines</label>
+    </div>
+    <div class="field">
+      <input type="checkbox" id="ignorecase" name="ignorecase" />
+      <label for="ignorecase">Case changes</label>
+    </div>
+    <div class="field">
+      <input type="checkbox" id="ignorewhitespace" name="ignorewhitespace" />
+      <label for="ignorewhitespace">White space changes</label>
+    </div>
+  </fieldset>
+  <div class="buttons">
+    <input type="submit" name="update" value="Update" />
+  </div>
+
+        </div>
+      </form>
+      <dl id="overview">
+        <dt class="property time">Timestamp:</dt>
+        <dd class="time">
+            05/28/09 11:13:09 (<a class="timeline" href="../timeline%3Ffrom=2009-05-28T11:13:09Z&amp;precision=second.html" title="2009-05-28T11:13:09Z in Timeline">5 years</a> ago)
+        </dd>
+        <dt class="property author">Author:</dt>
+        <dd class="author">
+          trac
+        </dd>
+        <dt class="property message">Comment:</dt>
+        <dd class="message">
+          
+          <p>
+--
+</p>
+
+        </dd>
+      </dl>
+      <div class="diff">
+        <div class="legend" id="diff-legend">
+          <h3>Legend:</h3>
+          <dl>
+            <dt class="unmod"></dt><dd>Unmodified</dd>
+            <dt class="add"></dt><dd>Added</dd>
+            <dt class="rem"></dt><dd>Removed</dd>
+            <dt class="mod"></dt><dd>Modified</dd>
+          </dl>
+        </div>
+        <div class="diff">
+  <ul class="entries">
+      <li class="entry">
+        <h2 id="file0">
+          <a href="TracNotification%3Fversion=3.html">TracNotification</a>
+        </h2>
+        <table class="trac-diff inline" summary="Differences" cellspacing="0">
+              <colgroup><col class="lineno" /><col class="lineno" /><col class="content" /></colgroup>
+              <thead>
+                <tr>
+                  <th title="Version 2">
+                    <a href="TracNotification%3Fversion=2.html#L19">
+                      v2</a>
+                  </th>
+                  <th title="Version 3">
+                    <a href="TracNotification%3Fversion=3.html#L19">
+                      v3</a>
+                  </th>
+                  <td> </td>
+                </tr>
+              </thead>
+            <tbody class="unmod">
+                  <tr>
+                          <th>19</th><th>19</th><td class="l"><span>&nbsp;* '''smtp_enabled''': Enable email notification.</span> </td>
+                  </tr><tr>
+                          <th>20</th><th>20</th><td class="l"><span>&nbsp;* '''smtp_server''': SMTP server used for notification messages.</span> </td>
+                  </tr>
+            </tbody><tbody class="add">
+                  <tr class="last first">
+                          <th> </th><th>21</th><td class="r"><ins>&nbsp;* '''smtp_port''': (''since 0.9'') Port used to contact the SMTP server.</ins> </td>
+                  </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>21</th><th>22</th><td class="l"><span>&nbsp;* '''smtp_user''': (''since 0.9'') User name for authentication SMTP account.</span> </td>
+                  </tr><tr>
+                          <th>22</th><th>23</th><td class="l"><span>&nbsp;* '''smtp_password''': (''since 0.9'') Password for authentication SMTP account.</span> </td>
+                  </tr><tr>
+                          <th>23</th><th>24</th><td class="l"><span>&nbsp;* '''smtp_from''': Email address to use for ''Sender''-headers in notification emails.</span> </td>
+                  </tr>
+            </tbody><tbody class="add">
+                  <tr class="last first">
+                          <th> </th><th>25</th><td class="r"><ins>&nbsp;* '''smtp_from_name''': Sender name to use for ''Sender''-headers in notification emails.</ins> </td>
+                  </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>24</th><th>26</th><td class="l"><span>&nbsp;* '''smtp_replyto''': Email address to use for ''Reply-To''-headers in notification emails.</span> </td>
+                  </tr><tr>
+                          <th>25</th><th>27</th><td class="l"><span>&nbsp;* '''smtp_default_domain''': (''since 0.10'') Append the specified domain to addresses that do not contain one. Fully qualified addresses are not modified. The default domain is appended to all username/login for which an email address cannot be found from the user settings.</span> </td>
+                  </tr><tr>
+                          <th>26</th><th>28</th><td class="l"><span>&nbsp;* '''smtp_always_cc''': List of email addresses to always send notifications to. ''Typically used to post ticket changes to a dedicated mailing list.''</span> </td>
+                  </tr><tr>
+                          <th>27</th><th>29</th><td class="l"><span>&nbsp;* '''smtp_always_bcc''': (''since 0.10'') List of email addresses to always send notifications to, but keeps addresses not visible from other recipients of the notification email </span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>28</th><th> </th><td class="l"><span>&nbsp;* '''always_notify_reporter''':&nbsp; Always send notifications to any address in the reporter field.</span> </td>
+                      </tr><tr>
+                        <th>29</th><th> </th><td class="l"><span>&nbsp;* '''always_notify_owner''': (''since 0.9'') Always send notifications to the address in the owner field.</span> </td>
+                      </tr><tr>
+                        <th>30</th><th> </th><td class="l"><span>&nbsp;* '''always_notify_updater''': (''since 0.10'') Always send a notification to the updater of a ticket.</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>30</th><td class="r"><span>&nbsp;* '''smtp_subject_prefix''': (''since 0.10.1'') Text that is inserted before the subject of the email. Set to "!__default!__" by default.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>31</th><td class="r"><span>&nbsp;* '''always_notify_reporter''':&nbsp; Always send notifications to any address in the reporter field (default: false).</span> </td>
+                      </tr><tr>
+                        <th> </th><th>32</th><td class="r"><span>&nbsp;* '''always_notify_owner''': (''since 0.9'') Always send notifications to the address in the owner field (default: false).</span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>33</th><td class="r"><span>&nbsp;* '''always_notify_updater''': (''since 0.10'') Always send a notification to the updater of a ticket (default: true).</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>31</th><th>34</th><td class="l"><span>&nbsp;* '''use_public_cc''': (''since 0.10'') Addresses in To: (owner, reporter) and Cc: lists are visible by all recipients (default is ''Bcc:'' - hidden copy).</span> </td>
+                  </tr><tr>
+                          <th>32</th><th>35</th><td class="l"><span>&nbsp;* '''use_short_addr''': (''since 0.10'') Enable delivery of notifications to addresses that do not contain a domain (i.e. do not end with ''@&lt;domain.com&gt;'').This option is useful for intranets, where the SMTP server can handle local addresses and map the username/login to a local mailbox. See also `smtp_default_domain`. Do not use this option with a public SMTP server. </span> </td>
+                  </tr>
+            </tbody><tbody class="add">
+                  <tr class="last first">
+                          <th> </th><th>36</th><td class="r"><ins>&nbsp;* '''use_tls''': (''since 0.10'') Toggle to send notifications via a SMTP server using [http://en.wikipedia.org/wiki/Transport_Layer_Security TLS], such as GMail.</ins> </td>
+                  </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>33</th><th>37</th><td class="l"><span>&nbsp;* '''mime_encoding''': (''since 0.10'') E-mail notifications are always sent in 7-bit mode. This option allows to select the MIME encoding scheme. Supported values:</span> </td>
+                  </tr><tr>
+                          <th>34</th><th>38</th><td class="l"><span>&nbsp; &nbsp;* `base64`: default value, works with any kind of content. May cause some issues with touchy anti-spam/anti-virus engines.</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracNotification%3Fversion=2.html#L75">…</a></th>
+                  <th><a href="TracNotification%3Fversion=3.html#L79">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>75</th><th>79</th><td class="l"><span>}}}</span> </td>
+                  </tr><tr>
+                          <th>76</th><th>80</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="add">
+                  <tr class="first">
+                          <th> </th><th>81</th><td class="r"><ins>== Using GMail as the SMTP relay host ==</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>82</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>83</th><td class="r"><ins>Use the following configuration snippet</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>84</th><td class="r"><ins>{{{</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>85</th><td class="r"><ins>[notification]</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>86</th><td class="r"><ins>smtp_enabled = true</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>87</th><td class="r"><ins>use_tls = true</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>88</th><td class="r"><ins>mime_encoding = base64</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>89</th><td class="r"><ins>smtp_server = smtp.gmail.com</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>90</th><td class="r"><ins>smtp_port = 587</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>91</th><td class="r"><ins>smtp_user = user</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>92</th><td class="r"><ins>smtp_password = password</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>93</th><td class="r"><ins>}}}</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>94</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>95</th><td class="r"><ins>where ''user'' and ''password'' match an existing GMail account, ''i.e.'' the ones you use to log in on [http://gmail.com]</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>96</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>97</th><td class="r"><ins>Alternatively, you can use `smtp_port = 25`.[[br]]</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>98</th><td class="r"><ins>You should not use `smtp_port = 465`. It will not work and your ticket submission may deadlock. Port 465 is reserved for the SMTPS protocol, which is not supported by Trac. See [comment:ticket:7107:2 #7107] for details.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>99</th><td class="r"><ins>&nbsp;</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>100</th><td class="r"><ins>== Filtering notifications for one's own changes ==</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>101</th><td class="r"><ins>In Gmail, use the filter:</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>102</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>103</th><td class="r"><ins>{{{</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>104</th><td class="r"><ins>from:(&lt;smtp_from&gt;) (("Reporter: &lt;username&gt;" -Changes) OR "Changes (by &lt;username&gt;)")</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>105</th><td class="r"><ins>}}}</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>106</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>107</th><td class="r"><ins>to delete these notifications.</ins> </td>
+                  </tr><tr class="last">
+                          <th> </th><th>108</th><td class="r"><ins></ins> </td>
+                  </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>77</th><th>109</th><td class="l"><span>== Troubleshooting ==</span> </td>
+                  </tr><tr>
+                          <th>78</th><th>110</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracNotification%3Fversion=2.html#L113">…</a></th>
+                  <th><a href="TracNotification%3Fversion=3.html#L145">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>113</th><th>145</th><td class="l"><span>The default Trac configuration uses Base64 encoding to send emails to the recipients. The whole body of the email is encoded, which sometimes trigger ''false positive'' SPAM detection on sensitive email servers. In such an event, it is recommended to change the default encoding to "quoted-printable" using the `mime_encoding` option.</span> </td>
+                  </tr><tr>
+                          <th>114</th><th>146</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>115</th><th> </th><td class="l"><span>Quoted printable enco<del>n</del>ding works better with languages that use one of the Latin charsets. For Asian charsets, it is recommended to stick with the Base64 encoding.</span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>147</th><td class="r"><span>Quoted printable enco<ins></ins>ding works better with languages that use one of the Latin charsets. For Asian charsets, it is recommended to stick with the Base64 encoding.</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>116</th><th>148</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>117</th><th>149</th><td class="l"><span>----</span> </td>
+                  </tr>
+            </tbody>
+        </table>
+      </li>
+  </ul>
+</div>
+      </div>
+  </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

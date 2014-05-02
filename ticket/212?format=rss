@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #212: Switch to using m.okfn.org "kforge" media (css and behaviour)</title>
+    <link>http://localhost/ticket/212</link>
+    <description>&lt;p&gt;
+We are already using standard kforge css though copied locally and with a few modifications.
+&lt;/p&gt;
+&lt;p&gt;
+We should switch to using common copy on m.okfn.org. Some work will be required to factor out any changes we have made.
+&lt;/p&gt;
+&lt;p&gt;
+Cost: 2h
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/212</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Sun, 13 Dec 2009 11:29:31 GMT</pubDate>
+      <title>summary changed</title>
+      <link>http://localhost/ticket/212#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/212#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;summary&lt;/strong&gt;
+                changed from &lt;em&gt;Switch to using "kforge" media (css and behaviour)&lt;/em&gt; to &lt;em&gt;Switch to using m.okfn.org "kforge" media (css and behaviour)&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Sun, 13 Dec 2009 11:32:49 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/212#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/212#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Done in cset:3b68a54bd2b0
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

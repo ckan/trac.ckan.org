@@ -1,0 +1,14 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2812,Groups description needs improving,markw,toby,"The 'What are Groups?' text at <http://demo.ckan.org/group> is a
+bit naff. Here is a suggested replacement:
+
+What are groups?
+
+Groups allow you to group users and data together so that they are
+easier to manage. For example datasets in a group could be visible
+only to group members, or publicly visible but only editable by group
+members.
+
+Groups can be used to collect together datasets from a single
+publisher, or related to a particular project, for example.
+",enhancement,closed,awaiting triage,demo phase 3,ckan,invalid,,,ckan,none

@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1132: test_authz doesn't run</title>
+    <link>http://localhost/ticket/1132</link>
+    <description>&lt;p&gt;
+Trying to run the tests in test_authz.py with
+&lt;/p&gt;
+&lt;p&gt;
+$ nosetests --ckan ckan/tests/functional/test_authz.py
+results in no tests being run:
+&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;
+Ran 0 tests in 0.840s
+&lt;/p&gt;
+&lt;p&gt;
+OK (SKIP=3)
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1132</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>johnlawrenceaspden</dc:creator>
+
+      <pubDate>Mon, 09 May 2011 18:49:34 GMT</pubDate>
+      <title>type changed; milestone set</title>
+      <link>http://localhost/ticket/1132#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1132#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;type&lt;/strong&gt;
+                changed from &lt;em&gt;enhancement&lt;/em&gt; to &lt;em&gt;defect&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                set to &lt;em&gt;longterm&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Mon, 06 Jun 2011 09:31:15 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/1132#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/1132#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;invalid&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Yes, these are apparently search-related and so are skipped when testing under sqlite. See README.rst for more info.
+&lt;/p&gt;
+&lt;p&gt;
+Compare with this:
+&lt;/p&gt;
+&lt;pre class="wiki"&gt;$ nosetests --ckan --with-pylons=test-core.ini ckan/tests/functional/test_authz.py
+............................................
+----------------------------------------------------------------------
+Ran 44 tests in 69.287s
+OK
+&lt;/pre&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

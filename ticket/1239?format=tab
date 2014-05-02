@@ -1,0 +1,7 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1239	Remove and re-add tag on package not working	rgrp	rgrp	"See reports on list at:
+
+ * http://lists.okfn.org/pipermail/ckan-dev/2011-July/001103.html
+ * http://lists.okfn.org/pipermail/ckan-dev/2011-July/001107.html
+
+Tracked this to issue in dictization/model_save whereby was ignoring case where Package Tag already there but in deleted state. Rather than describe at length see fix."	defect	closed	critical	ckan-sprint-2011-10-28	ckan	fixed			ckan	none

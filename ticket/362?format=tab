@@ -1,0 +1,14 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+362	Ratings should not be created with a GET	dread	dread	"== Background ==
+
+In the Web UI, when you rate a package it simply links to something like:
+
+http://ckan.net/package/rate/mke-liquor-licenses?rating=3
+
+This creates a GET request. 
+
+This is bad because:
+
+ * Search engine crawlers follow links to find pages, and in this case end up creating a rating (although we've got a robots.txt to try and avoid this)
+ * There are occasions when we want to make a CKAN instance read-only, so we put a <LimitExcept GET> Apache instruction in. But the database may still get written for these ratings.
+ * Best practise for web requests is for GET to be a read-only request."	defect	closed	awaiting triage		ckan	invalid			ckan	none

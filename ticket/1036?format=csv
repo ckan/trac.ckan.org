@@ -1,0 +1,12 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1036,Add tests for three functions in ckan/model/user.py,johnlawrenceaspden,johnlawrenceaspden,"create a new test file ckan/model/test_user.py
+
+add tests for the following three functions in ckan/model/user.py
+
+number_of_edits,
+number_administered_packages,
+search
+
+
+merged in in changeset 0046f83aedcf
+",defect,closed,minor,ckan-v1.4-sprint-4,ckan,fixed,,,ckan,none

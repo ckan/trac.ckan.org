@@ -1,0 +1,10 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+233,Allow simple site-specific customization/overriding of templates,rgrp,rgrp,"Options:
+
+1. Allow for specification of genshi template paths to search in config. This way people can introduce their own templates and these templates can selectively override existing templates. (Already implemented this in shakespeare and it works)
+
+1. Include an extra site-specific genshi template which can then be used to customize site (e.g. by having specific calls to py:def that user can define but which are ignored if they don't exist).
+
+Can do this using:
+
+<xi:include href=""base.html""><xi:fallback /></xi:include>",enhancement,closed,major,v1.1,ckan,fixed,,,,

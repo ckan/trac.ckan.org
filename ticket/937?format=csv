@@ -1,0 +1,26 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+937,Record download stats for resources (extension),rgrp,sebbacon,"As a User (especially as a Package Owner/Maintainer) I want to know how many times a resource has been downloaded (and when).
+
+So let's record download stats (as in clicks on the link for a resource).
+
+== Implementation ==
+
+ * Use the existing support for this feature in google analytics or piwiki
+ * For google analytics see:
+  * Integrate to record: http://www.google.com/support/analytics/bin/answer.py?answer=55529
+  * Accessing analytics data via API (for showing download counts): http://code.google.com/apis/analytics/docs/gdata/gdataDeveloperGuide.html
+ * Limitations only record downloads by browsers with js turned on.
+  * This is OK I think (in any case machine download via e.g. datapkg does not get downloaded)
+
+=== Old Spec (do it in CKAN) ===
+
+ * Record info of form: resource id (or url?), timestamp
+ * Do this via javascript capturing of onclick event talking to an api
+ * API: /api/resource/{id}/download
+  * POST to increment (how do we stop spamming -- could use a nonce setup with a random string set on each page load for the js)
+  * GET to get data back { total: X, day_count: [ [yyyy-mm-dd, count], ... ] }
+
+== Questions ==
+
+ * Do we record ip addresses (to handle de-botting etc)?
+ * Do we count preview clicks as well?",enhancement,closed,major,ckan-v1.4-sprint-5,ckan,fixed,extension contributor simple js,,ckan,none

@@ -1,0 +1,10 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2736	Archiver fixes	ross	ross	"We need to check the archiver to make sure it works as we would expect after the changes in #2732:
+
+ * Receive notification of a file that needs processing
+ * Check the file's DB entry and upload the file to the configured remote service
+ * Update the URL of the file (both in the file's DB entry and the resource)
+ * Once we're sure the file is safely archived, we should mark the file as being archived
+    so that we know it can safely be deleted at some point.
+
+Maybe this could/should be implemented as a service rather than a celery task?"	enhancement	closed	awaiting triage	ckan-v1.9	ckan	wontfix			ckan	none

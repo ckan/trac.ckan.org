@@ -1,0 +1,6 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1611	Implement auth API calls for webstore/external use	ross	ross	"As part of #1574 we decided that it would be better for webstore (and future external services) to be able to authenticate simply with CKAN-Core.  
+
+Currently webstore access the CKAN database to obtain the key for the user but it would be better if this connection was not so tightly bound and that webstore used an API as any other external service might.
+
+Need to discuss further with dread"	enhancement	closed	awaiting triage		ckan	duplicate	api,auth	dread	ckan	none

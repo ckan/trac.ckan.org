@@ -1,0 +1,6 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1053,Deletion in Model API,dread,dread,"Currently in the API if you DELETE a package/group/user (and you have the required permissions) then it purges the object, when it should probably just set the state to deleted.
+
+There is no way to delete objects at the moment - changes to 'state' are ignored in the API.
+
+Do we need an alternative way to purge objects in the API?",defect,closed,awaiting triage,ckan-v1.5,ckan,fixed,,,ckan,none

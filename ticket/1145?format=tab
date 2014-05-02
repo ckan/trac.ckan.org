@@ -1,0 +1,11 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1145	Support the Handle System	timmcnamara		"The Handle System is an initiative to provide persistent references for resources. That is, it's basically a proxy system for preventing link rot.
+
+Its documentation is here: http://www.handle.net/. Servers running CKAN could host a ""Local Handle Service"", which redirects a hash of a resource to an actual URL.
+
+Some suggested use cases:
+
+ - Researcher would like to cite where data came from
+ - Agencies would like to have a way to prevent vendor
+   lock-in from CKAN if they decide to move to another
+   platform"	enhancement	new	awaiting triage	ckan-backlog	ckan				ckan	none

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2964: Last organization admin can remove herself</title>
+    <link>http://localhost/ticket/2964</link>
+    <description>&lt;p&gt;
+If you are the only admin of an organization you can edit the organization's members and demote yourself, then the org has no admins and no one (except sysadmins maybe) can edit it.
+&lt;/p&gt;
+&lt;p&gt;
+Last admin should not be able to remove or demote herself.
+&lt;/p&gt;
+&lt;p&gt;
+Also applies to groups.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2964</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+ </channel>
+</rss>

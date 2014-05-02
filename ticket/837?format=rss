@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #837: CKAN integration with freebase gridworks / google refine</title>
+    <link>http://localhost/ticket/837</link>
+    <description>&lt;p&gt;
+Thread: &lt;a class="ext-link" href="http://lists.okfn.org/pipermail/ckan-discuss/2010-November/000718.html"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://lists.okfn.org/pipermail/ckan-discuss/2010-November/000718.html&lt;/a&gt;
+&lt;/p&gt;
+&lt;h3 id="Scenario1"&gt;Scenario 1&lt;/h3&gt;
+&lt;ol&gt;&lt;li&gt;User installs Refine and CKAN extension for refine
+&lt;/li&gt;&lt;li&gt;On booting refine and asked to load data they can choose from any data package on CKAN.net (or any other CKAN instance)
+&lt;/li&gt;&lt;li&gt;They edit the dataset on Refine
+&lt;/li&gt;&lt;li&gt;On save (or perhaps as a separate option) they are prompted as to whether they wish  to sync the dataset back to CKAN (either as a new package or as a new resource on the existing package)
+&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;
+NB: for the dataset sync back some form of "CKAN" storage would be
+required (we already have storage.ckan.net running but a closer
+integration would be required)
+&lt;/p&gt;
+&lt;h3 id="Scenario2"&gt;Scenario 2&lt;/h3&gt;
+&lt;ol&gt;&lt;li&gt;User visits a package on CKAN.net (or another CKAN instance)
+&lt;/li&gt;&lt;li&gt;There is a button on the page "View and edit this dataset in Google Refine"
+&lt;/li&gt;&lt;li&gt;Click button -- ask them if they have Google refine installed
+&lt;ul&gt;&lt;li&gt;Yes: instructions for loading dataset into refine
+&lt;/li&gt;&lt;li&gt;No: load dataset in hosted version of google refine (we could run this)
+&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;User edits dataset and hits save. As in previous scenario they are prompted to sync the dataset.
+&lt;/li&gt;&lt;/ol&gt;</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/837</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>seanh</dc:creator>
+
+      <pubDate>Fri, 15 Jun 2012 15:36:45 GMT</pubDate>
+      <title>repo, theme, milestone set</title>
+      <link>http://localhost/ticket/837#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/837#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;repo&lt;/strong&gt;
+                set to &lt;em&gt;ckan&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;theme&lt;/strong&gt;
+                set to &lt;em&gt;none&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                set to &lt;em&gt;ckan-backlog&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

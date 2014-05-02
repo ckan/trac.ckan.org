@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #782: Add and remove users from sysadmin role from the command line</title>
+    <link>http://localhost/ticket/782</link>
+    <description>&lt;p&gt;
+Need to be able to create (and remove) sysadmins easily (used to be able to do this via ini file but this functionality was removed a while back in authz system reorganization it seems).
+&lt;/p&gt;
+&lt;p&gt;
+Suggest creating a new paster command as first step.
+&lt;/p&gt;
+&lt;pre class="wiki"&gt;# user identifier = openid (?)
+paster sysadmin add {user identifier}
+paster sysadmin remove {user identifier}
+&lt;/pre&gt;&lt;p&gt;
+Suggest this also be added to main CKAN docs.
+&lt;/p&gt;
+&lt;p&gt;
+This should go into metastable as well as default so that it goes into the v1.2 release (can do this via a transplant from one branch to the other)
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/782</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>pudo</dc:creator>
+
+      <pubDate>Mon, 08 Nov 2010 12:14:57 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/782#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/782#comment:1</guid>
+      <description>
+        &lt;p&gt;
+This has existed for quite a while, but misses documentation. Has been documented in cset:db18a16a5b4d
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>pudo</dc:creator>
+
+      <pubDate>Mon, 08 Nov 2010 12:17:41 GMT</pubDate>
+      <title>status, type changed; resolution set</title>
+      <link>http://localhost/ticket/782#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/782#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;type&lt;/strong&gt;
+                changed from &lt;em&gt;enhancement&lt;/em&gt; to &lt;em&gt;defect&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

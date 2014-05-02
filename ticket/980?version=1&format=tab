@@ -1,0 +1,7 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+980	Fixes to HR Infoshare	pudo		"We've fixed a few things in CKAN that were discovered and tracked by HRI in their own issue tacker. This includes: 
+
+ * add authz checks to package edit links (cset:0752316cd2fe) 
+ * replace gettext with _ in controllers, to support unicode error msgs (cset:822340e6077e)
+ * handle broken html in notes field without crashing on package read (cset:4b6be037dda0)
+ * update i18n (cset:37d57dc3c492, cset:ea03173f5e77, cset:f16f4ee40fe7)"	defect	closed	critical	ckan-v1.4-sprint-1	ckan	fixed				

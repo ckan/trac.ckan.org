@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #784: End to end testing for UKLP</title>
+    <link>http://localhost/ticket/784</link>
+    <description></description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/784</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>johnbywater</dc:creator>
+
+      <pubDate>Mon, 15 Nov 2010 10:07:38 GMT</pubDate>
+      <title>sprint changed</title>
+      <link>http://localhost/ticket/784#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/784#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;sprint&lt;/strong&gt;
+                changed from &lt;em&gt;1.3.3&lt;/em&gt; to &lt;em&gt;1.3.4&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Moved from sprint 1.3.3
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>thejimmyg</dc:creator>
+
+      <pubDate>Fri, 07 Jan 2011 14:21:29 GMT</pubDate>
+      <title>owner, summary changed; priority, component set</title>
+      <link>http://localhost/ticket/784#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/784#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;owner&lt;/strong&gt;
+              changed from &lt;em&gt;johnbywater&lt;/em&gt; to &lt;em&gt;thejimmyg&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;priority&lt;/strong&gt;
+                set to &lt;em&gt;awaiting triage&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;component&lt;/strong&gt;
+                set to &lt;em&gt;ckan&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;summary&lt;/strong&gt;
+                changed from &lt;em&gt;Review document from PP regarding E2E testing for UKLII&lt;/em&gt; to &lt;em&gt;End to end testing for UKLP&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+In order to have end to end testing for UKLII we need to:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Review document from PP with the different things we need to test
+&lt;/li&gt;&lt;li&gt;Set up a &lt;a class="missing wiki"&gt;GeoNetwork?&lt;/a&gt; instance with sample documents to be tested
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+We may also want to test ArcGIS, see &lt;a class="closed ticket" href="http://localhost/ticket/767" title="task: Harvest metadata records from ArcGIS CSW API (closed: wontfix)"&gt;#767&lt;/a&gt;
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>thejimmyg</dc:creator>
+
+      <pubDate>Mon, 07 Feb 2011 10:20:05 GMT</pubDate>
+      <title>component changed</title>
+      <link>http://localhost/ticket/784#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/784#comment:3</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;component&lt;/strong&gt;
+                changed from &lt;em&gt;ckan&lt;/em&gt; to &lt;em&gt;uklii&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>thejimmyg</dc:creator>
+
+      <pubDate>Tue, 15 Mar 2011 13:48:13 GMT</pubDate>
+      <title>priority changed</title>
+      <link>http://localhost/ticket/784#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/784#comment:4</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;priority&lt;/strong&gt;
+                changed from &lt;em&gt;awaiting triage&lt;/em&gt; to &lt;em&gt;major&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>thejimmyg</dc:creator>
+
+      <pubDate>Mon, 09 May 2011 10:17:31 GMT</pubDate>
+      <title>status changed; repo, state, resolution, theme set</title>
+      <link>http://localhost/ticket/784#comment:5</link>
+      <guid isPermaLink="false">http://localhost/ticket/784#comment:5</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;repo&lt;/strong&gt;
+                set to &lt;em&gt;ckan&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;state&lt;/strong&gt;
+                set to &lt;em&gt;draft&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;wontfix&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;theme&lt;/strong&gt;
+                set to &lt;em&gt;none&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+The UKLP test manager is looking at a new test proposal, we have had approval to go live without this, we can re-open later if necessary.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

@@ -1,0 +1,13 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1063,Groups listing widget on package screen shouldn't show group name by default,sebbacon,sebbacon,"I've been asked if we can do something about the overflow of the Group
+name in the right hand column on this page:
+
+ http://register.data.overheid.nl/package/europese-aanbestedingen
+
+The reason is that the list display for groups is in the form
+""group_tltie (group_name)"", and of course group_name can't have spaces
+and so can't wrap nicely.
+
+I was wondering if there's a good reason why we don't only display
+group_title (if it exists) and group_name only when there's not a
+title?",defect,closed,awaiting triage,,ckan,fixed,,,ckan,none

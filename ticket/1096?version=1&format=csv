@@ -1,0 +1,10 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1096,Introduce Site domain object for subdomain tenants,pudo,rufuspollock,"Many users of CKAN want to have their own instance without much effort. Setting these up in separate places is a maintenance nightmare, we should much rather have some tenant separation in core CKAN. Some ideas:
+
+ * introduce model.Site and c.site
+  * site has: custom CSS, extra_template_path, title, languages list, package_form, group_form (all configured via web UI) 
+ * Subdomain detector to activate sites.
+ * use site in Authorizer instead of System, have a NullSite for global things
+ * allow cross-site search
+ * packages are in a list of sites, m:n rather than 1:n
+  * list of sites is string-based, can contain sites not in site table to express harvested external material which is not editable locally. ",defect,new,awaiting triage,ckan-backlog,ckan,,,,ckan,entities

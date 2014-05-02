@@ -1,0 +1,472 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      #662 (Can't put entity that is returned by posting to package register)
+     – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="prev" href="661.html" title="Ticket #661" />
+        <link rel="last" href="3030.html" title="Ticket #3030" />
+        <link rel="help" href="../wiki/TracGuide.html" />
+        <link rel="alternate" href="662%3Fversion=8&amp;format=csv" type="text/csv" class="csv" title="Comma-delimited Text" /><link rel="alternate" href="662%3Fversion=8&amp;format=tab" type="text/tab-separated-values" class="tab" title="Tab-delimited Text" /><link rel="alternate" href="662%3Fversion=8&amp;format=rss" type="application/rss+xml" class="rss" title="RSS Feed" />
+        <link rel="next" href="663.html" title="Ticket #663" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/ticket.css" type="text/css" />
+        <link rel="first" href="1.html" title="Ticket #1" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript">
+      var auto_preview_timeout=2.0;
+      var form_token="93d81ccf9a7bb1c456462f62";
+    </script>
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script><script type="text/javascript" src="../chrome/common/js/wikitoolbar.js"></script><script type="text/javascript" src="../chrome/common/js/resizer.js"></script><script type="text/javascript" src="../chrome/common/js/auto_preview.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("div.description").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $(".foldable").enableFolding(false, true);
+        var args = {realm: "ticket", id: 662, escape_newlines: 0}
+        $("#comment").autoPreview("/wiki_render", args, function(textarea, text, rendered) {
+            $("#ticketchange div.comment").html(rendered);
+            if (rendered)
+              $("#ticketchange").show();
+            else if ($("#ticketchange ul.changes").length == 0)
+              $("#ticketchange").hide();
+        });
+        $("#trac-comment-editor textarea").autoPreview("/wiki_render", args,
+                                                       function(textarea, text, rendered) {
+          var comment = $("#trac-comment-editor").next("div.comment");
+          comment.html(rendered);
+          if (rendered)
+            comment.show();
+          else
+            comment.hide();
+        });
+        $("#modify").parent().toggleClass("collapsed");
+        $(".trac-topnav a").click(function() { $("#modify").parent().removeClass("collapsed"); });
+        /* only enable control elements for the currently selected action */
+        var actions = $("#action input[name='action']");
+        function updateActionFields() {
+          actions.each(function () {
+            $(this).siblings().find("*[id]").enable($(this).checked());
+            $(this).siblings().filter("*[id]").enable($(this).checked());
+          });
+        }
+        actions.click(updateActionFields);
+        updateActionFields();
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="../wiki/TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li class="active"><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="661.html" title="Ticket #661">Previous Ticket</a></span></li><li class="last"><span><a class="next" href="663.html" title="Ticket #663">Next Ticket</a> &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="ticket">
+      <h1 id="trac-ticket-title">
+          <a href="662.html">Ticket #662</a>
+          <span class="status">(new defect)</span>
+              — at <a href="662%3Fversion=8.html#comment:8">Version 8</a>
+      </h1>
+      <div id="ticket">
+  <div class="date">
+    <p>Opened <a class="timeline" href="../timeline%3Ffrom=2010-09-25T10:29:06Z&amp;precision=second.html" title="2010-09-25T10:29:06Z in Timeline">4 years</a> ago</p>
+    <p>Last modified <a class="timeline" href="../timeline%3Ffrom=2011-03-25T18:07:43Z&amp;precision=second.html" title="2011-03-25T18:07:43Z in Timeline">3 years</a> ago</p>
+  </div>
+  <h2 class="summary searchable">Can't put entity that is returned by posting to package register</h2>
+  <table class="properties">
+    <tr>
+      <th id="h_reporter">Reported by:</th>
+      <td headers="h_reporter" class="searchable">
+        <a href="../query%3Fstatus=!closed&amp;reporter=johnbywater.html">johnbywater</a>
+      </td>
+      <th id="h_owner">Owned by:</th>
+      <td headers="h_owner">
+        <a href="../query%3Fstatus=!closed&amp;owner=rgrp.html">rgrp</a>
+      </td>
+    </tr>
+    <tr>
+        <th id="h_priority">
+          Priority:
+        </th>
+        <td headers="h_priority">
+              <a href="../query%3Fstatus=!closed&amp;priority=blocker.html">blocker</a>
+        </td>
+        <th id="h_milestone">
+          Milestone:
+        </th>
+        <td headers="h_milestone">
+              <a class="closed milestone" href="../milestone/ckan-v1.4.html">ckan-v1.4</a>
+        </td>
+    </tr><tr>
+        <th id="h_component">
+          Component:
+        </th>
+        <td headers="h_component">
+              <a href="../query%3Fstatus=!closed&amp;component=ckan.html">ckan</a>
+        </td>
+        <th id="h_keywords">
+          Keywords:
+        </th>
+        <td headers="h_keywords" class="searchable">
+        </td>
+    </tr><tr>
+        <th id="h_cc">
+          Cc:
+        </th>
+        <td headers="h_cc" class="searchable">
+        </td>
+        <th id="h_repo">
+          Repository:
+        </th>
+        <td headers="h_repo">
+              <a href="../query%3Fstatus=!closed&amp;repo=ckan.html">ckan</a>
+        </td>
+    </tr><tr>
+        <th id="h_theme">
+          Theme:
+        </th>
+        <td headers="h_theme">
+              <a href="../query%3Fstatus=!closed&amp;theme=none.html">none</a>
+        </td>
+        <th>
+        </th>
+        <td>
+        </td>
+    </tr>
+  </table>
+  <div class="description">
+    <h3 id="comment:description">
+      Description
+      <span class="lastmod" title="2011-02-07 09:11:52+00:00">
+        (last modified by rgrp)
+        (<a href="662%3Faction=diff&amp;version=8.html">diff</a>)
+      </span>
+    </h3>
+    <div class="searchable">
+      <p>
+It's because Package carries several out-of-band values, which are snagged on the way back out. Entity get response also can't be posted.
+</p>
+<p>
+However, post response can be re-posted (because it isn't the same as the register-post/entity-get responses.
+</p>
+<p>
+An issue for CKAN too.
+</p>
+<p>
+Sub-ticket of <a class="closed ticket" href="961.html" title="enhancement: [super] Refactoring of forms, validation and model synchronization (closed: fixed)">#961</a> (form, validation, model sync meta-ticket) and depends on that work.
+</p>
+
+    </div>
+  </div>
+</div>
+        <div>
+          <h2 class="foldable">Change History</h2>
+          <div id="changelog">
+              <div class="change" id="trac-change-1">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:1" class="cnum">
+      <a href="662%3Fversion=8.html#comment:1">comment:1</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2010-10-13T17:31:19Z&amp;precision=second.html" title="2010-10-13T17:31:19Z in Timeline">4 years</a> ago by dread
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+I agree we should not have the 'read-only' things like Ratings in the default returned Package Entity. What do you think of having a parameter to be able to get these if you want them though?
+</p>
+<p>
+Do you mean you *can* re-post the *entity* post response?
+</p>
+<p>
+Not sure what you mean by "An issue for CKAN too."?
+</p>
+<p>
+In addition to this ticket, what do you think about changing the behaviour of the Package Entity PUT/POST, so that you replace the entire Package, not just the fields you specify? So you don't keep left-over values, just because you didn't specify them as null?
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-2">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:2" class="cnum">
+      <a href="662%3Fversion=8.html#comment:2">comment:2</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2010-10-13T18:15:27Z&amp;precision=second.html" title="2010-10-13T18:15:27Z in Timeline">4 years</a> ago by johnbywater
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+It might be natural for the locator of the rating for a package to be "/package/{id}/rating".
+</p>
+<p>
+I've got not idea what I meant by "An issue for CKAN too."  I may have intended to log this againt ckanclient. Anyway, it seems to be just a CKAN thing. :-)
+</p>
+<p>
+I think I would like to do this:
+</p>
+<blockquote>
+<p>
+$data = c.package_register_post({'name': 'example'})
+$data<a class="missing wiki">title?</a> = 'Example'
+c.package_entity_put($data<a class="missing wiki">id?</a>, $data)
+</p>
+</blockquote>
+<p>
+and this:
+</p>
+<blockquote>
+<p>
+$data = c.package_entity_get('example')
+$data<a class="missing wiki">title?</a> = 'Example'
+c.package_entity_put($data<a class="missing wiki">id?</a>, $data)
+</p>
+</blockquote>
+<p>
+I don't think either work. We could write a test for each.
+</p>
+<p>
+I think this does work:
+</p>
+<blockquote>
+<p>
+$data = c.package_entity_get('example')
+$data = c.package_entity_put($data<a class="missing wiki">id?</a>, $data)
+$data<a class="missing wiki">title?</a> = 'Old Example'
+c.package_entity_put($data<a class="missing wiki">id?</a>, $data)
+</p>
+</blockquote>
+<p>
+Which is inconsistent. The reason is that the data returned by the update operation ("entity put") isn't given the same treatment as the read and create operations, which adds various read-only values.
+</p>
+<p>
+That's as far as I got. I inferred that one or several of the read-only values, when present in the update request data, cause the update to fail. I'm not sure how it fails. Rather than cutting down the response data, we could make the update call more robust. One fix would pick out from the request package data only the attributes that are permitted. A alternative fix would make what ever is choking on the extra values ignore them. I mean, ids are read-only, but we wouldn't want to reject an update because it has an id in the data. We do need to be careful about loading up the package entity data, but the 'id' is read-only and we aren't going to quible about that being present in the data of an update request (even if it doesn't match the referenced entity).
+</p>
+<p>
+I would rather not support "replace the entire package" with especial functionality and documentation. I think the model create/update/delete, where update is "set attributes" is sufficient, simple, and fairly optimal. To obliterate all registerd values without deleting, I would get the package entity data, loop over the keys and set the values to <em>, [] or {} depending on the type, and then PUT the entity. We could write a test for that.
+</em></p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-3">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:3" class="cnum">
+      <a href="662%3Fversion=8.html#comment:3">comment:3</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2010-11-01T15:07:15Z&amp;precision=second.html" title="2010-11-01T15:07:15Z in Timeline">4 years</a> ago by wwaites
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Priority</strong>
+        changed from <em>awaiting triage</em> to <em>blocker</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-4">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:4" class="cnum">
+      <a href="662%3Fversion=8.html#comment:4">comment:4</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2010-11-01T15:08:57Z&amp;precision=second.html" title="2010-11-01T15:08:57Z in Timeline">4 years</a> ago by wwaites
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+Ran into this with RDF export (that then updates the CKAN package with LOD2-compatible extras from the results). Cannot use ckanclient.package_entity_put(ckanclient.package_entity_get("ckan")).
+</p>
+<p>
+Is this related to the modifications htat are showing up in the changelog with no apparent package (the package that should be appearing there is "ckan" itself)
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-5">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:5" class="cnum">
+      <a href="662%3Fversion=8.html#comment:5">comment:5</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2010-11-01T16:28:22Z&amp;precision=second.html" title="2010-11-01T16:28:22Z in Timeline">4 years</a> ago by dread
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+Yes we all agree this needs fixing it. 
+</p>
+<p>
+I'm tempted by John's 'permissive' suggestion of ignoring these 'read-only' values, but to avoid confusion we should except with a 400 error if the user has changed these values. 
+</p>
+<p>
+Read only fields: 'id', 'relationships', 'ratings_average', 'ratings_count', 'ckan_url'
+</p>
+<p>
+Use cases for changes between GET package, PUT package:
+</p>
+<ol><li>package unchanged - 200 OK
+</li><li>user changes id, ckan_url, relationships, ratings_* expecting that value to change - 400 error.
+</li><li>just license changes (but not license_id) - 400 error
+</li><li>both license and license_id change in step - 200 OK
+</li></ol><p>
+Does that sound reasonable John and Will?
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-6">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:6" class="cnum">
+      <a href="662%3Fversion=8.html#comment:6">comment:6</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2010-11-22T21:07:23Z&amp;precision=second.html" title="2010-11-22T21:07:23Z in Timeline">3 years</a> ago by rgrp
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Owner</strong>
+        set to <em>rgrp</em>
+    </li><li>
+      <strong>Milestone</strong>
+        set to <em>ckan v1.3</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-7">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:7" class="cnum">
+      <a href="662%3Fversion=8.html#comment:7">comment:7</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-01-12T12:42:52Z&amp;precision=second.html" title="2011-01-12T12:42:52Z in Timeline">3 years</a> ago by dread
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Type</strong>
+        changed from <em>bug</em> to <em>defect</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-8">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:8" class="cnum">
+      <a href="662%3Fversion=8.html#comment:8">comment:8</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-02-07T09:11:52Z&amp;precision=second.html" title="2011-02-07T09:11:52Z in Timeline">3 years</a> ago by rgrp
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Description</strong>
+        modified (<a href="662%3Faction=diff&amp;version=8.html">diff</a>)
+    </li><li>
+      <strong>Milestone</strong>
+        changed from <em>ckan-v1.3</em> to <em>ckan-v1.4</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+          </div>
+        </div>
+      <div id="help"><strong>Note:</strong> See
+        <a href="../wiki/TracTickets.html">TracTickets</a> for help on using
+        tickets.</div>
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="first">
+          <a rel="nofollow" href="662%3Fversion=8&amp;format=csv" class="csv">Comma-delimited Text</a>
+        </li><li>
+          <a rel="nofollow" href="662%3Fversion=8&amp;format=tab" class="tab">Tab-delimited Text</a>
+        </li><li class="last">
+          <a rel="nofollow" href="662%3Fversion=8&amp;format=rss" class="rss">RSS Feed</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

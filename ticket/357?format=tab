@@ -1,0 +1,20 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+357	Fix API documentation, to correct misleading HTTP_AUTHORIZATION statement.	johnbywater	johnbywater	"Sean Burlington wrote:
+> I recently came across a documentation issue
+> 
+> http://knowledgeforge.net/ckan/doc/ckan/api.html
+> -----
+> The key should be passed in the API request header:
+> Header 	Example value
+> HTTP_AUTHORIZATION 	fde34a3c-b716-4c39-8dc4-881ba115c6d4
+> 
+> -----
+> 
+> But the header name is actually just 'AUTHORIZATION'
+> 
+> For example to set it in PHP
+> 
+> curl_setopt($ch, CURLOPT_HTTPHEADER, array('AUTHORIZATION:
+> xxxxx-xxxx-xxxx-xxxx-xxxxxxx'));
+> 
+"	defect	closed	critical		ckan	fixed				

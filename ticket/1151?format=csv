@@ -1,0 +1,6 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1151,Preview for geographic data should be a map,timmcnamara,rgrp,"Data viewer / previewer for a resource that has a KML file, or others, such as GeoRSS and GeoJSON, we should provide a map.
+
+ * Support for KML files: #1458
+
+This is non-trivial for external files as we need a way to jsonify. For files stored locally this is more of a recline issue (and will require a bit of work to either guess columns or allow user to specify them).",enhancement,closed,awaiting triage,ckan-sprint-2012-03-05,ckan,wontfix,geo [1.5d],,ckan,none

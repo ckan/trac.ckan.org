@@ -1,0 +1,14 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1075	Administrative dashboard - Edit Authorization related to System object	rgrp	johnlawrenceaspden	"Roles on System object are important because admin role on system equates to being a 'sysadmin' (i.e. able to do anything).
+
+ * Make users sysadmin (either as separate action or as part of editing roles on system object)
+ * /authz subpage for editing roles on system object
+  * Add and update user roles
+  * Add and update authz group roles
+  * List actions associated to roles at top of page (extra points for checkbox table with editability)
+ * Document on http://wiki.ckan.net/Authorization what roles on System object 'mean' esp sysadmin role on System
+
+== Related Tickets ==
+ 
+ * super ticket: #833
+ * authz lib improvement and authztool refactor #1050"	enhancement	closed	major	ckan-v1.4-sprint-6	ckan	fixed			ckan	none

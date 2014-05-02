@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2758: file storage gives error if config not available but no useful user information</title>
+    <link>http://localhost/ticket/2758</link>
+    <description>&lt;p&gt;
+We get an error which should be improved the actual problem is this but not passed to user
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+⇝ &lt;a class="missing wiki"&gt;KeyError?&lt;/a&gt;: 'ofs.impl'
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+View as:   Interactive (full)  |  Text (full)  |  XML (full)
+Module ckan.controllers.storage:2 in auth_form         view
+Module ckan.lib.jsonp:26 in jsonpify         view
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+data = func(*args, &lt;strong&gt;kwargs)
+&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module ckan.controllers.storage:407 in auth_form         view
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+authorize(method, bucket, label, c.userobj, self.ofs)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module ckan.controllers.storage:200 in ofs         view
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+StorageAPIController._ofs_impl = get_ofs()
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module ckan.controllers.storage:71 in get_ofs         view
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+storage_backend = config&lt;a class="missing wiki"&gt;ofs.impl?&lt;/a&gt;
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module paste.registry:146 in &lt;span class="underline"&gt;getitem&lt;/span&gt;         view
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+return self._current_obj()[key]
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;a class="missing wiki"&gt;KeyError?&lt;/a&gt;: 'ofs.impl'
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2758</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+ </channel>
+</rss>

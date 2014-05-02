@@ -1,0 +1,22 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+90,Link to RDF versions of CKAN data,rgrp,dread,"We should link to representations on semantic.ckan.net
+
+  * Each package page could link to its RDF representation
+    * ""Alternative formats"" near star rating. Has logo for RDF (link to RDF) and JSON (link via CKAN REST i/f).
+    * Some instances of ckan won't need this, so have option in ini file for this. rdf_store_url=xyz
+    * Include machine-readable link to the RDF: 
+{{{
+<meta http-equiv=... />
+}}}
+    * 303 redirect to RDF when content negotiation requires RDF. Test:
+{{{
+curl -I -H ""Accept: application/rdf+xml"" http://localhost:5000/package/warandpeace
+}}}
+
+Cost: 3h
+
+== Future ==
+
+  * Search page to link to SPARQL interface: http://semantic.ckan.net/sparql
+  * License/dump page could link to full RDF dump.
+",enhancement,new,blocker,v0.11,ckan,,,,,

@@ -1,0 +1,16 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+827	metadata_created_and_modified error	dread	rgrp	"Intermittent failure on ckan default branch. Looks like brittle test.
+
+{{{
+======================================================================
+FAIL: ckan.tests.models.test_package.TestPackageRevisions.test_02_metadata_created_and_modified
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File ""/home/buildslave/okfn/full/build/buildandsmoke/pyenv/lib/python2.6/site-packages/nose/case.py"", line 186, in runTest
+    self.test(*self.arg)
+  File ""/home/buildslave/okfn/full/build/buildandsmoke/pyenv/src/ckan/ckan/tests/models/test_package.py"", line 250, in test_02_metadata_created_and_modified
+    assert out == exp, (out, exp)
+AssertionError: (datetime.datetime(2010, 11, 25, 4, 37, 52, 949380), datetime.datetime(2010, 11, 25, 4, 37, 52, 94938))
+}}}
+
+http://buildbot.okfn.org/builders/builder-ckan/builds/589/steps/shell/logs/stdio"	defect	closed	awaiting triage		ckan	fixed				

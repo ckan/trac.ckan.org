@@ -1,0 +1,20 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+352,Package notification worker - sends XML-RPC,dread,dread,"== As an ==
+
+external front-end
+
+== I want to ==
+
+be notified (by XML-RPC) about package creations and updates.
+
+== Implementation ==
+
+ 1. A message queue worker waits for package update notifications
+ 2. On reception, it constructs XML detailing the changes and PUSHes it to a configured URI.
+
+Rather than turning the package fields into XML fields, the JSON dump of the list of package dictionaries will become a single XML parameter.
+
+Config - in the CKAN config will be:
+
+ * URI to callback to
+ * API version to use (version 2 gives packages referred by ID not name)",enhancement,closed,blocker,,ckan,wontfix,,,,

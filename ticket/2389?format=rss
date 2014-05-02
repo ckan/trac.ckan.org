@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2389: More robust handling of DataExplorer errors</title>
+    <link>http://localhost/ticket/2389</link>
+    <description>&lt;p&gt;
+US-0a
+&lt;/p&gt;
+&lt;p&gt;
+Do not show failed preview with red-bar (esp when just empty datastore ...)
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Data Viewer checks if datastore is empty nad falls back to ther options if emtpy
+&lt;/li&gt;&lt;li&gt;&lt;a class="missing wiki"&gt;DataStore?&lt;/a&gt; enabled is off by default and only turned on either explicitly by user or by &lt;a class="missing wiki"&gt;DataStorer?&lt;/a&gt; on successful store ...
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+Loading/showing error reports
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2389</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>amercader</dc:creator>
+
+      <pubDate>Tue, 15 May 2012 15:27:10 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/2389#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/2389#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/2389?action=diff&amp;amp;version=1"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Thu, 17 May 2012 06:51:42 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/2389#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/2389#comment:2</guid>
+      <description>
+        &lt;p&gt;
+Just to note these were 2 *different* options. &lt;strong&gt;Either&lt;/strong&gt; you do the fallback approach &lt;strong&gt;or&lt;/strong&gt; we turn off &lt;a class="missing wiki"&gt;DataStore?&lt;/a&gt; by default and only use if enabled (which happens due to explicit enabling of &lt;a class="missing wiki"&gt;DataStorer?&lt;/a&gt; turning it on ...)
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>amercader</dc:creator>
+
+      <pubDate>Mon, 28 May 2012 11:47:33 GMT</pubDate>
+      <title>milestone changed</title>
+      <link>http://localhost/ticket/2389#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/2389#comment:3</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;current-ckan-sprint-2012-05-29&lt;/em&gt; to &lt;em&gt;current-ckan-sprint-2012-06-25&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>amercader</dc:creator>
+
+      <pubDate>Mon, 18 Jun 2012 17:47:00 GMT</pubDate>
+      <title>milestone changed</title>
+      <link>http://localhost/ticket/2389#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/2389#comment:4</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;current-ckan-sprint-2012-06-25&lt;/em&gt; to &lt;em&gt;ckan-v1.8&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>amercader</dc:creator>
+
+      <pubDate>Mon, 02 Jul 2012 09:43:21 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/2389#comment:5</link>
+      <guid isPermaLink="false">http://localhost/ticket/2389#comment:5</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

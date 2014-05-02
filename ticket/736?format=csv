@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+736,URL validation for CSW and WMS links,johnbywater,amercader,"Robust against slightly incorrect URLs (e.g. with trailing slash, or without /csw), and non-CWS service which also return <ows:ExceptionReport ... />.
+
+Both cases would be resolved by checking capabilities (with !CswClient's  check_get_capabilities() method).",requirement,closed,minor,ckan-v1.4-sprint-7,uklii,fixed,,,ckan,none

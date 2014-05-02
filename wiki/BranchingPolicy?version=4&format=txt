@@ -1,0 +1,40 @@
+= Branching Policy =
+
+CKAN is stored in a mercurial repo and we have devised this policy to cope with coding, releasing and maintaining versions of the software.
+
+We have a number of maintained branches of the code to reflect their uses:
+
+'''default''' branch is for future releases - New features go here. Bug fixes should always go here as well as the other branches.
+
+'''metastable''' branch is for beta releases and proper releases deployed to ckan.net and similar servers. These servers get new features first. Sometimes there are issues to be resolved with these new features. It usually lags `default`.
+
+'''stable''' branch is the latest proper release. It usually lags `metastable`.
+
+'''ultrastable''' branch is for the most stable code - proper releases, always one behind `stable`.
+
+This arrangement can be seen to be like a waterfall of changesets. `default` has the most, `metastable` is a subset of `default`, `stable` a subset of `metastable` etc. As the releases go down the waterfall, the bug-fixes go in the opposite direction:
+
+ * A branch may need a bug-fix, and this would need to be merged to all branches UP the waterfall. Even if the bug-fix no longer applies on `default` (because say the file in question has been completely refactored in the meantime), this isn't a bad thing, since you'll be alerted when you get a conflict during the merge.
+ * Along with the bug-fix it may be worth adding a version change (e.g. `1.2` to `1.2.1`). This would also be usefully merged with the bug-fix up the waterfall, indicating the bug is fixed in these places too.
+
+Unless there is a big need for a bug fixes on the more stable branches, bug fixes are best done on `metastable` (and then merged just to `default`). This saves the more stable branches from the risk of bug fixes causing other bad effects.
+
+So the rule is:
+ * Releases are merged DOWN the waterfall: `default` -> `metastable` -> `stable` -> `ultrastable`
+ * Bug fixes should be merged UP the waterfall: `default` <- `metastable` ( <- `stable` <- `ultrastable` )
+
+(One future problem with this system might arises when you want a change on a branch which you don't want merged up the waterfall and wouldn't cause a conflict. We've not thought of a use case like this, so we will deal with not being able to merge upwards, it if it arises.)
+
+It is good to merge all branch changes up the waterfall to the top, so that you don't forget to apply a bugfix to a higher branch. In the process  of doing this, you close the branch heads on the way. So when you push new changesets onto a branch (aside from `default`), you should expect to be reminded to create a new head (`hg push -f`).
+
+If you merge bug fixes the wrong way (i.e. down the waterfall), you may well end up with unstable changesets merged as well as the bugfix! If you find you have fixed a bug on a higher branch than necessary and want to have the bugfix on a lower branch, then you need to 'transplant' the changeset, rather than 'merge'.
+
+== Transplanting changesets ==
+
+When you merge, you can't cherry pick changesets - you have to take all of them up to a certain one. So you have to be slightly more cunning to 'transplant' a bugfix changeset down the waterfall.
+
+You can either use the mercurial 'transplant' extension or use `hg export` and `hg import`. 
+
+== 'tip' note ==
+
+Mercurial tags the latest commit with the tag `tip`. This means it changes on every commit and might be on ''any'' branch. So it's best not to refer to it in documentation, emails or changeset comments.

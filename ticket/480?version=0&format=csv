@@ -1,0 +1,17 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+480,Catalogue service shall conform to specification,johnbywater,,"Common requirements for running CKAN behind a (e.g Wordpress or Drupal) front-end:
+
+ 1. Unrestricted total read-only access to catalogue API for general public (e.g. voluntary organisation).
+   - monitored by API key
+   - not monitored by API key
+ 2. Restricted total read-write access to catalogue API for authorized clients (e.g. front-end system, bulk upload clients).
+   - restricted by CKAN access controller
+   - restricted by HTTP Auth
+   - restricted by IP address
+ 3. Restricted total read-write access to catalogue Web UI for authorized users (e.g. site admins).
+   - restricted by CKAN access controller
+   - restricted by HTTP Auth
+ 4. Restricted partial read-write access to catalogue Web UI for authorized users (e.g. group admins).
+   - restricted by CKAN access controller
+   - restricted by HTTP Auth
+",requirement,new,,ckan-v1.4,ckan,,,,,

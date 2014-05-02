@@ -1,0 +1,2 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2542	Create jenkins job to run ckanbuild, and run tests	seanh	seanh	It should run the script to create the debian package, boot a VM, install the debian package on the VM, boot a CKAN instance, then run the tests.	enhancement	accepted	awaiting triage	ckanbuild	ckan		deployment jenkins		ckan	none

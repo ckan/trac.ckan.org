@@ -1,0 +1,27 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1711	Resource validation page	icmurray	icmurray	" * On the resources tab, there's a ""Check Resources"" button which, when clicked makes an ajax request
+   with the list of URLs entered by the user.
+   
+ * The server checka each link for errors and header information about the linked resource.  (Using
+   ckanext/archiver/tasks.py:link_checker()).
+   
+ * The server returns a list of dicts (json), containing information about the linked resource, and
+   the client uses that to:
+
+     - populate the format field of each resource
+     
+       The (guessed) 'file_extension' populates the '__format' field.  If it's 'htm' or 'html',
+       then we assume it's a listing page, and so don't populate the format field with 'htm' or
+       'html'.
+     
+     - provide feedback if a URL appears to be invalid
+     
+       If the URL doesn't appear to be a URL at all, or returns a HTTP error, or times-out, then
+       URL field is highlighted in red to indicate it's a bad URL.  A tooltip shows the
+       error message to the user.
+     
+     - [Optional] provide feedback if a URL appears to point to ""Additional Information"" - ie the
+       Resource should be entered under ""Additional Resources"", rather than ""Timeseries"" or
+       ""Individual"" datasets.
+
+Analysis and further description on etherpad: http://ckan.okfnpad.org/dgu-package-form? [Section I]"	enhancement	closed	minor	current-ckan-sprint-2012-03-19	dgu	fixed	?d child-of #1526		ckan	none

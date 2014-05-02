@@ -1,0 +1,10 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2791	Logo fix	toby	aron.carroll	"@aron
+ 
+
+We should be able to have longish tag lines that look ok currently they wrap and stop the logo text being clickable
+
+
+Can we have `white-space:nowrap;` for the tagline so long ones don't wrap and maybe look at aligning long ones
+
+"	enhancement	closed	awaiting triage	demo phase 3	ckan	fixed			ckan	none

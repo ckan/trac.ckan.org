@@ -1,0 +1,20 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1245	Reorganise ckan.org pages	rgrp		"Here is Rufus' plan for ckan.org reorganisation from http://ckan.okfnpad.org/documentation (22/7/11) (ticket made by dread):
+
+{{{
+/solutions
+  /overview <--- current 'about' page (the software)
+  /customers <-- say ""in addition to our clients...""
+  /features <-- needs most work (pictures etc)
+/pricing/  <-- simplest thing possible ... talk with Ira (cover pricing and support)
+/developers <--- links to http://docs.ckan.org/, getting the software, the wiki, the mailing list /contact
+/blog
+}}}
+
+Tasks: 
+ * add tagline in header - ""the data portal software""
+ * make and add glossy PDF
+ * change ""data hub"" to ""data portal"" passim (if only using one  term)
+ * add info@ckan.org 
+ * image banner on home page - redo screenshots without menus
+"	task	closed	major	ckan-v1.5	ckan	fixed			ckan	none

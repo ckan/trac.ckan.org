@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #465: Require API key for all API requests.</title>
+    <link>http://localhost/ticket/465</link>
+    <description></description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/465</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Wed, 25 Aug 2010 08:25:01 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/465#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/465#comment:1</guid>
+      <description>
+        &lt;p&gt;
+This was an idea, to be able to monitor users overloading. It may not be required though.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>thejimmyg</dc:creator>
+
+      <pubDate>Fri, 07 Jan 2011 14:45:34 GMT</pubDate>
+      <title>status changed; priority, resolution set</title>
+      <link>http://localhost/ticket/465#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/465#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;priority&lt;/strong&gt;
+                set to &lt;em&gt;awaiting triage&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;wontfix&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Let's reopen this ticket if it comes up again. For now not an issue. Maybe also related to caching tickets &lt;a class="closed ticket" href="http://localhost/ticket/840" title="enhancement: On/off switch for ETags cache (closed: fixed)"&gt;#840&lt;/a&gt; &lt;a class="closed ticket" href="http://localhost/ticket/841" title="enhancement: Caching docs (as a whole) (closed: duplicate)"&gt;#841&lt;/a&gt; &lt;a class="closed ticket" href="http://localhost/ticket/856" title="defect: Tests for caching (closed: invalid)"&gt;#856&lt;/a&gt; &lt;a class="closed ticket" href="http://localhost/ticket/668" title="defect: Caching issues on API v1 (closed: invalid)"&gt;#668&lt;/a&gt; &lt;a class="closed ticket" href="http://localhost/ticket/543" title="task: Investigate partial page caching and edge-side includes (closed: duplicate)"&gt;#543&lt;/a&gt; &lt;a class="closed ticket" href="http://localhost/ticket/540" title="story: Implement caching in a systematic manner (closed: fixed)"&gt;#540&lt;/a&gt; &lt;a class="closed ticket" href="http://localhost/ticket/537" title="task: Caching and Performance improvement (closed: duplicate)"&gt;#537&lt;/a&gt;.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

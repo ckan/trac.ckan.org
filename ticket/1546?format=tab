@@ -1,0 +1,2 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1546	Package metadata_created returns the wrong date	johnglover	johnglover	metadata_created seems to be returning the date of the earliest revision (for all packages), rather than the earliest revision for a specific package.	defect	closed	minor	ckan-sprint-2011-12-19	ckan	fixed			ckan	none

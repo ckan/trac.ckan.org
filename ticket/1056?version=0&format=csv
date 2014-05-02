@@ -1,0 +1,2 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1056,User links for OpenID users are broken,pudo,,We need to use user.id instead of their name or escape the URL properly. ,defect,new,critical,ckan-v1.4,ckan,,,,ckan,qa

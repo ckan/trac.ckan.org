@@ -1,0 +1,19 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+322	Interface for Notification Service	dread	dread	"=== Use cases ===
+ * Registration
+ * Deregistration
+ * Configuration of port in pylons config
+
+=== Design ===
+ * Default port: 5672 (standard for AMQP)
+ * Exchange name: 'ckan'
+ * Exchange type: topic exchange (most flexible)
+ * Routing keys: OBJ_TYPE.OBJ_ID
+
+=== Example routing keys ===
+ * 'package.238bc-704a87-928374.new' - New package created with ID '238bc-704a87-928374'
+ * 'group.4234-ab98203-fe324.edited' - Group '4234-ab98203-fe324' edited
+
+=== Documentation ===
+   * How to use
+   * simple example of an external client?"	enhancement	new	blocker	v1.1	ckan					

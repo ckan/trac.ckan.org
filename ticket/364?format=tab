@@ -1,0 +1,6 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+364	Search for 'statistic' returns nothing	dread		"On ckan.net there are plenty of packages (and indeed their tags) with the word 'statistic' in them, but no packages turn up when you search for it:
+
+http://ckan.net/package/search?q=statistic&search=Search+Packages+%C2%BB
+
+(Using Postgres full text search)"	defect	closed	awaiting triage	ckan-v1.3	ckan	fixed				

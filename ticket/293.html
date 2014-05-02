@@ -1,0 +1,452 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      #293 (REST PackageResource update causes exception)
+     – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="prev" href="292.html" title="Ticket #292" />
+        <link rel="last" href="3030.html" title="Ticket #3030" />
+        <link rel="help" href="../wiki/TracGuide.html" />
+        <link rel="alternate" href="293%3Fformat=csv" type="text/csv" class="csv" title="Comma-delimited Text" /><link rel="alternate" href="293%3Fformat=tab" type="text/tab-separated-values" class="tab" title="Tab-delimited Text" /><link rel="alternate" href="293%3Fformat=rss" type="application/rss+xml" class="rss" title="RSS Feed" />
+        <link rel="next" href="294.html" title="Ticket #294" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/ticket.css" type="text/css" />
+        <link rel="first" href="1.html" title="Ticket #1" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript">
+      var auto_preview_timeout=2.0;
+      var form_token="93d81ccf9a7bb1c456462f62";
+    </script>
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script><script type="text/javascript" src="../chrome/common/js/wikitoolbar.js"></script><script type="text/javascript" src="../chrome/common/js/resizer.js"></script><script type="text/javascript" src="../chrome/common/js/auto_preview.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("div.description").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $(".foldable").enableFolding(false, true);
+        var args = {realm: "ticket", id: 293, escape_newlines: 0}
+        $("#comment").autoPreview("/wiki_render", args, function(textarea, text, rendered) {
+            $("#ticketchange div.comment").html(rendered);
+            if (rendered)
+              $("#ticketchange").show();
+            else if ($("#ticketchange ul.changes").length == 0)
+              $("#ticketchange").hide();
+        });
+        $("#trac-comment-editor textarea").autoPreview("/wiki_render", args,
+                                                       function(textarea, text, rendered) {
+          var comment = $("#trac-comment-editor").next("div.comment");
+          comment.html(rendered);
+          if (rendered)
+            comment.show();
+          else
+            comment.hide();
+        });
+        $("#modify").parent().toggleClass("collapsed");
+        $(".trac-topnav a").click(function() { $("#modify").parent().removeClass("collapsed"); });
+        /* only enable control elements for the currently selected action */
+        var actions = $("#action input[name='action']");
+        function updateActionFields() {
+          actions.each(function () {
+            $(this).siblings().find("*[id]").enable($(this).checked());
+            $(this).siblings().filter("*[id]").enable($(this).checked());
+          });
+        }
+        actions.click(updateActionFields);
+        updateActionFields();
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="../wiki/TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li class="active"><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="292.html" title="Ticket #292">Previous Ticket</a></span></li><li class="last"><span><a class="next" href="294.html" title="Ticket #294">Next Ticket</a> &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="ticket">
+      <h1 id="trac-ticket-title">
+          <a href="293.html">Ticket #293</a>
+          <span class="status">(closed defect: fixed)</span>
+      </h1>
+      <div id="ticket">
+  <div class="date">
+    <p>Opened <a class="timeline" href="../timeline%3Ffrom=2010-04-20T09:35:02Z&amp;precision=second.html" title="2010-04-20T09:35:02Z in Timeline">4 years</a> ago</p>
+    <p>Last modified <a class="timeline" href="../timeline%3Ffrom=2010-04-22T12:41:23Z&amp;precision=second.html" title="2010-04-22T12:41:23Z in Timeline">4 years</a> ago</p>
+  </div>
+  <h2 class="summary searchable">REST PackageResource update causes exception</h2>
+  <table class="properties">
+    <tr>
+      <th id="h_reporter">Reported by:</th>
+      <td headers="h_reporter" class="searchable">
+        <a href="../query%3Fstatus=!closed&amp;reporter=dread.html">dread</a>
+      </td>
+      <th id="h_owner">Owned by:</th>
+      <td headers="h_owner">
+        <a href="../query%3Fstatus=!closed&amp;owner=johnbywater.html">johnbywater</a>
+      </td>
+    </tr>
+    <tr>
+        <th id="h_priority">
+          Priority:
+        </th>
+        <td headers="h_priority">
+              <a href="../query%3Fstatus=!closed&amp;priority=critical.html">critical</a>
+        </td>
+        <th id="h_milestone">
+          Milestone:
+        </th>
+        <td headers="h_milestone">
+              <a class="closed milestone" href="../milestone/v1.0.html">v1.0</a>
+        </td>
+    </tr><tr>
+        <th id="h_component">
+          Component:
+        </th>
+        <td headers="h_component">
+              <a href="../query%3Fstatus=!closed&amp;component=ckan.html">ckan</a>
+        </td>
+        <th id="h_keywords">
+          Keywords:
+        </th>
+        <td headers="h_keywords" class="searchable">
+        </td>
+    </tr><tr>
+        <th id="h_cc">
+          Cc:
+        </th>
+        <td headers="h_cc" class="searchable">
+        </td>
+        <th id="h_repo">
+          Repository:
+        </th>
+        <td headers="h_repo">
+              <a href="../query%3Fstatus=!closed.html"></a>
+        </td>
+    </tr><tr>
+        <th id="h_theme">
+          Theme:
+        </th>
+        <td headers="h_theme">
+              <a href="../query%3Fstatus=!closed.html"></a>
+        </td>
+        <th>
+        </th>
+        <td>
+        </td>
+    </tr>
+  </table>
+  <div class="description">
+    <h3 id="comment:description">
+      Description
+    </h3>
+    <div class="searchable">
+      <p>
+This is caused by editing a package with resources over the REST interface.
+</p>
+<p>
+Exception:
+</p>
+<pre class="wiki">URL: http://de.ckan.net/api/rest/package/destatis
+Module weberror.errormiddleware:162 in __call__
+&lt;&lt;              __traceback_supplement__ = Supplement, self, environ
+                   sr_checker = ResponseStartChecker(start_response)
+                   app_iter = self.application(environ, sr_checker)
+                   return self.make_catching_iter(app_iter, environ, sr_checker)
+               except:
+&gt;&gt;  app_iter = self.application(environ, sr_checker)
+Module repoze.who.middleware:107 in __call__
+&lt;&lt;          wrapper = StartResponseWrapper(start_response)
+               app_iter = app(environ, wrapper.wrap_start_response)
+       
+               # The challenge decider almost(?) always needs information from the
+&gt;&gt;  app_iter = app(environ, wrapper.wrap_start_response)
+Module beaker.middleware:73 in __call__
+&lt;&lt;                                                     self.cache_manager)
+               environ[self.environ_key] = self.cache_manager
+               return self.app(environ, start_response)
+&gt;&gt;  return self.app(environ, start_response)
+Module beaker.middleware:152 in __call__
+&lt;&lt;                          headers.append(('Set-cookie', cookie))
+                   return start_response(status, headers, exc_info)
+               return self.wrap_app(environ, session_start_response)
+           
+           def _get_session(self):
+&gt;&gt;  return self.wrap_app(environ, session_start_response)
+Module routes.middleware:130 in __call__
+&lt;&lt;                  environ['SCRIPT_NAME'] = environ['SCRIPT_NAME'][:-1]
+               
+               response = self.app(environ, start_response)
+               
+               # Wrapped in try as in rare cases the attribute will be gone already
+&gt;&gt;  response = self.app(environ, start_response)
+Module pylons.wsgiapp:125 in __call__
+&lt;&lt;          
+               controller = self.resolve(environ, start_response)
+               response = self.dispatch(controller, environ, start_response)
+               
+               if 'paste.testing_variables' in environ and hasattr(response,
+&gt;&gt;  response = self.dispatch(controller, environ, start_response)
+Module pylons.wsgiapp:324 in dispatch
+&lt;&lt;          if log_debug:
+                   log.debug("Calling controller class with WSGI interface")
+               return controller(environ, start_response)
+           
+           def load_test_env(self, environ):
+&gt;&gt;  return controller(environ, start_response)
+Module ckan.lib.base:51 in __call__
+&lt;&lt;          # available in environ['pylons.routes_dict']
+               try:
+                   return WSGIController.__call__(self, environ, start_response)
+               finally:
+                   model.Session.remove()
+&gt;&gt;  return WSGIController.__call__(self, environ, start_response)
+Module pylons.controllers.core:221 in __call__
+&lt;&lt;                  return response(environ, self.start_response)
+               
+               response = self._dispatch_call()
+               if not start_response_called:
+                   self.start_response = start_response
+&gt;&gt;  response = self._dispatch_call()
+Module pylons.controllers.core:172 in _dispatch_call
+&lt;&lt;              req.environ['pylons.action_method'] = func
+                   
+                   response = self._inspect_call(func)
+               else:
+                   if log_debug:
+&gt;&gt;  response = self._inspect_call(func)
+Module pylons.controllers.core:107 in _inspect_call
+&lt;&lt;                        func.__name__, args)
+               try:
+                   result = self._perform_call(func, args)
+               except HTTPException, httpe:
+                   if log_debug:
+&gt;&gt;  result = self._perform_call(func, args)
+Module pylons.controllers.core:60 in _perform_call
+&lt;&lt;          """Hide the traceback for everything above this method"""
+               __traceback_hide__ = 'before_and_this'
+               return func(**args)
+           
+           def _inspect_call(self, func):
+&gt;&gt;  return func(**args)
+Module ckan.controllers.rest:145 in update
+&lt;&lt;                  fs = ckan.forms.group_fs_combined
+                   fs = fs.bind(entity, data=request_fa_dict)
+                   validation = fs.validate_on_edit(entity.name, entity.id)
+                   if not validation:
+                       response.status_int = 409
+&gt;&gt;  validation = fs.validate_on_edit(entity.name, entity.id)
+Module ckan.forms.package:385 in validate_on_edit
+&lt;&lt;              temp_name = orig_pkg_name
+                   self.data['Package-%s-name' % record_id] = u'something_unique'
+               validation = self.validate()
+               if temp_name:
+                   # restore it
+&gt;&gt;  validation = self.validate()
+Module formalchemy.forms:175 in validate
+&lt;&lt;          if self.readonly:
+                   raise Exception('Cannot validate a read-only FieldSet')
+               return AbstractFieldSet.validate(self)
+       
+           def sync(self):
+&gt;&gt;  return AbstractFieldSet.validate(self)
+Module formalchemy.forms:104 in validate
+&lt;&lt;          success = True
+               for field in self.render_fields.itervalues():
+                   success = field._validate() and success
+               # run this _after_ the field validators, since each field validator
+               # resets its error list. we want to allow the global validator to add
+&gt;&gt;  success = field._validate() and success
+Module formalchemy.fields:763 in _validate
+&lt;&lt;          try:
+                   value = self._deserialize()
+               except validators.ValidationError, e:
+                   self.errors.append(e)
+&gt;&gt;  value = self._deserialize()
+Module formalchemy.fields:1354 in _deserialize
+&lt;&lt;          if self.is_composite_foreign_key:
+                   return self.query(self.relation_type()).get(python_pk(self.renderer.deserialize()))
+               return self.renderer.deserialize()
+&gt;&gt;  return self.renderer.deserialize()
+Module formalchemy.fields:183 in deserialize
+&lt;&lt;          if self.field.is_collection:
+                   return [self._deserialize(subdata) for subdata in self._serialized_value()]
+               return self._deserialize(self._serialized_value())
+       
+           def _deserialize(self, data):
+&gt;&gt;  return self._deserialize(self._serialized_value())
+Module formalchemy.fields:167 in _serialized_value
+&lt;&lt;          if self.field.is_collection:
+                   return self._params.getall(self.name)
+               return self._params.getone(self.name)
+       
+           def deserialize(self):
+&gt;&gt;  return self._params.getone(self.name)
+Module formalchemy.base:63 in getone
+&lt;&lt;          if v is None or isinstance(v, basestring) or isinstance(v, cgi.FieldStorage):
+                   return v
+               return v[0]
+           def getall(self, key):
+               v = dict.get(self, key)
+&gt;&gt;  return v[0]
+TypeError: 'int' object is unsubscriptable
+</pre><p>
+Thanks to Friedrich for spotting this.
+</p>
+
+    </div>
+  </div>
+</div>
+          
+
+        <div>
+          <h2 class="foldable">Change History</h2>
+          <div id="changelog">
+              <div class="change" id="trac-change-1">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:1" class="cnum">
+      <a href="293.html#comment:1">comment:1</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2010-04-20T10:51:47Z&amp;precision=second.html" title="2010-04-20T10:51:47Z in Timeline">4 years</a> ago by dread
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Owner</strong>
+        changed from <em>dread</em> to <em>johnbywater</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-2">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:2" class="cnum">
+      <a href="293.html#comment:2">comment:2</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2010-04-21T21:30:57Z&amp;precision=second.html" title="2010-04-21T21:30:57Z in Timeline">4 years</a> ago by johnbywater
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+Can't reproduce this exception. Have added tests covering adding, removing and updating resources, and it all seems to work.
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-3">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:3" class="cnum">
+      <a href="293.html#comment:3">comment:3</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2010-04-22T12:41:23Z&amp;precision=second.html" title="2010-04-22T12:41:23Z in Timeline">4 years</a> ago by johnbywater
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Status</strong>
+        changed from <em>new</em> to <em>closed</em>
+    </li><li>
+      <strong>Resolution</strong>
+        set to <em>fixed</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+With the metastable revision of CKAN, the package resource data structure in ckanclient scripts must have all four keys set in the Resource-Dict. Setting 'hash' in the resource data cures this issues with "metastable".
+</p>
+<p>
+The "bad" code was:
+</p>
+<blockquote>
+<p>
+resources.append((res<a class="missing wiki">url?</a>, res<a class="missing wiki">format?</a>, res<a class="missing wiki">description?</a>, res<a class="missing wiki">hash?</a>))
+</p>
+</blockquote>
+<p>
+<a class="missing wiki">KeyError?</a>: 'hash'
+</p>
+<p>
+This code was adjusted in revision 40c4fe04038d, to default unspecified resource attributes to the empty string. It was changed further in subsequent revisions, to use parameters of the Package.add_resource method to default unspecified values.
+</p>
+<p>
+However, the API doc doesn't mention the resource hash, although it is required, but I just fixed that in the source (in revision 0f20bfb45d13).
+<a class="ext-link" href="http://knowledgeforge.net/ckan/doc/ckan/api.html"><span class="icon">​</span>http://knowledgeforge.net/ckan/doc/ckan/api.html</a> 
+</p>
+
+    </div>
+
+              </div>
+          </div>
+        </div>
+      <div id="help"><strong>Note:</strong> See
+        <a href="../wiki/TracTickets.html">TracTickets</a> for help on using
+        tickets.</div>
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="first">
+          <a rel="nofollow" href="293%3Fformat=csv" class="csv">Comma-delimited Text</a>
+        </li><li>
+          <a rel="nofollow" href="293%3Fformat=tab" class="tab">Tab-delimited Text</a>
+        </li><li class="last">
+          <a rel="nofollow" href="293%3Fformat=rss" class="rss">RSS Feed</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

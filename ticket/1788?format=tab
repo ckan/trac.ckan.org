@@ -1,0 +1,16 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1788	IE7 compatibility problems	zephod	zephod	"From Antonia Acuno, via Ira:
+
+It appears that the current layout for the datahub does not work in
+IE7, which would mean a problem for us as most gov uses it and is one
+of those we have to support...any views?
+
+Tested in several gov departments computers, so a common enough issue.
+
+http://imgur.com/ip4xa
+
+From Rufus:
+We haven't officially supported IE7 so far but can put engineering
+effort into this if absolutely needed. I note that IE 7 is now 3y out
+of date and is likely a security risk. Obviously this is something to
+ask Antonio about."	defect	closed	major	ckan-sprint-2012-03-05	ckan	fixed			ckan	none

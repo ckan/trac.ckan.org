@@ -1,0 +1,15 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+191,Searching by modification date,dread,johnglover,"Cost - 2 days
+
+Search interface has new options to filter and sort the results by the date the package has been last modified in ckan. Search options are included in both Web UI and Search API.
+
+The filter specifies a range of dates. The results can be sorted by ascending or descending dates. The last modification date is surfaced in the package. 
+
+Example search parameters:
+
+|| modification-range=5/4/09- || Exclude packages last modified earlier than 5/4/09 ||
+|| modification-range=5/4/09-5/12/09 || Exclude packages last modified outside of 5/4/09-5/12/09 ||
+|| order_by=mod ||Sort by metadata modification. Defaults to newest first. ||
+|| order_by=mod-newest || Sort by metadata modification, newest first. ||
+|| order_by=mod-oldest || Sort by metadata modification, oldest first. ||
+",enhancement,closed,minor,ckan-sprint-2011-12-19,ckan,fixed,,amercader,ckan,none

@@ -1,0 +1,5 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1060	Spreadsheet importer tries to import readonly keys	dread		"e.g. we just added notes_rendered and that is read in as an extra field.
+Tests failing in ckanext-importlib
+
+Also related: we are missing lost metadata_created and metadata_modified in the dumps."	defect	closed	major	ckan-v1.4-sprint-5	ckan	fixed			ckanext-importlib	none

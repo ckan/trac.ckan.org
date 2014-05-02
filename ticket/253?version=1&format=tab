@@ -1,0 +1,44 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+253	Package relationships	dread	rgrp	"= Overview =
+Functionality to formally associate packages. We see a need for specific parent-child, inheriting or dependency relations. Not only should this help navigation between packages in the web interface, but it also provides a mechanism to automatically pull dependencies when downloading a data package, in a similar manner as we see in software package management.
+
+= Examples =
+
+1. There are 27 packages in data.gov.uk to do with the Data4NR's Health Poverty Index. There is currently no common link between these, unless you search for 'HPI' (which also brings up House Price Index), or look under tag 'health' (which also has 600 other results). There should be a link on each HPI package page to navigate to the other 'sibling' HPI packages, and to a 'root' package that has info about the set. This could be partially achieved using the existing tag or group concepts, but a more explicit/official/obvious marking of their relationship could be beneficial.
+
+2. In ckan.net is freedict, a collection of translation dictionaries. You could make each dictionary a child package and use this system. But it would probably be better to make each dictionary a different resource in the same package. (There are other ideas to denote a resource as the data making up a 'portion' of package, or a 'whole' of the package, to help people downloading datasets in the software package style.)
+
+3. OSM has had some Naptan data imported (bus stops), with special permission - i.e. a more liberal license. It would be useful to show this link on both OSM and Naptan packages in CKAN: OSM 'derives from' Naptan with a comment about the license change. I'm not sure this is useful to an automatic download or use of these datasets, but may aid exploration on the CKAN website and understanding the provenance of the bus stop data on it.
+
+4. IPCC collection of data linked / mirrored. Not sure if there are useful relationships here?
+
+5. Dracos gets postbox locations from crowd sourcing and OSM. We could say Dracos 'derives from' OSM.
+
+= Implementation =
+
+New domain object: PackageRelationship (revisioned)
+
+Attributes:
+  * src (Package reference)
+  * dest (Package reference)
+  * type (string)
+  * comment
+
+Relationship types:
+is_dependent_on (is_dependency_of)
+is_derived_from (has_derivation)
+is_child_of (is_parent_of)
+
+Relationship type is stored using an inherited mapped object, as given in the first column. The reverse relationship (bracketed) is given just for display purposes only.
+
+WUI:
+  * View: show both sides of the relationship (but think carefully -- e.g. a given package may have *many* dependents ...)
+  * Editable as part of package or separately? (e.g. like authz)
+  * Do we normalize to only one type name of the pair?
+  * Do we allow create of relationship from both ends (e.g. only from dependency to dependent or either way?)
+  
+API:
+  * Appear in package listing Example: 'relationships': [{'is_dependency_of':'osm', comments:'Since version 0.2'}, {'is_parent_of':'bobs_maps'}]
+  * No need for write access to be provided API for the moment.
+
+This ticket encompasses ticket:169 (Package derivations) and ticket:176 (Package dependencies)."	enhancement	new	awaiting triage		ckan					

@@ -1,0 +1,55 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2550	User types	ross	icmurray	"== Requirements ==
+
+In the data hub plugin we require the ability to differentiate users between those that have paid for a service, and those that haven't. The distinction isn't boolean as there may be levels of service for paid users, so it may be that we need a 'type' of user where there are various grades of 'paid' which are likely to be strings (specific to the data hub).
+
+== Required interface ==
+
+Once changes have been made to the user schema, for a given user we want to be able to:
+
+ * determine if they have a paid or a free account, and
+ * get a string name of the type of paid account.
+
+Care should be taken to ensure that the 'paid' status of the user cannot be set through the API and only by the datahub plugin.
+
+== User Stories ==
+
+
+User stories related to the management, setting and changing of a user's payment level, as well as historical information on payments should be done as part of the work that includes actually allowing purchases.  For now it is adequate that we can manually control these things through paster commands.
+
+Payments types should be linear as I don't believe for this type of service a pick-and-mix modular model would work well. Organizations will inherit the payment level of their owner, so currently there is no requirement for it to affect organizations at all.
+
+ * As a sysadmin I would like to be able to use a paster command to
+   manually set a user's payment level, or remove it entirely.
+
+ * As a sysadmin I would like to be able to run a paster command to
+   view a list of users who have a payment plan, grouped by the plan
+   that they have.
+
+ * As a sysadmin I would like to be able to use the API to change the
+   payment status of a specific user through user_create and user_update.
+   This shouldn't be available to anybody else.
+
+ * As a user, and only if I have one, I'd like to see my current payment
+   level on my user profile page.
+   
+
+== Tasks ==
+
+[ ] Tests
+
+[ ] Plugin based migration
+
+[ ] Code
+
+    [ ] Model
+
+    [ ] API
+
+[ ] Documentation
+
+
+== Estimates ==
+
+
+"	enhancement	accepted	awaiting triage	datahub-july	ckan			ross	ckan	none

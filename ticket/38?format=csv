@@ -1,0 +1,5 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+38,Make data available in machine-usable form,rgrp,rgrp,"Currently all data is only available via the web interface which makes it difficult to obtain in bulk. Data should be provided in other more convenient, machine usable forms:
+
+  * DB Dump
+  * JSON for each package page (maybe Atom as well)",enhancement,closed,critical,v0.5,ckan,fixed,,,,

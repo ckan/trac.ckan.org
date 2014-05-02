@@ -1,0 +1,10 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+844,bad mail config ckan.net/ckan.org,wwaites,wwaites,"ckan.net and ckan.org have no mx record and no listener on port 25. yet they send out mail. this means, when messages it sends bounce for whatever reason, the bounce messages stay in the queue on the remote mail server until they expire. for example:
+
+{{{
+B30E6D9F       2873 Sat Dec  4 14:05:40  MAILER-DAEMON
+(delivery temporarily suspended: connect to ckan.net[46.51.189.76]:25: Operation timed out)
+                                         no-reply@ckan.net
+}}}
+
+both these domains should have an mx record pointing to mail.okfn.org and mail.okfn.org should be configured to handle these addresses correctly, e.g. by sending them to /dev/null",defect,closed,major,,ckan,fixed,,,,

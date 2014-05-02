@@ -1,0 +1,4 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1007	Backport WDMMG translations for extensions i18n	pudo	pudo	"Needed to allow extensions to be internationalized in the code and in templates. Requires in-template i18n domain switching which is broken between Genshi and Pylons, thus needs this hackish class. 
+
+cf. https://bitbucket.org/okfn/wdmmg/src/198841e770e5/wdmmg/config/environment.py#cl-16 "	defect	closed	major		ckan	wontfix		rgrp	ckan	none

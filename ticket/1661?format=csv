@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1661,Wrong Routes version installed by CKAN package,dread,,"Jaakko Louhio reported that the wrong Routes version got installed during CKAN's package install.
+
+He is using Ubuntu 10.04 and he believes it install Routes 1.12.3 instead of what we use which is 1.11.",defect,assigned,major,ckan-backlog,ckan,,,,ckan,none

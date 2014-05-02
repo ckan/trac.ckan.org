@@ -1,0 +1,10 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2889	Support JSON values in extras, when returning JSON from API	seanh		"For example, edit the warandpeace dataset and add an extra with key ""comments"" and value ""[{u'date': u'Tue Aug 21 13:01:48 GMT 2012', u'comment': u'testing ckan', u'userId': u'11702'}, {u'date': u'Wed Aug 22 13:01:48 GMT 2012', u'comment': u'testing ckan again', u'userId': u'11702'}]"", now visit API URLs such as:
+
+/api/search/dataset?sort=metadata_modified+desc&all_fields=1&limit=10
+
+/api/rest/dataset/warandpeace
+
+/api/action/package_show?id=warandpeace
+
+The value of the extra comes out as a string in the dataset JSON, rather than having its contents unpacked into a list of JSON objects."	enhancement	new	awaiting triage	ckan-v1.9	ckan		api		ckan	none

@@ -1,0 +1,108 @@
+= CKAN UI Review = 
+
+All these points have been converted into ticket:214 - ticket:227.
+
+General points
+	* GUIDs are ugly. Can we, per default, display them truncated?
+	* "You're currently in the X section" is largely unhelpful. Try and work out what the user might *actually* be doing, and suggest possible next steps/alternative actions, without such a stilted writing style.
+	* Set meaningful title attributes on navigation links.
+	* Do we really need to display "About CKAN" everywhere? Doesn't it get a little tired?
+	* Perhaps an academic point, but users in general think of model objects as collections: /groups and /tags rather than /group and /tag. At the very least make the plural versions forward to the singular versions.
+	* Not so keen on URLS such as /package/edit/mypackagename. These seem to be task-oriented rather than resource oriented (which would be /package/mypackagename/edit), and unstable: there is a common root for /package/edit/mypackage and /package/history/mypackage which is not reflected in the URL structure.
+	* The "FAQ and Guide" is anything but.
+	* There is huge inconsistency in the titles of pages across the site: to give one example "Edit Package:" vs "Package: mypkg [not linked]" vs "History - mypkg [linked to package page]"
+
+Home [/]
+	* 'Login via OpenID' -> 'Login with OpenID'?
+
+	* Make clearer possible actions on home page. Maybe move explanatory para below {search, browse recents, add} options?
+
+	* Search
+		* allow clicking on 'only openly licensed'/'only downloadable' to select/deselect checkboxes: make them <label>s.
+		* cut 'only's -- use word 'filter' instead
+		* doesn't appear to match substrings!? A search for 'anna' doesn't return match the 'annakarenina' package.
+		* autocomplete package names?
+	
+	* Search results page
+		* See below under "Packages:" -> "Package search results page:"
+
+	* Recently changed
+		* What's with the blank entries?
+		* Could we make this neater? Tabulate the information, and cut down on the visual impact of less relevant data (time, @-signs, etc).
+		* "More..." what? -- make it clearer what this does.
+		* /revision needs copyediting.
+	
+Packages
+	* Packages landing page [/package]
+		* Booooooring! Can we show some 'hottest'/'most recent' package lists here? Or something? Anything!
+		* Propose three-column package listing: two lists of highest-scorers on some metric and last column is an invitation to register a new package, with a little copy explaining what's involved and why you'd want to.
+		* Why can I search packages from the home page but not immediately from the packages index page? It's not like there's anything else going on here... Move contents of /package/search to here. This to go above the three-col stuff suggested above.
+	
+	* Package search results page [/package/search?q=something]
+		* need clearer delineation between search entry form and results.
+		* 0 results needs to be clearer, and the alternative suggestion: 'would you like to create a new package' needs to not look like a search result.
+		* openness/downloadability ticks/crosses are totally inscrutable to non-techies (those who don't know about the title attribute). need better icons, and a key in a box on RHS.
+		* maybe highlight two-tick entries with a particular colour, but the open knowledge badge is horrendous, and breaks visual cadence.
+		* results data should be tabulated, with the project names and descriptions made most prominent. <li> blobs are unnecessary visual noise.
+		* "N tags found" -- why do I care? this should be presented as "filter results by tag" -- very unlikely that I'm looking for a tag: I'm looking for a package, but tags might help me narrow down my search.
+		* tags should be displayed more like the way they're displayed when you add them to a package (i.e. blue 'tag' background)
+		* maybe links should go on the full titles? package names are less important to a user scanning the list: they could have less visual impact and come after the readable title.
+		* pagination is currently lost in amongst the results list. needs to be *much* more obvious, and should appear top and bottom, or at the very least at the bottom!
+		* copywriting: "Packages - Search" -> "Find a package"
+
+	* "Browse packages" [/package/list]
+		* Same comments as package search listing in general.
+		* Should have filter by name (à la KForge alphanum widget) and also by tag: list of most common tags in box on RHS?
+	
+	* Package page [/package/mypackagename]
+		* In general: a huge amount of visual and typographic noise: "Package:" is redundant.
+		* "{edit}", "{history}" -- ugly, and it's not clear that these are primary actions on this page. Notably, why on earth is "make an enquiry with Is It Open?" bigger than these?
+		* Openness/downloadability icons: need help, as discussed earlier
+		* "Rating:" redundant, as is the second set of stars -- why can't both the display and rate widget
+		* "Metadata:" technospeak, probably redundant.
+		* <li> bullets add nothing.
+		* Title, Version, URL can probably go in one line.
+		* Resources can be made more prominent.
+		* Author, author email and Maintainer, maintainer email can be merged.
+		* Groups, tags in little boxes?
+		* Notes made more delineated -- Markdown has the capacity to look like other parts of the page: perhaps monospace the typeface?
+		* Don't show extras unless there are any.
+	
+	* Package edit page [/package/edit/mypackagename]
+		* Fields could be grouped.
+		* Inconsistent capitalisation (Url -> URL).
+		* Tag editor appears to break occasionally.
+		* Perhaps move to two column forms to save vertical space?
+		* Notes field to monospace?
+		* Extras fields need some jQuery love -- shouldn't have a fixed number available.
+		* Typography is a bit of a mess.
+	
+	* Package history page [/package/history/mypackagename]
+		* "Revisions" is redundant
+		* "Compare" button is in a ridiculous place. It should be above/below (both) the table, but not *in* it!
+		* Ditto to overall "Recent Changes" page comments w.r.t. timestamps, GUIDs, and (if poss) author links.
+
+Tags
+	* Tags landing page [/tag]
+		* Currently this page serves *no* purpose other than to get in the way. Why can't I *both* search for tags *and* browse the list of tags right here? (In fact they're the same operation as far as a user is concerned).
+		* Big cloud of tags (sorted by popularity/usage?) filterable with a search box.
+	
+	* Tags search page [/tag/search] and list [/tag/list] are both redundant and should be merged straight into [/tag].
+
+Groups
+	* Groups landing page [/group]
+		* Yeesh! What's up with the typography for "Just login..."?
+		* Propose another three column thing with (say) largest/most active groups and a "create your own group" column, with (again) a little copy explaining how/why you'd do this, and also that you'll need to log in before you can. Cut the scary italics.
+		* Another case of <li> bullets adding nothing.
+	
+Repository History [/revision]
+	* What is this page called? "Recent Changes", "Repository History", "/revision": standardise. Between the link in the nav and the page <title> particularly, but the route is also important. Perhaps /changes or something similar?
+	* Pagination has similar issues to elsewhere. Also, most obvious here, is the fact that we don't need to display a link to every possible page. Please can we limit it to, say, a dozen nearby pages and an ellipsis.
+	* Without looking at dates, its not clear whether I'm seeing most recent or oldest changes. Change pagination to say "Older"/"More recent" rather than "Previous"/"Next".
+	* Table layout is pretty ugly (yes, I'm aware this is my fault).
+	* Timestamps are horribly unreadable. At the absolute minimum get rid of the micros.
+	* Can we link to an author page?
+	* Atom feed should have a feed icon!
+	* Why are we adding another <link rel="alternate"> to this page? We already have one for recent changes on every page in the site and the one we're adding has a less descriptive title. Which is correct? Use that one as a feed for every page.
+
+

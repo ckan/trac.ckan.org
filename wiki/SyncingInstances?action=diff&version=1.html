@@ -1,0 +1,356 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+    <html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      SyncingInstances (diff) – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="help" href="TracGuide.html" />
+        <link rel="up" href="SyncingInstances%3Faction=history.html" title="Page history" />
+        <link rel="next" href="SyncingInstances%3Faction=diff&amp;version=2.html" title="Version 2" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/wiki.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/diff.css" type="text/css" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/diff.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="../chrome/common/css/diff.css" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last active"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span class="missing">&larr; Previous Change</span></li><li><a href="SyncingInstances%3Faction=history.html" title="Page history">Wiki History</a></li><li class="last"><span><a class="next" href="SyncingInstances%3Faction=diff&amp;version=2.html" title="Version 2">Next Change</a> &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="wiki">
+      <h1>
+        Changes between
+          <a href="http://localhost/wiki/SyncingInstances?version=0">Initial Version</a> and
+          <a href="SyncingInstances%3Fversion=1.html">Version 1</a> of
+          <a href="SyncingInstances%3Fversion=1.html">SyncingInstances</a>
+      </h1>
+      <form method="post" id="prefs" action="SyncingInstances%3Fversion=1.html"><div><input type="hidden" name="__FORM_TOKEN" value="93d81ccf9a7bb1c456462f62" /></div>
+        <div>
+          <input type="hidden" name="action" value="diff" />
+          <input type="hidden" name="version" value="1" />
+          <input type="hidden" name="old_version" value="0" />
+          
+  <label for="style">View differences</label>
+  <select id="style" name="style">
+    <option selected="selected" value="inline">inline</option>
+    <option value="sidebyside">side by side</option>
+  </select>
+  <div class="field">
+    <label><input type="radio" name="contextall" value="0" checked="checked" />
+             Show</label>
+      <label><input type="text" name="contextlines" id="contextlines" size="2" maxlength="3" value="2" />
+             lines around each change</label><br />
+    <label><input type="radio" name="contextall" value="1" />
+           Show the changes in full context</label>
+  </div>
+  <fieldset id="ignore">
+    <legend>Ignore:</legend>
+    <div class="field">
+      <input type="checkbox" id="ignoreblanklines" name="ignoreblanklines" />
+      <label for="ignoreblanklines">Blank lines</label>
+    </div>
+    <div class="field">
+      <input type="checkbox" id="ignorecase" name="ignorecase" />
+      <label for="ignorecase">Case changes</label>
+    </div>
+    <div class="field">
+      <input type="checkbox" id="ignorewhitespace" name="ignorewhitespace" />
+      <label for="ignorewhitespace">White space changes</label>
+    </div>
+  </fieldset>
+  <div class="buttons">
+    <input type="submit" name="update" value="Update" />
+  </div>
+
+        </div>
+      </form>
+      <dl id="overview">
+        <dt class="property time">Timestamp:</dt>
+        <dd class="time">
+            02/08/10 17:22:11 (<a class="timeline" href="../timeline%3Ffrom=2010-02-08T17:22:11Z&amp;precision=second.html" title="2010-02-08T17:22:11Z in Timeline">4 years</a> ago)
+        </dd>
+        <dt class="property author">Author:</dt>
+        <dd class="author">
+          dread
+        </dd>
+        <dt class="property message">Comment:</dt>
+        <dd class="message">
+          
+          <p>
+--
+</p>
+
+        </dd>
+      </dl>
+      <div class="diff">
+        <div class="legend" id="diff-legend">
+          <h3>Legend:</h3>
+          <dl>
+            <dt class="unmod"></dt><dd>Unmodified</dd>
+            <dt class="add"></dt><dd>Added</dd>
+            <dt class="rem"></dt><dd>Removed</dd>
+            <dt class="mod"></dt><dd>Modified</dd>
+          </dl>
+        </div>
+        <div class="diff">
+  <ul class="entries">
+      <li class="entry">
+        <h2 id="file0">
+          <a href="SyncingInstances%3Fversion=1.html">SyncingInstances</a>
+        </h2>
+        <table class="trac-diff inline" summary="Differences" cellspacing="0">
+              <colgroup><col class="lineno" /><col class="lineno" /><col class="content" /></colgroup>
+              <thead>
+                <tr>
+                  <th title="Version currently edited">
+                    <a href="SyncingInstances%3Faction=diff&amp;version=1.html#L1">
+                      v1</a>
+                  </th>
+                  <th title="Version 1">
+                    <a href="SyncingInstances%3Fversion=1.html#L1">
+                      v1</a>
+                  </th>
+                  <td> </td>
+                </tr>
+              </thead>
+            <tbody class="add">
+                  <tr class="first">
+                          <th> </th><th>1</th><td class="r"><ins>= Syncing =</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>2</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>3</th><td class="r"><ins>== Scenarios ==</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>4</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>5</th><td class="r"><ins>&nbsp;* 1-way: On setup, Server A's packages are copied to Server B. On sync, changes to packages on Server A are transferred to Server B.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>6</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>7</th><td class="r"><ins>&nbsp;* 2-way: On setup, packages from each server is copied to the other. On sync, changes on each are transferred to the other.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>8</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>9</th><td class="r"><ins>We will focus now on 1-way.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>10</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>11</th><td class="r"><ins>== Requirements ==</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>12</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>13</th><td class="r"><ins>Merging of changes from both machines. If there is a conflict then it is logged and a result is chosen.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>14</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>15</th><td class="r"><ins>== Use cases ==</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>16</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>17</th><td class="r"><ins>&nbsp;* First sync - all packages and revisions are copied from Server A to Server B.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>18</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>19</th><td class="r"><ins>&nbsp;* Subsequent sync after package changes on A and/or B.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>20</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>21</th><td class="r"><ins>&nbsp;* Sync after package purged on A. (Package also purged on B.)</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>22</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>23</th><td class="r"><ins>&nbsp;* Sync after package purged on B. (Package not recreated on B.)</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>24</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>25</th><td class="r"><ins>&nbsp;* Sync between CKAN instances of different versions of ckan &amp; vdm.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>26</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>27</th><td class="r"><ins>&nbsp;* Server B syncs at different times from Server C.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>28</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>29</th><td class="r"><ins>&nbsp;* Package/Tag/Group name on Server A clashes with an existing one on Server B. Log all of them. Merge tag and group. Not sure about package.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>30</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>31</th><td class="r"><ins>&nbsp;* Use of Server A and Server B continues undisturbed during sync.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>32</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>33</th><td class="r"><ins>&nbsp;* Objects on Server A with restricted authz are by default editable on Server B.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>34</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>35</th><td class="r"><ins>== Issues ==</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>36</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>37</th><td class="r"><ins>&nbsp;* Unversioned objects - make versioned? User, Group, Authz, Rating.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>38</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>39</th><td class="r"><ins>&nbsp;* How to test system.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>40</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>41</th><td class="r"><ins>&nbsp;* Clashes of package names.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>42</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>43</th><td class="r"><ins>== Operation ==</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>44</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>45</th><td class="r"><ins>=== First sync - 10am ===</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>46</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>47</th><td class="r"><ins>Server B asks "Give me all your revisions and unrevisioned objects."</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>48</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>49</th><td class="r"><ins>Server A replies "Rev1 and associated revisions Pkg1Rev1, Pkg2Rev1, !PkgTagRev1, !PkgResource1; Rev2 with Pkg1Rev2; Tag1; User1; !PackageGroup1; Group1; ratings"</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>50</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>51</th><td class="r"><ins>Server B creates Rev1, Pkg1Rev1, Pkg2Rev1, Pkg1Rev2, Pkg1, Pkg2, !PkgTagRev1, !PkgResource1, Tag1, User1, Auth, !PackageGroup1, Group1. UUIDs are the same as Server A.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>52</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>53</th><td class="r"><ins>Server B updates search vectors for Pkg1 and Pkg2.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>54</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>55</th><td class="r"><ins>Server records the time of the sync - 10am.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>56</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>57</th><td class="r"><ins>=== Meanwhile - 10.20am ===</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>58</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>59</th><td class="r"><ins>On Server A, user updates Pkg1 twice, creating Rev2/Pkg1Rev3 and Rev3/Pkg1Rev4PkgTagRev2. User1 updates his name.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>60</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>61</th><td class="r"><ins>=== Meanwhile - 10.40am ===</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>62</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>63</th><td class="r"><ins>On Server B, user updates Pkg1 once, creating Pkg1Rev5.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>64</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>65</th><td class="r"><ins>=== Sesequent sync ===</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>66</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>67</th><td class="r"><ins>Server B asks "Give me revisions and diffs since 10am."</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>68</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>69</th><td class="r"><ins>Server A replies Rev2/Pkg1Rev3, Rev3/Pkg1Rev4 and gives diff of Pkg1Rev2 -&gt; Pkg1Rev4</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>70</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>71</th><td class="r"><ins>Server B looks at its own revisions since 10am and sees Pkg1 now has two heads. It calculates diff of Pkg1Rev2 -&gt; Pkg1Rev5.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>72</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>73</th><td class="r"><ins>Server B takes Pkg1Rev2 and applies the two diffs in the order of priority, logging any conflicts, calling the result Pkg1Rev6.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>74</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>75</th><td class="r"><ins>== Tickets ==</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>76</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>77</th><td class="r"><ins>&nbsp;* Repository method 'all_revs_since'. It returns all revisions since a time/revision (or since the beginning).</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>78</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>79</th><td class="r"><ins>&nbsp;* Object method 'diff'. It returns a Diff object which is the diff of two !ObjectResources. Already exists for Package, but need for !PackageTag, !PackageExtra</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>80</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>81</th><td class="r"><ins>&nbsp;* Revision method 'serialize'.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>82</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>83</th><td class="r"><ins>&nbsp;* Diff method 'serialize'.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>84</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>85</th><td class="r"><ins>&nbsp;* API access to revisions: /api/rest/revision?since=ab49f348-fd23-ae3c</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>86</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>87</th><td class="r"><ins>&nbsp;* API access to diffs: /api/</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>88</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>89</th><td class="r"><ins>&nbsp;* Repository method 'import_revisions'. It takes serialised revisions and diffs and creates </ins> </td>
+                  </tr><tr>
+                          <th> </th><th>90</th><td class="r"><ins></ins> </td>
+                  </tr><tr class="last">
+                          <th> </th><th>91</th><td class="r"><ins>&nbsp;* Object method 'merge_diffs'. It takes an original object and two diffs that apply to it and applies them both in a new revision.</ins> </td>
+                  </tr>
+            </tbody>
+        </table>
+      </li>
+  </ul>
+</div>
+      </div>
+  </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

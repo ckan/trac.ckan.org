@@ -1,0 +1,2 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1181	Link spam vulnerability in Notes and User-About fields	dread	dread	"When viewing a user and a package, the about/notes fields contain Markdown, which may have links. These should have rel=""nofollow"" to discourage link spam."	defect	new	blocker		ckan				ckan	none

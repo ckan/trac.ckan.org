@@ -1,0 +1,15 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1068,metadata_modified problem,dread,dread,"This test has been failing since the clocks changed:
+{{{
+======================================================================
+FAIL: ckan.tests.models.test_package.TestPackageRevisions.test_02_metadata_created_and_modified
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File ""/home/dread/hgroot/pyenv-ckan2/lib/python2.6/site-packages/nose-0.11.3-py2.6.egg/nose/case.py"", line 186, in runTest
+    self.test(*self.arg)
+  File ""/home/dread/hgroot/ckan2/ckan/tests/models/test_package.py"", line 283, in test_02_metadata_created_and_modified
+    assert out == exp, (out, exp)
+AssertionError: (datetime.datetime(2011, 4, 1, 10, 45, 50, 875509), datetime.datetime(2011, 4, 1, 9, 45, 50, 875509))
+
+----------------------------------------------------------------------
+}}}",defect,closed,minor,ckan-v1.4-sprint-5,ckan,fixed,,,ckan,none

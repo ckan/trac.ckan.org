@@ -1,0 +1,85 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2732,New file upload functionality,ross,,"We should simplify upload and storage of files, initially only to local storage with archiver eventually being fixed to archive data externally. WIP pad is http://ckan.okfnpad.org/uploads  
+
+'''Simplifying uploads'''
+
+Currently uploads are too painful/difficult/fiddly to use and/or configure.  We want to simplify uploads so that they are done directly to the CKAN server, without support for remote services (S3 etc) and/or the dependencies it introduces.
+
+We want to fix:
+
+ * File uploads themselves
+ * Storage of uploaded files
+ * Notification of the upload to other components
+ 
+ 
+'''File uploads'''
+
+Things file upload should do:
+
+ * Allow sysadmin to disable
+ * Allow auth'ed users to upload
+ * Store whatever they send on disk, and store DB entry linking the file to the person
+ * When creating the resource, the user should be able to choose from all of the files
+   they have uploaded but not yet associated with a resource. This will allow for bulk
+   upload and then a delayed association.  Whenver a user creates a resource they
+   either upload a file now, or see previously uploaded files.
+
+{{{
+Can we do the upload asynchronously and then associate the 
+uploaded key with the resource before the save ? What happens 
+if the user tries to submit before asymc upload finishes ? Should 
+we delay them?
+}}}
+
+The upload workflow should look like...
+
+ 1. File upload should be a straightforward file upload with normal auth checks and normal processing of the posted data.  
+ 2. 
+     a. When called via ajax then the ID of the newly created file should be returned,
+     b. When called via WUI then it should also be given the url to redirect to after the file upload has been handled - the id will be passed as a query param.
+ 3. The resource save should check whether it has a file id and in that case updates the file object to point to the resource.
+
+This should enable:
+
+ * Separate file upload into a user's temporary store, either individually or as a batch.
+ * Creating resources and simply choosing from previously uploaded, unassigned files
+ * Adding files/data to a resource after the fact.
+
+   
+
+'''File storage'''
+
+File storage should be local to the CKAN install, and not a remote service.  Any archiving to remove storage providers should be outside of the main request.
+
+File storage should:
+
+ * allow moving data, a sysadmin should be able to move the storage root and change configuration and  have the system continue running (i.e. don't store absolute paths).
+ * provide maintainability, it should be easy to determine which old files are not associated with resources  and thus can be cleaned up.
+ * allow for collection of information (i.e. estimate of storate space used)
+ * check whether there is enough space and handling the conequences cleanly
+ * ensure files to be written only underneath its own root folder, checks should be made after any path generation that the file begins with the location of the file storage.
+ * Have a configurable maximum accepted blob size during upload.
+ * Should store what meta-data was provided with the upload, such as mimetype.
+
+Somewhere in the DB we should store ...
+
+||'''Column'''||'''Notes'''||
+||id||An identifier||
+||owner||The owning user, who uploaded the file||
+||path||The path (from the 'storage root') to the file||
+||size||The size in bytes of the file on disk||
+||mimetype||The mimetype of the file, as provided by the uploader||
+||upload_date||When the data was uploaded||
+||resource||The ID of the resource it belongs to. A unidirectional relationship.||
+||archived_url||The URL where this file has been archived||
+
+Generating paths should try and separate the files, perhaps based on username of the owner, or some other mechanism to avoid a single folder full of files.
+
+
+'''Notifications'''
+
+We need to make sure that it is possible to notify other components within the system that an upload has taken place, or at least make it easy for them to be notified.  The primary use case for this is to notify the component that will translate/upload certain formats to the data store.
+
+We could do this based on the post-upload update to the file model (i.e. when we record the total received size of the file).
+
+",enhancement,assigned,awaiting triage,ckan-backlog,ckan,,,,ckan,none

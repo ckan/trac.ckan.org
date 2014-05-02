@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1595: Editing of a Group leads to recording a change against all associated datasets</title>
+    <link>http://localhost/ticket/1595</link>
+    <description>&lt;p&gt;
+Or at least it appears that way from revision log which displays all Group datasets against the changelog, see &lt;a class="ext-link" href="http://thedatahub.org/revision/4cdeeb42-3281-4f53-a29d-c694e1fd9217"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://thedatahub.org/revision/4cdeeb42-3281-4f53-a29d-c694e1fd9217&lt;/a&gt; -- not apparent from that page but see my user page: &lt;a class="ext-link" href="http://thedatahub.org/user/rufuspollock"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://thedatahub.org/user/rufuspollock&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+This may turn out to be a UX bug rather than a real bug ...
+&lt;/p&gt;
+&lt;p&gt;
+Assigning to kindly for review and comment.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1595</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>kindly</dc:creator>
+
+      <pubDate>Tue, 03 Jan 2012 15:31:36 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1595#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1595#comment:1</guid>
+      <description>
+        &lt;p&gt;
+This will be fixed when the activity stream will be in place of the revision list.
+&lt;/p&gt;
+&lt;p&gt;
+There is no bug with the revisioning, it just is getting everything related to the group.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>kindly</dc:creator>
+
+      <pubDate>Mon, 28 May 2012 11:19:19 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/1595#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/1595#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;wontfix&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

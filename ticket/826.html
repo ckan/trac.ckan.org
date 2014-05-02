@@ -1,0 +1,504 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      #826 (Resource 'extra' fields)
+     – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="prev" href="825.html" title="Ticket #825" />
+        <link rel="last" href="3030.html" title="Ticket #3030" />
+        <link rel="help" href="../wiki/TracGuide.html" />
+        <link rel="alternate" href="826%3Fformat=csv" type="text/csv" class="csv" title="Comma-delimited Text" /><link rel="alternate" href="826%3Fformat=tab" type="text/tab-separated-values" class="tab" title="Tab-delimited Text" /><link rel="alternate" href="826%3Fformat=rss" type="application/rss+xml" class="rss" title="RSS Feed" />
+        <link rel="next" href="827.html" title="Ticket #827" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/ticket.css" type="text/css" />
+        <link rel="first" href="1.html" title="Ticket #1" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript">
+      var auto_preview_timeout=2.0;
+      var form_token="93d81ccf9a7bb1c456462f62";
+    </script>
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script><script type="text/javascript" src="../chrome/common/js/wikitoolbar.js"></script><script type="text/javascript" src="../chrome/common/js/resizer.js"></script><script type="text/javascript" src="../chrome/common/js/auto_preview.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("div.description").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $(".foldable").enableFolding(false, true);
+        var args = {realm: "ticket", id: 826, escape_newlines: 0}
+        $("#comment").autoPreview("/wiki_render", args, function(textarea, text, rendered) {
+            $("#ticketchange div.comment").html(rendered);
+            if (rendered)
+              $("#ticketchange").show();
+            else if ($("#ticketchange ul.changes").length == 0)
+              $("#ticketchange").hide();
+        });
+        $("#trac-comment-editor textarea").autoPreview("/wiki_render", args,
+                                                       function(textarea, text, rendered) {
+          var comment = $("#trac-comment-editor").next("div.comment");
+          comment.html(rendered);
+          if (rendered)
+            comment.show();
+          else
+            comment.hide();
+        });
+        $("#modify").parent().toggleClass("collapsed");
+        $(".trac-topnav a").click(function() { $("#modify").parent().removeClass("collapsed"); });
+        /* only enable control elements for the currently selected action */
+        var actions = $("#action input[name='action']");
+        function updateActionFields() {
+          actions.each(function () {
+            $(this).siblings().find("*[id]").enable($(this).checked());
+            $(this).siblings().filter("*[id]").enable($(this).checked());
+          });
+        }
+        actions.click(updateActionFields);
+        updateActionFields();
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="../wiki/TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li class="active"><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="825.html" title="Ticket #825">Previous Ticket</a></span></li><li class="last"><span><a class="next" href="827.html" title="Ticket #827">Next Ticket</a> &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="ticket">
+      <h1 id="trac-ticket-title">
+          <a href="826.html">Ticket #826</a>
+          <span class="status">(closed enhancement: fixed)</span>
+      </h1>
+      <div id="ticket">
+  <div class="date">
+    <p>Opened <a class="timeline" href="../timeline%3Ffrom=2010-11-24T15:18:25Z&amp;precision=second.html" title="2010-11-24T15:18:25Z in Timeline">3 years</a> ago</p>
+    <p>Last modified <a class="timeline" href="../timeline%3Ffrom=2011-05-30T14:34:17Z&amp;precision=second.html" title="2011-05-30T14:34:17Z in Timeline">3 years</a> ago</p>
+  </div>
+  <h2 class="summary searchable">Resource 'extra' fields</h2>
+  <table class="properties">
+    <tr>
+      <th id="h_reporter">Reported by:</th>
+      <td headers="h_reporter" class="searchable">
+        <a href="../query%3Fstatus=!closed&amp;reporter=dread.html">dread</a>
+      </td>
+      <th id="h_owner">Owned by:</th>
+      <td headers="h_owner">
+        <a href="../query%3Fstatus=!closed&amp;owner=kindly.html">kindly</a>
+      </td>
+    </tr>
+    <tr>
+        <th id="h_priority">
+          Priority:
+        </th>
+        <td headers="h_priority">
+              <a href="../query%3Fstatus=!closed&amp;priority=critical.html">critical</a>
+        </td>
+        <th id="h_milestone">
+          Milestone:
+        </th>
+        <td headers="h_milestone">
+              <a class="closed milestone" href="../milestone/ckan-v1.4-sprint-1.html">ckan-v1.4-sprint-1</a>
+        </td>
+    </tr><tr>
+        <th id="h_component">
+          Component:
+        </th>
+        <td headers="h_component">
+              <a href="../query%3Fstatus=!closed&amp;component=ckan.html">ckan</a>
+        </td>
+        <th id="h_keywords">
+          Keywords:
+        </th>
+        <td headers="h_keywords" class="searchable">
+        </td>
+    </tr><tr>
+        <th id="h_cc">
+          Cc:
+        </th>
+        <td headers="h_cc" class="searchable">
+              <a href="../query%3Fstatus=!closed&amp;cc=~thejimmyg.html">thejimmyg</a>
+        </td>
+        <th id="h_repo">
+          Repository:
+        </th>
+        <td headers="h_repo">
+              <a href="../query%3Fstatus=!closed&amp;repo=ckan.html">ckan</a>
+        </td>
+    </tr><tr>
+        <th id="h_theme">
+          Theme:
+        </th>
+        <td headers="h_theme">
+              <a href="../query%3Fstatus=!closed&amp;theme=none.html">none</a>
+        </td>
+        <th>
+        </th>
+        <td>
+        </td>
+    </tr>
+  </table>
+  <div class="description">
+    <h3 id="comment:description">
+      Description
+    </h3>
+    <div class="searchable">
+      <p>
+There are a number of extra properties we want to store in a resource: 
+</p>
+<ul><li>resource size (in bytes, no. triples etc.) - <a class="ext-link" href="https://trac.dataco.coi.gov.uk/projects/datagov/ticket/673"><span class="icon">​</span>https://trac.dataco.coi.gov.uk/projects/datagov/ticket/673</a>
+</li><li>resource hash is 'static' (default) or 'changeable' - <a class="ext-link" href="https://trac.dataco.coi.gov.uk/projects/datagov/ticket/674"><span class="icon">​</span>https://trac.dataco.coi.gov.uk/projects/datagov/ticket/674</a>
+</li><li>alternative link (e.g. TNA Web Archive) to use the link is broken - <a class="ext-link" href="https://trac.dataco.coi.gov.uk/projects/datagov/ticket/173"><span class="icon">​</span>https://trac.dataco.coi.gov.uk/projects/datagov/ticket/173</a>
+</li></ul><p>
+i.e. this is a much needed enhancement
+</p>
+<p>
+Need to be able to read/write these values in web interface and API.
+</p>
+<p>
+(At some point we may wish to have custom form widgets for these new fields in the resource table, but let's leave this for the future.)
+</p>
+<h1 id="Implementation">Implementation</h1>
+<p>
+I suggest these are arbitrary key/value pairs, just like package extras, reusing <a class="missing wiki">PackageExtra?</a> code as much as possible.
+(Other much more radical alternative is to move model to RDF.)
+</p>
+
+    </div>
+  </div>
+</div>
+          
+
+        <div>
+          <h2 class="foldable">Change History</h2>
+          <div id="changelog">
+              <div class="change" id="trac-change-1">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:1" class="cnum">
+      <a href="826.html#comment:1">comment:1</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-01-03T11:20:58Z&amp;precision=second.html" title="2011-01-03T11:20:58Z in Timeline">3 years</a> ago by pudo
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Milestone</strong>
+        set to <em>iati-4</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-2">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:2" class="cnum">
+      <a href="826.html#comment:2">comment:2</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-01-21T09:17:51Z&amp;precision=second.html" title="2011-01-21T09:17:51Z in Timeline">3 years</a> ago by kindly
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Owner</strong>
+        changed from <em>rgrp</em> to <em>kindly</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-3">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:3" class="cnum">
+      <a href="826.html#comment:3">comment:3</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-02-07T10:27:28Z&amp;precision=second.html" title="2011-02-07T10:27:28Z in Timeline">3 years</a> ago by rgrp
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Milestone</strong>
+        changed from <em>iati-4</em> to <em>ckan-v1.4-sprint-1</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-4">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:4" class="cnum">
+      <a href="826.html#comment:4">comment:4</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-02-11T08:53:32Z&amp;precision=second.html" title="2011-02-11T08:53:32Z in Timeline">3 years</a> ago by dread
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+It's great that the extras are added in-line with other Resource properties (as opposed to package extras which are a dict not off 'package' but off 'package.extras').
+</p>
+<p>
+However, the resource extra field keys are defined in config option "ckan.extra_resource_fields". This config option should be removed - extras need to be entirely flexible for our purposes. (In the next ticket we should make it possible to add/remove both keys and values from the Web UI or API.)
+</p>
+<p>
+It would also be good to tidy things in this direction: <a class="ext-link" href="http://wiki.okfn.org/Coding_Standards"><span class="icon">​</span>http://wiki.okfn.org/Coding_Standards</a>
+</p>
+<p>
+I've merged from default to the branch enhancment_826_resource_extra_fields ready for you.
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-5">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:5" class="cnum">
+      <a href="826.html#comment:5">comment:5</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-02-11T09:04:55Z&amp;precision=second.html" title="2011-02-11T09:04:55Z in Timeline">3 years</a> ago by pudo
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+I want to strongly support david in his call for fully flexible extras: one of my use cases for them is to store the various bits of fallout from an archiving process, such as: 
+ 
+</p>
+<ul><li>last-status
+</li><li>last-crawled
+</li><li>last-etag
+</li><li>last-expires
+</li><li>last-md5
+</li><li>failure-count
+</li><li>fall-back-url
+</li></ul><p>
+These are things needed to really archive the data well, but they have nothing to do with CKAN core ops. Essentially, the archiver is a seperate concern and it need not appear in the CKAN config.
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-6">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:6" class="cnum">
+      <a href="826.html#comment:6">comment:6</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-02-11T09:34:39Z&amp;precision=second.html" title="2011-02-11T09:34:39Z in Timeline">3 years</a> ago by kindly
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+There is nothing to stop anyone from putting any extra attributes in the extra_info field dict.  So any have the flexibility you need.
+</p>
+<p>
+The config option is to add some fields that act in exactly the same way as python attributes, having the same semantics as them.  i.e if you have an extra field called alturl, you can do obj.alturl = 'fdsffs'.   
+</p>
+<p>
+This is the best of both worlds as far as I can tell.
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-7">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:7" class="cnum">
+      <a href="826.html#comment:7">comment:7</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-02-11T09:51:40Z&amp;precision=second.html" title="2011-02-11T09:51:40Z in Timeline">3 years</a> ago by kindly
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+I forgot to mention that he main advantage of the fixed fields, is that we can make them properly searchable i.e the values searchable.  This currently does not work for package extra values as they are jsons.
+</p>
+<p>
+I have added this searchability for the sql backend.
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-8">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:8" class="cnum">
+      <a href="826.html#comment:8">comment:8</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-02-11T10:43:42Z&amp;precision=second.html" title="2011-02-11T10:43:42Z in Timeline">3 years</a> ago by dread
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+Ah - I understand. I'd like it if you could make all the extra fields work as attributes and be searchable - is that possible?
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-9">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:9" class="cnum">
+      <a href="826.html#comment:9">comment:9</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-02-11T11:22:22Z&amp;precision=second.html" title="2011-02-11T11:22:22Z in Timeline">3 years</a> ago by kindly
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+This would be too much of a hack.  You do not want users overwriting any attributes on the object.  If they called the attribute "<span class="underline">init</span>" it would write over the actual <span class="underline">init</span>.
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-10">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:10" class="cnum">
+      <a href="826.html#comment:10">comment:10</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-02-11T13:11:50Z&amp;precision=second.html" title="2011-02-11T13:11:50Z in Timeline">3 years</a> ago by dread
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Status</strong>
+        changed from <em>new</em> to <em>closed</em>
+    </li><li>
+      <strong>Resolution</strong>
+        set to <em>fixed</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+Merged into default in cset:613d7bd5fc96.
+</p>
+<p>
+Future tickets in this area include:
+</p>
+<ul><li><a class="closed ticket" href="978.html" title="enhancement: Edit Resource including Extras in Web UI (closed: fixed)">#978</a> Full edit in Web UI
+</li><li><a class="assigned ticket" href="979.html" title="enhancement: Edit Resource extras in the API (assigned)">#979</a> Edit Resource extras in the API
+</li></ul>
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-11">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:11" class="cnum">
+      <a href="826.html#comment:11">comment:11</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-05-30T14:34:17Z&amp;precision=second.html" title="2011-05-30T14:34:17Z in Timeline">3 years</a> ago by dread
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Repository</strong>
+        set to <em>ckan</em>
+    </li><li>
+      <strong>Theme</strong>
+        set to <em>none</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+This went into ckan release 1.3.2.
+</p>
+
+    </div>
+
+              </div>
+          </div>
+        </div>
+      <div id="help"><strong>Note:</strong> See
+        <a href="../wiki/TracTickets.html">TracTickets</a> for help on using
+        tickets.</div>
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="first">
+          <a rel="nofollow" href="826%3Fformat=csv" class="csv">Comma-delimited Text</a>
+        </li><li>
+          <a rel="nofollow" href="826%3Fformat=tab" class="tab">Tab-delimited Text</a>
+        </li><li class="last">
+          <a rel="nofollow" href="826%3Fformat=rss" class="rss">RSS Feed</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

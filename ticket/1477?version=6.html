@@ -1,0 +1,423 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      #1477 ([Super] Group refactor)
+     – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="prev" href="1475.html" title="Ticket #1475" />
+        <link rel="last" href="3030.html" title="Ticket #3030" />
+        <link rel="help" href="../wiki/TracGuide.html" />
+        <link rel="alternate" href="1477%3Fversion=6&amp;format=csv" type="text/csv" class="csv" title="Comma-delimited Text" /><link rel="alternate" href="1477%3Fversion=6&amp;format=tab" type="text/tab-separated-values" class="tab" title="Tab-delimited Text" /><link rel="alternate" href="1477%3Fversion=6&amp;format=rss" type="application/rss+xml" class="rss" title="RSS Feed" />
+        <link rel="next" href="1478.html" title="Ticket #1478" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/ticket.css" type="text/css" />
+        <link rel="first" href="1.html" title="Ticket #1" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript">
+      var auto_preview_timeout=2.0;
+      var form_token="93d81ccf9a7bb1c456462f62";
+    </script>
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script><script type="text/javascript" src="../chrome/common/js/wikitoolbar.js"></script><script type="text/javascript" src="../chrome/common/js/resizer.js"></script><script type="text/javascript" src="../chrome/common/js/auto_preview.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("div.description").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $(".foldable").enableFolding(false, true);
+        var args = {realm: "ticket", id: 1477, escape_newlines: 0}
+        $("#comment").autoPreview("/wiki_render", args, function(textarea, text, rendered) {
+            $("#ticketchange div.comment").html(rendered);
+            if (rendered)
+              $("#ticketchange").show();
+            else if ($("#ticketchange ul.changes").length == 0)
+              $("#ticketchange").hide();
+        });
+        $("#trac-comment-editor textarea").autoPreview("/wiki_render", args,
+                                                       function(textarea, text, rendered) {
+          var comment = $("#trac-comment-editor").next("div.comment");
+          comment.html(rendered);
+          if (rendered)
+            comment.show();
+          else
+            comment.hide();
+        });
+        $("#modify").parent().toggleClass("collapsed");
+        $(".trac-topnav a").click(function() { $("#modify").parent().removeClass("collapsed"); });
+        /* only enable control elements for the currently selected action */
+        var actions = $("#action input[name='action']");
+        function updateActionFields() {
+          actions.each(function () {
+            $(this).siblings().find("*[id]").enable($(this).checked());
+            $(this).siblings().filter("*[id]").enable($(this).checked());
+          });
+        }
+        actions.click(updateActionFields);
+        updateActionFields();
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="../wiki/TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li class="active"><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="1475.html" title="Ticket #1475">Previous Ticket</a></span></li><li class="last"><span><a class="next" href="1478.html" title="Ticket #1478">Next Ticket</a> &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="ticket">
+      <h1 id="trac-ticket-title">
+          <a href="1477.html">Ticket #1477</a>
+          <span class="status">(closed enhancement: fixed)</span>
+              — at <a href="1477%3Fversion=6.html#comment:6">Version 6</a>
+      </h1>
+      <div id="ticket">
+  <div class="date">
+    <p>Opened <a class="timeline" href="../timeline%3Ffrom=2011-11-22T10:55:20Z&amp;precision=second.html" title="2011-11-22T10:55:20Z in Timeline">2 years</a> ago</p>
+    <p>Last modified <a class="timeline" href="../timeline%3Ffrom=2012-01-31T13:23:29Z&amp;precision=second.html" title="2012-01-31T13:23:29Z in Timeline">2 years</a> ago</p>
+  </div>
+  <h2 class="summary searchable">[Super] Group refactor</h2>
+  <table class="properties">
+    <tr>
+      <th id="h_reporter">Reported by:</th>
+      <td headers="h_reporter" class="searchable">
+        <a href="../query%3Fstatus=!closed&amp;reporter=kindly.html">kindly</a>
+      </td>
+      <th id="h_owner">Owned by:</th>
+      <td headers="h_owner">
+        <a href="../query%3Fstatus=!closed&amp;owner=kindly.html">kindly</a>
+      </td>
+    </tr>
+    <tr>
+        <th id="h_priority">
+          Priority:
+        </th>
+        <td headers="h_priority">
+              <a href="../query%3Fstatus=!closed&amp;priority=blocker.html">blocker</a>
+        </td>
+        <th id="h_milestone">
+          Milestone:
+        </th>
+        <td headers="h_milestone">
+              <a class="closed milestone" href="../milestone/ckan-v1.6.html">ckan-v1.6</a>
+        </td>
+    </tr><tr>
+        <th id="h_component">
+          Component:
+        </th>
+        <td headers="h_component">
+              <a href="../query%3Fstatus=!closed&amp;component=ckan.html">ckan</a>
+        </td>
+        <th id="h_keywords">
+          Keywords:
+        </th>
+        <td headers="h_keywords" class="searchable">
+        </td>
+    </tr><tr>
+        <th id="h_cc">
+          Cc:
+        </th>
+        <td headers="h_cc" class="searchable">
+        </td>
+        <th id="h_repo">
+          Repository:
+        </th>
+        <td headers="h_repo">
+              <a href="../query%3Fstatus=!closed&amp;repo=ckan.html">ckan</a>
+        </td>
+    </tr><tr>
+        <th id="h_theme">
+          Theme:
+        </th>
+        <td headers="h_theme">
+              <a href="../query%3Fstatus=!closed&amp;theme=none.html">none</a>
+        </td>
+        <th>
+        </th>
+        <td>
+        </td>
+    </tr>
+  </table>
+  <div class="description">
+    <h3 id="comment:description">
+      Description
+      <span class="lastmod" title="2012-01-31 13:23:29+00:00">
+        (last modified by kindly)
+        (<a href="1477%3Faction=diff&amp;version=6.html">diff</a>)
+      </span>
+    </h3>
+    <div class="searchable">
+      <p>
+This is the implementation of the final draft in
+</p>
+<p>
+<a class="ext-link" href="http://wiki.ckan.org/Groups_Refactor"><span class="icon">​</span>http://wiki.ckan.org/Groups_Refactor</a>
+</p>
+<p>
+Steps to complete this will follow (somewhat) in the following order.
+</p>
+<p>
+Change package_group table to membership. (<a class="closed ticket" href="1478.html" title="enhancement: change package_group to members table (closed: fixed)">#1478</a>) 3d
+</p>
+<ul><li>model migration. (done)
+</li><li>simplify revisioning  (done)
+</li><li>Remove any sqlalchemy releations from groups. (done)
+</li><li>change logic functions (done)
+</li></ul><p>
+  
+</p>
+<p>
+Single type per group (<a class="closed ticket" href="1531.html" title="enhancement: Update group create/update so you can add capacities and group types. (closed: fixed)">#1531</a>)
+</p>
+<ul><li>migration add type to group table. (done) 1d
+</li></ul><p>
+  
+Add capacity table (<a class="closed ticket" href="1522.html" title="enhancement: Add capacity to member table. (closed: fixed)">#1522</a>)
+</p>
+<ul><li>model migration. (done)
+</li><li>add to logic functions.
+</li></ul><p>
+  
+Allow other objects to be added to groups. (<a class="closed ticket" href="1531.html" title="enhancement: Update group create/update so you can add capacities and group types. (closed: fixed)">#1531</a>)
+</p>
+<ul><li>change logic functions (done)
+</li></ul><p>
+Adapt thedatahub.org to use new model.
+</p>
+<ul><li>move auth groups over to groups/members
+</li><li>change user_object roles to use groups? keep user object roles for time being.
+</li><li>make create update package/group put the correct items in the group/members/capacity tables.
+</li><li>work out how ui works.
+</li></ul><p>
+--not doing the below as part of this super ticker now <a class="closed ticket" href="1669.html" title="enhancement: [super] Publisher profile (closed: fixed)">#1669</a>.
+</p>
+<p>
+Create model for dgu.
+</p>
+<ul><li>adapt auth functions to use auth.
+</li><li>adapt package_create/update group_create/update to fill in the correct capacties/members.
+</li></ul><p>
+Adapt Iati, and potentially other custom instances.
+</p>
+<p>
+Sub-tickets:
+</p>
+<ul><li><a class="closed ticket" href="1279.html" title="enhancement: Refactor or deprecate Authorization Groups (closed: duplicate)">#1279</a> Deprecate Authorization Groups
+</li><li><a class="new ticket" href="1198.html" title="enhancement: Publisher hierarchy (new)">#1198</a> Publisher hierarchy
+</li></ul>
+    </div>
+  </div>
+</div>
+        <div>
+          <h2 class="foldable">Change History</h2>
+          <div id="changelog">
+              <div class="change" id="trac-change-1">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:1" class="cnum">
+      <a href="1477%3Fversion=6.html#comment:1">comment:1</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-11-22T11:00:52Z&amp;precision=second.html" title="2011-11-22T11:00:52Z in Timeline">2 years</a> ago by kindly
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Status</strong>
+        changed from <em>new</em> to <em>assigned</em>
+    </li><li>
+      <strong>Description</strong>
+        modified (<a href="1477%3Faction=diff&amp;version=1.html">diff</a>)
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-2">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:2" class="cnum">
+      <a href="1477%3Fversion=6.html#comment:2">comment:2</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-12-19T18:09:43Z&amp;precision=second.html" title="2011-12-19T18:09:43Z in Timeline">2 years</a> ago by kindly
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Milestone</strong>
+        set to <em>ckan-v1.6</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-3">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:3" class="cnum">
+      <a href="1477%3Fversion=6.html#comment:3">comment:3</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-12-22T10:24:19Z&amp;precision=second.html" title="2011-12-22T10:24:19Z in Timeline">2 years</a> ago by dread
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Description</strong>
+        modified (<a href="1477%3Faction=diff&amp;version=3.html">diff</a>)
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+I added the sub-tickets since this tickets already covers them really. They may provide useful details in the course of doing all this.
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-4">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:4" class="cnum">
+      <a href="1477%3Fversion=6.html#comment:4">comment:4</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-12-29T19:15:58Z&amp;precision=second.html" title="2011-12-29T19:15:58Z in Timeline">2 years</a> ago by rgrp
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+@davidraznick: as per our discussion last week I think we need a ticket (or item) about writing up either in docs or in wiki how to implement various standard scenarios/workflows such as:
+</p>
+<ul><li>'Curated tag' (standard) Groups
+</li><li>Publisher workflow - <a class="ext-link" href="http://wiki.ckan.org/Workflows#Moderated_Workflow"><span class="icon">​</span>http://wiki.ckan.org/Workflows#Moderated_Workflow</a>
+</li><li>DGU setup
+</li></ul><p>
+Suggest doing this either at end of <a class="ext-link" href="http://wiki.ckan.org/Groups_Refactor"><span class="icon">​</span>http://wiki.ckan.org/Groups_Refactor</a>, or perhaps better,<a class="ext-link" href="http://wiki.ckan.org/Groups_Refactor"><span class="icon">​</span>http://wiki.ckan.org/Groups_Refactor</a>.
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-5">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:5" class="cnum">
+      <a href="1477%3Fversion=6.html#comment:5">comment:5</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-01-02T03:08:16Z&amp;precision=second.html" title="2012-01-02T03:08:16Z in Timeline">2 years</a> ago by rgrp
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Priority</strong>
+        changed from <em>awaiting triage</em> to <em>blocker</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-6">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:6" class="cnum">
+      <a href="1477%3Fversion=6.html#comment:6">comment:6</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-01-31T13:23:29Z&amp;precision=second.html" title="2012-01-31T13:23:29Z in Timeline">2 years</a> ago by kindly
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Status</strong>
+        changed from <em>assigned</em> to <em>closed</em>
+    </li><li>
+      <strong>Resolution</strong>
+        set to <em>fixed</em>
+    </li><li>
+      <strong>Description</strong>
+        modified (<a href="1477%3Faction=diff&amp;version=6.html">diff</a>)
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+This is done pending new superticket publihser_profile. (<a class="closed ticket" href="1669.html" title="enhancement: [super] Publisher profile (closed: fixed)">#1669</a>)
+</p>
+
+    </div>
+
+              </div>
+          </div>
+        </div>
+      <div id="help"><strong>Note:</strong> See
+        <a href="../wiki/TracTickets.html">TracTickets</a> for help on using
+        tickets.</div>
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="first">
+          <a rel="nofollow" href="1477%3Fversion=6&amp;format=csv" class="csv">Comma-delimited Text</a>
+        </li><li>
+          <a rel="nofollow" href="1477%3Fversion=6&amp;format=tab" class="tab">Tab-delimited Text</a>
+        </li><li class="last">
+          <a rel="nofollow" href="1477%3Fversion=6&amp;format=rss" class="rss">RSS Feed</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

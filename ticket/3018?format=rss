@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #3018: Load more in activity streams</title>
+    <link>http://localhost/ticket/3018</link>
+    <description>&lt;p&gt;
+Activity streams should be able to load more than 15 items within them. Suggest the default amount of loading is around 30 and then click to load more.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/3018</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>seanh</dc:creator>
+
+      <pubDate>Mon, 10 Dec 2012 12:02:18 GMT</pubDate>
+      <title>keywords set</title>
+      <link>http://localhost/ticket/3018#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/3018#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;keywords&lt;/strong&gt;
+              &lt;em&gt;activity_streams&lt;/em&gt; added
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>seanh</dc:creator>
+
+      <pubDate>Mon, 10 Dec 2012 12:02:30 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/3018#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/3018#comment:2</guid>
+      <description>
+        &lt;p&gt;
+&lt;a class="ext-link" href="https://github.com/okfn/ckan/pull/171"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;https://github.com/okfn/ckan/pull/171&lt;/a&gt;
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

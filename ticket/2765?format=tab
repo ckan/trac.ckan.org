@@ -1,0 +1,4 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2765	Demo login error messages	aron.carroll	aron.carroll	"I'd suggest we add a generic ""failed to login, invalid fields"" in the error_summary block. Then more specific ""this field is required"" when a required field is left empty.
+
+So in general, provide an error dict"	enhancement	closed	minor	demo phase 3	ckan	fixed	demo-theme		ckan	none

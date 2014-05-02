@@ -1,0 +1,9 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2934	Webtests for CKAN	Dominik		"The tests in CKAN only test single pages (functional tests) or single methods (unit tests). In order to make sure that the whole system still works as expected, we need tests that cover whole processes. 
+
+An example user story to be tested would be:
+""As a user with create permissions I want to be able to log in, create a new resource, save it and then make sure that it is in the system.""
+or:
+""As a user I want to use the search functionality and open a resource from the search page.""
+
+These user stories require a different testing system with interaction and processes. "	enhancement	new	awaiting triage		ckan		webtest		ckan	none

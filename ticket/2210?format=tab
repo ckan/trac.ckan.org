@@ -1,0 +1,5 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2210	Add method to group for adding members	ross	ross	"It is necessary to add a helper method to Group for adding members to that group so that 
+
+- nobody needs to work with the Member model
+- It handles existing membership and existing membership with a different capacity"	enhancement	closed	awaiting triage	ckan-sprint-2012-03-19	ckan	fixed	[a:1.5d][1d]		ckan	none

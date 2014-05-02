@@ -1,0 +1,2 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2264	Do an audit of string translations in CKAN core and ckanext-ecportal	seanh	seanh	Check to see that all the strings are getting translated, i.e. that all user-visible strings are being passed to gettext,.	enhancement	new	awaiting triage	ckan-sprint-2012-04-02	ckan				ckan	none

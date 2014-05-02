@@ -1,0 +1,142 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #854: Tests for authorization_group</title>
+    <link>http://localhost/ticket/854</link>
+    <description>&lt;p&gt;
+The coverage tool (run by buildbot in the ckan build) reports that only 24% of lines of ckan.controllers.authorization_group are run in tests. This suggests a need for more tests.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/854</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Tue, 07 Dec 2010 12:11:09 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/854#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/854#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/854?action=diff&amp;amp;version=1"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Thu, 10 Mar 2011 12:58:15 GMT</pubDate>
+      <title>priority changed; keywords, milestone set</title>
+      <link>http://localhost/ticket/854#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/854#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;keywords&lt;/strong&gt;
+              &lt;em&gt;tests&lt;/em&gt; added
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;priority&lt;/strong&gt;
+                changed from &lt;em&gt;awaiting triage&lt;/em&gt; to &lt;em&gt;major&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                set to &lt;em&gt;ckan-v1.4-sprint-4&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>johnlawrenceaspden</dc:creator>
+
+      <pubDate>Mon, 28 Mar 2011 09:46:44 GMT</pubDate>
+      <title>owner, status changed; repo, theme set</title>
+      <link>http://localhost/ticket/854#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/854#comment:3</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;owner&lt;/strong&gt;
+              changed from &lt;em&gt;pudo&lt;/em&gt; to &lt;em&gt;johnlawrenceaspden&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;repo&lt;/strong&gt;
+                set to &lt;em&gt;ckan&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;theme&lt;/strong&gt;
+                set to &lt;em&gt;none&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;assigned&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Mon, 28 Mar 2011 09:50:25 GMT</pubDate>
+      <title>milestone changed</title>
+      <link>http://localhost/ticket/854#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/854#comment:4</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan-v1.4-sprint-4&lt;/em&gt; to &lt;em&gt;ckan-v1.4-sprint-5&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>thejimmyg</dc:creator>
+
+      <pubDate>Mon, 18 Apr 2011 08:59:19 GMT</pubDate>
+      <title>milestone changed</title>
+      <link>http://localhost/ticket/854#comment:5</link>
+      <guid isPermaLink="false">http://localhost/ticket/854#comment:5</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan-v1.4-sprint-5&lt;/em&gt; to &lt;em&gt;ckan-v1.4-sprint-6&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>johnlawrenceaspden</dc:creator>
+
+      <pubDate>Mon, 02 May 2011 15:57:23 GMT</pubDate>
+      <title>status, description changed; resolution set</title>
+      <link>http://localhost/ticket/854#comment:6</link>
+      <guid isPermaLink="false">http://localhost/ticket/854#comment:6</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;assigned&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/854?action=diff&amp;amp;version=6"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Coverage now up to 84% and 81%. Remaining untested code is error conditions, which we decided weren't worth the effort of locking down.
+&lt;/p&gt;
+&lt;p&gt;
+fixed on feature-854-tests-for-authz-groups, now merged into default code.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

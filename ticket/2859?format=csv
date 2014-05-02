@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2859,Fix the build,icmurray,icmurray,"The requires files have been removed.  These were required by buildkit.
+
+We've lost the information regarding which packages were already in ubuntu repos, which conflicted and which were missing.  But perhaps we can just package everything up.",defect,new,blocker,ckan-v1.8,ckan,,build buildkit,amercader,ckan,none

@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1358: Generate configuration documentation automatically from the deployment_ini_tmpl file</title>
+    <link>http://localhost/ticket/1358</link>
+    <description>&lt;p&gt;
+At the moment documentation of config options is duplicated between source (deployment_ini_tmpl in ckan/config which is used to generate user ini file) and the docs.
+&lt;/p&gt;
+&lt;p&gt;
+Suggest we write a script that automatedly generates reference documentation for the config from the source.
+&lt;/p&gt;
+&lt;p&gt;
+May be obsoleted by &lt;a class="assigned ticket" href="http://localhost/ticket/277" title="enhancement: Set some config options / settings in WUI (extension) (assigned)"&gt;#277&lt;/a&gt; (some config in db)
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1358</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Fri, 30 Sep 2011 17:47:52 GMT</pubDate>
+      <title>status, description changed; owner set</title>
+      <link>http://localhost/ticket/1358#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1358#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;owner&lt;/strong&gt;
+              set to &lt;em&gt;zephod&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;assigned&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1358?action=diff&amp;amp;version=1"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>zephod</dc:creator>
+
+      <pubDate>Tue, 04 Oct 2011 12:52:31 GMT</pubDate>
+      <title>milestone changed</title>
+      <link>http://localhost/ticket/1358#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/1358#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan-backlog&lt;/em&gt; to &lt;em&gt;ckan-current-sprint&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Tue, 04 Oct 2011 17:10:11 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1358#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/1358#comment:3</guid>
+      <description>
+        &lt;p&gt;
+You're gonna have massive config files if you do this! Might well be worth it though.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>zephod</dc:creator>
+
+      <pubDate>Mon, 10 Oct 2011 14:43:43 GMT</pubDate>
+      <title>milestone changed</title>
+      <link>http://localhost/ticket/1358#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/1358#comment:4</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan-current-sprint&lt;/em&gt; to &lt;em&gt;ckan-backlog&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

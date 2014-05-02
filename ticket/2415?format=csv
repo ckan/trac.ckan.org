@@ -1,0 +1,9 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2415,Confusing message on attempting to register new account with upper case,markw,kindly,"On registering a new account, if you try to use a capital letter in your 'Login', you get the unhelpful error message:
+
+""The form contains invalid entries: Name: Url must be purely lowercase alphanumeric (ascii) characters and these symbols: -_""
+
+What does 'Name' or 'Url' have to do with anything? It means 'Login must be ...'
+
+But even better would be to make the login case-insensitive and allow capitals to be entered.
+",defect,new,awaiting triage,ckan-v1.9,ckan,,,,ckan,none

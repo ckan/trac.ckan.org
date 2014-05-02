@@ -1,0 +1,6 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2962	Search across multiple ckan instances	dominik		"Could be done by:
+- using the solr distributed search
+  - difficult set up
+- merging result sets from apis
+  - make sure that results can be merged properly (score, facets, ...)"	enhancement	new	awaiting triage	ckan-backlog	ckan		solr, search, awesome		ckan	none

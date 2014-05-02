@@ -1,0 +1,6 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1440,'paster db load' doesn't update search index,dread,dread,"{{{paster db load ckan.pgdump}}} will load in the database but not update the search index, no we're using SOLR.
+
+= implementation =
+
+We can't tack on 'rebuild' to this command, because it needs a 'db upgrade' first. I'm tempted to make 'db load' do the upgrade and rebuild all in one command.",defect,closed,awaiting triage,ckan-sprint-2011-11-07,ckan,fixed,,,ckan,none

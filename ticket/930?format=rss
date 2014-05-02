@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #930: call_timing files created for every request</title>
+    <link>http://localhost/ticket/930</link>
+    <description>&lt;p&gt;
+On a production server we produce literally millions of little files saying how long every single request took to process.
+&lt;/p&gt;
+&lt;p&gt;
+They are here:
+&lt;/p&gt;
+&lt;pre class="wiki"&gt;hmg.ckan.net.2/pylonsdata/call_timing
+&lt;/pre&gt;&lt;p&gt;
+They were added by ckan/lib/base.py in cset:da438a9085d3.
+&lt;/p&gt;
+&lt;p&gt;
+I don't believe anyone uses these stats.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/930</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>wwaites</dc:creator>
+
+      <pubDate>Wed, 26 Jan 2011 17:17:44 GMT</pubDate>
+      <title>status changed; owner set</title>
+      <link>http://localhost/ticket/930#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/930#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;owner&lt;/strong&gt;
+              set to &lt;em&gt;wwaites&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;assigned&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>wwaites</dc:creator>
+
+      <pubDate>Wed, 26 Jan 2011 17:19:51 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/930#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/930#comment:2</guid>
+      <description>
+        &lt;p&gt;
+This is for HMG to prove to them that requests are being serviced in a timely manner
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;move this functionality to a plugin
+&lt;/li&gt;&lt;li&gt;make it use rrdtool instead of lots of itty bitty files
+&lt;/li&gt;&lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>wwaites</dc:creator>
+
+      <pubDate>Wed, 26 Jan 2011 19:29:57 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/930#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/930#comment:3</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;assigned&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+actually, this is a configuration variable ckan.enable_call_timing
+&lt;/p&gt;
+&lt;p&gt;
+cleaned up the code a bit, make sure this variable unset or set to
+false or no and there should be no millions of files
+&lt;/p&gt;
+&lt;p&gt;
+as it is unclear if this is actually used or necessary, not doing
+the rrdtool part just yet. if there is call for it, make a new
+ticket for this.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Mon, 07 Feb 2011 08:11:32 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/930#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/930#comment:4</guid>
+      <description>
+        &lt;p&gt;
+Just want to agree with wwaites assessment here. dubious this code is currently useful as a) not used b) (more importantly) probably better ways to achieve this functionality.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

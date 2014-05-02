@@ -1,0 +1,7 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1370,Add sharethis or similar to each dataset page,rgrp,zephod,"Propose to add a bit of 'social' stuff (e.g. share this on facebook, twitter etc). Suggest using sharethis system.
+
+ * ckan.sharethis.apikey: config option to put in your sharethis api key
+ * Location: Put this at top of sidebar on dataset view (a better suggsetion?)
+
+Discuss (Tom and Ira and ...): do we really want this, versus e.g. proper follow extension?",enhancement,new,minor,ckan-backlog,ckan,,,,ckan,none

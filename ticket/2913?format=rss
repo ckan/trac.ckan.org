@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2913: IGroupForm has package_form() method</title>
+    <link>http://localhost/ticket/2913</link>
+    <description>&lt;p&gt;
+Should be group_form() I think
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2913</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>seanh</dc:creator>
+
+      <pubDate>Mon, 15 Oct 2012 12:22:59 GMT</pubDate>
+      <title>milestone changed</title>
+      <link>http://localhost/ticket/2913#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/2913#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan-v1.8&lt;/em&gt; to &lt;em&gt;ckan 2.0&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Moving into 2.0 milestone. Also affects 1.8.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

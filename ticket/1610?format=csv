@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1610,Move webstore to Postgres instead of Sqlite,ross,ross,"The default backing store for webstore should be Postgres and not sqlite.  This was agreed as part of the #1574 storage changes and on http://ckan.okfnpad.org/newstorage
+
+",enhancement,closed,awaiting triage,,ckan,duplicate,webstore,kindly,ckan,none

@@ -1,0 +1,13 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2501	Implement three step dataset creation in demo site	aron.carroll	toby	"New form should allow three steps.
+
+1. Add basic fields to create a dataset
+2. Add a data resource to the dataset (this can be repeated multiple times using ""Save and add another""
+3. Add final metadata to the dataset.
+
+It should be possible to jump backward through the steps by clicking the arrows at the top.
+Errors in fields should be validated for each step when the next button is clicked.
+
+Implementation:
+
+http://s031.okserver.org:2375/dataset/new"	enhancement	closed	major	demo phase 1	ckan	fixed	demo-theme		ckan	none

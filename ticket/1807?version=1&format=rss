@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1807: Recently added/updated datasets for EC portal</title>
+    <link>http://localhost/ticket/1807</link>
+    <description>&lt;p&gt;
+For EC Portal need a page (or HTML snippet embedded in the front page?) listing recently added or updated datasets.
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Could be generated from the activity streams
+&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;Should it list datasets only, or other activities as well?
+&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;May be related to &lt;a class="accepted ticket" href="http://localhost/ticket/1785" title="enhancement: Replace 'Revisions' page with site-wide activity stream (accepted)"&gt;#1785&lt;/a&gt; (Replace 'Revisions' page with site-wide activity stream)
+&lt;/li&gt;&lt;/ul&gt;</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1807</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>seanh</dc:creator>
+
+      <pubDate>Mon, 20 Feb 2012 12:52:59 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/1807#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1807#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1807?action=diff&amp;amp;version=1"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>seanh</dc:creator>
+
+      <pubDate>Tue, 21 Feb 2012 11:54:05 GMT</pubDate>
+      <title>keywords set</title>
+      <link>http://localhost/ticket/1807#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/1807#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;keywords&lt;/strong&gt;
+              &lt;em&gt;2d&lt;/em&gt; added
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>seanh</dc:creator>
+
+      <pubDate>Sat, 03 Mar 2012 21:20:41 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/1807#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/1807#comment:3</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Implemented the recently-changed-datasets activity stream on branch feature-1807-recently-changed-datasets in CKAN and merged it into master (but the default templates don't make use of it).
+&lt;/p&gt;
+&lt;p&gt;
+Added the recently-changed-datasets activity stream to the front page template on branch master in ckanext-ecportal.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

@@ -1,0 +1,6 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+814,Have an “About CKAN” link on every page,cygri,,"A link “About CKAN” pointing to http://ckan.net/about should be visible on every page. This is important because people often land on subpages and may have trouble figuring out what CKAN is.
+
+I would put this link into the main navigation bar, on the very right next to “Revision History”. Then I would also remove the “Home” item from the main navigation bar because it is redundant. The CKAN logo is already a link to the homepage. The only other subpage in the “Home” section is “Statistics” and that's already linked from the homepage sidebar.
+
+But anywhere else would be fine as well.",requirement,closed,awaiting triage,ckan-v1.3,ckan,fixed,,,,

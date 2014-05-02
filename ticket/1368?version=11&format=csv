@@ -1,0 +1,42 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1368,UX polishing and bugfixes,zephod,zephod,"From Ira:
+PDF of bugs and suggestions is attached.
+
+Notes from various conversations:
+  * [general]: Empty tables have a '(none)' placeholder which is causing issues. Move it into a separate div - it doesn't need be a wide <td> object.
+  * [groups]: Entire section to use pretty buttons please.
+  * [dataset/edit, groups/add, groups/edit]: 'Extras' - what is that for? No clear use; either add examples or hide it from the 'add' form.
+  * [dataset/edit]: Errors in form - would be nice to auto-open the appropriate resource box.
+  * [navigation] Add 3D bevel (@see github) to current tab highlight.
+  * [dataset/create and groups/create]: Slug generator can be tidied. Default: Not editable. @see http://groupspaces.com/a/group/
+  * [groups/view]: Show description and owner. To match dataset section.
+  * [groups/authz]: Tidy to match admin/authz (pretty buttons & spacing). Add navigation bar.
+  * [search]: Declutter the sidebar. No yellow box.
+  * [search]: Facets to go on the left, rather than the right. More logical flow.
+  * [about]: Get the about page working on test.ckan.org. (Works locally and on live).
+
+[[ DONE ]]
+  * [dataset/edit]: Deletions are confirmed with a dialog box
+  * [dataset/edit]: Long URLs break the edit resources tab. Show name (& 'no name') with a pencil icon. 
+  * [dataset/edit]: Rearrange the delete resources mechanism; 
+    * Use a little minus icon on the far left, followed by a pencil icon for editing.
+    * The 'delete resource' button can become 'hide'
+    * Deletions are confirmed with a dialog box
+  * [dataset/edit]: Rearrange the 'you have unsaved changes' warning; 
+    * Delete the little green plus sign on the right;
+    * Try a flash banner instead (more general purpose & beautiful)
+  * [dataset/edit]: Try a pencil icon (+'hide' button) rather than the +/- buttons which look a bit like you're adding a dataset.
+  * [dataset/view]: Subscribe button (& subscribe to history) doesn't work as expected. Modal dialog carrying instructions?
+  * [dataset/view]: Drop the 'add to a group>>' and 'add tag>>'. Needs inline tag-adder.
+  * [markdown editor]: Tab colours confuse the user. Inactive button appears to be greyed out.
+  * [dataset/edit]: The upload file UI mutates and breaks across lines; make it a little more rigid. Verify at different zoom levels.
+
+
+[[ WONTFIX ]]
+  * ~~[dataset/edit]: Make 'tags' a top level form section; it is too important to go below the fold.~~ (wontfix)
+  * ~~[groups]: Clicking a column heading should sort by that column. Default should be 'size', not 'name'.~~ (move to seperate ticket)
+  * ~~([groups]: (Investigate) Is it easy to implement a little search-groups feature?)~~ (move to seperate ticket w/previous)
+  * ~~[*/authz]: Add tooltips to explain column headers. (Not required if mechanism is about to be refactored...)~~ (wontfix: we need to rethink this mechanism; authorization refactor is coming)
+  * ~~[general]: 'Authorization' refactor to 'Permissions' on nav-bars.~~ (wontfix, further discussion. authorization might be less techy...)
+  * ~~[search]: (Investigate) Can we quickly & easily reintegrate the faceted search-by-license but present it in the sidebar like the other facets?~~ (wontfix: high cost and maintenance overhead; need compelling user story)
+",enhancement,new,awaiting triage,2011-10-24,ckan,,,,ckan,none

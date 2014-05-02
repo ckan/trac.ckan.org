@@ -1,0 +1,27 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+537	Caching and Performance improvement	wwaites	wwaites	"There are several places where performance is unacceptably slow. Even in places where it is not, the system could still be more responsive for read requests.
+
+Introducing caching has to be done carefully and should be done in a ''standards compliant manner''.
+
+== General strategy ==
+
+ * Where possible, cache output within the pylons app (beaker).
+ * Facilitate external caching in an end-user's web browser or a caching proxy
+ * Slightly stale data is not necessarily much of a problem so allow the output to be cached for a relatively short period (e.g. 5-15 minutes).
+ * When cache expiry has been reached, a request will be made to the server. The server should check if its internally cached data is still valid, and serve that, otherwise regenerate the data.
+
+== Tasks ==
+
+These tasks should be broken into sub-tickets:
+
+  * caching of parts of templates that are expensive to render (package list, tag list, group list)
+  * caching of entire output using beaker particularly for API read operations.
+  * need to perform a check to see if the cache should be invalidated by checking if anything in the output would have changed -- i.e. checking timestamps on package modifications. this is a natural place to introduce the ETag which will help browsers and web caches.
+  * cache infrastructure front end - varnish, squid, etc. To do this right, the controllers need to set the cache control headers appropriately (max-age, must-revalidate). This is a good resource: http://www.mnot.net/cache_docs/#CACHE-CONTROL
+    * Deploy varnish on a host dedicated to this purpose for research. This will be useful for other sites as well
+    * Do not configure varnish to ignore cache control headers or otherwise behave in a non HTTP/1.1 compliant manner
+
+== Future Work ==
+
+  * Investigate ckanclient library maintaining a local cache as a web browser would
+  * Investigate using a CDN like Google Storage or Amazon for serving cached data."	task	closed	awaiting triage		ckan	duplicate			ckan	none

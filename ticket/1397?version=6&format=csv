@@ -1,0 +1,54 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1397,[super] Resource archiving,rgrp,kindly,"We want to cache/archive data associated to a resource so it is available if the resource url disappears (and in order to support other processing we may wish to do e.g. webstorer ...)
+
+Etherpad: http://ckan.okfnpad.org/queue (most relevant parts inlined here)
+
+== Preliminaries ==
+
+ * Add task_status table to store qa/archiever/webstore information that does not need to be versioned. - #1363 (and #1371 - related logic functions)
+===  Configuration setup for daemons ===
+
+ * Standard ini file
+ * Sections are named after daemon / extension. E.g. [my-daemon]
+ * Arbitrary values but anticipate at least 2 stanard values:
+   * ckan_url e.g. http://thedatahub.org/
+   * ckan_apikey e.g. xxxxxx
+   * celery_config
+
+celeryd config:
+
+All providers of tasks will add an item to the following entry point:
+
+{{{
+[ckan.tasks]
+name = ckanext.{name}.tasks:....
+}}}
+
+celeryconfig.py
+
+{{{
+from pkg_resources import iter_entry_points
+for entry in iter_entry_points:
+     celeryimports.appen(....)
+
+CELERY_IMPORTS = celeryimports
+}}}
+
+== Work Items ==
+
+ 1. Resource change notifications in core - Make an IResourceChange and IResourceUrlChange. [1d] [0.75d] -  #1383
+ 2. Generate archiving request on resource url change [0.25d][0.25d] - #1399
+ 3. Archiver daemon #891
+   1. implement link-check function and task (point 2 from Archiver.update above) [1d] [0.5d]
+   2. Rewrite archiver to use external storage. (decide how!)[3d][~2d]
+ 5. Write to resource and task status table.[1d][0.75d]
+ 6. [Required?] Make archived data available in WUI - #892
+ 7. Documentation - #1400
+
+== Archiver process ==
+
+Generate archiving request on resource url change: # 
+
+Archiver.update: see #891
+
+Link checker: same as Archiver.update up to 2.1",enhancement,new,major,ckan-v1.6,ckan,,,,ckan,none

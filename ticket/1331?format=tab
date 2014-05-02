@@ -1,0 +1,5 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1331	Setting a tag twice causes exception	dread	dread	"To reproduce:
+ 1. Create a package with two tags the same: ""bulk bulk""
+ 2. Click 'save'
+ 3. 500 ERROR - 'Server Error'"	defect	closed	minor		ckan	worksforme			ckan	none

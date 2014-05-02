@@ -1,0 +1,493 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      #316 (Search URL escaping)
+     – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="prev" href="315.html" title="Ticket #315" />
+        <link rel="last" href="3030.html" title="Ticket #3030" />
+        <link rel="help" href="../wiki/TracGuide.html" />
+        <link rel="alternate" href="316%3Fformat=csv" type="text/csv" class="csv" title="Comma-delimited Text" /><link rel="alternate" href="316%3Fformat=tab" type="text/tab-separated-values" class="tab" title="Tab-delimited Text" /><link rel="alternate" href="316%3Fformat=rss" type="application/rss+xml" class="rss" title="RSS Feed" />
+        <link rel="next" href="317.html" title="Ticket #317" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/ticket.css" type="text/css" />
+        <link rel="first" href="1.html" title="Ticket #1" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript">
+      var auto_preview_timeout=2.0;
+      var form_token="93d81ccf9a7bb1c456462f62";
+    </script>
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script><script type="text/javascript" src="../chrome/common/js/wikitoolbar.js"></script><script type="text/javascript" src="../chrome/common/js/resizer.js"></script><script type="text/javascript" src="../chrome/common/js/auto_preview.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("div.description").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $(".foldable").enableFolding(false, true);
+        var args = {realm: "ticket", id: 316, escape_newlines: 0}
+        $("#comment").autoPreview("/wiki_render", args, function(textarea, text, rendered) {
+            $("#ticketchange div.comment").html(rendered);
+            if (rendered)
+              $("#ticketchange").show();
+            else if ($("#ticketchange ul.changes").length == 0)
+              $("#ticketchange").hide();
+        });
+        $("#trac-comment-editor textarea").autoPreview("/wiki_render", args,
+                                                       function(textarea, text, rendered) {
+          var comment = $("#trac-comment-editor").next("div.comment");
+          comment.html(rendered);
+          if (rendered)
+            comment.show();
+          else
+            comment.hide();
+        });
+        $("#modify").parent().toggleClass("collapsed");
+        $(".trac-topnav a").click(function() { $("#modify").parent().removeClass("collapsed"); });
+        /* only enable control elements for the currently selected action */
+        var actions = $("#action input[name='action']");
+        function updateActionFields() {
+          actions.each(function () {
+            $(this).siblings().find("*[id]").enable($(this).checked());
+            $(this).siblings().filter("*[id]").enable($(this).checked());
+          });
+        }
+        actions.click(updateActionFields);
+        updateActionFields();
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="../wiki/TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li class="active"><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="315.html" title="Ticket #315">Previous Ticket</a></span></li><li class="last"><span><a class="next" href="317.html" title="Ticket #317">Next Ticket</a> &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="ticket">
+      <h1 id="trac-ticket-title">
+          <a href="316.html">Ticket #316</a>
+          <span class="status">(closed defect: fixed)</span>
+      </h1>
+      <div id="ticket">
+  <div class="date">
+    <p>Opened <a class="timeline" href="../timeline%3Ffrom=2010-05-19T10:45:28Z&amp;precision=second.html" title="2010-05-19T10:45:28Z in Timeline">4 years</a> ago</p>
+    <p>Last modified <a class="timeline" href="../timeline%3Ffrom=2010-12-08T17:59:37Z&amp;precision=second.html" title="2010-12-08T17:59:37Z in Timeline">3 years</a> ago</p>
+  </div>
+  <h2 class="summary searchable">Search URL escaping</h2>
+  <table class="properties">
+    <tr>
+      <th id="h_reporter">Reported by:</th>
+      <td headers="h_reporter" class="searchable">
+        <a href="../query%3Fstatus=!closed&amp;reporter=dread.html">dread</a>
+      </td>
+      <th id="h_owner">Owned by:</th>
+      <td headers="h_owner">
+        <a href="../query%3Fstatus=!closed&amp;owner=rgrp.html">rgrp</a>
+      </td>
+    </tr>
+    <tr>
+        <th id="h_priority">
+          Priority:
+        </th>
+        <td headers="h_priority">
+              <a href="../query%3Fstatus=!closed&amp;priority=awaiting+triage.html">awaiting triage</a>
+        </td>
+        <th id="h_milestone">
+          Milestone:
+        </th>
+        <td headers="h_milestone">
+              <a class="missing milestone"></a>
+        </td>
+    </tr><tr>
+        <th id="h_component">
+          Component:
+        </th>
+        <td headers="h_component">
+              <a href="../query%3Fstatus=!closed&amp;component=ckan.html">ckan</a>
+        </td>
+        <th id="h_keywords">
+          Keywords:
+        </th>
+        <td headers="h_keywords" class="searchable">
+        </td>
+    </tr><tr>
+        <th id="h_cc">
+          Cc:
+        </th>
+        <td headers="h_cc" class="searchable">
+        </td>
+        <th id="h_repo">
+          Repository:
+        </th>
+        <td headers="h_repo">
+              <a href="../query%3Fstatus=!closed.html"></a>
+        </td>
+    </tr><tr>
+        <th id="h_theme">
+          Theme:
+        </th>
+        <td headers="h_theme">
+              <a href="../query%3Fstatus=!closed.html"></a>
+        </td>
+        <th>
+        </th>
+        <td>
+        </td>
+    </tr>
+  </table>
+  <div class="description">
+    <h3 id="comment:description">
+      Description
+      <span class="lastmod" title="2010-05-20 14:46:41+00:00">
+        (last modified by dread)
+        (<a href="316%3Faction=diff&amp;version=2.html">diff</a>)
+      </span>
+    </h3>
+    <div class="searchable">
+      <p>
+If you search for unescaped characters such as '`' (backtick) in the URL in Chrome then you get a 500 error.
+</p>
+<p>
+e.g.
+<a class="ext-link" href="http://www.ckan.net/package/search?q=fjdkf2B%C2%B4gfhgfkgf{gpk"><span class="icon">​</span>http://www.ckan.net/package/search?q=fjdkf2B%C2%B4gfhgfkgf{gpk</a>
+fjdkf2B´gfhgfkgf{gpk
+</p>
+<p>
+returns this exception:
+</p>
+<pre class="wiki">URL: http://www.ckan.net/package/search?q=fjdkf%2B%C2%B4gfhgfkgf%7Bg%C2%B4pk&amp;search=Search+Packages+%C2%BB
+Module weberror.errormiddleware:162 in __call__
+&lt;&lt;              __traceback_supplement__ = Supplement, self, environ
+                   sr_checker = ResponseStartChecker(start_response)
+                   app_iter = self.application(environ, sr_checker)
+                   return self.make_catching_iter(app_iter, environ, sr_checker)
+               except:
+&gt;&gt;  app_iter = self.application(environ, sr_checker)
+Module repoze.who.middleware:107 in __call__
+&lt;&lt;          wrapper = StartResponseWrapper(start_response)
+               app_iter = app(environ, wrapper.wrap_start_response)
+       
+               # The challenge decider almost(?) always needs information from the
+&gt;&gt;  app_iter = app(environ, wrapper.wrap_start_response)
+Module beaker.middleware:73 in __call__
+&lt;&lt;                                                     self.cache_manager)
+               environ[self.environ_key] = self.cache_manager
+               return self.app(environ, start_response)
+&gt;&gt;  return self.app(environ, start_response)
+Module beaker.middleware:152 in __call__
+&lt;&lt;                          headers.append(('Set-cookie', cookie))
+                   return start_response(status, headers, exc_info)
+               return self.wrap_app(environ, session_start_response)
+           
+           def _get_session(self):
+&gt;&gt;  return self.wrap_app(environ, session_start_response)
+Module routes.middleware:130 in __call__
+&lt;&lt;                  environ['SCRIPT_NAME'] = environ['SCRIPT_NAME'][:-1]
+               
+               response = self.app(environ, start_response)
+               
+               # Wrapped in try as in rare cases the attribute will be gone already
+&gt;&gt;  response = self.app(environ, start_response)
+Module pylons.wsgiapp:125 in __call__
+&lt;&lt;          
+               controller = self.resolve(environ, start_response)
+               response = self.dispatch(controller, environ, start_response)
+               
+               if 'paste.testing_variables' in environ and hasattr(response,
+&gt;&gt;  response = self.dispatch(controller, environ, start_response)
+Module pylons.wsgiapp:324 in dispatch
+&lt;&lt;          if log_debug:
+                   log.debug("Calling controller class with WSGI interface")
+               return controller(environ, start_response)
+           
+           def load_test_env(self, environ):
+&gt;&gt;  return controller(environ, start_response)
+Module ckan.lib.base:50 in __call__
+&lt;&lt;          # available in environ['pylons.routes_dict']
+               try:
+                   return WSGIController.__call__(self, environ, start_response)
+               finally:
+                   model.Session.remove()
+&gt;&gt;  return WSGIController.__call__(self, environ, start_response)
+Module pylons.controllers.core:221 in __call__
+&lt;&lt;                  return response(environ, self.start_response)
+               
+               response = self._dispatch_call()
+               if not start_response_called:
+                   self.start_response = start_response
+&gt;&gt;  response = self._dispatch_call()
+Module pylons.controllers.core:172 in _dispatch_call
+&lt;&lt;              req.environ['pylons.action_method'] = func
+                   
+                   response = self._inspect_call(func)
+               else:
+                   if log_debug:
+&gt;&gt;  response = self._inspect_call(func)
+Module pylons.controllers.core:107 in _inspect_call
+&lt;&lt;                        func.__name__, args)
+               try:
+                   result = self._perform_call(func, args)
+               except HTTPException, httpe:
+                   if log_debug:
+&gt;&gt;  result = self._perform_call(func, args)
+Module pylons.controllers.core:60 in _perform_call
+&lt;&lt;          """Hide the traceback for everything above this method"""
+               __traceback_hide__ = 'before_and_this'
+               return func(**args)
+           
+           def _inspect_call(self, func):
+&gt;&gt;  return func(**args)
+Module ckan.controllers.package:52 in search
+&lt;&lt;                  collection=query,
+                       page=request.params.get('page', 1),
+                       items_per_page=50
+                   )
+                   # filter out ranks from the query result
+&gt;&gt;  items_per_page=50
+Module webhelpers.paginate:333 in __init__
+&lt;&lt;              self.item_count = item_count
+               else:
+                   self.item_count = len(self.collection)
+       
+               # Compute the number of the first and last available page
+&gt;&gt;  self.item_count = len(self.collection)
+Module webhelpers.paginate:204 in __len__
+&lt;&lt;      def __len__(self):
+               return self.obj.count()
+       
+       # Since the items on a page are mainly a list we subclass the "list" type
+&gt;&gt;  return self.obj.count()
+Module sqlalchemy.orm.query:1094 in count
+&lt;&lt;              q = q.params(params)
+               q = q._legacy_select_kwargs(**kwargs)
+               return q._count()
+       
+           def _count(self):
+&gt;&gt;  return q._count()
+Module sqlalchemy.orm.query:1103 in _count
+&lt;&lt;          """
+               return self._col_aggregate(sql.literal_column('1'), sql.func.count, nested_cols=list(self.mapper.primary_key))
+       
+           def _col_aggregate(self, col, func, nested_cols=None):
+&gt;&gt;  return self._col_aggregate(sql.literal_column('1'), sql.func.count, nested_cols=list(self.mapper.primary_key))
+Module sqlalchemy.orm.query:1125 in _col_aggregate
+&lt;&lt;          if self._autoflush and not self._populate_existing:
+                   self.session._autoflush()
+               return self.session.scalar(s, params=self._params, mapper=self.mapper)
+       
+           def compile(self):
+&gt;&gt;  return self.session.scalar(s, params=self._params, mapper=self.mapper)
+Module sqlalchemy.orm.session:635 in scalar
+&lt;&lt;          engine = self.get_bind(mapper, clause=clause, instance=instance)
+       
+               return self.__connection(engine, close_with_result=True).scalar(clause, params or {})
+       
+           def close(self):
+&gt;&gt;  return self.__connection(engine, close_with_result=True).scalar(clause, params or {})
+Module sqlalchemy.engine.base:834 in scalar
+&lt;&lt;          """
+       
+               return self.execute(object, *multiparams, **params).scalar()
+       
+           def statement_compiler(self, statement, **kwargs):
+&gt;&gt;  return self.execute(object, *multiparams, **params).scalar()
+Module sqlalchemy.engine.base:844 in execute
+&lt;&lt;          for c in type(object).__mro__:
+                   if c in Connection.executors:
+                       return Connection.executors[c](self, object, multiparams, params)
+               else:
+                   raise exceptions.InvalidRequestError("Unexecutable object type: " + str(type(object)))
+&gt;&gt;  return Connection.executors[c](self, object, multiparams, params)
+Module sqlalchemy.engine.base:895 in execute_clauseelement
+&lt;&lt;          else:
+                   keys = None
+               return self._execute_compiled(elem.compile(dialect=self.dialect, column_keys=keys, inline=len(params) &gt; 1), distilled_params=params)
+       
+           def _execute_compiled(self, compiled, multiparams=None, params=None, distilled_params=None):
+&gt;&gt;  return self._execute_compiled(elem.compile(dialect=self.dialect, column_keys=keys, inline=len(params) &gt; 1), distilled_params=params)
+Module sqlalchemy.engine.base:907 in _execute_compiled
+&lt;&lt;          context.pre_execution()
+               self.__execute_raw(context)
+               context.post_execution()
+               self._autocommit(context)
+&gt;&gt;  self.__execute_raw(context)
+Module sqlalchemy.engine.base:916 in __execute_raw
+&lt;&lt;              self._cursor_executemany(context.cursor, context.statement, context.parameters, context=context)
+               else:
+                   self._cursor_execute(context.cursor, context.statement, context.parameters[0], context=context)
+       
+           def _execute_ddl(self, ddl, params, multiparams):
+&gt;&gt;  self._cursor_execute(context.cursor, context.statement, context.parameters[0], context=context)
+Module sqlalchemy.engine.base:958 in _cursor_execute
+&lt;&lt;              self.engine.logger.info(repr(parameters))
+               try:
+                   self.dialect.do_execute(cursor, statement, parameters, context=context)
+               except Exception, e:
+                   self._handle_dbapi_exception(e, statement, parameters, cursor)
+&gt;&gt;  self.dialect.do_execute(cursor, statement, parameters, context=context)
+Module sqlalchemy.engine.default:133 in do_execute
+&lt;&lt;      def do_execute(self, cursor, statement, parameters, context=None):
+               cursor.execute(statement, parameters)
+       
+           def is_disconnect(self, e):
+&gt;&gt;  cursor.execute(statement, parameters)
+UnicodeEncodeError: 'ascii' codec can't encode character u'\xb4' in position 6: ordinal not in range(128)
+</pre>
+    </div>
+  </div>
+</div>
+          
+
+        <div>
+          <h2 class="foldable">Change History</h2>
+          <div id="changelog">
+              <div class="change" id="trac-change-1">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:1" class="cnum">
+      <a href="316.html#comment:1">comment:1</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2010-05-19T10:45:59Z&amp;precision=second.html" title="2010-05-19T10:45:59Z in Timeline">4 years</a> ago by dread
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Summary</strong>
+        changed from <em>Search URL encoding issue</em> to <em>Search URL escaping</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-2">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:2" class="cnum">
+      <a href="316.html#comment:2">comment:2</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2010-05-20T14:46:41Z&amp;precision=second.html" title="2010-05-20T14:46:41Z in Timeline">4 years</a> ago by dread
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Description</strong>
+        modified (<a href="316%3Faction=diff&amp;version=2.html">diff</a>)
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+This exception occurs for ckan.net with just this one character:
+<a class="ext-link" href="http://ckan.net/package/search?q=%C2"><span class="icon">​</span>http://ckan.net/package/search?q=%C2</a>
+(you can wget it)
+</p>
+<p>
+But I can't recreate it on my machine. Maybe it's a version issue.
+</p>
+<p>
+The client that is making all these crazy calls is googlebot.
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-3">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:3" class="cnum">
+      <a href="316.html#comment:3">comment:3</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2010-12-08T17:59:37Z&amp;precision=second.html" title="2010-12-08T17:59:37Z in Timeline">3 years</a> ago by thejimmyg
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Status</strong>
+        changed from <em>new</em> to <em>closed</em>
+    </li><li>
+      <strong>Resolution</strong>
+        set to <em>fixed</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+I've just tested this on ckan.net and it gives a sensible message:
+</p>
+<blockquote>
+<p>
+There was an error while searching. Please try another search term.
+</p>
+</blockquote>
+
+    </div>
+
+              </div>
+          </div>
+        </div>
+      <div id="help"><strong>Note:</strong> See
+        <a href="../wiki/TracTickets.html">TracTickets</a> for help on using
+        tickets.</div>
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="first">
+          <a rel="nofollow" href="316%3Fformat=csv" class="csv">Comma-delimited Text</a>
+        </li><li>
+          <a rel="nofollow" href="316%3Fformat=tab" class="tab">Tab-delimited Text</a>
+        </li><li class="last">
+          <a rel="nofollow" href="316%3Fformat=rss" class="rss">RSS Feed</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

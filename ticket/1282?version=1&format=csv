@@ -1,0 +1,15 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1282,JS and WUI tidy up,rgrp,rgrp,"Consolidate js. Remove cruft.
+
+ 1. Move stuff to vendor
+  * Have all vendor libs local (?)                                             
+  * jquery, jquery-ui etc
+ 2. Consolidate autocomplete to use jquery-ui
+ 3. Move forms.css into main  
+ 4. Option to use external site to serve js and css (e.g. CDN)
+ 5. Remove tag cloud from front page (can be example going forward)
+
+Possible:
+ 1. JS unit tests for the given pages ...
+                                                       
+",enhancement,new,major,ckan-v1.5,ckan,,,,ckan,none

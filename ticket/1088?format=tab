@@ -1,0 +1,13 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1088	content-type autonegotiation is wonky	wwaites		"in ckan/controllers/package.py around line 130 it does some strange things...
+
+perhaps replace with https://github.com/wwaites/autoneg
+
+and handle redirection of these content types:
+{{{
+application/rdf+xml
+application/turtle
+text/plain
+text/x-graphviz
+}}}
+"	defect	closed	awaiting triage	ckan-v1.4	ckan	fixed			ckan	none

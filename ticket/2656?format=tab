@@ -1,0 +1,6 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2656	Feed with few results has bad paging link, causing exception	dread	seanh	"This page http://thedatahub.org/feeds/custom.atom?q=wombat has 0 results and contains a link to http://thedatahub.org/feeds/custom.atom?q=wombat&amp;page=0 which the page=0 causes this exception:
+{{{
+ckan.lib.search.common.SearchError'>: SOLR returned an error running query
+Error: ""'start' parameter cannot be negative""
+}}}"	defect	new	trivial		ckan				ckan	none

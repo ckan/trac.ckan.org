@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #101: (Improved) Download support</title>
+    <link>http://localhost/ticket/101</link>
+    <description>&lt;ol&gt;&lt;li&gt;Given a url download from that url to disk
+&lt;/li&gt;&lt;li&gt;Given a package use download url to download to disk
+&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;
+Once on disk should uncompress (if necessary).
+&lt;/p&gt;
+&lt;h2 id="Details"&gt;Details&lt;/h2&gt;
+&lt;ul&gt;&lt;li&gt;Should download either to tmp directory (defaulted in config) or a specified path on disk
+&lt;/li&gt;&lt;li&gt;In download would like to support as many types of target urls as possible:
+&lt;ol&gt;&lt;li&gt;Single files (usually compressed filesets but could be individual files)
+&lt;/li&gt;&lt;li&gt;Index pages listing files to download
+&lt;/li&gt;&lt;li&gt;Revision control repositories
+&lt;/li&gt;&lt;li&gt;...
+&lt;/li&gt;&lt;/ol&gt;&lt;/li&gt;&lt;/ul&gt;&lt;blockquote&gt;
+&lt;p&gt;
+This will obviously be a significant amount of work. Suggest:
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;&lt;li&gt;Start off just supporting the first option.
+&lt;/li&gt;&lt;li&gt;Have something like a plugin system to handle new target types
+&lt;/li&gt;&lt;li&gt;Reuse existing work (e.g. easy_install and pip handle standard vcs such as svn, hg, git etc)
+&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;
+Cost: 1d
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/101</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Wed, 03 Mar 2010 20:36:47 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/101#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/101#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Marking as fixed as Item 1 and item 2 have now been done (at least partially), using urlgrabber. However no "distribution" support (we just assume all downloads are "payloads" and get metadata from ckan). See cset:ae89cbc898c7/datapkg cset:8448f862c588/datapkg cset:df22cd0f92a1/datapkg etc.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

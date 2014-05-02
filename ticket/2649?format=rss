@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2649: Description on resources not rendered as markdown</title>
+    <link>http://localhost/ticket/2649</link>
+    <description>&lt;p&gt;
+When a resource doesn't have a description, it is rendered as markdown from the description of the dataset.
+&lt;/p&gt;
+&lt;p&gt;
+If the resource does have a description it isn't rendered as markdown ..
+&lt;/p&gt;
+&lt;p&gt;
+See &lt;a class="ext-link" href="http://thedatahub.org/dataset/wikipedia-e3-timestamp-position-modification/resource/d883ab44-07f4-4992-800a-3e4bf5d53a96"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://thedatahub.org/dataset/wikipedia-e3-timestamp-position-modification/resource/d883ab44-07f4-4992-800a-3e4bf5d53a96&lt;/a&gt;
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2649</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>ross</dc:creator>
+
+      <pubDate>Thu, 12 Jul 2012 09:11:20 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/2649#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/2649#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

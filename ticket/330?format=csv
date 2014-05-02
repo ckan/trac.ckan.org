@@ -1,0 +1,8 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+330,getdata/ons timezone not recognised on non-British servers,dread,dread,"The python time module is supposed to recognise timezones such as 'UTC', 'GMT' and 'BST' using the %Z parameter. This works fine on British installs, but the buildbot (for example) gives this error:
+
+DateConvertError: Could not read date as ISO format ""%a, %d %b %Y %H:%M:%S %Z"". Date provided: ""Mon, 04 Jan 2010 09:30:00 BST""
+
+It turns out that it only recognises local names of timezones.
+
+The ONS import doesn't care much about timezone, so we should just ignore it, avoiding these problems.",defect,closed,critical,,ckan,fixed,,,,

@@ -1,0 +1,4 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+895	Add version number (or simular) to css/js includes query string	memespring		"Updates to css after a new deploy don't come through without a hard refresh. Adding the version number to the include urls will solve this e.g.
+
+mycssfile.css?v=12345678"	defect	new	awaiting triage	ckan-backlog	ckan				ckan	none

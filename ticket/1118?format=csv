@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1118,tests are testing something other than the behaviour seen in the browser,johnlawrenceaspden,,"I'm finding that if I try to take an action with insufficient credentials from a test then I often (but not always) get a 401 error, whereas in the browser I get redirected to the login page.
+
+It's a bit worrying that the program in its test environment doesn't behave like it does in the browser.",defect,closed,awaiting triage,,ckan,invalid,,,ckan,none

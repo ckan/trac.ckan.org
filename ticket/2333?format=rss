@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2333: Introduce new resource type datastore</title>
+    <link>http://localhost/ticket/2333</link>
+    <description>&lt;p&gt;
+This is a resource that is *just* in the datastore. At the moment there are hacky ways to do this (create resource with meaningless URL etc) but we should do this properly:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;New Option: &lt;a class="missing wiki"&gt;DataStore?&lt;/a&gt; Table in add a resource form
+&lt;/li&gt;&lt;li&gt;URL field is disabled (or points at /api/data or something rather pointless)
+&lt;/li&gt;&lt;li&gt;Download button is disabled
+&lt;ul&gt;&lt;li&gt;Better would be to find a way to serialize an ES table or stream it ...
+&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2333</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>kindly</dc:creator>
+
+      <pubDate>Mon, 25 Jun 2012 11:41:13 GMT</pubDate>
+      <title>milestone changed</title>
+      <link>http://localhost/ticket/2333#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/2333#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan-v1.8&lt;/em&gt; to &lt;em&gt;ckan-v1.9&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

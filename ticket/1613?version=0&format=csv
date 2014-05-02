@@ -1,0 +1,7 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1613,Post-dataset-edit URL has #section,dread,dread," # Viewing a dataset, hit 'Edit'
+ # Click on the ""Basic Information"" tab (note: URL has suffix #section-basic-information
+ # Click 'Save'
+ # URL still has suffix #section-basic-information
+
+Affects 1.5, 1.5.1, 1.5.2a",defect,new,trivial,ckan-sprint-2012-01-09,ckan,,,,ckan,none

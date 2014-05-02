@@ -1,0 +1,8 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+812,Package edit form only allows three extra fields,cygri,,"= Rationale =
+The package edit form is restricted to three extra fields. To enter more than three fields, one has to save the package and hit edit again (or hit preview).
+
+= Implementation =
+A mechanism similar to the one for resources (where you can add lines as you go) would solve this. So, have a button that adds more extra field rows via JS. (Extra fields don't need up/down buttons that the Resource table has)
+
+Nice to have: a blank field is added when you tab from the last filled-in field in the table.",bug,new,awaiting triage,,ckan,,,,,

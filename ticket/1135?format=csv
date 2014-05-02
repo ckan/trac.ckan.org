@@ -1,0 +1,6 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1135,Changeset model for vdm,rgrp,kindly,"Move to Changeset model for vdm.
+
+A changeset model is like an Audit-Log model in which we just record Changesets with Change-Objects rather than have Revision-Objects for each Object that is revisioned.
+
+This change would also incorporate significant simplication of vdm.",enhancement,assigned,major,,vdm,,,,vdm,none

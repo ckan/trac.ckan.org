@@ -1,0 +1,14 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2230,Tidy up of search facets code duplication,seanh,,"Because of a clash between two development branches there is some duplication of code to do with code facets:
+
+The package_search() function is adding the search facets to the search results twice with two different data structures, with keys ""facets"" and ""new_facets"". It should be reduced to just the new facets (with the key changed to ""facets"").
+
+Also the group and package controllers are adding both facets and new_facets to the context, should be new_facets only (but renamed to facets).
+
+The facet_items() function in helpers.py should be removed, it uses the old facets structure and shouldn't be needed anymore with the new facets structure.
+
+In facets.html, facet_sidebar() should be removed as it uses the old facets structure and facet_div() implements the same functionality but uses the new facets.
+
+In facets.html, facet_list_items() will have to be updated to not use the facet_items() helper and to use the new facets structure instead.
+
+Anywhere that ""new_facets"" appears it will have to be changed to ""facets"" (e.g. in the ckanext/multilingual/plugin.py. ",enhancement,new,awaiting triage,ckan-v1.7,ckan,,,,ckan,none

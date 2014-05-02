@@ -1,0 +1,13 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1046	Dictize the API	thejimmyg	kindly	"The stages involved with doing this.
+
+ * Convert model objects to standard dict format (DONE)
+ * Convert standard dicts to current api formats (DONE)
+ * Make standard dicts savable (DONE)
+ * Convert current api saves to the new standard dict format.
+ * Validate standard dict format.
+ * Authenticate all saves and views using new format.
+ * Replace dictization with current api.
+ * Deserialize forms to new dict format.
+ * Replace controllers/forms to use dictization.
+"	enhancement	new	critical	ckan-v1.4-sprint-4	ckan				ckan	none

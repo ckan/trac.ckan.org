@@ -1,0 +1,7 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1295,Simplify package create form,rgrp,rgrp,"Sub ticket of #1294
+
+ * Initial screen just title, name, description (notes), license (and tags?).
+ * State that you can add data and more information on next screen. This takes you to Package 'view' where you can then do more stuff.
+  * Flash some instructions? e.g. that resources are missing?
+ * Name slug should by default look uneditable (cf wordpress way to do the slug)",enhancement,closed,critical,ckan-sprint-2011-09-12,ckan,fixed,ux,,ckan,none

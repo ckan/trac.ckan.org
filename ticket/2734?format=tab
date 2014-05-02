@@ -1,0 +1,13 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2734	once format on resource form has errored, no longer submits form	shevski	toby	"Steps to reproduce:
+1. go to edit a resource, e.g. http://s031.okserver.org:2375/dataset/ted/resource_edit/a621a6ad-6f1c-46d1-b858-03cdb7a25c07
+
+2. Change the format field to something it doesn't get. e.g. add a comma ""HTML,""
+
+3. Get message: ""The form contains invalid entries:
+Last modified: Date format incorrect
+Size: Invalid integer""
+
+4. Format field reverts, try to re-save/submit form - i.e. click on ""update resource""
+
+5. nothing happens (same if you even try changing the format field"	enhancement	closed	critical	demo phase 2	ckan	fixed	demo-theme		ckan	none

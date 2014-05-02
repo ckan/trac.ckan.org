@@ -1,0 +1,2 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1055	@search_related tests not running	dread	dread	"Tests marked decorated ""@search_related"" should only be run against postgresql, but in fact they don't get run at all. "	defect	closed	blocker	ckan-v1.4-sprint-4	ckan	fixed			ckan	none

@@ -1,0 +1,8 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+91,Add author and maintainer attributes to package,rgrp,dread,"Add the following attributes to package:
+  * author, author_email
+  * maintainer, maintainer_email
+
+Gives us full compatibility to: http://docs.python.org/distutils/setupscript.html#additional-meta-data
+
+Column ordering - should come after name, title, url, download_url.",enhancement,closed,critical,v0.10,ckan,fixed,,,,

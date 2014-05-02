@@ -1,0 +1,2 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2301	Fix substitutions in strings marked for translation	seanh	seanh	Some strings in CKAN are passed to gettext with more than one %s in them, this is no good as translators may need to change the order of substituted words.	enhancement	new	awaiting triage	ckan-sprint-2012-04-30	ckan				ckan	none

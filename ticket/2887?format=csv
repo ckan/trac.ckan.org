@@ -1,0 +1,7 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2887,"""Welcome to CKAN!"" on front page is untranslatable",seanh,,"ckan/templates/home/index.html contains:
+
+    <h1 class=""page_heading"">Welcome to ${g.site_title}!</h1>
+
+which means that just ""Welcome to"" ends up in the ckan.po files for
+translation. This makes the phrase untranslatable in languages that have a different word ordering than English where the site title needs to be somewhere other than at the end of the sentence.",defect,new,major,ckan-v1.8.1,ckan,,i18n,,ckan,none

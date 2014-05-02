@@ -1,0 +1,528 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      #868 (Test improvements)
+     – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="prev" href="867.html" title="Ticket #867" />
+        <link rel="last" href="3030.html" title="Ticket #3030" />
+        <link rel="help" href="../wiki/TracGuide.html" />
+        <link rel="alternate" href="868%3Fformat=csv" type="text/csv" class="csv" title="Comma-delimited Text" /><link rel="alternate" href="868%3Fformat=tab" type="text/tab-separated-values" class="tab" title="Tab-delimited Text" /><link rel="alternate" href="868%3Fformat=rss" type="application/rss+xml" class="rss" title="RSS Feed" />
+        <link rel="next" href="869.html" title="Ticket #869" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/ticket.css" type="text/css" />
+        <link rel="first" href="1.html" title="Ticket #1" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript">
+      var auto_preview_timeout=2.0;
+      var form_token="93d81ccf9a7bb1c456462f62";
+    </script>
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script><script type="text/javascript" src="../chrome/common/js/wikitoolbar.js"></script><script type="text/javascript" src="../chrome/common/js/resizer.js"></script><script type="text/javascript" src="../chrome/common/js/auto_preview.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("div.description").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $(".foldable").enableFolding(false, true);
+        var args = {realm: "ticket", id: 868, escape_newlines: 0}
+        $("#comment").autoPreview("/wiki_render", args, function(textarea, text, rendered) {
+            $("#ticketchange div.comment").html(rendered);
+            if (rendered)
+              $("#ticketchange").show();
+            else if ($("#ticketchange ul.changes").length == 0)
+              $("#ticketchange").hide();
+        });
+        $("#trac-comment-editor textarea").autoPreview("/wiki_render", args,
+                                                       function(textarea, text, rendered) {
+          var comment = $("#trac-comment-editor").next("div.comment");
+          comment.html(rendered);
+          if (rendered)
+            comment.show();
+          else
+            comment.hide();
+        });
+        $("#modify").parent().toggleClass("collapsed");
+        $(".trac-topnav a").click(function() { $("#modify").parent().removeClass("collapsed"); });
+        /* only enable control elements for the currently selected action */
+        var actions = $("#action input[name='action']");
+        function updateActionFields() {
+          actions.each(function () {
+            $(this).siblings().find("*[id]").enable($(this).checked());
+            $(this).siblings().filter("*[id]").enable($(this).checked());
+          });
+        }
+        actions.click(updateActionFields);
+        updateActionFields();
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="../wiki/TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li class="active"><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="867.html" title="Ticket #867">Previous Ticket</a></span></li><li class="last"><span><a class="next" href="869.html" title="Ticket #869">Next Ticket</a> &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="ticket">
+      <h1 id="trac-ticket-title">
+          <a href="868.html">Ticket #868</a>
+          <span class="status">(closed enhancement: fixed)</span>
+      </h1>
+      <div id="ticket">
+  <div class="date">
+    <p>Opened <a class="timeline" href="../timeline%3Ffrom=2010-12-10T13:30:11Z&amp;precision=second.html" title="2010-12-10T13:30:11Z in Timeline">3 years</a> ago</p>
+    <p>Last modified <a class="timeline" href="../timeline%3Ffrom=2011-01-11T13:46:36Z&amp;precision=second.html" title="2011-01-11T13:46:36Z in Timeline">3 years</a> ago</p>
+  </div>
+  <h2 class="summary searchable">Test improvements</h2>
+  <table class="properties">
+    <tr>
+      <th id="h_reporter">Reported by:</th>
+      <td headers="h_reporter" class="searchable">
+        <a href="../query%3Fstatus=!closed&amp;reporter=thejimmyg.html">thejimmyg</a>
+      </td>
+      <th id="h_owner">Owned by:</th>
+      <td headers="h_owner">
+        <a href="../query%3Fstatus=!closed&amp;owner=sebbacon.html">sebbacon</a>
+      </td>
+    </tr>
+    <tr>
+        <th id="h_priority">
+          Priority:
+        </th>
+        <td headers="h_priority">
+              <a href="../query%3Fstatus=!closed&amp;priority=critical.html">critical</a>
+        </td>
+        <th id="h_milestone">
+          Milestone:
+        </th>
+        <td headers="h_milestone">
+              <a class="missing milestone"></a>
+        </td>
+    </tr><tr>
+        <th id="h_component">
+          Component:
+        </th>
+        <td headers="h_component">
+              <a href="../query%3Fstatus=!closed&amp;component=ckan.html">ckan</a>
+        </td>
+        <th id="h_keywords">
+          Keywords:
+        </th>
+        <td headers="h_keywords" class="searchable">
+        </td>
+    </tr><tr>
+        <th id="h_cc">
+          Cc:
+        </th>
+        <td headers="h_cc" class="searchable">
+        </td>
+        <th id="h_repo">
+          Repository:
+        </th>
+        <td headers="h_repo">
+              <a href="../query%3Fstatus=!closed.html"></a>
+        </td>
+    </tr><tr>
+        <th id="h_theme">
+          Theme:
+        </th>
+        <td headers="h_theme">
+              <a href="../query%3Fstatus=!closed.html"></a>
+        </td>
+        <th>
+        </th>
+        <td>
+        </td>
+    </tr>
+  </table>
+  <div class="description">
+    <h3 id="comment:description">
+      Description
+    </h3>
+    <div class="searchable">
+      <p>
+The tests currently take 41 mins to run on most laptops. This slows down development and discourages a test-driven approach.
+</p>
+<p>
+We'd like to see the tests pass in 5 mins or less (but anything would be an improvement!)
+</p>
+<p>
+Some suggestions for achieving this include:
+</p>
+<ul><li>Upgrading the entire codebase to SQLAlchemy 0.6 so that tests could run against an in-memory SQLite database
+</li><li>Not setting up and tearing down the database so frequently.
+</li></ul>
+    </div>
+  </div>
+</div>
+          
+    <div id="attachments">
+        <h2 class="foldable">Attachments</h2>
+        <div>
+          <dl class="attachments">
+              <dt>
+    <a href="../attachment/ticket/868/ckan&#32;test&#32;speed&#32;times&#32;after&#32;0.5&#32;upgrade.csv.html" title="View attachment">ckan test speed times after 0.5 upgrade.csv</a><a href="../raw-attachment/ticket/868/ckan&#32;test&#32;speed&#32;times&#32;after&#32;0.5&#32;upgrade.csv" class="trac-rawlink" title="Download">​</a>
+       (<span title="79771 bytes">77.9 KB</span>) -
+      added by <em>kindly@…</em> <a class="timeline" href="../timeline%3Ffrom=2010-12-26T22:13:43Z&amp;precision=second.html" title="2010-12-26T22:13:43Z in Timeline">3 years</a> ago.
+  </dt>
+              <dd>
+                speed per test after 0.57 upgrade
+              </dd>
+              <dt>
+    <a href="../attachment/ticket/868/no_autoflush_deletes.diff.html" title="View attachment">no_autoflush_deletes.diff</a><a href="../raw-attachment/ticket/868/no_autoflush_deletes.diff" class="trac-rawlink" title="Download">​</a>
+       (<span title="3425 bytes">3.3 KB</span>) -
+      added by <em>kindly@…</em> <a class="timeline" href="../timeline%3Ffrom=2011-01-06T22:55:44Z&amp;precision=second.html" title="2011-01-06T22:55:44Z in Timeline">3 years</a> ago.
+  </dt>
+              <dd>
+                This is a patch so that we do not need to monkeypatch sqlalchemy dialects
+              </dd>
+              <dt>
+    <a href="../attachment/ticket/868/vdm_purge_no_autoflush.diff.html" title="View attachment">vdm_purge_no_autoflush.diff</a><a href="../raw-attachment/ticket/868/vdm_purge_no_autoflush.diff" class="trac-rawlink" title="Download">​</a>
+       (<span title="557 bytes">557 bytes</span>) -
+      added by <em>kindly@…</em> <a class="timeline" href="../timeline%3Ffrom=2011-01-06T22:58:00Z&amp;precision=second.html" title="2011-01-06T22:58:00Z in Timeline">3 years</a> ago.
+  </dt>
+              <dd>
+                This is the corrisponding patch for the vdm, so we dont need to monkeypatch sqlalchemy
+              </dd>
+              <dt>
+    <a href="../attachment/ticket/868/postgres_speed.diff.html" title="View attachment">postgres_speed.diff</a><a href="../raw-attachment/ticket/868/postgres_speed.diff" class="trac-rawlink" title="Download">​</a>
+       (<span title="1946 bytes">1.9 KB</span>) -
+      added by <em>kindly@…</em> <a class="timeline" href="../timeline%3Ffrom=2011-01-07T01:05:41Z&amp;precision=second.html" title="2011-01-07T01:05:41Z in Timeline">3 years</a> ago.
+  </dt>
+              <dd>
+                Speed up postgres by making sure postgres does not drop and reacreate each time.
+              </dd>
+          </dl>
+          
+        </div>
+    </div>
+
+        <div>
+          <h2 class="foldable">Change History</h2>
+          <div id="changelog">
+              <div class="change" id="trac-change-1">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:1" class="cnum">
+      <a href="868.html#comment:1">comment:1</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2010-12-21T00:10:51Z&amp;precision=second.html" title="2010-12-21T00:10:51Z in Timeline">3 years</a> ago by kindly@…
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+Below is a patch to make the tests run at least 2.5 times faster (about 15 mins on my old laptop).  Instead of dropping the tables each time, it just deletes everything in them, using a low level connection.  All the tests pass this way. It's a surprisingly clean patch.  Here are a few points concerning it.
+</p>
+<ul><li>I tested truncating the tables but it's slower. If there are any big tables in the tests this way is the fastest (faster than drop).
+</li><li>The sequences (id columns) will start from where they left off.
+</li><li>I also investigated making postgres template database and cloning it, but the complication was not worth it. 
+</li><li>sqlalchemy iterates the tables in reverse dependency order, which make this possible.
+</li><li>I targeted rebuild_db as that what most of the tests I saw where using, however I have not checked all tests to see if they all are. 
+</li><li>There is a slight hack on the repo object to make sure it knows that "clean_db" is coming from the tests.
+</li><li>I refactored init_db for code reuse.
+</li><li>I have not done a version check. sqlalchemy &gt;= 0.5 do this in a different way as outlined in the comments.
+</li></ul><pre class="wiki">diff -r 7f2239b0f743 ckan/model/__init__.py
+--- a/ckan/model/__init__.py	Fri Dec 17 10:34:47 2010 +0000
++++ b/ckan/model/__init__.py	Mon Dec 20 23:25:04 2010 +0000
+@@ -41,6 +41,9 @@
+ 
+     def init_db(self):
+         super(Repository, self).init_db()
++        self.add_initial_data()
++
++    def add_initial_data(self):
+         # assume if this exists everything else does too
+         if not User.by_name(PSEUDO_USER__VISITOR):
+             visitor = User(name=PSEUDO_USER__VISITOR)
+@@ -69,6 +72,26 @@
+         import migrate.versioning.api as mig
+         version = mig.version(self.migrate_repository)
+         return version
++    
++    def clean_db(self):
++        # delete only added for tests
++        if hasattr(self, "delete_only") and self.delete_only:
++            self.delete_all()
++        else:
++            super(Repository, self).clean_db()
++    
++    def delete_all(self):
++        
++        self.session.remove()
++        ## use raw connection for performance
++        connection = self.session.connection()
++        ## sqla sorts in reverse dependancy order.
++        ## in &gt;= 0.5 use reversed(metadata.sorted_tables()) instead of table_iterator
++        for table in self.metadata.table_iterator():
++            connection.execute('delete from "%s"' % table.name)
++        self.session.commit()
++
++        self.add_initial_data()
+ 
+     def setup_migration_version_control(self, version=None):
+         import migrate.versioning.exceptions
+diff -r 7f2239b0f743 ckan/tests/__init__.py
+--- a/ckan/tests/__init__.py	Fri Dec 17 10:34:47 2010 +0000
++++ b/ckan/tests/__init__.py	Mon Dec 20 23:25:04 2010 +0000
+@@ -55,6 +55,7 @@
+ 
+ import ckan.model as model
+ model.repo.rebuild_db()
++model.repo.delete_only = True
+ 
+ class BaseCase(object):
+</pre><p>
+ 
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-2">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:2" class="cnum">
+      <a href="868.html#comment:2">comment:2</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2010-12-21T08:50:28Z&amp;precision=second.html" title="2010-12-21T08:50:28Z in Timeline">3 years</a> ago by sebbacon
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Owner</strong>
+        changed from <em>thejimmyg</em> to <em>sebbacon</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+See also <a class="closed ticket" href="867.html" title="enhancement: ckanclient raises exceptions (closed: fixed)">#867</a>
+</p>
+<p>
+Thanks for the patch.
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-3">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:3" class="cnum">
+      <a href="868.html#comment:3">comment:3</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2010-12-21T08:50:56Z&amp;precision=second.html" title="2010-12-21T08:50:56Z in Timeline">3 years</a> ago by sebbacon
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+I mean <a class="closed ticket" href="876.html" title="enhancement: Support sqlite as a database backend for CKAN (closed: fixed)">#876</a>, of course.
+</p>
+
+    </div>
+
+              </div>
+              <div class="change">
+                <h3 class="change">
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2010-12-26T22:13:43Z&amp;precision=second.html" title="2010-12-26T22:13:43Z in Timeline">3 years</a> ago by kindly@…
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Attachment</strong>
+        <a href="../attachment/ticket/868/ckan&#32;test&#32;speed&#32;times&#32;after&#32;0.5&#32;upgrade.csv.html"><em>ckan test speed times after 0.5 upgrade.csv</em></a><a href="../raw-attachment/ticket/868/ckan&#32;test&#32;speed&#32;times&#32;after&#32;0.5&#32;upgrade.csv" title="Download" class="trac-rawlink">​</a>
+          added
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+speed per test after 0.57 upgrade
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-4">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:4" class="cnum">
+      <a href="868.html#comment:4">comment:4</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2010-12-26T22:16:48Z&amp;precision=second.html" title="2010-12-26T22:16:48Z in Timeline">3 years</a> ago by anonymous
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+Attached are the timings I have for the tests after I upgraded to 0.57 and after a few simple test tweaks.  They do not include setup and teardown time at the class level as they are not assignable to individual tests.
+</p>
+
+    </div>
+
+              </div>
+              <div class="change">
+                <h3 class="change">
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-01-06T22:55:44Z&amp;precision=second.html" title="2011-01-06T22:55:44Z in Timeline">3 years</a> ago by kindly@…
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Attachment</strong>
+        <a href="../attachment/ticket/868/no_autoflush_deletes.diff.html"><em>no_autoflush_deletes.diff</em></a><a href="../raw-attachment/ticket/868/no_autoflush_deletes.diff" title="Download" class="trac-rawlink">​</a>
+          added
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+This is a patch so that we do not need to monkeypatch sqlalchemy dialects
+</p>
+
+    </div>
+
+              </div>
+              <div class="change">
+                <h3 class="change">
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-01-06T22:58:00Z&amp;precision=second.html" title="2011-01-06T22:58:00Z in Timeline">3 years</a> ago by kindly@…
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Attachment</strong>
+        <a href="../attachment/ticket/868/vdm_purge_no_autoflush.diff.html"><em>vdm_purge_no_autoflush.diff</em></a><a href="../raw-attachment/ticket/868/vdm_purge_no_autoflush.diff" title="Download" class="trac-rawlink">​</a>
+          added
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+This is the corrisponding patch for the vdm, so we dont need to monkeypatch sqlalchemy
+</p>
+
+    </div>
+
+              </div>
+              <div class="change">
+                <h3 class="change">
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-01-07T01:05:41Z&amp;precision=second.html" title="2011-01-07T01:05:41Z in Timeline">3 years</a> ago by kindly@…
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Attachment</strong>
+        <a href="../attachment/ticket/868/postgres_speed.diff.html"><em>postgres_speed.diff</em></a><a href="../raw-attachment/ticket/868/postgres_speed.diff" title="Download" class="trac-rawlink">​</a>
+          added
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+Speed up postgres by making sure postgres does not drop and reacreate each time.
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-5">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:5" class="cnum">
+      <a href="868.html#comment:5">comment:5</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-01-11T13:46:36Z&amp;precision=second.html" title="2011-01-11T13:46:36Z in Timeline">3 years</a> ago by dread
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Status</strong>
+        changed from <em>new</em> to <em>closed</em>
+    </li><li>
+      <strong>Resolution</strong>
+        set to <em>fixed</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+I've merged in David Raznick's patches:
+</p>
+<ul><li>no_autoflush_deletes.diff cset:2b9591172182
+</li><li>postgres_speed.diff cset:fa1b7e3a4e0f
+</li><li>vdm_purge_no_autoflush.diff vdm cset 8accdd0b9b7f
+</li></ul><p>
+I've also merged in Seb's fork: cset:68d63fda4814 which closes this ticket, achieving test speeds of under 3 minutes!
+</p>
+
+    </div>
+
+              </div>
+          </div>
+        </div>
+      <div id="help"><strong>Note:</strong> See
+        <a href="../wiki/TracTickets.html">TracTickets</a> for help on using
+        tickets.</div>
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="first">
+          <a rel="nofollow" href="868%3Fformat=csv" class="csv">Comma-delimited Text</a>
+        </li><li>
+          <a rel="nofollow" href="868%3Fformat=tab" class="tab">Tab-delimited Text</a>
+        </li><li class="last">
+          <a rel="nofollow" href="868%3Fformat=rss" class="rss">RSS Feed</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

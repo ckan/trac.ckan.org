@@ -1,0 +1,2 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1746	Activity streams pagination	seanh		Currently user, package and group activity streams only return the most recent 15 activities, even though all activities are kept in the db. Do we want to add pagination - to both the API and the HTML pages - to support retrieving older activities?	enhancement	closed	awaiting triage	ckan-backlog	ckan	wontfix	activity_streams		ckan	none

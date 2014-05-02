@@ -1,0 +1,10 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+172,Build ckan documentation using sphinx and upload,rgrp,rgrp,"Use python sphinx to build documenation in ./doc and then upload it somewhere publicly accessible.
+
+NB: improving the documentation is another matter (as is integrating e.g. existing api docs).
+
+Upload location (these are docs for CKAN codebase/concept not the ckan service at ckan.net so good not to associate it too closely with ckan.net):
+
+  * http://knowledgeforge.net/ckan/ckan/doc/
+  * (Other options: http://www.ckan.net/doc/ http://doc.ckan.net)
+",enhancement,new,critical,v0.11,ckan,,,,,

@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2873: ckanext-qa: dataset summary incorrect</title>
+    <link>http://localhost/ticket/2873</link>
+    <description>&lt;p&gt;
+For example see:  &lt;a class="ext-link" href="http://s031.okserver.org:2375/qa/dataset/five_stars"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://s031.okserver.org:2375/qa/dataset/five_stars&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+Which has: Example dataset as a score of: 4 After examination of the dataset (  &lt;a class="ext-link" href="http://s031.okserver.org:2375/dataset/example-dataset"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://s031.okserver.org:2375/dataset/example-dataset&lt;/a&gt; ) it is made up of a CSV and an HTML file.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2873</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>danieljohnlewis</dc:creator>
+
+      <pubDate>Thu, 16 Aug 2012 14:15:04 GMT</pubDate>
+      <title>description changed; milestone set</title>
+      <link>http://localhost/ticket/2873#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/2873#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/2873?action=diff&amp;amp;version=1"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                set to &lt;em&gt;ckan-backlog&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>danieljohnlewis</dc:creator>
+
+      <pubDate>Thu, 16 Aug 2012 14:37:50 GMT</pubDate>
+      <title>status changed; owner set</title>
+      <link>http://localhost/ticket/2873#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/2873#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;owner&lt;/strong&gt;
+              set to &lt;em&gt;toby&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;assigned&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>danieljohnlewis</dc:creator>
+
+      <pubDate>Thu, 16 Aug 2012 15:01:55 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/2873#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/2873#comment:3</guid>
+      <description>
+        &lt;p&gt;
+For example see:
+&lt;a class="ext-link" href="http://s031.okserver.org:2375/qa/dataset/five_stars"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://s031.okserver.org:2375/qa/dataset/five_stars&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+Which has:
+Example dataset as a score of: 4
+After examination of the dataset ( &lt;a class="ext-link" href="http://s031.okserver.org:2375/dataset/example-dataset"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://s031.okserver.org:2375/dataset/example-dataset&lt;/a&gt; ) it is made up of a CSV and an HTML file.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>toby</dc:creator>
+
+      <pubDate>Thu, 16 Aug 2012 17:01:29 GMT</pubDate>
+      <title>summary, description, milestone changed</title>
+      <link>http://localhost/ticket/2873#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/2873#comment:4</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;summary&lt;/strong&gt;
+                changed from &lt;em&gt;ckanext-qa: Incorrect Dataset Openness Scores&lt;/em&gt; to &lt;em&gt;ckanext-qa: dataset summary incorrect&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/2873?action=diff&amp;amp;version=4"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan-backlog&lt;/em&gt; to &lt;em&gt;demo phase 4&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+This is a problem with the summary data not the resource qa score it is almost certainly due to stale data.
+&lt;/p&gt;
+&lt;p&gt;
+keeping here till resolved
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>toby</dc:creator>
+
+      <pubDate>Fri, 17 Aug 2012 12:58:03 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/2873#comment:5</link>
+      <guid isPermaLink="false">http://localhost/ticket/2873#comment:5</guid>
+      <description>
+        &lt;p&gt;
+qa extension is crap and needs fixing to work properly due to where it stores data (in the task status - wtf)
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

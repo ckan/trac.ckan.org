@@ -1,0 +1,8 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2224,Simplify javascript and css dependencies and add minified version,rgrp,zephod," * Get rid of jquery UI
+  * Requires switching to bootstrap lookahead plus a small bit of coding for ajax part (see https://gist.github.com/2007241)
+ * Remove modernizr (what do we use it for?)
+ * Convert jquery.tmpl to jquery mustache (?)
+ * Remove ckanjs moving core parts of it directly into our code.
+
+Compress everything for releases and add minified version to build (with switch to enable use of this?)",enhancement,assigned,major,current-ckan-sprint-2012-03-19,ckan,,,,ckan,none

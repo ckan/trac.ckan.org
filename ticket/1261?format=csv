@@ -1,0 +1,2 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1261,Investigate dots in extras search,pudo,,"It seems that searching for extras_foo:value works with solr, but extras_foo.bar:value doesn't. No theory on why. ",defect,new,trivial,ckan-backlog,ckan,,,,ckanext-solr,none

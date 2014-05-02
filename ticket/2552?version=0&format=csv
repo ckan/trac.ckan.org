@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2552,Controlling access to features,ross,kindly,"For charging users for specific features, it would be great if this was implemented similar to the auth/action layer (even if it is actually implemented like that).
+
+For instance, when a user tries to upload a file we would check whether they were a paid user and then respond accordingly if they had gone over the criteria. The criteria in this case might be that unpaid users get 5Mb whilst paid users get unlimited space.",enhancement,new,awaiting triage,,ckan,,tdh,,ckan,none

@@ -1,0 +1,6 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+978	Web UI for Resource Extras	dread		"Following on from #826 - we can configure some extra fields in resources and can edit them in the Web UI, but we can't create new columns in the Web UI. This ticket is to allow this.
+
+== Implementation ==
+
+I envisage a 'add column' button that allows you to add this a property to all resources in a package. I'd rather not have a sub-form as that could be logistically difficult. You could either make the 'extra' column titles editable or provide a button to edit them."	enhancement	new	awaiting triage	ckan-backlog	ckan					

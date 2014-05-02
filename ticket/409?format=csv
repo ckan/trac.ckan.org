@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+409,Refactor cli to be more 'pluggable',rgrp,rgrp,"  * ~~(Load cli commands from setuptools entry point name datapkg.cli)~~
+  * Document how other can write new commands
+  * Refactor base Command class to support this pluggability (if necessary)",task,closed,minor,datapkg-0.8,dpm,fixed,,,,

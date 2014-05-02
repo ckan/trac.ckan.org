@@ -1,0 +1,24 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1054,Ordering of resources,dread,kindly,"Changing an old resource and creating a new resource on the end results in the old resource moving to the end in the ordering.
+
+This breaks tests:
+ * (ckanext-dgu) ckanext/dgu/tests/ons/test_ons_loader.py:TestOnsLoadBasic.test_fields
+ * (ckanext-importlib) ckanext/importlib/tests/test_loader.py:TestLoaderInsertingResources.test_0_reload
+
+You can make a ckan test break with this patch:
+{{{
+diff -r e6643cf1324c ckan/tests/models/test_resource.py
+--- a/ckan/tests/models/test_resource.py        Wed Mar 23 13:25:52 2011 +0000
++++ b/ckan/tests/models/test_resource.py        Wed Mar 23 19:22:35 2011 +0000
+@@ -297,6 +297,8 @@
+                'url':self.urls[1], 'format':u'OTHER FORMAT',
+                'description':self.description, 'hash':self.hash,
+                'id':original_res_ids[2]},
++            { #new
++                'url':'new'},
+            ]
+        pkg.update_resources(res_dicts)
+        model.repo.commit_and_remove()
+}}}
+
+There seems to be a problem with vdm creating a replacement Resource for the old resource - because it has a duplicate position it is put to the end by the SQLAlchemy ordering_list function.",defect,closed,major,ckan-v1.4-sprint-4,ckan,fixed,,,ckan,none

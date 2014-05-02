@@ -1,0 +1,10 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1482	Minor JS bugs	zephod	johnglover	"Three JS bugs have appeared:
+
+* The slug editor is not updating the text field again. [Fixed; commit:fadda17383]
+
+* The View Dataset page will stop executing javascript if there are no resources. [Fixed; commit:e54b089f6e]
+
+* The Add-Dataset and Add-Group URL editor shows the wrong URL for datasets and groups. Broken in this commit:
+https://github.com/okfn/ckan/commit/5a01e67
+by 'map.explicit=true'. JohnG: Can you look into this?"	defect	new	awaiting triage	ckan-sprint-2011-12-05	ckan				ckan	none

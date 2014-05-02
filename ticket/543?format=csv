@@ -1,0 +1,6 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+543,Investigate partial page caching and edge-side includes,rgrp,wwaites,"Edge-side includes or partial page caching are a standard way to deal with caching of pages in which some (usually small) part of the content cannot be cached or should be cached in a different manner (e.g. much more briefly) than the rest of the page.
+
+Edge-side includes have the advantage that they integrate with general 3rd-party caching systems such as varnish.
+
+Introducing either partial page or ESI will require some overhaul work to change the page render processing somewhat.",task,closed,awaiting triage,,ckan,duplicate,,,ckan,none

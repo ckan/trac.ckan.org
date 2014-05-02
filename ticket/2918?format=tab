@@ -1,0 +1,4 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2918	Can't remove users from organizations	ross	johnmartin	"When you remove someone, without adding them, the text box at the bottom (which should probably autocomplete) is empty, and this causes problems on the server.
+
+Ideally when you add a user (select from the autocomplete) it would add another row to the table, defaulting the user to editor and setting the names to user__{{X}}__name and user__{{X}}__capacity where X is $('tr').size()"	enhancement	closed	awaiting triage	ckan 2.0	ckan	fixed	organizations		ckan	none

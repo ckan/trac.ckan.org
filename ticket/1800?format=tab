@@ -1,0 +1,4 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1800	Tidy up *_list() and *_search() functions in ckan/logic/action/get.py	seanh		"For consistency all the *_list() functions should list objects only and not accept an optional search query. There should be *_search() functions whenever search is needed.
+
+Currently it is inconsistent, e.g. package_list() and resource_list() do not accept a search query option and there are package_search() and resource_search(), but user_list() does accept a query and there is no user_search(). tag_list() also accepts a query, and there is also a tag_search() that apparently duplicates the search functionality."	refactor	new	awaiting triage	ckan-future	ckan				ckan	none

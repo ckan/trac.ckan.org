@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1486: "allow_partial_update" option does not work with resource lists of packages</title>
+    <link>http://localhost/ticket/1486</link>
+    <description>&lt;ol&gt;&lt;li&gt;Call ckan.logic.action.update:package_update()
+&lt;/li&gt;&lt;li&gt;Pass in a context dict with "allow_partial_update":True
+&lt;/li&gt;&lt;li&gt;Pass in a partial data dict containing only the package's ID and those fields that you want to update (e.g. title).
+&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;
+=&amp;gt; All of the package's resource will have their statuses changed to "deleted".
+&lt;/p&gt;
+&lt;p&gt;
+The "allow_partial_update" option should apply to the resource lists of packages, but it does not.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1486</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>seanh</dc:creator>
+
+      <pubDate>Wed, 23 Nov 2011 15:18:38 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1486#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1486#comment:1</guid>
+      <description>
+        &lt;p&gt;
+Fixed here: &lt;a class="ext-link" href="https://github.com/seanh/ckan/tree/defect-1486"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;https://github.com/seanh/ckan/tree/defect-1486&lt;/a&gt;
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>seanh</dc:creator>
+
+      <pubDate>Wed, 23 Nov 2011 19:45:24 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1486#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/1486#comment:2</guid>
+      <description>
+        &lt;p&gt;
+I've merged the fix for this into my feature-1298-activities-table branch, will merge it all into master at once: &lt;a class="ext-link" href="https://github.com/seanh/ckan/commits/feature-1298-activities-table"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;https://github.com/seanh/ckan/commits/feature-1298-activities-table&lt;/a&gt;
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>seanh</dc:creator>
+
+      <pubDate>Tue, 06 Dec 2011 11:47:07 GMT</pubDate>
+      <title>status changed; resolution set; milestone deleted</title>
+      <link>http://localhost/ticket/1486#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/1486#comment:3</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                &lt;em&gt;ckan-sprint-2011-12-05&lt;/em&gt; deleted
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+I've now merged my feature-1298-activities-table branch into my super branch for activity streams, so my fix for this defect is now merged into the activity streams super branch and will be merged when that branch is merged. See the activity streams super ticket: &lt;a class="closed ticket" href="http://localhost/ticket/1515" title="enhancement: [super] Activity Streams (closed: fixed)"&gt;#1515&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+Resolving this ticket now
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

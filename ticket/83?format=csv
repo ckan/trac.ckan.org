@@ -1,0 +1,5 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+83,"Allow ""ignored"" fields on versioned objects",rgrp,rgrp,"Allow 'ignored' fields on versioned objects (i.e. attributes which are not 'versioned'). This is not hard to do as we already have most of the necessary mechanisms set up in the Revisioner object.
+
+Cost: 2h
+",enhancement,closed,critical,vdm-0.6,vdm,fixed,,,,

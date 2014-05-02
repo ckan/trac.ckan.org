@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      BranchingPolicy – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="help" href="TracGuide.html" />
+        <link rel="alternate" href="BranchingPolicy%3Fversion=6&amp;format=txt" type="text/x-trac-wiki" title="Plain Text" />
+        <link rel="up" href="BranchingPolicy.html" title="View latest version" />
+        <link rel="next" href="BranchingPolicy%3Fversion=7.html" title="Version 7" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/wiki.css" type="text/css" />
+        <link rel="prev" href="BranchingPolicy%3Fversion=5.html" title="Version 5" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("#content").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $("#content").find(".wikianchor").each(function() {
+          $(this).addAnchor(babel.format(_("Link to #%(id)s"), {id: $(this).attr('id')}));
+        });
+        $(".foldable").enableFolding(true, true);
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last active"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="pagepath" class="noprint">
+  <a class="pathentry first" title="View WikiStart" href="../wiki.1.html">wiki:</a><a class="pathentry" href="BranchingPolicy.html" title="View BranchingPolicy">BranchingPolicy</a>
+</div>
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="BranchingPolicy%3Fversion=5.html" title="Version 5">Previous Version</a></span></li><li><a href="BranchingPolicy.html" title="View latest version">View Latest Version</a></li><li class="last"><span><a class="next" href="BranchingPolicy%3Fversion=7.html" title="Version 7">Next Version</a> &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="wiki">
+        <br />
+        <table id="info" summary="Revision info">
+          <tbody>
+            <tr><th scope="row">Version 6 (modified by dread, <a class="timeline" href="../timeline%3Ffrom=2010-08-26T14:42:33Z&amp;precision=second.html" title="2010-08-26T14:42:33Z in Timeline">4 years</a> ago)
+               (<a href="BranchingPolicy%3Faction=diff&amp;version=6.html">diff</a>)</th></tr>
+            <tr><td class="message">
+              <p>
+--
+</p>
+
+            </td></tr>
+          </tbody>
+        </table>
+      <div class="wikipage searchable">
+        
+          
+          
+          <div id="wikipage"><h1 id="BranchingPolicy">Branching Policy</h1>
+<p>
+CKAN is stored in a mercurial repo and we have devised this policy to cope with coding, releasing and maintaining versions of the software.
+</p>
+<p>
+This is based on the <a class="ext-link" href="http://www.python.org/dev/peps/pep-0374/#backport"><span class="icon">​</span>system used to develop Python</a>, but instead of naming branches after their version numbers, they are named after the maturity of the release, which suits our more frequent releases. This allows <tt>metastable</tt> to always to be a beta, <tt>stable</tt> to be the latest solid release and <tt>ultrastable</tt> to be the previous-but-one release.
+</p>
+<h2 id="Branches">Branches</h2>
+<p>
+We have a number of maintained branches of the code to reflect their uses:
+</p>
+<p>
+<strong>default</strong> branch is for future releases - New features go here. Bug fixes should always go here as well as the other branches.
+</p>
+<p>
+<strong>metastable</strong> branch is for beta releases and proper releases deployed to ckan.net and similar servers. These servers get new features first. Sometimes there are issues to be resolved with these new features. It usually lags <tt>default</tt>.
+</p>
+<p>
+<strong>stable</strong> branch is the latest proper release. It usually lags <tt>metastable</tt>.
+</p>
+<p>
+<strong>ultrastable</strong> branch is for the most stable code - proper releases, always one behind <tt>stable</tt>.
+</p>
+<h2 id="Mergingbetweenthebranches">Merging between the branches</h2>
+<p>
+This arrangement can be seen to be like a waterfall of changesets. <tt>default</tt> has the most, <tt>metastable</tt> is a subset of <tt>default</tt>, <tt>stable</tt> a subset of <tt>metastable</tt> etc. As the releases go down the waterfall, the bug-fixes go in the opposite direction:
+</p>
+<ul><li>A branch may need a bug-fix, and this would need to be merged to all branches UP the waterfall. Even if the bug-fix no longer applies on <tt>default</tt> (because say the file in question has been completely refactored in the meantime), this isn't a bad thing, since you'll be alerted when you get a conflict during the merge.
+</li><li>Along with the bug-fix it may be worth adding a version change (e.g. <tt>1.2</tt> to <tt>1.2.1</tt>). This would also be usefully merged with the bug-fix up the waterfall, indicating the bug is fixed in these places too.
+</li></ul><p>
+Unless there is a big need for a bug fixes on the more stable branches, bug fixes are best done on <tt>metastable</tt> (and then merged just to <tt>default</tt>). This saves the more stable branches from the risk of bug fixes causing other bad effects.
+</p>
+<p>
+So the rule is:
+</p>
+<ul><li>Releases are merged DOWN the waterfall: <tt>default</tt> -&gt; <tt>metastable</tt> -&gt; <tt>stable</tt> -&gt; <tt>ultrastable</tt>
+</li><li>Bug fixes should be merged UP the waterfall: <tt>default</tt> &lt;- <tt>metastable</tt> ( &lt;- <tt>stable</tt> &lt;- <tt>ultrastable</tt> )
+</li></ul><p>
+(One future problem with this system might arises when you want a change on a branch which you don't want merged up the waterfall and wouldn't cause a conflict. We've not thought of a use case like this, so we will deal with not being able to merge upwards, it if it arises.)
+</p>
+<p>
+It is good to merge all branch changes up the waterfall to the top, so that you don't forget to apply a bugfix to a higher branch. In the process  of doing this, you close the branch heads on the way. So when you push new changesets onto a branch (aside from <tt>default</tt>), you should expect to be reminded to create a new head (<tt>hg push -f</tt>).
+</p>
+<p>
+If you merge bug fixes the wrong way (i.e. down the waterfall), you may well end up with unstable changesets merged as well as the bugfix! If you find you have fixed a bug on a higher branch than necessary and want to have the bugfix on a lower branch, then you need to 'transplant' the changeset, rather than 'merge'.
+</p>
+<h2 id="Transplantingchangesets">Transplanting changesets</h2>
+<p>
+When you merge, you can't cherry pick changesets - you have to take all of them up to a certain one. So you have to be slightly more cunning to 'transplant' a bugfix changeset down the waterfall.
+</p>
+<p>
+You can either use the mercurial 'transplant' extension or use <tt>hg export</tt> and <tt>hg import</tt>. 
+</p>
+<h2 id="tipnote">'tip' note</h2>
+<p>
+Mercurial tags the latest commit with the tag <tt>tip</tt>. This means it changes on every commit and might be on <em>any</em> branch. So it's best not to refer to it in documentation, emails or changeset comments.
+</p>
+</div>
+        
+        
+      </div>
+      
+
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="last first">
+          <a rel="nofollow" href="BranchingPolicy%3Fversion=6&amp;format=txt">Plain Text</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

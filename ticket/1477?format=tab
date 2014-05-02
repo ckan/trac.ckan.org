@@ -1,0 +1,45 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1477	[Super] Group refactor	kindly	kindly	"This is the implementation of the final draft in
+
+http://wiki.ckan.org/Groups_Refactor
+
+Steps to complete this will follow (somewhat) in the following order.
+
+Change package_group table to membership. (#1478) 3d
+  * model migration. (done)
+  * simplify revisioning  (done)
+  * Remove any sqlalchemy releations from groups. (done)
+  * change logic functions (done)
+  
+
+Single type per group (#1531)
+   * migration add type to group table. (done) 1d
+  
+Add capacity table (#1522)
+  * model migration. (done)
+  * add to logic functions.
+  
+Allow other objects to be added to groups. (#1531)
+  * change logic functions (done)
+
+Adapt thedatahub.org to use new model.
+  * move auth groups over to groups/members
+  * change user_object roles to use groups? keep user object roles for time being.
+  * make create update package/group put the correct items in the group/members/capacity tables.
+  * work out how ui works.
+
+
+--not doing the below as part of this super ticker now #1669.
+
+Create model for dgu.
+  * adapt auth functions to use auth.
+  * adapt package_create/update group_create/update to fill in the correct capacties/members.
+
+
+
+Adapt Iati, and potentially other custom instances.
+
+Sub-tickets:
+ * #1279 Deprecate Authorization Groups
+ * #1198 Publisher hierarchy
+"	enhancement	closed	blocker	ckan-v1.6	ckan	fixed			ckan	none

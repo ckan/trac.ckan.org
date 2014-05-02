@@ -1,0 +1,14 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+945	Make resource handling richer.	kindly	kindly	"This is a meta ticket for changes that are going to happen in resources.
+
+ * new resource group table.  #956
+ * new kind field in resource.  #957
+ * ui for new kind field. #958
+
+Background on this change can be found
+
+ * http://ckan.okfnpad.org/resources - discussion etherpad
+  * Contains commented version of James Gardner's main email: http://lists.okfn.org/pipermail/ckan-discuss/2011-February/000887.html
+ * UseCasesResources
+
+"	enhancement	new	critical	ckan-v1.4	ckan					

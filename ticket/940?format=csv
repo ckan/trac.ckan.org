@@ -1,0 +1,13 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+940,OpenID login via google for same user generates 2 different openid urls,rgrp,pudo,"This has been noted twice in the last couple of weeks.
+
+Checking around my guess is this is due to someone logging in to www.ckan.net and ckan.net. Google generates openid based on the RP (requesting party) which is the requesting domain url unless the openid.realm is set. See:
+
+ * http://groups.google.com/group/google-federated-login-api/web/the-most-important-technical-issue-in-using-the-google-accounts-api?pli=1
+ * http://stackoverflow.com/questions/3549953/how-to-get-unique-identifier-from-openid-google
+
+To fix this we should set the openid.realm (not sure how atm).
+
+If this is not possible an alternative is to make sure we redirect all users to a single site url (perhaps using ckan config option site_url, or doing this in apache).
+
+Cost: 1h",defect,closed,blocker,ckan-v1.3,ckan,wontfix,,,,

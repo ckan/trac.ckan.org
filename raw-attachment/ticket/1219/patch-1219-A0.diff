@@ -1,0 +1,31 @@
+diff --git a/ckan/public/css/ckan.css b/ckan/public/css/ckan.css
+--- a/ckan/public/css/ckan.css
++++ b/ckan/public/css/ckan.css
+@@ -357,6 +357,13 @@
+   display: inline-block;
+   margin-top: 0;
+   margin-right: 10px;
++  /*
++   * IE 6 & 7 don't support inline-block, but we can use the hasLayout
++   * magical property.
++   * http://blog.mozilla.com/webdev/2009/02/20/cross-browser-inline-block/
++   */
++  zoom: 1;
++  *display: inline;
+ }
+ 
+ #footer-widget-area .widget-container .textwidget {
+@@ -377,6 +384,13 @@
+   margin: 0 1em 0 0;
+   padding: 0;
+   display: inline-block;
++  /*
++   * IE 6 & 7 don't support inline-block, but we can use the hasLayout
++   * magical property.
++   * http://blog.mozilla.com/webdev/2009/02/20/cross-browser-inline-block/
++   */
++  zoom: 1;
++  *display: inline;
+ }
+ 
+ #footer-widget-area #fourth {

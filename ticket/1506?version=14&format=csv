@@ -1,0 +1,56 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1506,"[super] UX improvements to dataset edit, create and search + group + user page (Dec 2011)",rgrp,zephod,"See also: http://trac.ckan.org/ticket/1404 (Post-v1.5 UX improvements) -- probably want to integrate with this and subtickets.
+
+== Historical Parent Tickets ==
+  * ~~Parent-ticket: #1450~~
+  * ~~Parent-ticket: #1032~~
+
+== Step Zero ==
+  * ~~COMPLETELY REDESIGN resource edit process~~
+
+== Dataset Edit-Resources ==
+  * Force format field to be lowercase
+     * Modify backend to serve it up in that format
+  * Subticket #978: Add extra fields to resources in Web UI
+  * Fix display of large datasets (http://test.ckan.net/dataset/europeana-lod)
+  * When submitting forms with errors, open the correct resource pane.
+  * No hint is given that the time format for a resource is in ISO, eg 2005-01-01T10:10:10
+
+== Dataset Settings == 
+  * Subticket #1648: Clarify edit terminology
+  * Merge Groups and Tags into main Settings section (no point having them on their own and most people will miss this).
+  * Fix (i.e. allow / show) name editing on dataset edit.
+    * Fix the slugify so it does not overwrite if i change title after fixing name.
+    * Make slugify encourage people to use shorter names. Either by cutting off (not so good) or showing a warning and saying something like 'hey you may want to cut this down. Hit edit to customize the dataset name now'
+  * Autocomplete the author/maintainer box (requires API extension?)
+
+== Dataset View ==
+  * Fix animation glitch in expanding description
+  * Can we make the list of files look more like a table? Lose space between files? Lose rounded corners?
+  * Verify that there are no more (none) placeholder <td> objects (i believe they've been refactored out)
+
+
+== Dataset Create ==
+
+  * ""Upload or link data files, APIs and other materials related to your dataset.""
+  * Include the description markdown editor again (keep it small)
+  * Licence should maybe be restored
+    * ""(Don't worry if you don't know what your licence is)""
+  * Show the log message field
+    * Beautify
+  * Pre-populate the log message field?
+  * ? Show Home Page field when creating dataset (+ show description (?) (-- but state that it should just be a few lines)
+  * ?  Do some Guerilla UX to see whether we need to Redirect to Resources directly after dataset creation?
+
+== Group Improvements ==
+
+ * Minor fixes to dataset add on Group edit form - 0.5d - #1507
+
+== User pages ==
+
+ * ~~Improvements to user page UX - 1d - #1396~~
+ * ~~Broken links for non-Gravatar use icons - 0.25d - #1719~~
+
+== Etc ==
+  * Take before and after screenshots
+  * Write tests. You may not close this ticket without writing some tests for /editresources!",enhancement,assigned,major,ckan-v1.7,ckan,,ux,,ckan,none

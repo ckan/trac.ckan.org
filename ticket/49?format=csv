@@ -1,0 +1,22 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+49,Filter Spam in Changes to CKAN Data,rgrp,rgrp,"= As A =
+
+sysadmin
+
+= I Want To =
+
+Have revisions to the CKAN data filtered in order to reduce the spam in the system.
+
+= Details =
+
+In the long run this is a quite a generic problem common across several OKF systems and probably can become a general component in the okfmisc repo. For time being focus on a well-factored CKAN-specific solution.
+
+Suggest we follow path of trac: http://trac.edgewall.org/wiki/SpamFilter
+
+Could have a general engine that aggregates spam scores from many different 'plugins' and then marks spam appropriately (actions should be configurable depending on spam level from 'purge' to 'delete' (mark revision as inactive) to 'flag' to 'do nothing').
+
+Main initial plugins would be:
+
+  * regex filter (this would seem very useful here, e.g. do not allow urls in commit messages ...)
+    * could augment using the badcontent list approach (can find list on e.g. moinmoin)
+  * spambayes and/or akismet",enhancement,closed,minor,,ckan,invalid,,,,

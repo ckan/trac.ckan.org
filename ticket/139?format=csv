@@ -1,0 +1,6 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+139,Ensure you cannot add same tag twice to a package,rgrp,rgrp,"Seems some package have ended up with same tag twice: http://www.ckan.net/package/fred2dot0
+
+Check whether this is still possible and if it is fix it ...
+
+Cost: 2h",defect,closed,major,v0.11,ckan,worksforme,,,,

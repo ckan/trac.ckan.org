@@ -1,0 +1,37 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+433,Data package metadata in the Egg,wwaites,,"Still not sure if we shouldn't use the existing setuptools machinery to manage this -- there is already a way to get at the metadata. In any event, I've just made an addition to datapkg that makes it possible to put datapkg_sources as a dictionary in your package's setup.py. Afterwards it is possible to pull the metadata out of the egg. Of course this could easily be changed to save the information in whatever form, indeed if you pass it a string instead of a dictionary it will just write whatever you gave it into the datapkg_sources.spec. The point is, I think that the egg is a good place to stuff this information.
+
+For non-python users, it is always possible to simply put up the datapkg_sources.spec somewhere on the web so they can directly retrieve the data files.
+
+From the docstring::
+{{{
+    This is the implementation for an [egg_info.writers] entrypoint.
+    Datapkg adds an argument to setuptools's setup() function called
+    datapkg_sources. The argument should be a dictionary of the form:
+
+    .. code-block:: python
+
+        setup(
+            ...,
+            datapkg_sources = {
+                ""cra2009"" : ""http://www.hm-treasury.gov.uk/d/cra_2009_db.csv""
+            }
+        )
+
+    The result of this is that there will be a file in the egg called
+    datapkg_sources.spec that looks like this::
+
+        [sources]
+        cra2009=http://www.hm-treasury.gov.uk/d/cra_2009_db.csv
+
+    How do you get at this data? Simple::
+
+    .. code-block:: python
+
+        import pkg_resources
+        dist = pkg_resources.get_distribution(""ukgov_treasury_cra"")
+        spec = dist.get_metadata(""datapkg_sources.spec"")
+
+    and 'spec' will be the contents of the file as a string.
+}}}
+",defect,closed,awaiting triage,datapkg-0.8,,fixed,,,,

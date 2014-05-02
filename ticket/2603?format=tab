@@ -1,0 +1,2 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2603	Remove deprecated 'fields' parameter from resource_search	icmurray	icmurray	The fields parameter of resource_search was deprecated when fixing #2438.  It can be removed in release 1.9, and the action tidied up as a result.	refactor	new	minor	ckan-v1.9	ckan		deprecate deprecation		ckan	none

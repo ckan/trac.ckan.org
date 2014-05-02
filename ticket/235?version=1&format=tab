@@ -1,0 +1,14 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+235	Resource format normalization and detection	dread	rgrp	"Try to gather proper MIME  information for all package resources in CKAN. This is a shared ticket with dcat-tools (https://bitbucket.org/pudo/dcat-tools), i.e. opendatasearch.org. This can then also be used by ckanrdf, the CKAN RDF conversion service. 
+
+Sub-tasks: 
+
+ * Create a Google Spreadsheet with two Worksheets: ""MIME-Mappings"", i.e. ""CSV"" -> ""text/csv"" and ""Name mappings"", i.e. ""text/csv"" -> ""Comma-Separated Spreadsheet"". 
+ * Collect and map surface forms from all CKANs
+ * Access this via Swiss and apply, store as a PackageResource extra field pending #826 (Resource extras). 
+ * Add heuristics for format auto-detections: 
+  * Map well-known file extensions 
+  * Recognize obvious magic (Zip, Tar)
+  * Peek into Zipfile/Tarfiles
+ * Define a convention for generic data types (many CKAN packages have only ""Spreadsheet"" defined, either detect specific type or set MIME to */tabular-data or similar)
+ * See also: #816 (Autocomplete for the resource format field)"	enhancement	new	awaiting triage		ckan					

@@ -1,0 +1,437 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2251: Internal analytics for ckan.</title>
+    <link>http://localhost/ticket/2251</link>
+    <description>&lt;p&gt;
+Page views and Resources clicks need to be tracked.
+&lt;/p&gt;
+&lt;h2 id="UserStories"&gt;User Stories&lt;/h2&gt;
+&lt;p&gt;
+US1 As a Site Admin / Visitor (?) I want to see how often a page has been viewed (every page) and how often resources have been downloaded.
+&lt;/p&gt;
+&lt;p&gt;
+US1a Next to a resource or a dataset see how often it has been downloaded / viewed
+&lt;/p&gt;
+&lt;p&gt;
+US1b I want to see datasets or resources ranked by most downloaded or viewed
+&lt;/p&gt;
+&lt;p&gt;
+US1c See a trend graph for a dataset (and resources)
+&lt;/p&gt;
+&lt;p&gt;
+Adminstrative Dashboard (?)
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;I want to see the traffic breakdown by country to my site ...
+&lt;/li&gt;&lt;li&gt;Ditto for browser type, language, etc etc
+&lt;/li&gt;&lt;li&gt;I want to see it graphed over time ...
+&lt;/li&gt;&lt;/ul&gt;&lt;h2 id="ImplementationDetails"&gt;Implementation Details&lt;/h2&gt;
+&lt;ol&gt;&lt;li&gt;How do we store this data in CKAN?
+&lt;/li&gt;&lt;li&gt;How do we track (and store)?
+&lt;/li&gt;&lt;li&gt;How do we display
+&lt;/li&gt;&lt;/ol&gt;&lt;ul&gt;&lt;li&gt;Config option ckan.status.enabled = False (by default)
+&lt;/li&gt;&lt;/ul&gt;&lt;h3 id="StoringData"&gt;Storing Data&lt;/h3&gt;
+&lt;p&gt;
+How does ckanext-googleanalytics do this? Current table:
+&lt;/p&gt;
+&lt;p&gt;
+package_id | count_recent | count_total
+&lt;/p&gt;
+&lt;p&gt;
+Move to a new stats_summary table
+&lt;/p&gt;
+&lt;p&gt;
+id | item_id | object_type | stats_type (total, month_yyyy_mm, ...) | value
+&lt;/p&gt;
+&lt;p&gt;
+Do we store this data into the search (solr) so we can search by it?
+&lt;/p&gt;
+&lt;h3 id="DisplayingData"&gt;Displaying Data&lt;/h3&gt;
+&lt;ul&gt;&lt;li&gt;Helper functions / dictize:
+&lt;ul&gt;&lt;li&gt;Helper function: h.stats_get(object_type, id, stats_type)
+&lt;ul&gt;&lt;li&gt;h.stats_top_ranked(object_type, number) -&amp;gt; returns object_dicts or just labels or ...
+&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;Change to dictize
+&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;Location in the default theme (do we show for example in search results too!)
+&lt;/li&gt;&lt;li&gt;Support for ranking by most popular in search?
+&lt;/li&gt;&lt;/ul&gt;&lt;h3 id="TrackingData"&gt;Tracking Data&lt;/h3&gt;
+&lt;ul&gt;&lt;li&gt;Our own solution (just write to site_tracking)
+&lt;/li&gt;&lt;li&gt;Google analytics (plus extension for retrieving data) &amp;lt;- would need a refactor
+&lt;/li&gt;&lt;li&gt;Piwiki
+&lt;/li&gt;&lt;/ul&gt;&lt;h4 id="OwnSolution"&gt;Own Solution&lt;/h4&gt;
+&lt;p&gt;
+(For later: not as part of this ticket probably)
+&lt;/p&gt;
+&lt;p&gt;
+site_tracking table
+&lt;/p&gt;
+&lt;p&gt;
+id | url | timestamp | action (page_view, resource_download) |
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Make javascript to make request to ckan to store clicks and page views.
+&lt;/li&gt;&lt;li&gt;Add middleware so these requests do not go through pylons and just store data quickly.
+&lt;/li&gt;&lt;/ul&gt;</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2251</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>kindly</dc:creator>
+
+      <pubDate>Wed, 21 Mar 2012 11:57:56 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/2251#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/2251#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/2251?action=diff&amp;amp;version=1"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Wed, 21 Mar 2012 12:07:30 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/2251#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/2251#comment:2</guid>
+      <description>
+        &lt;p&gt;
+Big +1: everyone wants to know page views. Would like detail of how this goes into interface. Downloads already being tracked. Also isn't this just an extension to ckanext-googleanalytics.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>toby</dc:creator>
+
+      <pubDate>Wed, 21 Mar 2012 12:19:50 GMT</pubDate>
+      <title>status changed</title>
+      <link>http://localhost/ticket/2251#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/2251#comment:3</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;accepted&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+not really part of ckanext-ga as we need to sit first in the middleware for speed reasons.  I'm looking at recording the details and will do a summary page like ga extension.
+&lt;/p&gt;
+&lt;p&gt;
+As far as other uses like showing popular resources etc then we need to decide where the data will live - on the resource or separate.
+&lt;/p&gt;
+&lt;p&gt;
+Downloads tracked? where is this done in the code/data stored
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>toby</dc:creator>
+
+      <pubDate>Wed, 21 Mar 2012 14:41:14 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/2251#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/2251#comment:4</guid>
+      <description>
+        &lt;p&gt;
+notes from meeting 21-3-2012
+&lt;/p&gt;
+&lt;p&gt;
+US1 As a Site Admin / Visitor (?) I want to see how often a page has been viewed (every page) and how often resources have been downloaded.
+US1a Next to a resource or a dataset see how often it has been downloaded / viewed
+US1b I want to see datasets or resources ranked by most downloaded or viewed
+US1c See a trend graph for a dataset (and resources)
+Adminstrative Dashboard (?)
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;I want to see the traffic breakdown by country to my site ...
+&lt;/li&gt;&lt;li&gt;Ditto for browser type, language, etc etc
+&lt;/li&gt;&lt;li&gt;I want to see it graphed over time ...
+&lt;/li&gt;&lt;/ul&gt;&lt;h2 id="ImplementationDetails"&gt;Implementation Details&lt;/h2&gt;
+&lt;ol&gt;&lt;li&gt;How do we store this data in CKAN?
+&lt;/li&gt;&lt;li&gt;How do we track (and store)?
+&lt;/li&gt;&lt;li&gt;How do we display
+&lt;/li&gt;&lt;/ol&gt;&lt;ul&gt;&lt;li&gt;Config option ckan.status.enabled = False (by default)
+&lt;/li&gt;&lt;/ul&gt;&lt;h3 id="StoringData"&gt;Storing Data&lt;/h3&gt;
+&lt;p&gt;
+How does ckanext-googleanalytics do this? Current table:
+package_id | count_recent | count_total
+Move to a new stats_summary table
+id | item_id | object_type | stats_type (total, month_yyyy_mm, ...) | value
+Do we store this data into the search (solr) so we can search by it?
+&lt;/p&gt;
+&lt;h3 id="DisplayingData"&gt;Displaying Data&lt;/h3&gt;
+&lt;ul&gt;&lt;li&gt;Helper functions / dictize:
+&lt;ul&gt;&lt;li&gt;Helper function: h.stats_get(object_type, id, stats_type)
+&lt;ul&gt;&lt;li&gt;h.stats_top_ranked(object_type, number) -&amp;gt; returns object_dicts or just labels or ...
+&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;Change to dictize
+&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;Location in the default theme (do we show for example in search results too!)
+&lt;/li&gt;&lt;li&gt;Support for ranking by most popular in search?
+&lt;/li&gt;&lt;/ul&gt;&lt;h3 id="TrackingData"&gt;Tracking Data&lt;/h3&gt;
+&lt;ul&gt;&lt;li&gt;Our own solution (just write to site_tracking)
+&lt;/li&gt;&lt;li&gt;Google analytics (plus extension for retrieving data) &amp;lt;- would need a refactor
+&lt;/li&gt;&lt;li&gt;Piwiki
+&lt;/li&gt;&lt;/ul&gt;&lt;h4 id="OwnSolution"&gt;Own Solution&lt;/h4&gt;
+&lt;p&gt;
+site_tracking table
+id | url | timestamp | action (page_view, resource_download) |
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Make javascript to make request to ckan to store clicks and page views.
+&lt;/li&gt;&lt;li&gt;Add middleware so these requests do not go through pylons and just store data quickly.
+&lt;/li&gt;&lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>toby</dc:creator>
+
+      <pubDate>Wed, 21 Mar 2012 14:42:27 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/2251#comment:5</link>
+      <guid isPermaLink="false">http://localhost/ticket/2251#comment:5</guid>
+      <description>
+        &lt;p&gt;
+TODO
+&lt;/p&gt;
+&lt;p&gt;
+look at
+&lt;/p&gt;
+&lt;ol&gt;&lt;li&gt;How do we store this data in CKAN?
+&lt;/li&gt;&lt;/ol&gt;&lt;ol start="3"&gt;&lt;li&gt;How do we display * Config option ckan.status.enabled = False (by default)
+&lt;/li&gt;&lt;/ol&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Fri, 23 Mar 2012 17:35:23 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/2251#comment:6</link>
+      <guid isPermaLink="false">http://localhost/ticket/2251#comment:6</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/2251?action=diff&amp;amp;version=6"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Update description in great detail.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Mon, 26 Mar 2012 08:55:39 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/2251#comment:7</link>
+      <guid isPermaLink="false">http://localhost/ticket/2251#comment:7</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/2251?action=diff&amp;amp;version=7"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Mon, 26 Mar 2012 08:56:42 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/2251#comment:8</link>
+      <guid isPermaLink="false">http://localhost/ticket/2251#comment:8</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/2251?action=diff&amp;amp;version=8"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>toby</dc:creator>
+
+      <pubDate>Mon, 26 Mar 2012 15:48:46 GMT</pubDate>
+      <title>priority changed</title>
+      <link>http://localhost/ticket/2251#comment:9</link>
+      <guid isPermaLink="false">http://localhost/ticket/2251#comment:9</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;priority&lt;/strong&gt;
+                changed from &lt;em&gt;awaiting triage&lt;/em&gt; to &lt;em&gt;major&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+we want
+&lt;/p&gt;
+&lt;p&gt;
+resource show downloaded/viewed on resources
+&lt;/p&gt;
+&lt;p&gt;
+show on the dataset total/recent
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>toby</dc:creator>
+
+      <pubDate>Mon, 26 Mar 2012 16:14:23 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/2251#comment:10</link>
+      <guid isPermaLink="false">http://localhost/ticket/2251#comment:10</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/2251?action=diff&amp;amp;version=10"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>toby</dc:creator>
+
+      <pubDate>Mon, 02 Apr 2012 15:51:48 GMT</pubDate>
+      <title>keywords, milestone changed</title>
+      <link>http://localhost/ticket/2251#comment:11</link>
+      <guid isPermaLink="false">http://localhost/ticket/2251#comment:11</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;keywords&lt;/strong&gt;
+              &lt;em&gt;6d&lt;/em&gt; added; &lt;em&gt;4d&lt;/em&gt; removed
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan-sprint-2012-04-02&lt;/em&gt; to &lt;em&gt;current-ckan-sprint-2012-04-16&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>toby</dc:creator>
+
+      <pubDate>Wed, 04 Apr 2012 10:32:52 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/2251#comment:12</link>
+      <guid isPermaLink="false">http://localhost/ticket/2251#comment:12</guid>
+      <description>
+        &lt;p&gt;
+we have various options on tracking unique users seems the sane approach.
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;unique daily view - needed for nice graphing
+&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;unique total views
+&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;total unique daily views - higher numbers and feels more right - easier to calculate if original data is lost/or archived
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+for now will collect all and then decide which to use for display as gives us flexibility if needed
+&lt;/p&gt;
+&lt;p&gt;
+display
+&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;
+why is group listing of datasets inconsistent with main search (TDH at least)?
+should we make these consistent?
+&lt;/p&gt;
+&lt;p&gt;
+group listing allows downloading of resource without tracking (this should be fixed)
+&lt;/p&gt;
+&lt;p&gt;
+if we make listings uniform do we want the download links or not?
+&lt;/p&gt;
+&lt;p&gt;
+I don't like the term download when it is just a link (maybe that's just me - what would be better?)
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>toby</dc:creator>
+
+      <pubDate>Thu, 05 Apr 2012 16:48:58 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/2251#comment:13</link>
+      <guid isPermaLink="false">http://localhost/ticket/2251#comment:13</guid>
+      <description>
+        &lt;p&gt;
+most work completed: outstanding issues
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;add a prune tracking_raw data to cli
+&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;add indexes to tracking_raw
+&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;add summary page for new data format
+&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;add api counter
+&lt;/li&gt;&lt;/ul&gt;&lt;blockquote&gt;
+&lt;p&gt;
+1) do we record the url or action etc (action seems more sensible)
+2) add in &lt;span class="underline"&gt;call&lt;/span&gt; or in action?
+&lt;/p&gt;
+&lt;/blockquote&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>toby</dc:creator>
+
+      <pubDate>Tue, 10 Apr 2012 16:19:32 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/2251#comment:14</link>
+      <guid isPermaLink="false">http://localhost/ticket/2251#comment:14</guid>
+      <description>
+        &lt;p&gt;
+api counter moved to ticket &lt;a class="new ticket" href="http://localhost/ticket/2282" title="enhancement: log api calls for users (new)"&gt;#2282&lt;/a&gt; as needs better specification
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>toby</dc:creator>
+
+      <pubDate>Wed, 11 Apr 2012 11:49:59 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/2251#comment:15</link>
+      <guid isPermaLink="false">http://localhost/ticket/2251#comment:15</guid>
+      <description>
+        &lt;p&gt;
+For meeting today with Adria
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;How to add tracking to solr index.  Can the data live in tracking_summary?  Do we need any extra indexes on table to help indexing?
+&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;How will we add order by popularity to search?
+&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;Can we add resources too?
+&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;Will search be best way to find most popular packages/resources or should we get that pages data from tracking_summary?
+&lt;/li&gt;&lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>toby</dc:creator>
+
+      <pubDate>Thu, 03 May 2012 11:55:55 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/2251#comment:16</link>
+      <guid isPermaLink="false">http://localhost/ticket/2251#comment:16</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;accepted&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

@@ -1,0 +1,33 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1085,local development copy of ckan depends on existence of ckan.net,johnlawrenceaspden,dread,"ckan.net appears to have either gone down or be running ultra slowly.
+
+this means that ckan copies running locally on my machine run very slowly indeed.
+
+is this behaviour desirable?
+
+This command finds lots of http://~~~ckan.net references in python, html and javascript files:
+
+find ~/pyenv/src \( -name ""*.py"" -or -name ""*.html"" -or -name ""*.js"" \) -print0 | xargs -0 -e grep --color -nH -e ""http://.*ckan.net""
+
+output for reference:
+-------------------------------------------------------------------
+
+/home/okfn/pyenv/src/ckan/ckan/__init__.py:5:Network (CKAN) site: http://www.ckan.net.
+/home/okfn/pyenv/src/ckan/ckan/lib/create_test_data.py:346:<http://ckan.net/>
+/home/okfn/pyenv/src/ckan/ckan/lib/rdf.py:3:DOMAIN = 'http://ckan.net'
+/home/okfn/pyenv/src/ckan/ckan/lib/rdf.py:4:CKAN_NAMESPACE = 'http://ckan.net/#'
+/home/okfn/pyenv/src/ckan/ckan/lib/talis.py:60:                      'ckan':'http://ckan.net/ns#',
+/home/okfn/pyenv/src/ckan/ckan/public/scripts/bookmarklet.js:2:    f='http://ckan.net/package/new?url='+encodeURIComponent(window.location.href)+'&title='+encodeURIComponent(document.title);
+/home/okfn/pyenv/src/ckan/ckan/public/scripts/test_bookmarklet.html:16:    addtockan.src='http://ckan.net/scripts/bookmarklet.js';
+/home/okfn/pyenv/src/ckan/ckan/public/scripts/test_bookmarklet.html:27:    <p><strong>Proper bookmarklet (compressed -- need to escape &amp;):</strong> <a href=""javascript:(function(){f='http://ckan.net/package/new?url='+encodeURIComponent(window.location.href)+'&amp;title='+encodeURIComponent(document.title);if((n=document.getElementsByName('description')[0])&amp;&amp;(d=n.content)){f+='&amp;notes='+encodeURIComponent(d);}a=function(){if(!window.open(f)){location.href=f;}};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})()"">Add to CKAN</a>
+/home/okfn/pyenv/src/ckan/ckan/templates/home/license.html:31:      For convenience, all material - including all package, tag and revision information - is available in bulk, in the form of a full dump of the CKAN database. This (gzipped) dump file is updated daily and can be downloaded from <a href=""http://www.ckan.net/dump/"">http://www.ckan.net/dump/</a>.
+/home/okfn/pyenv/src/ckan/ckan/tests/dictization.py:71:            'notes': u'Some test notes\n\n### A 3rd level heading\n\n**Some bolded text.**\n\n*Some italicized text.*\n\nForeign characters:\nu with umlaut \xfc\n66-style quote \u201c\nforeign word: th\xfcmb\n \nNeeds escaping:\nleft arrow <\n\n<http://ckan.net/>\n\n',
+/home/okfn/pyenv/src/ckan/ckan/tests/dictization.py:137:             'notes': u'Some test notes\n\n### A 3rd level heading\n\n**Some bolded text.**\n\n*Some italicized text.*\n\nForeign characters:\nu with umlaut \xfc\n66-style quote \u201c\nforeign word: th\xfcmb\n \nNeeds escaping:\nleft arrow <\n\n<http://ckan.net/>\n\n',
+/home/okfn/pyenv/src/ckan/ckan/tests/dictization.py:447:                                  'notes': u'Some test notes\n\n### A 3rd level heading\n\n**Some bolded text.**\n\n*Some italicized text.*\n\nForeign characters:\nu with umlaut \xfc\n66-style quote \u201c\nforeign word: th\xfcmb\n \nNeeds escaping:\nleft arrow <\n\n<http://ckan.net/>\n\n',
+/home/okfn/pyenv/src/ckan/ckan/tests/dictization.py:458:                                  'notes': u'Some test notes\n\n### A 3rd level heading\n\n**Some bolded text.**\n\n*Some italicized text.*\n\nForeign characters:\nu with umlaut \xfc\n66-style quote \u201c\nforeign word: th\xfcmb\n \nNeeds escaping:\nleft arrow <\n\n<http://ckan.net/>\n\n',
+/home/okfn/pyenv/src/ckan/ckan/tests/functional/api/base.py:178:        assert '""ckan_url"": ""http://test.ckan.net/package/annakarenina""' in msg, msg
+/home/okfn/pyenv/src/ckanclient/ckanclient/__init__.py:116:    api e.g. http://ckan.net/api rather than http://ckan.net/api/rest)
+/home/okfn/pyenv/src/ckanclient/ckanclient/__init__.py:261:    :param base_location: default *http://www.ckan.net/api*
+/home/okfn/pyenv/src/ckanclient/ckanclient/__init__.py:267:    base_location = 'http://www.ckan.net/api'
+
+--------------------------------------------------------------------",defect,closed,awaiting triage,,ckan,fixed,,,ckan,none

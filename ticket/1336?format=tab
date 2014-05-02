@@ -1,0 +1,19 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1336	License fudge	dread	johnglover	"cset:4b59ab34137d ckan/logic/action/get.py:
+{{{
+-            isopen = model.Package.get_license_register()[license_id].isopen()
+-            result_dict['isopen'] = isopen
++            try:
++                isopen = model.Package.get_license_register()[license_id].isopen()
++                result_dict['isopen'] = isopen
++            except KeyError:
++                # TODO: create a log message this error?
++                result_dict['isopen'] = False 
+
+}}}
+
+This change hides problems with the license server and returns potentially incorrect values for openness. 
+
+This has been noted as 'temporary fix' but seems to be forgotten about, since it has been merged to default and gone into release 1.4.3.
+
+I suggest the licenses are cached (I thought this was already the case when CKAN first requests them after start-up?). I suggest failure would return 503."	defect	new	minor	ckan-backlog	ckan				ckan	none

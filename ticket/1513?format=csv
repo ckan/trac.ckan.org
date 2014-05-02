@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1513,Logged in/out problems,dread,dread,"Richard Cyganiak: I often see a problem where half the system thinks that I'm logged in, while the other half insists I'm not. Logout then login again may fix it.
+
+David Read: I think I've seen it several times that the ""My Account"" link is given (suggesting you're logged in) but when you click it it asks you to log in, which means you weren't.",defect,closed,major,ckan-sprint-2012-02-06,ckan,fixed,ux,,ckan,none

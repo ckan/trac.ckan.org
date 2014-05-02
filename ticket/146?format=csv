@@ -1,0 +1,7 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+146,Problem when an admin user logs in between commencing editing and saving,rgrp,pudo,"  1. Visitor starts editing a package (or creates a new package)
+  2. Visitor logs in before previewing or committing
+  3. Visitor is an admin (or sysadmin)
+  4. Preview or commit fails
+
+Reason (conjecture): the form we use for package editing is now dependent on whether you have admin privileges (we allow editing of state by admins). When you login the old form is now incorrect and this results in the formalchemy fieldset breaking.",defect,closed,awaiting triage,,ckan,worksforme,,,,

@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #187: Full-text search</title>
+    <link>http://localhost/ticket/187</link>
+    <description>&lt;p&gt;
+Standard search should search notes field in addition to name, title and tags (discussed in &lt;a class="closed ticket" href="http://localhost/ticket/108" title="enhancement: Package search in the REST API (closed: fixed)"&gt;ticket:108&lt;/a&gt; but not done). For this to work we need proper text search since o/w we get poor ordering and lots of bad results.
+&lt;/p&gt;
+&lt;p&gt;
+If we do this we need:
+&lt;/p&gt;
+&lt;ol&gt;&lt;li&gt;To weight across fields in a sensible way
+&lt;/li&gt;&lt;li&gt;We can also use proper text search on title or ...
+&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;
+Easiest way to do this is to use existing facilities in dbs e.g. postgres has full text support since 8.3: &lt;a class="ext-link" href="http://www.postgresql.org/docs/8.3/static/textsearch.html"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://www.postgresql.org/docs/8.3/static/textsearch.html&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+Using this with sqlalchemy: &lt;a class="ext-link" href="http://lowmanio.co.uk/blog/entries/postgresql-full-text-search-and-sqlalchemy/"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://lowmanio.co.uk/blog/entries/postgresql-full-text-search-and-sqlalchemy/&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+Issues with fulltext search:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;tags not indexed, so would need to 'or' search of tags. This would cause problems with the order_by of the query, since the tags wouldn't have a ranking.
+&lt;/li&gt;&lt;li&gt;if tags are indexed then perhaps we don't want them converted into lexemes? Exact match could well be better.
+&lt;/li&gt;&lt;li&gt;can we split the name on dash or underscore before being indexed?
+&lt;/li&gt;&lt;li&gt;natural language search doesn't do partial words, so search for 'gov' doesn't bring up 'government'.
+&lt;/li&gt;&lt;li&gt;do we keep the existing search system usable with a config file switch for if we install on a db aside from postgres?
+&lt;/li&gt;&lt;li&gt;we want to weight name and title higher than other fields - achievable with custom trigger.
+&lt;/li&gt;&lt;/ul&gt;</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/187</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Wed, 18 Nov 2009 15:52:46 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/187#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/187#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/187?action=diff&amp;amp;version=1"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Mon, 23 Nov 2009 10:01:49 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/187#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/187#comment:2</guid>
+      <description>
+        &lt;p&gt;
+Done in cset:af3cbf266750 and e70af291455e.
+&lt;/p&gt;
+&lt;p&gt;
+Issues addressed:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;tags ARE indexed
+&lt;/li&gt;&lt;li&gt;if tags are converted into lexemes but we also search on exact match.
+&lt;/li&gt;&lt;li&gt;name is split on dash when indexed by postgres.
+&lt;/li&gt;&lt;li&gt;weight name and title higher than other fields.
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+Remaining issues:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;natural language search doesn't do partial words, so search for 'gov' doesn't bring up 'government'.
+&lt;/li&gt;&lt;li&gt;previous search system not yet usable with a config file switch (for if we install on a db aside from postgres)
+&lt;/li&gt;&lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Mon, 23 Nov 2009 10:01:57 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/187#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/187#comment:3</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Mon, 23 Nov 2009 10:06:06 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/187#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/187#comment:4</guid>
+      <description>
+        &lt;p&gt;
+Cost: 16h
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Thu, 11 Feb 2010 12:46:43 GMT</pubDate>
+      <title>milestone changed</title>
+      <link>http://localhost/ticket/187#comment:5</link>
+      <guid isPermaLink="false">http://localhost/ticket/187#comment:5</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;v1.0&lt;/em&gt; to &lt;em&gt;v0.11&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

@@ -1,0 +1,4 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2577	Dataproxy raises 500 when it can't get CSV	ross	ross	"When given a url parameter for a file it cannot fetch, the app raises a 500 instead of something useful.
+
+Better error reporting in the JSON would be useful"	enhancement	closed	awaiting triage	ckan-v1.9	ckan	fixed			ckan	none

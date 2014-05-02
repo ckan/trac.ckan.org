@@ -1,0 +1,63 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1208,Webstore: a datastore with web API,rgrp,rgrp," * SQLite based
+ * Use Cyclone for async http server on top with auth
+ * Designed to not be specific to CKAN or anything else
+
+Current code is here: https://github.com/okfn/webstore.
+
+== API Spec ==
+
+==== Read ====
+
+Two basic ways to query::
+
+{{{
+    GET: /{owner}/{db-name}/?sql=...
+    GET: /{owner}/{db-name}/?table=...&attr=value&attr=value&limit=...
+}}}
+
+Returns::
+
+{{{
+  {
+      u'keys': [u'id', u'name'],
+      u'data': [
+          [1, u'jones'],
+          [u'aaa', u'jones']
+          ]
+  }
+}}}
+
+==== Write ====
+
+POST to::
+
+    /{owner/{database}/{table}
+
+Payload is json data structured as follows::
+
+  {
+      unique_keys: [list of key attributes]
+      data: {dict of values}
+  }
+
+
+=== Authentication and Authorization ===
+
+Authentication: use basic auth header.
+
+
+Authorization:
+
+  * Default: all read, owner can write
+  * Restricted: owner can read and write, everyone can do nothing
+
+Possible future: config file can specify a python method (TODO: method
+signature)
+
+
+=== Integration with Other Systems ===
+
+TODO: Specify how to delegate authenatication to user database in some other system.
+
+",enhancement,closed,major,ckan-sprint-2011-10-28,ckan,fixed,,,ckan,none

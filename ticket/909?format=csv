@@ -1,0 +1,6 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+909,DCat importer for CKAN,pudo,,"Write an importer that supports most well known variants of DCat in importing the data as CKAN packages. In particular, the following sources should be supported: 
+
+ * CKANrdf generated exports
+ * opengov.se RDF (not really DCat) 
+ * Sunlight Nationdatacatalog as harvested by dcat-tools. ",enhancement,assigned,awaiting triage,ckan-backlog,lod2,,,,ckan,none

@@ -1,0 +1,15 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2878,Roles and Permissions for Organisations,ross,icmurray,"As part of merging Organisations into core, it is necessary that we clarify the capacity field with which the users/datasets are added as members to the group 'subclass'.
+
+Rather than the capacity being an opaque string that implies auth but doesn't clearly specify it, we will use role names where roles are defined in the database - with a clearly defined set of standard roles.  The Role table is expected to have simply a string name/representation and acts as a container for permissions.
+
+Each permission is a string of the form object.action (such as package.add, group.delete) of which several are expected to be associated with a role.  This means the permission table will contain a string and a reference to the role.
+
+This work will require UI changes to the screens allowing users to be added to a group/organisation so that the list of available roles is available to add those users.
+
+[ ] Model for Role and Permission
+[ ] Logic layer changes for managing roles/permissions etc.
+[ ] Determine default roles, perhaps just admin/editor/viewer
+[ ] Fix the auth layer to use the permissions/roles - may be better implemented as another ticket.
+
+",enhancement,new,awaiting triage,ckan 2.0,ckan,,,,ckan,none

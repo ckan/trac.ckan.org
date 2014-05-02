@@ -1,0 +1,2 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+715	The group list page shall show the group title *or* group name	johnbywater		Basically, groups without titles don't get a clickable link, because there is no text. Defaulting to the group name would solve this trouble.	bug	new	blocker		ckan					

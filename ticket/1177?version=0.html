@@ -1,0 +1,1249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      #1177 (routes.util.GenerationException)
+     – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="prev" href="1176.html" title="Ticket #1176" />
+        <link rel="last" href="3030.html" title="Ticket #3030" />
+        <link rel="help" href="../wiki/TracGuide.html" />
+        <link rel="alternate" href="1177%3Fversion=0&amp;format=csv" type="text/csv" class="csv" title="Comma-delimited Text" /><link rel="alternate" href="1177%3Fversion=0&amp;format=tab" type="text/tab-separated-values" class="tab" title="Tab-delimited Text" /><link rel="alternate" href="1177%3Fversion=0&amp;format=rss" type="application/rss+xml" class="rss" title="RSS Feed" />
+        <link rel="next" href="1178.html" title="Ticket #1178" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/ticket.css" type="text/css" />
+        <link rel="first" href="1.html" title="Ticket #1" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript">
+      var auto_preview_timeout=2.0;
+      var form_token="93d81ccf9a7bb1c456462f62";
+    </script>
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script><script type="text/javascript" src="../chrome/common/js/wikitoolbar.js"></script><script type="text/javascript" src="../chrome/common/js/resizer.js"></script><script type="text/javascript" src="../chrome/common/js/auto_preview.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("div.description").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $(".foldable").enableFolding(false, true);
+        var args = {realm: "ticket", id: 1177, escape_newlines: 0}
+        $("#comment").autoPreview("/wiki_render", args, function(textarea, text, rendered) {
+            $("#ticketchange div.comment").html(rendered);
+            if (rendered)
+              $("#ticketchange").show();
+            else if ($("#ticketchange ul.changes").length == 0)
+              $("#ticketchange").hide();
+        });
+        $("#trac-comment-editor textarea").autoPreview("/wiki_render", args,
+                                                       function(textarea, text, rendered) {
+          var comment = $("#trac-comment-editor").next("div.comment");
+          comment.html(rendered);
+          if (rendered)
+            comment.show();
+          else
+            comment.hide();
+        });
+        $("#modify").parent().toggleClass("collapsed");
+        $(".trac-topnav a").click(function() { $("#modify").parent().removeClass("collapsed"); });
+        /* only enable control elements for the currently selected action */
+        var actions = $("#action input[name='action']");
+        function updateActionFields() {
+          actions.each(function () {
+            $(this).siblings().find("*[id]").enable($(this).checked());
+            $(this).siblings().filter("*[id]").enable($(this).checked());
+          });
+        }
+        actions.click(updateActionFields);
+        updateActionFields();
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="../wiki/TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li class="active"><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="1176.html" title="Ticket #1176">Previous Ticket</a></span></li><li class="last"><span><a class="next" href="1178.html" title="Ticket #1178">Next Ticket</a> &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="ticket">
+      <h1 id="trac-ticket-title">
+          <a href="1177.html">Ticket #1177</a>
+          <span class="status">(new defect)</span>
+              — at <a href="1177%3Fversion=0.html#comment:description">Initial Version</a>
+      </h1>
+      <div id="ticket">
+  <div class="date">
+    <p>Opened <a class="timeline" href="../timeline%3Ffrom=2011-06-06T11:09:46Z&amp;precision=second.html" title="2011-06-06T11:09:46Z in Timeline">3 years</a> ago</p>
+    <p>Last modified <a class="timeline" href="../timeline%3Ffrom=2011-06-06T15:41:37Z&amp;precision=second.html" title="2011-06-06T15:41:37Z in Timeline">3 years</a> ago</p>
+  </div>
+  <h2 class="summary searchable">routes.util.GenerationException</h2>
+  <table class="properties">
+    <tr>
+      <th id="h_reporter">Reported by:</th>
+      <td headers="h_reporter" class="searchable">
+        <a href="../query%3Fstatus=!closed&amp;reporter=fccoelho.html">fccoelho</a>
+      </td>
+      <th id="h_owner">Owned by:</th>
+      <td headers="h_owner">
+      </td>
+    </tr>
+    <tr>
+        <th id="h_priority">
+          Priority:
+        </th>
+        <td headers="h_priority">
+              <a href="../query%3Fstatus=!closed&amp;priority=awaiting+triage.html">awaiting triage</a>
+        </td>
+        <th id="h_milestone">
+          Milestone:
+        </th>
+        <td headers="h_milestone">
+              <a class="missing milestone"></a>
+        </td>
+    </tr><tr>
+        <th id="h_component">
+          Component:
+        </th>
+        <td headers="h_component">
+              <a href="../query%3Fstatus=!closed&amp;component=ckan.html">ckan</a>
+        </td>
+        <th id="h_keywords">
+          Keywords:
+        </th>
+        <td headers="h_keywords" class="searchable">
+        </td>
+    </tr><tr>
+        <th id="h_cc">
+          Cc:
+        </th>
+        <td headers="h_cc" class="searchable">
+        </td>
+        <th id="h_repo">
+          Repository:
+        </th>
+        <td headers="h_repo">
+              <a href="../query%3Fstatus=!closed&amp;repo=ckan.html">ckan</a>
+        </td>
+    </tr><tr>
+        <th id="h_theme">
+          Theme:
+        </th>
+        <td headers="h_theme">
+              <a href="../query%3Fstatus=!closed&amp;theme=none.html">none</a>
+        </td>
+        <th>
+        </th>
+        <td>
+        </td>
+    </tr>
+  </table>
+  <div class="description">
+    <h3 id="comment:description">
+      Description
+    </h3>
+    <div class="searchable">
+      <blockquote>
+<p>
+Hello,
+</p>
+</blockquote>
+<p>
+I have done a recent update to mu ckan install, and I am now getting this error for all my packages:
+</p>
+<p>
+URL: <a class="ext-link" href="http://ckan.emap.fgv.br/package/dengue-net"><span class="icon">​</span>http://ckan.emap.fgv.br/package/dengue-net</a>
+Module weberror.errormiddleware:162 in <span class="underline">call</span>
+&lt;&lt;              <span class="underline">traceback_supplement</span> = Supplement, self, environ
+</p>
+<blockquote>
+<p>
+sr_checker = <a class="missing wiki">ResponseStartChecker?</a>(start_response)
+app_iter = self.application(environ, sr_checker)
+return self.make_catching_iter(app_iter, environ, sr_checker)
+</p>
+</blockquote>
+<blockquote>
+<p>
+except:
+</p>
+<blockquote class="citation">
+<blockquote class="citation">
+<blockquote>
+<p>
+app_iter = self.application(environ, sr_checker)
+</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>
+Module beaker.middleware:73 in <span class="underline">call</span>
+&lt;&lt;                                                     self.cache_manager)
+</p>
+<blockquote>
+<p>
+environ[self.environ_key] = self.cache_manager
+return self.app(environ, start_response)
+</p>
+<blockquote class="citation">
+<blockquote class="citation">
+<blockquote>
+<p>
+return self.app(environ, start_response)
+</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>
+Module beaker.middleware:152 in <span class="underline">call</span>
+&lt;&lt;                          headers.append(('Set-cookie', cookie))
+</p>
+<blockquote>
+<p>
+return start_response(status, headers, exc_info)
+</p>
+</blockquote>
+<blockquote>
+<p>
+return self.wrap_app(environ, session_start_response)
+</p>
+</blockquote>
+<p>
+          
+</p>
+<blockquote>
+<p>
+def _get_session(self):
+</p>
+<blockquote class="citation">
+<blockquote class="citation">
+<blockquote>
+<p>
+return self.wrap_app(environ, session_start_response)
+</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>
+Module routes.middleware:130 in <span class="underline">call</span>
+&lt;&lt;                  environ<a class="missing wiki">SCRIPT_NAME?</a> = environ<a class="missing wiki">SCRIPT_NAME?</a>[:-1]
+              
+</p>
+<blockquote>
+<p>
+response = self.app(environ, start_response)
+</p>
+</blockquote>
+<p>
+              
+</p>
+<blockquote>
+<p>
+# Wrapped in try as in rare cases the attribute will be gone already
+</p>
+<blockquote class="citation">
+<blockquote class="citation">
+<blockquote>
+<p>
+response = self.app(environ, start_response)
+</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>
+Module pylons.wsgiapp:125 in <span class="underline">call</span>
+&lt;&lt;         
+</p>
+<blockquote>
+<p>
+controller = self.resolve(environ, start_response)
+response = self.dispatch(controller, environ, start_response)
+</p>
+</blockquote>
+<p>
+              
+</p>
+<blockquote>
+<p>
+if 'paste.testing_variables' in environ and hasattr(response,
+</p>
+<blockquote class="citation">
+<blockquote class="citation">
+<blockquote>
+<p>
+response = self.dispatch(controller, environ, start_response)
+</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>
+Module pylons.wsgiapp:324 in dispatch
+&lt;&lt;          if log_debug:
+</p>
+<blockquote>
+<p>
+log.debug("Calling controller class with WSGI interface")
+</p>
+</blockquote>
+<blockquote>
+<p>
+return controller(environ, start_response)
+</p>
+</blockquote>
+<p>
+          
+</p>
+<blockquote>
+<p>
+def load_test_env(self, environ):
+</p>
+<blockquote class="citation">
+<blockquote class="citation">
+<blockquote>
+<p>
+return controller(environ, start_response)
+</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>
+Module ckan.lib.base:118 in <span class="underline">call</span>
+&lt;&lt;          # available in environ<a class="missing wiki">pylons.routes_dict?</a>   
+</p>
+<blockquote>
+<p>
+try:
+</p>
+<blockquote>
+<p>
+return WSGIController.<span class="underline">call</span>(self, environ, start_response)
+</p>
+</blockquote>
+<p>
+finally:
+</p>
+<blockquote>
+<p>
+model.Session.remove()
+</p>
+<blockquote class="citation">
+<blockquote class="citation">
+<blockquote>
+<p>
+return WSGIController.<span class="underline">call</span>(self, environ, start_response)
+</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>
+Module pylons.controllers.core:221 in <span class="underline">call</span>
+&lt;&lt;                  return response(environ, self.start_response)
+              
+</p>
+<blockquote>
+<p>
+response = self._dispatch_call()
+if not start_response_called:
+</p>
+<blockquote>
+<p>
+self.start_response = start_response
+</p>
+<blockquote class="citation">
+<blockquote class="citation">
+<blockquote>
+<p>
+response = self._dispatch_call()
+</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>
+Module pylons.controllers.core:172 in _dispatch_call
+&lt;&lt;              req.environ<a class="missing wiki">pylons.action_method?</a> = func
+                  
+</p>
+<blockquote>
+<p>
+response = self._inspect_call(func)
+</p>
+</blockquote>
+<blockquote>
+<p>
+else:
+</p>
+<blockquote>
+<p>
+if log_debug:
+</p>
+<blockquote class="citation">
+<blockquote class="citation">
+<blockquote>
+<p>
+response = self._inspect_call(func)
+</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>
+Module pylons.controllers.core:107 in _inspect_call
+&lt;&lt;                        func.<span class="underline">name</span>, args)
+</p>
+<blockquote>
+<p>
+try:
+</p>
+<blockquote>
+<p>
+result = self._perform_call(func, args)
+</p>
+</blockquote>
+<p>
+except HTTPException, httpe:
+</p>
+<blockquote>
+<p>
+if log_debug:
+</p>
+<blockquote class="citation">
+<blockquote class="citation">
+<blockquote>
+<p>
+result = self._perform_call(func, args)
+</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>
+Module pylons.controllers.core:60 in _perform_call
+&lt;&lt;          """Hide the traceback for everything above this method"""
+</p>
+<blockquote>
+<p>
+<span class="underline">traceback_hide</span> = 'before_and_this'
+return func(<strong>args)
+</strong></p>
+</blockquote>
+<p>
+          
+</p>
+<blockquote>
+<p>
+def _inspect_call(self, func):
+</p>
+<blockquote class="citation">
+<blockquote class="citation">
+<blockquote>
+<p>
+return func(<strong>args)
+</strong></p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>
+Module ?:2 in read
+Module ckan.lib.cache:167 in wrapper
+&lt;&lt;      log = <span class="underline">import</span>("logging").getLogger("proxy_cache")
+</p>
+<blockquote>
+<p>
+def wrapper(func, *args, <strong>kwargs):
+</strong></p>
+<blockquote>
+<p>
+result = func(*args, <strong>kwargs)
+</strong></p>
+</blockquote>
+</blockquote>
+<p>
+      
+</p>
+<blockquote>
+<blockquote>
+<p>
+pylons = get_pylons(args)
+</p>
+<blockquote class="citation">
+<blockquote class="citation">
+<blockquote>
+<p>
+result = func(*args, <strong>kwargs)
+</strong></p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>
+Module ckan.controllers.package:208 in read
+&lt;&lt;          #render the package
+</p>
+<blockquote>
+<p>
+<a class="missing wiki">PackageSaver?</a>().render_package(c.pkg)
+return render('package/read.html')
+</p>
+</blockquote>
+<p>
+      
+</p>
+<blockquote>
+<p>
+def comments(self, id):
+</p>
+<blockquote class="citation">
+<blockquote class="citation">
+<blockquote>
+<p>
+return render('package/read.html')
+</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>
+Module ckan.lib.base:74 in render
+&lt;&lt;     
+</p>
+<blockquote>
+<p>
+return cached_template(template_name, render_template, cache_key=cache_key,
+</p>
+<blockquote>
+<p>
+cache_type=cache_type, cache_expire=cache_expire)
+#, ns_options=('method'), method=method)
+</p>
+<blockquote class="citation">
+<blockquote class="citation">
+<blockquote>
+<p>
+cache_type=cache_type, cache_expire=cache_expire)
+</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>
+Module pylons.templating:249 in cached_template
+&lt;&lt;          return content
+</p>
+<blockquote>
+<p>
+else:
+</p>
+<blockquote>
+<p>
+return render_func()
+</p>
+<blockquote class="citation">
+<blockquote class="citation">
+<blockquote>
+<p>
+return render_func()
+</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>
+Module ckan.lib.base:63 in render_template
+&lt;&lt;              stream = item.filter(stream)
+              
+</p>
+<blockquote>
+<p>
+return literal(stream.render(method=method, encoding=None))
+</p>
+</blockquote>
+<p>
+          
+</p>
+<blockquote>
+<p>
+if 'Pragma' in response.headers:
+</p>
+<blockquote class="citation">
+<blockquote class="citation">
+<blockquote>
+<p>
+return literal(stream.render(method=method, encoding=None))
+</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>
+Module genshi.core:183 in render
+&lt;&lt;              method = self.serializer or 'xml'
+</p>
+<blockquote>
+<p>
+generator = self.serialize(method=method, <strong>kwargs)
+return encode(generator, method=method, encoding=encoding, out=out)
+</strong></p>
+</blockquote>
+<p>
+      
+</p>
+<blockquote>
+<p>
+def select(self, path, namespaces=None, variables=None):
+</p>
+<blockquote class="citation">
+<blockquote class="citation">
+<blockquote>
+<p>
+return encode(generator, method=method, encoding=encoding, out=out)
+</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>
+Module genshi.output:57 in encode
+&lt;&lt;          _encode = lambda string: string
+</p>
+<blockquote>
+<p>
+if out is None:
+</p>
+<blockquote>
+<p>
+return _encode(<em>.join(list(iterator)))
+</em></p>
+</blockquote>
+<p>
+for chunk in iterator:
+</p>
+<blockquote>
+<p>
+out.write(_encode(chunk))
+</p>
+<blockquote class="citation">
+<blockquote class="citation">
+<blockquote>
+<p>
+return _encode(<em>.join(list(iterator)))
+</em></p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>
+Module genshi.output:339 in <span class="underline">call</span>
+&lt;&lt;          for filter_ in self.filters:
+</p>
+<blockquote>
+<p>
+stream = filter_(stream)
+</p>
+</blockquote>
+<blockquote>
+<p>
+for kind, data, pos in stream:
+</p>
+<blockquote>
+<p>
+cached = cache_get((kind, data))
+if cached is not None:
+</p>
+<blockquote class="citation">
+<blockquote class="citation">
+<blockquote>
+<p>
+for kind, data, pos in stream:
+</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>
+Module genshi.output:670 in <span class="underline">call</span>
+&lt;&lt;          _gen_prefix = _gen_prefix().next
+      
+</p>
+<blockquote>
+<p>
+for kind, data, pos in stream:
+</p>
+<blockquote>
+<p>
+output = cache_get((kind, data))
+if output is not None:
+</p>
+<blockquote class="citation">
+<blockquote class="citation">
+<blockquote>
+<p>
+for kind, data, pos in stream:
+</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>
+Module genshi.output:771 in <span class="underline">call</span>
+&lt;&lt;          push_text = textbuf.append
+</p>
+<blockquote>
+<p>
+pop_text = textbuf.pop
+for kind, data, pos in chain(stream, [(None, None, None)]):
+</p>
+</blockquote>
+<p>
+      
+</p>
+<blockquote>
+<blockquote>
+<p>
+if kind is TEXT:
+</p>
+<blockquote class="citation">
+<blockquote class="citation">
+<blockquote>
+<p>
+for kind, data, pos in chain(stream, [(None, None, None)]):
+</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>
+Module genshi.output:586 in <span class="underline">call</span>
+&lt;&lt;      def <span class="underline">call</span>(self, stream):
+</p>
+<blockquote>
+<p>
+prev = (None, None, None)
+for ev in stream:
+</p>
+<blockquote>
+<p>
+if prev<a class="missing changeset" title="No default repository defined">[0]</a> is START:
+</p>
+<blockquote>
+<p>
+if ev<a class="missing changeset" title="No default repository defined">[0]</a> is END:
+</p>
+<blockquote class="citation">
+<blockquote class="citation">
+<blockquote>
+<p>
+for ev in stream:
+</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>
+Module genshi.core:288 in _ensure
+&lt;&lt;      # unchanged
+</p>
+<blockquote>
+<p>
+yield event
+for event in stream:
+</p>
+<blockquote>
+<p>
+yield event
+</p>
+<blockquote class="citation">
+<blockquote class="citation">
+<blockquote>
+<p>
+for event in stream:
+</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>
+Module genshi.template.base:618 in _include
+&lt;&lt;                      tmpl = self.loader.load(href, relative_to=event<a class="missing changeset" title="No default repository defined">[2]</a><a class="missing changeset" title="No default repository defined">[0]</a>,
+</p>
+<blockquote>
+<p>
+cls=cls or self.<span class="underline">class</span>)
+</p>
+</blockquote>
+<blockquote>
+<p>
+for event in tmpl.generate(ctxt, <strong>vars):
+</strong></p>
+<blockquote>
+<p>
+yield event
+</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>
+except <a class="missing wiki">TemplateNotFound?</a>:
+</p>
+<blockquote class="citation">
+<blockquote class="citation">
+<blockquote>
+<p>
+for event in tmpl.generate(ctxt, <strong>vars):
+</strong></p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>
+Module genshi.template.base:618 in _include
+&lt;&lt;                      tmpl = self.loader.load(href, relative_to=event<a class="missing changeset" title="No default repository defined">[2]</a><a class="missing changeset" title="No default repository defined">[0]</a>,
+</p>
+<blockquote>
+<p>
+cls=cls or self.<span class="underline">class</span>)
+</p>
+</blockquote>
+<blockquote>
+<p>
+for event in tmpl.generate(ctxt, <strong>vars):
+</strong></p>
+<blockquote>
+<p>
+yield event
+</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>
+except <a class="missing wiki">TemplateNotFound?</a>:
+</p>
+<blockquote class="citation">
+<blockquote class="citation">
+<blockquote>
+<p>
+for event in tmpl.generate(ctxt, <strong>vars):
+</strong></p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>
+Module genshi.template.base:618 in _include
+&lt;&lt;                      tmpl = self.loader.load(href, relative_to=event<a class="missing changeset" title="No default repository defined">[2]</a><a class="missing changeset" title="No default repository defined">[0]</a>,
+</p>
+<blockquote>
+<p>
+cls=cls or self.<span class="underline">class</span>)
+</p>
+</blockquote>
+<blockquote>
+<p>
+for event in tmpl.generate(ctxt, <strong>vars):
+</strong></p>
+<blockquote>
+<p>
+yield event
+</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>
+except <a class="missing wiki">TemplateNotFound?</a>:
+</p>
+<blockquote class="citation">
+<blockquote class="citation">
+<blockquote>
+<p>
+for event in tmpl.generate(ctxt, <strong>vars):
+</strong></p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>
+Module genshi.template.base:605 in _include
+&lt;&lt;          from genshi.template.loader import <a class="missing wiki">TemplateNotFound?</a>
+      
+</p>
+<blockquote>
+<p>
+for event in stream:
+</p>
+<blockquote>
+<p>
+if event<a class="missing changeset" title="No default repository defined">[0]</a> is INCLUDE:
+</p>
+<blockquote>
+<p>
+href, cls, fallback = event<a class="missing changeset" title="No default repository defined">[1]</a>
+</p>
+<blockquote class="citation">
+<blockquote class="citation">
+<blockquote>
+<p>
+for event in stream:
+</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>
+Module genshi.template.markup:378 in _match
+&lt;&lt;                      for event in self._match(self._flatten(template, ctxt,
+</p>
+<blockquote>
+<p>
+<strong>vars),
+</strong></p>
+</blockquote>
+<blockquote>
+<p>
+ctxt, start=idx + 1, <strong>vars):
+</strong></p>
+</blockquote>
+<blockquote>
+<p>
+yield event
+</p>
+<blockquote class="citation">
+<blockquote class="citation">
+<blockquote>
+<p>
+ctxt, start=idx + 1, <strong>vars):
+</strong></p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>
+Module genshi.template.markup:327 in _match
+&lt;&lt;                      break
+      
+</p>
+<blockquote>
+<p>
+for event in stream:
+</p>
+</blockquote>
+<p>
+      
+</p>
+<blockquote>
+<blockquote>
+<p>
+# We (currently) only care about start and end events for matching
+</p>
+<blockquote class="citation">
+<blockquote class="citation">
+<blockquote>
+<p>
+for event in stream:
+</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>
+Module genshi.template.base:565 in _flatten
+&lt;&lt;                  elif kind is EXPR:
+</p>
+<blockquote>
+<p>
+result = _eval_expr(data, ctxt, vars)
+if result is not None:
+</p>
+<blockquote>
+<p>
+# First check for a string, otherwise the iterable test
+</p>
+<blockquote class="citation">
+<blockquote class="citation">
+<blockquote>
+<p>
+result = _eval_expr(data, ctxt, vars)
+</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>
+Module genshi.template.base:277 in _eval_expr
+&lt;&lt;      if vars:
+</p>
+<blockquote>
+<p>
+ctxt.push(vars)
+</p>
+</blockquote>
+<blockquote>
+<p>
+retval = expr.evaluate(ctxt)
+if vars:
+</p>
+<blockquote>
+<p>
+ctxt.pop()
+</p>
+<blockquote class="citation">
+<blockquote class="citation">
+<blockquote>
+<p>
+retval = expr.evaluate(ctxt)
+</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>
+Module genshi.template.eval:178 in evaluate
+&lt;&lt;          <span class="underline">traceback_hide</span> = 'before_and_this'
+</p>
+<blockquote>
+<p>
+_globals = self._globals(data)
+return eval(self.code, _globals, {'<span class="underline">data</span>': data})
+</p>
+<blockquote class="citation">
+<blockquote class="citation">
+<blockquote>
+<p>
+return eval(self.code, _globals, {'<span class="underline">data</span>': data})
+</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>
+Module ?:16 in &lt;Expression u"h.subnav_link(c, h.icon('comments') + _('Comments &amp; Questions'), controller='package', action='comments', id=c.pkg.name)"&gt;
+&lt;&lt;        &lt;/li&gt;
+</p>
+<blockquote>
+<p>
+&lt;li py:if=&#34;g.has_commenting"&gt;
+</p>
+<blockquote>
+<p>
+${h.subnav_link(c, h.icon('comments') + _('Comments &amp;amp; Questions'), controller='package', action='comments', id=c.pkg.name)}
+</p>
+</blockquote>
+<p>
+&lt;/li&gt;
+&lt;li&gt;${h.subnav_link(c, h.icon('page_white_stack') + _('History'), controller='package', action='history', id=c.pkg.name)}&lt;/li&gt;
+</p>
+<blockquote class="citation">
+<blockquote class="citation">
+<blockquote>
+<p>
+${h.subnav_link(c, h.icon('comments') + _('Comments &amp;amp; Questions'), controller='package', action='comments', id=c.pkg.name)}
+</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>
+Module ckan.lib.helpers:126 in subnav_link
+&lt;&lt;      return link_to(
+</p>
+<blockquote>
+<p>
+text,
+url_for(action=action, <strong>kwargs),
+class_=('active' if c.action == action else <em>)
+</em></strong></p>
+</blockquote>
+<blockquote>
+<p>
+)
+</p>
+<blockquote class="citation">
+<blockquote class="citation">
+<blockquote>
+<p>
+url_for(action=action, <strong>kwargs),
+</strong></p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>
+Module routes.util:280 in url_for
+&lt;&lt;          raise <a class="missing wiki">GenerationException?</a>(
+</p>
+<blockquote>
+<p>
+"url_for could not generate URL. Called with args: %s %s" % \
+(args, kargs))
+</p>
+</blockquote>
+<blockquote>
+<p>
+return url
+</p>
+<blockquote class="citation">
+<blockquote class="citation">
+<blockquote>
+<p>
+(args, kargs))
+</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>
+<a class="missing wiki">GenerationException?</a>: url_for could not generate URL. Called with args: () {'action': 'comments', 'controller': 'package', 'id': 'dengue-net'}
+CGI Variables
+AUTH_TYPE         'cookie'
+DOCUMENT_ROOT         '/etc/apache2/htdocs'
+GATEWAY_INTERFACE         'CGI/1.1'
+HTTP_ACCEPT         'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+HTTP_ACCEPT_CHARSET         'ISO-8859-1,utf-8;q=0.7,*;q=0.7'
+HTTP_ACCEPT_ENCODING         'gzip, deflate'
+HTTP_ACCEPT_LANGUAGE         'pt-br,pt;q=0.8,en-us;q=0.5,en;q=0.3'
+HTTP_CONNECTION         'keep-alive'
+HTTP_COOKIE         '<span class="underline">utma=4669863.1260802706.1295364409.1306935693.1306960483.86; </span>utmz=4669863.1295364409.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); SESS61faf7f7d2406929b2f9eb4cbfff17d2=a3306f5d1194cf0d8a51dbf7b42c1259; ckan=d4951177ef995d92f0f987d481bd9180aa0f89e4518921db9cd9b6ac75fdd3fab4a25d06; auth_tkt="c6c3c3e0b3fe7bb765356659992760b24da43221flaviouserid_type:unicode"; auth_tkt="c6c3c3e0b3fe7bb765356659992760b24da43221flaviouserid_type:unicode"; ckan_user="flavio"; ckan_display_name="Fl\xc3\xa1vio Code\xc3\xa7o Coelho"; ckan_apikey="c139718d-918f-4a2b-b219-e33cb05cbe23"; <span class="underline">utmc=4669863'
+HTTP_HOST         'ckan.emap.fgv.br'
+HTTP_KEEP_ALIVE         '115'
+HTTP_REFERER         '<a class="ext-link" href="http://ckan.emap.fgv.br/"><span class="icon">​</span>http://ckan.emap.fgv.br/</a>'
+HTTP_USER_AGENT         'Mozilla/5.0 (X11; Linux x86_64; rv:2.0.1) Gecko/20100101 Firefox/4.0.1'
+PATH_INFO         '/package/dengue-net'
+PATH_TRANSLATED         '/home/flavio/var/srvc/ckan.emap.fgv.br/pyenv/bin/ckan.emap.fgv.br.py/package/dengue-net'
+REMOTE_ADDR         '10.250.48.110'
+REMOTE_PORT         '47624'
+REMOTE_USER         u'flavio'
+REMOTE_USER_DATA         'userid_type:unicode'
+REMOTE_USER_TOKENS         [<em>]
+REQUEST_METHOD         'GET'
+REQUEST_URI         '/package/dengue-net'
+SCRIPT_FILENAME         '/home/flavio/var/srvc/ckan.emap.fgv.br/pyenv/bin/ckan.emap.fgv.br.py'
+SERVER_ADDR         '10.252.2.60'
+SERVER_ADMIN         '[no address given]'
+SERVER_NAME         'ckan.emap.fgv.br'
+SERVER_PORT         '80'
+SERVER_PROTOCOL         'HTTP/1.1'
+SERVER_SIGNATURE         '&lt;address&gt;Apache/2.2.16 (Debian) Server at ckan.emap.fgv.br Port 80&lt;/address&gt;\n'
+SERVER_SOFTWARE         'Apache/2.2.16 (Debian)'
+WSGI Variables
+application         &lt;beaker.middleware.<a class="missing wiki">CacheMiddleware?</a> object at 0x7f051c802690&gt;
+beaker.cache         &lt;beaker.cache.<a class="missing wiki">CacheManager?</a> object at 0x7f051c802750&gt;
+beaker.get_session         &lt;bound method <a class="missing wiki">SessionMiddleware?</a>._get_session of &lt;beaker.middleware.<a class="missing wiki">SessionMiddleware?</a> object at 0x7f051c8026d0&gt;&gt;
+beaker.session         {'locale': u'pt_BR', '_accessed_time': 1307358102.6266389, '_creation_time': 1302605470.0245121}
+mod_wsgi.application_group         'dck093|'
+mod_wsgi.callable_object         'application'
+mod_wsgi.handler_script         </em>
+mod_wsgi.input_chunked         '0'
+mod_wsgi.listener_host         <em>
+mod_wsgi.listener_port         '80'
+mod_wsgi.process_group         'ckan'
+mod_wsgi.request_handler         'wsgi-script'
+mod_wsgi.script_reloading         '1'
+mod_wsgi.version         (3, 3)
+paste.cookies         (&lt;SimpleCookie: SESS61faf7f7d2406929b2f9eb4cbfff17d2='a3306f5d1194cf0d8a51dbf7b42c1259' __utma='4669863.1260802706.1295364409.1306935693.1306960483.86' __utmc='4669863' __utmz='4669863.1295364409.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)' auth_tkt='c6c3c3e0b3fe7bb765356659992760b24da43221flavio!userid_type:unicode' ckan='d4951177ef995d92f0f987d481bd9180aa0f89e4518921db9cd9b6ac75fdd3fab4a25d06' ckan_apikey='c139718d-918f-4a2b-b219-e33cb05cbe23' ckan_display_name='Fl\xc3\xa1vio Code\xc3\xa7o Coelho' ckan_user='flavio'&gt;, '</em></span><em>utma=4669863.1260802706.1295364409.1306935693.1306960483.86; <span class="underline">utmz=4669863.1295364409.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); SESS61faf7f7d2406929b2f9eb4cbfff17d2=a3306f5d1194cf0d8a51dbf7b42c1259; ckan=d4951177ef995d92f0f987d481bd9180aa0f89e4518921db9cd9b6ac75fdd3fab4a25d06; auth_tkt="c6c3c3e0b3fe7bb765356659992760b24da43221flaviouserid_type:unicode"; auth_tkt="c6c3c3e0b3fe7bb765356659992760b24da43221flaviouserid_type:unicode";... </span>utmc=4669863')
+paste.registry         &lt;paste.registry.Registry object at 0x7f051d7e5710&gt;
+paste.throw_errors         True
+pylons.action_method         &lt;bound method <a class="missing wiki">PackageController?</a>.read of &lt;ckan.controllers.package.<a class="missing wiki">PackageController?</a> object at 0x7f051d7e5b10&gt;&gt;
+pylons.controller         &lt;ckan.controllers.package.<a class="missing wiki">PackageController?</a> object at 0x7f051d7e5b10&gt;
+pylons.environ_config         {'session': 'beaker.session', 'cache': 'beaker.cache'}
+pylons.pylons         &lt;pylons.util.<a class="missing wiki">PylonsContext?</a> object at 0x7f051d7e5a50&gt;
+pylons.routes_dict         {'action': u'read', 'controller': u'package', 'id': u'dengue-net'}
+repoze.who.identity         &lt;repoze.who identity (hidden, dict-like) at 139659946193344&gt;
+repoze.who.logger         &lt;logging.Logger instance at 0x7f051c801128&gt;
+repoze.who.plugins         {'openid': &lt;<a class="missing wiki">OpenIdIdentificationPlugin?</a> 139659931643152&gt;, 'friendlyform': &lt;<a class="missing wiki">FriendlyFormPlugin?</a> 139659929725584&gt;, 'ckan.lib.authenticator:UsernamePasswordAuthenticator': &lt;ckan.lib.authenticator.<a class="missing wiki">UsernamePasswordAuthenticator?</a> object at 0x7f051c9e7610&gt;, 'auth_tkt': &lt;<a class="missing wiki">AuthTktCookiePlugin?</a> 139659931643280&gt;, 'ckan.lib.authenticator:OpenIDAuthenticator': &lt;ckan.lib.authenticator.OpenIDAuthenticator object at 0x7f051c9dcfd0&gt;}
+routes.route         &lt;routes.route.Route object at 0x7f051c69fd50&gt;
+routes.url         &lt;routes.util.URLGenerator object at 0x7f051d7e57d0&gt;
+webob._parsed_cookies         ({'ckan': 'd4951177ef995d92f0f987d481bd9180aa0f89e4518921db9cd9b6ac75fdd3fab4a25d06', '<span class="underline">utmz': '4669863.1295364409.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)', 'auth_tkt': 'c6c3c3e0b3fe7bb765356659992760b24da43221flaviouserid_type:unicode', 'ckan_display_name': 'Fl\xc3\xa1vio Code\xc3\xa7o Coelho', 'ckan_apikey': 'c139718d-918f-4a2b-b219-e33cb05cbe23', 'ckan_user': 'flavio', '</span>utma': '4669863.1260802706.1295364409.1306935693.1306960483.86', '<span class="underline">utmc': '4669863', 'SESS61faf7f7d2406929b2f9eb4cbfff17d2': 'a3306f5d1194cf0d8a51dbf7b42c1259'}, '</span>utma=4669863.1260802706.1295364409.1306935693.1306960483.86; <span class="underline">utmz=4669863.1295364409.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); SESS61faf7f7d2406929b2f9eb4cbfff17d2=a3306f5d1194cf0d8a51dbf7b42c1259; ckan=d4951177ef995d92f0f987d481bd9180aa0f89e4518921db9cd9b6ac75fdd3fab4a25d06; auth_tkt="c6c3c3e0b3fe7bb765356659992760b24da43221flaviouserid_type:unicode"&lt; wbr&gt;; auth_tkt="c6c3c3e0b3fe7bb765356659992760b24da43221flavio!... </span>utmc=4669863')
+webob._parsed_query_vars         (GET([]), </em>)
+webob.adhoc_attrs         {'language': 'en-us'}
+wsgi process         'Multi process AND threads (?)'
+wsgi.file_wrapper         &lt;built-in method file_wrapper of mod_wsgi.Adapter object at 0x7f051cc1ad50&gt;
+wsgi.version         (1, 1)
+wsgiorg.routing_args         (&lt;routes.util.URLGenerator object at 0x7f051d7e57d0&gt;, {'action': u'read', 'controller': u'package', 'id': u'dengue-net'})
+</p>
+
+    </div>
+  </div>
+</div>
+      <div id="help"><strong>Note:</strong> See
+        <a href="../wiki/TracTickets.html">TracTickets</a> for help on using
+        tickets.</div>
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="first">
+          <a rel="nofollow" href="1177%3Fversion=0&amp;format=csv" class="csv">Comma-delimited Text</a>
+        </li><li>
+          <a rel="nofollow" href="1177%3Fversion=0&amp;format=tab" class="tab">Tab-delimited Text</a>
+        </li><li class="last">
+          <a rel="nofollow" href="1177%3Fversion=0&amp;format=rss" class="rss">RSS Feed</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

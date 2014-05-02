@@ -1,0 +1,30 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2546	ODS Managing homepage content	ross		"
+== Requirements ==
+
+Require the ability for users to control some level of content that is visible on the home page of their ODS installation.  This may be through RSS/Atom feeds (see #2234) or another mechanism but should result in admins being able to change blocks of text on their homepage.
+
+This should not be configuration, but accessible through WUI.
+
+
+== Interface ==
+
+None
+
+== User Stories ==
+
+ * As a system administrator I want to have control over content displayed on the front page beyond featured/popular items.  
+ 
+ * As a system administrator I don't want to manage content through having to write an extension.
+
+ 
+== Tasks ==
+
+[ ] Analysis
+
+
+
+== Estimates ==
+
+
+"	requirement	assigned	awaiting triage	ckan-backlog	ckan		ods requirement		ckan	none

@@ -1,0 +1,5 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2420,@depreciated decorator,toby,toby,"create a depreciated decorator to wrap functions we intend to remove
+
+logs a warning
+maybe check that 'depreciated' is included in the docstring too",enhancement,closed,awaiting triage,,ckan,fixed,,,ckan,none

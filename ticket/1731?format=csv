@@ -1,0 +1,14 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1731,Publisher support for harvesting,amercader,amercader,"Estimate: 4-5d
+
+Only sysadmins can manage harvest sources right now, we need to allow publishers to handle their own sources.
+
+We need to decide if there will be two different profiles on ckanext-harvest, the current one with only sysadmins allowed to manage the harvesting and a new one supporting publishers (ckan core can be configured to not use the publisher model)
+
+Tasks include:
+
+ * Auth checks on the different controller actions (and the command line interface?)
+ * Modify the index page to just show sources the logged user has permissions on.
+(Talk with Ross about the specific functions to use)
+ * Create/edit form to show a dropdown with the user available publishers.
+",enhancement,closed,critical,ckan-sprint-2012-03-19,ckan,fixed,"harvesting, uklp, [4-5d] [a:8d]",,ckanext-harvest,none

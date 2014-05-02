@@ -1,0 +1,12 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2838,Context variables accepted by action functions need to be documented,seanh,,"I was doing this:
+
+{{{
+context = {'model': base.model, 'session': base.model.Session,
+                    'user': toolkit.c.user or toolkit.c.author,
+                    'extras_as_string': True}
+group_dict = logic.get_action('group_show')(context,
+                    {'id': group_id})
+}}}
+
+in an extension and one of the group_dicts fields, one that uses convert_to/from_extras, was coming out with the wrong value. It took me ages to realise that I had to pass {{{'extras_as_string': True}}} in the context. I don't think this or other context variables are documented anywhere.",enhancement,new,awaiting triage,ckan-v1.9,ckan,,,kindly toby,ckan,none

@@ -1,0 +1,12 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1602,[super] Data Previewer / Viewer v2,rgrp,rgrp,"We already have first pass of Data Preview that was done as part of #1357. This is about v2 of this. Two main components:
+
+ * A new version of the separate Data Explorer library (now called Recline Data Explorer) - #1446 '''Est: 10-15d'''
+  * Why:
+   * Cleaner, backbone based solution.
+   * Provides editing support if wanted.
+   * Collaboration with Max Ogden
+  * Integrate this into CKAN (into resource view page) - see #1032
+ * Improvements to Data Viewer / Previewer system in CKAN itself - Est: 2-3d
+  * Update Data Preview-er (View-er) to support images ...
+",enhancement,new,major,ckan-v1.6,ckan,,,,ckan,none

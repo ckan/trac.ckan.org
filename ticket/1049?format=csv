@@ -1,0 +1,8 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1049,Fix database errors on offener.datenkatalog.at etc.,dread,,"We're getting these sorts of exceptions from  http://offener.datenkatalog.at/ like we had from ckan.net, which was due to small errors in migration scripts. Is it worth fixing this database, and in fact all the ckans on eu3 at once?
+
+{{{
+WebApp Error: <class 'sqlalchemy.exceptions.IntegrityError'>: (IntegrityError) duplicate key value violates unique constraint ""group_revision_pkey"" 'INSERT INTO group_revision (id, name, title, description, created, state, revision_id, continuity_id) VALUES (%(id)s, %(name)s, %(title)s, %(description)s, %(created)s, %(state)s, %(revision_id)s, ...
+}}}
+
+Thoughts James and Rufus?",defect,closed,awaiting triage,,ckan,invalid,,rgrp thejimmyg,ckan,migrations

@@ -1,0 +1,21 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1345,Investigate possible memory leak,nils.toedtmann,kindly,"There is some evidence pointing to CKAN handling memory inefficiently or even leaking under certain conditions:
+
+When we migrated ckan.net/thedatahub.org from eu7.okfn.org (32bit) to s053.okserver.org (64bit) ([http://trac.okfn.org/ticket/882 ticket]) we experienced extraordinary memory usage peaks ([http://trac.okfn.org/ticket/904 ticket]). Here are the observed value with Apache default settings:
+ * eu7, mpm-prefork: base level ~0.6GB, peaks up to 2GB
+ * s055, mpm-prefork: base level ~1GB, peaks up to 4GB
+ * s055, mpm-worker: base level ~1.5GB, peaks up to 6GB
+
+William reduced the life-time of a WSGI CKAN process from 500 requests down to 25 requests ([https://bitbucket.org/okfn/sysadmin/changeset/126290aead28 changeset]). This (together with two other tweaks) changed the situation drastically:
+
+ * s055, mpm-event: base level ~1.4GB, no peaks
+
+This suggests that the more requests a CKAN processes serves over time, the more memory it consumes, aka bad memory management or a leak.
+
+To prove this theory, one could reduce the total number of WSGI CKAN processes as much as possible without killing the performance (e.g. down to ''processes=3''), and then observing the relation between ''maximum-requests=25...500'' and memory consumption.
+
+
+On 14/09/11 17:49, David Read wrote:
+> Someone to do a bit of top-down memory-use profiling would be very useful. Also useful would be something in the tests that reported what test cases use lots of memory - this could be in the nose plugin.
+
++1",enhancement,closed,awaiting triage,,ckan,fixed,,rgrp pudo,ckan,none

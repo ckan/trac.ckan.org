@@ -1,0 +1,33 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+325,Event push notification,dread,dread,"=== As a === 
+
+CKAN client program
+
+=== I want to ===
+
+be notified when changes to the CKAN metadata occur.
+
+=== Examples of use ===
+
+ 1. An external search engine needing to (re)index a package. (interest: Package)
+ 2. A front-end system that caches package info and wants to know when it changes, to keep in step. (interest: Package)
+ 3. A system for automatically checking package URLs and resource URLs as they are put on the system. This could alert to bad URLs and automatically email feedback to (meta)data owners. (interest: PackageResource)
+ 4. Do some processing on resource (e.g. extract sample data for display) (interest: PackageResource)
+
+=== Context ===
+
+The current state of CKAN can be queried through the REST API, you can keep track of changes by reviewing the feeds, but there is no way to find out the instant something is changed, without costly polling.
+
+=== Design ===
+Split-off into two tickets:
+ * Notification message - ticket:323
+   * Which events to notify on
+   * Message format
+ * Interface for Notifier Service - ticket:322
+
+=== Testing ===
+To test notifications, Carrot / AMQP will be configured to use a native-Python Queue, instead of requiring RabbitMQ to be running on the machine.
+
+=== Related ===
+ * Run CKAN search indexing using this system - ticket:324
+ * Web hooks for notifications - ticket:327 ",enhancement,new,critical,v1.1,ckan,,,,,

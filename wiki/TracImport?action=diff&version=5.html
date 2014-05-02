@@ -1,0 +1,458 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+    <html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      TracImport (diff) – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="help" href="TracGuide.html" />
+        <link rel="up" href="TracImport%3Faction=history.html" title="Page history" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/wiki.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/diff.css" type="text/css" />
+        <link rel="prev" href="TracImport%3Faction=diff&amp;version=4.html" title="Version 4" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/diff.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="../chrome/common/css/diff.css" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last active"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="TracImport%3Faction=diff&amp;version=4.html" title="Version 4">Previous Change</a></span></li><li><a href="TracImport%3Faction=history.html" title="Page history">Wiki History</a></li><li class="last"><span class="missing">Next Change &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="wiki">
+      <h1>
+        Changes between
+          <a href="TracImport%3Fversion=4.html">Version 4</a> and
+          <a href="TracImport%3Fversion=5.html">Version 5</a> of
+          <a href="TracImport%3Fversion=5.html">TracImport</a>
+      </h1>
+      <form method="post" id="prefs" action="TracImport%3Fversion=5.html"><div><input type="hidden" name="__FORM_TOKEN" value="93d81ccf9a7bb1c456462f62" /></div>
+        <div>
+          <input type="hidden" name="action" value="diff" />
+          <input type="hidden" name="version" value="5" />
+          <input type="hidden" name="old_version" value="4" />
+          
+  <label for="style">View differences</label>
+  <select id="style" name="style">
+    <option selected="selected" value="inline">inline</option>
+    <option value="sidebyside">side by side</option>
+  </select>
+  <div class="field">
+    <label><input type="radio" name="contextall" value="0" checked="checked" />
+             Show</label>
+      <label><input type="text" name="contextlines" id="contextlines" size="2" maxlength="3" value="2" />
+             lines around each change</label><br />
+    <label><input type="radio" name="contextall" value="1" />
+           Show the changes in full context</label>
+  </div>
+  <fieldset id="ignore">
+    <legend>Ignore:</legend>
+    <div class="field">
+      <input type="checkbox" id="ignoreblanklines" name="ignoreblanklines" />
+      <label for="ignoreblanklines">Blank lines</label>
+    </div>
+    <div class="field">
+      <input type="checkbox" id="ignorecase" name="ignorecase" />
+      <label for="ignorecase">Case changes</label>
+    </div>
+    <div class="field">
+      <input type="checkbox" id="ignorewhitespace" name="ignorewhitespace" />
+      <label for="ignorewhitespace">White space changes</label>
+    </div>
+  </fieldset>
+  <div class="buttons">
+    <input type="submit" name="update" value="Update" />
+  </div>
+
+        </div>
+      </form>
+      <dl id="overview">
+        <dt class="property time">Timestamp:</dt>
+        <dd class="time">
+            05/02/14 01:33:04 (<a class="timeline" href="../timeline%3Ffrom=2014-05-02T01:33:04Z&amp;precision=second.html" title="2014-05-02T01:33:04Z in Timeline">7 minutes</a> ago)
+        </dd>
+        <dt class="property author">Author:</dt>
+        <dd class="author">
+          trac
+        </dd>
+        <dt class="property message">Comment:</dt>
+        <dd class="message">
+          
+          <p>
+--
+</p>
+
+        </dd>
+      </dl>
+      <div class="diff">
+        <div class="legend" id="diff-legend">
+          <h3>Legend:</h3>
+          <dl>
+            <dt class="unmod"></dt><dd>Unmodified</dd>
+            <dt class="add"></dt><dd>Added</dd>
+            <dt class="rem"></dt><dd>Removed</dd>
+            <dt class="mod"></dt><dd>Modified</dd>
+          </dl>
+        </div>
+        <div class="diff">
+  <ul class="entries">
+      <li class="entry">
+        <h2 id="file0">
+          <a href="TracImport%3Fversion=5.html">TracImport</a>
+        </h2>
+        <table class="trac-diff inline" summary="Differences" cellspacing="0">
+              <colgroup><col class="lineno" /><col class="lineno" /><col class="content" /></colgroup>
+              <thead>
+                <tr>
+                  <th title="Version 4">
+                    <a href="TracImport%3Fversion=4.html#L1">
+                      v4</a>
+                  </th>
+                  <th title="Version 5">
+                    <a href="TracImport%3Fversion=5.html#L1">
+                      v5</a>
+                  </th>
+                  <td> </td>
+                </tr>
+              </thead>
+            <tbody class="unmod">
+                  <tr>
+                          <th>1</th><th>1</th><td class="l"><span>= Importing ticket data =</span> </td>
+                  </tr>
+            </tbody><tbody class="add">
+                  <tr class="first">
+                          <th> </th><th>2</th><td class="r"><ins>[[PageOutline]]</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>3</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>4</th><td class="r"><ins>By means of migrating from other issue-tracking systems, perform some external actions over tickets or simply synchronize different data bases, there are some available tools, plug-ins or scripts which lets you import or up-date tickets into Trac.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>5</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>6</th><td class="r"><ins>Below, follows a collection of some of those.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>7</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>8</th><td class="r"><ins>== !TicketImportPlugin ==</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>9</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>10</th><td class="r"><ins>&nbsp;th:TicketImportPlugin:: mainly, but not only, this plug-in lets you import or up-date into Trac a series of tickets from a '''CSV file''' or (if the [http://pypi.python.org/pypi/xlrd xlrd library] is installed) from an '''Excel file'''. </ins> </td>
+                  </tr><tr>
+                          <th> </th><th>11</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>12</th><td class="r"><ins>== !ExportImportXlsPlugin ==</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>13</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>14</th><td class="r"><ins>&nbsp;th:ExportImportXlsPlugin:: this plug-in add an admin panel for export and import tickets via '''XLS file'''.</ins> </td>
+                  </tr><tr class="last">
+                          <th> </th><th>15</th><td class="r"><ins>&nbsp; * It depends on the python packages xlwt/rxld.</ins> </td>
+                  </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>2</th><th>16</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>3</th><th>17</th><td class="l"><span>== Bugzilla ==</span> </td>
+                  </tr>
+            </tbody><tbody class="add">
+                  <tr class="first">
+                          <th> </th><th>18</th><td class="r"><ins></ins> </td>
+                  </tr><tr class="last">
+                          <th> </th><th>19</th><td class="r"><ins>&nbsp;th:BugzillaIssueTrackingPlugin:: integrates Bugzilla into Trac keeping TracLinks</ins> </td>
+                  </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>4</th><th>20</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>5</th><th>21</th><td class="l"><span>Ticket data can be imported from Bugzilla using the [http://trac.edgewall.org/browser/trunk/contrib/bugzilla2trac.py bugzilla2trac.py] script, available in the contrib/ directory of the Trac distribution.</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracImport%3Fversion=4.html#L28">…</a></th>
+                  <th><a href="TracImport%3Fversion=5.html#L44">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>28</th><th>44</th><td class="l"><span>&nbsp; * bug activity (field changes)</span> </td>
+                  </tr><tr>
+                          <th>29</th><th>45</th><td class="l"><span>&nbsp; * bug attachments</span> </td>
+                  </tr>
+            </tbody><tbody class="rem">
+                  <tr class="last first">
+                          <th>30</th><th> </th><td class="l"><del>&nbsp; * [http://www.nicetick.com ckan air jordan]</del> </td>
+                  </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>31</th><th>46</th><td class="l"><span>&nbsp; * user names and passwords (put into a htpasswd file)</span> </td>
+                  </tr><tr>
+                          <th>32</th><th>47</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracImport%3Fversion=4.html#L41">…</a></th>
+                  <th><a href="TracImport%3Fversion=5.html#L56">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>41</th><th>56</th><td class="l"><span>For more details on the available options, see the configuration section at the top of the script.</span> </td>
+                  </tr><tr>
+                          <th>42</th><th>57</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>43</th><th> </th><td class="l"><span>== <del>Sourceforge</del> ==</span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>58</th><td class="r"><span>== <ins>Jira</ins> ==</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>44</th><th>59</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>45</th><th> </th><td class="l"><span>Ticket data can be imported from Sourceforge using the [http://trac.edgewall.org/browser/trunk/contrib/sourceforge2trac.py sourceforge2trac.py] script, available in the contrib/ directory of the Trac distribution.</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>60</th><td class="r"><span>&nbsp;th:JiraToTracIntegration:: provides tools to import Atlassian Jira backup files into Trac. The plug-in consists of a Python 3.1 commandline tool that:</span> </td>
+                      </tr><tr>
+                        <th> </th><th>61</th><td class="r"><span>&nbsp; &nbsp;- Parses the Jira backup XML file</span> </td>
+                      </tr><tr>
+                        <th> </th><th>62</th><td class="r"><span>&nbsp; &nbsp;- Sends the imported Jira data and attachments to Trac using the [http://trac-hacks.org/wiki/XmlRpcPlugin XmlRpcPlugin]</span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>63</th><td class="r"><span>&nbsp; &nbsp;- Generates a htpasswd file containing the imported Jira users and their SHA-512 base64 encoded passwords</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>46</th><th>64</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>47</th><th>65</th><td class="l"><span>== Mantis ==</span> </td>
+                  </tr><tr>
+                          <th>48</th><th>66</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>49</th><th> </th><td class="l"><span>NB! The mantis2trac script now lives at http://trac-hacks.org/wiki/MantisImportScript . You can always get the latest version from http://trac-hacks.org/changeset/latest/mantisimportscript?old_path=/&amp;filename=mantisimportscript&amp;format=zip</span> </td>
+                      </tr><tr>
+                        <th>50</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>51</th><th> </th><td class="l"><span>Mantis bugs can be imported using the attached script.</span> </td>
+                      </tr><tr>
+                        <th>52</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>53</th><th> </th><td class="l"><span>Currently, the following data is imported from Mantis:</span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>67</th><td class="r"><span>&nbsp;th:MantisImportScript:: script to import from Mantis into Trac the following data:</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>54</th><th>68</th><td class="l"><span>&nbsp; * bugs</span> </td>
+                  </tr><tr>
+                          <th>55</th><th>69</th><td class="l"><span>&nbsp; * bug comments</span> </td>
+                  </tr><tr>
+                          <th>56</th><th>70</th><td class="l"><span>&nbsp; * bug activity (field changes)</span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>57</th><th> </th><td class="l"><span>&nbsp; * attachments (as long as the files live in the mantis db, not on the filesystem) <del></del></span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>71</th><td class="r"><span>&nbsp; * attachments (as long as the files live in the mantis db, not on the filesystem) <ins>.</ins></span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>58</th><th>72</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>59</th><th> </th><td class="l"><span>If you use the script, please read the NOTES section (at the top of the file) and make sure you adjust the config parameters for your environment.</span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>73</th><td class="r"><span>== !PlanetForge ==</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>60</th><th>74</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>61</th><th> </th><td class="l"><span>mantis2trac.py has the same parameters as the bugzilla2trac.py script:</span> </td>
+                      </tr><tr>
+                        <th>62</th><th> </th><td class="l"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th>63</th><th> </th><td class="l"><span>mantis2trac - Imports a bug database from Mantis into Trac.</span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>75</th><td class="r"><span>&nbsp;th:PlanetForgeImportExportPlugin:: this plugin exports Trac data (wiki, tickets, compoments, permissions, repositories, etc.) using the open format designed by the COCLICO project. It extends the webadmin panel and the 'trac admin ...' command. Still has no 'import' feature. </span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>64</th><th>76</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>65</th><th> </th><td class="l"><span>Usage: mantis2trac.py [options] </span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>77</th><td class="r"><span>== Scarab ==</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>66</th><th>78</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>67</th><th> </th><td class="l"><span>Available Options:</span> </td>
+                      </tr><tr>
+                        <th>68</th><th> </th><td class="l"><span>&nbsp; --db &lt;MySQL dbname&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Mantis database</span> </td>
+                      </tr><tr>
+                        <th>69</th><th> </th><td class="l"><span>&nbsp; --tracenv /path/to/trac/env&nbsp; &nbsp; &nbsp; - Full path to Trac db environment</span> </td>
+                      </tr><tr>
+                        <th>70</th><th> </th><td class="l"><span>&nbsp; -h | --host &lt;MySQL hostname&gt;&nbsp; &nbsp; &nbsp;- Mantis DNS host name</span> </td>
+                      </tr><tr>
+                        <th>71</th><th> </th><td class="l"><span>&nbsp; -u | --user &lt;MySQL username&gt;&nbsp; &nbsp; &nbsp;- Effective Mantis database user</span> </td>
+                      </tr><tr>
+                        <th>72</th><th> </th><td class="l"><span>&nbsp; -p | --passwd &lt;MySQL password&gt;&nbsp; &nbsp;- Mantis database user password</span> </td>
+                      </tr><tr>
+                        <th>73</th><th> </th><td class="l"><span>&nbsp; -c | --clean&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- Remove current Trac tickets before importing</span> </td>
+                      </tr><tr>
+                        <th>74</th><th> </th><td class="l"><span>&nbsp; --help | help&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - This help info</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>79</th><td class="r"><span>&nbsp;th:ScarabToTracScript:: script that migrates Scarab issues to Trac tickets</span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>80</th><td class="r"><span>&nbsp; &nbsp; * Requires [http://trac-hacks.org/wiki/XmlRpcPlugin XmlRpcPlugin]</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>75</th><th>81</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>76</th><th> </th><td class="l"><span>Additional configuration options can be defined directly in the script.</span> </td>
+                      </tr><tr>
+                        <th>77</th><th> </th><td class="l"><span>}}} </span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>82</th><td class="r"><span>== Sourceforge ==</span> </td>
+                      </tr><tr>
+                        <th> </th><th>83</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>84</th><td class="r"><span>&nbsp;th:SfnToTracScript:: importer of !SourceForge's new backup file (originated from #Trac3521)</span> </td>
+                      </tr><tr>
+                        <th> </th><th>85</th><td class="r"><span></span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>86</th><td class="r"><span>Also, ticket data can be imported from Sourceforge using the [http://trac.edgewall.org/browser/trunk/contrib/sourceforge2trac.py sourceforge2trac.py] script, available in the contrib/ directory of the Trac distribution.</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>78</th><th>87</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>79</th><th>88</th><td class="l"><span>== Other ==</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracImport%3Fversion=4.html#L81">…</a></th>
+                  <th><a href="TracImport%3Fversion=5.html#L90">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>81</th><th>90</th><td class="l"><span>Since trac uses a SQL database to store the data, you can import from other systems by examining the database tables. Just go into [http://www.sqlite.org/sqlite.html sqlite] command line to look at the tables and import into them from your application.</span> </td>
+                  </tr><tr>
+                          <th>82</th><th>91</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>83</th><th> </th><td class="l"><span>=== <del>Using a c</del>omma delimited file - CSV ===</span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>92</th><td class="r"><span>=== <ins>C</ins>omma delimited file - CSV ===</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>84</th><th>93</th><td class="l"><span>See [http://trac.edgewall.org/attachment/wiki/TracSynchronize/csv2trac.2.py] for details.&nbsp; This approach is particularly useful if one needs to enter a large number of tickets by hand. (note that the ticket type type field, (task etc...) is also needed for this script to work with more recent Trac releases)</span> </td>
+                  </tr>
+            </tbody><tbody class="add">
+                  <tr class="last first">
+                          <th> </th><th>94</th><td class="r"><ins>Comments on script: The script has an error on line 168, ('Ticket' needs to be 'ticket').&nbsp; Also, the listed values for severity and priority are swapped. </ins> </td>
+                  </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>85</th><th>95</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="add">
+                  <tr class="first">
+                          <th> </th><th>96</th><td class="r"><ins>----</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>97</th><td class="r"><ins>See also: </ins> </td>
+                  </tr><tr>
+                          <th> </th><th>98</th><td class="r"><ins>&nbsp;* to import/export wiki pages: TracAdmin, </ins> </td>
+                  </tr><tr class="last">
+                          <th> </th><th>99</th><td class="r"><ins>&nbsp;* to export tickets: TracTickets, TracQuery</ins> </td>
+                  </tr>
+            </tbody>
+        </table>
+      </li>
+  </ul>
+</div>
+      </div>
+  </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

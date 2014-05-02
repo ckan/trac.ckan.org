@@ -1,0 +1,6 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2407	'Access denied' message is unhelpful	markw	amercader	"This chap tried to use the API to add a dataset to a group and got the uninformative message 'Access denied':
+
+http://lists.okfn.org/pipermail/ckan-dev/2012-May/002229.html
+
+The problem was he didn't have access to the group. A message like 'You don't have access to the group ""LODcloud""' would have been clearer."	enhancement	new	awaiting triage	ckan-v1.9	ckan				ckan	none

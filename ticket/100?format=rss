@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #100: Convert existing data on disk to a datapkg distribution</title>
+    <link>http://localhost/ticket/100</link>
+    <description>&lt;p&gt;
+(2008-10-29) convert existing directory on disk to a datapkg distribution (&lt;a class="missing wiki"&gt;PythonDistribution?&lt;/a&gt; by default). This would be presented in the CLI as a convert command.
+&lt;/p&gt;
+&lt;p&gt;
+Details:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Add a metadata file (setup.py), perhaps prompting for input
+&lt;/li&gt;&lt;li&gt;List all existing data in that directory
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+Cost: 4h
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/100</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Wed, 16 Mar 2011 14:40:43 GMT</pubDate>
+      <title>repo set</title>
+      <link>http://localhost/ticket/100#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/100#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;repo&lt;/strong&gt;
+                set to &lt;em&gt;datapkg&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Sun, 09 Oct 2011 17:27:07 GMT</pubDate>
+      <title>status changed; theme, resolution set</title>
+      <link>http://localhost/ticket/100#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/100#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;theme&lt;/strong&gt;
+                set to &lt;em&gt;none&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Resolving as wontfix since not really sure any point to this.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

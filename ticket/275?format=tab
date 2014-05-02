@@ -1,0 +1,10 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+275	Add forms renderer for JsonType fixing bugs in admin interface	rgrp	dread	"This will solve e.g. issues in formalchemy admin interface (which is due to lack of renderer for Json type)
+
+Cost: 0.5h
+
+{{{
+from ckan.model.types import JsonType
+
+forms.FieldSet.default_renderers[JsonType] = formalchemy.fields.TextFieldRenderer
+}}}"	defect	closed	major		ckan	fixed	cost-low			

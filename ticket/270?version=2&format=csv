@@ -1,0 +1,12 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+270,Refactor ckan/lib/importer and ckanclient/loader.,johnbywater,johnbywater,"There is code to create packages in-process (ckan/lib/importer) and via HTTP (ckanclient/loaders/base). There is also code to read different kinds of package source (Google Spreadsheets spreadsheet, other spreadsheet).
+
+Propose to refactor all this to have template method in base command class (subclasses may implement command line interface, graphical user interface, or Web interface), where the template method calls on aggregated strategy objects for: reading raw spreadsheet data from spreadsheet application; for inferring CKAN package entities from the raw spreadsheet data; and for writing package entities to CKAN service.
+
+Spreadsheet readers to be factored to allow for variations of spreadsheet application.
+
+Raw data inferrers to allow for variations in spreadsheet cell structure.
+
+CKAN writer strategies to allow for either CKAN client or direct linking.
+
+Actual cases then supported by specifying existing strategies (or defining new ones) in a script that invokes the command class.",enhancement,new,awaiting triage,,ckan,,,,,

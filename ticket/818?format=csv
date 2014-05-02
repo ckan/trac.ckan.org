@@ -1,0 +1,20 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+818,Rethinking the author and maintainer fields,cygri,,"The semantics of the Author and Maintainer fields are really unclear at the moment. This leads to very inconsistent usage. Also, perhaps Name and Email are not the only fields that are needed for a contact.
+
+Here is a table that shows the current usage of these fields in CKAN:
+http://richard.cyganiak.de/2010/ckan/ckan-ppl.html
+
+We note several problems:
+
+    * Author and Maintainer are often the same
+    * Author and Maintainer are often used interchangeably
+    * People really want to specify URLs for the contacts and stick them into random places because there is no field for it
+    * Multiple comma-separated names in a single field
+
+I'm not sure what to do about this, but a redesign is necessary in my opinion.
+
+Some ideas:
+
+    * Remove the maintainer field?
+    * Make really clear that Author doesn't refer to the metadata on CKAN, but to the original data
+    * Add an “author URL” field?",requirement,new,awaiting triage,ckan-backlog,ckan,,,,ckan,none

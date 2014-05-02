@@ -1,0 +1,19 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2653,Requesting file upload authentication fails on demo,aron.carroll,toby,"Try: http://localhost:5000/api/storage/auth/form/photo-of-a-duck
+
+Gets:
+
+{{{
+File '<string>', line 2 in auth_form
+File '/Users/Aron/.virtualenvs/ckan/src/ckan/ckan/lib/jsonp.py', line 26 in jsonpify
+  data = func(*args, **kwargs)
+File '/Users/Aron/.virtualenvs/ckan/src/ckan/ckan/controllers/storage.py', line 407 in auth_form
+  authorize(method, bucket, label, c.userobj, self.ofs)
+File '/Users/Aron/.virtualenvs/ckan/src/ckan/ckan/controllers/storage.py', line 200 in ofs
+  StorageAPIController._ofs_impl = get_ofs()
+File '/Users/Aron/.virtualenvs/ckan/src/ckan/ckan/controllers/storage.py', line 71 in get_ofs
+  storage_backend = config['ofs.impl']
+File '/Users/Aron/.virtualenvs/ckan/lib/python2.7/site-packages/paste/registry.py', line 146 in __getitem__
+  return self._current_obj()[key]
+KeyError: 'ofs.impl'
+}}}",enhancement,closed,blocker,demo phase 2,ckan,fixed,demo-theme,,ckan,none

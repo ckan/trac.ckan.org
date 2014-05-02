@@ -1,0 +1,23 @@
+= SOLR Interface =
+
+== Use Cases ==
+As an admin of a CKAN instance I want to have the facility to use SOLR, both alongside and as a replacement for the existing full text search in CKAN.
+
+== Design == 
+
+There are two main options for getting data into SOLR:
+
+* POST the records to SOLR in XML format ([http://wiki.apache.org/solr/UpdateXmlMessages docs])
+* Direct connection Setup SOLR ([http://wiki.apache.org/solr/DataImportHandler docs])
+  * Provide SELECT statements to do queries
+  * Process is initiated by doing a GET to a particular SOLR URL
+
+The preference is for the first option as the abstraction provides more flexibility in the db and more control about what gets indexed.
+
+== Tickets ==
+
+* Get a SOLR instance running locally and/or eu1, using basic config.
+* Harness one of the three python SOLR libraries to send SOLR Update XML of CKAN Packages.
+* Write tests for SOLR by sending data with SOLR library and using JSON interface for queries.
+* Optimise the SOLR settings for searching our data well - fields description in schema.xml. (Link to schema.xml in developer docs.)
+* Provide option to connect CKAN's search WUI to SOLR back-end.

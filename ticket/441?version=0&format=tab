@@ -1,0 +1,8 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+441	Read-only state for CKAN	dread		"When performing maintenance on CKAN it may be necessary to make CKAN obviously read-only, telling the users and restricting access to 'edit' pages.
+
+Example of maintenance would be switching between two parallel CKAN instances - you want to make it RO when you do the backup and until you bring up the new one.
+
+This would also be useful for the public DGU read-only CKAN.
+
+It would also be useful for a fail-over CKAN server that is only used in the event of problems, and no edits will be transferred back to the main server."	requirement	new		ckan-v1.3	ckan					

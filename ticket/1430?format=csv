@@ -1,0 +1,24 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1430,Documents get mixed between SOLR cores,amercader,,"On some occasions (apparently random), the documents indexed in a specific SOLR core get mixed with different site_ids.
+
+E.g: We look for all documents in the testing.iatiregistry.org core, faceted by site_id. We would expect all documents to have site_id = iati_testing, but some of them have site_id = iatiregistry.org
+
+http://okfn-solr.fry-it.com:8080/solr/testing.iatiregistry.org/select?indent=on&version=2.2&q=*:*&fq=+state:active&facet=true&facet.field=site_id
+
+{{{
+<lst name=""facet_fields"">
+<lst name=""site_id"">
+<int name=""iati_testing"">265</int>
+<int name=""iatiregistry.org"">255</int>
+</lst>
+</lst>
+}}}
+
+If we compare one of the records which disappeared from the ""iati_testing"" site_id in both the production and testing SOLR cores
+of the server, the records are exactly the same, including the indexed_ts property:
+
+http://okfn-solr.fry-it.com:8080/solr/iatiregistry.org/select?indent=on&version=2.2&q=id:97d1ab0d-b203-4757-8f4e-a0c84d2f759f&facet=true&facet.field=site_id
+
+http://okfn-solr.fry-it.com:8080/solr/testing.iatiregistry.org/select?indent=on&version=2.2&q=id:97d1ab0d-b203-4757-8f4e-a0c84d2f759f&facet=true&facet.field=site_id
+
+Note that the response from the URLs shown may vary, as the testing site could have been reindexed.",defect,closed,major,ckan-sprint-2011-11-07,ckan,fixed,search,johnglover thejimmyg kindly rgrp nils.toedtmann@…,ckan,none

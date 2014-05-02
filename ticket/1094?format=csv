@@ -1,0 +1,37 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1094,[super] Refactor the Auth System,thejimmyg,thejimmyg,"Here are some proposed changes related to CKAN's authorization system - they aren't very big, but should provide for some forthcoming use cases including #787.
+
+Two man reasons for the changes are:
+
+ * We have a completely refactored architecture now which introduces a logic layer. These Auth changes are designed to better support the way we work with that layer.
+
+ * Different CKAN extension apps may need radically different authentication/authorisation so we need to allow whatever we have to be override-able.
+
+The first two changes revolve around the is_authorized method, which
+is called by the logic layer to ask whether a particular user (e.g.
+Bob) is allowed to do a certain action (e.g. edit) on a certain object (e.g. Package).
+
+1. The first thing the is_authorized method is a hook to a plugin
+which *overrides* the current call with its own implementation (note: in previous discussions we have considered allowing a chain of plugins, no longer!)
+
+Reason: authorization can be completely delegated to another system
+(or partially)
+
+2. is_authorized method currently takes (username, action, object)
+but for action=create_package, the object supplied is System, and for action=edit the object supplied is the package. Instead action should always be the string name of a function in the logic layer and object should always be the object passed to that function. This means our auth system is based around the actual actions we are performing (rather than a model them) and with the actual data that forms the action (rather than a related object). You never need a System object in this model.
+
+3. Rename these two classes to better reflect what they are
+ * AuthorizationGroup -> UserGroup
+ * Group -> PackageGroup
+
+4. Rename the Editor role to PriveledgeUser since Editors sometimes can't edit.
+
+Although this sounds a bit radical we already have auth extensions.
+
+== Read-only CKAN Web UI ==
+(Additional requirement from #764)
+
+Whilse using CKAN web interface, you are not tempted to edit stuff:
+
+ * You know at all times this CKAN is read-only
+ * All editing facilities are still seen but greyed-out with an indication why it is.",enhancement,closed,critical,ckan-v1.5,ckan,duplicate,,,ckan,none

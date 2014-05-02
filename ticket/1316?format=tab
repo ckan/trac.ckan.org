@@ -1,0 +1,5 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1316	/api/action uncaught exception if missing necessary parameter	dread	kindly	"{{{
+curl http://ckan.net/api/action/package_show -d '{""name"": ""uk-quango-data""}'
+}}}
+This gives 500 error due to KeyError (it looked for the 'id' param), rather than 400."	defect	closed	minor		ckan	fixed			ckan	none

@@ -1,0 +1,23 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2491	Demo related page is missing breadcrumb	aron.carroll	toby	"The following pages are missing complete breadcrumbs.
+
+Add related page:
+
+http://s031.okserver.org:2375/dataset/adur_district_spending/related/new
+
+Needs to look like.
+
+Dataset > {dataset_title} > Related > Create Related
+
+Template here: https://github.com/okfn/ckan/blob/feature-2375-demo-theme/ckan/templates/related/pages/form_page.html#L6
+
+Same deal with Edit related.
+
+http://s031.okserver.org:2375/dataset/adur_district_spending/related/edit/5f9e665b-3e3c-428f-88b1-8554189cf14a
+
+Needs to look like.
+
+Dataset > {dataset_title} > Related > Edit Related
+
+https://github.com/okfn/ckan/blob/feature-2375-demo-theme/ckan/templates/related/edit.html#L5
+"	enhancement	closed	major	ckan-sprint-2012-06-25	ckan	fixed	demo-theme		ckan	none

@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+899,Optimise check_real_change,dread,rgrp,"There is no need to re-query the database to detect if there has been a changed as sqlalchemy knows this. It saves about 15 secs in the ckan tests. https://bitbucket.org/kindly/vdm/changeset/0050d023ca4e
+
+From David Raznick",enhancement,closed,awaiting triage,,vdm,fixed,,,,

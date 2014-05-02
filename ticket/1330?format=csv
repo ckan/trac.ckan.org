@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1330,Deprecate / Remove test_authz.py,rgrp,,"test_authz.py appears to test in great detail some very specific additional authz (related to total site lock-down it seems -- introduced I think for hri project).
+
+I think there are simpler ways to get total site lockdown (use external auth!) and this test is slow and delicate (e.g. depends on specific words in templates). Suggest removing. If we don't remove we should at least refactor tests for access to certain pages to use a proper method of testing (e.g. agreed html comments in each page) rather than being depending on the presence of absence of specific wording.",enhancement,closed,awaiting triage,ckan-backlog,ckan,invalid,,,ckan,none

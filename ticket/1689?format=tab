@@ -1,0 +1,7 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1689	List deleted datasets in API	dread	kindly	"The admin extension allows deleted datasets to be viewed, but there is no equivalent in the API. The package_list API call filters to just 'state=active' datasets. 
+
+'state' could be a parameter on the package_list call
+ * Easy to call and implement
+ * But getting permissions right for the different state values may not be easy - maybe a separate logic function is better?
+"	enhancement	assigned	major		ckan				ckan	none

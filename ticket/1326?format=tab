@@ -1,0 +1,2 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1326	Write a set of auth plugin functions to integrate with Druapl	thejimmyg		Ticket #787 described join auth between CKAN and Drupal. The authentication part is live and implemented. This ticket is a placeholder for work that will be needed in the new auth system to link authorization functions to Drupal. It is dependent on the groups refactor.	enhancement	new	minor	ckan-backlog	ckan				ckan	none

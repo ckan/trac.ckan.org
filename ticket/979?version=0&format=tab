@@ -1,0 +1,5 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+979	Edit Resource extras in the API	dread		"Follows on from #826. We can now edit resource extras in the WUI (to some extent - see #978 for remaining issues) and we can view resource extras in the API, but we can't yet edit them in the API. 
+
+= Implementation =
+Once the form in #978 is complete, this functionality will come for free, but needs a functional test."	enhancement	new	awaiting triage		ckan					

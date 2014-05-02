@@ -1,0 +1,10 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+926	Pick a simpler form framework	sebbacon	sebbacon	"The current formalchemy setup conflates view, controller and model code in a way that makes it hard to debug and customise.
+
+Review existing (and potentially non-existing) frameworks with a view to porting forms over to something more explicit and lightweight.
+
+Implement the current Package forms as an example of how this would work.
+
+Document and circulate.
+
+Sub-ticket of #961 (form, validation, model sync meta-ticket)"	enhancement	closed	critical	ckan-v1.4-sprint-1	ckan	fixed	forms			

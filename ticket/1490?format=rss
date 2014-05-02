@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1490: Standardize output from package listings coming from the logic layer</title>
+    <link>http://localhost/ticket/1490</link>
+    <description>&lt;p&gt;
+Right now, the two logic functions that return a list of packages (package_search &lt;a class="missing changeset" title="No default repository defined"&gt;[1]&lt;/a&gt; and group_packages_list &lt;a class="missing changeset" title="No default repository defined"&gt;[2]&lt;/a&gt;)use custom functions to generate the output dict. That's suboptimal because:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;The template function that renders the package listing (package_list_from_dict) could end up receiving different dicts.
+&lt;/li&gt;&lt;li&gt;Not all package properties are available at the template level (e.g extras, tags...). These can be really useful to customize the listing from an extension.
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+In general only the functions present in lib/dictization/model_dictize.py should be used to build the output of a logic function, in that case package_dictize. If necessary, they can be modified to include missing properties, like on this particular case the "isopen" property, needed by the template renderer.
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a class="missing changeset" title="No default repository defined"&gt;[1]&lt;/a&gt; &lt;a class="ext-link" href="https://github.com/okfn/ckan/blob/master/ckan/logic/action/get.py#L685"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;https://github.com/okfn/ckan/blob/master/ckan/logic/action/get.py#L685&lt;/a&gt;
+&lt;a class="missing changeset" title="No default repository defined"&gt;[2]&lt;/a&gt; &lt;a class="ext-link" href="https://github.com/okfn/ckan/blob/master/ckan/logic/action/get.py#L442"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;https://github.com/okfn/ckan/blob/master/ckan/logic/action/get.py#L442&lt;/a&gt;
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1490</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>amercader</dc:creator>
+
+      <pubDate>Mon, 28 Nov 2011 14:05:55 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/1490#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1490#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Fixed in c23821b
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Fri, 16 Dec 2011 11:05:57 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1490#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/1490#comment:2</guid>
+      <description>
+        &lt;p&gt;
+Fixed in 1.5.1
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;group_package_show introduced in 1.5.1
+&lt;/li&gt;&lt;li&gt;tag_show added extended packages in 1.5 (e6bad88a)
+&lt;/li&gt;&lt;li&gt;package_search added extended packages in 1.5 (e6bad88a)
+&lt;/li&gt;&lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

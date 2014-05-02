@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1365,Support old search formats,dread,dread,"Lots of things rely on the old (i.e. pre-SOLR) search param formats, including ckanclient / DGU. Need a translation layer to convert these params (in api v1&2) to SOLR syntax.
+
+This functionality was broken by the changes in #1277 which went into 1.5a",defect,closed,major,ckan-sprint-2011-11-07,ckan,fixed,,,ckan,none

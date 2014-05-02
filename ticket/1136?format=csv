@@ -1,0 +1,2 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1136,Move to SessionExtension in vdm,rgrp,kindly,When vdm was created there was no !SessionExtension so we use !MapperExtension for doing revisioning. Now that SessionExtension exists we should use it. We can also follow the existing SQLAlchemy recipe: <http://www.sqlalchemy.org/docs/orm/examples.html?highlight=versioning#versioned-objects>,enhancement,assigned,critical,,vdm,,,,vdm,none

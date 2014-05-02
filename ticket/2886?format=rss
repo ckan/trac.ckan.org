@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2886: Configurable related items</title>
+    <link>http://localhost/ticket/2886</link>
+    <description>&lt;p&gt;
+Related items (Apps &amp;amp; Ideas) have a collection of types, which are currently fixed.  Some of these types are ambiguous, such as ideas in that they may not have a link - and if they do it is likely to be to a blog post - another existing type.
+&lt;/p&gt;
+&lt;p&gt;
+Whilst the URL is required, and we think this should stay required, we should also allow users to change the types found in Apps &amp;amp; Ideas to a shortened list that suits their requirements.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2886</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+ </channel>
+</rss>

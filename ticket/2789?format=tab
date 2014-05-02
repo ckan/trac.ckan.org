@@ -1,0 +1,18 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2789	logo fixups	toby	aron.carroll	"With the text logo I'd like the tag line to be under the site name so some css like
+
+`float:left;clear:left;font-size:13px;line-height:0.1;`
+
+Also the site name can be larger if no tagline
+
+
+commit daac54dbd856  I've added a new global g.header_css that sets the hgroup class to
+
+
+'header-image'
+'header-text-logo'
+'header-text-logo-tagline'
+
+
+I think maybe we should also have 'header-image-css'  for the equivalent of the class=""logo"" in the link to allow/stop the image replacement 
+"	enhancement	closed	awaiting triage	demo phase 3	ckan	fixed			ckan	none

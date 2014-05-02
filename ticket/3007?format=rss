@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #3007: Adding a dataset creates multiple activities</title>
+    <link>http://localhost/ticket/3007</link>
+    <description>&lt;p&gt;
+Adding a new dataset creates multiple activity stream activities, e.g. seanh created the dataset foo, seanh add the resource bar to the dataset foo, and seanh updated the dataset foo are all created when I add a new dataset. I wonder if these can be collapsed into a single activity.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/3007</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>seanh</dc:creator>
+
+      <pubDate>Mon, 29 Oct 2012 13:23:39 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/3007#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/3007#comment:1</guid>
+      <description>
+        &lt;p&gt;
+Only happens if you create a dataset through the web UI, creating a dataset through the API still produces just one activity.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

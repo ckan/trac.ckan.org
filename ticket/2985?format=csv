@@ -1,0 +1,5 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2985,Make lib/helpers.py more template-specific,seanh,,"From Toby: make lib/helpers more template specific and less generally shared with
+none template uses (some functions are shared but many shouldn't be) -
+again help avoid circular imports
+",refactor,new,awaiting triage,ckan 2.0,ckan,,,,ckan,none

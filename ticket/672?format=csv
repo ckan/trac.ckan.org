@@ -1,0 +1,6 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+672,Facets in CKAN search results,pudo,pudo,"This has been done in IATI ckan but should be ported over to CKAN main and put into the UI in a nice fashion.
+
+IATI: http://bitbucket.org/okfn/iati/changeset/378431974c76 (related to #520)
+
+Requires SOLR search backend (for postgres should fall back gracefully -- just do not show them).",enhancement,closed,major,ckan-v1.3-sprint-1,ckan,fixed,,,,

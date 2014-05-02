@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2994: Add dataset and user popovers throughout the site</title>
+    <link>http://localhost/ticket/2994</link>
+    <description>&lt;p&gt;
+If you hover the mouse over a dataset or user in an activity stream, you now get a popover with some info about that dataset or user and a follow/unfollow button.
+&lt;/p&gt;
+&lt;p&gt;
+These popovers should appear wherever datasets or users are listed, throughout the site.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2994</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+ </channel>
+</rss>

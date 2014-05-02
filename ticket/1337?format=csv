@@ -1,0 +1,19 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1337,Group extras are JSON endoded in the REST API responses,amercader,amercader,"Instead of this:
+{{{
+extras: {
+type: """"Primary source""""
+license_id: """"localauth-withrights""""
+publisher_frequency: """"2Pre\u00f1o \u20ac $ \u00e0dri\u00e0""""
+}
+}}}
+
+we should return this:
+
+{{{
+extras: {
+type: ""Primary source"",
+license_id: ""localauth-withrights"",
+publisher_frequency: ""2Preño € $ àdrià"",
+}
+}}}",defect,closed,minor,ckan-sprint-2011-10-28,ckan,fixed,,,ckan,none

@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1723,Update tests for taxonomies,seanh,seanh,"In the tag-taxonomies branch tags now (optionally) belong to vocabularies and where tags previously had unique names, a CKAN instance can now have two tags with the same name as long as they belong to different vocabularies. The tests for the tags model should probably be updated to reflect this.
+
+Other tests might also need to be updated.",enhancement,closed,awaiting triage,ckan-sprint-2012-02-20,ecportal,wontfix,taxonomies,,ckan,none

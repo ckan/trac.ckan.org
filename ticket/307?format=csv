@@ -1,0 +1,7 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+307,datapkg upload command,rgrp,rgrp,"Support uploading a distribution somewhere.
+
+  * New cli command: upload
+  * Pluggable uploader framework. Suggest initial support 
+
+Depends on ticket:306",defect,closed,major,datapkg-0.7,dpm,fixed,,,,

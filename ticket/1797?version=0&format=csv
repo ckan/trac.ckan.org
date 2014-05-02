@@ -1,0 +1,29 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1797,[super] Webstore v2 - Integrated and based on ElasticSearch,rgrp,rgrp,"Etherpad: http://ckan.okfnpad.org/webstore
+
+== Questions ==
+ 1. Authorization (and url structure)
+    * Authorization API?
+ 2. How do we integrate webstore into main site
+   * /dataset/{xyz}/resource/{r-id}/data => /api/rest/dataset/{xyz}/resource/{r-id}/data
+   * /dataset/{xyz}/resource/{r-id}/raw <= raw / bulk version of this data ...
+ 3. What query API do we use 
+  * We just use elasticsearch
+  * https://github.com/okfn/recline/issues/34
+
+== Details ==
+
+Layout on ES:
+
+{{{
+elasticsearch/{index}/{type-id}
+
+index = ckan-{ckan-id}
+type-id = resource-id (1)
+}}}
+
+Request path:
+
+Req => Nginx => CKAN App (authz) => req to elasticsearch and returns results
+
+See as an example: https://github.com/okfn/elastic-proxy",enhancement,new,critical,ckan-v1.7,ckan,,,,ckan,none

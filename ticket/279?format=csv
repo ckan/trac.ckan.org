@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+279,Ensure package's license is an option when it's edited,dread,johnbywater,"With forms configurable to show a subset of licenses and ckan instances moving packages from server to server, there is a chance that a user will edit a package and the existing package's license is not displayed in the form. If the user submits this form without touching the license dropdown, then the value is lost. 
+
+So for this case we should add the package's license to the list displayed.",enhancement,closed,minor,v1.0,ckan,fixed,,,,

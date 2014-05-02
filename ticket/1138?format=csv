@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1138,minor navigations behave inconsistently,johnlawrenceaspden,,"For Authorization Groups, if you have admin privileges you see view, edit and authz tabs, and if you don't have the necessary privileges you only see the view tab.
+
+For Packages, you see all tabs whatever your permissions, so there's a link you can click on which will redirect you to the login page.",enhancement,closed,awaiting triage,,ckan,invalid,,,ckan,none

@@ -1,0 +1,15 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1609	Celery task for ckanext-archiver to write to webstore.	ross	ross	"From super Storage changes - #1574 - and http://ckan.okfnpad.org/newstorage we determined that ckanext-archiver should have a celery task for grabbing local file uploads and writing to webstore
+
+== Analysis ==
+
+When I upload a file to CKAN:
+
+    * End up with file in permanent storage
+    * IF file is ot type ... csv,xls,xlsx,sqlite,.sql
+        * End up with new db in webstore
+            * Where? {username}/{resource-id}/...
+                * If a single table: name it after the file name (appropriately slugified)
+            * A resource *always* corresponds to a 'database' in webstore ...
+            * In Data Explorer have ""Sheets"" tab ...
+    * Resource url = /dataset/{x}/resource/{y}/link -> cached_url ..."	enhancement	closed	awaiting triage	ckan-sprint-2012-01-23	ckan	fixed	storage,archiver 5d	kindly	ckan	none

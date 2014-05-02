@@ -1,0 +1,699 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      #698 (CKAN Data API v1)
+     – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="prev" href="263.html" title="Ticket #263" />
+        <link rel="last" href="23.html" title="Ticket #23" />
+        <link rel="help" href="../wiki/TracGuide.html" />
+        <link rel="alternate" href="698%3Fformat=csv" type="text/csv" class="csv" title="Comma-delimited Text" /><link rel="alternate" href="698%3Fformat=tab" type="text/tab-separated-values" class="tab" title="Tab-delimited Text" /><link rel="alternate" href="698%3Fformat=rss" type="application/rss+xml" class="rss" title="RSS Feed" />
+        <link rel="up" href="../report/23%3Fsort=newvalue&amp;asc=1&amp;page=1.html" />
+        <link rel="next" href="849.html" title="Ticket #849" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/ticket.css" type="text/css" />
+        <link rel="first" href="336.html" title="Ticket #336" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript">
+      var auto_preview_timeout=2.0;
+      var form_token="93d81ccf9a7bb1c456462f62";
+    </script>
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script><script type="text/javascript" src="../chrome/common/js/wikitoolbar.js"></script><script type="text/javascript" src="../chrome/common/js/resizer.js"></script><script type="text/javascript" src="../chrome/common/js/auto_preview.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("div.description").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $(".foldable").enableFolding(false, true);
+        var args = {realm: "ticket", id: 698, escape_newlines: 0}
+        $("#comment").autoPreview("/wiki_render", args, function(textarea, text, rendered) {
+            $("#ticketchange div.comment").html(rendered);
+            if (rendered)
+              $("#ticketchange").show();
+            else if ($("#ticketchange ul.changes").length == 0)
+              $("#ticketchange").hide();
+        });
+        $("#trac-comment-editor textarea").autoPreview("/wiki_render", args,
+                                                       function(textarea, text, rendered) {
+          var comment = $("#trac-comment-editor").next("div.comment");
+          comment.html(rendered);
+          if (rendered)
+            comment.show();
+          else
+            comment.hide();
+        });
+        $("#modify").parent().toggleClass("collapsed");
+        $(".trac-topnav a").click(function() { $("#modify").parent().removeClass("collapsed"); });
+        /* only enable control elements for the currently selected action */
+        var actions = $("#action input[name='action']");
+        function updateActionFields() {
+          actions.each(function () {
+            $(this).siblings().find("*[id]").enable($(this).checked());
+            $(this).siblings().filter("*[id]").enable($(this).checked());
+          });
+        }
+        actions.click(updateActionFields);
+        updateActionFields();
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="../wiki/TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li class="active"><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="263.html" title="Ticket #263">Previous Ticket</a></span></li><li><a href="../report/23%3Fsort=newvalue&amp;asc=1&amp;page=1.html">Back to Query</a></li><li class="last"><span><a class="next" href="849.html" title="Ticket #849">Next Ticket</a> &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="ticket">
+      <h1 id="trac-ticket-title">
+          <a href="698.html">Ticket #698</a>
+          <span class="status">(closed task: fixed)</span>
+      </h1>
+      <div id="ticket">
+  <div class="date">
+    <p>Opened <a class="timeline" href="../timeline%3Ffrom=2010-10-14T16:23:53Z&amp;precision=second.html" title="2010-10-14T16:23:53Z in Timeline">4 years</a> ago</p>
+    <p>Last modified <a class="timeline" href="../timeline%3Ffrom=2010-12-29T19:10:15Z&amp;precision=second.html" title="2010-12-29T19:10:15Z in Timeline">3 years</a> ago</p>
+  </div>
+  <h2 class="summary searchable">CKAN Data API v1</h2>
+  <table class="properties">
+    <tr>
+      <th id="h_reporter">Reported by:</th>
+      <td headers="h_reporter" class="searchable">
+        <a href="../query%3Fstatus=!closed&amp;reporter=thejimmyg.html">thejimmyg</a>
+      </td>
+      <th id="h_owner">Owned by:</th>
+      <td headers="h_owner">
+        <a href="../query%3Fstatus=!closed&amp;owner=Stiivi.html">Stiivi</a>
+      </td>
+    </tr>
+    <tr>
+        <th id="h_priority">
+          Priority:
+        </th>
+        <td headers="h_priority">
+              <a href="../query%3Fstatus=!closed&amp;priority=critical.html">critical</a>
+        </td>
+        <th id="h_milestone">
+          Milestone:
+        </th>
+        <td headers="h_milestone">
+              <a class="closed milestone" href="../milestone/ckan-v1.3-sprint-1.html">ckan-v1.3-sprint-1</a>
+        </td>
+    </tr><tr>
+        <th id="h_component">
+          Component:
+        </th>
+        <td headers="h_component">
+              <a href="../query%3Fstatus=!closed&amp;component=ckan.html">ckan</a>
+        </td>
+        <th id="h_keywords">
+          Keywords:
+        </th>
+        <td headers="h_keywords" class="searchable">
+        </td>
+    </tr><tr>
+        <th id="h_cc">
+          Cc:
+        </th>
+        <td headers="h_cc" class="searchable">
+        </td>
+        <th id="h_repo">
+          Repository:
+        </th>
+        <td headers="h_repo">
+              <a href="../query%3Fstatus=!closed.html"></a>
+        </td>
+    </tr><tr>
+        <th id="h_theme">
+          Theme:
+        </th>
+        <td headers="h_theme">
+              <a href="../query%3Fstatus=!closed.html"></a>
+        </td>
+        <th>
+        </th>
+        <td>
+        </td>
+    </tr>
+  </table>
+  <div class="description">
+    <h3 id="comment:description">
+      Description
+    </h3>
+    <div class="searchable">
+      <p>
+This proposal is to discuss adding a new API for proxying certain spreadsheet data via JSON-P to make it possible to build simple browser apps directly off the API.
+</p>
+<p>
+See the attached proposal for information.
+</p>
+
+    </div>
+  </div>
+</div>
+          
+    <div id="attachments">
+        <h2 class="foldable">Attachments</h2>
+        <div>
+          <dl class="attachments">
+              <dt>
+    <a href="../attachment/ticket/698/data-api-jsonp-proxy.txt.html" title="View attachment">data-api-jsonp-proxy.txt</a><a href="../raw-attachment/ticket/698/data-api-jsonp-proxy.txt" class="trac-rawlink" title="Download">​</a>
+       (<span title="6668 bytes">6.5 KB</span>) -
+      added by <em>rgrp</em> <a class="timeline" href="../timeline%3Ffrom=2010-10-14T16:24:52Z&amp;precision=second.html" title="2010-10-14T16:24:52Z in Timeline">4 years</a> ago.
+  </dt>
+              <dt>
+    <a href="../attachment/ticket/698/ckan-srcmirror.png.html" title="View attachment">ckan-srcmirror.png</a><a href="../raw-attachment/ticket/698/ckan-srcmirror.png" class="trac-rawlink" title="Download">​</a>
+       (<span title="117036 bytes">114.3 KB</span>) -
+      added by <em>Stiivi</em> <a class="timeline" href="../timeline%3Ffrom=2010-12-07T17:26:35Z&amp;precision=second.html" title="2010-12-07T17:26:35Z in Timeline">3 years</a> ago.
+  </dt>
+              <dd>
+                CKAN Source Mirror and transformations for Data API
+              </dd>
+              <dt>
+    <a href="../attachment/ticket/698/ckan-dataapi.png.html" title="View attachment">ckan-dataapi.png</a><a href="../raw-attachment/ticket/698/ckan-dataapi.png" class="trac-rawlink" title="Download">​</a>
+       (<span title="234953 bytes">229.4 KB</span>) -
+      added by <em>Stiivi</em> <a class="timeline" href="../timeline%3Ffrom=2010-12-20T15:22:47Z&amp;precision=second.html" title="2010-12-20T15:22:47Z in Timeline">3 years</a> ago.
+  </dt>
+              <dd>
+                Data API through remote data proxy
+              </dd>
+          </dl>
+          
+        </div>
+    </div>
+
+        <div>
+          <h2 class="foldable">Change History</h2>
+          <div id="changelog">
+              <div class="change">
+                <h3 class="change">
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2010-10-14T16:24:52Z&amp;precision=second.html" title="2010-10-14T16:24:52Z in Timeline">4 years</a> ago by rgrp
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Attachment</strong>
+        <a href="../attachment/ticket/698/data-api-jsonp-proxy.txt.html"><em>data-api-jsonp-proxy.txt</em></a><a href="../raw-attachment/ticket/698/data-api-jsonp-proxy.txt" title="Download" class="trac-rawlink">​</a>
+          added
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-1">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:1" class="cnum">
+      <a href="698.html#comment:1">comment:1</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2010-12-07T17:25:52Z&amp;precision=second.html" title="2010-12-07T17:25:52Z in Timeline">3 years</a> ago by Stiivi
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Priority</strong>
+        set to <em>awaiting triage</em>
+    </li><li>
+      <strong>Component</strong>
+        set to <em>ckan</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+I see two possible options:
+</p>
+<p>
+Option A: store only mirrors of source files, have file format based plugins for querying files
+</p>
+<p>
+Option B: store mirrors of source files, have plugin based loading scripts into "common structured format", have single query module.
+</p>
+<p>
+I would go with option B as it is:
+</p>
+<ul><li>easier to implement - file format based transformations are simpler than file format based queries
+</li><li>more transparent data management process
+</li><li>only one simple query module
+</li></ul><p>
+(see attached  ckan-srcmirror.png)
+</p>
+<p>
+The Option B will fit better to the broader data architecture context:
+</p>
+<p>
+<a class="ext-link" href="http://democracyfarm.org/f/ckan/data_arch.png"><span class="icon">​</span>http://democracyfarm.org/f/ckan/data_arch.png</a>
+</p>
+<p>
+Concerning API I would suggest to try to be compatible with google spreadsheet API:
+</p>
+<p>
+<a class="ext-link" href="http://code.google.com/apis/spreadsheets/data/3.0/reference.html"><span class="icon">​</span>http://code.google.com/apis/spreadsheets/data/3.0/reference.html</a>
+</p>
+
+    </div>
+
+              </div>
+              <div class="change">
+                <h3 class="change">
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2010-12-07T17:26:35Z&amp;precision=second.html" title="2010-12-07T17:26:35Z in Timeline">3 years</a> ago by Stiivi
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Attachment</strong>
+        <a href="../attachment/ticket/698/ckan-srcmirror.png.html"><em>ckan-srcmirror.png</em></a><a href="../raw-attachment/ticket/698/ckan-srcmirror.png" title="Download" class="trac-rawlink">​</a>
+          added
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+CKAN Source Mirror and transformations for Data API
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-2">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:2" class="cnum">
+      <a href="698.html#comment:2">comment:2</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2010-12-08T18:15:33Z&amp;precision=second.html" title="2010-12-08T18:15:33Z in Timeline">3 years</a> ago by thejimmyg
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+Actually we've implemented a first version which doesn't store the data.
+</p>
+<p>
+See this post: <a class="ext-link" href="http://blog.ckan.org/2010/12/04/open-data-day-announcing-ckan-data-proxy/"><span class="icon">​</span>http://blog.ckan.org/2010/12/04/open-data-day-announcing-ckan-data-proxy/</a>
+</p>
+<p>
+You can get data like this:
+</p>
+<p>
+<a class="ext-link" href="http://1.latest.jsonpdataproxy.appspot.com/?sheet=1&amp;indent=4&amp;url=http://research.dwp.gov.uk/asd/asd4/r1_values.xls"><span class="icon">​</span>http://1.latest.jsonpdataproxy.appspot.com/?sheet=1&amp;indent=4&amp;url=http://research.dwp.gov.uk/asd/asd4/r1_values.xls</a>
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-3">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:3" class="cnum">
+      <a href="698.html#comment:3">comment:3</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2010-12-08T23:34:35Z&amp;precision=second.html" title="2010-12-08T23:34:35Z in Timeline">3 years</a> ago by Stiivi
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+@thejimmyg: It is neat simple solution.
+</p>
+<p>
+You have suggested a proxy API:
+</p>
+<p>
+<em>There will be a new API at <tt></tt>/api/spreadsheet?callback=jsonpcallback&amp;url=<tt></tt>
+</em>
+</p>
+<p>
+There are two options:
+</p>
+<ol><li>Have public ckan data proxy as stand-alone service: I get package resource URL from CKAN and pass it to proxy
+</li></ol><ol start="2"><li>Have ckan data API (as ticket title suggests): If I am talking to CKAN, I am getting data from CKAN, I should not care about proxy or anything behind nor I should care about original data source - I care about resource data in a format that I can process (CSV/JSON).
+</li></ol><p>
+For CKAN data API I would suggest something like:
+</p>
+<pre class="wiki">/api/resource_data/RESOURCE_ID?...
+
+</pre><p>
+or more human readable:
+</p>
+<pre class="wiki">/api/resource_data/PACKAGE_NAME/RESOURCE_NUMBER?...
+
+</pre><p>
+This will allow others to get only CKAN resources. Moreover, allowing to get only resource data (not any URL data) would allow us to pre-process resources in the future.
+</p>
+<p>
+First version/implementation: pass each requested resource URL to your proxy service (external, not CKAN related), which determines file by file extension in URL, fail on unknown file or unprocessable file.
+</p>
+<p>
+/api/resource_data/PACKAGE/RESOURCE?output=jsonp&amp;sheet=1...
+</p>
+<p>
+would be redirected to (for example):
+</p>
+<p>
+<a class="ext-link" href="http://1.latest.jsonpdataproxy.appspot.com/?url=RESOURCE[&#34;URL&#34;]&amp;sheet=1"><span class="icon">​</span>http://1.latest.jsonpdataproxy.appspot.com/?url=RESOURCE["URL"]&amp;sheet=1</a>...
+</p>
+<p>
+Second version/implementation: Determine file type in advance and pass to appropriate conversion service when requested
+</p>
+<p>
+If you upload document on scribd or slideshare it gets processed in the background. This can be done in CKAN after any resource change. We do not need to download the file at the moment, however what can be done is:
+</p>
+<ol><li>try a converter by URL file extension
+</li><li>try a converter by MIME type (content-type header)
+</li><li>brute-force try all converters
+</li></ol><p>
+No need to store copies of files, just store determined file type somewhere in the resource record (as mime type).
+</p>
+<p>
+Also, it would be nice if any data conversion service would provide output in both - JSON/CSV. Therefore we would be able to have "Download CSV" link directly in CKAN web page for browsing users:
+</p>
+<p>
+/api/resource_data/PACKAGE/RESOURCE?output=csv...
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-4">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:4" class="cnum">
+      <a href="698.html#comment:4">comment:4</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2010-12-09T01:32:26Z&amp;precision=second.html" title="2010-12-09T01:32:26Z in Timeline">3 years</a> ago by Stiivi
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+I have created "proof of concept" implementation that will use external data proxy service when accessing:
+</p>
+<pre class="wiki">/api/data/PACKAGE_ID
+
+</pre><p>
+like:
+</p>
+<pre class="wiki">http://127.0.0.1:5000/api/data/069c80f8-8476-452e-bfd4-0a9077666c14
+
+</pre><p>
+It just works and requires refactoring to match ckan standards. I would need help from soneone who knows ckan internals better.
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-5">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:5" class="cnum">
+      <a href="698.html#comment:5">comment:5</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2010-12-09T01:48:18Z&amp;precision=second.html" title="2010-12-09T01:48:18Z in Timeline">3 years</a> ago by Stiivi
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+One more note: it would be good if packages had names/identifiers as well, as referencing internal IDs from outside world is not very good practice - they are quite volatile, mostly in regard to expected objects.
+</p>
+<p>
+PACKAGE/RESOURCE_REFERENCE
+</p>
+<p>
+Possible resource references:
+</p>
+<ul><li>'default' - reserved keyword for 'the only one resource' if there is only one, or first resource if there are more or the one with flag 'default'
+</li><li>'latest' - to be able to access 'latest' resource within package (or 'actual' or 'last'?)
+</li><li>alphanumeric identifier (not starting with number)
+</li><li>number - index of resource as human/visitor sees it on page (not the same as "position" attribute - as that one might contain gaps or be different (and it is in some cases)), index of resource should be something like:
+</li></ul><pre class="wiki">SELECT package_id, id, url, ROW_NUMBER() OVER (PARTITION BY package_id ORDER BY position) AS index FROM package_resource
+
+</pre>
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-6">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:6" class="cnum">
+      <a href="698.html#comment:6">comment:6</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2010-12-10T17:21:49Z&amp;precision=second.html" title="2010-12-10T17:21:49Z in Timeline">3 years</a> ago by Stiivi
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+'draft": <a class="ext-link" href="https://github.com/Stiivi/ckanext-dataapi"><span class="icon">​</span>https://github.com/Stiivi/ckanext-dataapi</a>
+</p>
+<p>
+requires that the client handles HTTP 302 Redirect correctly.
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-7">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:7" class="cnum">
+      <a href="698.html#comment:7">comment:7</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2010-12-13T11:22:52Z&amp;precision=second.html" title="2010-12-13T11:22:52Z in Timeline">3 years</a> ago by rgrp
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Owner</strong>
+        changed from <em>rgrp</em> to <em>Stiivi</em>
+    </li><li>
+      <strong>Priority</strong>
+        changed from <em>awaiting triage</em> to <em>critical</em>
+    </li><li>
+      <strong>Milestone</strong>
+        set to <em>ckan-v1.3-sprint-1</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <ol><li>move repo to bitbucket
+</li><li>clone james proxy code and modify to make google spreadsheets compatible (add a test ...)
+</li><li>update the ckanext to pass on parameters ....
+</li><li>Deploy all of this to test.ckan.net
+</li><li>Rufus: check redirects with javascript
+</li></ol>
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-8">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:8" class="cnum">
+      <a href="698.html#comment:8">comment:8</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2010-12-17T14:36:29Z&amp;precision=second.html" title="2010-12-17T14:36:29Z in Timeline">3 years</a> ago by Stiivi
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+Here is the fork for (json) data proxy:
+</p>
+<p>
+<a class="ext-link" href="https://bitbucket.org/Stiivi/dataproxy"><span class="icon">​</span>https://bitbucket.org/Stiivi/dataproxy</a>
+</p>
+<p>
+I've refactored it and moved transformations into separate modules. For each resource type there should be a module in transform/&lt;type&gt;_transform.py
+</p>
+<p>
+Each module should implement <tt></tt>transform(flow, url, query)<tt></tt> and should return a dictionary
+as a result.
+</p>
+<p>
+Existing modules:
+</p>
+<ul><li>transform/csv_transform - CSV files
+</li><li>transform/xls_transform - Excel XLS files
+</li></ul><p>
+if there is no resource_type module, HTTP 200 Error Resource type not supported is returned.
+</p>
+<p>
+You can override URL file extension or specify type if extension is missing through type= URL option. For example if you have any URL that contains CSV data however the url is just foo.com/data then you can pass: url=<a class="ext-link" href="http://foo.com/data&amp;type=csv"><span class="icon">​</span>http://foo.com/data&amp;type=csv</a>
+</p>
+<p>
+Note: Source refactored/updated in example/dataproxy, being tested by running locally localhost:8000.
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-9">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:9" class="cnum">
+      <a href="698.html#comment:9">comment:9</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2010-12-19T17:56:08Z&amp;precision=second.html" title="2010-12-19T17:56:08Z in Timeline">3 years</a> ago by Stiivi
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+pushed parameter passing; change handling of unknown reply type on proxy side: do not raise exception, but reply with 200 Error - unkown reply type, use json/jsonp
+</p>
+
+    </div>
+
+              </div>
+              <div class="change">
+                <h3 class="change">
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2010-12-20T15:22:47Z&amp;precision=second.html" title="2010-12-20T15:22:47Z in Timeline">3 years</a> ago by Stiivi
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Attachment</strong>
+        <a href="../attachment/ticket/698/ckan-dataapi.png.html"><em>ckan-dataapi.png</em></a><a href="../raw-attachment/ticket/698/ckan-dataapi.png" title="Download" class="trac-rawlink">​</a>
+          added
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+Data API through remote data proxy
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-10">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:10" class="cnum">
+      <a href="698.html#comment:10">comment:10</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2010-12-27T17:56:53Z&amp;precision=second.html" title="2010-12-27T17:56:53Z in Timeline">3 years</a> ago by anonymous
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+Data proxy documentation: <a class="ext-link" href="http://democracyfarm.org/dataproxy/api.html"><span class="icon">​</span>http://democracyfarm.org/dataproxy/api.html</a> (included in sources)
+</p>
+<p>
+Updated ('s' as in structured) data proxy app: <a class="ext-link" href="http://sdataproxy.appspot.com"><span class="icon">​</span>http://sdataproxy.appspot.com</a>
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-11">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:11" class="cnum">
+      <a href="698.html#comment:11">comment:11</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2010-12-29T19:10:15Z&amp;precision=second.html" title="2010-12-29T19:10:15Z in Timeline">3 years</a> ago by rgrp
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Status</strong>
+        changed from <em>new</em> to <em>closed</em>
+    </li><li>
+      <strong>Resolution</strong>
+        set to <em>fixed</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+This ticket is complete:
+</p>
+<ul><li>ckanext-dataapi: working /api/data/{resource-id} with tests
+</li><li><a class="ext-link" href="https://bitbucket.org/okfn/dataproxy"><span class="icon">​</span>https://bitbucket.org/okfn/dataproxy</a> - the dataproxy code running at <a class="ext-link" href="http://jsonpdataproxy.appspot.com"><span class="icon">​</span>http://jsonpdataproxy.appspot.com</a>
+<ul><li>functioning but needs tests and improvements
+</li></ul></li></ul><p>
+There a whole bunch of improvements to be done but these will be in <a class="closed ticket" href="888.html" title="enhancement: Improvements to the dataproxy and the data API (closed: fixed)">ticket:888</a>
+</p>
+
+    </div>
+
+              </div>
+          </div>
+        </div>
+      <div id="help"><strong>Note:</strong> See
+        <a href="../wiki/TracTickets.html">TracTickets</a> for help on using
+        tickets.</div>
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="first">
+          <a rel="nofollow" href="698%3Fformat=csv" class="csv">Comma-delimited Text</a>
+        </li><li>
+          <a rel="nofollow" href="698%3Fformat=tab" class="tab">Tab-delimited Text</a>
+        </li><li class="last">
+          <a rel="nofollow" href="698%3Fformat=rss" class="rss">RSS Feed</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

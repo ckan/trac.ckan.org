@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1628: get ckanext-dgu working with ckan 1.5.1</title>
+    <link>http://localhost/ticket/1628</link>
+    <description>&lt;p&gt;
+johnglover said: I can confirm that even with the mapping fix, the ckanext-dgu dgu_form plugin template does not work properly with 1.5.1, so should probably not be installed at present. The edit page is ugly but should work (eg: &lt;a class="ext-link" href="http://dgu-os.okfn.org/dataset/edit/abandoned-vehicles"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://dgu-os.okfn.org/dataset/edit/abandoned-vehicles&lt;/a&gt;), but the 'add a dataset' page is broken (eg: &lt;a class="ext-link" href="http://dgu-os.okfn.org/dataset/new"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://dgu-os.okfn.org/dataset/new&lt;/a&gt;)
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1628</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>icmurray</dc:creator>
+
+      <pubDate>Mon, 06 Feb 2012 11:16:07 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/1628#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1628#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;wontfix&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

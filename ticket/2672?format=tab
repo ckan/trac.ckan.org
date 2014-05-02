@@ -1,0 +1,4 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2672	Session.is_modified should use passive=True	icmurray	icmurray	"According to sqlalchemy docs [1], when calling Session.is_modified(), the `passive` argument needs to be passed in as True.
+
+[1] http://docs.sqlalchemy.org/en/rel_0_7/orm/session.html?highlight=is_modified#sqlalchemy.orm.session.Session.is_modified"	enhancement	closed	awaiting triage	ckan-v1.8	ckan	fixed			ckan	none

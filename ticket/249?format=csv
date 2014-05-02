@@ -1,0 +1,13 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+249,Regex search,dread,rgrp,"Search of package name and title (and other fields) using regular expressions.
+
+Current example use-case: Wanting to specify packages with title beginning with 'B'.
+
+Issues:
+
+ * Syntax for specifying regex over natural language search - could it be contained in the q param so be available to users of the WUI, or do we simply make it alternative fields?
+
+Implementation:
+
+* Postgres reg ex searching detailed here:
+http://www.postgresql.org/docs/current/static/functions-matching.html#FUNCTIONS-POSIX-TABLE",enhancement,closed,awaiting triage,,ckan,invalid,,,ckan,none

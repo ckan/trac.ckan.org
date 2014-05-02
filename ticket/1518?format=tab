@@ -1,0 +1,13 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1518	CKAN Upload fails if filename has spaces in it	markbrough	rgrp	"E.g. uploading a file with spaces in it:
+OECD Monthly Exchange Rates.zip
+
+Gives a 404 Not Found response to the following file:
+http://test.ckan.org/api/storage/metadata/2011-12-05T193046/OECD%20Monthly%20Exchange%20Rates.zip
+
+The upload wheel keeps spinning and the user is not informed that the upload has failed.
+
+Analysis: turns out that google storage (possibly s3 but not checked) replaces with ' ' in keys with '+' on upload. This breaks things because we try and look up metadata about upload using the filename/key we put in but of course that does not exist because google has changed name.
+
+Fix is trivial: replace ' ' in keys / filenames with '-'.
+"	defect	closed	critical	ckan-sprint-2011-12-19	ckan	fixed			ckanext-storage	none

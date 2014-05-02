@@ -1,0 +1,14 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+318	Insufficient validation of resource URIs	wwaites	rgrp	"The CKAN instance on data.gov.uk serves invalid URIs out of its API.
+
+For example the following can be found,
+
+http://uk.sitestat.com/homeoffice/rds/s?rds.hosb0509tabsxls&ns_type=pdf&ns_url=[http://www.homeoffice.gov.uk/rds/pdfs09/hosb0509tabs.xls]
+
+In this URI, the : and / characters after the ? in the query part are invalid according to section 3.4 of RFC2396
+
+Also URIs are not stripped of whitespace at the end.
+
+This causes problems when other software with a more correct interpretation of what a valid URI is attempts to consume data from CKAN. In this instance the Talis triplestore complains about such URIs.
+
+""Be liberal in what you accept and conservative in what you send"" would seem apt."	defect	new	major		ckan					

@@ -1,0 +1,8 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1526,Update and test existing DGU package form,icmurray,icmurray,"Re-create behaviour of old form without using form-alchemy.  And unit test.
+
+This has mostly been done by kindly earlier in the year.  The main bulk of this work is to write the suite of unit tests ensuring:
+
+ - validation of the various fields
+ - the creation/editions form function as expected (higher-level
+   functional tests)",enhancement,new,major,ckan-sprint-2011-12-19,dgu,,dgu form refactor,dread kindly ira shevski,ckanext-dgu,none

@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2327: Upgrade solr schema to version 1.4</title>
+    <link>http://localhost/ticket/2327</link>
+    <description>&lt;ul&gt;&lt;li&gt;Add Ascii folding filter to text fields.
+&lt;/li&gt;&lt;li&gt;Add capacity field for public, private access.
+&lt;/li&gt;&lt;li&gt;Add title_string so you can sort alphabetically on title.
+&lt;/li&gt;&lt;li&gt;Fields related to analytics, access and view counts.
+&lt;/li&gt;&lt;li&gt;Add data_dict field for the whole package_dict.
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+actual implementation of data_dict adding will be added later.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2327</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>kindly</dc:creator>
+
+      <pubDate>Wed, 25 Apr 2012 17:31:24 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/2327#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/2327#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/2327?action=diff&amp;amp;version=1"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>amercader</dc:creator>
+
+      <pubDate>Mon, 28 May 2012 11:43:17 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/2327#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/2327#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

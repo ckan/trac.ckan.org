@@ -1,0 +1,28 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+442,Importing data,dread,dread,"Review what chunks of code we have and how to move forward with requirements.
+
+Requirements:
+
+ * Bulk parsing is done away from the CKAN server
+
+Possible future requirements:
+
+ * /importer for importing spreadsheets in WUI
+ * validation-light - 'scoring' a package
+
+Current importers:
+
+ * /importer controller uses: PackageImporter, form, PackageSaver
+ * loader uses: package_importer -> API
+ * API uses: form, PackageSaver
+
+
+Modules
+
+ * package_importer:
+   * xls/csv --SpreadsheetData--> table
+   * table --DataRecords--> records
+   * records --PackageImporter--> pkg_dicts
+
+ * pkg_dict --form--> fs & validation
+ * fs --PackageSaver--> package",requirement,closed,awaiting triage,ckan-v1.3,component1,worksforme,,,,

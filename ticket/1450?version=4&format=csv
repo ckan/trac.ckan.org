@@ -1,0 +1,14 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1450,Simplify dataset view page,johnglover,zephod,"See http://wiki.ckan.org/Dataset_and_Resource_Pages_Proposal
+
+ * Create a collapsible section for the README
+ * Reduce the number of things on the page
+ * Tidy up groups and tags in the sidebar
+ * Resource view becomes a list of search results
+
+(additional)
+ * Resource navbar item links to first resource
+ * Resource navbar has a dropdown menu of all resources in the dataset
+ * Edit and Authz navbar items should be in a separate logical group to the right
+
+Very rough summary: create more info section and move stuff out (relayout page e.g. README, tags etc)",enhancement,assigned,major,ckan-sprint-2011-12-05,ckan,,ux,,ckan,none

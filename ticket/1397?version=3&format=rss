@@ -1,0 +1,227 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1397: [super] Resource archiving</title>
+    <link>http://localhost/ticket/1397</link>
+    <description>&lt;p&gt;
+We want to cache/archive data associated to a resource so it is available if the resource url disappears (and in order to support other processing we may wish to do e.g. webstorer ...)
+&lt;/p&gt;
+&lt;p&gt;
+Etherpad: &lt;a class="ext-link" href="http://ckan.okfnpad.org/queue"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://ckan.okfnpad.org/queue&lt;/a&gt; (most relevant parts inlined here)
+&lt;/p&gt;
+&lt;h2 id="Preliminaries"&gt;Preliminaries&lt;/h2&gt;
+&lt;ul&gt;&lt;li&gt;Add task_status table to store qa/archiever/webstore information that does not need to be versioned. - &lt;a class="closed ticket" href="http://localhost/ticket/1363" title="enhancement: Add task_status table to store qa/archiever/webstore information that does ... (closed: fixed)"&gt;#1363&lt;/a&gt; (and &lt;a class="closed ticket" href="http://localhost/ticket/1371" title="enhancement: Make logic layer functions for working with task_status table (closed: fixed)"&gt;#1371&lt;/a&gt; - related logic functions)
+&lt;/li&gt;&lt;/ul&gt;&lt;h2 id="Tasks"&gt;Tasks&lt;/h2&gt;
+&lt;ol&gt;&lt;li&gt;Resource change notifications in core - Make an IResourceChange and IResourceUrlChange. [1d] [0.75d] -  &lt;a class="closed ticket" href="http://localhost/ticket/1383" title="enhancement: Add IResourceChange IResourceUrlChange Interfaces. (closed: fixed)"&gt;#1383&lt;/a&gt;
+&lt;/li&gt;&lt;li&gt;ckanext-archiver implements IResourceUrlChange and sends tasks to celery. [0.25d][0.25d] - ???
+&lt;/li&gt;&lt;li&gt;Archiver daemon &lt;a class="closed ticket" href="http://localhost/ticket/891" title="task: Resource download worker daemon (closed: fixed)"&gt;#891&lt;/a&gt;
+&lt;ol&gt;&lt;li&gt;implement link-check function and task (point 2 from Archiver.update above) [1d] [0.5d]
+&lt;/li&gt;&lt;li&gt;Rewrite archiver to use external storage. (decide how!)[3d][~2d]
+&lt;/li&gt;&lt;/ol&gt;&lt;/li&gt;&lt;li&gt;Write to resource and task status table.[1d][0.75d]
+&lt;/li&gt;&lt;li&gt;Make archived data available in WUI - &lt;a class="closed ticket" href="http://localhost/ticket/892" title="enhancement: Make stored data available in WUI - 0.5d (closed: fixed)"&gt;#892&lt;/a&gt;
+&lt;/li&gt;&lt;/ol&gt;&lt;h2 id="Archiverprocess"&gt;Archiver process&lt;/h2&gt;
+&lt;p&gt;
+Archiver:
+&lt;/p&gt;
+&lt;ol class="arabiczero"&gt;&lt;li&gt;A resource is added to CKAN
+&lt;/li&gt;&lt;li&gt;IResourceCreate event generated
+&lt;/li&gt;&lt;li&gt;IF: resource url points to ckan storage or falls within some other set of exclusion conditions then END else continue
+&lt;/li&gt;&lt;li&gt;Generate a Archiver.Update task with resource.id
+&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;
+Archiver.update
+&lt;/p&gt;
+&lt;ol&gt;&lt;li&gt;[Archiver.Update checks queue (automated as part of celery)]
+&lt;/li&gt;&lt;li&gt;Open url
+&lt;ol&gt;&lt;li&gt;If FAILURE status: update task_status table (could retry if not more than 3 failures so far). Report task failure in celery
+&lt;/li&gt;&lt;li&gt;Check headers for content-length and content-type ...
+&lt;ul&gt;&lt;li&gt;IF: content-length &amp;gt; max_content_length: EXIT (store outcomes on task_status, and update resource with size and content-type and any other info we get?)
+&lt;/li&gt;&lt;li&gt;ELSE: check content-type.
+&lt;ul&gt;&lt;li&gt;IF: NOT data stuff (e.g. text/html) then EXIT. (store outcomes and info on resource)
+&lt;/li&gt;&lt;li&gt;ELSE: archive it (compute md5 hash etc)
+&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ol&gt;&lt;/li&gt;&lt;li&gt;Archive it: connect to storage system and store it. Bucket: from config, Key: /{timestamp}/{resourceid}/filename.ext
+&lt;ul&gt;&lt;li&gt;Add cache url to resource and updated date
+&lt;/li&gt;&lt;li&gt;Update task_status
+&lt;/li&gt;&lt;li&gt;Add other relevant info to resource such as md5, content-type etc
+&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;
+Link checker: same as Archiver.update up to 2.1
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1397</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Thu, 13 Oct 2011 18:17:04 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/1397#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1397#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1397?action=diff&amp;amp;version=1"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Fri, 14 Oct 2011 13:25:21 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/1397#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/1397#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1397?action=diff&amp;amp;version=2"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Fri, 14 Oct 2011 13:34:24 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/1397#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/1397#comment:3</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1397?action=diff&amp;amp;version=3"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Fri, 14 Oct 2011 13:34:36 GMT</pubDate>
+      <title>milestone changed</title>
+      <link>http://localhost/ticket/1397#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/1397#comment:4</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan-v1.6&lt;/em&gt; to &lt;em&gt;ckan-sprint-2011-10-24&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Fri, 14 Oct 2011 13:46:06 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/1397#comment:5</link>
+      <guid isPermaLink="false">http://localhost/ticket/1397#comment:5</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1397?action=diff&amp;amp;version=5"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Fri, 14 Oct 2011 14:18:56 GMT</pubDate>
+      <title>priority, description, milestone changed</title>
+      <link>http://localhost/ticket/1397#comment:6</link>
+      <guid isPermaLink="false">http://localhost/ticket/1397#comment:6</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;priority&lt;/strong&gt;
+                changed from &lt;em&gt;awaiting triage&lt;/em&gt; to &lt;em&gt;major&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1397?action=diff&amp;amp;version=6"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan-sprint-2011-10-24&lt;/em&gt; to &lt;em&gt;ckan-v1.6&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Fri, 14 Oct 2011 14:21:06 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/1397#comment:7</link>
+      <guid isPermaLink="false">http://localhost/ticket/1397#comment:7</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1397?action=diff&amp;amp;version=7"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>kindly</dc:creator>
+
+      <pubDate>Wed, 19 Oct 2011 10:47:18 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/1397#comment:8</link>
+      <guid isPermaLink="false">http://localhost/ticket/1397#comment:8</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1397?action=diff&amp;amp;version=8"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>kindly</dc:creator>
+
+      <pubDate>Wed, 19 Oct 2011 10:50:48 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/1397#comment:9</link>
+      <guid isPermaLink="false">http://localhost/ticket/1397#comment:9</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1397?action=diff&amp;amp;version=9"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>kindly</dc:creator>
+
+      <pubDate>Mon, 28 May 2012 11:02:00 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/1397#comment:10</link>
+      <guid isPermaLink="false">http://localhost/ticket/1397#comment:10</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

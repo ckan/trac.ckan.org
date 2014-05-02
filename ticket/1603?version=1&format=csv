@@ -1,0 +1,12 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1603,Search query builder,rgrp,rgrp,"Super ticket: #1745
+
+Ability to build up search query using a nice javascript-y interface.
+
+ * Add facets by selecting attribute and adding -> search facet options in dropdown -> added to search (with 'x' to remove -- as we currently do).
+  * (a bit like the data.hri.fi)
+ * Some improvements to css
+  * See http://eutr.ep.io/
+ * Improvements to faceting
+  * Ability to configure faceting and number of items to show (?)
+ * Pure JS search implementation to make it easy to reuse across site",enhancement,new,awaiting triage,ckan-v1.6,ckan,,,,ckan,none

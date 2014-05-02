@@ -1,0 +1,6 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2900,snippets/package_list.html template crashes on dataset that has no 'notes',seanh,,"Sometimes a dataset dict comes through package_show() with 'notes': None and then the 'notes' key gets stripped from the dict when validation happens (validation only happens if there's an IDatasetForm plugin with a db_to_form_schema() method) and then package_list.html template crashes, e.g. on user profile pages.
+
+Fix in the template? Or in the schema?
+
+The template also crashes on packages with no tags (empty list gets stripped from dict) and probably other empty fields as well",defect,new,awaiting triage,ckan-v1.8.1,ckan,,,,ckan,none

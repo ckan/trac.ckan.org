@@ -1,0 +1,14 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+53,View Information about Package history (i.e. package revisions),rgrp,rgrp,"= As A =
+
+Visitor/User
+
+= I want to =
+
+View information about a package history, i.e. what revisions it has.
+
+= Details =
+
+  * History info should be available at package/history/pkg-name
+  * Most basic info is just info from revision (when it occurred, author etc)
+  * More sophisticated would be to have diff support to see differences between revisions",enhancement,closed,major,v0.8,ckan,fixed,,,,

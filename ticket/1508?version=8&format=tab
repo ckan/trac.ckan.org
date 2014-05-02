@@ -1,0 +1,13 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1508	[super] Finalize and deploy some of our major (new) features as of Dec 2011	rgrp	ross	"This ticket is about finalizing, then deploying (to http://thedatahub.org/), and finally announcing some of recent major new features such as:
+
+  * Deploy wordpresser extension for thedatahub (so we can start blogging) - #1533
+  * Deploy new Resource and Dataset pages (invite comments)
+  * Get thedatahub geo-ified i.e. ckanext-spatial - #1601 (?)
+    * Any additional dev that needs to be done? (e.g. geo in search ...?)
+  * Deploy / re-enable ckanext-googleanalytics on thedatahub - #1566
+    * Rename the extension to ckanext-analytics?
+  * Custom forms (and use of 'dataset types') - Ticket (??)
+  * Get QA deployed and running - #1594
+
+It would be best if this was done by someone *unfamiliar* with the extensions so feedback could be provided on quality of install docs etc etc."	enhancement	assigned	major	ckan-v1.6	ckan				ckan	none

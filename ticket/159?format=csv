@@ -1,0 +1,9 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+159,Searching for tags:... resulting in lots of tags being found,rgrp,dread,"Search of form: tags: ... behaves differently depending on whether there is a leading space:
+
+  * tags: postcode - tags found correctly but no packages found
+  * tags:postcode - tags incorrectly found but correct packages found
+
+Let's fix this.
+
+Cost: 0.5h",defect,closed,critical,v0.11,ckan,fixed,,,,

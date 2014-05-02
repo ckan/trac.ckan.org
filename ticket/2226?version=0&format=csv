@@ -1,0 +1,42 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2226,[super] Refactor and improve documentation (v1.7),rgrp,,"Documentation is key to the success of projects!
+
+= Move material into main docs from wiki =
+
+ * http://wiki.ckan.org/Writing_asynchronous_tasks
+
+= Create a User Guide =
+
+Basic step-by-step on getting started with CKAN (See start on set of slides here e.g. http://blog.thedatahub.org/2012/03/02/tutorial-publish-data-with-the-datahub/)
+
+ * Sign up
+ * Publishing data
+ * Authorization and workflows
+
+= Break into sections =
+
+Suggest something like:
+
+{{{
+# For Administrators
+
+* Installation and Setup
+  * Configuration options
+* Customization - Theming etc
+* Authorization and Workflows
+* Storage
+
+# For Users (Publishers, Data Wranglers, etc etc)
+
+* Storage
+* API (see Developers section)
+
+# CKAN Developers
+
+* API
+* Extensions
+* i18n
+
+CKAN Developers
+* Buildbot
+}}}",enhancement,new,major,ckan-v1.7,ckan,,,,ckan,none

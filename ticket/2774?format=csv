@@ -1,0 +1,8 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2774,Provide a method of passing localised strings into the JavaScript,aron.carroll,toby,"We need to be able to do the following:
+
+ * Rip the localised strings from the JavaScript source code. These are strings that look like {{{_('String')}}}, {{{translate('String') }}} and {{{ isPlural('String') }}}.
+ * An endpoint that provides the translations in the correct locale for the user.
+ * The endpoint should provide the locale as JSON (possibly using http://jsgettext.berlios.de/doc/html/po2json.html or similar tool)
+
+The JavaScript can then read this file on page load.",enhancement,closed,critical,demo phase 3,ckan,fixed,,,ckan,none

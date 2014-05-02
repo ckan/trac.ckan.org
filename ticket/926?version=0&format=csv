@@ -1,0 +1,8 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+926,Pick a simpler form framework,sebbacon,sebbacon,"The current formalchemy setup conflates view, controller and model code in a way that makes it hard to debug and customise.
+
+Review existing (and potentially non-existing) frameworks with a view to porting forms over to something more explicit and lightweight.
+
+Implement the current Package forms as an example of how this would work.
+
+Document and circulate.",enhancement,new,awaiting triage,,ckan,,forms,,,

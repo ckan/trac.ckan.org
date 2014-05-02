@@ -1,0 +1,577 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      #1591 (Upgrade CKAN 1.5 instances)
+     – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="prev" href="1590.html" title="Ticket #1590" />
+        <link rel="last" href="3030.html" title="Ticket #3030" />
+        <link rel="help" href="../wiki/TracGuide.html" />
+        <link rel="alternate" href="1591%3Fformat=csv" type="text/csv" class="csv" title="Comma-delimited Text" /><link rel="alternate" href="1591%3Fformat=tab" type="text/tab-separated-values" class="tab" title="Tab-delimited Text" /><link rel="alternate" href="1591%3Fformat=rss" type="application/rss+xml" class="rss" title="RSS Feed" />
+        <link rel="next" href="1592.html" title="Ticket #1592" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/ticket.css" type="text/css" />
+        <link rel="first" href="1.html" title="Ticket #1" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript">
+      var auto_preview_timeout=2.0;
+      var form_token="93d81ccf9a7bb1c456462f62";
+    </script>
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script><script type="text/javascript" src="../chrome/common/js/wikitoolbar.js"></script><script type="text/javascript" src="../chrome/common/js/resizer.js"></script><script type="text/javascript" src="../chrome/common/js/auto_preview.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("div.description").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $(".foldable").enableFolding(false, true);
+        var args = {realm: "ticket", id: 1591, escape_newlines: 0}
+        $("#comment").autoPreview("/wiki_render", args, function(textarea, text, rendered) {
+            $("#ticketchange div.comment").html(rendered);
+            if (rendered)
+              $("#ticketchange").show();
+            else if ($("#ticketchange ul.changes").length == 0)
+              $("#ticketchange").hide();
+        });
+        $("#trac-comment-editor textarea").autoPreview("/wiki_render", args,
+                                                       function(textarea, text, rendered) {
+          var comment = $("#trac-comment-editor").next("div.comment");
+          comment.html(rendered);
+          if (rendered)
+            comment.show();
+          else
+            comment.hide();
+        });
+        $("#modify").parent().toggleClass("collapsed");
+        $(".trac-topnav a").click(function() { $("#modify").parent().removeClass("collapsed"); });
+        /* only enable control elements for the currently selected action */
+        var actions = $("#action input[name='action']");
+        function updateActionFields() {
+          actions.each(function () {
+            $(this).siblings().find("*[id]").enable($(this).checked());
+            $(this).siblings().filter("*[id]").enable($(this).checked());
+          });
+        }
+        actions.click(updateActionFields);
+        updateActionFields();
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="../wiki/TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li class="active"><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="1590.html" title="Ticket #1590">Previous Ticket</a></span></li><li class="last"><span><a class="next" href="1592.html" title="Ticket #1592">Next Ticket</a> &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="ticket">
+      <h1 id="trac-ticket-title">
+          <a href="1591.html">Ticket #1591</a>
+          <span class="status">(closed enhancement: fixed)</span>
+      </h1>
+      <div id="ticket">
+  <div class="date">
+    <p>Opened <a class="timeline" href="../timeline%3Ffrom=2011-12-21T17:14:18Z&amp;precision=second.html" title="2011-12-21T17:14:18Z in Timeline">2 years</a> ago</p>
+    <p>Last modified <a class="timeline" href="../timeline%3Ffrom=2012-02-09T12:11:10Z&amp;precision=second.html" title="2012-02-09T12:11:10Z in Timeline">2 years</a> ago</p>
+  </div>
+  <h2 class="summary searchable">Upgrade CKAN 1.5 instances</h2>
+  <table class="properties">
+    <tr>
+      <th id="h_reporter">Reported by:</th>
+      <td headers="h_reporter" class="searchable">
+        <a href="../query%3Fstatus=!closed&amp;reporter=dread.html">dread</a>
+      </td>
+      <th id="h_owner">Owned by:</th>
+      <td headers="h_owner">
+        <a href="../query%3Fstatus=!closed&amp;owner=icmurray.html">icmurray</a>
+      </td>
+    </tr>
+    <tr>
+        <th id="h_priority">
+          Priority:
+        </th>
+        <td headers="h_priority">
+              <a href="../query%3Fstatus=!closed&amp;priority=awaiting+triage.html">awaiting triage</a>
+        </td>
+        <th id="h_milestone">
+          Milestone:
+        </th>
+        <td headers="h_milestone">
+              <a class="closed milestone" href="../milestone/ckan-sprint-2012-01-23.html">ckan-sprint-2012-01-23</a>
+        </td>
+    </tr><tr>
+        <th id="h_component">
+          Component:
+        </th>
+        <td headers="h_component">
+              <a href="../query%3Fstatus=!closed&amp;component=ckan.html">ckan</a>
+        </td>
+        <th id="h_keywords">
+          Keywords:
+        </th>
+        <td headers="h_keywords" class="searchable">
+              <a href="../query%3Fstatus=!closed&amp;keywords=~1d.html">1d</a>
+        </td>
+    </tr><tr>
+        <th id="h_cc">
+          Cc:
+        </th>
+        <td headers="h_cc" class="searchable">
+              <a href="../query%3Fstatus=!closed&amp;cc=~thejimmyg.html">thejimmyg</a>, <a href="../query%3Fstatus=!closed&amp;cc=~rgrp.html">rgrp</a>, <a href="../query%3Fstatus=!closed&amp;cc=~nils.toedtmann.html">nils.toedtmann</a>
+        </td>
+        <th id="h_repo">
+          Repository:
+        </th>
+        <td headers="h_repo">
+              <a href="../query%3Fstatus=!closed&amp;repo=ckan.html">ckan</a>
+        </td>
+    </tr><tr>
+        <th id="h_theme">
+          Theme:
+        </th>
+        <td headers="h_theme">
+              <a href="../query%3Fstatus=!closed&amp;theme=none.html">none</a>
+        </td>
+        <th>
+        </th>
+        <td>
+        </td>
+    </tr>
+  </table>
+  <div class="description">
+    <h3 id="comment:description">
+      Description
+      <span class="lastmod" title="2012-01-05 11:49:56+00:00">
+        (last modified by dread)
+        (<a href="1591%3Faction=diff&amp;version=5.html">diff</a>)
+      </span>
+    </h3>
+    <div class="searchable">
+      <p>
+CKAN 1.5 installations need to be upgrade to 1.5.1.
+</p>
+<p>
+Working methodically through the CKANs on <a class="ext-link" href="http://datacatalogs.org/group/ckan"><span class="icon">​</span>http://datacatalogs.org/group/ckan</a> :
+</p>
+<p>
+At 1.5:
+</p>
+<ul><li>ckan-brazil <a class="ext-link" href="http://br.ckan.net/"><span class="icon">​</span>http://br.ckan.net/</a> s057 - DONE
+</li><li>ckan_ireland <a class="ext-link" href="http://ie.ckan.net/"><span class="icon">​</span>http://ie.ckan.net/</a> s057 - DONE 
+</li><li>cz-ckan-net <a class="ext-link" href="http://cz.ckan.net/"><span class="icon">​</span>http://cz.ckan.net/</a> s057 - DONE
+</li><li>datakilder-no <a class="ext-link" href="http://no.ckan.net/"><span class="icon">​</span>http://no.ckan.net/</a> s057 - DONE
+</li><li>data_gov_uk <a class="ext-link" href="http://catalogue.data.gov.uk/"><span class="icon">​</span>http://catalogue.data.gov.uk/</a> 
+</li><li>datacatalogs-org <a class="ext-link" href="http://datacatalogs.org/"><span class="icon">​</span>http://datacatalogs.org/</a> s054 - DONE
+</li></ul><p>
+Other versions:
+</p>
+<ul><li>berlin-open-data <a class="ext-link" href="http://daten.berlin.de/"><span class="icon">​</span>http://daten.berlin.de/</a> CKAN hidden
+</li><li>ckan-italia <a class="ext-link" href="http://it.ckan.net/"><span class="icon">​</span>http://it.ckan.net/</a> 1.3.3b
+</li><li>ckan-poland <a class="ext-link" href="http://pl.ckan.net/"><span class="icon">​</span>http://pl.ckan.net/</a> Down
+</li><li>data-norge-no <a class="ext-link" href="http://data.norge.no/"><span class="icon">​</span>http://data.norge.no/</a> CKAN hidden
+</li><li>datadotgc-ca <a class="ext-link" href="http://datadotgc.ca/"><span class="icon">​</span>http://datadotgc.ca/</a> <a class="ext-link" href="http://ca.ckan.net/"><span class="icon">​</span>http://ca.ckan.net/</a> 1.4.2a 
+</li><li>datagm <a class="ext-link" href="http://www.datagm.org.uk/"><span class="icon">​</span>http://www.datagm.org.uk/</a> 1.3.3
+</li><li>datagov-ru <a class="ext-link" href="http://datagov.ru/"><span class="icon">​</span>http://datagov.ru/</a> CKAN hidden
+</li><li>datospublicos-org <a class="ext-link" href="http://datospublicos.org/"><span class="icon">​</span>http://datospublicos.org/</a> 1.4.2
+</li><li>iati-registry <a class="ext-link" href="http://iatiregistry.org/"><span class="icon">​</span>http://iatiregistry.org/</a> 1.5.1c
+</li><li>katalog-offene-daten-oesterreich <a class="ext-link" href="http://offener.datenkatalog.at/"><span class="icon">​</span>http://offener.datenkatalog.at/</a> 1.3.3b
+</li><li>nosdonnees_fr <a class="ext-link" href="http://www.nosdonnees.fr/"><span class="icon">​</span>http://www.nosdonnees.fr/</a> 1.3.1a
+</li><li>opengov-fi <a class="ext-link" href="http://opengov.fi/"><span class="icon">​</span>http://opengov.fi/</a> CKAN hidden
+</li><li>opengov_es <a class="ext-link" href="http://opengov.es/"><span class="icon">​</span>http://opengov.es/</a> 1.2
+</li><li>publicdata-eu <a class="ext-link" href="http://publicdata.eu/"><span class="icon">​</span>http://publicdata.eu/</a> 1.4.2a
+</li><li>the-data-hub <a class="ext-link" href="http://thedatahub.org/"><span class="icon">​</span>http://thedatahub.org/</a> 1.5.1
+</li><li>helsinki_finland <a class="ext-link" href="http://hri.fi/"><span class="icon">​</span>http://hri.fi/</a> CKAN hidden
+</li></ul><p>
+Now deleted from datacatalogs.org:
+</p>
+<ul><li>ckan-belgium <a class="ext-link" href="http://be.ckan.net/"><span class="icon">​</span>http://be.ckan.net/</a> Migrated
+</li><li>si-ckan-net <a class="ext-link" href="http://si.ckan.net/"><span class="icon">​</span>http://si.ckan.net/</a> migrated
+</li><li>gr-ckan-net <a class="ext-link" href="http://gr.ckan.net/"><span class="icon">​</span>http://gr.ckan.net/</a> Migrated
+</li><li>hu-ckan-net <a class="ext-link" href="http://hu.ckan.net/"><span class="icon">​</span>http://hu.ckan.net/</a> Migrated
+</li><li>ckan-lithuania <a class="ext-link" href="http://lt.ckan.net/"><span class="icon">​</span>http://lt.ckan.net/</a> Migrated
+</li></ul>
+    </div>
+  </div>
+</div>
+          
+
+        <div>
+          <h2 class="foldable">Change History</h2>
+          <div id="changelog">
+              <div class="change" id="trac-change-1">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:1" class="cnum">
+      <a href="1591.html#comment:1">comment:1</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-12-22T12:11:39Z&amp;precision=second.html" title="2011-12-22T12:11:39Z in Timeline">2 years</a> ago by dread
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Description</strong>
+        modified (<a href="1591%3Faction=diff&amp;version=1.html">diff</a>)
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-2">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:2" class="cnum">
+      <a href="1591.html#comment:2">comment:2</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-12-22T12:43:53Z&amp;precision=second.html" title="2011-12-22T12:43:53Z in Timeline">2 years</a> ago by dread
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Description</strong>
+        modified (<a href="1591%3Faction=diff&amp;version=2.html">diff</a>)
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-3">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:3" class="cnum">
+      <a href="1591.html#comment:3">comment:3</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-12-22T12:44:54Z&amp;precision=second.html" title="2011-12-22T12:44:54Z in Timeline">2 years</a> ago by dread
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Description</strong>
+        modified (<a href="1591%3Faction=diff&amp;version=3.html">diff</a>)
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-4">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:4" class="cnum">
+      <a href="1591.html#comment:4">comment:4</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-01-04T19:21:47Z&amp;precision=second.html" title="2012-01-04T19:21:47Z in Timeline">2 years</a> ago by dread
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Description</strong>
+        modified (<a href="1591%3Faction=diff&amp;version=4.html">diff</a>)
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+Today I upgraded s057: br  cz  ie  norway
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-5">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:5" class="cnum">
+      <a href="1591.html#comment:5">comment:5</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-01-05T11:49:56Z&amp;precision=second.html" title="2012-01-05T11:49:56Z in Timeline">2 years</a> ago by dread
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Cc</strong>
+        <em>thejimmyg</em> added
+    </li><li>
+      <strong>Owner</strong>
+        changed from <em>dread</em> to <em>icmurray</em>
+    </li><li>
+      <strong>Status</strong>
+        changed from <em>new</em> to <em>assigned</em>
+    </li><li>
+      <strong>Description</strong>
+        modified (<a href="1591%3Faction=diff&amp;version=5.html">diff</a>)
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+I've now completed the upgrade for datacatalogs.org. All that remains now is DGU. Reassigning to Ian as I'm away shortly.
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-6">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:6" class="cnum">
+      <a href="1591.html#comment:6">comment:6</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-01-06T16:10:29Z&amp;precision=second.html" title="2012-01-06T16:10:29Z in Timeline">2 years</a> ago by rgrp
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+Report of time spent / time estimate would be brilliant :-)
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-7">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:7" class="cnum">
+      <a href="1591.html#comment:7">comment:7</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-01-09T13:59:28Z&amp;precision=second.html" title="2012-01-09T13:59:28Z in Timeline">2 years</a> ago by dread
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+Spent about one day on this from myself.
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-8">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:8" class="cnum">
+      <a href="1591.html#comment:8">comment:8</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-01-12T19:05:17Z&amp;precision=second.html" title="2012-01-12T19:05:17Z in Timeline">2 years</a> ago by icmurray
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Milestone</strong>
+        changed from <em>ckan-sprint-2012-01-09</em> to <em>current-ckan-sprint-2012-01-23</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-9">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:9" class="cnum">
+      <a href="1591.html#comment:9">comment:9</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-01-12T19:14:41Z&amp;precision=second.html" title="2012-01-12T19:14:41Z in Timeline">2 years</a> ago by icmurray
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Keywords</strong>
+        <em>1d</em> added
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-10">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:10" class="cnum">
+      <a href="1591.html#comment:10">comment:10</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-01-23T11:15:21Z&amp;precision=second.html" title="2012-01-23T11:15:21Z in Timeline">2 years</a> ago by rgrp
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Status</strong>
+        changed from <em>assigned</em> to <em>closed</em>
+    </li><li>
+      <strong>Resolution</strong>
+        set to <em>fixed</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+Done. (DGU waiting on integration)
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-11">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:11" class="cnum">
+      <a href="1591.html#comment:11">comment:11</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-01-23T12:03:29Z&amp;precision=second.html" title="2012-01-23T12:03:29Z in Timeline">2 years</a> ago by dread
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+All covered off. DGU is 1.5 but security issue fixed previously.
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-12">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:12" class="cnum">
+      <a href="1591.html#comment:12">comment:12</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-02-08T21:17:29Z&amp;precision=second.html" title="2012-02-08T21:17:29Z in Timeline">2 years</a> ago by nils.toedtmann
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Cc</strong>
+        <em>rgrp</em>, <em>nils.toedtmann</em> added
+    </li><li>
+      <strong>Status</strong>
+        changed from <em>closed</em> to <em>reopened</em>
+    </li><li>
+      <strong>Resolution</strong>
+        <em>fixed</em> deleted
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+Some critical CKANs (e.g. PDEU, DataNL, DataGM) seem to be still on pre-1.5 versions. Shouldn't they be upgraded too? Or is that tracked elsewhere?
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-13">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:13" class="cnum">
+      <a href="1591.html#comment:13">comment:13</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-02-09T12:11:10Z&amp;precision=second.html" title="2012-02-09T12:11:10Z in Timeline">2 years</a> ago by dread
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Status</strong>
+        changed from <em>reopened</em> to <em>closed</em>
+    </li><li>
+      <strong>Resolution</strong>
+        set to <em>fixed</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+This ticket was created in response to the security issue in CKAN 1.5 only - it does not affect other versions.
+</p>
+<p>
+There is a different argument to upgrade older CKANs installed elsewhere, but there tend to be problems with extensions and themes not being compatible, so I think should be considered on a case-by-case basis and how much budget is available.
+</p>
+
+    </div>
+
+              </div>
+          </div>
+        </div>
+      <div id="help"><strong>Note:</strong> See
+        <a href="../wiki/TracTickets.html">TracTickets</a> for help on using
+        tickets.</div>
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="first">
+          <a rel="nofollow" href="1591%3Fformat=csv" class="csv">Comma-delimited Text</a>
+        </li><li>
+          <a rel="nofollow" href="1591%3Fformat=tab" class="tab">Tab-delimited Text</a>
+        </li><li class="last">
+          <a rel="nofollow" href="1591%3Fformat=rss" class="rss">RSS Feed</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

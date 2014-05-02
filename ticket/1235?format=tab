@@ -1,0 +1,11 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1235	[super] Search Improvements	thejimmyg		"Child tickets:
+
+ * #234 UI Review - Autocomplete package names & tags in search
+ * #193	Searching by time-related field
+ * #191	Searching by modification date
+ * #905 Unable to search with accented characters in package names
+ * #906 Ability to search without accents for accented words
+ * #924 Search box has no search button
+
+Broadly speaking though we need to choose PostgreSQL, Solr or something else. We don't want to invest our time maintaining two search backends with a limited abstraction layer between the two."	enhancement	new	major	ckan-future	ckan				ckan	none

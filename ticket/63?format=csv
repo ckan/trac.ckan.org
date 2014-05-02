@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+63,Purge is broken after upgrade of vdm,rgrp,rgrp,"Since we upgraded to new vdm (v0.4) which has built in purge support existing purge support looks to be broken. Should be reasonably easy to fix this.
+
+Cost: 1h",defect,closed,critical,v0.9,ckan,fixed,,,,

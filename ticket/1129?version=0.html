@@ -1,0 +1,413 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      #1129 (CREP0002: Moderated  Edits)
+     – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="prev" href="1128.html" title="Ticket #1128" />
+        <link rel="last" href="3030.html" title="Ticket #3030" />
+        <link rel="help" href="../wiki/TracGuide.html" />
+        <link rel="alternate" href="1129%3Fversion=0&amp;format=csv" type="text/csv" class="csv" title="Comma-delimited Text" /><link rel="alternate" href="1129%3Fversion=0&amp;format=tab" type="text/tab-separated-values" class="tab" title="Tab-delimited Text" /><link rel="alternate" href="1129%3Fversion=0&amp;format=rss" type="application/rss+xml" class="rss" title="RSS Feed" />
+        <link rel="next" href="1130.html" title="Ticket #1130" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/ticket.css" type="text/css" />
+        <link rel="first" href="1.html" title="Ticket #1" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript">
+      var auto_preview_timeout=2.0;
+      var form_token="93d81ccf9a7bb1c456462f62";
+    </script>
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script><script type="text/javascript" src="../chrome/common/js/wikitoolbar.js"></script><script type="text/javascript" src="../chrome/common/js/resizer.js"></script><script type="text/javascript" src="../chrome/common/js/auto_preview.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("div.description").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $(".foldable").enableFolding(false, true);
+        var args = {realm: "ticket", id: 1129, escape_newlines: 0}
+        $("#comment").autoPreview("/wiki_render", args, function(textarea, text, rendered) {
+            $("#ticketchange div.comment").html(rendered);
+            if (rendered)
+              $("#ticketchange").show();
+            else if ($("#ticketchange ul.changes").length == 0)
+              $("#ticketchange").hide();
+        });
+        $("#trac-comment-editor textarea").autoPreview("/wiki_render", args,
+                                                       function(textarea, text, rendered) {
+          var comment = $("#trac-comment-editor").next("div.comment");
+          comment.html(rendered);
+          if (rendered)
+            comment.show();
+          else
+            comment.hide();
+        });
+        $("#modify").parent().toggleClass("collapsed");
+        $(".trac-topnav a").click(function() { $("#modify").parent().removeClass("collapsed"); });
+        /* only enable control elements for the currently selected action */
+        var actions = $("#action input[name='action']");
+        function updateActionFields() {
+          actions.each(function () {
+            $(this).siblings().find("*[id]").enable($(this).checked());
+            $(this).siblings().filter("*[id]").enable($(this).checked());
+          });
+        }
+        actions.click(updateActionFields);
+        updateActionFields();
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="../wiki/TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li class="active"><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="1128.html" title="Ticket #1128">Previous Ticket</a></span></li><li class="last"><span><a class="next" href="1130.html" title="Ticket #1130">Next Ticket</a> &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="ticket">
+      <h1 id="trac-ticket-title">
+          <a href="1129.html">Ticket #1129</a>
+          <span class="status">(new CREP)</span>
+              — at <a href="1129%3Fversion=0.html#comment:description">Initial Version</a>
+      </h1>
+      <div id="ticket">
+  <div class="date">
+    <p>Opened <a class="timeline" href="../timeline%3Ffrom=2011-05-08T10:44:58Z&amp;precision=second.html" title="2011-05-08T10:44:58Z in Timeline">3 years</a> ago</p>
+    <p>Last modified <a class="timeline" href="../timeline%3Ffrom=2011-12-30T18:01:40Z&amp;precision=second.html" title="2011-12-30T18:01:40Z in Timeline">2 years</a> ago</p>
+  </div>
+  <h2 class="summary searchable">CREP0002: Moderated  Edits</h2>
+  <table class="properties">
+    <tr>
+      <th id="h_reporter">Reported by:</th>
+      <td headers="h_reporter" class="searchable">
+        <a href="../query%3Fstatus=!closed&amp;reporter=kindly.html">kindly</a>
+      </td>
+      <th id="h_owner">Owned by:</th>
+      <td headers="h_owner">
+      </td>
+    </tr>
+    <tr>
+        <th id="h_priority">
+          Priority:
+        </th>
+        <td headers="h_priority">
+              <a href="../query%3Fstatus=!closed&amp;priority=major.html">major</a>
+        </td>
+        <th id="h_milestone">
+          Milestone:
+        </th>
+        <td headers="h_milestone">
+              <a class="closed milestone" href="../milestone/ckan-v1.5.html">ckan-v1.5</a>
+        </td>
+    </tr><tr>
+        <th id="h_component">
+          Component:
+        </th>
+        <td headers="h_component">
+              <a href="../query%3Fstatus=!closed&amp;component=ckan.html">ckan</a>
+        </td>
+        <th id="h_keywords">
+          Keywords:
+        </th>
+        <td headers="h_keywords" class="searchable">
+        </td>
+    </tr><tr>
+        <th id="h_cc">
+          Cc:
+        </th>
+        <td headers="h_cc" class="searchable">
+              rufus.pollock@…
+        </td>
+        <th id="h_repo">
+          Repository:
+        </th>
+        <td headers="h_repo">
+              <a href="../query%3Fstatus=!closed&amp;repo=ckan.html">ckan</a>
+        </td>
+    </tr><tr>
+        <th id="h_theme">
+          Theme:
+        </th>
+        <td headers="h_theme">
+              <a href="../query%3Fstatus=!closed&amp;theme=none.html">none</a>
+        </td>
+        <th>
+        </th>
+        <td>
+        </td>
+    </tr>
+  </table>
+  <div class="description">
+    <h3 id="comment:description">
+      Description
+    </h3>
+    <div class="searchable">
+      <p>
+<strong>Proposer:</strong> David Raznick<br />
+</p>
+<h2 id="Abstract.">Abstract.</h2>
+<p>
+We are trying to achieve these goals.
+</p>
+<ul><li>To get people involved with making edits to CKAN metadata. 
+</li><li>To have an ownership model as to who can moderate and validate these changes
+</li><li>To not put too huge a burden on these owners.
+</li></ul><p>
+In order to achieve this, a feature which lets anyone edit a package but only let the moderator/owner accept it.  The moderator should be able to look at a list of changes and accept the ones that
+</p>
+<p>
+This cep is not about 'if' we need such a feature, it is about 'how' we go about implementing it. Another cep may needed for the 'if' case.
+</p>
+<h2 id="TheProblem">The Problem</h2>
+<p>
+We need the following to be possible.
+</p>
+<ul><li>Storing revision of objects that are not the current active one.
+</li><li>A way of the user viewing past revisions.
+</li><li>Accessing not only the history of a particular object but also of related objects at that time. i.e If a resource related to a package changes we need a way to see this when looking at the package.
+</li><li>A robust way of doing this in the face of database schema changes.
+</li><li>Make sure database queries are quick.
+</li></ul><h2 id="Solutions.">Solutions.</h2>
+<ol><li> Store the whole dictization of the package and all its related objects every time you change anything in its dictized representation and only save to the database proper if accepted.
+</li></ol><blockquote>
+<p>
+Pros
+</p>
+</blockquote>
+<ul><li>Easy to implement, we already have a preview which makes the dictized form of a package without actually saving it.  This will just need to be persisted in some way.
+</li><li>Fast retrieval.
+</li><li>Potential to store a branching revision tree of changes.
+</li></ul><blockquote>
+<p>
+Cons
+</p>
+</blockquote>
+<ul><li>No easy way to remake the dictized packages historically or if there is an there a change in the way we represent packages, i.e schema changes.
+</li><li>Will only work for the particular objects we decide to store these changes for.
+</li><li>Stores a lot of repeated information
+</li></ul><ol start="2"><li> Write specialized queries for every read of the database looking only at the revision tables.
+</li></ol><p>
+This method requires there to be a change in the way we use VDM, so that we manage statefulness ourselves. We will need to add other states such as 'waiting for approval'.
+</p>
+<blockquote>
+<p>
+Pros
+</p>
+</blockquote>
+<ul><li>No specialized storage required
+</li><li>Only need to change queries when schema changes
+</li><li>Can be made to work easily for other objects
+</li></ul><blockquote>
+<p>
+Cons
+</p>
+</blockquote>
+<ul><li>Slower query time on read, as even looking at the last active package will need to do a fairly complicated query.
+</li></ul><h2 id="Implementationdetails.">Implementation details.</h2>
+<p>
+1.
+</p>
+<blockquote>
+<p>
+A new table with columns  id, user, package_id, timestamp, revision_id, parent_id, dictized_package.
+revision_id should be null unless it is actually persisted to the database.  parent_id is the id that this package_dict was changed from.
+</p>
+</blockquote>
+<blockquote>
+<p>
+We could store only the diffs of the dictized_package as long as we assure that everything inside the json is stably sorted, this will make getting the historical data out slower.
+</p>
+</blockquote>
+<blockquote>
+<p>
+Getting out the history of the dictized packages is an intensive task, as it will require replaying the whole history of all the changes and creating the dict for each change.  This re-caching will need to be redone for every change we make to dictized representation of a package.
+</p>
+</blockquote>
+<p>
+2.
+</p>
+<blockquote>
+<p>
+Every normal packages read needs to look at the revision table to see the last accepted change in the dictized representation of the package. 
+We also need to way to get what the dictized representation of the package was like at any point of its revision history.  This querying is non-trivial in sql.
+</p>
+</blockquote>
+<blockquote>
+<p>
+There are 3 ways found of doing such queries efficiently. 
+</p>
+</blockquote>
+<blockquote>
+<p>
+These ways have been profiled/tested against package_extras in dgu.  This was chosen as its likely that the package_extras_revision table is the largest table we currently have, with over 100,000 rows.  
+The test was to see how long it would take to get out the package_extras for each of the 6864 packages separately as they were 100 days before the test was run. 
+The test scripts are attached.
+</p>
+</blockquote>
+<ol><li>Using distinct on.
+</li></ol><blockquote>
+<p>
+Pros:  
+</p>
+</blockquote>
+<ul><li>The fastest method tested taking 19.622389s
+</li><li>The most intuitive and maintainable script to write.
+</li><li>The shortest script.
+</li></ul><blockquote>
+<p>
+Cons:
+</p>
+</blockquote>
+<ul><li>No direct sqlalchemy support (coming in 0.7) so only hand written script.
+</li><li>Very postgres specific and not part of the sql standard.
+</li></ul><p>
+        
+</p>
+<ol start="2"><li>Using Window functions
+</li></ol><blockquote>
+<p>
+Pros:  
+</p>
+</blockquote>
+<ul><li>Very fast method tested taking 21.120075s
+</li><li>Fairly straight forward to write
+</li><li>Part of sql standard.
+</li></ul><blockquote>
+<p>
+Cons:
+</p>
+</blockquote>
+<ul><li>No direct sqlalchemy support yet also but coming in 0.7. 
+</li><li>Need upto date version of posgres.
+</li><li>Not supported by sqlite, mysql.
+</li></ul><p>
+         
+</p>
+<ol start="3"><li>Self join
+</li></ol><p>
+      
+</p>
+<blockquote>
+<p>
+Pros:  
+</p>
+</blockquote>
+<ul><li>Database agnostic.
+</li></ul><blockquote>
+<p>
+Cons:
+</p>
+</blockquote>
+<ul><li>Fairly slow 35.285168s
+</li><li>Difficult to write in a way thats reusable
+</li><li>Difficult to nicely in sqlalchemy sql expression
+</li></ul><p>
+  
+</p>
+<blockquote>
+<p>
+If we were to use 1 or 2 we would need to drop any sqlite support for the tests.
+</p>
+</blockquote>
+<blockquote>
+<p>
+There is a forth option of just returning all the rows and finding out the last change before a date however this will throw back a lot of rows especially if there are lots of edits.
+</p>
+</blockquote>
+<h3 id="Participants">Participants</h3>
+<p>
+David Raznick to do it.
+</p>
+<h2 id="Progress.">Progress.</h2>
+<p>
+Need to decide on the correct solution.
+</p>
+
+    </div>
+  </div>
+</div>
+        <div>
+          <h2 class="foldable">Change History</h2>
+          <div id="changelog">
+              <div class="change">
+                <h3 class="change">
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-05-08T10:49:02Z&amp;precision=second.html" title="2011-05-08T10:49:02Z in Timeline">3 years</a> ago by kindly
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Attachment</strong>
+        <a href="../attachment/ticket/1129/sqlspeed.py.html"><em>sqlspeed.py</em></a><a href="../raw-attachment/ticket/1129/sqlspeed.py" title="Download" class="trac-rawlink">​</a>
+          added
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+script run do test speed of various ways of doing a "last before this date" query
+</p>
+
+    </div>
+
+              </div>
+          </div>
+        </div>
+      <div id="help"><strong>Note:</strong> See
+        <a href="../wiki/TracTickets.html">TracTickets</a> for help on using
+        tickets.</div>
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="first">
+          <a rel="nofollow" href="1129%3Fversion=0&amp;format=csv" class="csv">Comma-delimited Text</a>
+        </li><li>
+          <a rel="nofollow" href="1129%3Fversion=0&amp;format=tab" class="tab">Tab-delimited Text</a>
+        </li><li class="last">
+          <a rel="nofollow" href="1129%3Fversion=0&amp;format=rss" class="rss">RSS Feed</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

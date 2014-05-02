@@ -1,0 +1,7 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+103	View a package at a given revision	rgrp	kindly	"As a user I want to view a package at a given revision:
+
+  * When I visit /package/read/xyz?rev=yyy I should be shown package at revision yyy
+  * package history page should provide links to these pages
+
+Cost: 2h"	enhancement	closed	minor	ckan-v1.5	ckan	fixed			ckan	none

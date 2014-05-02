@@ -1,0 +1,440 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      #1127 (CREP0001: Formalise new feature discussion and definition using CREPs)
+     – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="prev" href="1126.html" title="Ticket #1126" />
+        <link rel="last" href="3030.html" title="Ticket #3030" />
+        <link rel="help" href="../wiki/TracGuide.html" />
+        <link rel="alternate" href="1127%3Fversion=3&amp;format=csv" type="text/csv" class="csv" title="Comma-delimited Text" /><link rel="alternate" href="1127%3Fversion=3&amp;format=tab" type="text/tab-separated-values" class="tab" title="Tab-delimited Text" /><link rel="alternate" href="1127%3Fversion=3&amp;format=rss" type="application/rss+xml" class="rss" title="RSS Feed" />
+        <link rel="next" href="1128.html" title="Ticket #1128" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/ticket.css" type="text/css" />
+        <link rel="first" href="1.html" title="Ticket #1" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript">
+      var auto_preview_timeout=2.0;
+      var form_token="93d81ccf9a7bb1c456462f62";
+    </script>
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script><script type="text/javascript" src="../chrome/common/js/wikitoolbar.js"></script><script type="text/javascript" src="../chrome/common/js/resizer.js"></script><script type="text/javascript" src="../chrome/common/js/auto_preview.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("div.description").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $(".foldable").enableFolding(false, true);
+        var args = {realm: "ticket", id: 1127, escape_newlines: 0}
+        $("#comment").autoPreview("/wiki_render", args, function(textarea, text, rendered) {
+            $("#ticketchange div.comment").html(rendered);
+            if (rendered)
+              $("#ticketchange").show();
+            else if ($("#ticketchange ul.changes").length == 0)
+              $("#ticketchange").hide();
+        });
+        $("#trac-comment-editor textarea").autoPreview("/wiki_render", args,
+                                                       function(textarea, text, rendered) {
+          var comment = $("#trac-comment-editor").next("div.comment");
+          comment.html(rendered);
+          if (rendered)
+            comment.show();
+          else
+            comment.hide();
+        });
+        $("#modify").parent().toggleClass("collapsed");
+        $(".trac-topnav a").click(function() { $("#modify").parent().removeClass("collapsed"); });
+        /* only enable control elements for the currently selected action */
+        var actions = $("#action input[name='action']");
+        function updateActionFields() {
+          actions.each(function () {
+            $(this).siblings().find("*[id]").enable($(this).checked());
+            $(this).siblings().filter("*[id]").enable($(this).checked());
+          });
+        }
+        actions.click(updateActionFields);
+        updateActionFields();
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="../wiki/TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li class="active"><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="1126.html" title="Ticket #1126">Previous Ticket</a></span></li><li class="last"><span><a class="next" href="1128.html" title="Ticket #1128">Next Ticket</a> &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="ticket">
+      <h1 id="trac-ticket-title">
+          <a href="1127.html">Ticket #1127</a>
+          <span class="status">(new CREP)</span>
+              — at <a href="1127%3Fversion=3.html#comment:3">Version 3</a>
+      </h1>
+      <div id="ticket">
+  <div class="date">
+    <p>Opened <a class="timeline" href="../timeline%3Ffrom=2011-05-05T13:15:13Z&amp;precision=second.html" title="2011-05-05T13:15:13Z in Timeline">3 years</a> ago</p>
+    <p>Last modified <a class="timeline" href="../timeline%3Ffrom=2011-05-17T09:00:50Z&amp;precision=second.html" title="2011-05-17T09:00:50Z in Timeline">3 years</a> ago</p>
+  </div>
+  <h2 class="summary searchable">CREP0001: Formalise new feature discussion and definition using CREPs</h2>
+  <table class="properties">
+    <tr>
+      <th id="h_reporter">Reported by:</th>
+      <td headers="h_reporter" class="searchable">
+        <a href="../query%3Fstatus=!closed&amp;reporter=sebbacon.html">sebbacon</a>
+      </td>
+      <th id="h_owner">Owned by:</th>
+      <td headers="h_owner">
+      </td>
+    </tr>
+    <tr>
+        <th id="h_priority">
+          Priority:
+        </th>
+        <td headers="h_priority">
+              <a href="../query%3Fstatus=!closed&amp;priority=awaiting+triage.html">awaiting triage</a>
+        </td>
+        <th id="h_milestone">
+          Milestone:
+        </th>
+        <td headers="h_milestone">
+              <a class="missing milestone"></a>
+        </td>
+    </tr><tr>
+        <th id="h_component">
+          Component:
+        </th>
+        <td headers="h_component">
+              <a href="../query%3Fstatus=!closed&amp;component=ckan.html">ckan</a>
+        </td>
+        <th id="h_keywords">
+          Keywords:
+        </th>
+        <td headers="h_keywords" class="searchable">
+        </td>
+    </tr><tr>
+        <th id="h_cc">
+          Cc:
+        </th>
+        <td headers="h_cc" class="searchable">
+        </td>
+        <th id="h_repo">
+          Repository:
+        </th>
+        <td headers="h_repo">
+              <a href="../query%3Fstatus=!closed&amp;repo=ckan.html">ckan</a>
+        </td>
+    </tr><tr>
+        <th id="h_theme">
+          Theme:
+        </th>
+        <td headers="h_theme">
+              <a href="../query%3Fstatus=!closed&amp;theme=none.html">none</a>
+        </td>
+        <th>
+        </th>
+        <td>
+        </td>
+    </tr>
+  </table>
+  <div class="description">
+    <h3 id="comment:description">
+      Description
+      <span class="lastmod" title="2011-05-05 14:34:54+00:00">
+        (last modified by dread)
+        (<a href="1127%3Faction=diff&amp;version=3.html">diff</a>)
+      </span>
+    </h3>
+    <div class="searchable">
+      <p>
+<strong>Proposer:</strong> Seb Bacon<br />
+<strong>Seconder:</strong> Rufus Pollock<br />
+<br />
+</p>
+<h2 id="Abstract">Abstract</h2>
+<p>
+When adding new features to CKAN, a longer, more formal discussion will improve software design quality and documentation, better engage
+the wider community, and ensure the core team are up to date with
+latest developments.  
+</p>
+<p>
+I propose a formal process (CREP -- CKAN Revision and Enhancement Proposal) for making this happen.
+</p>
+<h2 id="TheProblem">The Problem</h2>
+<p>
+The current workflow for introducing major new features into CKAN is
+very informal, typically based around one person's great idea, which
+they've discussed with one or two other people in the team.  The
+originator of the idea is typically the only person with access to all the input they've had through such discussions.  Often, the only location of this information is  in that person's head.
+</p>
+<p>
+However, there is a lot of experience embodied in the CKAN community
+which should be drawn on before making large design decisions.  This
+will lead to better software.  Additionally, building consensus in the
+community around a proposal before implementation ensures positive
+community engagement and buy-in to new features, making them more
+likely to be a success.
+</p>
+<p>
+We aren't great at documenting new features.  Documentation after
+coding is complete is an unrewarding experience for most programmers.
+Requiring skeleton documentation before code is written is a good
+discipline that can form the basis of better documentation in the
+future (e.g. by a writer rather than a programmer).
+</p>
+<h2 id="Specification">Specification</h2>
+<p>
+Minor features don't require a CREP, and can just be entered in the
+issue tracking system as a bug or feature.  As a rule of thumb, a
+feature is major if it will take more than a day to implement, or is
+likely to involve matters of opinion in its design.
+</p>
+<p>
+If a feature requires a CREP, the proposer must first find a seconder
+for their idea.  This sanity check step happens before a CREP is
+written to ensure at least the possibility of consensus on the CREP.
+</p>
+<p>
+Next the proposer should write a CREP, starting by copying and pasting
+the <a class="ext-link" href="http://wiki.ckan.net/CKAN_Revision_and_Enhancement_Proposals"><span class="icon">​</span>template on the wiki</a> into a new Trac ticket.  This will be with a
+CREP status of "draft" and Type of "CREP..  The proposer should notify
+the <a class="ext-link" href="http://lists.okfn.org/mailman/listinfo/ckan-dev"><span class="icon">​</span>ckan-dev</a> mailing
+list, and possibly the
+<a class="ext-link" href="http://lists.okfn.org/mailman/listinfo/ckan-discuss"><span class="icon">​</span>ckan-discuss</a>
+list for less technical CREPs.
+</p>
+<p>
+The draft can be discussed via email, verbally, or via the trac
+ticket.  In any case, it is the proposer's responsibility to keep the
+CREP updated to reflect the current consensus.
+</p>
+<p>
+Once consensus has been reached, the ticket should be marked as
+"accepted" status and assigned to a CKAN release milestone.
+</p>
+<p>
+When an accepted CREP has been implemented, it should be marked as
+"completed".
+</p>
+<p>
+If no consensus can be reached on a draft CREP, or for some reason an
+accepted CREP doesn't get completed, it should be marked as
+"rejected".
+</p>
+<p>
+If a completed CREP becomes obselete, it should be marked as "obselete".
+</p>
+<h2 id="Whydoitthisway">Why do it this way</h2>
+<p>
+Given the distributed nature of the core team plus other volunteers,
+some kind of written procedure is necessary to ensure a fully
+documented and discussed proposal.
+</p>
+<p>
+The idea of "Enhancement Proposals" which can be semi-formally
+proposed and discussed prior to implementation is common in the Open
+Source world (<a class="ext-link" href="http://www.python.org/dev/peps/pep-0001/"><span class="icon">​</span>PEPs</a>,
+<a class="ext-link" href="http://dep.debian.net/"><span class="icon">​</span>DEPs</a>,
+<a class="ext-link" href="http://plone.org/documentation/glossary/plip"><span class="icon">​</span>PLIPs</a>, to name three).
+</p>
+<p>
+Existing historic proposals exist, called CEPs.  The proposed system
+is called CREP (CKAN revision or enhancement proposal) to disambiguate
+it from the legacy proposals, and from the delicious fungus <em>Boletus
+Edulis</em>.
+</p>
+<p>
+Giving a formal structure to the proposal is useful as it gives the
+community a means to identify a CREP that's not had sufficient thought
+or discussion.  An informal email thread can easily be lost and
+important questions (such as backwards compatibility) overlooked.  The
+use of the proposed template empowers any community member to ask the
+proposer to expand on rationale, deliverables, etc.
+</p>
+<p>
+The structure chosen is somewhere between Debian's and Plone's.  It
+aims to give a structure to the debate, a clear start at
+documentation, and also prompt some thinking about implementation and
+timescales.
+</p>
+<p>
+Some projects (e.g. Debian) keep their enhancement proposals in a
+versioning repository; others (e.g. Plone) keep them in an issue
+tracking system.  Trac is proposed for CKAN because we already use it
+for small feature proposals and for team planning.  It seems unlikely
+that change tracking on an individual CREP will be useful; a CREP that
+changes sufficiently from its original form should probably be marked
+"obselete" and a new CREP started.  Using an issue tracking system also
+means we can easily track CREPs by state.
+</p>
+<h2 id="BackwardsCompatibility">Backwards Compatibility</h2>
+<p>
+Some <a class="ext-link" href="https://bitbucket.org/okfn/ceps/src/76b274888bcf/cep/"><span class="icon">​</span>legacy enhancement proposals</a>, called CEPs, have previously been started.
+</p>
+<p>
+They are currently all marked as "active".  Any which require
+discussion should be altered by the proposer to match the new CREP
+specification and submitted to trac.  The original CEP should be
+updated with a banner at the top pointing a reader to the new CREP.
+</p>
+<p>
+Any that are now obselete should be clearly marked as such in a banner
+at the top, pointing a reader to the trac for new CREPs.
+</p>
+<h2 id="Implementationplan">Implementation plan</h2>
+<h3 id="Deliverables">Deliverables</h3>
+<ul><li>This CREP, agreed
+</li><li>Support for proposed statuses in Trac
+</li><li>Canned reports for listing CREPs in Trac
+</li></ul><h3 id="Risksandmitigations">Risks and mitigations</h3>
+<ul><li>That this CREP is agreed, but rarely acted on.  This risk can be
+mitigated by nominating a CREP champion in the community or core
+team, whose job it is to say "where's the CREP for that?" and
+generally own the quality of CREPS
+</li></ul><h3 id="Participants">Participants</h3>
+<p>
+Once agreed, we need a CREP champion -- as yet unassigned
+</p>
+<h3 id="Progress">Progress</h3>
+<p>
+This document is the entire proposal.
+</p>
+
+    </div>
+  </div>
+</div>
+        <div>
+          <h2 class="foldable">Change History</h2>
+          <div id="changelog">
+              <div class="change" id="trac-change-1">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:1" class="cnum">
+      <a href="1127%3Fversion=3.html#comment:1">comment:1</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-05-05T13:15:40Z&amp;precision=second.html" title="2011-05-05T13:15:40Z in Timeline">3 years</a> ago by sebbacon
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Summary</strong>
+        changed from <em>Formalise new feature discussion and definition using CREPs</em> to <em>CREP0001: Formalise new feature discussion and definition using CREPs</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-2">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:2" class="cnum">
+      <a href="1127%3Fversion=3.html#comment:2">comment:2</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-05-05T13:28:04Z&amp;precision=second.html" title="2011-05-05T13:28:04Z in Timeline">3 years</a> ago by wwaites
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+The proposal is not comparable to PEP and DEP because the projects have vastly different requirements. The API stability needs of a programming language or an operating system (e.g. fundamental building blocks that you don't expect to change often or radically) are very different from a web application. The plone one is comparable.
+</p>
+<p>
+The idea itself is a double-edged sword. It will promote stability which is good but can also tend towards rigidity and stagnation which is bad. Each added bit of bureaucracy and process means fewer people will be willing to collaborate or participate in improving the software.
+</p>
+<p>
+Overall, -1.
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-3">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:3" class="cnum">
+      <a href="1127%3Fversion=3.html#comment:3">comment:3</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-05-05T14:34:54Z&amp;precision=second.html" title="2011-05-05T14:34:54Z in Timeline">3 years</a> ago by dread
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Description</strong>
+        modified (<a href="1127%3Faction=diff&amp;version=3.html">diff</a>)
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+Fixed links
+</p>
+
+    </div>
+
+              </div>
+          </div>
+        </div>
+      <div id="help"><strong>Note:</strong> See
+        <a href="../wiki/TracTickets.html">TracTickets</a> for help on using
+        tickets.</div>
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="first">
+          <a rel="nofollow" href="1127%3Fversion=3&amp;format=csv" class="csv">Comma-delimited Text</a>
+        </li><li>
+          <a rel="nofollow" href="1127%3Fversion=3&amp;format=tab" class="tab">Tab-delimited Text</a>
+        </li><li class="last">
+          <a rel="nofollow" href="1127%3Fversion=3&amp;format=rss" class="rss">RSS Feed</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

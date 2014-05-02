@@ -1,0 +1,34 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2351	Install EC Portal on CentOS	icmurray	icmurray	"Install and document (step-by-step) CKAN (and dependencies, and extensions) onto VM on s031.okserver.org which has CentOS 6.2 installed.  Paying particular attention to the fact that we won't have root access on the staging nor production servers, and so a) anything that requires root access must be documented carefully; and b) we want to be able to perform maintenance without being root.
+
+== Maintenance ==
+
+We want to have ''non-root'' access to:
+
+ - CKAN logs; (relevant) apache logs; qa process' logs; rdf cron logs
+ - restarting CKAN
+ - restarting qa processes
+ - changing/disabling rdf cronjob
+ - our database (through sql)
+ - restarting solr
+
+== CKAN and Dependencies ==
+
+ - CKAN installed from source
+ - Required plugins: synchronous_search ecportal ecportal_form organizations multilingual_dataset multilingual_group multilingual_tag qa
+
+== Extra configuration ==
+
+ - uploads
+ - analytics (toby)
+ - qa
+ - rdf cron
+ - caching
+ - datastore
+
+== Things to remember ==
+
+ - Use ckanext/multilingual/solr/schema.xml and stopword files
+ - Use nginx as proxy.
+
+"	enhancement	closed	critical	ckan-ecportal	ecportal	fixed	[4-5d]		ckan	none

@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2316,add resource status api to see the state of celely tasks,kindly,,"add resource_status_show action function to see the state of celery tasks.
+
+Need to get information from both out task status table and the celery_taskmeta table.",enhancement,closed,awaiting triage,ckan-sprint-2012-04-30,ckan,fixed,,,ckan,none

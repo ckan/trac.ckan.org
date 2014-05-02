@@ -1,0 +1,9 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+78,Extend openid cookie lifetime,rgrp,rgrp,"When you login via openid (using repoze.who plugin) get given a cookie but it is very short (life of your browser session I think). 
+
+Work out how to extend to something reasonable (30 days or perhaps forever with logout unsetting cookie).
+
+ 1. A quick investigation to see whether this is possible
+ 2. If possible do it
+
+Cost: ?",enhancement,new,trivial,,ckan,,,,,

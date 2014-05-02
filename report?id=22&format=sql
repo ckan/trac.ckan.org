@@ -1,0 +1,21 @@
+-- ## 22: Trac tickets ## --
+
+-- https://github.com/roskakori/tratihubis/blob/master/query_tickets.sql
+
+-- All Trac tickets to convert.
+select
+    id,
+    type,
+    owner,
+    reporter,
+    milestone,
+    status,
+    resolution,
+    summary,
+    description,
+    time as PosixTime,
+    changetime as ModifiedTime
+from
+    ticket
+order
+    by id

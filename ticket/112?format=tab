@@ -1,0 +1,4 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+112	Test db schema created via migration scripts	dread	rgrp	"'paster db upgrade' should result in the same database as 'paster db create' on a clean system. In particular, all tests should pass. 
+
+Note: equivalent of paster db upgrade isn't being run from tests at the moment (we haven't been able to get this to work)."	enhancement	closed	major	v0.11	ckan	wontfix				

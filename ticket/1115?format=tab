@@ -1,0 +1,6 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1115	can have two authzgroups with the same name	johnlawrenceaspden		"If you've got edit permission on an authzgroup, then you can change its name to be the same as another existing authzgroup.
+
+This causes some strange UI effects at worst, and probably causes worse problems somewhere else.
+
+Is there any reason why changing the names of existing authzgroups should be allowed? And if so, name collisions should presumably be guarded against in both the name-changing and creation functions"	defect	closed	awaiting triage		ckan	wontfix			ckan	none

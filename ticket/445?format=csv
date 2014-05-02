@@ -1,0 +1,14 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+445,Add dumps to DGU SLA,johnbywater,johnbywater,"Thinking about putting something like this:
+
+Dumps Interface (this is NOT going in the API, it is another interface of the service):
+ - resources:
+    Daily Dump Folder
+    Daily Dump File
+ - locations:
+    /dump/hmg.ckan.net-YYYY-MM-DD.[json|csv].zip 
+ - data format:
+    Dump Folder is a HTML document containing a table of links to Dump Files
+    Dump File has either JSON or CSV format.
+ - status codes (200, 404, 500)
+",task,closed,,ckan-v1.2,,fixed,,,,

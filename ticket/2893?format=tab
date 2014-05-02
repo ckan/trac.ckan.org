@@ -1,0 +1,8 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2893	Tags missing from form_to_db_package_schema()	seanh		"With an IDatasetForm plugin active with a form_to_db_package_schema() method that returns a schema based on ckan/logic/schema.py:form_to_db_package_schema() I'm getting validation errors like this:
+
+[ckan.controllers.api] Validation error: ""{'__type': 'Validation Error', '__junk': [u'The input field __junk was not expected.']}""
+
+They seem to be caused when a data dict with key 'tags' is passed to e.g. the package_update API, for example in ckan/tests/functional/api/model/test_vocabulary.py there are various tests that get this error when they call package_update (if you run the tests with a suitable IDatasetForm plugin active).
+
+In ckan/logic/schema.py:form_to_db_package_schema() 'tags' is for some reason deliberately removed from the schema."	defect	new	awaiting triage	ckan-v1.8.1	ckan				ckan	none

@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #114: Access Control - model</title>
+    <link>http://localhost/ticket/114</link>
+    <description>&lt;p&gt;
+Create in the model basic operation of Access Control.
+&lt;/p&gt;
+&lt;p&gt;
+roles table
+&lt;/p&gt;
+&lt;pre class="wiki"&gt;name | context | action
+-----------------------
+admin| package | edit
+admin| package | edit-permissions
+admin| package | read
+editor| package | update
+editor| package | read
+reader| package | read
+This data is set-up on db init and will have no interface.
+&lt;/pre&gt;&lt;p&gt;
+user-roles table:
+&lt;/p&gt;
+&lt;pre class="wiki"&gt;username | context_type | objectid | role
+rgrp     | system  | n/a | admin
+visitor  | package | * | reader
+bob      | package | geonames | admin
+visitor  | package | geonames | editor
+visitor  | package | geonames | reader
+john     | group | ukgov | admin
+dread    | group | ukgov | editor
+visitor  | group | ukgov | reader
+This data will be added when someone is given permissions for the system, a package or a group.
+&lt;/pre&gt;&lt;p&gt;
+Pseudo code:
+&lt;/p&gt;
+&lt;p&gt;
+class Package
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+def is_allowed(name, action):
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+is_allowed(name, action, context=self)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+class Group
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+def is_allowed(name, action):
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+is_allowed(name, action, context=self)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+def is_allowed(name, action, context=None):
+&lt;strong&gt; name: string - a username or IP for 'visitor'
+&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+action: string - 'read', 'edit', 'delete', 'edit-permissions'
+context: object - a Group or a Package or None (which means system)
+&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;strong&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+# look up user from name.
+# look up in user-roles table what roles this user has for this context.
+# for each roles, look up in roles table what actions are allowed.
+# return True if action is allowed, else False.
+&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/114</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Thu, 10 Sep 2009 08:21:37 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/114#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/114#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/114?action=diff&amp;amp;version=1"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Tue, 15 Sep 2009 17:08:49 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/114#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/114#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Done in cset:895ae4371377.
+Remaining problem in WUI for revision purging.
+Have not implemented functionality to cope with blank objectid in user-roles table.
+Adding group access control will be in future ticket.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

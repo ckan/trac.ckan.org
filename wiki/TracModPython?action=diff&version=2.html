@@ -1,0 +1,659 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+    <html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      TracModPython (diff) – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="help" href="TracGuide.html" />
+        <link rel="up" href="TracModPython%3Faction=history.html" title="Page history" />
+        <link rel="next" href="TracModPython%3Faction=diff&amp;version=3.html" title="Version 3" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/wiki.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/diff.css" type="text/css" />
+        <link rel="prev" href="TracModPython%3Faction=diff&amp;version=1.html" title="Version 1" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/diff.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="../chrome/common/css/diff.css" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last active"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="TracModPython%3Faction=diff&amp;version=1.html" title="Version 1">Previous Change</a></span></li><li><a href="TracModPython%3Faction=history.html" title="Page history">Wiki History</a></li><li class="last"><span><a class="next" href="TracModPython%3Faction=diff&amp;version=3.html" title="Version 3">Next Change</a> &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="wiki">
+      <h1>
+        Changes between
+          <a href="TracModPython%3Fversion=1.html">Version 1</a> and
+          <a href="TracModPython%3Fversion=2.html">Version 2</a> of
+          <a href="TracModPython%3Fversion=2.html">TracModPython</a>
+      </h1>
+      <form method="post" id="prefs" action="TracModPython%3Fversion=2.html"><div><input type="hidden" name="__FORM_TOKEN" value="93d81ccf9a7bb1c456462f62" /></div>
+        <div>
+          <input type="hidden" name="action" value="diff" />
+          <input type="hidden" name="version" value="2" />
+          <input type="hidden" name="old_version" value="1" />
+          
+  <label for="style">View differences</label>
+  <select id="style" name="style">
+    <option selected="selected" value="inline">inline</option>
+    <option value="sidebyside">side by side</option>
+  </select>
+  <div class="field">
+    <label><input type="radio" name="contextall" value="0" checked="checked" />
+             Show</label>
+      <label><input type="text" name="contextlines" id="contextlines" size="2" maxlength="3" value="2" />
+             lines around each change</label><br />
+    <label><input type="radio" name="contextall" value="1" />
+           Show the changes in full context</label>
+  </div>
+  <fieldset id="ignore">
+    <legend>Ignore:</legend>
+    <div class="field">
+      <input type="checkbox" id="ignoreblanklines" name="ignoreblanklines" />
+      <label for="ignoreblanklines">Blank lines</label>
+    </div>
+    <div class="field">
+      <input type="checkbox" id="ignorecase" name="ignorecase" />
+      <label for="ignorecase">Case changes</label>
+    </div>
+    <div class="field">
+      <input type="checkbox" id="ignorewhitespace" name="ignorewhitespace" />
+      <label for="ignorewhitespace">White space changes</label>
+    </div>
+  </fieldset>
+  <div class="buttons">
+    <input type="submit" name="update" value="Update" />
+  </div>
+
+        </div>
+      </form>
+      <dl id="overview">
+        <dt class="property time">Timestamp:</dt>
+        <dd class="time">
+            07/30/07 11:26:42 (<a class="timeline" href="../timeline%3Ffrom=2007-07-30T11:26:42Z&amp;precision=second.html" title="2007-07-30T11:26:42Z in Timeline">7 years</a> ago)
+        </dd>
+        <dt class="property author">Author:</dt>
+        <dd class="author">
+          trac
+        </dd>
+        <dt class="property message">Comment:</dt>
+        <dd class="message">
+          
+          <p>
+--
+</p>
+
+        </dd>
+      </dl>
+      <div class="diff">
+        <div class="legend" id="diff-legend">
+          <h3>Legend:</h3>
+          <dl>
+            <dt class="unmod"></dt><dd>Unmodified</dd>
+            <dt class="add"></dt><dd>Added</dd>
+            <dt class="rem"></dt><dd>Removed</dd>
+            <dt class="mod"></dt><dd>Modified</dd>
+          </dl>
+        </div>
+        <div class="diff">
+  <ul class="entries">
+      <li class="entry">
+        <h2 id="file0">
+          <a href="TracModPython%3Fversion=2.html">TracModPython</a>
+        </h2>
+        <table class="trac-diff inline" summary="Differences" cellspacing="0">
+              <colgroup><col class="lineno" /><col class="lineno" /><col class="content" /></colgroup>
+              <thead>
+                <tr>
+                  <th title="Version 1">
+                    <a href="TracModPython%3Fversion=1.html#L1">
+                      v1</a>
+                  </th>
+                  <th title="Version 2">
+                    <a href="TracModPython%3Fversion=2.html#L1">
+                      v2</a>
+                  </th>
+                  <td> </td>
+                </tr>
+              </thead>
+            <tbody class="unmod">
+                  <tr>
+                          <th>1</th><th>1</th><td class="l"><span>= Trac and mod_python =</span> </td>
+                  </tr>
+            </tbody><tbody class="add">
+                  <tr class="last first">
+                          <th> </th><th>2</th><td class="r"><ins>[[TracGuideToc]]</ins> </td>
+                  </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>2</th><th>3</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>3</th><th> </th><td class="l"><span>Trac supports [http://www.modpython.org/ mod_python], which speeds up Trac's response times considerably<del></del> and permits use of many Apache features not possible with [wiki:TracStandalone tracd]/mod_proxy.</span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>4</th><td class="r"><span>Trac supports [http://www.modpython.org/ mod_python], which speeds up Trac's response times considerably<ins>, especially compared to [TracCgi CGI],</ins> and permits use of many Apache features not possible with [wiki:TracStandalone tracd]/mod_proxy.</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>4</th><th>5</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>5</th><th>6</th><td class="l"><span>== Simple configuration ==</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracModPython%3Fversion=1.html#L8">…</a></th>
+                  <th><a href="TracModPython%3Fversion=2.html#L9">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>8</th><th>9</th><td class="l"><span>{{{</span> </td>
+                  </tr><tr>
+                          <th>9</th><th>10</th><td class="l"><span>LoadModule python_module modules/mod_python.so</span> </td>
+                  </tr>
+            </tbody><tbody class="add">
+                  <tr class="first">
+                          <th> </th><th>11</th><td class="r"><ins>}}}</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>12</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>13</th><td class="r"><ins>&nbsp;''Note: The exact path to the module depends on how the HTTPD installation is laid out.''</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>14</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>15</th><td class="r"><ins>You can test your mod_python installation by adding the following to your httpd.conf.&nbsp; You should remove this when you are done testing for security reasons.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>16</th><td class="r"><ins>{{{</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>17</th><td class="r"><ins>&lt;Location /mpinfo&gt;</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>18</th><td class="r"><ins>&nbsp; &nbsp;SetHandler mod_python</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>19</th><td class="r"><ins>&nbsp; &nbsp;PythonHandler mod_python.testhandler</ins> </td>
+                  </tr><tr class="last">
+                          <th> </th><th>20</th><td class="r"><ins>&lt;/Location&gt;</ins> </td>
+                  </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>10</th><th>21</th><td class="l"><span>}}}</span> </td>
+                  </tr><tr>
+                          <th>11</th><th>22</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracModPython%3Fversion=1.html#L20">…</a></th>
+                  <th><a href="TracModPython%3Fversion=2.html#L31">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>20</th><th>31</th><td class="l"><span>}}}</span> </td>
+                  </tr><tr>
+                          <th>21</th><th>32</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>22</th><th> </th><td class="l"><span><del>Note that the option `TracUriRoot` may or may not be necessary in your setup. Try without first, and if the URLs produced by Trac look wrong or if Trac does not seem to recognize the URLs correctly, add the `TracUriRoot` option</del>.</span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>33</th><td class="r"><span><ins>The option '''`TracUriRoot`''' may or may not be necessary in your setup. Try your configuration with out it, and if the URLs produced by Trac look wrong or if Trac does not seem to recognize the URLs correctly, add the '''`TracUriRoot`''' option.&nbsp; You will notice that the `Location` and '''`TracUriRoot`''' have the same path</ins>.</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>23</th><th>34</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>24</th><th> </th><td class="l"><span>Configuring authentication works the same as for [wiki:TracCgi#AddingAuthentication CGI]:</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>35</th><td class="r"><span>=== Configuring Authentication ===</span> </td>
+                      </tr><tr>
+                        <th> </th><th>36</th><td class="r"><span></span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>37</th><td class="r"><span>Configuring authentication works just like for [wiki:TracCgi#AddingAuthentication CGI]:</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>25</th><th>38</th><td class="l"><span>{{{</span> </td>
+                  </tr><tr>
+                          <th>26</th><th>39</th><td class="l"><span>&lt;Location "/projects/myproject/login"&gt;</span> </td>
+                  </tr><tr>
+                          <th>27</th><th>40</th><td class="l"><span>&nbsp; AuthType Basic</span> </td>
+                  </tr><tr>
+                          <th>28</th><th>41</th><td class="l"><span>&nbsp; AuthName "myproject"</span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>29</th><th> </th><td class="l"><span>&nbsp; AuthUserFile /var/trac/myproject/.ht<del>access</del></span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>42</th><td class="r"><span>&nbsp; AuthUserFile /var/trac/myproject/.ht<ins>passwd</ins></span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>30</th><th>43</th><td class="l"><span>&nbsp; Require valid-user</span> </td>
+                  </tr><tr>
+                          <th>31</th><th>44</th><td class="l"><span>&lt;/Location&gt;</span> </td>
+                  </tr><tr>
+                          <th>32</th><th>45</th><td class="l"><span>}}}</span> </td>
+                  </tr>
+            </tbody><tbody class="add">
+                  <tr class="first">
+                          <th> </th><th>46</th><td class="r"><ins></ins> </td>
+                  </tr><tr class="last">
+                          <th> </th><th>47</th><td class="r"><ins>=== Setting the !PythonPath ===</ins> </td>
+                  </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>33</th><th>48</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>34</th><th>49</th><td class="l"><span>If the Trac installation isn't installed in your Python path, you'll have to tell Apache where to find the Trac mod_python handler&nbsp; using the `PythonPath` directive:</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracModPython%3Fversion=1.html#L41">…</a></th>
+                  <th><a href="TracModPython%3Fversion=2.html#L56">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>41</th><th>56</th><td class="l"><span>}}}</span> </td>
+                  </tr><tr>
+                          <th>42</th><th>57</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="add">
+                  <tr class="last first">
+                          <th> </th><th>58</th><td class="r"><ins>Be careful about using the !PythonPath directive, and ''not'' `SetEnv PYTHONPATH`, as the latter won't work.</ins> </td>
+                  </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>43</th><th>59</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>44</th><th>60</th><td class="l"><span>== Setting up multiple projects ==</span> </td>
+                  </tr><tr>
+                          <th>45</th><th>61</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>46</th><th> </th><td class="l"><span>The Trac mod_python handler <del>handler </del>supports a configuration option similar to Subversion's `SvnParentPath`, called `TracEnvParentDir`:</span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>62</th><td class="r"><span>The Trac mod_python handler <ins></ins>supports a configuration option similar to Subversion's `SvnParentPath`, called `TracEnvParentDir`:</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>47</th><th>63</th><td class="l"><span>{{{</span> </td>
+                  </tr><tr>
+                          <th>48</th><th>64</th><td class="l"><span>&lt;Location /projects&gt;</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracModPython%3Fversion=1.html#L54">…</a></th>
+                  <th><a href="TracModPython%3Fversion=2.html#L70">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>54</th><th>70</th><td class="l"><span>}}}</span> </td>
+                  </tr><tr>
+                          <th>55</th><th>71</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>56</th><th> </th><td class="l"><span>When you request the `/projects` URL, you will get a listing of all subdirectories of the directory you set as `TracEnvParentDir`<del></del>. Selecting any project in the list will bring you to the corresponding Trac environment.</span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>72</th><td class="r"><span>When you request the `/projects` URL, you will get a listing of all subdirectories of the directory you set as `TracEnvParentDir`<ins>&nbsp;that look like Trac environment directories</ins>. Selecting any project in the list will bring you to the corresponding Trac environment.</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>57</th><th>73</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>58</th><th>74</th><td class="l"><span>If you don't want to have the subdirectory listing as your projects home page you can use a</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracModPython%3Fversion=1.html#L65">…</a></th>
+                  <th><a href="TracModPython%3Fversion=2.html#L81">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>65</th><th>81</th><td class="l"><span>You can also use the same authentication realm for all of the projects using a `&lt;LocationMatch&gt;` directive:</span> </td>
+                  </tr><tr>
+                          <th>66</th><th>82</th><td class="l"><span>{{{</span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>67</th><th> </th><td class="l"><span>&lt;LocationMatch "/<del></del>[^/]+/login"&gt;</span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>83</th><td class="r"><span>&lt;LocationMatch "/<ins>projects/</ins>[^/]+/login"&gt;</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>68</th><th>84</th><td class="l"><span>&nbsp; AuthType Basic</span> </td>
+                  </tr><tr>
+                          <th>69</th><th>85</th><td class="l"><span>&nbsp; AuthName "Trac"</span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>70</th><th> </th><td class="l"><span>&nbsp; AuthUserFile /var/trac/.ht<del>access</del></span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>86</th><td class="r"><span>&nbsp; AuthUserFile /var/trac/.ht<ins>passwd</ins></span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>71</th><th>87</th><td class="l"><span>&nbsp; Require valid-user</span> </td>
+                  </tr><tr>
+                          <th>72</th><th>88</th><td class="l"><span>&lt;/LocationMatch&gt;</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracModPython%3Fversion=1.html#L82">…</a></th>
+                  <th><a href="TracModPython%3Fversion=2.html#L98">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>82</th><th>98</th><td class="l"><span>&nbsp; &nbsp; DocumentRoot /var/trac/myproject</span> </td>
+                  </tr><tr>
+                          <th>83</th><th>99</th><td class="l"><span>&nbsp; &nbsp; ServerName trac.mycompany.com</span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>84</th><th> </th><td class="l"><span>&nbsp; &nbsp; &lt;<del>Directory</del> /&gt;</span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>100</th><td class="r"><span>&nbsp; &nbsp; &lt;<ins>Location</ins> /&gt;</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>85</th><th>101</th><td class="l"><span>&nbsp; &nbsp; &nbsp; &nbsp; SetHandler mod_python</span> </td>
+                  </tr><tr>
+                          <th>86</th><th>102</th><td class="l"><span>&nbsp; &nbsp; &nbsp; &nbsp; PythonHandler trac.web.modpython_frontend</span> </td>
+                  </tr><tr>
+                          <th>87</th><th>103</th><td class="l"><span>&nbsp; &nbsp; &nbsp; &nbsp; PythonOption TracEnv /var/trac/myproject</span> </td>
+                  </tr><tr>
+                          <th>88</th><th>104</th><td class="l"><span>&nbsp; &nbsp; &nbsp; &nbsp; PythonOption TracUriRoot /</span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>89</th><th> </th><td class="l"><span>&nbsp; &nbsp; &lt;/<del>Directory</del>&gt;</span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>105</th><td class="r"><span>&nbsp; &nbsp; &lt;/<ins>Location</ins>&gt;</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>90</th><th>106</th><td class="l"><span>&nbsp; &nbsp; &lt;Location /login&gt;</span> </td>
+                  </tr><tr>
+                          <th>91</th><th>107</th><td class="l"><span>&nbsp; &nbsp; &nbsp; &nbsp; AuthType Basic</span> </td>
+                  </tr><tr>
+                          <th>92</th><th>108</th><td class="l"><span>&nbsp; &nbsp; &nbsp; &nbsp; AuthName "MyCompany Trac Server"</span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>93</th><th> </th><td class="l"><span>&nbsp; &nbsp; &nbsp; &nbsp; AuthUserFile /var/trac/myproject/.ht<del>users</del></span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>109</th><td class="r"><span>&nbsp; &nbsp; &nbsp; &nbsp; AuthUserFile /var/trac/myproject/.ht<ins>passwd</ins></span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>94</th><th>110</th><td class="l"><span>&nbsp; &nbsp; &nbsp; &nbsp; Require valid-user</span> </td>
+                  </tr><tr>
+                          <th>95</th><th>111</th><td class="l"><span>&nbsp; &nbsp; &lt;/Location&gt;</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracModPython%3Fversion=1.html#L97">…</a></th>
+                  <th><a href="TracModPython%3Fversion=2.html#L113">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>97</th><th>113</th><td class="l"><span>}}}</span> </td>
+                  </tr><tr>
+                          <th>98</th><th>114</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="add">
+                  <tr class="first">
+                          <th> </th><th>115</th><td class="r"><ins>For a virtual host that supports multiple projects replace "`TracEnv`" /var/trac/myproject with "`TracEnvParentDir`" /var/trac/</ins> </td>
+                  </tr><tr class="last">
+                          <th> </th><th>116</th><td class="r"><ins></ins> </td>
+                  </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>99</th><th>117</th><td class="l"><span>== Troubleshooting ==</span> </td>
+                  </tr>
+            </tbody><tbody class="add">
+                  <tr class="first">
+                          <th> </th><th>118</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>119</th><td class="r"><ins>In general, if you get server error pages, you can either check the Apache error log, or enable the `PythonDebug` option:</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>120</th><td class="r"><ins>{{{</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>121</th><td class="r"><ins>&lt;Location /projects/myproject&gt;</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>122</th><td class="r"><ins>&nbsp; ...</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>123</th><td class="r"><ins>&nbsp; PythonDebug on</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>124</th><td class="r"><ins>&lt;/Location&gt;</ins> </td>
+                  </tr><tr class="last">
+                          <th> </th><th>125</th><td class="r"><ins>}}}</ins> </td>
+                  </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>100</th><th>126</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>101</th><th>127</th><td class="l"><span>=== Form submission problems ===</span> </td>
+                  </tr><tr>
+                          <th>102</th><th>128</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>103</th><th>129</th><td class="l"><span>If you're experiencing problems submitting some of the forms in Trac (a common problem is that you get redirected to the start page after submission), check whether your {{{DocumentRoot}}} contains a folder or file with the same path that you mapped the mod_python handler to. For some reason, mod_python gets confused when it is mapped to a location that also matches a static resource.</span> </td>
+                  </tr>
+            </tbody><tbody class="add">
+                  <tr class="first">
+                          <th> </th><th>130</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>131</th><td class="r"><ins>=== Problem with virtual host configuration ===</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>132</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>133</th><td class="r"><ins>If the &lt;Location /&gt; directive is used, setting the `DocumentRoot` may result in a ''403 (Forbidden)'' error. Either remove the `DocumentRoot` directive, or make sure that accessing the directory it points is allowed (in a corresponding `&lt;Directory&gt;` block).</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>134</th><td class="r"><ins></ins> </td>
+                  </tr><tr class="last">
+                          <th> </th><th>135</th><td class="r"><ins>Using &lt;Location /&gt; together with `SetHandler` resulted in having everything handled by mod_python, which leads to not being able download any CSS or images/icons. I used &lt;Location /trac&gt; `SetHandler None` &lt;/Location&gt; to circumvent the problem, though I do not know if this is the most elegant solution.</ins> </td>
+                  </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>104</th><th>136</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>105</th><th>137</th><td class="l"><span>=== Using .htaccess ===</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracModPython%3Fversion=1.html#L110">…</a></th>
+                  <th><a href="TracModPython%3Fversion=2.html#L142">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>110</th><th>142</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>111</th><th>143</th><td class="l"><span>=== Win32 Issues ===</span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>112</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>113</th><th> </th><td class="l"><span>If you run trac with mod_python (3.1.3 or 3.1.4) on Windows, </span> </td>
+                      </tr><tr>
+                        <th>114</th><th> </th><td class="l"><span>uploading attachments will '''not''' work.</span> </td>
+                      </tr><tr>
+                        <th>115</th><th> </th><td class="l"><span>This is a known problem which we can't solve cleanly at the Trac level.</span> </td>
+                      </tr><tr>
+                        <th>116</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>117</th><th> </th><td class="l"><span>However, there is a workaround for this at the mod_python level, </span> </td>
+                      </tr><tr>
+                        <th>118</th><th> </th><td class="l"><span>which is to apply the following patch [http://projects.edgewall.com/trac/attachment/ticket/554/util_py.patch attachment:ticket:554:util_py.patch] </span> </td>
+                      </tr><tr>
+                        <th>119</th><th> </th><td class="l"><span>to the (Lib/site-packages)/modpython/util.py file.</span> </td>
+                      </tr><tr>
+                        <th>120</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>121</th><th> </th><td class="l"><span>If you don't have the `patch` command, that file can be replaced with the [http://svn.apache.org/viewcvs.cgi/httpd/mod_python/trunk/lib/python/mod_python/util.py?rev=103562&amp;view=markup&nbsp; fixed util.py] (fix which, although done prior to the 3.1.4 release, is ''not'' </span> </td>
+                      </tr><tr>
+                        <th>122</th><th> </th><td class="l"><span>present in 3.1.4).</span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>144</th><td class="r"><span>If you run trac with mod_python &lt; 3.2 on Windows, uploading attachments will '''not''' work. This problem is resolved in mod_python 3.1.4 or later, so please upgrade mod_python to fix this.</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>123</th><th>145</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>124</th><th>146</th><td class="l"><span>=== OS X issues ===</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracModPython%3Fversion=1.html#L126">…</a></th>
+                  <th><a href="TracModPython%3Fversion=2.html#L148">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>126</th><th>148</th><td class="l"><span>When using mod_python on OS X you will not be able to restart Apache using `apachectl restart`. This is apparently fixed in mod_python 3.2, but there's also a patch available for earlier versions [http://www.dscpl.com.au/projects/vampire/patches.html here].</span> </td>
+                  </tr><tr>
+                          <th>127</th><th>149</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="add">
+                  <tr class="first">
+                          <th> </th><th>150</th><td class="r"><ins>=== SELinux issues ===</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>151</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>152</th><td class="r"><ins>If Trac reports something like: ''Cannot get shared lock on db.lock''</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>153</th><td class="r"><ins>The security context on the repository may need to be set:</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>154</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>155</th><td class="r"><ins>{{{</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>156</th><td class="r"><ins>chcon -R -h -t httpd_sys_content_t PATH_TO_REPOSITORY</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>157</th><td class="r"><ins>}}}</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>158</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>159</th><td class="r"><ins>See also [[http://subversion.tigris.org/faq.html#reposperms]]</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>160</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>161</th><td class="r"><ins>=== FreeBSD issues ===</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>162</th><td class="r"><ins>Pay attention to the version of the installed mod_python and sqlite packages. Ports have both the new and old ones, but earlier versions of pysqlite and mod_python won't integrate as the former requires threaded support in python, and the latter requires a threadless install.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>163</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>164</th><td class="r"><ins>=== Subversion issues ===</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>165</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>166</th><td class="r"><ins>If you get the following Trac Error `Unsupported version control system "svn"` only under mod_python, though it works well on the command-line and even with TracStandalone, chances are that you forgot to add the path to the Python bindings with the [TracModPython#ConfiguringPythonPath PythonPath] directive. (The better way is to add a link to the bindings in the Python `site-packages` directory, or create a `.pth` file in that directory.)</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>167</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>168</th><td class="r"><ins>If this is not the case, it's possible that you're using Subversion libraries that are binary incompatible with the apache ones (an incompatibility of the `apr` libraries is usually the cause). In that case, you also won't be able to use the svn modules for Apache (`mod_dav_svn`).</ins> </td>
+                  </tr><tr class="last">
+                          <th> </th><th>169</th><td class="r"><ins></ins> </td>
+                  </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>128</th><th>170</th><td class="l"><span>----</span> </td>
+                  </tr><tr>
+                          <th>129</th><th>171</th><td class="l"><span>See also TracGuide, TracInstall, TracCgi, TracFastCgi</span> </td>
+                  </tr>
+            </tbody>
+        </table>
+      </li>
+  </ul>
+</div>
+      </div>
+  </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1219	CSS issues on IE7	timmcnamara		"As reported on [http://lists.okfn.org/pipermail/ckan-dev/2011-July/001043.html ckan-dev]:
+
+> items in the footer of CKAN (""Packages"", ""Groups & Tags"", ""About"", ""Language"", etc.) are shown vertically instead of horizontally in IE7. This works fine in later browsers like IE8, IE9, FF4, and latest Opera and Chrome.
+
+> This seems to exist in all recent CKAN versions up to 1.4.1a."	defect	closed	awaiting triage		ckan	fixed	ux css ie		ckan	none

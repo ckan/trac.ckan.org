@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1300: Core changes to base theme</title>
+    <link>http://localhost/ticket/1300</link>
+    <description>&lt;p&gt;
+Core changes to theme in order to make it easier to re-theme:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;page_heading
+&lt;/li&gt;&lt;li&gt;side bar menu must be switchable (left to right) (through config or css)
+&lt;/li&gt;&lt;li&gt;Add optional_footer to complement optional_head
+&lt;ul&gt;&lt;li&gt;And adopt rule for template writers that all extra js must go in optional footer
+&lt;/li&gt;&lt;li&gt;That way we could move optional js to the bottom of the page to improve page load times.
+&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;Re-add support for body-class ... (seems to be removed by &lt;a class="closed ticket" href="http://localhost/ticket/1108" title="enhancement: Create a more modern theme for CKAN (closed: fixed)"&gt;#1108&lt;/a&gt;)
+&lt;/li&gt;&lt;li&gt;more divs.
+&lt;/li&gt;&lt;li&gt;better labelling for css (and javascript)
+&lt;/li&gt;&lt;/ul&gt;</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1300</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Thu, 01 Sep 2011 08:24:20 GMT</pubDate>
+      <title>priority, description, summary changed</title>
+      <link>http://localhost/ticket/1300#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1300#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;priority&lt;/strong&gt;
+                changed from &lt;em&gt;minor&lt;/em&gt; to &lt;em&gt;major&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1300?action=diff&amp;amp;version=1"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;summary&lt;/strong&gt;
+                changed from &lt;em&gt;Expand optional head to optional css and optional js&lt;/em&gt; to &lt;em&gt;Core changes to base theme&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Tue, 13 Sep 2011 09:31:23 GMT</pubDate>
+      <title>description, milestone changed</title>
+      <link>http://localhost/ticket/1300#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/1300#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1300?action=diff&amp;amp;version=2"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan-backlog&lt;/em&gt; to &lt;em&gt;ckan-current-sprint&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+page_heading and optional_footer done in &lt;a class="closed ticket" href="http://localhost/ticket/1108" title="enhancement: Create a more modern theme for CKAN (closed: fixed)"&gt;#1108&lt;/a&gt;
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Tue, 13 Sep 2011 09:32:45 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/1300#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/1300#comment:3</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1300?action=diff&amp;amp;version=3"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Tue, 13 Sep 2011 10:16:01 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1300#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/1300#comment:4</guid>
+      <description>
+        &lt;p&gt;
+Move of js to optional_footer done in cset:dcb21f0d976f. As part of &lt;a class="closed ticket" href="http://localhost/ticket/1294" title="enhancement: [super] Package creation and editing UX improvements (closed: fixed)"&gt;#1294&lt;/a&gt; have done a lot of css adding. Not sure how much more to do here.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Fri, 28 Oct 2011 09:35:20 GMT</pubDate>
+      <title>status, milestone changed; resolution set</title>
+      <link>http://localhost/ticket/1300#comment:5</link>
+      <guid isPermaLink="false">http://localhost/ticket/1300#comment:5</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan-current-sprint&lt;/em&gt; to &lt;em&gt;ckan-sprint-2011-11-07&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Side bar menu is switchable (though not sure how -- zephod has done this!) CSS tidying and labelling of divs done in &lt;a class="closed ticket" href="http://localhost/ticket/1380" title="enhancement: Making customizing CSS easier (closed: fixed)"&gt;#1380&lt;/a&gt;. So closing!
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

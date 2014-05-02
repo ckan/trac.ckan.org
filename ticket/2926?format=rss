@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2926: I*Form tests for per-type templates</title>
+    <link>http://localhost/ticket/2926</link>
+    <description>&lt;p&gt;
+Finish the tests for the per-package-type custom template support in IPackageForm, IGroupForm and IOrganizationForm (i.e. the new_template(), read_template() etc. methods).
+&lt;/p&gt;
+&lt;p&gt;
+The new way that template inheritance works in jinja looks like it should allow this to be tested nicely without duplicating entire templates in the example extensions.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2926</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+ </channel>
+</rss>

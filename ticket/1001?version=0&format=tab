@@ -1,0 +1,6 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1001	API should use normal user credentials if available	rgrp	rgrp	"When using the API 'locally' i.e. from the CKAN instance (as would be the case with an ajax interface) the API, especially that allowing READ requests should use the normal user credentials if they are available prior to looking for an API key.
+
+The key change appears to be to change _get_user_for_apikey method in lib/base.py BaseController to check the c.user attribute (may wish to rename as the name may now be a bit misleading ...).
+
+This is critical to incorporating any ajax editing into the frontend."	enhancement	new	critical	ckan-v1.4-sprint-2	ckan		bitesize core			

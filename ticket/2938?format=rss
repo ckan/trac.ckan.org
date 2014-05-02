@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2938: Explain bundling in doc/resources.rst</title>
+    <link>http://localhost/ticket/2938</link>
+    <description>&lt;p&gt;
+Since it makes sense to bundle resources into one js file that are commonly used together, there should be some explanations on how separate js scripts are merged into one file for production.
+&lt;/p&gt;
+&lt;p&gt;
+Explanations could include how groups are handled or different resource files.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2938</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+ </channel>
+</rss>

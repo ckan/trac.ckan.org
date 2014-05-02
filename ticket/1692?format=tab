@@ -1,0 +1,15 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1692	Add image attribute to Dataset and Group	rgrp		"Add image attribute for Dataset and Group which would be shown in prominent place.
+
+For dataset this could be a relevant image and for Group this would be more of a logo.
+
+I think this has very high value from a UX point of view.
+
+== Issues ==
+
+ * Do we need to support uploading and storing the image (or do users store elsewhere)
+  * Could use something like transloadit service
+  * Use our own storage facility with a reserved directory
+ * Do we need to do resizing etc?
+  * Maybe. Perhaps can prefer this in reasonably small size and then just size down in css for thumbnails etc.
+"	enhancement	closed	awaiting triage	ckan-v1.7	ckan	wontfix			ckan	none

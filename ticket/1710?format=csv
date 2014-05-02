@@ -1,0 +1,14 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1710,'Announce' email list for thedatahub,dread,dread,"We want to make email announcements to users of thedatahub.org.
+
+The most simple way to do this is to get a dump of the email addresses and subscribe/invite them to a mailman list.
+
+Different ways to do it:
+ * 'paster dump-users-csv' creates a CSV file. Apache serves up the directory using password protection. Is this secure enough?
+ * CKAN admin pages provides a button to produce the CSV and download it. A config option may be necessary to enable this (disabled by default).
+
+Something more advanced in the future could be:
+ * CKAN tells mailman about new subscribers using the mailman web interface. Could be brittle.
+ * Mailman doesn't have an Internet API, but it does have a python interface. So CKAN could tell mailman about new subscribers using a python proxy. There may be one out there, or maybe easy to do. But annoying to have to maintain another process running on machine.
+ * CKAN sends out the emails itself. A sysadmin is given a form. Users have an opt in/out option in their account. But receiving emails is a sensitive thing so it would need to be right first time, and there are several risks to this approach.
+",enhancement,closed,major,ckan-sprint-2012-02-06,ckan,fixed,,markw,ckan,none

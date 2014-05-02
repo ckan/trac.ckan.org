@@ -1,0 +1,12 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1405	You can add a package twice to a group	dread	dread	"To reproduce (from Jonathan Gray):
+ * I go to add an item to the group
+ * As I type, I get autocomplete options (cool!)
+ * When I click on one, it adds this, and copies the same
+autocomplete option in the box
+ * When I click submit, it seems to add the item twice
+ * On the main group page I think it just shows up once, but when I
+click edit it shows two identical boxes, both ticked - and the count
+includes two copies of the same item
+
+This is an issue on CKAN 1.5b and possibly earlier."	defect	new	minor	ckan-sprint-2011-11-07	ckan				ckan	none

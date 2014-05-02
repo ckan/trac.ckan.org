@@ -1,0 +1,63 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1210	POST application/json error handling with newer WebOb	dread	dread	"WebOb from v1.0.7 has some interesting new behaviour with reading request data for different Content-Types:
+
+ * It seems that looking at request.body mangles request.POST. See fix in ckan cset:e83bad9caa1b (problem with WebOb v1.0.7 but may go back to v1.0.4?)
+
+ * A particular request caused an AssertionError during looking at request.body, so we need to enclose this in a try/except. I couldn't recreate it in a test unfortunately (problem with WebOb v1.0.7 but may go back to v1.0.2?)
+
+Example:
+{{{
+Module ckan.controllers.api:206 in create
+<<          log.debug('create: %s' % (context))
+               try:
+                   request_data = self._get_request_data()
+               except ValueError, inst:
+                   response.status_int = 400
+>>  request_data = self._get_request_data()
+Module ckan.lib.base:149 in _get_request_data
+<<          cls.log.debug('Retrieving request params: %r' % request.params)
+               cls.log.debug('Retrieving request POST: %r' % request.POST)
+               cls.log.debug('Retrieving request POST body: %r' % request.body)
+               if request.POST:
+                   try:
+>>  cls.log.debug('Retrieving request POST body: %r' % request.body)
+Module paste.registry:137 in __getattr__
+<<      
+           def __getattr__(self, attr):
+               return getattr(self._current_obj(), attr)
+           
+           def __setattr__(self, attr, value):
+>>  return getattr(self._current_obj(), attr)
+Module webob.request:470 in _body__get
+<<          Return the content of the request body.
+               """"""
+               self.make_body_seekable() # we need this to have content_length
+               r = self.body_file.read(self.content_length)
+               self.body_file.seek(0)
+>>  self.make_body_seekable() # we need this to have content_length
+Module webob.request:697 in make_body_seekable
+<<              self.body_file_raw.seek(0)
+               else:
+                   self.copy_body()
+>>  self.copy_body()
+Module webob.request:714 in copy_body
+<<                  self.body = self.body_file_raw.read(length)
+               elif self.is_body_readable:
+                   self.body = self.body_file_raw.read()
+                   self._copy_body_tempfile()
+               else:
+>>  self.body = self.body_file_raw.read()
+Module webob.request:1190 in read
+<<      def read(self, size=-1):
+               body = self._get_body()
+               if size < 0:
+                   v = body[self.position:]
+>>  body = self._get_body()
+Module webob.request:1207 in _get_body
+<<                  self._body = _encode_multipart(self.vars, self.content_type)
+                   else:
+                       assert 0, ('Bad content type: %r' % self.content_type)
+               return self._body
+>>  assert 0, ('Bad content type: %r' % self.content_type)
+AssertionError: Bad content type: '; charset=utf-8'
+}}}"	defect	new	minor	ckan-v1.5-sprint-4	ckan				ckan	none

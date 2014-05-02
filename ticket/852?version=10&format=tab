@@ -1,0 +1,41 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+852	[super] Dataset upload and archiving	wwaites	rgrp	"3 (4) use cases: (With and without access to auth keys.)
+
+ 1. upload form on ckan (by default local system has auth key for storage)
+ 2. datapkg upload (client) (by default without key) (plumbing done)
+ 3. background job archiving downloads (by queue client) 
+
+Most important are:
+
+1. Upload form on ckan.net (with access to keys)
+2. API for getting credentials for upload from ckan.net api (without access to keys).
+
+Aside: Once 2 was done we could deprecate storage.ckan.net
+
+=== Sub-tickets ===
+
+''' Required infrastructure '''
+
+ * #826 - Resource 'extra' fields
+ * #358 - Resources in REST API
+ * #235 - Resource format normalization and detection
+
+''' User upload via Web UI '''
+
+ * #877 - File upload in WUI
+ * #878 - Integrate file upload with workflow around package resources
+
+''' User upload via CLI/datapkg '''
+
+ * #853 - plumbing for credential-less rest upload
+ * #879 - Storage auth API
+
+Also related:
+
+ * #405 - Retrieval options for package resources
+
+=== More Info ===
+
+ * Upload/storage discussion: http://ckan.okfnpad.org/storage
+  * For api to generate upload key (for e.g. datapkg usage) suggest locating at ckan.net/api/utils/
+"	enhancement	closed	critical	ckan-v1.3	DGU	fixed			ckan	none

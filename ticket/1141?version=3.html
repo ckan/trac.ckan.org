@@ -1,0 +1,358 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      #1141 (Moderated Edits User Interface)
+     – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="prev" href="1140.html" title="Ticket #1140" />
+        <link rel="last" href="3030.html" title="Ticket #3030" />
+        <link rel="help" href="../wiki/TracGuide.html" />
+        <link rel="alternate" href="1141%3Fversion=3&amp;format=csv" type="text/csv" class="csv" title="Comma-delimited Text" /><link rel="alternate" href="1141%3Fversion=3&amp;format=tab" type="text/tab-separated-values" class="tab" title="Tab-delimited Text" /><link rel="alternate" href="1141%3Fversion=3&amp;format=rss" type="application/rss+xml" class="rss" title="RSS Feed" />
+        <link rel="next" href="1142.html" title="Ticket #1142" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/ticket.css" type="text/css" />
+        <link rel="first" href="1.html" title="Ticket #1" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript">
+      var auto_preview_timeout=2.0;
+      var form_token="93d81ccf9a7bb1c456462f62";
+    </script>
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script><script type="text/javascript" src="../chrome/common/js/wikitoolbar.js"></script><script type="text/javascript" src="../chrome/common/js/resizer.js"></script><script type="text/javascript" src="../chrome/common/js/auto_preview.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("div.description").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $(".foldable").enableFolding(false, true);
+        var args = {realm: "ticket", id: 1141, escape_newlines: 0}
+        $("#comment").autoPreview("/wiki_render", args, function(textarea, text, rendered) {
+            $("#ticketchange div.comment").html(rendered);
+            if (rendered)
+              $("#ticketchange").show();
+            else if ($("#ticketchange ul.changes").length == 0)
+              $("#ticketchange").hide();
+        });
+        $("#trac-comment-editor textarea").autoPreview("/wiki_render", args,
+                                                       function(textarea, text, rendered) {
+          var comment = $("#trac-comment-editor").next("div.comment");
+          comment.html(rendered);
+          if (rendered)
+            comment.show();
+          else
+            comment.hide();
+        });
+        $("#modify").parent().toggleClass("collapsed");
+        $(".trac-topnav a").click(function() { $("#modify").parent().removeClass("collapsed"); });
+        /* only enable control elements for the currently selected action */
+        var actions = $("#action input[name='action']");
+        function updateActionFields() {
+          actions.each(function () {
+            $(this).siblings().find("*[id]").enable($(this).checked());
+            $(this).siblings().filter("*[id]").enable($(this).checked());
+          });
+        }
+        actions.click(updateActionFields);
+        updateActionFields();
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="../wiki/TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li class="active"><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="1140.html" title="Ticket #1140">Previous Ticket</a></span></li><li class="last"><span><a class="next" href="1142.html" title="Ticket #1142">Next Ticket</a> &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="ticket">
+      <h1 id="trac-ticket-title">
+          <a href="1141.html">Ticket #1141</a>
+          <span class="status">(new CREP)</span>
+              — at <a href="1141%3Fversion=3.html#comment:3">Version 3</a>
+      </h1>
+      <div id="ticket">
+  <div class="date">
+    <p>Opened <a class="timeline" href="../timeline%3Ffrom=2011-05-18T12:16:43Z&amp;precision=second.html" title="2011-05-18T12:16:43Z in Timeline">3 years</a> ago</p>
+    <p>Last modified <a class="timeline" href="../timeline%3Ffrom=2011-12-31T17:28:27Z&amp;precision=second.html" title="2011-12-31T17:28:27Z in Timeline">2 years</a> ago</p>
+  </div>
+  <h2 class="summary searchable">Moderated Edits User Interface</h2>
+  <table class="properties">
+    <tr>
+      <th id="h_reporter">Reported by:</th>
+      <td headers="h_reporter" class="searchable">
+        <a href="../query%3Fstatus=!closed&amp;reporter=johnglover.html">johnglover</a>
+      </td>
+      <th id="h_owner">Owned by:</th>
+      <td headers="h_owner">
+      </td>
+    </tr>
+    <tr>
+        <th id="h_priority">
+          Priority:
+        </th>
+        <td headers="h_priority">
+              <a href="../query%3Fstatus=!closed&amp;priority=major.html">major</a>
+        </td>
+        <th id="h_milestone">
+          Milestone:
+        </th>
+        <td headers="h_milestone">
+              <a class="milestone" href="../milestone/ckan-backlog.html">ckan-backlog</a>
+        </td>
+    </tr><tr>
+        <th id="h_component">
+          Component:
+        </th>
+        <td headers="h_component">
+              <a href="../query%3Fstatus=!closed&amp;component=ckan.html">ckan</a>
+        </td>
+        <th id="h_keywords">
+          Keywords:
+        </th>
+        <td headers="h_keywords" class="searchable">
+              <a href="../query%3Fstatus=!closed&amp;keywords=~ui.html">ui</a>
+        </td>
+    </tr><tr>
+        <th id="h_cc">
+          Cc:
+        </th>
+        <td headers="h_cc" class="searchable">
+        </td>
+        <th id="h_repo">
+          Repository:
+        </th>
+        <td headers="h_repo">
+              <a href="../query%3Fstatus=!closed&amp;repo=ckan.html">ckan</a>
+        </td>
+    </tr><tr>
+        <th id="h_theme">
+          Theme:
+        </th>
+        <td headers="h_theme">
+              <a href="../query%3Fstatus=!closed&amp;theme=none.html">none</a>
+        </td>
+        <th>
+        </th>
+        <td>
+        </td>
+    </tr>
+  </table>
+  <div class="description">
+    <h3 id="comment:description">
+      Description
+      <span class="lastmod" title="2011-05-18 15:53:50+00:00">
+        (last modified by johnglover)
+        (<a href="1141%3Faction=diff&amp;version=3.html">diff</a>)
+      </span>
+    </h3>
+    <div class="searchable">
+      <p>
+<strong>Proposer</strong>: John Glover<br />
+<strong>Seconder</strong>: James Gardner
+</p>
+<h2 id="Abstract">Abstract</h2>
+<p>
+We are trying to achieve these goals:
+</p>
+<ul><li>To get people involved with making edits to CKAN metadata.
+</li><li>To have an ownership model as to who can moderate and validate these changes
+</li><li>To not put too huge a burden on these owners.
+</li></ul><p>
+This feature allows anyone to edit a package and create a new revision, but requires an owner/moderator to approve a revision before it is are made "official".
+</p>
+<p>
+There have been a lot of discussions around the revisioning system side of this ticket (CREP 0002) and I think these are now largely resolved. We now want to discuss the user interface.
+</p>
+<h2 id="TheProblem">The Problem</h2>
+<p>
+We require the following functionality:
+</p>
+<ul><li>Allow a group of changes to be stored as a new revision.
+</li><li>Allow a linear stack of "community" revisions. 
+</li><li>Provide a way for the editor and moderator to compare previous revisions to the current one.
+</li><li>When a moderator approves a change it creates a new revision flagged "moderated" (this is analogous to a merge commit)
+</li><li>Provide a way for the editor and moderator comment on revisions if necessary.
+</li></ul><p>
+Extra features:
+</p>
+<ul><li>Need a way to summarise the changes (as part of the preview perhaps)
+</li><li>Sysadmin needs to purge a revision completely
+</li></ul><h2 id="Specification">Specification</h2>
+<h3 id="UIUX">UI/UX</h3>
+<p>
+Revisions:
+</p>
+<ul><li>Revisions are per package rather than per field.
+</li><li>Internally CKAN has separate revisions for resources, extras and package metadata.  From a user's point of view this could be confusing to expose, so everything that they see on a package form when they hit save is a single revision.
+</li></ul><p>
+On the Edit page:
+</p>
+<ul><li>We have a panel on the right, listing all the revisions with the current moderated one selected. Moderated revisions are highligted in some way (red and bold?).
+</li><li>The values displayed in the form are by default populated from the latest revision (whether community or moderated)
+</li><li>Under each field is a "shadow", showing the value of the field in the revision selected in the panel, if it is different from the value in the field. By default the shadow values are populated from the latest moderated revision which is the one selected in the revision panel by default too.
+</li><li>When you change the value of a field, a shadow may appear or disappear accordingly. If they disappear a box saying that they are the same replaces it
+</li><li>If you want to edit values from a previous revision, you first select that revision to get the shadows populated. There is a button named "Replace fields with values from this revision" under the revision list. You click this, a warning pops up and then you say "Yes". You then select the moderated revision again.
+</li><li>We also allow package comments the same way as the todo extension works at the moment. Additionally, we need to be able to differentiate between what the moderator wrote and what a community member wrote, and so we may need to make a small change to the todo extension to facilitate this.
+</li></ul><h3 id="TechnicalDetails">Technical Details</h3>
+<ul><li>This CREP will result in a new CKAN extension.
+</li><li>It depends heavily on the new revisioning system (CREP0002), some of the details of which are yet to be finalised. 
+</li><li>This CREP therefore requires working closely with David Raznick to come up with an API that the UI AJAX calls can use.
+</li><li>We will then use suitable test data to mimic these API calls until CREP0002 is ready.
+</li></ul><h2 id="Whydoitthisway">Why do it this way</h2>
+<p>
+This hopefully provides a clear and consistent mechanism allowing both a community member to make new revisions and a moderator to view and approve revisions, with largely the same UI/UX.
+</p>
+<h2 id="Implementationplan">Implementation plan</h2>
+<h3 id="Deliverables">Deliverables</h3>
+<ul><li>Code: Python, HTML, CSS, Javascript
+</li><li>Unit tests
+</li><li>Localization
+</li><li>Documentation
+</li></ul><h3 id="Participants">Participants</h3>
+<p>
+John Glover to do it.
+</p>
+<h3 id="Progress">Progress</h3>
+<p>
+The Todo extension is written and available at: <a class="ext-link" href="https://bitbucket.org/johnglover/ckanext-todo"><span class="icon">​</span>https://bitbucket.org/johnglover/ckanext-todo</a>.
+</p>
+<p>
+In the section 'The Problem', under extra features, we mention a need for the sysadmin to be able to purge a revision already. This is already done.
+</p>
+<p>
+The rest is yet to be started.
+</p>
+
+    </div>
+  </div>
+</div>
+        <div>
+          <h2 class="foldable">Change History</h2>
+          <div id="changelog">
+              <div class="change" id="trac-change-1">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:1" class="cnum">
+      <a href="1141%3Fversion=3.html#comment:1">comment:1</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-05-18T14:53:17Z&amp;precision=second.html" title="2011-05-18T14:53:17Z in Timeline">3 years</a> ago by johnglover
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Description</strong>
+        modified (<a href="1141%3Faction=diff&amp;version=1.html">diff</a>)
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-2">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:2" class="cnum">
+      <a href="1141%3Fversion=3.html#comment:2">comment:2</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-05-18T14:54:31Z&amp;precision=second.html" title="2011-05-18T14:54:31Z in Timeline">3 years</a> ago by johnglover
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Description</strong>
+        modified (<a href="1141%3Faction=diff&amp;version=2.html">diff</a>)
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-3">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:3" class="cnum">
+      <a href="1141%3Fversion=3.html#comment:3">comment:3</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-05-18T15:53:50Z&amp;precision=second.html" title="2011-05-18T15:53:50Z in Timeline">3 years</a> ago by johnglover
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Description</strong>
+        modified (<a href="1141%3Faction=diff&amp;version=3.html">diff</a>)
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+          </div>
+        </div>
+      <div id="help"><strong>Note:</strong> See
+        <a href="../wiki/TracTickets.html">TracTickets</a> for help on using
+        tickets.</div>
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="first">
+          <a rel="nofollow" href="1141%3Fversion=3&amp;format=csv" class="csv">Comma-delimited Text</a>
+        </li><li>
+          <a rel="nofollow" href="1141%3Fversion=3&amp;format=tab" class="tab">Tab-delimited Text</a>
+        </li><li class="last">
+          <a rel="nofollow" href="1141%3Fversion=3&amp;format=rss" class="rss">RSS Feed</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

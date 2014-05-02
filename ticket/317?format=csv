@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+317,Make search pluggable,rgrp,pudo,"Make lib/search.py pluggable so that we can plug in different search systems (e.g. SOLR).
+
+Suggest we define a base Search class from which specific search implementations inherit (e.g. SQLSearch, SOLRSearch etc). The specific one being used would then be set via a config variable.",enhancement,closed,critical,v1.1,ckan,fixed,,,,

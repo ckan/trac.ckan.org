@@ -1,0 +1,3 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2257,cleanup template vars,toby,toby,"look at reducing what is pulled into templates eg ckan.lib.helpers
+ensure that these changes don't break existing extensions etc",enhancement,new,awaiting triage,ckan-v1.9,ckan,,,,ckan,none

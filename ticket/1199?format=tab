@@ -1,0 +1,19 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1199	Implement an email function for users.	pudo	pudo	"We need an email function in CKAN to accept messages sent to users. The basic signature will be: 
+
+ * mail_user(user_obj, subject, body, mime_type='text/plain', headers={})
+
+This has a number of use cases: 
+
+ * Retrieval of lost passwords
+ * E-Mail confirmation 
+
+Finally, the mail function should be exposed in the API for sysadmin clients. This way we can have scripts traverse CKAN for 404s, invalid data or missing fields and ping users about that automatically (requires traversal by revision, not package, to get the associated users). 
+
+== Implementation ==
+
+Note we have already written code like this (*and* tested it) in isitopen:
+
+ * https://bitbucket.org/okfn/isitopen/src/bb2cbd146fa5/isitopen/lib/mailer.py
+ * https://bitbucket.org/okfn/isitopen/src/bb2cbd146fa5/isitopen/tests/lib/test_mailer.py
+"	enhancement	closed	major		ckan	fixed			ckan	notifications

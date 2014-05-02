@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1464: Get RabbitMQ runnable with multiple instances</title>
+    <link>http://localhost/ticket/1464</link>
+    <description>&lt;p&gt;
+The current harvesting implementation can only have one instance per server.
+&lt;/p&gt;
+&lt;p&gt;
+We could either:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Accept this
+&lt;/li&gt;&lt;li&gt;Change the RabbitMQ code to support multiple instances
+&lt;/li&gt;&lt;li&gt;Switch the entire harvesting to use Celery
+&lt;/li&gt;&lt;li&gt;Wait for James's redis based live feedback based system
+&lt;/li&gt;&lt;/ul&gt;</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1464</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>thejimmyg</dc:creator>
+
+      <pubDate>Mon, 21 Nov 2011 11:18:10 GMT</pubDate>
+      <title>description, summary changed</title>
+      <link>http://localhost/ticket/1464#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1464#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1464?action=diff&amp;amp;version=1"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;summary&lt;/strong&gt;
+                changed from &lt;em&gt;Get RabbitMQ runnable with multiple instances&lt;/em&gt; to &lt;em&gt;Replace RabbitMQ with Celeryd to support running multiple instances&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>thejimmyg</dc:creator>
+
+      <pubDate>Tue, 06 Dec 2011 11:09:23 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1464#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/1464#comment:2</guid>
+      <description>
+        &lt;p&gt;
+As part of the queue upgrade we'll also fix &lt;a class="closed ticket" href="http://localhost/ticket/1064" title="defect: Remove Workers from ckanext-queue (closed: duplicate)"&gt;#1064&lt;/a&gt; which explains that the current queue implementation is over-engineered.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Mon, 12 Dec 2011 17:24:19 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1464#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/1464#comment:3</guid>
+      <description>
+        &lt;p&gt;
+Pls update status and milestone
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>thejimmyg</dc:creator>
+
+      <pubDate>Mon, 19 Dec 2011 10:23:16 GMT</pubDate>
+      <title>milestone changed</title>
+      <link>http://localhost/ticket/1464#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/1464#comment:4</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan-sprint-2011-11-21&lt;/em&gt; to &lt;em&gt;ckan-v1.6&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Mon, 06 Feb 2012 11:50:42 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/1464#comment:5</link>
+      <guid isPermaLink="false">http://localhost/ticket/1464#comment:5</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;wontfix&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Closing as wontfix as no further info and seems unimportant.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

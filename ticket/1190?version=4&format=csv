@@ -1,0 +1,20 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1190,[super] CREP 0004 Data API and Data Processing System,rgrp,rgrp,"For some time (e.g. 1y+!) we have known that we want to integrate some kind of datastore / data processing system with CKAN. We've had a CREP in progress on this for some months (may copy that here at some point):
+
+<http://bitbucket.org/okfn/ceps/src/tip/cep/cep-0004.txt>
+
+We can distinguish 3 modules that are needed:
+
+1. ""Webstore"": A datastore with dataapi - #1208
+
+Suggestion is this would be sqlite based with a simple sql based API. http://ckan.net/api/data/{user|org}/{datastore_name}?q={some-read-sql-query}
+
+2. Automated conversion of suitable resources into datastore upon resource creation so that e.g. they are accessible via the API. #1398
+
+3. A data processing system which utilizes this datastore. One could
+get a long way with simple javascript running in the browser for development with this javascript then run offline using something like nodejs. Alternatively one could allow one to specify a url to e.g. a python file which would then be run in a sandbox (with access to some specified set of python modules)
+
+
+== More info ==
+
+ * Overview diagram: https://docs.google.com/drawings/d/1XK7dcpFXNlMzVFgLPYPZUXOsFRPzgCEvS-w7FcvydEQ/edit?hl=en_GB",enhancement,new,awaiting triage,ckan-v1.5,ckan,,,,ckan,none

@@ -1,0 +1,309 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #842: Todo list CKAN extension</title>
+    <link>http://localhost/ticket/842</link>
+    <description>&lt;p&gt;
+An extension that provides a todo list feature on CKAN so that people can register and find things to do.
+&lt;/p&gt;
+&lt;p&gt;
+Extension name: ckanext-todo
+&lt;/p&gt;
+&lt;h2 id="UserStory"&gt;User Story&lt;/h2&gt;
+&lt;h3 id="Packagepage"&gt;Package page&lt;/h3&gt;
+&lt;p&gt;
+As a user I come to a package:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Have a todo count at that top that takes you down to the todo list (which may say nothing todo)
+&lt;/li&gt;&lt;li&gt;At the bottom is a section of the package display titled "&lt;a class="missing wiki"&gt;ToDo?&lt;/a&gt;" where I see a list of all toDos for the package most recent at the top
+&lt;ul&gt;&lt;li&gt;If I am logged in
+&lt;ul&gt;&lt;li&gt;See a form for "Add to do" at the top of the todo section and can add one straight away
+&lt;/li&gt;&lt;li&gt;I see a "now resolved" button next to each which goes green when you hover.
+&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+When clicked the todo fades away.
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;&lt;li&gt;Not logged in: I see a button that says "login to add todo"
+&lt;/li&gt;&lt;/ul&gt;&lt;h3 id="Todolistpage"&gt;Todo list page&lt;/h3&gt;
+&lt;p&gt;
+When a user comes to todo overview at /todo
+&lt;/p&gt;
+&lt;p&gt;
+At top list all todo categories with counts (or a progress bar). Click on category name or bar takes you down page to list for that category.
+&lt;/p&gt;
+&lt;p&gt;
+Category list has a list of todo items (ul with li items with class todo) - link to package relevant to the todo.
+&lt;/p&gt;
+&lt;h2 id="Implementation"&gt;Implementation&lt;/h2&gt;
+&lt;p&gt;
+The Todo form
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;One of the fields is category -&amp;gt; autocomplete the category (not constrained) (lowercase, no spaces, .-_ allowed)
+&lt;/li&gt;&lt;li&gt;Add a description
+&lt;/li&gt;&lt;li&gt;Submit, the todo gets added via AJAX to the list at the top as the most recent todo
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+Model:
+&lt;/p&gt;
+&lt;pre class="wiki"&gt;todo table
+  id (autoincrement integer)
+  package_id
+  todo_category_id (required)
+  description (required)
+  created=NOW()
+  resolved=null (unresolved) or a datetime (datetime of resolution)
+  creator=user
+  resolver=user
+todo_category table
+  id
+  name
+Prepopulate with: broken-resource-link, no-author, bad-format, add-description
+&lt;/pre&gt;&lt;p&gt;
+API at /api/2/todo
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;GET / POST / PUT ...
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+/api/2/todo?package=package_id_or_name&amp;amp;category=...&amp;amp;resolved=0/1
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;support limit (?)
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+/api/2/todo/category -&amp;gt; return list of todo categories
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;No GET / PUT / POST (these are auto-created by creation of todo)
+&lt;/li&gt;&lt;/ul&gt;&lt;h2 id="OptionalExtrasWillnotbedoneatm"&gt;Optional Extras (Will not be done atm)&lt;/h2&gt;
+&lt;ul&gt;&lt;li&gt;Integrate todo tags (e.g. list packages tagged with a todo.{xxx} on Todo List page ...
+&lt;/li&gt;&lt;/ul&gt;</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/842</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Mon, 31 Jan 2011 10:05:13 GMT</pubDate>
+      <title>priority changed</title>
+      <link>http://localhost/ticket/842#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/842#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;priority&lt;/strong&gt;
+                changed from &lt;em&gt;critical&lt;/em&gt; to &lt;em&gt;awaiting triage&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Change to awaitingtriage as definitely not critical.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>thejimmyg</dc:creator>
+
+      <pubDate>Fri, 22 Apr 2011 12:08:51 GMT</pubDate>
+      <title>owner, priority changed; theme, repo, milestone set</title>
+      <link>http://localhost/ticket/842#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/842#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;owner&lt;/strong&gt;
+              changed from &lt;em&gt;rgrp&lt;/em&gt; to &lt;em&gt;johnglover&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;priority&lt;/strong&gt;
+                changed from &lt;em&gt;awaiting triage&lt;/em&gt; to &lt;em&gt;minor&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;theme&lt;/strong&gt;
+                set to &lt;em&gt;none&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;repo&lt;/strong&gt;
+                set to &lt;em&gt;ckan&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                set to &lt;em&gt;ckan-v1.4-sprint-7&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+As a user I come to a package:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+Have a todo count at that top that takes you down to the todo list (which may say nothing todo)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+At the bottom is a section of the package display titled "&lt;a class="missing wiki"&gt;ToDo?&lt;/a&gt;" where I see a list of all toDos for the package most recent at the top
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+If I am logged in
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+see a form for "Add to do" at the top of the todo section and can add one straight away
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+I see a "now resolved" button next to each which goes green when you hover.
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+When clicked the todo fades away.
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+Otherwise I see a button that says "login to add todo"
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+expands out the form
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+The form
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+One of the fields is category -&amp;gt; autocomplete the category (not constrained)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+Add a description
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+Submit, the todo gets added via AJAX to the list at the top as the most recent todo
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Model:
+&lt;/p&gt;
+&lt;p&gt;
+todo
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+id
+package_id
+todo_category_id (required)
+description (required)
+date=NOW()
+resolved=False
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+todo_category
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+id
+name
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Prepopulate with: broken-resource-link, no-author, bad-format
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>thejimmyg</dc:creator>
+
+      <pubDate>Fri, 22 Apr 2011 12:10:28 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/842#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/842#comment:3</guid>
+      <description>
+        &lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+Otherwise I see a button that says "login to add todo"
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+expands out the form
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Actually rather than expanding the form, you will go away to the login page and come back to see the expanded form (question: how does this redirect you back to the bottom?)
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Fri, 22 Apr 2011 12:58:55 GMT</pubDate>
+      <title>priority, description changed</title>
+      <link>http://localhost/ticket/842#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/842#comment:4</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;priority&lt;/strong&gt;
+                changed from &lt;em&gt;minor&lt;/em&gt; to &lt;em&gt;major&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/842?action=diff&amp;amp;version=4"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>johnglover</dc:creator>
+
+      <pubDate>Tue, 17 May 2011 15:34:47 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/842#comment:5</link>
+      <guid isPermaLink="false">http://localhost/ticket/842#comment:5</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

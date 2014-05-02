@@ -1,0 +1,15 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+3014	Crash when deleting a non-empty vocabulary	seanh		"From Knud Möller:
+
+when I try to delete a non-empty tag vocabulary via the API (through HTTP), I get an internal server error. Checking
+the logs, this turns out to be a consistency error raised by  sqlalchemy:
+
+Error - <class 'sqlalchemy.exc.IntegrityError'>: (IntegrityError) update or delete on table ""vocabulary"" violates
+foreign key constraint ""tag_vocabulary_id_fkey"" on table ""tag""
+DETAIL:  Key (id)=(21421955-7560-467c-af30-9f790b73e6ae) is still referenced from table ""tag"".
+ 'DELETE FROM vocabulary WHERE vocabulary.id = %(id)s' {'id': u'21421955-7560-467c-af30-9f790b73e6ae'}
+URL: http://33.33.33.10:5000/api/action/vocabulary_delete
+
+The error makes sense, but I'm wondering if it would be useful to extend the API to also allow the deletion of        
+non-empty vocabularies, possibly via a parameter (not sure what best practice in API design is). At the very least, it
+would be cool if the error message coming back in the response had more information in it."	defect	new	awaiting triage	ckan 2.0	ckan		vocabularies		ckan	none

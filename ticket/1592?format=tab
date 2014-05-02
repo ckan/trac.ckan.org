@@ -1,0 +1,2 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1592	Add metadata_modified and metadata_created to package_dictize output	amercader	amercader	The dict returned by package_dictize does not include metadata_modified and metadata_created. These are really useful properties, so it's worth having them on the standard package dict representation, which is used in several places, like at the template level.	enhancement	closed	awaiting triage	ckan-sprint-2012-01-09	ckan	fixed		kindly	ckan	dictization

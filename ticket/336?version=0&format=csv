@@ -1,0 +1,7 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+336,Resource extension to REST API,donovanhide,,"Hi,
+have attached a patch for adding a resource list api call. Have also added a JSONP compatible callback section, along the lines of #388.
+
+Could also add a search version. Not sure what the best url would be for that though.
+
+Haven't written a test as the structure seems to follow a functional spec. Is that document around somewhere?",enhancement,new,awaiting triage,v1.1,ckan,,rest resource,,,

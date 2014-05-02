@@ -1,0 +1,5 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+96	info command must give up to date information for python-type distributions	rgrp	rgrp	"(2008-09-10) at present when setup.py is edited info command may not give up to date information if pkg-info (in egg.info) is not rebuilt.
+
+Suggest: info command needs to rebuilds pkg-info in python-type distributions.
+"	defect	new	minor		dpm					

@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1620,Update and test existing DGU package form : don't allow package-type selection when editing a package,icmurray,icmurray,"[Child of #1526]
+
+Can't change a dataset from containing time-series resources to one containing individual resources or visa-versa.",enhancement,closed,major,ckan-sprint-2012-02-06,dgu,fixed,0.5d #1526,dread kindly shevski,ckanext-dgu,none

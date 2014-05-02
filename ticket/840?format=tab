@@ -1,0 +1,4 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+840	On/off switch for ETags cache	dread	dread	" * Use config variable to switch ETags caching on or off. Consider joining in with 'cache_enabled'.
+ * Default setting for (all) caching should be off.
+ * Needs documenting in configuration.rst"	enhancement	closed	major	ckan-v1.4-sprint-6	ckan	fixed			ckan	none

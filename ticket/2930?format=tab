@@ -1,0 +1,4 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2930	convert_from_extras() returns qupted strings from API	seanh		"Use an IGroupForm plugin to add a custom metadata field to groups using convert_to_extras() and convert_from_extras(), when calling group show the value comes back quoted, e.g. '""my_value""'
+
+Should add tests to example_igroupform and others that setting and getting the custom fields works through the action API."	defect	closed	awaiting triage	ckan-v1.8.1	ckan	fixed	api cmap		ckan	none

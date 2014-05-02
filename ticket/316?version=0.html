@@ -1,0 +1,943 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      #316 (Search URL encoding issue)
+     – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="prev" href="315.html" title="Ticket #315" />
+        <link rel="last" href="3030.html" title="Ticket #3030" />
+        <link rel="help" href="../wiki/TracGuide.html" />
+        <link rel="alternate" href="316%3Fversion=0&amp;format=csv" type="text/csv" class="csv" title="Comma-delimited Text" /><link rel="alternate" href="316%3Fversion=0&amp;format=tab" type="text/tab-separated-values" class="tab" title="Tab-delimited Text" /><link rel="alternate" href="316%3Fversion=0&amp;format=rss" type="application/rss+xml" class="rss" title="RSS Feed" />
+        <link rel="next" href="317.html" title="Ticket #317" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/ticket.css" type="text/css" />
+        <link rel="first" href="1.html" title="Ticket #1" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript">
+      var auto_preview_timeout=2.0;
+      var form_token="93d81ccf9a7bb1c456462f62";
+    </script>
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script><script type="text/javascript" src="../chrome/common/js/wikitoolbar.js"></script><script type="text/javascript" src="../chrome/common/js/resizer.js"></script><script type="text/javascript" src="../chrome/common/js/auto_preview.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("div.description").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $(".foldable").enableFolding(false, true);
+        var args = {realm: "ticket", id: 316, escape_newlines: 0}
+        $("#comment").autoPreview("/wiki_render", args, function(textarea, text, rendered) {
+            $("#ticketchange div.comment").html(rendered);
+            if (rendered)
+              $("#ticketchange").show();
+            else if ($("#ticketchange ul.changes").length == 0)
+              $("#ticketchange").hide();
+        });
+        $("#trac-comment-editor textarea").autoPreview("/wiki_render", args,
+                                                       function(textarea, text, rendered) {
+          var comment = $("#trac-comment-editor").next("div.comment");
+          comment.html(rendered);
+          if (rendered)
+            comment.show();
+          else
+            comment.hide();
+        });
+        $("#modify").parent().toggleClass("collapsed");
+        $(".trac-topnav a").click(function() { $("#modify").parent().removeClass("collapsed"); });
+        /* only enable control elements for the currently selected action */
+        var actions = $("#action input[name='action']");
+        function updateActionFields() {
+          actions.each(function () {
+            $(this).siblings().find("*[id]").enable($(this).checked());
+            $(this).siblings().filter("*[id]").enable($(this).checked());
+          });
+        }
+        actions.click(updateActionFields);
+        updateActionFields();
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="../wiki/TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li class="active"><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="315.html" title="Ticket #315">Previous Ticket</a></span></li><li class="last"><span><a class="next" href="317.html" title="Ticket #317">Next Ticket</a> &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="ticket">
+      <h1 id="trac-ticket-title">
+          <a href="316.html">Ticket #316</a>
+          <span class="status">(new defect)</span>
+              — at <a href="316%3Fversion=0.html#comment:description">Initial Version</a>
+      </h1>
+      <div id="ticket">
+  <div class="date">
+    <p>Opened <a class="timeline" href="../timeline%3Ffrom=2010-05-19T10:45:28Z&amp;precision=second.html" title="2010-05-19T10:45:28Z in Timeline">4 years</a> ago</p>
+    <p>Last modified <a class="timeline" href="../timeline%3Ffrom=2010-12-08T17:59:37Z&amp;precision=second.html" title="2010-12-08T17:59:37Z in Timeline">3 years</a> ago</p>
+  </div>
+  <h2 class="summary searchable">Search URL encoding issue</h2>
+  <table class="properties">
+    <tr>
+      <th id="h_reporter">Reported by:</th>
+      <td headers="h_reporter" class="searchable">
+        <a href="../query%3Fstatus=!closed&amp;reporter=dread.html">dread</a>
+      </td>
+      <th id="h_owner">Owned by:</th>
+      <td headers="h_owner">
+        <a href="../query%3Fstatus=!closed&amp;owner=rgrp.html">rgrp</a>
+      </td>
+    </tr>
+    <tr>
+        <th id="h_priority">
+          Priority:
+        </th>
+        <td headers="h_priority">
+              <a href="../query%3Fstatus=!closed&amp;priority=awaiting+triage.html">awaiting triage</a>
+        </td>
+        <th id="h_milestone">
+          Milestone:
+        </th>
+        <td headers="h_milestone">
+              <a class="missing milestone"></a>
+        </td>
+    </tr><tr>
+        <th id="h_component">
+          Component:
+        </th>
+        <td headers="h_component">
+              <a href="../query%3Fstatus=!closed&amp;component=ckan.html">ckan</a>
+        </td>
+        <th id="h_keywords">
+          Keywords:
+        </th>
+        <td headers="h_keywords" class="searchable">
+        </td>
+    </tr><tr>
+        <th id="h_cc">
+          Cc:
+        </th>
+        <td headers="h_cc" class="searchable">
+        </td>
+        <th id="h_repo">
+          Repository:
+        </th>
+        <td headers="h_repo">
+              <a href="../query%3Fstatus=!closed.html"></a>
+        </td>
+    </tr><tr>
+        <th id="h_theme">
+          Theme:
+        </th>
+        <td headers="h_theme">
+              <a href="../query%3Fstatus=!closed.html"></a>
+        </td>
+        <th>
+        </th>
+        <td>
+        </td>
+    </tr>
+  </table>
+  <div class="description">
+    <h3 id="comment:description">
+      Description
+    </h3>
+    <div class="searchable">
+      <p>
+If you search for unescaped characters such as '`' (backtick) in the URL in Chrome then you get a 500 error.
+</p>
+<p>
+e.g.
+<a class="ext-link" href="http://www.ckan.net/package/search?q=fjdkf2B%C2%B4gfhgfkgf{gpk"><span class="icon">​</span>http://www.ckan.net/package/search?q=fjdkf2B%C2%B4gfhgfkgf{gpk</a>
+fjdkf2B´gfhgfkgf{gpk
+</p>
+<p>
+returns this exception:
+</p>
+<p>
+URL: <a class="ext-link" href="http://www.ckan.net/package/search?q=fjdkf%2B%C2%B4gfhgfkgf%7Bg%C2%B4pk&amp;search=Search+Packages+%C2%BB"><span class="icon">​</span>http://www.ckan.net/package/search?q=fjdkf%2B%C2%B4gfhgfkgf%7Bg%C2%B4pk&amp;search=Search+Packages+%C2%BB</a>
+Module weberror.errormiddleware:162 in <span class="underline">call</span>
+&lt;&lt;              <span class="underline">traceback_supplement</span> = Supplement, self, environ
+</p>
+<blockquote>
+<p>
+sr_checker = <a class="missing wiki">ResponseStartChecker?</a>(start_response)
+app_iter = self.application(environ, sr_checker)
+return self.make_catching_iter(app_iter, environ, sr_checker)
+</p>
+</blockquote>
+<blockquote>
+<p>
+except:
+</p>
+<blockquote class="citation">
+<blockquote class="citation">
+<blockquote>
+<p>
+app_iter = self.application(environ, sr_checker)
+</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>
+Module repoze.who.middleware:107 in <span class="underline">call</span>
+&lt;&lt;          wrapper = <a class="missing wiki">StartResponseWrapper?</a>(start_response)
+</p>
+<blockquote>
+<p>
+app_iter = app(environ, wrapper.wrap_start_response)
+</p>
+</blockquote>
+<p>
+       
+</p>
+<blockquote>
+<p>
+# The challenge decider almost(?) always needs information from the
+</p>
+<blockquote class="citation">
+<blockquote class="citation">
+<blockquote>
+<p>
+app_iter = app(environ, wrapper.wrap_start_response)
+</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>
+Module beaker.middleware:73 in <span class="underline">call</span>
+&lt;&lt;                                                     self.cache_manager)
+</p>
+<blockquote>
+<p>
+environ[self.environ_key] = self.cache_manager
+return self.app(environ, start_response)
+</p>
+<blockquote class="citation">
+<blockquote class="citation">
+<blockquote>
+<p>
+return self.app(environ, start_response)
+</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>
+Module beaker.middleware:152 in <span class="underline">call</span>
+&lt;&lt;                          headers.append(('Set-cookie', cookie))
+</p>
+<blockquote>
+<p>
+return start_response(status, headers, exc_info)
+</p>
+</blockquote>
+<blockquote>
+<p>
+return self.wrap_app(environ, session_start_response)
+</p>
+</blockquote>
+<p>
+           
+</p>
+<blockquote>
+<p>
+def _get_session(self):
+</p>
+<blockquote class="citation">
+<blockquote class="citation">
+<blockquote>
+<p>
+return self.wrap_app(environ, session_start_response)
+</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>
+Module routes.middleware:130 in <span class="underline">call</span>
+&lt;&lt;                  environ<a class="missing wiki">SCRIPT_NAME?</a> = environ<a class="missing wiki">SCRIPT_NAME?</a>[:-1]
+               
+</p>
+<blockquote>
+<p>
+response = self.app(environ, start_response)
+</p>
+</blockquote>
+<p>
+               
+</p>
+<blockquote>
+<p>
+# Wrapped in try as in rare cases the attribute will be gone already
+</p>
+<blockquote class="citation">
+<blockquote class="citation">
+<blockquote>
+<p>
+response = self.app(environ, start_response)
+</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>
+Module pylons.wsgiapp:125 in <span class="underline">call</span>
+&lt;&lt;          
+</p>
+<blockquote>
+<p>
+controller = self.resolve(environ, start_response)
+response = self.dispatch(controller, environ, start_response)
+</p>
+</blockquote>
+<p>
+               
+</p>
+<blockquote>
+<p>
+if 'paste.testing_variables' in environ and hasattr(response,
+</p>
+<blockquote class="citation">
+<blockquote class="citation">
+<blockquote>
+<p>
+response = self.dispatch(controller, environ, start_response)
+</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>
+Module pylons.wsgiapp:324 in dispatch
+&lt;&lt;          if log_debug:
+</p>
+<blockquote>
+<p>
+log.debug("Calling controller class with WSGI interface")
+</p>
+</blockquote>
+<blockquote>
+<p>
+return controller(environ, start_response)
+</p>
+</blockquote>
+<p>
+           
+</p>
+<blockquote>
+<p>
+def load_test_env(self, environ):
+</p>
+<blockquote class="citation">
+<blockquote class="citation">
+<blockquote>
+<p>
+return controller(environ, start_response)
+</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>
+Module ckan.lib.base:50 in <span class="underline">call</span>
+&lt;&lt;          # available in environ<a class="missing wiki">pylons.routes_dict?</a>
+</p>
+<blockquote>
+<p>
+try:
+</p>
+<blockquote>
+<p>
+return WSGIController.<span class="underline">call</span>(self, environ, start_response)
+</p>
+</blockquote>
+<p>
+finally:
+</p>
+<blockquote>
+<p>
+model.Session.remove()
+</p>
+<blockquote class="citation">
+<blockquote class="citation">
+<blockquote>
+<p>
+return WSGIController.<span class="underline">call</span>(self, environ, start_response)
+</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>
+Module pylons.controllers.core:221 in <span class="underline">call</span>
+&lt;&lt;                  return response(environ, self.start_response)
+               
+</p>
+<blockquote>
+<p>
+response = self._dispatch_call()
+if not start_response_called:
+</p>
+<blockquote>
+<p>
+self.start_response = start_response
+</p>
+<blockquote class="citation">
+<blockquote class="citation">
+<blockquote>
+<p>
+response = self._dispatch_call()
+</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>
+Module pylons.controllers.core:172 in _dispatch_call
+&lt;&lt;              req.environ<a class="missing wiki">pylons.action_method?</a> = func
+                   
+</p>
+<blockquote>
+<p>
+response = self._inspect_call(func)
+</p>
+</blockquote>
+<blockquote>
+<p>
+else:
+</p>
+<blockquote>
+<p>
+if log_debug:
+</p>
+<blockquote class="citation">
+<blockquote class="citation">
+<blockquote>
+<p>
+response = self._inspect_call(func)
+</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>
+Module pylons.controllers.core:107 in _inspect_call
+&lt;&lt;                        func.<span class="underline">name</span>, args)
+</p>
+<blockquote>
+<p>
+try:
+</p>
+<blockquote>
+<p>
+result = self._perform_call(func, args)
+</p>
+</blockquote>
+<p>
+except HTTPException, httpe:
+</p>
+<blockquote>
+<p>
+if log_debug:
+</p>
+<blockquote class="citation">
+<blockquote class="citation">
+<blockquote>
+<p>
+result = self._perform_call(func, args)
+</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>
+Module pylons.controllers.core:60 in _perform_call
+&lt;&lt;          """Hide the traceback for everything above this method"""
+</p>
+<blockquote>
+<p>
+<span class="underline">traceback_hide</span> = 'before_and_this'
+return func(<strong>args)
+</strong></p>
+</blockquote>
+<p>
+           
+</p>
+<blockquote>
+<p>
+def _inspect_call(self, func):
+</p>
+<blockquote class="citation">
+<blockquote class="citation">
+<blockquote>
+<p>
+return func(<strong>args)
+</strong></p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>
+Module ckan.controllers.package:52 in search
+&lt;&lt;                  collection=query,
+</p>
+<blockquote>
+<p>
+page=request.params.get('page', 1),
+items_per_page=50
+</p>
+</blockquote>
+<blockquote>
+<p>
+)
+# filter out ranks from the query result
+</p>
+<blockquote class="citation">
+<blockquote class="citation">
+<blockquote>
+<p>
+items_per_page=50
+</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>
+Module webhelpers.paginate:333 in <span class="underline">init</span>
+&lt;&lt;              self.item_count = item_count
+</p>
+<blockquote>
+<p>
+else:
+</p>
+<blockquote>
+<p>
+self.item_count = len(self.collection)
+</p>
+</blockquote>
+</blockquote>
+<p>
+       
+</p>
+<blockquote>
+<p>
+# Compute the number of the first and last available page
+</p>
+<blockquote class="citation">
+<blockquote class="citation">
+<blockquote>
+<p>
+self.item_count = len(self.collection)
+</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>
+Module webhelpers.paginate:204 in <span class="underline">len</span>
+&lt;&lt;      def <span class="underline">len</span>(self):
+</p>
+<blockquote>
+<p>
+return self.obj.count()
+</p>
+</blockquote>
+<p>
+       
+</p>
+<blockquote>
+<p>
+# Since the items on a page are mainly a list we subclass the "list" type
+</p>
+<blockquote class="citation">
+<blockquote class="citation">
+<blockquote>
+<p>
+return self.obj.count()
+</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>
+Module sqlalchemy.orm.query:1094 in count
+&lt;&lt;              q = q.params(params)
+</p>
+<blockquote>
+<p>
+q = q._legacy_select_kwargs(<strong>kwargs)
+return q._count()
+</strong></p>
+</blockquote>
+<p>
+       
+</p>
+<blockquote>
+<p>
+def _count(self):
+</p>
+<blockquote class="citation">
+<blockquote class="citation">
+<blockquote>
+<p>
+return q._count()
+</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>
+Module sqlalchemy.orm.query:1103 in _count
+&lt;&lt;          """
+</p>
+<blockquote>
+<p>
+return self._col_aggregate(sql.literal_column('1'), sql.func.count, nested_cols=list(self.mapper.primary_key))
+</p>
+</blockquote>
+<p>
+       
+</p>
+<blockquote>
+<p>
+def _col_aggregate(self, col, func, nested_cols=None):
+</p>
+<blockquote class="citation">
+<blockquote class="citation">
+<blockquote>
+<p>
+return self._col_aggregate(sql.literal_column('1'), sql.func.count, nested_cols=list(self.mapper.primary_key))
+</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>
+Module sqlalchemy.orm.query:1125 in _col_aggregate
+&lt;&lt;          if self._autoflush and not self._populate_existing:
+</p>
+<blockquote>
+<p>
+self.session._autoflush()
+</p>
+</blockquote>
+<blockquote>
+<p>
+return self.session.scalar(s, params=self._params, mapper=self.mapper)
+</p>
+</blockquote>
+<p>
+       
+</p>
+<blockquote>
+<p>
+def compile(self):
+</p>
+<blockquote class="citation">
+<blockquote class="citation">
+<blockquote>
+<p>
+return self.session.scalar(s, params=self._params, mapper=self.mapper)
+</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>
+Module sqlalchemy.orm.session:635 in scalar
+&lt;&lt;          engine = self.get_bind(mapper, clause=clause, instance=instance)
+       
+</p>
+<blockquote>
+<p>
+return self.<span class="underline">connection(engine, close_with_result=True).scalar(clause, params or {})
+</span></p>
+</blockquote>
+<p>
+       
+</p>
+<blockquote>
+<p>
+def close(self):
+</p>
+<blockquote class="citation">
+<blockquote class="citation">
+<blockquote>
+<p>
+return self.<span class="underline">connection(engine, close_with_result=True).scalar(clause, params or {})
+</span></p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>
+Module sqlalchemy.engine.base:834 in scalar
+&lt;&lt;          """
+       
+</p>
+<blockquote>
+<p>
+return self.execute(object, *multiparams, <strong>params).scalar()
+</strong></p>
+</blockquote>
+<p>
+       
+</p>
+<blockquote>
+<p>
+def statement_compiler(self, statement, <strong>kwargs):
+</strong></p>
+<blockquote class="citation">
+<blockquote class="citation">
+<blockquote>
+<p>
+return self.execute(object, *multiparams, <strong>params).scalar()
+</strong></p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>
+Module sqlalchemy.engine.base:844 in execute
+&lt;&lt;          for c in type(object).<span class="underline">mro</span>:
+</p>
+<blockquote>
+<p>
+if c in Connection.executors:
+</p>
+<blockquote>
+<p>
+return Connection.executors[c](self, object, multiparams, params)
+</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>
+else:
+</p>
+<blockquote>
+<p>
+raise exceptions.<a class="missing wiki">InvalidRequestError?</a>("Unexecutable object type: " + str(type(object)))
+</p>
+<blockquote class="citation">
+<blockquote class="citation">
+<blockquote>
+<p>
+return Connection.executors[c](self, object, multiparams, params)
+</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>
+Module sqlalchemy.engine.base:895 in execute_clauseelement
+&lt;&lt;          else:
+</p>
+<blockquote>
+<p>
+keys = None
+</p>
+</blockquote>
+<blockquote>
+<p>
+return self._execute_compiled(elem.compile(dialect=self.dialect, column_keys=keys, inline=len(params) &gt; 1), distilled_params=params)
+</p>
+</blockquote>
+<p>
+       
+</p>
+<blockquote>
+<p>
+def _execute_compiled(self, compiled, multiparams=None, params=None, distilled_params=None):
+</p>
+<blockquote class="citation">
+<blockquote class="citation">
+<blockquote>
+<p>
+return self._execute_compiled(elem.compile(dialect=self.dialect, column_keys=keys, inline=len(params) &gt; 1), distilled_params=params)
+</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>
+Module sqlalchemy.engine.base:907 in _execute_compiled
+&lt;&lt;          context.pre_execution()
+</p>
+<blockquote>
+<p>
+self.<span class="underline">execute_raw(context)
+context.post_execution()
+self._autocommit(context)
+</span></p>
+<blockquote class="citation">
+<blockquote class="citation">
+<blockquote>
+<p>
+self.<span class="underline">execute_raw(context)
+</span></p>
+</blockquote>
+</blockquote>
+</blockquote>
+</span></blockquote>
+<p>
+Module sqlalchemy.engine.base:916 in <span class="underline">execute_raw
+&lt;&lt;              self._cursor_executemany(context.cursor, context.statement, context.parameters, context=context)
+</p>
+<blockquote>
+<p>
+else:
+</p>
+<blockquote>
+<p>
+self._cursor_execute(context.cursor, context.statement, context.parameters<a class="missing changeset" title="No default repository defined">[0]</a>, context=context)
+</p>
+</blockquote>
+</blockquote>
+<p>
+       
+</p>
+<blockquote>
+<p>
+def _execute_ddl(self, ddl, params, multiparams):
+</p>
+<blockquote class="citation">
+<blockquote class="citation">
+<blockquote>
+<p>
+self._cursor_execute(context.cursor, context.statement, context.parameters<a class="missing changeset" title="No default repository defined">[0]</a>, context=context)
+</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>
+Module sqlalchemy.engine.base:958 in _cursor_execute
+&lt;&lt;              self.engine.logger.info(repr(parameters))
+</p>
+<blockquote>
+<p>
+try:
+</p>
+<blockquote>
+<p>
+self.dialect.do_execute(cursor, statement, parameters, context=context)
+</p>
+</blockquote>
+<p>
+except Exception, e:
+</p>
+<blockquote>
+<p>
+self._handle_dbapi_exception(e, statement, parameters, cursor)
+</p>
+<blockquote class="citation">
+<blockquote class="citation">
+<blockquote>
+<p>
+self.dialect.do_execute(cursor, statement, parameters, context=context)
+</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>
+Module sqlalchemy.engine.default:133 in do_execute
+&lt;&lt;      def do_execute(self, cursor, statement, parameters, context=None):
+</p>
+<blockquote>
+<p>
+cursor.execute(statement, parameters)
+</p>
+</blockquote>
+<p>
+       
+</p>
+<blockquote>
+<p>
+def is_disconnect(self, e):
+</p>
+<blockquote class="citation">
+<blockquote class="citation">
+<blockquote>
+<p>
+cursor.execute(statement, parameters)
+</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>
+<a class="missing wiki">UnicodeEncodeError?</a>: 'ascii' codec can't encode character u'\xb4' in position 6: ordinal not in range(128)
+</p>
+
+    </div>
+  </div>
+</div>
+      <div id="help"><strong>Note:</strong> See
+        <a href="../wiki/TracTickets.html">TracTickets</a> for help on using
+        tickets.</div>
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="first">
+          <a rel="nofollow" href="316%3Fversion=0&amp;format=csv" class="csv">Comma-delimited Text</a>
+        </li><li>
+          <a rel="nofollow" href="316%3Fversion=0&amp;format=tab" class="tab">Tab-delimited Text</a>
+        </li><li class="last">
+          <a rel="nofollow" href="316%3Fversion=0&amp;format=rss" class="rss">RSS Feed</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

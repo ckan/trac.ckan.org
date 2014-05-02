@@ -1,0 +1,56 @@
+= Branching Policy =
+
+CKAN is stored in a mercurial repo. This policy covers development and branching policy for this repo.
+
+= General: One Branch per Feature and Defect =
+
+We will be following the process described in (1) but applied to mercurial. Key aspects:
+
+ 1. There will be three 'core' branches: "stable", "metastable" and "default" (in article stable=master and develop=default)
+  * stable: stable code
+  * metastable: (will soon be deprecated) for code preparing to be stable
+  * default: development HEAD
+ 2. A (named) branch will be created for each feature or defect (bug), unless it is almost certain that the ticket only requires one changeset.
+  Branch naming convention:
+  * defect-{ticket-number}[-optional-name] e.g. defect-902-my-bad-bug
+  * feature-{ticket-number}[-optional-name] e.g. feature-903-my-amazing-feature
+ 3. A (named) branch will be created for each release: release-v{release-number} e.g. release-v1.3
+
+Feature, bug and release branches may be "closed" once appropriately merged. To summarize the work-flow:
+
+ * Almost no work should be done in default or stable directly - only tickets requiring single changesets area allowed. Otherwise work in branches.
+ * feature branches branch off default and merge back into default
+ * defect branches branch off default *or* stable and merge back into respective branches. Fixes on stable get merged to default as appropriate.
+  * NB: if a fix needs to go from default to stable (it happens!) then you can use mercurial's transplant (as you obviously must *not* merge from default to stable)
+ * release branches branch off metastable (in future off stable)
+
+More in article (1).
+
+We also strongly recommend that users push *by default* to their own personal repo rather than the main repo. This allows for code review by another dev before merging into the main repo and should reduce the number of "oops, I've pushed and broken the build" moments.
+
+== Closing Branches ==
+
+{{{
+hg up -r {branch-name}
+hg ci --close-branch {branch-name}
+# may now want to merge to default or you'll be left with a dangling head
+hg up -r default
+hg merge -r {branch-name}
+}}}
+
+== Transplanting changesets ==
+
+When you merge, you can't cherry pick changesets - you have to take all of them up to a certain one. In these cases transplant can be useful to copy a changeset across (though mercurial will not be aware of this copy).
+
+== 'tip' note ==
+
+Mercurial tags the latest commit with the tag `tip`. This means it changes on every commit and might be on ''any'' branch. So it's best not to refer to it in documentation, emails or changeset comments.
+
+= Further references =
+
+ 1. http://nvie.com/posts/a-successful-git-branching-model/
+ 2. http://forceten.tidalwave.it/development/mercurial-best-practices/
+ 3. http://www.rabbitmq.com/mercurial.html#branchperbug
+ 4. http://stevelosh.com/blog/2009/08/a-guide-to-branching-in-mercurial/
+ 5. Original thread http://lists.okfn.org/pipermail/ckan-dev/2010-November/000034.html
+

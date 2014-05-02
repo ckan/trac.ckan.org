@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      WikiProcessors – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="help" href="TracGuide.html" />
+        <link rel="alternate" href="WikiProcessors%3Fversion=2&amp;format=txt" type="text/x-trac-wiki" title="Plain Text" />
+        <link rel="up" href="WikiProcessors.html" title="View latest version" />
+        <link rel="next" href="WikiProcessors%3Fversion=3.html" title="Version 3" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/wiki.css" type="text/css" />
+        <link rel="prev" href="WikiProcessors%3Fversion=1.html" title="Version 1" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("#content").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $("#content").find(".wikianchor").each(function() {
+          $(this).addAnchor(babel.format(_("Link to #%(id)s"), {id: $(this).attr('id')}));
+        });
+        $(".foldable").enableFolding(true, true);
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last active"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="pagepath" class="noprint">
+  <a class="pathentry first" title="View WikiStart" href="../wiki.1.html">wiki:</a><a class="pathentry" href="WikiProcessors.html" title="View WikiProcessors">WikiProcessors</a>
+</div>
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="WikiProcessors%3Fversion=1.html" title="Version 1">Previous Version</a></span></li><li><a href="WikiProcessors.html" title="View latest version">View Latest Version</a></li><li class="last"><span><a class="next" href="WikiProcessors%3Fversion=3.html" title="Version 3">Next Version</a> &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="wiki">
+        <br />
+        <table id="info" summary="Revision info">
+          <tbody>
+            <tr><th scope="row">Version 2 (modified by trac, <a class="timeline" href="../timeline%3Ffrom=2007-07-30T11:26:42Z&amp;precision=second.html" title="2007-07-30T11:26:42Z in Timeline">7 years</a> ago)
+               (<a href="WikiProcessors%3Faction=diff&amp;version=2.html">diff</a>)</th></tr>
+            <tr><td class="message">
+              <p>
+--
+</p>
+
+            </td></tr>
+          </tbody>
+        </table>
+      <div class="wikipage searchable">
+        
+          
+          
+          <div id="wikipage"><h1 id="WikiProcessors">Wiki Processors</h1>
+<p>
+Processors are <a class="wiki" href="WikiMacros.html">WikiMacros</a> designed to provide alternative markup formats for the <a class="wiki" href="TracWiki.html">Wiki engine</a>. Processors can be thought of as <em>macro functions to process user-edited text</em>. 
+</p>
+<p>
+The Wiki engine uses processors to allow using <a class="wiki" href="WikiRestructuredText.html">Restructured Text</a>, <a class="wiki" href="WikiHtml.html">raw HTML</a> and <a class="ext-link" href="http://www.textism.com/tools/textile/"><span class="icon">​</span>textile</a> in any Wiki text throughout Trac.
+</p>
+<h2 id="UsingProcessors">Using Processors</h2>
+<p>
+To use a processor on a block of text, use a Wiki code block, selecting a processor by name using <em>shebang notation</em> (#!), familiar to most UNIX users from scripts.
+</p>
+<p>
+<strong>Example 1</strong> (<em>inserting raw HTML in a wiki text</em>):
+</p>
+<pre class="wiki">{{{
+#!html
+&lt;h1 style="color: orange"&gt;This is raw HTML&lt;/h1&gt;
+}}}</pre>
+<p>
+<strong>Results in:</strong>
+</p>
+<h1 style="color: orange">This is raw HTML</h1>
+<hr />
+<p>
+<strong>Example 2</strong> (<em>inserting Restructured Text in wiki text</em>):
+</p>
+<pre class="wiki">{{{
+#!rst
+A header
+--------
+This is some **text** with a footnote [*]_.
+
+.. [*] This is the footnote.
+}}}</pre>
+<p>
+<strong>Results in:</strong>
+</p>
+<div class="document" id="a-header">
+<h1 class="title">A header</h1>
+<p>This is some <strong>text</strong> with a footnote <a class="footnote-reference" href="WikiProcessors%3Fversion=2.html#id2" id="id1">[*]</a>.</p>
+<table class="docutils footnote" frame="void" id="id2" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="WikiProcessors%3Fversion=2.html#id1">[*]</a></td><td>This is the footnote.</td></tr>
+</tbody>
+</table>
+</div>
+<hr />
+<p>
+<strong>Example 3</strong> (<em>inserting a block of C source code in wiki text</em>):
+</p>
+<pre class="wiki">{{{
+#!c
+int main(int argc, char *argv[])
+{
+  printf("Hello World\n");
+  return 0;
+}
+}}}</pre>
+<p>
+<strong>Results in:</strong>
+</p>
+<div class="code"><pre><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> argc<span class="p">,</span> <span class="kt">char</span> <span class="o">*</span>argv<span class="p">[])</span>
+<span class="p">{</span>
+  printf<span class="p">(</span><span class="s">"Hello World</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div><hr />
+<h2 id="AvailableProcessors">Available Processors</h2>
+<p>
+The following processors are included in the Trac distribution:
+</p>
+<ul><li><strong>html</strong> -- Insert custom HTML in a wiki page. See <a class="wiki" href="WikiHtml.html">WikiHtml</a>.
+</li><li><strong>rst</strong> -- Trac support for Restructured Text. See <a class="wiki" href="WikiRestructuredText.html">WikiRestructuredText</a>.
+</li><li><strong>textile</strong> -- Supported if  <a class="ext-link" href="http://dealmeida.net/projects/textile/"><span class="icon">​</span>Textile</a> is installed. See <a class="ext-link" href="http://hobix.com/textile/"><span class="icon">​</span>a Textile reference</a>.
+</li></ul><p>
+Textile link above is rotten. <a class="ext-link" href="http://www.textism.com/tools/textile/"><span class="icon">​</span>this one</a> works, allows to test example.
+</p>
+<h3 id="CodeHighlightingSupport">Code Highlighting Support</h3>
+<p>
+Trac includes processors to provide inline <a class="wiki" href="TracSyntaxColoring.html">syntax highlighting</a> for the following languages:
+</p>
+<ul><li><strong>c</strong> -- C
+</li><li><strong>cpp</strong> -- C++
+</li><li><strong>python</strong> -- Python
+</li><li><strong>perl</strong> -- Perl
+</li><li><strong>ruby</strong> -- Ruby
+</li><li><strong>php</strong> -- PHP
+</li><li><strong>asp</strong> --- ASP
+</li><li><strong>sql</strong> -- SQL
+</li><li><strong>xml</strong> -- XML
+</li></ul><p>
+<strong>Note:</strong> <em>Trac relies on external software packages for syntax coloring. See <a class="wiki" href="TracSyntaxColoring.html">TracSyntaxColoring</a> for more info.</em>
+</p>
+<p>
+By using the MIME type as processor, it is possible to syntax-highlight the same languages that are supported when browsing source code. For example, you can write:
+</p>
+<pre class="wiki">{{{
+#!text/html
+&lt;h1&gt;text&lt;/h1&gt;
+}}}
+</pre><p>
+The result will be syntax highlighted HTML code. The same is valid for all other mime types supported.
+</p>
+<p>
+For more processor macros developed and/or contributed by users, visit: 
+</p>
+<ul><li><a class="ext-link" href="http://projects.edgewall.com/trac/wiki/ProcessorBazaar"><span class="icon">​</span>ProcessorBazaar</a>
+</li><li><a class="ext-link" href="http://projects.edgewall.com/trac/wiki/MacroBazaar"><span class="icon">​</span>MacroBazaar</a>
+</li></ul><h2 id="AdvancedTopics:DevelopingProcessorMacros">Advanced Topics: Developing Processor Macros</h2>
+<p>
+Developing processors is no different from <a class="wiki" href="WikiMacros.html">WikiMacros</a>. In fact they work the same way, only the usage syntax differs. See <a class="wiki" href="WikiMacros.html">WikiMacros</a> for more information.
+</p>
+<p>
+<strong>Example:</strong> (<em>Restructured Text Processor</em>):
+</p>
+<div class="code"><pre><span class="kn">from</span> <span class="nn">docutils.core</span> <span class="kn">import</span> publish_string
+
+<span class="k">def</span> <span class="nf">execute</span><span class="p">(</span>hdf<span class="p">,</span> text<span class="p">,</span> env<span class="p">):</span>
+    html <span class="o">=</span> publish_string<span class="p">(</span>text<span class="p">,</span> writer_name <span class="o">=</span> <span class="s">'html'</span><span class="p">)</span>
+    <span class="k">return</span> html<span class="p">[</span>html<span class="o">.</span>find<span class="p">(</span><span class="s">'&lt;body&gt;'</span><span class="p">)</span><span class="o">+</span><span class="mi">6</span><span class="p">:</span>html<span class="o">.</span>find<span class="p">(</span><span class="s">'&lt;/body&gt;'</span><span class="p">)]</span><span class="o">.</span>strip<span class="p">()</span>
+</pre></div><hr />
+<p>
+See also: <a class="wiki" href="WikiMacros.html">WikiMacros</a>, <a class="wiki" href="WikiHtml.html">WikiHtml</a>, <a class="wiki" href="WikiRestructuredText.html">WikiRestructuredText</a>, <a class="wiki" href="TracSyntaxColoring.html">TracSyntaxColoring</a>, <a class="wiki" href="WikiFormatting.html">WikiFormatting</a>, <a class="wiki" href="TracGuide.html">TracGuide</a>
+</p>
+</div>
+        
+        
+      </div>
+      
+
+    </div>
+    <script type="text/javascript">
+        jQuery.loadStyleSheet("/pygments/trac.css", "text/css");
+    </script>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="last first">
+          <a rel="nofollow" href="WikiProcessors%3Fversion=2&amp;format=txt">Plain Text</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+917	Turning off Autoflush in SQLAlchemy	kindly	kindly	"David Raznik: I propose we remove autoflush by default in ckan.  It caused a lot of bugs on the version upgrade due to its magical behavior.   
+
+I have a patch in https://bitbucket.org/kindly/ckan/    on branch   feature_switch_autoflush_off_by_default.
+
+This change simplifies code.  It only took 7 extra flushes/commits to make work and there are over 40 instances that we remove autoflush, so as not to cause error (I have not removed them in the patch yet).
+
+Things to know about using flush:
+
+* Most of the time nothing will change.   A commit implies flush.
+* You only need to flush if you expect a query to return an object you just saved.    i.e  if you  session.add(obj)  and you expect obj to be in a session.query.
+* A flush is handy when you want to get the primary key out before you do a commit.  i.e   session.add(obj);  session.flush();  obj.id  is now generated.
+* You can use them as a limited form of nested transaction.
+
+It increased the performance on the tests by about 5%.  There are less flushes altogether so is faster.
+
+I do not see any downsides."	enhancement	closed	major		ckan	fixed				

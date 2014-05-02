@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1387,Not specifying a protocol in dataset url causes broken link to be served on dataset view page,johnglover,toby,"If a user enters a url with no protocol (eg: www.data.gov.uk) in the 'url' field of a dataset, a broken link is created on the view page. 
+
+CKAN should probably either put in a http:// if no protocol is given, or validation should fail.",defect,closed,awaiting merge,ckan-v1.8,ckan,fixed,,,ckan,none

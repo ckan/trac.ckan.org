@@ -1,0 +1,16 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2950	paster commands to prepare codebase for deployment	icmurray		"With the latest template, css and js changes in 2.0, there are a number of things that need preparation prior to a production deployment.  One of these is:
+
+ - the fanstatic_resources defined in `ckan/lib/fanstatic_resources.py` (bottom of module) should be prepared, and minified.
+
+This ticket is to provide a paster command which when run on a production server with a user of sufficient rights will prepare minified versions of the javascript required by CKAN.
+
+## Background
+
+Minification *should* work seamlessly without the need for any preparation when CKAN is started (and does so on a development setup).  But on a production site, the webserver will (almost certainly) not have write-access to the directories that will contain the minified javascript.  And so the minification will fail, and the site will end up serving the un-minified media.
+
+One way around this would be to allow webserver write access to the directory its serving out of.  But this is not generally considered good practice.
+
+Another method would be to have a paster command which, when run as a user with the appropriate permissions, would generate the minified files.  This should be achiveable by just importing the `fanstatic_resources.py` module.  I think that's sufficient, but have not checked it.
+
+"	requirement	new	major	ckan 2.0	ckan		frontend paster javascript fanstatic		ckan	none

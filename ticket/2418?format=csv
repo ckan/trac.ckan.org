@@ -1,0 +1,6 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2418,Facets disappear once selected,aron.carroll,aron.carroll,"Currently facets in the new demo site disappear from the sidebar once they are selected.
+
+http://s031.okserver.org:2375/dataset?tags=fibre&tags=terrestrial&q=Africa
+
+Instead they should be marked with an ""active"" class and clicking the link should remove the filter in the same way as clicking the cross in a token below the search field works.",enhancement,closed,major,,ckan,fixed,,,ckan,none

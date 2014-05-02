@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1634,"Allow users to follow/unfollow activity streams of other users, datasets and groups",seanh,seanh,"This is a fairly big feature to add. Analysis: http://ckan.okfnpad.org/27
+
+This ticket is related to #1635 (email notifications for activity streams) which is about managing a list of activity streams for which the user receives email notifications. There are decisions to be made about how the two will work together.",enhancement,new,awaiting triage,ckan-v1.7,ckan,,12d activity_streams,,ckan,none

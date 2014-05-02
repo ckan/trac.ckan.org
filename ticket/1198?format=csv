@@ -1,0 +1,14 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1198,Publisher hierarchy,dread,,"'Publisher' entities in the model. They are hierarchical. 
+
+'User-Publisher' connections with one or more roles (e.g. drafter, moderator). 
+
+Authorization settings can control who can set what values in a 'published by' type field.
+
+Publishers and User-Publishers available to read in the API.
+
+Future tickets will provide:
+ * API to write Publishers and User-Publishers
+ * UI to edit Publishers and User-Publishers
+
+(This feature deprecates authorization groups)",enhancement,new,critical,ckan-backlog,ckan,,,kindly pudo,ckan,none

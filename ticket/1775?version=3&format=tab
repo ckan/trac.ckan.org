@@ -1,0 +1,7 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1775	Enable adding many tags at once to controlled vocabularies via API	seanh	seanh	"We already have API calls for adding one tag or removing one tag at a time to/from a vocab. Want more convenient ways to add or remove many in one call, or just pass in a list of tags to completely replace a vocab's current list.
+
+- Add tags_create() function that calls the existing tag_create() many times?
+- Also tags_delete()?
+- Or just let tag_create() and tag_delete() accept a list?
+- Add tags argument to vocabulary_update() to pass in a list of tags to replace the vocab's current tags? (But it should still be possible to simply rename a vocab without changing its tags and without having to pass in the tag list.)"	enhancement	new	awaiting triage	current-ckan-sprint-2012-02-20	ecportal		taxonomies [0.5d]		ckan	none

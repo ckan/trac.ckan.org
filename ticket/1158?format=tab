@@ -1,0 +1,9 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1158	Put PDEU into read-only mode and remove unneeded functions	pudo	pudo	"PDEU should be in a mode where: 
+
+ * Users cannot edit or create packages
+ * Users cannot sign up on their own
+ * AuthorizationGroups and RevisionHistory is completely gone from the UI 
+ * Groups have been repurposed as Subjects
+
+"	enhancement	closed	blocker	pdeu-1	lod2	fixed			ckan	none

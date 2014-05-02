@@ -1,0 +1,2 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+246,Support for primary key not named id,rgrp,rgrp,At the moment setting of continuity_id depends on base table pkcol being id. Should not be hard to change this -- and may get for free as part of ticket:245 (composite primary keys),enhancement,closed,awaiting triage,,vdm,duplicate,,,,

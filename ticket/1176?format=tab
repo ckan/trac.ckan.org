@@ -1,0 +1,18 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1176	unicode_body exception	dread	thejimmyg	"We seem to occasionally get this exception on ckan.net. 
+
+User agents causing this include:
+
+ * Alexa ia_archiver (3/6/11)
+ * Maxthon browser (17/5/11)
+
+{{{
+Module ckan.controllers.error:32 in document
+<<              return original_response.body
+               # Otherwise, decorate original response with error template.
+               c.content = literal(original_response.unicode_body) or cgi.escape(request.GET.get('message', ''))
+               c.prefix=request.environ.get('SCRIPT_NAME', ''),
+               c.code=cgi.escape(request.GET.get('code', str(original_response.status_int))),
+>>  c.content = literal(original_response.unicode_body) or cgi.escape(request.GET.get('message', ''))
+AttributeError: 'NoneType' object has no attribute 'unicode_body'
+}}}"	defect	closed	trivial	ckan-sprint-2011-10-28	ckan	fixed			ckan	none

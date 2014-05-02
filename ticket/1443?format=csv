@@ -1,0 +1,7 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1443,language detection,dread,dread,"If language detected doesn't match any of the offered CKAN languages, you get the default language, but see an error flash up for every page, saying:
+{{{
+Could not change language to 'None': IOError: [Errno 2] No translation file found for domain: 'ckan'
+}}}
+
+Affects 1.5b only.",defect,closed,minor,ckan-sprint-2011-11-07,ckan,fixed,,,ckan,none

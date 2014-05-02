@@ -1,0 +1,4 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1664	Smarter group activity streams	seanh	seanh	"We already have simple activity streams for groups that have new group or group updated events (see #1631). Smarter/more useful group activity streams would also contain the events for things related to the group: users, datasets, other groups, etc.
+
+This should just mean using a more complex SQL query in the group_activity_list() logic function."	enhancement	new	awaiting triage	ckan-v1.7	ckan		1d activity_streams		ckan	none

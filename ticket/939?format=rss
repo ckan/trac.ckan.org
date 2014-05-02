@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #939: Notification bar at top of site shown to new users pointing them to simple instructions</title>
+    <link>http://localhost/ticket/939</link>
+    <description>&lt;p&gt;
+On &lt;a class="ext-link" href="http://getthedata.org/"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://getthedata.org/&lt;/a&gt; or stackoverflow there is a pop-up bar for new users that give them some simple instructions.
+&lt;/p&gt;
+&lt;p&gt;
+Talking with users it is clear that some people are not clear how ckan.net (or other sites) work and what they are and are not 'allowed to do. This could help make this better.
+&lt;/p&gt;
+&lt;h2 id="Implementation"&gt;Implementation&lt;/h2&gt;
+&lt;ul&gt;&lt;li&gt;Pop-up bar (based on a cookie or just being not logged in?) - uses &lt;a class="closed ticket" href="http://localhost/ticket/938" title="enhancement: Message flashing / notification in WUI (closed: fixed)"&gt;ticket:938&lt;/a&gt; (message flashing)
+&lt;/li&gt;&lt;li&gt;FAQ/instructions page (use the new wiki?)
+&lt;/li&gt;&lt;/ul&gt;&lt;h2 id="Depends"&gt;Depends&lt;/h2&gt;
+&lt;ul&gt;&lt;li&gt;&lt;a class="closed ticket" href="http://localhost/ticket/938" title="enhancement: Message flashing / notification in WUI (closed: fixed)"&gt;ticket:938&lt;/a&gt;
+&lt;/li&gt;&lt;/ul&gt;&lt;h2 id="Estimate"&gt;Estimate&lt;/h2&gt;
+&lt;ul&gt;&lt;li&gt;Cost: 1h
+&lt;/li&gt;&lt;/ul&gt;</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/939</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>thejimmyg</dc:creator>
+
+      <pubDate>Tue, 06 Dec 2011 11:32:38 GMT</pubDate>
+      <title>status changed; repo, theme, resolution set</title>
+      <link>http://localhost/ticket/939#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/939#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;repo&lt;/strong&gt;
+                set to &lt;em&gt;ckan&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;theme&lt;/strong&gt;
+                set to &lt;em&gt;none&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+This is now implemented, the notification links to the about page. We might want to update that page with better information, but that would be a different ticket.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

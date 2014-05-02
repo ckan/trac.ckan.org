@@ -1,0 +1,9 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1397	[super] Resource archiving	rgrp	kindly	"We want to cache/archive data associated to a resource so it is available if the resource url disappears (and in order to support other processing we may wish to do e.g. webstorer ...)
+
+TODO: (@kindly: inline material etherpad info (or ref) from planning session this week)
+
+ * Resource change notifications in core - #1383
+ * Resource download worker daemon - #891
+ * Make archived data available in WUI - #892
+ * Introduce timed actions into ckanext-queue - #890"	enhancement	new	awaiting triage	ckan-v1.6	ckan				ckan	none

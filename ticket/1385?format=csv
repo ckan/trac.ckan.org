@@ -1,0 +1,10 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1385,Resolve postgres permissions issues,dread,dread,"Currently there is a problem because the docs guide us to set the sqlalchemy url to use 'localhost' i.e. loopback, whereas paster commands don't specify '-h localhost' so use unix sockets (you need to do 'sudo -u postgres'). These should be the same.
+
+Also do we need to tell people to add a line to their postgres authentication config /etc/postgresql/8.4/main/pg_hba.conf
+to help things? Florian suggests:
+{{{
+local   std         std                          md5
+}}}
+/etc/postgresql/8.4/main/pg_hba.conf
+",enhancement,closed,major,,ckan,fixed,,florian.marienfeld@…,ckan,none

@@ -1,0 +1,430 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      #2722 (Ordering or search of datasets of a group brings up 'no results')
+     – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="prev" href="2721.html" title="Ticket #2721" />
+        <link rel="last" href="3030.html" title="Ticket #3030" />
+        <link rel="help" href="../wiki/TracGuide.html" />
+        <link rel="alternate" href="2722%3Fformat=csv" type="text/csv" class="csv" title="Comma-delimited Text" /><link rel="alternate" href="2722%3Fformat=tab" type="text/tab-separated-values" class="tab" title="Tab-delimited Text" /><link rel="alternate" href="2722%3Fformat=rss" type="application/rss+xml" class="rss" title="RSS Feed" />
+        <link rel="next" href="2723.html" title="Ticket #2723" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/ticket.css" type="text/css" />
+        <link rel="first" href="1.html" title="Ticket #1" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript">
+      var auto_preview_timeout=2.0;
+      var form_token="93d81ccf9a7bb1c456462f62";
+    </script>
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script><script type="text/javascript" src="../chrome/common/js/wikitoolbar.js"></script><script type="text/javascript" src="../chrome/common/js/resizer.js"></script><script type="text/javascript" src="../chrome/common/js/auto_preview.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("div.description").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $(".foldable").enableFolding(false, true);
+        var args = {realm: "ticket", id: 2722, escape_newlines: 0}
+        $("#comment").autoPreview("/wiki_render", args, function(textarea, text, rendered) {
+            $("#ticketchange div.comment").html(rendered);
+            if (rendered)
+              $("#ticketchange").show();
+            else if ($("#ticketchange ul.changes").length == 0)
+              $("#ticketchange").hide();
+        });
+        $("#trac-comment-editor textarea").autoPreview("/wiki_render", args,
+                                                       function(textarea, text, rendered) {
+          var comment = $("#trac-comment-editor").next("div.comment");
+          comment.html(rendered);
+          if (rendered)
+            comment.show();
+          else
+            comment.hide();
+        });
+        $("#modify").parent().toggleClass("collapsed");
+        $(".trac-topnav a").click(function() { $("#modify").parent().removeClass("collapsed"); });
+        /* only enable control elements for the currently selected action */
+        var actions = $("#action input[name='action']");
+        function updateActionFields() {
+          actions.each(function () {
+            $(this).siblings().find("*[id]").enable($(this).checked());
+            $(this).siblings().filter("*[id]").enable($(this).checked());
+          });
+        }
+        actions.click(updateActionFields);
+        updateActionFields();
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="../wiki/TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li class="active"><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="2721.html" title="Ticket #2721">Previous Ticket</a></span></li><li class="last"><span><a class="next" href="2723.html" title="Ticket #2723">Next Ticket</a> &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="ticket">
+      <h1 id="trac-ticket-title">
+          <a href="2722.html">Ticket #2722</a>
+          <span class="status">(closed defect: fixed)</span>
+      </h1>
+      <div id="ticket">
+  <div class="date">
+    <p>Opened <a class="timeline" href="../timeline%3Ffrom=2012-07-22T09:20:54Z&amp;precision=second.html" title="2012-07-22T09:20:54Z in Timeline">22 months</a> ago</p>
+    <p>Last modified <a class="timeline" href="../timeline%3Ffrom=2012-08-09T11:00:10Z&amp;precision=second.html" title="2012-08-09T11:00:10Z in Timeline">21 months</a> ago</p>
+  </div>
+  <h2 class="summary searchable">Ordering or search of datasets of a group brings up 'no results'</h2>
+  <table class="properties">
+    <tr>
+      <th id="h_reporter">Reported by:</th>
+      <td headers="h_reporter" class="searchable">
+        <a href="../query%3Fstatus=!closed&amp;reporter=shevski.html">shevski</a>
+      </td>
+      <th id="h_owner">Owned by:</th>
+      <td headers="h_owner">
+        <a href="../query%3Fstatus=!closed&amp;owner=aron.carroll.html">aron.carroll</a>
+      </td>
+    </tr>
+    <tr>
+        <th id="h_priority">
+          Priority:
+        </th>
+        <td headers="h_priority">
+              <a href="../query%3Fstatus=!closed&amp;priority=awaiting+triage.html">awaiting triage</a>
+        </td>
+        <th id="h_milestone">
+          Milestone:
+        </th>
+        <td headers="h_milestone">
+              <a class="closed milestone" href="../milestone/demo&#32;phase&#32;3.html">demo phase 3</a>
+        </td>
+    </tr><tr>
+        <th id="h_component">
+          Component:
+        </th>
+        <td headers="h_component">
+              <a href="../query%3Fstatus=!closed&amp;component=ckan.html">ckan</a>
+        </td>
+        <th id="h_keywords">
+          Keywords:
+        </th>
+        <td headers="h_keywords" class="searchable">
+              <a href="../query%3Fstatus=!closed&amp;keywords=~demo-theme.html">demo-theme</a>
+        </td>
+    </tr><tr>
+        <th id="h_cc">
+          Cc:
+        </th>
+        <td headers="h_cc" class="searchable">
+              <a href="../query%3Fstatus=!closed&amp;cc=~aron.carroll.html">aron.carroll</a>
+        </td>
+        <th id="h_repo">
+          Repository:
+        </th>
+        <td headers="h_repo">
+              <a href="../query%3Fstatus=!closed&amp;repo=ckan.html">ckan</a>
+        </td>
+    </tr><tr>
+        <th id="h_theme">
+          Theme:
+        </th>
+        <td headers="h_theme">
+              <a href="../query%3Fstatus=!closed&amp;theme=none.html">none</a>
+        </td>
+        <th>
+        </th>
+        <td>
+        </td>
+    </tr>
+  </table>
+  <div class="description">
+    <h3 id="comment:description">
+      Description
+    </h3>
+    <div class="searchable">
+      <ol><li>go to a group, e.g. <a class="ext-link" href="http://s031.okserver.org:2375/group/data-explorer"><span class="icon">​</span>http://s031.okserver.org:2375/group/data-explorer</a>
+</li><li>Order by anything, e.g. choose 'popular' and click go
+</li><li>"sorry no datasets found" message appears instead of ordering the group datasets in wanted order
+</li></ol><p>
+<a class="ext-link" href="http://s031.okserver.org:2375/group/data-explorer?q=&amp;sort=views_recent+desc"><span class="icon">​</span>http://s031.okserver.org:2375/group/data-explorer?q=&amp;sort=views_recent+desc</a>
+</p>
+
+    </div>
+  </div>
+</div>
+          
+
+        <div>
+          <h2 class="foldable">Change History</h2>
+          <div id="changelog">
+              <div class="change" id="trac-change-1">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:1" class="cnum">
+      <a href="2722.html#comment:1">comment:1</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-07-22T09:23:11Z&amp;precision=second.html" title="2012-07-22T09:23:11Z in Timeline">22 months</a> ago by shevski
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Cc</strong>
+        <em>aron.carroll</em> added
+    </li><li>
+      <strong>Summary</strong>
+        changed from <em>Sorting/ ordering datasets of a group brings up 'no results'</em> to <em>Ordering or search of datasets of a group brings up 'no results'</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+In fact, this is the wrong bug. Search doesn't seem to work *at all* in groups
+</p>
+<p>
+Tried to search <a class="ext-link" href="http://s031.okserver.org:2375/group/data-explorer?q=&amp;sort=views_recent+desc"><span class="icon">​</span>http://s031.okserver.org:2375/group/data-explorer?q=&amp;sort=views_recent+desc</a>
+</p>
+<p>
+Bug 1: no results
+Bug 2: the text display covers the order by box
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-2">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:2" class="cnum">
+      <a href="2722.html#comment:2">comment:2</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-07-23T09:47:51Z&amp;precision=second.html" title="2012-07-23T09:47:51Z in Timeline">22 months</a> ago by toby
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Milestone</strong>
+        changed from <em>demo phase 2</em> to <em>demo phase 3</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+@ira
+</p>
+<p>
+I have disabled the sort order of group datasets in phase 2 as it is totally broken - I'll re-add it in phase 3
+</p>
+<p>
+Also the comment you made you added bug2 - text covers order by box -PLEASE DO NOT DO THIS - all it does is make the tickets really hard to deal with - if this becomes a habit I will close all such tickets as INVALID as it makes trac unusable for developers - THIS IS REALLY IMPORTANT - cheers
+</p>
+<p>
+@aron,
+</p>
+<p>
+can you watch for feature creep in tickets and let me know if it happens - thanks
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-3">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:3" class="cnum">
+      <a href="2722.html#comment:3">comment:3</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-07-23T16:15:05Z&amp;precision=second.html" title="2012-07-23T16:15:05Z in Timeline">22 months</a> ago by shevski
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+Hey, I only mentioned bug 2 here because I'm pretty certain this already exists as a separate ticket. Have definitely reported it before, but i think someone else created the ticket - so just wanted to remind that this hasn't been fixed either yet.
+</p>
+<p>
+What's the best way to do this in future?
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-4">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:4" class="cnum">
+      <a href="2722.html#comment:4">comment:4</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-07-23T16:59:12Z&amp;precision=second.html" title="2012-07-23T16:59:12Z in Timeline">22 months</a> ago by toby
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+@ira,
+</p>
+<p>
+It is much easier to work with tickets that only cover one thing - If something is found then the easiest thing is to add a new ticket.  If you feel it's related to another ticket then you can add that to the new ticket eg related to <a class="closed ticket" href="1234.html" title="enhancement: Setting locale error conditions handled badly (closed: fixed)">#1234</a>
+</p>
+<p>
+If tickets need combining it is easy for us devs to do it.  Basically adding something to a ticket is generally a bad thing.  Sometimes it's fair enough if something is missing for a new feature being reviewed etc - but even then a new ticket is generally not a problem.  Small tickets are nice to work on as we can close them quick etc.  The old [super] style tickets have been banned as they generally lead to owners becoming demotivated and unproductive.
+</p>
+<p>
+It's always nice if you can find if a ticket already exists but I don't mind you opening a few duplicates if you can't find the ticket - for the demo you can probably just skim the tickets in the milestones as there aren't too many - but as you know I try to review them quite often.
+</p>
+<p>
+Also please don't reopen really old tickets just add a new one If it's been closed in the last month or so then feel free to re-open if you're sure it's not just waiting for release - you can always check with the last owner of the ticket.
+</p>
+<p>
+hope that makes sense
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-5">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:5" class="cnum">
+      <a href="2722.html#comment:5">comment:5</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-07-27T08:46:51Z&amp;precision=second.html" title="2012-07-27T08:46:51Z in Timeline">21 months</a> ago by toby
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Milestone</strong>
+        changed from <em>demo phase 4</em> to <em>demo phase 3</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-6">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:6" class="cnum">
+      <a href="2722.html#comment:6">comment:6</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-08-07T16:57:47Z&amp;precision=second.html" title="2012-08-07T16:57:47Z in Timeline">21 months</a> ago by toby
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Owner</strong>
+        changed from <em>toby</em> to <em>aron.carroll</em>
+    </li><li>
+      <strong>Status</strong>
+        changed from <em>new</em> to <em>assigned</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+@aron,
+</p>
+<p>
+can you re-add the dropdown and sort the overlap issue not sure which template it's in
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-7">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:7" class="cnum">
+      <a href="2722.html#comment:7">comment:7</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-08-09T11:00:10Z&amp;precision=second.html" title="2012-08-09T11:00:10Z in Timeline">21 months</a> ago by aron.carroll
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Status</strong>
+        changed from <em>assigned</em> to <em>closed</em>
+    </li><li>
+      <strong>Resolution</strong>
+        set to <em>fixed</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+Done in 8769233. I think the overlap issue was fixed for the dataset search a while ago. Let me know if it remains.
+</p>
+
+    </div>
+
+              </div>
+          </div>
+        </div>
+      <div id="help"><strong>Note:</strong> See
+        <a href="../wiki/TracTickets.html">TracTickets</a> for help on using
+        tickets.</div>
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="first">
+          <a rel="nofollow" href="2722%3Fformat=csv" class="csv">Comma-delimited Text</a>
+        </li><li>
+          <a rel="nofollow" href="2722%3Fformat=tab" class="tab">Tab-delimited Text</a>
+        </li><li class="last">
+          <a rel="nofollow" href="2722%3Fformat=rss" class="rss">RSS Feed</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

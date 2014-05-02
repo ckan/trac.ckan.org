@@ -1,0 +1,2 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2901,Language Dropdown bug in footer with IE7,johnmartin,,"The language dropdown in Internet Explorer 7 behaves oddly. Essentially I think the problem is with the way that the dropdown decides to go into ""drop-up mode"" (e.g there aint enough screen space below the initial state so it has to drop up).",enhancement,new,minor,demo phase 5,ckan,,,,ckan,none

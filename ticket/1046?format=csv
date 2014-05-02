@@ -1,0 +1,8 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1046,Dictization and the new logic layer,thejimmyg,kindly,"The stages involved with doing this.
+
+ * Convert model objects to standard dict format (DONE)
+ * Convert standard dicts to current api formats (DONE)
+ * Make standard dicts savable (DONE)
+ * Validate standard dict format. (DONE)
+ * Authorize actions",enhancement,closed,critical,ckan-v1.4-sprint-5,ckan,fixed,,,ckan,none

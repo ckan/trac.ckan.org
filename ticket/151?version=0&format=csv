@@ -1,0 +1,6 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+151,User object should have a created attribute,rgrp,dread,"User object should have a ""created"" attribute initialized on creation to current datetime.
+
+Require a db migration but o/w very simple.
+
+Cost: 1.5h",enhancement,new,minor,v0.11,ckan,,,,,

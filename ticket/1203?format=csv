@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1203,"Moderated edits: html code shows as ""changed"" although it is not",rolf,johnglover,"I've installed the Moderated Edits extension (ckanext-moderatededits) and am editing a package imported from IATIregistry.org, with an extra field which contains a bit of HTML.
+
+The editor indicates the field has changed, although the content hasn't (see screenshot). All I can find so far is a minor difference: in the field content, there is a code &#8212 and in the rendered table that is an &mdash;",defect,new,awaiting triage,ckan-backlog,ckan,,moderatededits,,ckanext,none

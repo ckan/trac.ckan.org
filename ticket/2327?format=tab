@@ -1,0 +1,8 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2327	Upgrade solr schema to version 1.4	kindly	kindly	" * Add Ascii folding filter to text fields.
+ * Add capacity field for public, private access.
+ * Add title_string so you can sort alphabetically on title.
+ * Fields related to analytics, access and view counts.
+ * Add data_dict field for the whole package_dict.
+
+Actual implementation of data_dict adding will be added later."	enhancement	closed	awaiting triage	ckan-sprint-2012-04-30	ckan	fixed	0.3d		ckan	none

@@ -1,0 +1,48 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1289	Remove 'relationships'	dread		"== Abstract ==
+
+Package Relationships have not taken off in the 18 months we've had them in the API. There are some issues with them and we need to spend more time improving them or consider getting rid of them.
+
+== The Problem ==
+
+Original use cases are expressed here: #253 Here are comments about how we could handle these specific examples better:
+1. groups of packages - maybe better with a custom tag?
+2. fragment resources - soon to be covered by 'kind' resource field #957
+3&5. derived resource - better to have some sort of resource relationship perhaps?
+4. linked resource - again better to have some sort of resource relationship perhaps?
+
+Outstanding issues needing serious effort to fix:
+ * #256 Editing them in Web UI (not done yet)
+ * #1288 Package edit/creation can't include 'relationships' field
+
+== Specification ==
+
+Remove relationships from model, API, tests, Web UI. Data migration to remove from db.
+
+== Why do it this way == 
+
+Getting frustrated having problems with the code, when it's not used much. Often asked about what it's for, but rarely used. Seems an overly complicated design.
+
+== Backwards Compatibility ==
+
+n/a
+
+== Implementation plan ==
+
+=== Deliverables ===
+
+See Specification
+
+=== Risks and mitigations ===
+
+Risk: a customer suddenly wants this, and the new ways to relate resources are not in place yet.
+
+Mitigation: discuss this decision thoroughly to make sure we are confident the use cases are not important. Discuss with team, ckan-discuss and specifically the LOD people who have some related packages on thedatahub.org.
+
+=== Participants ===
+
+David Read
+
+=== Progress ===
+
+Not yet."	CREP	closed	awaiting triage	ckan-backlog	ckan	wontfix		kindly rgrp thejimmyg	ckan	none

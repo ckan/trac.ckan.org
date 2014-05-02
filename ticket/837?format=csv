@@ -1,0 +1,22 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+837,CKAN integration with freebase gridworks / google refine,rgrp,,"Thread: http://lists.okfn.org/pipermail/ckan-discuss/2010-November/000718.html
+
+=== Scenario 1 ===
+
+ 1. User installs Refine and CKAN extension for refine
+ 2. On booting refine and asked to load data they can choose from any data package on CKAN.net (or any other CKAN instance)
+ 3. They edit the dataset on Refine
+ 4. On save (or perhaps as a separate option) they are prompted as to whether they wish  to sync the dataset back to CKAN (either as a new package or as a new resource on the existing package)
+
+NB: for the dataset sync back some form of ""CKAN"" storage would be
+required (we already have storage.ckan.net running but a closer
+integration would be required)
+
+=== Scenario 2 ===
+
+ 1. User visits a package on CKAN.net (or another CKAN instance)
+ 2. There is a button on the page ""View and edit this dataset in Google Refine""
+ 3. Click button -- ask them if they have Google refine installed
+  * Yes: instructions for loading dataset into refine
+  * No: load dataset in hosted version of google refine (we could run this)
+ 4. User edits dataset and hits save. As in previous scenario they are prompted to sync the dataset.",enhancement,new,awaiting triage,ckan-backlog,ckan,,,,ckan,none

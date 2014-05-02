@@ -1,0 +1,20 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1501	Pagination links broken	amercader	johnglover	"Most of the different pagination links are broken and point to wrong locations. e.g:
+
+* Dataset listings in group page:
+http://test.ckan.net/group/bibliographic
+
+* Tag letters in tag listing:
+http://test.ckan.net/tag
+
+* User listing:
+http://test.ckan.net/user
+
+* Revision listing:
+http://test.ckan.net/revision
+
+This is most probably related with:
+
+https://github.com/okfn/ckan/commit/1772a5c
+
+"	defect	closed	major	ckan-sprint-2011-12-05	ckan	fixed			ckan	none

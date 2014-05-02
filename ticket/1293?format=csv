@@ -1,0 +1,20 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1293,"Rename Package to Dataset throughout WUI, API",rgrp,zephod,"== Changes ==
+
+ * All templates
+ * [DONE] Routing: /package/ -> /dataset/ (including API)
+ * [DONE] Tests: self.app.get('/dataset/...') rather than package ...
+  * One test to check redirect works?
+ * Docs
+
+== Leave ==
+
+ * Stay with Package in code e.g. stay with 'PackageController'
+  * also leave stuff like pkg = .... (gradual migration)
+ * Leave extensions
+
+== Notes ==
+
+ * Package -> Dataset
+ * Data Package -> Dataset
+ * respect capitalization",enhancement,closed,major,ckan-sprint-2011-09-12,ckan,fixed,,rgrp,ckan,none

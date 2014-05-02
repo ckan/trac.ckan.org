@@ -1,0 +1,6 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2416	Normalise resource/data types	aron.carroll	toby	"Currently we have far too many types that are essentially the same format. The new demo theme is using icons for common types. So we need to normalise the common formats into pretty strings. e.g. application/json, JSON, .json and json all should be output as “json”
+
+See the following Basecamp thread for UI examples and discussion.
+
+https://okfn.basecamphq.com/projects/9558659-demo-ckan-front-end/posts/61906351/comments#comment_179681056"	enhancement	accepted	minor	demo phase 5	ckan		demo-theme		ckan	none

@@ -1,0 +1,199 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2441: Create demo search page</title>
+    <link>http://localhost/ticket/2441</link>
+    <description>&lt;p&gt;
+Discussion:
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a class="ext-link" href="https://okfn.basecamphq.com/projects/9558659-demo-ckan-front-end/posts/61906351/comments"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;https://okfn.basecamphq.com/projects/9558659-demo-ckan-front-end/posts/61906351/comments&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+Implementation:
+&lt;/p&gt;
+&lt;p&gt;
+s031.okserver.org:2375/dataset/
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2441</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>aron.carroll</dc:creator>
+
+      <pubDate>Mon, 28 May 2012 14:11:07 GMT</pubDate>
+      <title>milestone changed</title>
+      <link>http://localhost/ticket/2441#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/2441#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan-sprint-2012-05-29&lt;/em&gt; to &lt;em&gt;current-ckan-sprint-2012-06-25&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>aron.carroll</dc:creator>
+
+      <pubDate>Mon, 28 May 2012 14:44:44 GMT</pubDate>
+      <title>status changed</title>
+      <link>http://localhost/ticket/2441#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/2441#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;accepted&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>aron.carroll</dc:creator>
+
+      <pubDate>Tue, 29 May 2012 10:27:23 GMT</pubDate>
+      <title>owner, status changed</title>
+      <link>http://localhost/ticket/2441#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/2441#comment:3</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;owner&lt;/strong&gt;
+              changed from &lt;em&gt;aron.carroll&lt;/em&gt; to &lt;em&gt;toby&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;accepted&lt;/em&gt; to &lt;em&gt;assigned&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Order by needs hooking up to form. Currently it's just a @&amp;lt;select&amp;gt;@ element containing a single entry, it needs the other possible options added. Let me know if you want more details.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>toby</dc:creator>
+
+      <pubDate>Tue, 29 May 2012 11:36:02 GMT</pubDate>
+      <title>owner changed</title>
+      <link>http://localhost/ticket/2441#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/2441#comment:4</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;owner&lt;/strong&gt;
+              changed from &lt;em&gt;toby&lt;/em&gt; to &lt;em&gt;aron.carroll&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+@aron,
+&lt;/p&gt;
+&lt;p&gt;
+this is now in a snippet (jinja2 allows the selected="selected" more easily) needs some work still eg translation stuff and also maybe completely rewrite the snippet at some point.
+&lt;/p&gt;
+&lt;p&gt;
+Anyhow the functionality is there.  I added the button for no javascript working.
+&lt;/p&gt;
+&lt;p&gt;
+I'm assigning to you for beautification etc
+&lt;/p&gt;
+&lt;p&gt;
+on live demo &lt;a class="ext-link" href="http://s031.okserver.org:2375/dataset?q=&amp;amp;sort=title_string+asc"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://s031.okserver.org:2375/dataset?q=&amp;amp;sort=title_string+asc&lt;/a&gt;
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>aron.carroll</dc:creator>
+
+      <pubDate>Tue, 29 May 2012 15:53:48 GMT</pubDate>
+      <title>owner, description changed</title>
+      <link>http://localhost/ticket/2441#comment:5</link>
+      <guid isPermaLink="false">http://localhost/ticket/2441#comment:5</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;owner&lt;/strong&gt;
+              changed from &lt;em&gt;aron.carroll&lt;/em&gt; to &lt;em&gt;toby&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/2441?action=diff&amp;amp;version=5"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+There's already a submit button in the form (it's the question mark) it's up for discussion on Basecamp if this is clear, apparently it's not.
+&lt;/p&gt;
+&lt;p&gt;
+I'm going to throw this back to you to implement the popular badges, I'll tidy that form up later. Perhaps we can get a helper such as h.isPackagePopular(pkg) that can be customised on a per instance basis.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>aron.carroll</dc:creator>
+
+      <pubDate>Tue, 29 May 2012 15:54:26 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/2441#comment:6</link>
+      <guid isPermaLink="false">http://localhost/ticket/2441#comment:6</guid>
+      <description>
+        &lt;p&gt;
+Not question mark sorry, I meant magnifying glass (inside the search box)
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>toby</dc:creator>
+
+      <pubDate>Wed, 30 May 2012 13:26:02 GMT</pubDate>
+      <title>owner changed</title>
+      <link>http://localhost/ticket/2441#comment:7</link>
+      <guid isPermaLink="false">http://localhost/ticket/2441#comment:7</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;owner&lt;/strong&gt;
+              changed from &lt;em&gt;toby&lt;/em&gt; to &lt;em&gt;aron.carroll&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+popular badges on package list - may make them optional/configurable at some point but good enough for now. see &lt;a class="ext-link" href="http://trac.ckan.org/ticket/2442"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://trac.ckan.org/ticket/2442&lt;/a&gt; for details
+&lt;/p&gt;
+&lt;p&gt;
+With the &lt;tt&gt;order button&lt;/tt&gt; this is for none javascript users i'm not sure the magnifying glass looks like the thing to press to reorder the results.  I'd hide it when javascript enabled.  Do what you will
+&lt;/p&gt;
+&lt;p&gt;
+@aron I'm assigning this to you close or reassign to me if you need extras adding
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>aron.carroll</dc:creator>
+
+      <pubDate>Thu, 14 Jun 2012 10:35:18 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/2441#comment:8</link>
+      <guid isPermaLink="false">http://localhost/ticket/2441#comment:8</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;assigned&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Closing this as the page is up. Issues should be reported as new tickets.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

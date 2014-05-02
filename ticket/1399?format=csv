@@ -1,0 +1,13 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1399,Generate archiving request on resource url change,rgrp,johnglover,"Superticket: #1397
+
+Generate archiving request on resource url change by implementing IResourceUrlChange and sending tasks to celery. [0.25d][0.25d]
+
+Will be part of of ckanext-archiver extension.
+
+Process:
+
+ 0. A resource is added to CKAN
+ 1. IResourceCreate event generated
+ 2. IF: resource url points to ckan storage or falls within some other set of exclusion conditions then END else continue
+ 3. Generate a Archiver.Update task with resource.id",enhancement,closed,major,ckan-sprint-2011-10-24,ckan,fixed,queue,,ckan,none

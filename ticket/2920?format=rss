@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2920: Genshi text template message extractor no longer needed?</title>
+    <link>http://localhost/ticket/2920</link>
+    <description>&lt;p&gt;
+In setup.py, do we still need:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+('templates/&lt;strong&gt;.txt', 'genshi', {
+&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+'template_class': 'genshi.template:TextTemplate'
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+}),
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+in message_extractors? Doesn't like there are any txt files in there
+anymore.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2920</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+ </channel>
+</rss>

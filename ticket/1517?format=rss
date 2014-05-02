@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1517: Accessing resource view sometimes auto-downloads the resource</title>
+    <link>http://localhost/ticket/1517</link>
+    <description>&lt;p&gt;
+Clicking any of the links to a resource page in the dataset viewer seems to load the page and immediately start downloading the resource file.
+&lt;/p&gt;
+&lt;p&gt;
+For example, being here: &lt;a class="ext-link" href="http://test.ckan.net/dataset/europeana-lod"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://test.ckan.net/dataset/europeana-lod&lt;/a&gt;
+and clicking on any of the links to the first resource.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1517</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>zephod</dc:creator>
+
+      <pubDate>Tue, 06 Dec 2011 12:52:37 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/1517#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1517#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+After some research, I've decided to disable the iframe datapreview of unknown filetypes. We need a safer mechanism for verifying that it's a text file or web page; a blacklist of filetypes which won't be iframed (GZIP, ZIP, etc) will never be adequate, and accidently starting a binary file download is a dangerous thing.
+&lt;/p&gt;
+&lt;p&gt;
+The fix is simple - commit: 17f33031f5e348e623146601f830b8c67462fe00
+&lt;/p&gt;
+&lt;p&gt;
+But more work will be required to relax this restriction.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

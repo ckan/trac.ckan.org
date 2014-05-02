@@ -1,0 +1,7 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+906	Ability to search without accents for accented words	Stiivi	thejimmyg	"In Slovakia users are expecting from sites to be able to search without typing accents, for example if they do not have SK keyboard, just US. For example searching for: 'Obyvateľstvo' and 'obyvatelstvo' (population) or 'štatistika' and 'statistika' (statistics) should yield same results.
+
+This should work the other way around as well, as some people might enter entries without accents into CKAN instance and others might search with accents.
+
+For SK language simple ASCII transliteration for searched term and indexed words is sufficient (iconv ASCII//TRANSLIT).
+"	enhancement	closed	awaiting triage	ckan-sprint-2012-03-05	ckan	fixed		amercader	ckan	none

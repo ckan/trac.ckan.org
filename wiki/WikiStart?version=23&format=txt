@@ -1,0 +1,70 @@
+= Welcome to Comprehensive Knowledge Archive Network (CKAN) Project Wiki =
+
+[[PageOutline(0-6,Table of Contents,inline)]]
+
+= What It Is =
+
+CKAN is a '''registry or catalogue system for datasets or other "knowledge" resources'''. CKAN aims to make it '''easy to find, share and reuse open content and data''', especially in ways that are '''machine automatable'''.
+
+Those familiar with software services like freshmeat, CPAN, or apt can think of CKAN as providing an analogous service for content and data.
+
+The CKAN software is used to run the CKAN service: http://www.ckan.net/ and is also running the catalogue behind http://data.gov.uk/. CKAN is an [http://www.okfn.org/ Open Knowledge Foundation] project.
+
+= Code and Docs =
+
+Code is in a mercurial repository here: http://knowledgeforge.net/ckan/hg
+
+This Trac service is being used to track CKAN project developments.
+
+Documentation can be found at:
+
+  * http://knowledgeforge.net/ckan/doc/ckan/ (and on this wiki).
+    * [http://knowledgeforge.net/ckan/doc/datapkg/ DataPkg Documentation]
+
+= Features =
+
+Major features:
+
+  * Free/Open-Source software, written in Python
+  * Domain Model: Data and content "packages" with a standard set of core metadata and support for adding unlimited ''arbitrary'' additional metadata
+    * All package data is automatically versioned in a wiki-like manner
+    * Tagging of packages
+    * Groups for controlled categorization of packages
+    * Ratings
+    * Unlimited associated package resources ('download urls') with additional metadata (format, description etc) 
+  * Web user interface (WUI)
+    * Package adding, editing, listing etc
+    * Wiki features such as "Recent Changes", edit histories, purging of changes etc
+    * User management and user home pages
+  * API: full JSON-based API (with python client)
+    * RDF version also available
+    * CKAN is easy to use as your "catalogue" backend
+  * Search: Full searchability (including full-text support) via API and WUI
+  * Access control: fine-grained access control for packages and group
+  * Additional interfaces:
+    * Excel importer (upload dataset/package information direct from a spreadsheet)
+    * Fully featured command line client (datapkg)
+
+Coming soon:
+  * Package relationships (depends on, derived from ...)
+  * Detailed statistics (+ tag clouds etc)
+  * See the tickets for more ...
+
+= Vision and Design =
+
+This diagram illustrates our overall "debian of data" vision of which CKAN (as the registry) is a central part:
+
+[[Image(ckan-vision.png)]]
+
+== Design Pages ==
+
+ * PackageResources
+ * DataPkgUseCases
+ * UiReviewNotes
+
+= Work in Related Areas =
+
+  * Debian / R
+  * [http://www.ivoa.net/ Virtual Observatory]
+  * PyPI / Gems / CPAN
+

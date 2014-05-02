@@ -1,0 +1,7 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+922,Make Resources first class entity.,kindly,kindly,"Why?
+
+ * Will make it easier to give resources their own form, independent of packages.
+ * Makes uploading, harvesting and previewing data cleaner as its separate from the packages.
+ * Gives the option of sharing a resource between packages.
+ * Leads the way to supporting storing richer semantic information against them.",enhancement,closed,awaiting triage,,ckan,duplicate,,,ckan,none

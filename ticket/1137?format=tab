@@ -1,0 +1,18 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1137	Remove need for statefulness in vdm	rgrp	kindly	"Statefulness, especially statefulness for relation (esp m2m) is cause of most of the complexity in vdm. It is ''required'' because, atm, revision objects have FKs to continuity objects.
+
+This ticket proposes the following changes:
+
+NB: this could be limited just to case of join tables (leaving state stuff on other tables)
+
+ * Remove FKs from revision to continuity (or allow for them to be nullable).
+  * We could just limit this to m2m stuff
+ * Delete of an object leads to:
+  * Deletion of continuity object
+  * Adding an entry in revision table with state set to deleted (we retain state on revision table)
+
+If this is done we will no longer need to worry about filtering on state on relationships as join table will only contain ""active"" relationships.
+
+If we do this on all tables we remove need for any state awareness in client (e.g. no need to filter tables on active state).
+
+The only disadvantage of this change is that undeletion becomes more problematic (we have to recreate some continuity objects)."	enhancement	assigned	major		vdm				vdm	none

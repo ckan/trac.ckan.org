@@ -1,0 +1,6 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+541,Full-page caching even for logged in users,rgrp,wwaites,"The simplest way to improve performance on specific pages is to implement full page caching.
+
+This, however, has challenges on pages with user-specific content. For example, on CKAN when a user is logged at the top of the page we have ""You are logged in as: {username}"". Similarly we change the visibility of some material depending on the status of users:
+
+  * Visibility of Edit or Authz link on packages and groups",enhancement,closed,awaiting triage,,ckan,fixed,,,,

@@ -1,0 +1,4 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2607	'Upload a file' appears on resource form when storage not enabled	seanh		"if the user tries to upload a file they will get ""Failed to get credentials for storage upload. Upload cannot proceed""
+
+Maybe add a test for it this time, this bug has appeared and reappeared before"	defect	assigned	awaiting triage	ckan-backlog	ckan		storage		ckan	none

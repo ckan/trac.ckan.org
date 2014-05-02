@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2474: Trial Jinja 2 as templating system</title>
+    <link>http://localhost/ticket/2474</link>
+    <description>&lt;p&gt;
+Percieved benefits of switching to Jinja 2
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Block inheritance for base templates which is much simpler to understand.
+&lt;/li&gt;&lt;li&gt;Large number of developers (and designers) are familiar with it due to its
+similarities with the Django templates.
+&lt;/li&gt;&lt;li&gt;Should be much faster at parsing and rendering templates.
+&lt;/li&gt;&lt;li&gt;Has localisation support.
+&lt;/li&gt;&lt;li&gt;Good documentation both on it's website and on sites like Stack Overflow.
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+We should convert a couple of existing templates to test the switchover and then get peoples feedback.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2474</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>aron.carroll</dc:creator>
+
+      <pubDate>Wed, 06 Jun 2012 11:39:40 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/2474#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/2474#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Closing this as we've decided to go with Jinja.
+&lt;/p&gt;
+&lt;p&gt;
+There's some basic docs here:
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a class="ext-link" href="https://github.com/okfn/ckan/blob/feature-2375-demo-theme/doc/templating.rst"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;https://github.com/okfn/ckan/blob/feature-2375-demo-theme/doc/templating.rst&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+And a template overview:
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a class="ext-link" href="https://github.com/okfn/ckan/blob/feature-2375-demo-theme/doc/template-blocks.rst"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;https://github.com/okfn/ckan/blob/feature-2375-demo-theme/doc/template-blocks.rst&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+Generally it's worth looking at the Groups pages to see how they're built.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

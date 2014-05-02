@@ -1,0 +1,331 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      #1205 (db upgrade problem on cz.ckan.net)
+     – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="prev" href="1204.html" title="Ticket #1204" />
+        <link rel="last" href="3030.html" title="Ticket #3030" />
+        <link rel="help" href="../wiki/TracGuide.html" />
+        <link rel="alternate" href="1205%3Fformat=csv" type="text/csv" class="csv" title="Comma-delimited Text" /><link rel="alternate" href="1205%3Fformat=tab" type="text/tab-separated-values" class="tab" title="Tab-delimited Text" /><link rel="alternate" href="1205%3Fformat=rss" type="application/rss+xml" class="rss" title="RSS Feed" />
+        <link rel="next" href="1206.html" title="Ticket #1206" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/ticket.css" type="text/css" />
+        <link rel="first" href="1.html" title="Ticket #1" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript">
+      var auto_preview_timeout=2.0;
+      var form_token="93d81ccf9a7bb1c456462f62";
+    </script>
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script><script type="text/javascript" src="../chrome/common/js/wikitoolbar.js"></script><script type="text/javascript" src="../chrome/common/js/resizer.js"></script><script type="text/javascript" src="../chrome/common/js/auto_preview.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("div.description").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $(".foldable").enableFolding(false, true);
+        var args = {realm: "ticket", id: 1205, escape_newlines: 0}
+        $("#comment").autoPreview("/wiki_render", args, function(textarea, text, rendered) {
+            $("#ticketchange div.comment").html(rendered);
+            if (rendered)
+              $("#ticketchange").show();
+            else if ($("#ticketchange ul.changes").length == 0)
+              $("#ticketchange").hide();
+        });
+        $("#trac-comment-editor textarea").autoPreview("/wiki_render", args,
+                                                       function(textarea, text, rendered) {
+          var comment = $("#trac-comment-editor").next("div.comment");
+          comment.html(rendered);
+          if (rendered)
+            comment.show();
+          else
+            comment.hide();
+        });
+        $("#modify").parent().toggleClass("collapsed");
+        $(".trac-topnav a").click(function() { $("#modify").parent().removeClass("collapsed"); });
+        /* only enable control elements for the currently selected action */
+        var actions = $("#action input[name='action']");
+        function updateActionFields() {
+          actions.each(function () {
+            $(this).siblings().find("*[id]").enable($(this).checked());
+            $(this).siblings().filter("*[id]").enable($(this).checked());
+          });
+        }
+        actions.click(updateActionFields);
+        updateActionFields();
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="../wiki/TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li class="active"><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="1204.html" title="Ticket #1204">Previous Ticket</a></span></li><li class="last"><span><a class="next" href="1206.html" title="Ticket #1206">Next Ticket</a> &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="ticket">
+      <h1 id="trac-ticket-title">
+          <a href="1205.html">Ticket #1205</a>
+          <span class="status">(closed defect: fixed)</span>
+      </h1>
+      <div id="ticket">
+  <div class="date">
+    <p>Opened <a class="timeline" href="../timeline%3Ffrom=2011-06-29T09:28:20Z&amp;precision=second.html" title="2011-06-29T09:28:20Z in Timeline">3 years</a> ago</p>
+    <p>Last modified <a class="timeline" href="../timeline%3Ffrom=2011-07-13T14:50:31Z&amp;precision=second.html" title="2011-07-13T14:50:31Z in Timeline">3 years</a> ago</p>
+  </div>
+  <h2 class="summary searchable">db upgrade problem on cz.ckan.net</h2>
+  <table class="properties">
+    <tr>
+      <th id="h_reporter">Reported by:</th>
+      <td headers="h_reporter" class="searchable">
+        <a href="../query%3Fstatus=!closed&amp;reporter=dread.html">dread</a>
+      </td>
+      <th id="h_owner">Owned by:</th>
+      <td headers="h_owner">
+        <a href="../query%3Fstatus=!closed&amp;owner=kindly.html">kindly</a>
+      </td>
+    </tr>
+    <tr>
+        <th id="h_priority">
+          Priority:
+        </th>
+        <td headers="h_priority">
+              <a href="../query%3Fstatus=!closed&amp;priority=blocker.html">blocker</a>
+        </td>
+        <th id="h_milestone">
+          Milestone:
+        </th>
+        <td headers="h_milestone">
+              <a class="missing milestone"></a>
+        </td>
+    </tr><tr>
+        <th id="h_component">
+          Component:
+        </th>
+        <td headers="h_component">
+              <a href="../query%3Fstatus=!closed&amp;component=ckan.html">ckan</a>
+        </td>
+        <th id="h_keywords">
+          Keywords:
+        </th>
+        <td headers="h_keywords" class="searchable">
+        </td>
+    </tr><tr>
+        <th id="h_cc">
+          Cc:
+        </th>
+        <td headers="h_cc" class="searchable">
+              mynarzjindrich@…
+        </td>
+        <th id="h_repo">
+          Repository:
+        </th>
+        <td headers="h_repo">
+              <a href="../query%3Fstatus=!closed&amp;repo=ckan.html">ckan</a>
+        </td>
+    </tr><tr>
+        <th id="h_theme">
+          Theme:
+        </th>
+        <td headers="h_theme">
+              <a href="../query%3Fstatus=!closed&amp;theme=none.html">none</a>
+        </td>
+        <th>
+        </th>
+        <td>
+        </td>
+    </tr>
+  </table>
+  <div class="description">
+    <h3 id="comment:description">
+      Description
+    </h3>
+    <div class="searchable">
+      <p>
+When upgrading database for cz.ckan.net (psql.okfn.org/cz.okfn.org) an error occurred (see below).
+</p>
+<p>
+cz.ckan.net has been running on eu3 and this updrade was part of moving it to eu19, with a more recent version of ckan.
+</p>
+<p>
+In the meantime I've reverted the db to the old version (pre-upgrade). 
+</p>
+<p>
+cz.ckan.net is not working properly until this is fixed.
+</p>
+<pre class="wiki">okfn@eu19:~$ paster --plugin ckan db upgrade --config=/etc/ckan/cz/cz.ini
+/usr/lib/pymodules/python2.6/ckan_deps/sqlalchemy/engine/url.py:105: SADeprecationWarning: The SQLAlchemy PostgreSQL dialect has been renamed from 'postgres' to 'postgresql'. The new URL format is postgresql[+driver]://&lt;user&gt;:&lt;pass&gt;@&lt;host&gt;/&lt;dbname&gt;
+  module = __import__('sqlalchemy.dialects.%s' % (dialect, )).dialects
+2011-06-29 09:07:41,294 INFO  [migrate.versioning.api] 28 -&gt; 29... 
+/usr/lib/pymodules/python2.6/ckan_deps/sqlalchemy/engine/reflection.py:46: SAWarning: Skipped unsupported reflection of expression-based index idx_pkg_lname
+  ret = fn(self, con, *args, **kw)
+/usr/lib/pymodules/python2.6/ckan_deps/sqlalchemy/engine/reflection.py:46: SAWarning: Skipped unsupported reflection of expression-based index idx_pkg_slname
+  ret = fn(self, con, *args, **kw)
+/usr/lib/pymodules/python2.6/ckan_deps/sqlalchemy/engine/reflection.py:46: SAWarning: Skipped unsupported reflection of expression-based index idx_pkg_suname
+  ret = fn(self, con, *args, **kw)
+/usr/lib/pymodules/python2.6/ckan_deps/sqlalchemy/engine/reflection.py:46: SAWarning: Skipped unsupported reflection of expression-based index idx_pkg_uname
+  ret = fn(self, con, *args, **kw)
+Traceback (most recent call last):
+  File "/usr/bin/paster", line 18, in &lt;module&gt;
+    command.run()
+  File "/usr/lib/pymodules/python2.6/paste/script/command.py", line 84, in run
+    invoke(command, command_name, options, args[1:])
+  File "/usr/lib/pymodules/python2.6/paste/script/command.py", line 123, in invoke
+    exit_code = runner.run(args)
+  File "/usr/lib/pymodules/python2.6/paste/script/command.py", line 218, in run
+    result = self.command()
+  File "/usr/lib/pymodules/python2.6/ckan/lib/cli.py", line 84, in command
+    model.repo.upgrade_db()
+  File "/usr/lib/pymodules/python2.6/ckan/model/__init__.py", line 163, in upgrade_db
+    mig.upgrade(self.metadata.bind, self.migrate_repository, version=version)
+  File "/usr/lib/pymodules/python2.6/ckan_deps/migrate/versioning/api.py", line 185, in upgrade
+    return _migrate(url, repository, version, upgrade=True, err=err, **opts)
+  File "&lt;string&gt;", line 2, in _migrate
+  File "/usr/lib/pymodules/python2.6/ckan_deps/migrate/versioning/util/__init__.py", line 160, in with_engine
+    return f(*a, **kw)
+  File "/usr/lib/pymodules/python2.6/ckan_deps/migrate/versioning/api.py", line 364, in _migrate
+    schema.runchange(ver, change, changeset.step)
+  File "/usr/lib/pymodules/python2.6/ckan_deps/migrate/versioning/schema.py", line 83, in runchange
+    change.run(self.engine, step)
+  File "/usr/lib/pymodules/python2.6/ckan_deps/migrate/versioning/script/py.py", line 140, in run
+    script_func(engine)
+  File "/usr/lib/pymodules/python2.6/ckan/migration/versions/029_version_groups.py", line 152, in upgrade
+    migrate_engine.execute(q)
+  File "/usr/lib/pymodules/python2.6/ckan_deps/sqlalchemy/engine/base.py", line 1788, in execute
+    return connection.execute(statement, *multiparams, **params)
+  File "/usr/lib/pymodules/python2.6/ckan_deps/sqlalchemy/engine/base.py", line 1191, in execute
+    params)
+  File "/usr/lib/pymodules/python2.6/ckan_deps/sqlalchemy/engine/base.py", line 1271, in _execute_clauseelement
+    return self.__execute_context(context)
+  File "/usr/lib/pymodules/python2.6/ckan_deps/sqlalchemy/engine/base.py", line 1302, in __execute_context
+    context.parameters[0], context=context)
+  File "/usr/lib/pymodules/python2.6/ckan_deps/sqlalchemy/engine/base.py", line 1401, in _cursor_execute
+    context)
+  File "/usr/lib/pymodules/python2.6/ckan_deps/sqlalchemy/engine/base.py", line 1394, in _cursor_execute
+    context)
+  File "/usr/lib/pymodules/python2.6/ckan_deps/sqlalchemy/engine/default.py", line 299, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (IntegrityError) insert or update on table "package_group_revision" violates foreign key constraint "package_group_revision_continuity_id_fkey"
+DETAIL:  Key (continuity_id)=(7f373978-40a0-4848-bdc9-018ad213aa0b) is not present in table "package_group".
+ 'INSERT INTO package_group_revision (id, package_id, group_id, state, revision_id, continuity_id) VALUES (%(id)s, %(package_id)s, %(group_id)s, %(state)s, %(revision_id)s, %(continuity_id)s)' {'state': u'active', 'package_id': u'14d76e9e-028c-49c1-955b-ef30d4abb970', 'continuity_id': u'7f373978-40a0-4848-bdc9-018ad213aa0b', 'revision_id': u'24a11f58-2ff9-46f3-b113-0bf7f0baf254', 'group_id': u'4b832199-b8e3-4989-9b5d-de8dd6322612', 'id': u'7a3863bd-3054-40c8-bb3d-68b73096c108'}
+</pre>
+    </div>
+  </div>
+</div>
+          
+
+        <div>
+          <h2 class="foldable">Change History</h2>
+          <div id="changelog">
+              <div class="change" id="trac-change-1">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:1" class="cnum">
+      <a href="1205.html#comment:1">comment:1</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-07-04T08:38:40Z&amp;precision=second.html" title="2011-07-04T08:38:40Z in Timeline">3 years</a> ago by kindly
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+fixed in default cset:5e2070688e54
+</p>
+<p>
+The upgrade now works locally, so the upgrade should work now.
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-2">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:2" class="cnum">
+      <a href="1205.html#comment:2">comment:2</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-07-13T14:50:31Z&amp;precision=second.html" title="2011-07-13T14:50:31Z in Timeline">3 years</a> ago by dread
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Status</strong>
+        changed from <em>new</em> to <em>closed</em>
+    </li><li>
+      <strong>Resolution</strong>
+        set to <em>fixed</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+This worked - cheers David.
+</p>
+
+    </div>
+
+              </div>
+          </div>
+        </div>
+      <div id="help"><strong>Note:</strong> See
+        <a href="../wiki/TracTickets.html">TracTickets</a> for help on using
+        tickets.</div>
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="first">
+          <a rel="nofollow" href="1205%3Fformat=csv" class="csv">Comma-delimited Text</a>
+        </li><li>
+          <a rel="nofollow" href="1205%3Fformat=tab" class="tab">Tab-delimited Text</a>
+        </li><li class="last">
+          <a rel="nofollow" href="1205%3Fformat=rss" class="rss">RSS Feed</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+879,Storage auth API,rgrp,wwaites,"API to provide credentials to allow authorized 3rd parties (ie. one's with CKAN api keys) to make uploads to storage.
+
+Implement as a CKAN extension.",enhancement,closed,critical,ckan-v1.3,DGU,fixed,,,ckan,none

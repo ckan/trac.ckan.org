@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2963: Timeout on tag pages with lots of datasets</title>
+    <link>http://localhost/ticket/2963</link>
+    <description>&lt;p&gt;
+e.g. &lt;a class="ext-link" href="http://thedatahub.org/tag/lod"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://thedatahub.org/tag/lod&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+Tags with less datasets work fine (e.g. &lt;a class="ext-link" href="http://thedatahub.org/tag/railways"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://thedatahub.org/tag/railways&lt;/a&gt;)
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2963</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+ </channel>
+</rss>

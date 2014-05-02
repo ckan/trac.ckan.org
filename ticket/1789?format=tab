@@ -1,0 +1,6 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1789	Implement a tag_update() logic action function	seanh		"So users can rename a tag and/or move it between vocabularies using the API.
+
+Currently we have create_tag() and delete_tag(), but if you were to 'update' a tag by deleting it and then recreating it all the datasets that had that tag will have lost it and you'll have to re-add it to them all.
+
+What should happen to datasets that have the tag, if the tag gets moved between vocabularies? All the datasets just keep the tag with the new vocabulary? This will become a problem if/when we support 'radio button'-style vocabularies (where each dataset can only have one tag from the vocabulary)."	enhancement	new	awaiting triage	ckan-backlog	ecportal		taxonomies		ckan	none

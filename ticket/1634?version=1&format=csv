@@ -1,0 +1,16 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1634,"Allow users to follow/unfollow activity streams of other users, datasets and groups",seanh,seanh,"This is a fairly big feature to add.
+
+We need to add to the User object/table a list of subscriptions, perhaps each row just needs to contain an object ID for an object whose activity stream the user subscribes to (or perhaps it will be more complicated when complex activity streams for things like groups and tags are considered). Or perhaps the subscriptions should be kept in a separate database table.
+
+We need to add the logic functions for getting the user's private activity stream as JSON and as rendered HTML. This is different from the user's public activity stream (which lists events performed by the user), it is the activity stream of events from all the activity streams that the user subscribes to.
+
+If this activity stream is meant to be private then their needs to be authorization when it is requested via the API for example.
+
+We then need to add the HTML rendering of this activity stream to the user's page when they are logged in.
+
+We need to add buttons for subscribing to activity streams. If the user is logged in and they are viewing a page with an activity stream (e.g. the page of another user, a dataset, a group, a tag) there should be a ""subscribe"" button. The user should not see a subscribe button on their own page.
+
+We need to add buttons for unsubscribing. The user needs to be able to see a list of the activity streams that she has subscribed to with an unsubscribe button next to each.
+
+This ticket is related to #1635 (email notifications for activity streams) which is about managing a list of activity streams for which the user receives email notifications. There are decisions to be made about how the two will work together.",enhancement,new,awaiting triage,ckan-v1.7,ckan,,12d activity_streams,,ckan,none

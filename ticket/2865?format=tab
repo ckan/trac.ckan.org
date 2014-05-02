@@ -1,0 +1,178 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2865	1.8 unicode error	ross	ross	"
+URL: http://thedatahub.org/el/tag/jutatt%C3%A1sok
+Module weberror.errormiddleware:162 in __call__
+<<              __traceback_supplement__ = Supplement, self, environ
+                   sr_checker = ResponseStartChecker(start_response)
+                   app_iter = self.application(environ, sr_checker)
+                   return self.make_catching_iter(app_iter, environ, sr_checker)
+               except:
+>>  app_iter = self.application(environ, sr_checker)
+Module beaker.middleware:73 in __call__
+<<                                                     self.cache_manager)
+               environ[self.environ_key] = self.cache_manager
+               return self.app(environ, start_response)
+>>  return self.app(environ, start_response)
+Module beaker.middleware:155 in __call__
+<<                          headers.append(('Set-cookie', cookie))
+                   return start_response(status, headers, exc_info)
+               return self.wrap_app(environ, session_start_response)
+       
+           def _get_session(self):
+>>  return self.wrap_app(environ, session_start_response)
+Module routes.middleware:131 in __call__
+<<                                               r'\1', oldpath)
+               
+               response = self.app(environ, start_response)
+               
+               # Wrapped in try as in rare cases the attribute will be gone already
+>>  response = self.app(environ, start_response)
+Module pylons.wsgiapp:125 in __call__
+<<          
+               controller = self.resolve(environ, start_response)
+               response = self.dispatch(controller, environ, start_response)
+               
+               if 'paste.testing_variables' in environ and hasattr(response,
+>>  response = self.dispatch(controller, environ, start_response)
+Module pylons.wsgiapp:324 in dispatch
+<<          if log_debug:
+                   log.debug(""Calling controller class with WSGI interface"")
+               return controller(environ, start_response)
+           
+           def load_test_env(self, environ):
+>>  return controller(environ, start_response)
+Module ckan.lib.base:239 in __call__
+<<          try:
+                   res = WSGIController.__call__(self, environ, start_response)
+               finally:
+                   model.Session.remove()
+>>  res = WSGIController.__call__(self, environ, start_response)
+Module pylons.controllers.core:221 in __call__
+<<                  return response(environ, self.start_response)
+               
+               response = self._dispatch_call()
+               if not start_response_called:
+                   self.start_response = start_response
+>>  response = self._dispatch_call()
+Module pylons.controllers.core:172 in _dispatch_call
+<<              req.environ['pylons.action_method'] = func
+                   
+                   response = self._inspect_call(func)
+               else:
+                   if log_debug:
+>>  response = self._inspect_call(func)
+Module pylons.controllers.core:107 in _inspect_call
+<<                        func.__name__, args)
+               try:
+                   result = self._perform_call(func, args)
+               except HTTPException, httpe:
+                   if log_debug:
+>>  result = self._perform_call(func, args)
+Module pylons.controllers.core:60 in _perform_call
+<<          """"""Hide the traceback for everything above this method""""""
+               __traceback_hide__ = 'before_and_this'
+               return func(**args)
+           
+           def _inspect_call(self, func):
+>>  return func(**args)
+Module ckan.controllers.template:30 in view
+<<          """"""
+               try:
+                   return render(url)
+               except TemplateNotFound:
+                   if url.endswith('.html'):
+>>  return render(url)
+Module ckan.lib.base:153 in render
+<<      try:
+               return cached_template(template_name, render_template,
+                                      loader_class=loader_class)
+           except ckan.exceptions.CkanUrlException, e:
+               raise
+>>  loader_class=loader_class)
+Module pylons.templating:249 in cached_template
+<<          return content
+           else:
+               return render_func()
+>>  return render_func()
+Module ckan.lib.base:95 in render_template
+<<          template = globs['app_globals'].genshi_loader.load(template_name,
+                                                                  cls=loader_class)
+               stream = template.generate(**globs)
+>>  cls=loader_class)
+Module genshi.template.loader:223 in load
+<<                      loadfunc = directory(loadfunc)
+                       try:
+                           filepath, filename, fileobj, uptodate = loadfunc(filename)
+                       except IOError:
+                           continue
+>>  filepath, filename, fileobj, uptodate = loadfunc(filename)
+Module genshi.template.loader:286 in _load_from_directory
+<<          def _load_from_directory(filename):
+                   filepath = os.path.join(path, filename)
+                   fileobj = open(filepath, 'U')
+                   mtime = os.path.getmtime(filepath)
+                   def _uptodate():
+>>  fileobj = open(filepath, 'U')
+UnicodeEncodeError: 'ascii' codec can't encode character u'\xe1' in position 73: ordinal not in range(128)
+CGI Variables
+CKAN_CURRENT_URL	'/el/tag/jutatt%C3%A1sok'
+CKAN_LANG	'en'
+CKAN_LANG_IS_DEFAULT	True
+CKAN_PAGE_CACHABLE	True
+CONTENT_TYPE	'; charset=utf-8'
+DOCUMENT_ROOT	'/etc/apache2/htdocs'
+GATEWAY_INTERFACE	'CGI/1.1'
+HTTP_ACCEPT	'*/*'
+HTTP_ACCEPT_ENCODING	'gzip,deflate'
+HTTP_CONNECTION	'close'
+HTTP_FROM	'googlebot(at)googlebot.com'
+HTTP_HOST	'thedatahub.org'
+HTTP_USER_AGENT	'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)'
+PATH_INFO	'/el/tag/jutatt\xc3\xa1sok'
+PATH_TRANSLATED	'/etc/ckan/datahub/apache.wsgi/el/tag/jutatt\xc3\xa1sok'
+REMOTE_ADDR	'127.0.0.1'
+REMOTE_PORT	'49520'
+REQUEST_METHOD	'GET'
+REQUEST_URI	'/el/tag/jutatt%c3%a1sok'
+SCRIPT_FILENAME	'/etc/ckan/datahub/apache.wsgi'
+SERVER_ADDR	'127.0.0.1'
+SERVER_ADMIN	'[no address given]'
+SERVER_NAME	'thedatahub.org'
+SERVER_PORT	'80'
+SERVER_PROTOCOL	'HTTP/1.0'
+SERVER_SIGNATURE	'<address>Apache/2.2.22 (Ubuntu) Server at thedatahub.org Port 80</address>\n'
+SERVER_SOFTWARE	'Apache/2.2.22 (Ubuntu)'
+WSGI Variables
+application	<beaker.middleware.CacheMiddleware object at 0x7f5312a51650>
+beaker.cache	<beaker.cache.CacheManager object at 0x7f5312a51790>
+beaker.get_session	<bound method SessionMiddleware._get_session of <beaker.middleware.SessionMiddleware object at 0x7f5312a516d0>>
+beaker.session	{'_accessed_time': 1345113298.778472, '_creation_time': 1345113298.778472}
+mod_wsgi.application_group	'ckan.net|'
+mod_wsgi.callable_object	'application'
+mod_wsgi.handler_script	''
+mod_wsgi.input_chunked	'0'
+mod_wsgi.listener_host	''
+mod_wsgi.listener_port	'8080'
+mod_wsgi.process_group	'datahub'
+mod_wsgi.request_handler	'wsgi-script'
+mod_wsgi.script_reloading	'1'
+mod_wsgi.version	(3, 3)
+paste.cookies	(<SimpleCookie: >, '')
+paste.registry	<paste.registry.Registry object at 0x7f5309add610>
+paste.throw_errors	True
+pylons.action_method	<bound method TemplateController.view of <ckan.controllers.template.TemplateController object at 0x7f52b0ea2d10>>
+pylons.controller	<ckan.controllers.template.TemplateController object at 0x7f52b0ea2d10>
+pylons.environ_config	{'session': 'beaker.session', 'cache': 'beaker.cache'}
+pylons.pylons	<pylons.util.PylonsContext object at 0x7f52b0ea2b90>
+pylons.routes_dict	{'url': u'el/tag/jutatt\xe1sok', 'action': u'view', 'controller': u'template'}
+repoze.who.logger	<logging.Logger object at 0x7f53127b2b50>
+repoze.who.plugins	{'openid': <OpenIdIdentificationPlugin 139994769488336>, 'friendlyform': <FriendlyFormPlugin 139994769488528>, 'ckan.lib.authenticator:UsernamePasswordAuthenticator': <ckan.lib.authenticator.UsernamePasswordAuthenticator object at 0x7f5312d893d0>, 'auth_tkt': <AuthTktCookiePlugin 139994771858704>, 'ckan.lib.authenticator:OpenIDAuthenticator': <ckan.lib.authenticator.OpenIDAuthenticator object at 0x7f5312d89350>}
+routes.route	<routes.route.Route object at 0x7f531296ea10>
+routes.url	<routes.util.URLGenerator object at 0x7f5309add810>
+webob._parsed_query_vars	(GET([]), '')
+webob.adhoc_attrs	{'language': 'en-us'}
+wsgi process	'Multi process AND threads (?)'
+wsgi.file_wrapper	<built-in method file_wrapper of mod_wsgi.Adapter object at 0x7f52d4004990>
+wsgi.version	(1, 1)
+wsgiorg.routing_args	(<routes.util.URLGenerator object at 0x7f5309add810>, {'url': u'el/tag/jutatt\xe1sok', 'action': u'view', 'controller': u'template'})
+"	enhancement	closed	awaiting triage		ckan	fixed			ckan	none

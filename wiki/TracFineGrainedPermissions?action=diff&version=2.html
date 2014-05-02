@@ -1,0 +1,832 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+    <html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      TracFineGrainedPermissions (diff) – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="help" href="TracGuide.html" />
+        <link rel="up" href="TracFineGrainedPermissions%3Faction=history.html" title="Page history" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/wiki.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/diff.css" type="text/css" />
+        <link rel="prev" href="TracFineGrainedPermissions%3Faction=diff&amp;version=1.html" title="Version 1" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/diff.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="../chrome/common/css/diff.css" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last active"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="TracFineGrainedPermissions%3Faction=diff&amp;version=1.html" title="Version 1">Previous Change</a></span></li><li><a href="TracFineGrainedPermissions%3Faction=history.html" title="Page history">Wiki History</a></li><li class="last"><span class="missing">Next Change &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="wiki">
+      <h1>
+        Changes between
+          <a href="TracFineGrainedPermissions%3Fversion=1.html">Version 1</a> and
+          <a href="TracFineGrainedPermissions%3Fversion=2.html">Version 2</a> of
+          <a href="TracFineGrainedPermissions%3Fversion=2.html">TracFineGrainedPermissions</a>
+      </h1>
+      <form method="post" id="prefs" action="TracFineGrainedPermissions%3Fversion=2.html"><div><input type="hidden" name="__FORM_TOKEN" value="93d81ccf9a7bb1c456462f62" /></div>
+        <div>
+          <input type="hidden" name="action" value="diff" />
+          <input type="hidden" name="version" value="2" />
+          <input type="hidden" name="old_version" value="1" />
+          
+  <label for="style">View differences</label>
+  <select id="style" name="style">
+    <option selected="selected" value="inline">inline</option>
+    <option value="sidebyside">side by side</option>
+  </select>
+  <div class="field">
+    <label><input type="radio" name="contextall" value="0" checked="checked" />
+             Show</label>
+      <label><input type="text" name="contextlines" id="contextlines" size="2" maxlength="3" value="2" />
+             lines around each change</label><br />
+    <label><input type="radio" name="contextall" value="1" />
+           Show the changes in full context</label>
+  </div>
+  <fieldset id="ignore">
+    <legend>Ignore:</legend>
+    <div class="field">
+      <input type="checkbox" id="ignoreblanklines" name="ignoreblanklines" />
+      <label for="ignoreblanklines">Blank lines</label>
+    </div>
+    <div class="field">
+      <input type="checkbox" id="ignorecase" name="ignorecase" />
+      <label for="ignorecase">Case changes</label>
+    </div>
+    <div class="field">
+      <input type="checkbox" id="ignorewhitespace" name="ignorewhitespace" />
+      <label for="ignorewhitespace">White space changes</label>
+    </div>
+  </fieldset>
+  <div class="buttons">
+    <input type="submit" name="update" value="Update" />
+  </div>
+
+        </div>
+      </form>
+      <dl id="overview">
+        <dt class="property time">Timestamp:</dt>
+        <dd class="time">
+            05/02/14 01:33:04 (<a class="timeline" href="../timeline%3Ffrom=2014-05-02T01:33:04Z&amp;precision=second.html" title="2014-05-02T01:33:04Z in Timeline">6 minutes</a> ago)
+        </dd>
+        <dt class="property author">Author:</dt>
+        <dd class="author">
+          trac
+        </dd>
+        <dt class="property message">Comment:</dt>
+        <dd class="message">
+          
+          <p>
+--
+</p>
+
+        </dd>
+      </dl>
+      <div class="diff">
+        <div class="legend" id="diff-legend">
+          <h3>Legend:</h3>
+          <dl>
+            <dt class="unmod"></dt><dd>Unmodified</dd>
+            <dt class="add"></dt><dd>Added</dd>
+            <dt class="rem"></dt><dd>Removed</dd>
+            <dt class="mod"></dt><dd>Modified</dd>
+          </dl>
+        </div>
+        <div class="diff">
+  <ul class="entries">
+      <li class="entry">
+        <h2 id="file0">
+          <a href="TracFineGrainedPermissions%3Fversion=2.html">TracFineGrainedPermissions</a>
+        </h2>
+        <table class="trac-diff inline" summary="Differences" cellspacing="0">
+              <colgroup><col class="lineno" /><col class="lineno" /><col class="content" /></colgroup>
+              <thead>
+                <tr>
+                  <th title="Version 1">
+                    <a href="TracFineGrainedPermissions%3Fversion=1.html#L3">
+                      v1</a>
+                  </th>
+                  <th title="Version 2">
+                    <a href="TracFineGrainedPermissions%3Fversion=2.html#L3">
+                      v2</a>
+                  </th>
+                  <td> </td>
+                </tr>
+              </thead>
+            <tbody class="unmod">
+                  <tr>
+                          <th>3</th><th>3</th><td class="l"><span>Before Trac 0.11, it was only possible to define fine-grained permissions checks on the repository browser sub-system.</span> </td>
+                  </tr><tr>
+                          <th>4</th><th>4</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>5</th><th> </th><td class="l"><span>Since 0.11, there's a general mechanism in place that allows custom permission policy plugins to grant or deny any action on any kind of Trac resources, even at the level of specific versions of such resources.</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>5</th><td class="r"><span>Since 0.11, there's a general mechanism in place that allows custom **permission policy plugins** to grant or deny any action on any kind of Trac resources, even at the level of specific versions of such resources.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>6</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>7</th><td class="r"><span>Note that for Trac 0.12, `authz_policy` has been integrated as an optional module (in `tracopt.perm.authz_policy.*`), so it's installed by default and can simply be activated via the //Plugins// panel in the Trac administration module.</span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>8</th><td class="r"><span></span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>6</th><th>9</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>7</th><th>10</th><td class="l"><span>== Permission Policies ==</span> </td>
+                  </tr><tr>
+                          <th>8</th><th>11</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>9</th><th> </th><td class="l"><span>=== !AuthzPolicy ===</span> </td>
+                      </tr><tr>
+                        <th>10</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>11</th><th> </th><td class="l"><span>An example policy based on an Authz-style system has been added. See</span> </td>
+                      </tr><tr>
+                        <th>12</th><th> </th><td class="l"><span>[source:trunk/sample-plugins/permissions/authz_policy.py] for details. (See also [source:trunk/sample-plugins/permissions] for more samples.)</span> </td>
+                      </tr><tr>
+                        <th>13</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>14</th><th> </th><td class="l"><span>&nbsp;- Install [http://www.voidspace.org.uk/python/configobj.html ConfigObj] (required).</span> </td>
+                      </tr><tr>
+                        <th>15</th><th> </th><td class="l"><span>&nbsp;- Copy authz_policy.py into your plugins directory.</span> </td>
+                      </tr><tr>
+                        <th>16</th><th> </th><td class="l"><span>&nbsp;- Put a [http://swapoff.org/files/authzpolicy.conf authzpolicy.conf] file somewhere (preferably on a secured location on the server, not readable for others than the webuser.</span> </td>
+                      </tr><tr>
+                        <th>17</th><th> </th><td class="l"><span>&nbsp;- Update your `trac.ini`:</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>12</th><td class="r"><span>A great diversity of permission policies can be implemented, and Trac comes with a few examples. </span> </td>
+                      </tr><tr>
+                        <th> </th><th>13</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>14</th><td class="r"><span>Which policies are currently active is determined by a configuration setting in TracIni:</span> </td>
+                      </tr><tr>
+                        <th> </th><th>15</th><td class="r"><span>e.g.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>16</th><td class="r"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th> </th><th>17</th><td class="r"><span>[trac]</span> </td>
+                      </tr><tr>
+                        <th> </th><th>18</th><td class="r"><span>permission_policies = AuthzSourcePolicy, DefaultPermissionPolicy, LegacyAttachmentPolicy</span> </td>
+                      </tr><tr>
+                        <th> </th><th>19</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>20</th><td class="r"><span>This lists the [#AuthzSourcePolicy] described below as the first policy, followed by the !DefaultPermissionPolicy which checks for the traditional coarse grained style permissions described in TracPermissions, and the !LegacyAttachmentPolicy which knows how to use the coarse grained permissions for checking the permissions available on attachments.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>21</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>22</th><td class="r"><span>Among the possible optional choices, there is [#AuthzPolicy], a very generic permission policy, based on an Authz-style system. See</span> </td>
+                      </tr><tr>
+                        <th> </th><th>23</th><td class="r"><span>[trac:source:branches/0.12-stable/tracopt/perm/authz_policy.py authz_policy.py] for details. </span> </td>
+                      </tr><tr>
+                        <th> </th><th>24</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>25</th><td class="r"><span>Another popular permission policy [#AuthzSourcePolicy], re-implements the pre-0.12 support for checking fine-grained permissions limited to Subversion repositories in terms of the new system.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>26</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>27</th><td class="r"><span>See also [trac:source:branches/0.12-stable/sample-plugins/permissions sample-plugins/permissions] for more examples.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>28</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>29</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>30</th><td class="r"><span>=== !AuthzPolicy === </span> </td>
+                      </tr><tr>
+                        <th> </th><th>31</th><td class="r"><span>==== Configuration ====</span> </td>
+                      </tr><tr>
+                        <th> </th><th>32</th><td class="r"><span>* Install [http://www.voidspace.org.uk/python/configobj.html ConfigObj] (still needed for 0.12).</span> </td>
+                      </tr><tr>
+                        <th> </th><th>33</th><td class="r"><span>* Copy authz_policy.py into your plugins directory.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>34</th><td class="r"><span>* Put a [http://swapoff.org/files/authzpolicy.conf authzpolicy.conf] file somewhere, preferably on a secured location on the server, not readable for others than the webuser. If the&nbsp; file contains non-ASCII characters, the UTF-8 encoding should be used.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>35</th><td class="r"><span>* Update your `trac.ini`:</span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>36</th><td class="r"><span>&nbsp; 1. modify the [TracIni#trac-section permission_policies] entry in the `[trac]` section</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>18</th><th>37</th><td class="l"><span>{{{</span> </td>
+                  </tr><tr>
+                          <th>19</th><th>38</th><td class="l"><span>[trac]</span> </td>
+                  </tr><tr>
+                          <th>20</th><th>39</th><td class="l"><span>...</span> </td>
+                  </tr><tr>
+                          <th>21</th><th>40</th><td class="l"><span>permission_policies = AuthzPolicy, DefaultPermissionPolicy, LegacyAttachmentPolicy</span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>22</th><th> </th><td class="l"><span></span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>41</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>42</th><td class="r"><span>&nbsp; 2. add a new `[authz_policy]` section</span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>43</th><td class="r"><span>{{{</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>23</th><th>44</th><td class="l"><span>[authz_policy]</span> </td>
+                  </tr><tr>
+                          <th>24</th><th>45</th><td class="l"><span>authz_file = /some/trac/env/conf/authzpolicy.conf</span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>25</th><th> </th><td class="l"><span></span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>46</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>47</th><td class="r"><span>&nbsp; 3. enable the single file plugin</span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>48</th><td class="r"><span>{{{</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>26</th><th>49</th><td class="l"><span>[components]</span> </td>
+                  </tr><tr>
+                          <th>27</th><th>50</th><td class="l"><span>...</span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>28</th><th> </th><td class="l"><span>authz_policy = enabled</span> </td>
+                      </tr><tr>
+                        <th>29</th><th> </th><td class="l"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th>30</th><th> </th><td class="l"><span></span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>51</th><td class="r"><span># Trac 0.12</span> </td>
+                      </tr><tr>
+                        <th> </th><th>52</th><td class="r"><span>tracopt.perm.authz_policy.* = enabled</span> </td>
+                      </tr><tr>
+                        <th> </th><th>53</th><td class="r"><span># for Trac 0.11 use this</span> </td>
+                      </tr><tr>
+                        <th> </th><th>54</th><td class="r"><span>#authz_policy.* = enabled </span> </td>
+                      </tr><tr>
+                        <th> </th><th>55</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>56</th><td class="r"><span>==== Usage Notes ====</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>31</th><th>57</th><td class="l"><span>Note that the order in which permission policies are specified is quite critical, </span> </td>
+                  </tr><tr>
+                          <th>32</th><th>58</th><td class="l"><span>as policies will be examined in the sequence provided.</span> </td>
+                  </tr><tr>
+                          <th>33</th><th>59</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>34</th><th> </th><td class="l"><span>A policy will return either `True`, `False` or `None` for a given permission check.</span> </td>
+                      </tr><tr>
+                        <th>35</th><th> </th><td class="l"><span>Only if the return value is `None` will the ''next'' permission policy be consulted.</span> </td>
+                      </tr><tr>
+                        <th>36</th><th> </th><td class="l"><span>If no policy explicitly grants the permission, the final result will be `False` </span> </td>
+                      </tr><tr>
+                        <th>37</th><th> </th><td class="l"><span>(i.e. no permission).</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>60</th><td class="r"><span>A policy will return either `True`, `False` or `None` for a given permission check. `True` is returned if the policy explicitly grants the permission. `False` is returned if the policy explicitly denies the permission. `None` is returned if the policy is unable to either grant or deny the permission.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>61</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>62</th><td class="r"><span>NOTE: Only if the return value is `None` will the ''next'' permission policy be consulted.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>63</th><td class="r"><span>If none of the policies explicitly grants the permission, the final result will be `False` </span> </td>
+                      </tr><tr>
+                        <th> </th><th>64</th><td class="r"><span>(i.e. permission denied).</span> </td>
+                      </tr><tr>
+                        <th> </th><th>65</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>66</th><td class="r"><span>The `authzpolicy.conf` file is a `.ini` style configuration file:</span> </td>
+                      </tr><tr>
+                        <th> </th><th>67</th><td class="r"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th> </th><th>68</th><td class="r"><span>[wiki:PrivatePage@*]</span> </td>
+                      </tr><tr>
+                        <th> </th><th>69</th><td class="r"><span>john = WIKI_VIEW, !WIKI_MODIFY</span> </td>
+                      </tr><tr>
+                        <th> </th><th>70</th><td class="r"><span>jack = WIKI_VIEW</span> </td>
+                      </tr><tr>
+                        <th> </th><th>71</th><td class="r"><span>* =</span> </td>
+                      </tr><tr>
+                        <th> </th><th>72</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>73</th><td class="r"><span>* Each section of the config is a glob pattern used to match against a Trac resource</span> </td>
+                      </tr><tr>
+                        <th> </th><th>74</th><td class="r"><span>&nbsp; descriptor. These descriptors are in the form:</span> </td>
+                      </tr><tr>
+                        <th> </th><th>75</th><td class="r"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th> </th><th>76</th><td class="r"><span>&lt;realm&gt;:&lt;id&gt;@&lt;version&gt;[/&lt;realm&gt;:&lt;id&gt;@&lt;version&gt; ...]</span> </td>
+                      </tr><tr>
+                        <th> </th><th>77</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>78</th><td class="r"><span>&nbsp; Resources are ordered left to right, from parent to child. If any</span> </td>
+                      </tr><tr>
+                        <th> </th><th>79</th><td class="r"><span>&nbsp; component is inapplicable, `*` is substituted. If the version pattern is</span> </td>
+                      </tr><tr>
+                        <th> </th><th>80</th><td class="r"><span>&nbsp; not specified explicitely, all versions (`@*`) is added implicitly</span> </td>
+                      </tr><tr>
+                        <th> </th><th>81</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>82</th><td class="r"><span>&nbsp; Example: Match the WikiStart page</span> </td>
+                      </tr><tr>
+                        <th> </th><th>83</th><td class="r"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th> </th><th>84</th><td class="r"><span>[wiki:*]</span> </td>
+                      </tr><tr>
+                        <th> </th><th>85</th><td class="r"><span>[wiki:WikiStart*]</span> </td>
+                      </tr><tr>
+                        <th> </th><th>86</th><td class="r"><span>[wiki:WikiStart@*]</span> </td>
+                      </tr><tr>
+                        <th> </th><th>87</th><td class="r"><span>[wiki:WikiStart]</span> </td>
+                      </tr><tr>
+                        <th> </th><th>88</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>89</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>90</th><td class="r"><span>&nbsp; Example: Match the attachment `wiki:WikiStart@117/attachment/FOO.JPG@*`</span> </td>
+                      </tr><tr>
+                        <th> </th><th>91</th><td class="r"><span>&nbsp; on WikiStart</span> </td>
+                      </tr><tr>
+                        <th> </th><th>92</th><td class="r"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th> </th><th>93</th><td class="r"><span>[wiki:*]</span> </td>
+                      </tr><tr>
+                        <th> </th><th>94</th><td class="r"><span>[wiki:WikiStart*]</span> </td>
+                      </tr><tr>
+                        <th> </th><th>95</th><td class="r"><span>[wiki:WikiStart@*]</span> </td>
+                      </tr><tr>
+                        <th> </th><th>96</th><td class="r"><span>[wiki:WikiStart@*/attachment/*]</span> </td>
+                      </tr><tr>
+                        <th> </th><th>97</th><td class="r"><span>[wiki:WikiStart@117/attachment/FOO.JPG]</span> </td>
+                      </tr><tr>
+                        <th> </th><th>98</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>99</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>100</th><td class="r"><span>* Sections are checked against the current Trac resource descriptor '''IN ORDER''' of</span> </td>
+                      </tr><tr>
+                        <th> </th><th>101</th><td class="r"><span>&nbsp; appearance in the configuration file. '''ORDER IS CRITICAL'''.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>102</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>103</th><td class="r"><span>* Once a section matches, the current username is matched against the keys </span> </td>
+                      </tr><tr>
+                        <th> </th><th>104</th><td class="r"><span>&nbsp; (usernames) of the section, '''IN ORDER'''. </span> </td>
+                      </tr><tr>
+                        <th> </th><th>105</th><td class="r"><span>&nbsp; * If a key (username) is prefixed with a `@`, it is treated as a group. </span> </td>
+                      </tr><tr>
+                        <th> </th><th>106</th><td class="r"><span>&nbsp; * If a value (permission) is prefixed with a `!`, the permission is</span> </td>
+                      </tr><tr>
+                        <th> </th><th>107</th><td class="r"><span>&nbsp; &nbsp; denied rather than granted.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>108</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>109</th><td class="r"><span>&nbsp; The username will match any of 'anonymous',</span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>110</th><td class="r"><span>&nbsp; 'authenticated', &lt;username&gt; or '*', using normal Trac permission rules.</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>38</th><th>111</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>39</th><th>112</th><td class="l"><span>For example, if the `authz_file` contains:</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracFineGrainedPermissions%3Fversion=1.html#L44">…</a></th>
+                  <th><a href="TracFineGrainedPermissions%3Fversion=2.html#L117">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>44</th><th>117</th><td class="l"><span>[wiki:PrivatePage@*]</span> </td>
+                  </tr><tr>
+                          <th>45</th><th>118</th><td class="l"><span>john = WIKI_VIEW</span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>46</th><th> </th><td class="l"><span>* =<del></del></span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>119</th><td class="r"><span>* =<ins>&nbsp;!WIKI_VIEW</ins></span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>47</th><th>120</th><td class="l"><span>}}}</span> </td>
+                  </tr><tr>
+                          <th>48</th><th>121</th><td class="l"><span>and the default permissions are set like this:</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracFineGrainedPermissions%3Fversion=1.html#L54">…</a></th>
+                  <th><a href="TracFineGrainedPermissions%3Fversion=2.html#L127">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>54</th><th>127</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>55</th><th>128</th><td class="l"><span>Then: </span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>56</th><th> </th><td class="l"><span>&nbsp;- All versions of WikiStart will be viewable by everybody (including anonymous)</span> </td>
+                      </tr><tr>
+                        <th>57</th><th> </th><td class="l"><span>&nbsp;- !PrivatePage will be viewable only by john</span> </td>
+                      </tr><tr>
+                        <th>58</th><th> </th><td class="l"><span>&nbsp;- other pages will be viewable only by john and jack</span> </td>
+                      </tr><tr>
+                        <th>59</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>60</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>61</th><th> </th><td class="l"><span>=== mod_authz_svn-like permission policy ===</span> </td>
+                      </tr><tr>
+                        <th>62</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>63</th><th> </th><td class="l"><span>At the time of this writing, the old fine grained permissions system from Trac 0.10 and before used for restricting access to the repository has not yet been converted to a permission policy component, but from the user point of view, this makes little if no differences.</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>129</th><td class="r"><span>&nbsp; * All versions of WikiStart will be viewable by everybody (including anonymous)</span> </td>
+                      </tr><tr>
+                        <th> </th><th>130</th><td class="r"><span>&nbsp; * !PrivatePage will be viewable only by john</span> </td>
+                      </tr><tr>
+                        <th> </th><th>131</th><td class="r"><span>&nbsp; * other pages will be viewable only by john and jack</span> </td>
+                      </tr><tr>
+                        <th> </th><th>132</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>133</th><td class="r"><span>Groups:</span> </td>
+                      </tr><tr>
+                        <th> </th><th>134</th><td class="r"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th> </th><th>135</th><td class="r"><span>[groups]</span> </td>
+                      </tr><tr>
+                        <th> </th><th>136</th><td class="r"><span>admins = john, jack</span> </td>
+                      </tr><tr>
+                        <th> </th><th>137</th><td class="r"><span>devs = alice, bob</span> </td>
+                      </tr><tr>
+                        <th> </th><th>138</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>139</th><td class="r"><span>[wiki:Dev@*]</span> </td>
+                      </tr><tr>
+                        <th> </th><th>140</th><td class="r"><span>@admins = TRAC_ADMIN</span> </td>
+                      </tr><tr>
+                        <th> </th><th>141</th><td class="r"><span>@devs = WIKI_VIEW</span> </td>
+                      </tr><tr>
+                        <th> </th><th>142</th><td class="r"><span>* =</span> </td>
+                      </tr><tr>
+                        <th> </th><th>143</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>144</th><td class="r"><span>[*]</span> </td>
+                      </tr><tr>
+                        <th> </th><th>145</th><td class="r"><span>@admins = TRAC_ADMIN</span> </td>
+                      </tr><tr>
+                        <th> </th><th>146</th><td class="r"><span>* =</span> </td>
+                      </tr><tr>
+                        <th> </th><th>147</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>148</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>149</th><td class="r"><span>Then:</span> </td>
+                      </tr><tr>
+                        <th> </th><th>150</th><td class="r"><span>- everything is blocked (whitelist approach), but</span> </td>
+                      </tr><tr>
+                        <th> </th><th>151</th><td class="r"><span>- admins get all TRAC_ADMIN everywhere and</span> </td>
+                      </tr><tr>
+                        <th> </th><th>152</th><td class="r"><span>- devs can view wiki pages.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>153</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>154</th><td class="r"><span>Some repository examples (Browse Source specific):</span> </td>
+                      </tr><tr>
+                        <th> </th><th>155</th><td class="r"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th> </th><th>156</th><td class="r"><span># A single repository:</span> </td>
+                      </tr><tr>
+                        <th> </th><th>157</th><td class="r"><span>[repository:test_repo@*]</span> </td>
+                      </tr><tr>
+                        <th> </th><th>158</th><td class="r"><span>john = BROWSER_VIEW, FILE_VIEW</span> </td>
+                      </tr><tr>
+                        <th> </th><th>159</th><td class="r"><span># John has BROWSER_VIEW and FILE_VIEW for the entire test_repo</span> </td>
+                      </tr><tr>
+                        <th> </th><th>160</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>161</th><td class="r"><span># All repositories:</span> </td>
+                      </tr><tr>
+                        <th> </th><th>162</th><td class="r"><span>[repository:*@*]</span> </td>
+                      </tr><tr>
+                        <th> </th><th>163</th><td class="r"><span>jack = BROWSER_VIEW, FILE_VIEW</span> </td>
+                      </tr><tr>
+                        <th> </th><th>164</th><td class="r"><span># John has BROWSER_VIEW and FILE_VIEW for all repositories</span> </td>
+                      </tr><tr>
+                        <th> </th><th>165</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>166</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>167</th><td class="r"><span>Very fine grain repository access:</span> </td>
+                      </tr><tr>
+                        <th> </th><th>168</th><td class="r"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th> </th><th>169</th><td class="r"><span># John has BROWSER_VIEW and FILE_VIEW access to trunk/src/some/location/ only</span> </td>
+                      </tr><tr>
+                        <th> </th><th>170</th><td class="r"><span>[repository:test_repo@*/source:trunk/src/some/location/*@*]</span> </td>
+                      </tr><tr>
+                        <th> </th><th>171</th><td class="r"><span>john = BROWSER_VIEW, FILE_VIEW</span> </td>
+                      </tr><tr>
+                        <th> </th><th>172</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>173</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>174</th><td class="r"><span># John has BROWSER_VIEW and FILE_VIEW access to only revision 1 of all files at trunk/src/some/location only</span> </td>
+                      </tr><tr>
+                        <th> </th><th>175</th><td class="r"><span>[repository:test_repo@*/source:trunk/src/some/location/*@1]</span> </td>
+                      </tr><tr>
+                        <th> </th><th>176</th><td class="r"><span>john = BROWSER_VIEW, FILE_VIEW</span> </td>
+                      </tr><tr>
+                        <th> </th><th>177</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>178</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>179</th><td class="r"><span># John has BROWSER_VIEW and FILE_VIEW access to all revisions of 'somefile' at trunk/src/some/location only </span> </td>
+                      </tr><tr>
+                        <th> </th><th>180</th><td class="r"><span>[repository:test_repo@*/source:trunk/src/some/location/somefile@*]</span> </td>
+                      </tr><tr>
+                        <th> </th><th>181</th><td class="r"><span>john = BROWSER_VIEW, FILE_VIEW</span> </td>
+                      </tr><tr>
+                        <th> </th><th>182</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>183</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>184</th><td class="r"><span># John has BROWSER_VIEW and FILE_VIEW access to only revision 1 of 'somefile' at trunk/src/some/location only</span> </td>
+                      </tr><tr>
+                        <th> </th><th>185</th><td class="r"><span>[repository:test_repo@*/source:trunk/src/some/location/somefile@1]</span> </td>
+                      </tr><tr>
+                        <th> </th><th>186</th><td class="r"><span>john = BROWSER_VIEW, FILE_VIEW</span> </td>
+                      </tr><tr>
+                        <th> </th><th>187</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>188</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>189</th><td class="r"><span>Note: In order for Timeline to work/visible for John, we must add CHANGESET_VIEW to the above permission list.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>190</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>191</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>192</th><td class="r"><span>=== !AuthzSourcePolicy&nbsp; (mod_authz_svn-like permission policy) === #AuthzSourcePolicy</span> </td>
+                      </tr><tr>
+                        <th> </th><th>193</th><td class="r"><span></span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>194</th><td class="r"><span>At the time of this writing, the old fine grained permissions system from Trac 0.11 and before used for restricting access to the repository has&nbsp; been converted to a permission policy component, but from the user point of view, this makes little if no difference.</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>64</th><th>195</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>65</th><th>196</th><td class="l"><span>That kind of fine-grained permission control needs a definition file, which is the one used by Subversion's mod_authz_svn. </span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>66</th><th> </th><td class="l"><span>More information about this file format and about its usage in Subversion is available in the <del>[http://svnbook.red-bean.com/svnbook/book.html#svn-ch-6-sect-4.4.2 Subversion Book (Per-Directory Access Control)]</del>.</span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>197</th><td class="r"><span>More information about this file format and about its usage in Subversion is available in the <ins>&nbsp;[http://svnbook.red-bean.com/en/1.5/svn.serverconfig.pathbasedauthz.html Path-Based Authorization] section in the Server Configuration chapter of the svn book</ins>.</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>67</th><th>198</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>68</th><th>199</th><td class="l"><span>Example:</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracFineGrainedPermissions%3Fversion=1.html#L92">…</a></th>
+                  <th><a href="TracFineGrainedPermissions%3Fversion=2.html#L223">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>92</th><th>223</th><td class="l"><span>}}}</span> </td>
+                  </tr><tr>
+                          <th>93</th><th>224</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>94</th><th> </th><td class="l"><span><del>i</del>f you want to support the use of the `[`''modulename''`:/`''some''`/`''path''`]` syntax within the `authz_file`, add </span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>225</th><td class="r"><span><ins>I</ins>f you want to support the use of the `[`''modulename''`:/`''some''`/`''path''`]` syntax within the `authz_file`, add </span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>95</th><th>226</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>96</th><th>227</th><td class="l"><span>{{{</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracFineGrainedPermissions%3Fversion=1.html#L98">…</a></th>
+                  <th><a href="TracFineGrainedPermissions%3Fversion=2.html#L229">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>98</th><th>229</th><td class="l"><span>}}}</span> </td>
+                  </tr><tr>
+                          <th>99</th><th>230</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>100</th><th> </th><td class="l"><span>where ''modulename'' refers to the same repository indicated by the `repository_dir` entry in the `[trac]` section.</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>231</th><td class="r"><span>where ''modulename'' refers to the same repository indicated by the `repository_dir` entry in the `[trac]` section. As an example, if the `repository_dir` entry in the `[trac]` section is {{{/srv/active/svn/blahblah}}}, that would yield the following:</span> </td>
+                      </tr><tr>
+                        <th> </th><th>232</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>233</th><td class="r"><span>{{{ </span> </td>
+                      </tr><tr>
+                        <th> </th><th>234</th><td class="r"><span>[trac]</span> </td>
+                      </tr><tr>
+                        <th> </th><th>235</th><td class="r"><span>authz_file = /path/to/svnaccessfile</span> </td>
+                      </tr><tr>
+                        <th> </th><th>236</th><td class="r"><span>authz_module_name = blahblah</span> </td>
+                      </tr><tr>
+                        <th> </th><th>237</th><td class="r"><span>...</span> </td>
+                      </tr><tr>
+                        <th> </th><th>238</th><td class="r"><span>repository_dir = /srv/active/svn/blahblah </span> </td>
+                      </tr><tr>
+                        <th> </th><th>239</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>240</th><td class="r"><span></span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>241</th><td class="r"><span>where the svn access file, {{{/path/to/svnaccessfile}}}, contains entries such as {{{[blahblah:/some/path]}}}.</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>101</th><th>242</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>102</th><th>243</th><td class="l"><span>'''Note:''' Usernames inside the Authz file __must__ be the same as those used inside trac. </span> </td>
+                  </tr>
+            </tbody><tbody class="add">
+                  <tr class="first">
+                          <th> </th><th>244</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>245</th><td class="r"><ins>As of version 0.12, make sure you have ''!AuthzSourcePolicy'' included in the permission_policies list in trac.ini, otherwise the authz permissions file will be ignored.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>246</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>247</th><td class="r"><ins>{{{ </ins> </td>
+                  </tr><tr>
+                          <th> </th><th>248</th><td class="r"><ins>[trac]</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>249</th><td class="r"><ins>permission_policies = AuthzSourcePolicy, DefaultPermissionPolicy, LegacyAttachmentPolicy</ins> </td>
+                  </tr><tr class="last">
+                          <th> </th><th>250</th><td class="r"><ins>}}}</ins> </td>
+                  </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>103</th><th>251</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>104</th><th>252</th><td class="l"><span>==== Subversion Configuration ====</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracFineGrainedPermissions%3Fversion=1.html#L117">…</a></th>
+                  <th><a href="TracFineGrainedPermissions%3Fversion=2.html#L265">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>117</th><th>265</th><td class="l"><span>For information about how to restrict access to entire projects in a multiple project environment see [trac:wiki:TracMultipleProjectsSVNAccess]</span> </td>
+                  </tr><tr>
+                          <th>118</th><th>266</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="add">
+                  <tr class="first">
+                          <th> </th><th>267</th><td class="r"><ins>== Debugging permissions</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>268</th><td class="r"><ins>In trac.ini set:</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>269</th><td class="r"><ins>{{{</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>270</th><td class="r"><ins>[logging]</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>271</th><td class="r"><ins>log_file = trac.log</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>272</th><td class="r"><ins>log_level = DEBUG</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>273</th><td class="r"><ins>log_type = file</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>274</th><td class="r"><ins>}}}</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>275</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>276</th><td class="r"><ins>And watch:</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>277</th><td class="r"><ins>{{{</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>278</th><td class="r"><ins>tail -n 0 -f log/trac.log | egrep '\[perm\]|\[authz_policy\]'</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>279</th><td class="r"><ins>}}}</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>280</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>281</th><td class="r"><ins>to understand what checks are being performed. See the sourced documentation of the plugin for more info.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>282</th><td class="r"><ins></ins> </td>
+                  </tr><tr class="last">
+                          <th> </th><th>283</th><td class="r"><ins></ins> </td>
+                  </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>119</th><th>284</th><td class="l"><span>----</span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>120</th><th> </th><td class="l"><span>See also: TracPermissions</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>285</th><td class="r"><span>See also: TracPermissions,</span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>286</th><td class="r"><span>[http://trac-hacks.org/wiki/FineGrainedPageAuthzEditorPlugin TracHacks:FineGrainedPageAuthzEditorPlugin] for a simple editor plugin.</span> </td>
+                      </tr>
+            </tbody>
+        </table>
+      </li>
+  </ul>
+</div>
+      </div>
+  </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

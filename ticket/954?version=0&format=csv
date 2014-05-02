@@ -1,0 +1,53 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+954,Change API JSON response format to include errors etc,rgrp,,"Move to a format that has a separate responseHeader and response.
+
+=== A standard package response ===
+
+{{{
+{
+  responseHeader: {
+    status: 0,
+  }    
+  response: {package-dict}
+}
+}}}
+
+On error:
+{{{
+{
+  responseHeader: {
+    status: {err-code},
+    error: 'message'
+  }    
+  response: none
+}
+}}}
+
+=== A search query ===
+
+Based directly on solr.
+
+{{{
+{
+  responseHeader: {
+    status: 0,
+  }    
+  response: {
+    numFound: 5,
+    start: 0
+    docs: [
+    ]
+  }
+}
+}}}
+
+== Issues ==
+
+This is a breaking change for clients
+
+== References ==
+
+ * http://wiki.apache.org/solr/SolJSON
+ * http://www.flickr.com/services/api/response.json.html
+
+",enhancement,new,major,ckan-v1.4,ckan,,,,,

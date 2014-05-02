@@ -1,0 +1,6 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1417,Browser language detection doesn't work,dread,dread,"In Firefox:
+ * Edit | Preferences | Content | Languages - put 'de' at top language
+ * Clear cookies
+ * Load thedatahub.org
+ - it should be in German, but it's in the default language - English.",defect,closed,minor,ckan-sprint-2011-10-24,ckan,fixed,,,ckan,none

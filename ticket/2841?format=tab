@@ -1,0 +1,7 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2841	Slug generation fails on demo dev	amercader	aron.carroll	"On the add dataset form, slug generation fails with JS error:
+
+{{{
+Uncaught TypeError: Object [object Object] has no method 'incompleteFormWarning'    basic-form.js:5
+}}}
+"	enhancement	closed	major	demo phase 3	ckan	fixed			ckan	none

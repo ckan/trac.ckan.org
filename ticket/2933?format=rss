@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2933: Update theming docs</title>
+    <link>http://localhost/ticket/2933</link>
+    <description>&lt;p&gt;
+There's quite a lot of custom stuff going on, with all the custom jinja extensions, and the use of Fanstatic plus custom fanstatic extensions. People who are new to CKAN wanting to write CKAN themes are likely to be confused. I think the whole lot could do with documentation, maybe in the Theming and Customizing chapter in the sphinx docs.
+&lt;/p&gt;
+&lt;p&gt;
+I suggest completely replacing the contents of doc/theming.rst, and putting a 'legacy theming' link at the bottom linking to a doc/legacy_theming.rst file with the old contents.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2933</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+ </channel>
+</rss>

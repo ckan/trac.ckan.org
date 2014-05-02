@@ -1,0 +1,11 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1405,You can add a package twice to a group,jonathan.gray@…,dread,"To reproduce (from Jonathan Gray):
+ * I go to add an item to the group
+ * As I type, I get autocomplete options (cool!)
+ * When I click on one, it adds this, and copies the same autocomplete option in the box
+ * When I click submit, it seems to add the item twice
+ * On the main group page I think it just shows up once, but when I click edit it shows two identical boxes, both ticked - and the count includes two copies of the same item
+
+Basically the problem is allowing the same package associated multiple times with a group.
+
+This is an issue on CKAN 1.5b and probably earlier.",defect,closed,minor,ckan-sprint-2011-11-07,ckan,fixed,,dread,ckan,none

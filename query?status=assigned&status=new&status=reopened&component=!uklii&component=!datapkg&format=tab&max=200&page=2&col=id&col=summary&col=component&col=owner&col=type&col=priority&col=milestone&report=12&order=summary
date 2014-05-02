@@ -1,0 +1,201 @@
+id	summary	component	owner	type	priority	milestone
+2382	Investigate options for basic geocoding	ckan	amercader	task	awaiting triage	ckan-future
+3029	JSONP parameter scuppers Search in API	ckan	seanh	defect	awaiting triage	
+2348	Java client library for CKAN	ckan		enhancement	minor	ckan-future
+2885	Labels (editor, admin) not translated in authorization pages for datasets or groups	ckan		enhancement	awaiting triage	ckan-v1.9
+2901	Language Dropdown bug in footer with IE7	ckan		enhancement	minor	demo phase 5
+2964	Last organization admin can remove herself	ckan		defect	awaiting triage	ckan 2.0
+1336	License fudge	ckan	johnglover	defect	minor	ckan-backlog
+2324	Link API docs to relevant version not just latest	ckan		enhancement	awaiting triage	ckan-v1.9
+2328	Link to Catalog API for each Dataset, Group and Tag	ckan		enhancement	awaiting triage	ckan-v1.9
+1689	List deleted datasets in API	ckan	kindly	enhancement	major	
+2833	Load module templates before calling .initialize()	ckan		enhancement	minor	demo phase 5
+3018	Load more in activity streams	ckan	johnmartin	enhancement	awaiting triage	ckan 2.0
+2284	Local queries/views/viz in Related stuff.	ckan		enhancement	awaiting triage	ckan-backlog
+2884	Lock icon shown next to unknown licenses	ckan		defect	awaiting triage	ckan-v1.8.1
+2622	Login fails in Opera 12	ckan		defect	awaiting triage	
+1831	Login with email address	ckan		enhancement	awaiting triage	ckan-backlog
+2898	Looses data entered on step 1 of create dataset after login	ckan		defect	awaiting triage	demo phase 5
+1748	Make activity streams conform to http://activitystrea.ms/ standard	ckan	seanh	enhancement	awaiting triage	ckan-future
+2473	Make datstorer store field ordering in _meta field	ckan	kindly	enhancement	awaiting triage	ckan-v1.9
+2508	Make it possible to run CKAN tests for each language	ckan		enhancement	awaiting triage	ckan-backlog
+2986	Make lib/base.py more like it was originally intended	ckan		refactor	awaiting triage	ckan 2.0
+2985	Make lib/helpers.py more template-specific	ckan		refactor	awaiting triage	ckan 2.0
+737	Markdown syntax summary page	ckan		enhancement	awaiting triage	ckan-backlog
+2479	Meanings of Author and Maintainer fields are unclear	ckan		enhancement	awaiting triage	ckan-v1.9
+1572	Meta data Harvester	ckan	David Raznik	enhancement	awaiting triage	ckan-future
+1507	Minor fixes to dataset add on Group edit form - 0.5d	ckan	zephod	enhancement	awaiting triage	ckan-backlog
+1509	Mis-dated old revisions of datasets	ckan		defect	minor	
+1311	Modal user register and login form	ckan	rgrp	enhancement	major	ckan-backlog
+1203	"Moderated edits: html code shows as ""changed"" although it is not"	ckan	johnglover	defect	awaiting triage	ckan-backlog
+2412	More than one resource invalidatiing breaks dataset edit form	ckan	zephod	defect	major	ckan-sprint-2012-06-25
+143	Most active users listed on homepage	ckan	thejimmyg	enhancement	minor	ckan-backlog
+1750	Move ckan/lib/activity.py into the model	ckan		enhancement	awaiting triage	ckan-backlog
+2982	Move functionality from controllers into template helpers	ckan		refactor	awaiting triage	ckan 2.0
+2973	Move new_authz.py into logic/auth/__init__.py	ckan		enhancement	awaiting triage	ckan 2.0
+1136	Move to SessionExtension in vdm	vdm	kindly	enhancement	critical	
+1077	Move to simpler vdm system	ckan	kindly	enhancement	awaiting triage	ckan-backlog
+3001	Multilingual plugin crashes CKAN on add dataset when some languages are default	ckan		defect	awaiting triage	ckan 2.0
+2763	Multilingual tests failing	ckan		defect	awaiting triage	ckan-v1.8.1
+1287	NAVL validation errors - Junk fields should be listed explicitly	ckan	thejimmyg	enhancement	awaiting triage	ckan-backlog
+2796	Need a datahub one-pager	ckan	mark.wainwright	enhancement	awaiting triage	
+2830	Need method to undelete groups	ckan	toby	enhancement	awaiting triage	demo phase 4
+1466	Need to support https login for multiple instances as part of the CKAN package install	ckan		enhancement	critical	ckan-backlog
+2948	Negative range breaks datastore backend	ckan		enhancement	awaiting triage	
+2957	New datastore on postgres prior to 9.0	ckan		task	awaiting triage	
+2732	New file upload functionality	ckan		enhancement	awaiting triage	ckan-backlog
+3023	New methods on IPackageController to provide access to the data_dict	ckan	amercader	enhancement	awaiting triage	
+3003	New pg databases should be created with UTF8 encoding rather than system default	ckan		enhancement	awaiting triage	ckan-v1.8
+3017	New stable branch for the demo server	ckan	johnglover	enhancement	major	ckan 2.0
+2531	New state option: archived / deprecated	ckan		enhancement	awaiting triage	ckan-backlog
+140	News section on front page	ckan		enhancement	awaiting triage	ckan-backlog
+2635	Non-destructive SOLR reindex	ckan		enhancement	major	
+2483	Non-local resources should not have Download links	ckan		enhancement	awaiting triage	ckan-v1.9
+1244	Notes field carriage-returns converted to CRLF	ckan		enhancement	major	
+2547	ODS Initial data sets	ckan	shevski	enhancement	awaiting triage	opendatasuite 2
+2546	ODS Managing homepage content	ckan		requirement	awaiting triage	ckan-backlog
+2548	Object ownership for groups/package	ckan	kindly	enhancement	awaiting triage	datahub-july
+2619	Omit private datasets from public activity streams	ckan	seanh	enhancement	awaiting triage	ckan-v1.9
+1424	Openness notice should be clearer	ckan		enhancement	minor	ckan-backlog
+1644	Order default dataset page by most downloaded resources on thedatahub	ckan		enhancement	awaiting triage	ckan-backlog
+2917	Organization admins can delete themselves	ckan	johnmartin	enhancement	awaiting triage	ckan 2.0
+2970	Organization and group member links use id not name	ckan		defect	awaiting triage	ckan 2.0
+2967	Organization members edit page reloads after demoting self	ckan		defect	awaiting triage	ckan 2.0
+2846	Organizations allows you to set an organization as the parent organization of itself	ckan		defect	awaiting triage	ckan-v1.8.1
+2939	Orgs are groups	ckan	toby	enhancement	awaiting triage	
+301	Package discussion pages	ckan		enhancement	awaiting triage	
+812	Package edit form only allows three extra fields	ckan		defect	awaiting triage	ckan-backlog
+1288	Package edit/creation can't include 'relationships' field	ckan		defect	minor	ckan-backlog
+1355	Package extras property does not include the newly created ones	ckan		defect	awaiting triage	ckan-backlog
+253	Package relationships	ckan		enhancement	awaiting triage	ckan-backlog
+256	Package relationships - 3. Edit in WUI	ckan		requirement	major	ckan-backlog
+285	Paginate list of packages on tag read page	ckan		enhancement	awaiting triage	
+2745	Password reset returns an exception if the key parameter is missing	ckan		defect	major	ckan-v1.9
+2951	Paster command for building css from less	ckan		enhancement	minor	ckan 2.0
+2945	Pdf preview does not load in IE	ckan		enhancement	awaiting triage	
+3010	Pin images don't appear in data explorer	ckan		enhancement	awaiting triage	ckan 2.0
+1535	Plump for auth header of: X-CKAN-API-KEY	ckan		enhancement	awaiting triage	ckan-backlog
+2976	Polish group and organization member pages	ckan		enhancement	awaiting triage	ckan 2.0
+2995	Popovers for resources, groups, organizations, tags...	ckan		enhancement	awaiting triage	ckan 2.0
+2851	Preview of PDF tries to connect to datastore	ckan		enhancement	awaiting triage	
+2961	Preview plugin endpoint	ckan	dominik	enhancement	awaiting triage	ckan 2.0
+2960	Private datasets are not private	ckan		task	awaiting triage	ckan-backlog
+1429	Provide DOIs for datasets in a CKAN instance	ckan	rgrp	enhancement	awaiting triage	ckan-backlog
+1558	Publisher Tools	ckan	David Raznik	enhancement	awaiting triage	ckan-future
+2590	Publisher dashboard	ckan	shevski	enhancement	awaiting triage	ckan-backlog
+1198	Publisher hierarchy	ckan		enhancement	critical	ckan-backlog
+1589	QA - Give 5 star rating to datasets with link metadata	ckan	johnglover	enhancement	major	ckan-backlog
+1588	QA - Give SPARQL endpoints a 4 star rating	ckan	johnglover	enhancement	major	ckan-backlog
+2895	QA pages (e.g. broken resource links) are not paginated	ckan		enhancement	awaiting triage	
+1584	QA report improvements - 2.5d	ckan	johnglover	enhancement	major	ckan-backlog
+250	RDF link in Atom feed	ckan	icmurray	enhancement	awaiting triage	ckan-v1.9
+1406	Re-enable RSS subscriptions	ckan		enhancement	awaiting triage	ckan-backlog
+765	Read-only mode - API usage	ckan		enhancement	awaiting triage	ckan-backlog
+763	Read-only mode - Setup	ckan		enhancement	minor	ckan-future
+3011	Recline fixes and updates for CKAN 2.0	ckan	johnglover	enhancement	major	ckan 2.0
+2944	Recline preview does not work in Opera	ckan		enhancement	awaiting triage	
+2947	Redirect to the resource page from /resource/{res-id}	ckan		enhancement	minor	
+2427	Reduce cruft installed into CKAN's virtualenv due to Pylons	ckan	kindly	enhancement	awaiting triage	ckan-v1.9
+2949	Reenable Data API button on the new theme	ckan	amercader	defect	major	
+1815	Reenable Sparql endpoint on publicdata.eu	pdeu	amercader	task	awaiting triage	ckan-future
+1278	Refactor authorized_query calls	ckan		enhancement	awaiting triage	ckan-backlog
+1596	Refactor authz roles	ckan		enhancement	awaiting triage	ckan-future
+2915	Refactor form_to_db_schema_options()	ckan		refactor	awaiting triage	ckan 2.0
+1403	Refactor groups index page	ckan	zephod	enhancement	awaiting triage	ckan-backlog
+2983	Refactor lib/base.py to remove circular import issues	ckan		refactor	awaiting triage	ckan 2.0
+2310	Refactor the search-query construction in feeds.py	ckan	icmurray	enhancement	minor	ckan-backlog
+1598	Reinstate Ratings	ckan		enhancement	awaiting triage	ckan-backlog
+2919	Remove IController from docs	ckan		defect	awaiting triage	ckan-v1.8
+2882	Remove User Stories Overview from docs?	ckan		defect	awaiting triage	ckan-v1.8.1
+1684	Remove all config from ckanext-archiver	ckan		enhancement	awaiting triage	ckan-backlog
+2987	Remove all direct calls to logic action and auth functions	ckan		refactor	awaiting triage	ckan 2.0
+2972	Remove any imports of authz.py and delete file	ckan		enhancement	awaiting triage	ckan 2.0
+2981	Remove config from jinja templates	ckan		refactor	awaiting triage	ckan 2.0
+2603	Remove deprecated 'fields' parameter from resource_search	ckan	icmurray	refactor	minor	ckan-v1.9
+1260	Remove duplicate functions from _util.html	ckan		enhancement	trivial	ckan-backlog
+2929	Remove is_fallback() from I*Form extension interfaces?	ckan		enhancement	awaiting triage	ckan 2.0
+1137	Remove need for statefulness in vdm	vdm	kindly	enhancement	major	
+2881	Remove or improve 'Domain Model' docs page	ckan		defect	awaiting triage	ckan-v1.8.1
+1286	Remove remaining formalchemy stuff	ckan		enhancement	major	ckan-backlog
+2621	Remove the deprecated 'fields' parameter from tag_search and tag_autocomplete	ckan	icmurray	refactor	minor	ckan-v1.9
+2925	Remove trans mangle paster command?	ckan		defect	awaiting triage	ckan 2.0
+1778	Replace classmethod's with module-level functions	ckan	seanh	enhancement	awaiting triage	ckan-future
+2301	Replace old-style string formatting with format() method (at least in strings marked for translation)	ckan	seanh	enhancement	minor	ckan-future
+2979	Requesting membership to groups and organizations	ckan		enhancement	awaiting triage	ckan 2.0
+2554	Research Virtuoso cartridges	ckan		enhancement	awaiting triage	ckan-backlog
+2822	Resource additional info titles format/i18n	ckan	toby	enhancement	minor	demo phase 4
+235	Resource format normalization and detection	ckan	tobes	enhancement	awaiting triage	ckan-v1.9
+2247	Resource preview glitch in some browsers	ckan		enhancement	minor	ckan-backlog
+818	Rethinking the author and maintainer fields	ckan		requirement	awaiting triage	ckan-backlog
+84	Revert support on versioned objects	vdm	kindly	enhancement	minor	ckan-future
+2862	Revised revised groups description	ckan	toby	enhancement	awaiting triage	demo phase 4
+2928	Run CKAN tests with example_i*form extensions enabled	ckan		enhancement	awaiting triage	ckan 2.0
+2844	SQL-only (no solr) version of CKAN	ckan		enhancement	awaiting triage	
+2535	SSL certificate for DataHub + https by default	ckan		enhancement	awaiting triage	
+2962	Search across multiple ckan instances	ckan		enhancement	awaiting triage	ckan-backlog
+924	Search box has no search button	ckan		enhancement	minor	ckan-backlog
+350	Search engine optimisation	ckan		enhancement	awaiting triage	ckan-backlog
+1366	Search inside extra fields	ckan		defect	major	ckan-future
+2331	Search should AND terms not OR terms	ckan	kindly	defect	major	ckan-sprint-2012-05-29
+277	Set some config options / settings in WUI (extension)	ckan	zephod	enhancement	awaiting triage	ckan-backlog
+2486	Should be able to use . in dataset names	ckan		defect	awaiting triage	ckan-backlog
+2904	Show more formats/groups/tags shouldn't display if there aren't more	ckan		enhancement	awaiting triage	demo phase 5
+2731	Some sites permanently 'down for maintenance'	ckan		enhancement	awaiting triage	
+2337	Sort out ini file confusion in docs	ckan	seanh	enhancement	awaiting triage	ckan-v1.9
+1818	Spatial metadata editor	ckan	amercader	enhancement	major	ckan-future
+2788	Speed improvements on creating/updating and indexing	ckan	amercader	enhancement	awaiting triage	ckan-v1.9
+1823	Spring clean bin directory	ckan		enhancement	trivial	ckan-backlog
+1041	Start Using the CKAN Wiki for Tutorial-style documentation	ckan	thejimmyg	enhancement	major	ckan-backlog
+2965	Stats extension broken on 1.8	ckan		defect	awaiting triage	ckan-v1.8
+2899	Step 2 > Save & add another bug	ckan		enhancement	awaiting triage	demo phase 5
+2197	Storage Metadata API: add/update not working with local file storage (Pairtree)	ckan		defect	awaiting triage	ckan-backlog
+1564	Structured Data (Data API)	ckan	David Raznik	enhancement	awaiting triage	ckan-future
+1069	Stub datasets (request for datasets)	ckan	tobes	enhancement	awaiting triage	
+1144	Support DSPL	ckan		enhancement	awaiting triage	ckan-backlog
+2889	Support JSON values in extras, when returning JSON from API	ckan		enhancement	awaiting triage	ckan-v1.9
+1184	Support Wuala as CKAN storage option	ckan		enhancement	awaiting triage	ckan-backlog
+3026	Support icons on  nav_named_link	ckan	amercader	enhancement	minor	
+1458	Support previewing kml files in data viewer	ckan	rgrp	enhancement	awaiting triage	ckan-future
+1179	Support tag aliases	ckan		enhancement	awaiting triage	ckan-backlog
+1145	Support the Handle System	ckan		enhancement	awaiting triage	ckan-backlog
+2893	Tags missing from form_to_db_package_schema()	ckan		defect	awaiting triage	ckan-v1.8.1
+2927	Test new package/group/organization type URLs support	ckan		enhancement	awaiting triage	ckan 2.0
+1168	Test system for deb packaging	ckan	thejimmyg	enhancement	major	ckan-backlog
+2975	Tests for auth functions and new actions	ckan		enhancement	awaiting triage	ckan 2.0
+2978	Tests for permissions for organizations and groups	ckan		enhancement	awaiting triage	ckan 2.0
+1800	Tidy up *_list() and *_search() functions in ckan/logic/action/get.py	ckan		refactor	awaiting triage	ckan-future
+2963	Timeout on tag pages with lots of datasets	ckan		defect	major	ckan-v1.8
+331	Timezone of CKAN timestamps should be configurable	ckan		enhancement	awaiting triage	ckan-backlog
+1561	To do extension	ckan	David Raznik	enhancement	awaiting triage	ckan-future
+653	Trackback links for packages	ckan		requirement	awaiting triage	ckan-backlog
+2988	UI functional tests for CKAN 2.0	ckan		enhancement	awaiting triage	ckan 2.0
+2654	UI support for ordering groups on group_read page	ckan		enhancement	awaiting triage	ckan 2.0
+2294	Unauthorized action on Data API gets 302 rather than 401 or similar	ckan	kindly	defect	minor	ckan-v1.9
+1328	Unicode & paster commands	ckan		defect	minor	
+2335	Unicode characters don't work in CKAN ini files	ckan	seanh	defect	awaiting triage	ckan-v1.9
+3020	Update CKAN coding standards	ckan		enhancement	awaiting triage	
+2891	Update or remove DataStore google presentation	ckan		defect	awaiting triage	ckan-v1.8.1
+2933	Update theming docs	ckan		enhancement	awaiting triage	ckan 2.0
+3006	Update translations from Transifex	ckan		enhancement	awaiting triage	ckan-v1.8.1
+2936	Updating a group via the API clears its packages	ckan		defect	awaiting triage	ckan-v1.8
+1489	Updating example theme/extension	ckan		enhancement	major	ckan-backlog
+2958	Uploading files with unicode characters in filename fails in CKAN 1.7 and 1.8	ckan		defect	awaiting triage	ckan-v1.8
+370	Use better email encryption for author_email and maintainer_email	ckan		enhancement	awaiting triage	ckan-backlog
+1352	Use logic functions instead of as_dict when indexing entities	ckan		enhancement	major	ckan-backlog
+2321	Use resource names/titles in URLs	ckan		enhancement	awaiting triage	ckan-v1.9
+2277	Use the new atom feeds in IATI	ckan	icmurray	refactor	minor	ckan-backlog
+2910	User listings are not very compelling	ckan		enhancement	awaiting triage	demo phase 5
+2909	User profile headers are a bit weird	ckan		enhancement	awaiting triage	demo phase 5
+2550	User types	ckan	icmurray	enhancement	awaiting merge	datahub-july
+2934	Webtests for CKAN	ckan		enhancement	awaiting triage	
+1569	Wordpressser	ckan	David Raznik	enhancement	awaiting triage	ckan-future
+2234	Write a CKAN extension for pulling items from RSS/Atom feeds into CKAN templates	ckan		enhancement	awaiting triage	ckan-future
+1326	Write a set of auth plugin functions to integrate with Druapl	ckan		enhancement	minor	ckan-backlog
+2279	Write tutorial for our DataStore API / Data Explorer	ckan	rgrp	enhancement	major	ckan-v1.8
+1661	Wrong Routes version installed by CKAN package	ckan		defect	major	ckan-backlog
+2906	Wrong flags in language dropdown	ckan		defect	minor	demo phase 5
+1240	[super] API v4	ckan	kindly	enhancement	awaiting triage	ckan-backlog
+1096	[super] CKAN Hosted	ckan	rufuspollock	defect	awaiting triage	ckan-future
+1432	[super] Data processing system for CKAN and Webstore	ckan		enhancement	awaiting triage	ckan-backlog
+1787	[super] Improve RESTful API	ckan		enhancement	awaiting triage	ckan-future
+1233	[super] Improve wiki-style functionality for history	ckan		enhancement	awaiting triage	ckan-backlog

@@ -1,0 +1,2 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+501	Read-only maintenance mode	pudo		CKAN should have a read-only maintenance mode with a nice little banner on all pages, appropriate REST messages etc. Bonus points if this is triggered via an environment variable and thus can be triggered by the surrounding apache. 	requirement	closed		ckan-v1.2	ckan	duplicate				

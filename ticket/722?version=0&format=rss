@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #722: Further adapt l10n for IATI</title>
+    <link>http://localhost/ticket/722</link>
+    <description>&lt;ul&gt;&lt;li&gt;Change "Publishing Entity" to "Publisher"
+&lt;/li&gt;&lt;/ul&gt;</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/722</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>johnbywater</dc:creator>
+
+      <pubDate>Wed, 27 Oct 2010 16:05:38 GMT</pubDate>
+      <title>sprint, milestone set</title>
+      <link>http://localhost/ticket/722#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/722#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;sprint&lt;/strong&gt;
+                set to &lt;em&gt;1.3.2&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                set to &lt;em&gt;ckan v1.3&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Referencing ticket &lt;a class="closed ticket" href="http://localhost/ticket/716" title="requirement: Visual improvments to IATI CKAN (closed: fixed)"&gt;#716&lt;/a&gt; has changed sprint.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>johnbywater</dc:creator>
+
+      <pubDate>Wed, 27 Oct 2010 16:22:27 GMT</pubDate>
+      <title>sprint deleted</title>
+      <link>http://localhost/ticket/722#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/722#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;sprint&lt;/strong&gt;
+                &lt;em&gt;1.3.2&lt;/em&gt; deleted
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Referencing ticket &lt;a class="closed ticket" href="http://localhost/ticket/716" title="requirement: Visual improvments to IATI CKAN (closed: fixed)"&gt;#716&lt;/a&gt; has changed sprint.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>johnbywater</dc:creator>
+
+      <pubDate>Wed, 27 Oct 2010 16:39:29 GMT</pubDate>
+      <title>milestone changed; sprint set</title>
+      <link>http://localhost/ticket/722#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/722#comment:3</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;sprint&lt;/strong&gt;
+                set to &lt;em&gt;1.3.3-iati&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan v1.3&lt;/em&gt; to &lt;em&gt;iati-3&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Referencing ticket &lt;a class="closed ticket" href="http://localhost/ticket/716" title="requirement: Visual improvments to IATI CKAN (closed: fixed)"&gt;#716&lt;/a&gt; has changed sprint.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>pudo</dc:creator>
+
+      <pubDate>Sat, 30 Oct 2010 17:28:23 GMT</pubDate>
+      <title>status, description changed; resolution set</title>
+      <link>http://localhost/ticket/722#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/722#comment:4</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/722?action=diff&amp;amp;version=4"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+fixed:
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a class="ext-link" href="http://bitbucket.org/okfn/ckanextiati/changeset/fb166fde9d3e"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://bitbucket.org/okfn/ckanextiati/changeset/fb166fde9d3e&lt;/a&gt;
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

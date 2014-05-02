@@ -1,0 +1,2 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+903	Proper handling of deleted packages in Solr serps	pudo	pudo	Currently, deleted packages are filtered from search results after solr returns. That means result count can drop below the requested number, down to 0. Thus we need to filter before or in Solr. 	defect	closed	awaiting triage	ckan-v1.3	ckan	fixed				

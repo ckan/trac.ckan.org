@@ -1,0 +1,2 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1181	Link spam vulnerability in User-About field	dread	dread	"When viewing a user, the about field contains Markdown, which may have links. These should have rel=""nofollow"" to discourage link spam."	defect	new	blocker		ckan				ckan	none

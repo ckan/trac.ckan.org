@@ -1,0 +1,11 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1598,Reinstate Ratings,rgrp,,"Ratings were disabled approximately a year ago because:
+
+ * Unclear purpose and UX. What did ratings tell you? How useful were they?
+ * Spamming (esp by bots: you could submit an anonymous rating via a GET request which caused problems)
+
+Both problems are solvable and it would be nice to have this feature reinstated.
+
+ * Purpose: can make this more purposable by limiting to logged in users (or at least distinguishing logged in from non-logged in users)
+  * Even better we could allow ratings to be made public (I'm interested in what someone else I respect finds important)
+ * Spamming: limit to logged in users and / or use AJAX over an API to submit ...",enhancement,new,awaiting triage,ckan-backlog,ckan,,,,ckan,none

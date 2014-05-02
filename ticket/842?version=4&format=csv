@@ -1,0 +1,69 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+842,Todo list CKAN extension,rgrp,johnglover,"An extension that provides a todo list feature on CKAN so that people can register and find things to do.
+
+Extension name: ckanext-todo
+
+== User Story ==
+
+=== Package page ===
+
+As a user I come to a package:
+
+ * Have a todo count at that top that takes you down to the todo list (which may say nothing todo)
+ * At the bottom is a section of the package display titled ""ToDo"" where I see a list of all toDos for the package most recent at the top
+  * If I am logged in 
+   * See a form for ""Add to do"" at the top of the todo section and can add one straight away
+   * I see a ""now resolved"" button next to each which goes green when you hover.
+      When clicked the todo fades away.
+   * Not logged in: I see a button that says ""login to add todo""
+
+=== Todo list page ===
+
+When a user comes to todo overview at /todo
+
+At top list all todo categories with counts (or a progress bar). Click on category name or bar takes you down page to list for that category.
+
+Category list has a list of todo items (ul with li items with class todo) - link to package relevant to the todo.
+
+
+== Implementation ==
+
+The Todo form
+
+ * One of the fields is category -> autocomplete the category (not constrained) (lowercase, no spaces, .-_ allowed)
+ * Add a description
+ * Submit, the todo gets added via AJAX to the list at the top as the most recent todo
+
+Model:
+
+{{{
+todo table
+
+  id (autoincrement integer)
+  package_id
+  todo_category_id (required)
+  description (required)
+  created=NOW()
+  resolved=null (unresolved) or a datetime (datetime of resolution)
+  creator=user
+  resolver=user
+
+todo_category table
+  id
+  name
+
+Prepopulate with: broken-resource-link, no-author, bad-format, add-description
+}}}
+
+API at /api/2/todo
+ * GET / POST / PUT ...
+
+/api/2/todo?package=package_id_or_name&category=...&resolved=0/1
+  * support limit (?)
+
+/api/2/todo/category -> return list of todo categories
+ * No GET / PUT / POST (these are auto-created by creation of todo)
+
+== Optional Extras (Will not be done atm) ==
+
+ * Integrate todo tags (e.g. list packages tagged with a todo.{xxx} on Todo List page ...",enhancement,new,major,ckan-v1.4-sprint-7,ckan,,,,ckan,none

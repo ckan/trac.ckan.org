@@ -1,0 +1,12 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2417,Clean up output for dataset search results,aron.carroll,toby,"Currently due to the data structure the search result filters are output incorrectly. Repeating the facet with each tag.
+
+See http://s031.okserver.org:2375/dataset?tags=fibre&tags=terrestrial&q=Africa
+
+It outputs:
+
+Tags: fibre Tags: terrestrial
+
+It should be:
+
+Tags: fibre terrestrial",enhancement,closed,major,,ckan,fixed,,,ckan,none

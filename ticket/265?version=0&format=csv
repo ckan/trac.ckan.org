@@ -1,0 +1,13 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+265,More detail shown in Atom feed,dread,rgrp,"== Use case ==
+
+As a user I want to stay abreast of package changes, such as a new package being created, newer data is available for a package or a new download is available for a package.
+
+== Implementation ==
+
+Add into the Atom feed:
+1. a package is a new one
+2. the resources have been changed
+3. the last_updated field has been changed
+
+",enhancement,new,awaiting triage,,ckan,,,,,

@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+332,Tag autocompletion slightly broken,rgrp,,"Tag autocompletion does not seem to work quite right (e.g. cannot click on tag to have it selected).
+
+Also wonder whether we want to switch to jquery from yui here at the same time as we already have that as a dependency (may want to make this a separate ticket).",defect,new,major,v1.1,ckan,,,,,

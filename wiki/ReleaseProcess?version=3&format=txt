@@ -1,0 +1,39 @@
+= About Releases =
+
+The OKF aims to make releases CKAN regularly - minor points every two months. Find releases at: [http://pypi.python.org/pypi/ckan PyPI]. See the changes at on the [http://knowledgeforge.net/ckan/doc/ckan/CHANGELOG.html Changelog].
+
+= Doing a CKAN release =
+
+ 1. Test the code satisfactorily.
+ 1. Summarise the tickets going in this release in the ckan/doc/CHANGELOG.rst
+ 1. Remove the pre-release letter in the version number in ckan/__init__.py e.g. 1.1c -> 1.1
+ 1. Compile the docs:
+{{{
+$ python setup.py build_sphinx
+}}}
+ 1. Upload docs to knowledgeforge.
+ 1. Tag the repo with the version number (commits change). e.g.
+{{{
+$ hg tag ckan-1.1 -m 'Release 1.1'
+$ hg push
+}}}
+ 1. Upload the release to PyPI: 
+{{{
+python setup.py sdist upload
+}}}
+ 1. Bring metastable branch in line with default: 
+{{{
+$ hg -C metastable
+$ hg merge -r default
+$ nosetests ckan/tests
+$ hg ci -m '[merge] from release 1.1'
+$ hg push
+}}}
+ 1. Change the version number to the next version alpha in ckan/__init__.py e.g. 1.2a
+ 1. Commit and push this change.
+ 1. Merge the release to the bitbucket i18n repo and recreate the pot:
+{{{
+???
+}}}
+ 
+If there have been any unreleased changes to vdm, make sure you release that too.

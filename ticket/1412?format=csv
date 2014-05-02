@@ -1,0 +1,2 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1412,application.js crashes when viewing a dataset with no resources,seanh,rgrp,"Create a new dataset, don't add any resources to the dataset yet, view the dataset in ckan, if you have firebug enabled you'll see the error ""resource is undefined"" at line 699 of application.js.",defect,closed,minor,ckan-sprint-2012-02-06,ckan,worksforme,0.25d,,ckan,none

@@ -1,0 +1,19 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1642,Extra link generators generate garbled HTML,pudo,,"I had a package descriptions with URLs that contain ""group:foo"". This produces garbled output as the system tries to generate two sets of links: the outer link and an inner link. 
+
+Need to fix the parser. 
+
+Text: 
+
+
+Webdienst basierende Bereitstellung von Geobasisdaten der Freien und Hansestadt Hamburg. Folgende Geobasisdaten werden als WebMapTileService (WMT-S) für die Dauer des Wettbewerbs netzbasiert unter der Creative Commons Lizenz zur Verfügung gestellt: Digitale Orthophotos 40 cm Auflösung (Layer: apps4d_DOP40), Digitale Stadtkarte (Layer: apps4d_DISK), Digitale Regionalkarte (Layer: apps4d_DIRK), Digitale Karte 1:5000 (Layer: apps4d_DK5).
+
+Metadateneinträge zu den Daten im PortalU:
+
+* [apps4d_DOP40](http://www.portalu.de/trefferanzeige?docuuid=D6082285-6CAC-49C5-B7ED-B5A72BC17DEC&plugid=/kug-group:kug-iplug-udk-db_hh)
+* [apps4d_DISK](http://www.portalu.de/trefferanzeige?docuuid=D2DA3359-3DC9-4CA4-AE9B-7C63D53B220F&plugid=/kug-group:kug-iplug-udk-db_hh)
+* [apps4d_DIRK](http://www.portalu.de/trefferanzeige?docuuid=B7DDD599-F677-4C80-BED5-F11D82D5D1DD&plugid=/kug-group:kug-iplug-udk-db_hh)
+* [apps4d_DK5](http://www.portalu.de/trefferanzeige?docuuid=2AE6D23E-48A5-4D85-BC0A-160737E0C8D2&plugid=/kug-group:kug-iplug-udk-db_hh)
+
+
+One fix is quoting the URLs",defect,new,awaiting triage,ckan-backlog,ckan,,,,ckan,none

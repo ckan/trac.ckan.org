@@ -1,0 +1,4 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1606	metadata license config option	dread		"Add a config option to choose the metadata licence. Set default to Open Database License.
+
+Currently the dataset edit form says ""Important: By submitting content, you agree to release your contributions under the Open Database License."" This is hard-coded, but not suitable for when DGU uses the CKAN form - they use the OGL."	enhancement	new	awaiting triage	ckan-backlog	ckan				ckan	none

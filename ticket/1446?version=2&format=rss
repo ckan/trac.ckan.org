@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1446: [super] Data Explorer v2</title>
+    <link>http://localhost/ticket/1446</link>
+    <description>&lt;p&gt;
+We already have first pass of Data Explorer that was released as part of &lt;a class="closed ticket" href="http://localhost/ticket/1357" title="enhancement: Integrate new version of data preview (closed: fixed)"&gt;#1357&lt;/a&gt;.
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Merging &lt;a class="ext-link" href="https://github.com/okfn/dataexplorer"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;https://github.com/okfn/dataexplorer&lt;/a&gt; with &lt;a class="ext-link" href="http://github.com/okfn/recline"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://github.com/okfn/recline&lt;/a&gt; and developing
+&lt;ul&gt;&lt;li&gt;&lt;a class="ext-link" href="https://github.com/okfn/recline/issues"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;https://github.com/okfn/recline/issues&lt;/a&gt;
+&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;Integrate this into CKAN (into resource view page) - see &lt;a class="closed ticket" href="http://localhost/ticket/1032" title="enhancement: [super] Resources in WUI (closed: fixed)"&gt;#1032&lt;/a&gt;
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+Est: 10-15d (should be broken down -- partly is in recline issues)
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1446</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Mon, 07 Nov 2011 11:44:04 GMT</pubDate>
+      <title>priority, status, description changed; owner, milestone set</title>
+      <link>http://localhost/ticket/1446#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1446#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;owner&lt;/strong&gt;
+              set to &lt;em&gt;rgrp&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;priority&lt;/strong&gt;
+                changed from &lt;em&gt;awaiting triage&lt;/em&gt; to &lt;em&gt;major&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;assigned&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1446?action=diff&amp;amp;version=1"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                set to &lt;em&gt;current-ckan-sprint-2011-11-21&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Mon, 21 Nov 2011 10:52:04 GMT</pubDate>
+      <title>summary, description, milestone changed</title>
+      <link>http://localhost/ticket/1446#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/1446#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;summary&lt;/strong&gt;
+                changed from &lt;em&gt;Data Explorer v2&lt;/em&gt; to &lt;em&gt;[super] Data Explorer v2&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1446?action=diff&amp;amp;version=2"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;current-ckan-sprint-2011-11-21&lt;/em&gt; to &lt;em&gt;ckan-v1.6&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Have made significant progress on new recline but not yet operational. See &lt;a class="ext-link" href="https://github.com/okfn/recline"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;https://github.com/okfn/recline&lt;/a&gt; and &lt;a class="ext-link" href="https://github.com/okfn/recline/issues/6"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;https://github.com/okfn/recline/issues/6&lt;/a&gt; &lt;a class="ext-link" href="https://github.com/okfn/recline/issues/12"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;https://github.com/okfn/recline/issues/12&lt;/a&gt; &lt;a class="ext-link" href="https://github.com/okfn/recline/issues/8"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;https://github.com/okfn/recline/issues/8&lt;/a&gt; also &lt;a class="ext-link" href="https://github.com/okfn/recline/issues/10"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;https://github.com/okfn/recline/issues/10&lt;/a&gt; and more ...
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Fri, 30 Dec 2011 17:53:41 GMT</pubDate>
+      <title>description, summary changed</title>
+      <link>http://localhost/ticket/1446#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/1446#comment:3</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1446?action=diff&amp;amp;version=3"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;summary&lt;/strong&gt;
+                changed from &lt;em&gt;[super] Data Explorer v2&lt;/em&gt; to &lt;em&gt;Data Explorer v2&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Wed, 11 Jan 2012 11:33:14 GMT</pubDate>
+      <title>status, description, milestone changed; resolution set</title>
+      <link>http://localhost/ticket/1446#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/1446#comment:4</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;assigned&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1446?action=diff&amp;amp;version=4"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan-v1.6&lt;/em&gt; to &lt;em&gt;ckan-sprint-2012-01-09&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Marking as complete as Data Explorer is now functional enough for our purposes. Tickets done include (* indicates improvement over current explorer)
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Core Backbone Models representing Dataset and Tabular data: &lt;a class="ext-link" href="https://github.com/okfn/recline/issues/10"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;https://github.com/okfn/recline/issues/10&lt;/a&gt;
+&lt;/li&gt;&lt;li&gt;New theme: &lt;a class="ext-link" href="https://github.com/okfn/recline/issues/22"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;https://github.com/okfn/recline/issues/22&lt;/a&gt;
+&lt;/li&gt;&lt;li&gt;Read-only mode: &lt;a class="ext-link" href="https://github.com/okfn/recline/issues/17"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;https://github.com/okfn/recline/issues/17&lt;/a&gt;
+&lt;/li&gt;&lt;li&gt;Introduce hash navigation / state support (*): &lt;a class="ext-link" href="https://github.com/okfn/recline/issues/19"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;https://github.com/okfn/recline/issues/19&lt;/a&gt;
+&lt;/li&gt;&lt;li&gt;Re-enable editing in &lt;a class="missing wiki"&gt;DataTable?&lt;/a&gt; (*): &lt;a class="ext-link" href="https://github.com/okfn/recline/issues/13"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;https://github.com/okfn/recline/issues/13&lt;/a&gt;
+&lt;/li&gt;&lt;li&gt;[super] &lt;a class="missing wiki"&gt;DataTable?&lt;/a&gt; view (in Backbone) (*): &lt;a class="ext-link" href="https://github.com/okfn/recline/issues/14"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;https://github.com/okfn/recline/issues/14&lt;/a&gt;
+&lt;/li&gt;&lt;li&gt;&lt;a class="missing wiki"&gt;DataExplorer?&lt;/a&gt; parent view (*): &lt;a class="ext-link" href="https://github.com/okfn/recline/issues/12"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;https://github.com/okfn/recline/issues/12&lt;/a&gt;
+&lt;/li&gt;&lt;li&gt;Simple graph widget using flot: &lt;a class="ext-link" href="https://github.com/okfn/recline/issues/11"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;https://github.com/okfn/recline/issues/11&lt;/a&gt;
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+NB: quite a bit of work done pre 2012-01-09 iteration but in that iteration that we finished the work.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Wed, 11 Jan 2012 11:34:18 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1446#comment:5</link>
+      <guid isPermaLink="false">http://localhost/ticket/1446#comment:5</guid>
+      <description>
+        &lt;p&gt;
+Total time:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;2012-01-09: 4.5d
+&lt;/li&gt;&lt;li&gt;Pre that date: 5d
+&lt;/li&gt;&lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

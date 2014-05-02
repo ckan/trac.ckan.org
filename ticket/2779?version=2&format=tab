@@ -1,0 +1,9 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2779	add 'deleted' to deleted datasets that admins can view	shevski	aron.carroll	"Currently, as a logged in admin, you can view deleted datasets just as if they are live datasets. Nothing distinguishes them apart from normal datasets other than they don't show up on the dataset page
+
+This is potentially very confusing
+Can we add some kind of banner / label to deleted datasets to show they have been deleted?
+
+& Do you guys need Sam to design this?
+
+Related ticket for undeleting datasets -  http://trac.ckan.org/ticket/2780"	enhancement	new	awaiting triage	demo phase 3	ckan		demo-theme	toby	ckan	none

@@ -1,0 +1,12 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+817	Proposed redesign of Resources table on package pages	cygri		"There are some problems with the Resources table on package pages:
+
+1. The column labelled “URL” doesn't contain URLs, but just the word “Download”.
+2. The links labelled “Download” often are not download links, but something else (example links, API endpoints, documentation links).
+
+Attached is a screenshot for a proposed redesign. The changes are:
+
+1. Move the Format column to the right of the Description column (description is more important)
+2. Make the description a clickable link
+3. Drop the “URL/Download” column because it's now redundant
+4. Rename “Description” to “Resource” (not that important)"	requirement	closed	awaiting triage	ckan-v1.3	ckan	worksforme				

@@ -1,0 +1,8 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1413,Ask users to 'add email address' when logged in,shevski,seanh,"I'd like us to display a one-off banner that prompts users who log into thedatahub.org to go and update & their profile & fill in their email address (if we could do it just for those who don't have an email address, then even better)
+That is, once they log in, they see a banner which says:
+Please update your profile [here] and add your email address, so you can receive notifications, be able to reset your password and get updates
+
+Then when we build notifications or if we decide to survey people, we can actually contact them. Email address should be required as standard
+
+DR: Also, mention their Full Name too - v. useful for selecting correct user in group curation",enhancement,assigned,awaiting triage,ckan-backlog,ckan,,,,ckan,notifications

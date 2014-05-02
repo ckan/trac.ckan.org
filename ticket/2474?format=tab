@@ -1,0 +1,11 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2474	Trial Jinja 2 as templating system	aron.carroll	aron.carroll	"Percieved benefits of switching to Jinja 2
+
+ * Block inheritance for base templates which is much simpler to understand.
+ * Large number of developers (and designers) are familiar with it due to its
+   similarities with the Django templates.
+ * Should be much faster at parsing and rendering templates.
+ * Has localisation support.
+ * Good documentation both on it's website and on sites like Stack Overflow.
+
+We should convert a couple of existing templates to test the switchover and then get peoples feedback."	enhancement	closed	major	ckan-sprint-2012-06-25	ckan	fixed	demo-theme	toby	ckan	none

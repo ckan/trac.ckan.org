@@ -1,0 +1,6 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+262,Mark package as duplicate of another package,rgrp,rgrp,"Need a way to mark packages as duplicate.
+
+Ideas/Questions:
+  * Could work off a tag (meta-duplicate or somesuch)
+  * What happens if we want to delete the package (to we leave a place-holder, do we merge content?) ",enhancement,closed,awaiting triage,,ckan,fixed,todo-refine,,,

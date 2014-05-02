@@ -1,0 +1,6 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1462,Multi-Instance CKAN Solr Search Issues,thejimmyg,amercader,"With the 1.5 package release, CKAN instances over-write each other's indexes. Adria has a fix.
+
+I'd like to see a new CKAN 1.5.1 release with the Solr changes merged and the Solr site ID set up as part of the install ckan.site_id = dgu-os.okfn.org. I'd also like the ability to search on ID and to have the ID directly visible on the package page.
+
+We need to decide how to do this upgrade without affecting existing CKAN solr indexes.",defect,closed,minor,ckan-sprint-2011-12-19,ckan,fixed,,amercader,ckan,none

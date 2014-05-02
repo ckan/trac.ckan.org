@@ -1,0 +1,14 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+668,Caching issues on API v1,Colin Calnan,,"It seems like the API v1 on CKAN metastable (cset:ec21f8e1c87e) has some caching issues.
+
+Steps to test:
+
+1. Modify a dataset on datadotgc.ca, redirects to CKAN 
+
+2. On save, redirects to http://www.datadotgc.ca/update/geogratisnat_hydrography_v100 which in turn redirects to http://www.datadotgc.ca/dataset/geogratisnat_hydrography_v100
+
+3. You can see that the Dataset has not updated correctly. Run a check on the API v1 - http://ca.ckan.net/api/1/rest/package/geogratisnat_hydrography_v100 the updates are not present
+
+4. Check the v2 of the API - http://ca.ckan.net/api/rest/package/geogratisnat_hydrography_v100, the updates are present.
+
+5. Setting the headers to 'Cache-control: no-cache' or 'Pragma: no-cache' does not work either.",bug,new,major,,ckan,,,,,

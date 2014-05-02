@@ -1,0 +1,13 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+152	Package has editable 'Extra' fields	dread	dread	"Package edit page has fields for extra key-value pairs. Don't use formalchemy. The form displays the existing ones and new ones as follows:
+
+{{{
+Key           Value            delete
+[ country   ] [ uk, spain   ]  [x]
+}}}
+
+When presenting the form, existing pairs and 3 blank pairs are provided.
+
+When saving the data, keys that are not changed use the existing !PackageExtra object (perhaps with new value). Deleted keys put the !PackageExtra state to deleted. For new keys, only create a new !PackageExtra if there isn't a state=deleted one to resurrect.
+
+Validators ensure no repeated keys."	enhancement	closed	major	v0.11	ckan	fixed				

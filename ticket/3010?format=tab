@@ -1,0 +1,6 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+3010	Pin images don't appear in data explorer	seanh		"When minified files are in use (set debug = false in ini file) the pin images for points don't show up in the data explorer map view when viewing a resource with geolocation data.
+
+set debug = true will fix the problem by using unminified files instead but also turns on a bunch of debug stuff you wouldn't want on a production site.
+
+middleware.py, around line 73, is where the decision to turn minified files on or off based on the debug setting is made. This can be hacked on a production site to run with unminified files but otherwise run on production mode thereby getting around the issue with the pins. But that doesn't fix the underlying bug."	enhancement	new	awaiting triage	ckan 2.0	ckan				ckan	none

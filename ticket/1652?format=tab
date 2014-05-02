@@ -1,0 +1,8 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1652	How we intergrate with Drupal Multiligual?	ross	kindly	"
+* Analysis of how/where we can integrate with Drupal Multilingual
+
+  * Is it likely to access CKAN via /en/data/... or /data/en/... (not sure, probably former) and we need to make sure that it ends up at /en/...
+
+  * Check with Ian for other issues.
+"	enhancement	assigned	awaiting triage	ckan-backlog	ckan		[5d]		ckan	none

@@ -1,0 +1,2 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1124,push apt package python-ckanext-solr into our debian repository,nils.toedtmann,thejimmyg,"python-ckanext-solr is already available in http://apt-alpha.ckan.org/datanl-dev, but not yet in http://apt-alpha.ckan.org/debian (that is why we had to [pip-install it for DataGM). Please push into main repo.",enhancement,closed,minor,ckan-sprint-2011-12-05,ckan,fixed,,dread,ckan,none

@@ -1,0 +1,6 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+211,User login,johnbywater,johnbywater,"Native login scenario: Complete login form, require email address. Any session is resumed.
+
+Mandated technical requirement: use Repoze (see plugin:form of repoze.who); borrow from BlastOff.
+
+See CKAN or Microfacts for usage of repose with openid.",enhancement,closed,critical,,isitopen,invalid,,,,

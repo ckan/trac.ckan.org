@@ -1,0 +1,16 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1171	Citation instructions on dataset and resource view pages	dread	mark.wainwright	"Some sort of citation helper. Something small on the dataset and resource page that would show how to cite.
+
+wwaites: Some related thoughts on this from opb: http://homepages.inf.ed.ac.uk/opb/papers/ssdbm2006.pdf
+
+timclicks: I'm looking at Dataverse for the first time[0]. It seems very popular in the social sciences. I noticed that there is a recommended citation for each dataset. For example, [1] is has this one: ""Targeted Input Programme (TIP) 2000-01"", http://hdl.handle.net/1902.1/SSC-MWI-TIP2000-01-M1 V1 [Version]""
+
+== Implementation ==
+
+Add a small box at bottom of dataset / resource page (or in sidebar on dataset page) with title ""Cite this"" with contents like:
+
+%title. %author. Retrieved %date. %site_title.
+
+For resource: %title = %dataset_title. %resource_name.
+
+Could also add export to ref managers (e.g. to bibtex) but that is for later."	enhancement	assigned	minor	ckan 2.0	ckan		academia volunteers xsmall		ckan	none

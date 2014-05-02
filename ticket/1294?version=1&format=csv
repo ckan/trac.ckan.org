@@ -1,0 +1,9 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1294,[super] Package creation and editing UX improvements,rgrp,rgrp,"Largely an integration of work from ckanjs
+
+ * #1295 Simplify package create form - #1295
+ * #1296 Add resource via js pop-up
+ * #878 File upload integrated into resource creation
+ * #1297 In-place editing of notes field for existing packages
+ * In form user before save if not logged in and provide easy way to login or sign up
+",enhancement,new,critical,ckan-v1.5,ckan,,,,ckan,none

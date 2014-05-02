@@ -1,0 +1,152 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1074: Refactor authz web user interface to have common code and templating</title>
+    <link>http://localhost/ticket/1074</link>
+    <description>&lt;p&gt;
+Currently repeat the same template and code across Package Authz, Group Authz, and Authz Group authz.
+&lt;/p&gt;
+&lt;p&gt;
+Having now implemented a new, cleaner setup in ckanext-admin we should port this back into core.
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Common template code (checkbox template)
+&lt;/li&gt;&lt;li&gt;Logic code (or just common code) for wiring into authz system
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+Will also deliver a significant improvement in the form of ajax user lookup.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1074</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Mon, 11 Apr 2011 09:38:14 GMT</pubDate>
+      <title>milestone changed</title>
+      <link>http://localhost/ticket/1074#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1074#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan-v1.4&lt;/em&gt; to &lt;em&gt;ckan-v1.4-sprint-6&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>johnlawrenceaspden</dc:creator>
+
+      <pubDate>Tue, 19 Apr 2011 15:06:50 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/1074#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/1074#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1074?action=diff&amp;amp;version=2"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>johnlawrenceaspden</dc:creator>
+
+      <pubDate>Mon, 09 May 2011 09:53:07 GMT</pubDate>
+      <title>milestone changed; state set</title>
+      <link>http://localhost/ticket/1074#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/1074#comment:3</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;state&lt;/strong&gt;
+                set to &lt;em&gt;draft&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan-v1.4-sprint-6&lt;/em&gt; to &lt;em&gt;ckan-v1.5-sprint-1&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>johnlawrenceaspden</dc:creator>
+
+      <pubDate>Mon, 09 May 2011 09:53:57 GMT</pubDate>
+      <title>status changed</title>
+      <link>http://localhost/ticket/1074#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/1074#comment:4</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;accepted&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Thu, 25 Aug 2011 13:18:16 GMT</pubDate>
+      <title>owner, status changed</title>
+      <link>http://localhost/ticket/1074#comment:5</link>
+      <guid isPermaLink="false">http://localhost/ticket/1074#comment:5</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;owner&lt;/strong&gt;
+              changed from &lt;em&gt;johnlawrenceaspden&lt;/em&gt; to &lt;em&gt;rgrp&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;accepted&lt;/em&gt; to &lt;em&gt;assigned&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+johnlawrenceaspden did quite a bit on this in feature-1074-refactor-authz-wui branch (including implementing for package and group). However, did not implement for authzgroup and also repeated code a lot. Reassigning to me for completion.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Thu, 25 Aug 2011 14:44:52 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1074#comment:6</link>
+      <guid isPermaLink="false">http://localhost/ticket/1074#comment:6</guid>
+      <description>
+        &lt;p&gt;
+Also work on branch feature-1074-authz-wui (that is primary one in fact)
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Thu, 25 Aug 2011 20:19:41 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/1074#comment:7</link>
+      <guid isPermaLink="false">http://localhost/ticket/1074#comment:7</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;assigned&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Closed in cset:18a5b48bbee6. Note the templating isn't completely reused but rather uses common methods from _util.html. Likely that a bit more refactoring could be done to share common code but not worth it at present.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

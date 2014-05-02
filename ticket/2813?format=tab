@@ -1,0 +1,5 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2813	Confusing sidebar on demo dataset page	markw	toby	"On a dataset page on demo.ckan.org, the left sidebar is confusing.
+
+ * It starts with some random links. Actually they are links to groups which the dataset is in, but this isn't clear.
+ * The sidebar elements that are actually part of the dataset are 'Datset extent' and 'License', so these should be right at the top (if they belong in the sidebar at all), instead of which they are right at the bottom in the junk part of the page (i.e. probably lower than the bottom of the main page, and hence lower than anyone will scroll)."	enhancement	new	awaiting triage	demo phase 5	ckan				ckan	none

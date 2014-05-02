@@ -1,0 +1,6 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+828	Update cache support in home controller to use cache config in ini file	rgrp	rgrp	"Currently cache usage in home controller is inconsistent with elsewhere and, in particular, does not respect cache_disabled and is not configurable using path notation (e.g. ckan.controllers.home. ...).
+
+This is especially frustrating in a development environment where is currently running into fact front page is being cached.
+
+Fix this."	enhancement	closed	critical	ckan-v1.3	ckan	fixed				

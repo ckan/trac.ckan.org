@@ -1,0 +1,2 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+855	Authenticator tests	dread	pudo	The coverage tool (run by buildbot in the ckan build) reports that only 38% of lines of ckan.lib.authenticator are run in tests. This suggests a need for more tests.	defect	closed	awaiting triage		ckan	invalid			ckan	none

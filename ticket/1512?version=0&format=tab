@@ -1,0 +1,6 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1512	Modifying user name causes problems	rgrp	dread	"If you change your username you have to logout
+and log back in. 
+
+= implementation = 
+* We should force this by auto-logging you out (DR: maybe!)"	defect	new	minor	ckan-backlog	ckan				ckan	none

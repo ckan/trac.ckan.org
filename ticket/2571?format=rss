@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2571: implement logic.action.create.resource_create()</title>
+    <link>http://localhost/ticket/2571</link>
+    <description>&lt;p&gt;
+This function is incomplete
+&lt;/p&gt;
+&lt;p&gt;
+If you want I can do this but I need guidance over how to do this properly. ie would I go through lib.dictization.model_save.package_resource_list_save() which looks wrong to me as I'd need the package.  resource_dict_save() seems better but to be honest the total lack of docstrings etc makes me feel ill.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2571</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>toby</dc:creator>
+
+      <pubDate>Fri, 22 Jun 2012 12:56:23 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/2571#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/2571#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+this works so closing
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

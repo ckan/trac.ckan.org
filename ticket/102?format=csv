@@ -1,0 +1,5 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+102,Switch to using UUIDs for revision ids,rgrp,rgrp,"This is better for long term sustainability, especially if we want to ""push and pull"" from unrelated repositories in the future.
+
+Details:
+  * May wish to retain a number field updated in the usual incremental way (what's the cost/benefit here?)",enhancement,closed,awaiting triage,,vdm,fixed,,,,

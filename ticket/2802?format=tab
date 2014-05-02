@@ -1,0 +1,60 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2802	Need to tweak the JSON formatting of the localisations	aron.carroll	aron.carroll	"This is what we need the JSON to look like. Taken from the Jed documentation (http://slexaxton.github.com/Jed/).
+
+{{{
+{
+
+      // The empty string key is used as the configuration
+      // block for each domain
+      """" : {
+        // Domain name
+        ""domain"" : ""the_domain"",
+
+        // Language code
+        ""lang"" : ""en"",
+
+        // Plural form function for language
+        ""plural_forms"" : ""nplurals=2; plural=(n != 1);""
+      },
+
+      // Other keys in a domain contain arrays as values
+      // that map to the translations for that key.
+      // Gettext suggests that you use english as your keys
+      // in case the key isn't found, and it can just pass
+      // the value directly through.
+      // Note: by convention, the 0-index location of the translations
+      // is never accessed. It's just a thing, I guess.
+      ""a key"" : [ null, ""the translation"", ""the plural translations"", ... ],
+
+      // The plural form string is converted into a function
+      // and the value that's passed into the gettext call
+      // is passed into the plural form function. It's result
+      // (plus 1) is the index that the translation comes from.
+
+      // We're using sprintf interpolation on our keys so we can
+      // then sub in the _actual_ values into the result.
+      ""%d key"" : [ null, ""%d key"", ""%d keys"" ],
+
+      // Contexts are keys that are just prefixed with a context string
+      // with a unicode \u0004 as the delimiter.
+      // You can use it for anything. Usually it's just for being content aware
+      // in some way (e.g. male vs. female, product vs. category)
+      ""context\u0004%d key"": [ null, ""context %d key"", ""context %d keys"" ]
+    }
+}}}
+
+This looks like an appropriate python library to do the formatting. http://pypi.python.org/pypi/pojson/ but I'll leave to your discretion.
+
+Finally an API endpoint that returns the appropriate request would save us making requests to the i18n directory.
+
+{{{
+/api/i18n/{locale}
+}}}
+
+For example if the current url is http://localhost:5000/pl/dataset then the client would request:
+
+{{{
+http://localhost:5000/api/i18n/pl
+}}}
+
+This should return the Content-Type: application/json and a 200 with an appropriate JSON body (this can be the language requested or an appropriate fallback). I think that if the fallback is the default language (in most cases English) then we just return a 204 No Content to save data. "	enhancement	closed	major	demo phase 3	ckan	fixed			ckan	none

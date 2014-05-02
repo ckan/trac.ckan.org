@@ -1,0 +1,6 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1357,Integrate new version of data preview,rgrp,rgrp,"We have an all new and much improved data preview system developed as part of QA in July. Need to integrate this.
+
+ * Is pure javascript
+ * Will have this in CKAN core but considered to be a plugin (so need datapreview in ckan.plugins list to work -- will enable this by default)
+ * Will depend on the http://wiki.ckan.org/DataExplorer",enhancement,closed,critical,ckan-sprint-2011-10-10,ckan,fixed,,,ckan,none

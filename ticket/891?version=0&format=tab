@@ -1,0 +1,23 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+891	Resource download worker daemon	pudo		"Write a worker daemon to download all resources from a CKAN instance to an OFS repository. 
+
+== Open questions == 
+
+ * Do we only want to download openly licensed information? 
+ * Should we have clever ways to dump APIs? 
+ * Do we respect robots.txt even for openly licensed information? 
+
+== Functionality == 
+
+ * Download files via HTTP, HTTPS and, optionally FTP. 
+ * Respect HTTP/1.1 Caching headers: 
+  * Complete support for ETags
+  * Expires, Max-Age etc. 
+ * Handle errors, classify as temporary or permanent
+ * Respect robots.txt 
+
+== Optional functionality ==
+
+ * If result object is HTML, search for references to ""proper data"" (CSV download pages etc.)
+ * Download from POST forms (accepting licenses or weird proprietary systems) 
+ * Support running on Google Apps Engine to save traffic costs."	task	new	critical	ckan-v1.3	ckan					

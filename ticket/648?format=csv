@@ -1,0 +1,40 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+648,Enable lock-down of package creation,pudo,,"    - copy exisiting tests, modify authz in setUp, adapt and extend tests
+        * Problem: default_role_actions is read by init_db 
+        * Solution: nuke db after monkey-patching
+        * role = model.Role('Reader'), del role.actions[...]
+
+        self.PRE_MAUTHZ_RULES = copy(mauthz.default_role_actions)
+        mauthz.default_role_actions.remove((Role.READER, Action.CREATE))
+        #raise Exception(mauthz.default_role_actions)
+        model.Session.remove()
+        model.repo.rebuild_db()
+
+3. Start from the functional
+  * Both the api controllers and wui controllers to do
+  * tests/function/test_authz.py extended to check CREATE in lockedDown mode. fails nicely. 
+  http://bitbucket.org/pudo/ckan-authz2
+
+is_authorized(user, Action.Create, model.Package)
+
+-> Doing this will put 'Package' in the context field of the user_object_role table. This will trigger SQLAlchemy to attempt a join towards PackageRole in all queries. Since for class-level role assignments there never is a PackageRole join table entry, this will never return any results. 
+    * cf branch ""classes"": http://bitbucket.org/pudo/ckan-authz2/src/6fd0475e0c66 
+    * No possibility of including ""instance"" column in inheritance decision.
+    * Even if this can be cirumvented, it must happen on a per-query level and would require a major re-modelling. 
+
+
+* have a ckan install that would not allow visitors to either list packages or list groups 
+    * two paths: create the listing, but for each group/pkg decide that you 
+      cannot show this
+    * lock down the whole page (/package/list) 
+        - this is class-based, not object-based 
+
+is_authorized(user, Action.Package_Create, model.System())
+is_authorized(user, Action.Group_Create, model.System())
+
+[Separating Package and Group roles may be useful going forward: PackageEditor, GroupEditor etc]
+
+4. Find a standard way to lock down classes
+    * possibly add default rows in user_object_role 
+    * introduce lock-down into controllers: group new, package new, REST equivalents, 
+    * confirm tests",requirement,closed,,ckan-v1.3,ckan,fixed,,,,

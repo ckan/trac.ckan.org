@@ -1,0 +1,2 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2600,"Replace broken ""Login to Add an Organization"" button",seanh,seanh,"If you're not logged in and you click this button, it takes you to the add group page not the login page. Anyway, the default behaviour everywhere else in CKAN is to hide buttons that you don't have permission to use (e.g. add dataset, edit dataset, etc.)",defect,closed,awaiting triage,ckan-v1.8,ckan,fixed,organizations cmap,,ckan,none

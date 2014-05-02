@@ -1,0 +1,7 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+346	Revision search API (response data format and documentation issue)	johnbywater	dread	"Whilst going through the API docs for the revision search API, it was noticed that the ""Gdu"" SoS doc doesn't match up. It returns revision IDs (perhaps this is useful to note in the spec?) so the format is probably not 'limitedstring'. Also, they appear to be ordered youngest first, not oldest as stated.
+
+And in the revision model, it refers to 'simplestring' which it
+doesn't define - I guess the names should be 'limitedstring'?
+
+Could this be checked out?"	defect	closed	trivial	ckan-v1.3	ckan	wontfix				

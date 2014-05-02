@@ -1,0 +1,18 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1380	Adding custom CSS could be easier	zephod	zephod	"While integrating the new theme and making a large number of UX tweaks, I've allowed the CSS file to bloat out of control with some very specific rules and subtle hacks, as well as a couple of clearfix <div> objects in the markup which isn't really good practice.
+
+In general we want a logical CSS structure which is as easy to modify as possible. You should not find yourself being overwritten by highly specific rules all the time!
+
+David Read sent me the following as background:
+
+V. basic theming is described here: http://docs.ckan.org/en/latest/theming.html
+
+Deep customisation of the templates is done by creating an extension, with this as a template: https://bitbucket.org/okfn/ckanext-exampletheme/overview
+
+That's what Augusto and the Brazilians have done http://alpha.dados.gov.br/dados/ and their code is here:
+hg clone http://dev.dados.gov.br/codigo/dev/tema-ckan
+<snip>
+Another thing of interest was us becoming compatible with Wordpress themes last December. Richard Pope worked with Rufus on this. I believe the base theme is 'twentyten' and I'm guessing that one would swap that css file with another to change theme, but I don't know. I don't know if this feature has been dropped since then.
+http://lists.okfn.org/pipermail/ckan-dev/2010-December/000073.html
+
+Dave"	enhancement	new	awaiting triage	ckan-backlog	ckan				ckan	none

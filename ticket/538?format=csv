@@ -1,0 +1,114 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+538,Update CKAN Trac ticket report queries,johnbywater,rgrp,"Update report queries with more recent versions (below are report queries shipped with trac 0.11.7):
+
+NB: Report 1 has already been done.
+
+
+ id |                                               query                                               
+----+---------------------------------------------------------------------------------------------------
+  1 | 
+    : SELECT p.value AS __color__,
+    :    id AS ticket, summary, component, version, milestone, t.type AS type, 
+    :    owner, status,
+    :    time AS created,
+    :    changetime AS _changetime, description AS _description,
+    :    reporter AS _reporter
+    :   FROM ticket t
+    :   LEFT JOIN enum p ON p.name = t.priority AND p.type = 'priority'
+    :   WHERE status <> 'closed'
+    :   ORDER BY CAST(p.value AS integer), milestone, t.type, time
+    : 
+  2 | 
+    : SELECT p.value AS __color__,
+    :    version AS __group__,
+    :    id AS ticket, summary, component, version, t.type AS type, 
+    :    owner, status,
+    :    time AS created,
+    :    changetime AS _changetime, description AS _description,
+    :    reporter AS _reporter
+    :   FROM ticket t
+    :   LEFT JOIN enum p ON p.name = t.priority AND p.type = 'priority'
+    :   WHERE status <> 'closed'
+    :   ORDER BY (version IS NULL),version, CAST(p.value AS integer), t.type, time
+    : 
+  3 | 
+    : SELECT p.value AS __color__,
+    :    'Milestone '||milestone AS __group__,
+    :    id AS ticket, summary, component, version, t.type AS type, 
+    :    owner, status,
+    :    time AS created,
+    :    changetime AS _changetime, description AS _description,
+    :    reporter AS _reporter
+    :   FROM ticket t
+    :   LEFT JOIN enum p ON p.name = t.priority AND p.type = 'priority'
+    :   WHERE status <> 'closed' 
+    :   ORDER BY (milestone IS NULL),milestone, CAST(p.value AS integer), t.type, time
+    : 
+  4 | 
+    : 
+    : SELECT p.value AS __color__,
+    :    owner AS __group__,
+    :    id AS ticket, summary, component, milestone, t.type AS type, time AS created,
+    :    changetime AS _changetime, description AS _description,
+    :    reporter AS _reporter
+    :   FROM ticket t
+    :   LEFT JOIN enum p ON p.name = t.priority AND p.type = 'priority'
+    :   WHERE status = 'accepted'
+    :   ORDER BY owner, CAST(p.value AS integer), t.type, time
+    : 
+  5 | 
+    : SELECT p.value AS __color__,
+    :    owner AS __group__,
+    :    id AS ticket, summary, component, milestone, t.type AS type, time AS created,
+    :    description AS _description_,
+    :    changetime AS _changetime, reporter AS _reporter
+    :   FROM ticket t
+    :   LEFT JOIN enum p ON p.name = t.priority AND p.type = 'priority'
+    :   WHERE status = 'accepted'
+    :   ORDER BY owner, CAST(p.value AS integer), t.type, time
+    : 
+  6 | 
+    : SELECT p.value AS __color__,
+    :    t.milestone AS __group__,
+    :    (CASE status 
+    :       WHEN 'closed' THEN 'color: #777; background: #ddd; border-color: #ccc;'
+    :       ELSE 
+    :         (CASE owner WHEN $USER THEN 'font-weight: bold' END)
+    :     END) AS __style__,
+    :    id AS ticket, summary, component, status, 
+    :    resolution,version, t.type AS type, priority, owner,
+    :    changetime AS modified,
+    :    time AS _time,reporter AS _reporter
+    :   FROM ticket t
+    :   LEFT JOIN enum p ON p.name = t.priority AND p.type = 'priority'
+    :   ORDER BY (milestone IS NULL), milestone DESC, (status = 'closed'), 
+    :         (CASE status WHEN 'closed' THEN changetime ELSE (-1) * CAST(p.value AS integer) END) DESC
+    : 
+  7 | 
+    : SELECT p.value AS __color__,
+    :    (CASE status WHEN 'accepted' THEN 'Accepted' ELSE 'Owned' END) AS __group__,
+    :    id AS ticket, summary, component, version, milestone,
+    :    t.type AS type, priority, time AS created,
+    :    changetime AS _changetime, description AS _description,
+    :    reporter AS _reporter
+    :   FROM ticket t
+    :   LEFT JOIN enum p ON p.name = t.priority AND p.type = 'priority'
+    :   WHERE t.status <> 'closed' AND owner = $USER
+    :   ORDER BY (status = 'accepted') DESC, CAST(p.value AS integer), milestone, t.type, time
+    : 
+  8 | 
+    : SELECT p.value AS __color__,
+    :    (CASE owner 
+    :      WHEN $USER THEN 'My Tickets' 
+    :      ELSE 'Active Tickets' 
+    :     END) AS __group__,
+    :    id AS ticket, summary, component, version, milestone, t.type AS type, 
+    :    owner, status,
+    :    time AS created,
+    :    changetime AS _changetime, description AS _description,
+    :    reporter AS _reporter
+    :   FROM ticket t
+    :   LEFT JOIN enum p ON p.name = t.priority AND p.type = 'priority'
+    :   WHERE status <> 'closed' 
+    :   ORDER BY (COALESCE(owner, '') = $USER) DESC, CAST(p.value AS integer), milestone, t.type, time
+",task,closed,awaiting triage,,ckan,wontfix,,,,

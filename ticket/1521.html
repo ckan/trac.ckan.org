@@ -1,0 +1,651 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      #1521 ([super] Groups UI and UX improvements in v1.6 from Cygri)
+     – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="prev" href="1520.html" title="Ticket #1520" />
+        <link rel="last" href="3030.html" title="Ticket #3030" />
+        <link rel="help" href="../wiki/TracGuide.html" />
+        <link rel="alternate" href="1521%3Fformat=csv" type="text/csv" class="csv" title="Comma-delimited Text" /><link rel="alternate" href="1521%3Fformat=tab" type="text/tab-separated-values" class="tab" title="Tab-delimited Text" /><link rel="alternate" href="1521%3Fformat=rss" type="application/rss+xml" class="rss" title="RSS Feed" />
+        <link rel="next" href="1522.html" title="Ticket #1522" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/ticket.css" type="text/css" />
+        <link rel="first" href="1.html" title="Ticket #1" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript">
+      var auto_preview_timeout=2.0;
+      var form_token="93d81ccf9a7bb1c456462f62";
+    </script>
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script><script type="text/javascript" src="../chrome/common/js/wikitoolbar.js"></script><script type="text/javascript" src="../chrome/common/js/resizer.js"></script><script type="text/javascript" src="../chrome/common/js/auto_preview.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("div.description").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $(".foldable").enableFolding(false, true);
+        var args = {realm: "ticket", id: 1521, escape_newlines: 0}
+        $("#comment").autoPreview("/wiki_render", args, function(textarea, text, rendered) {
+            $("#ticketchange div.comment").html(rendered);
+            if (rendered)
+              $("#ticketchange").show();
+            else if ($("#ticketchange ul.changes").length == 0)
+              $("#ticketchange").hide();
+        });
+        $("#trac-comment-editor textarea").autoPreview("/wiki_render", args,
+                                                       function(textarea, text, rendered) {
+          var comment = $("#trac-comment-editor").next("div.comment");
+          comment.html(rendered);
+          if (rendered)
+            comment.show();
+          else
+            comment.hide();
+        });
+        $("#modify").parent().toggleClass("collapsed");
+        $(".trac-topnav a").click(function() { $("#modify").parent().removeClass("collapsed"); });
+        /* only enable control elements for the currently selected action */
+        var actions = $("#action input[name='action']");
+        function updateActionFields() {
+          actions.each(function () {
+            $(this).siblings().find("*[id]").enable($(this).checked());
+            $(this).siblings().filter("*[id]").enable($(this).checked());
+          });
+        }
+        actions.click(updateActionFields);
+        updateActionFields();
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="../wiki/TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li class="active"><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="1520.html" title="Ticket #1520">Previous Ticket</a></span></li><li class="last"><span><a class="next" href="1522.html" title="Ticket #1522">Next Ticket</a> &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="ticket">
+      <h1 id="trac-ticket-title">
+          <a href="1521.html">Ticket #1521</a>
+          <span class="status">(closed enhancement: fixed)</span>
+      </h1>
+      <div id="ticket">
+  <div class="date">
+    <p>Opened <a class="timeline" href="../timeline%3Ffrom=2011-12-06T11:12:41Z&amp;precision=second.html" title="2011-12-06T11:12:41Z in Timeline">2 years</a> ago</p>
+    <p>Last modified <a class="timeline" href="../timeline%3Ffrom=2012-03-02T08:12:10Z&amp;precision=second.html" title="2012-03-02T08:12:10Z in Timeline">2 years</a> ago</p>
+  </div>
+  <h2 class="summary searchable">[super] Groups UI and UX improvements in v1.6 from Cygri</h2>
+  <table class="properties">
+    <tr>
+      <th id="h_reporter">Reported by:</th>
+      <td headers="h_reporter" class="searchable">
+        <a href="../query%3Fstatus=!closed&amp;reporter=shevski.html">shevski</a>
+      </td>
+      <th id="h_owner">Owned by:</th>
+      <td headers="h_owner">
+        <a href="../query%3Fstatus=!closed&amp;owner=zephod.html">zephod</a>
+      </td>
+    </tr>
+    <tr>
+        <th id="h_priority">
+          Priority:
+        </th>
+        <td headers="h_priority">
+              <a href="../query%3Fstatus=!closed&amp;priority=critical.html">critical</a>
+        </td>
+        <th id="h_milestone">
+          Milestone:
+        </th>
+        <td headers="h_milestone">
+              <a class="closed milestone" href="../milestone/ckan-sprint-2012-01-23.html">ckan-sprint-2012-01-23</a>
+        </td>
+    </tr><tr>
+        <th id="h_component">
+          Component:
+        </th>
+        <td headers="h_component">
+              <a href="../query%3Fstatus=!closed&amp;component=ckan.html">ckan</a>
+        </td>
+        <th id="h_keywords">
+          Keywords:
+        </th>
+        <td headers="h_keywords" class="searchable">
+              <a href="../query%3Fstatus=!closed&amp;keywords=~ux.html">ux</a>
+        </td>
+    </tr><tr>
+        <th id="h_cc">
+          Cc:
+        </th>
+        <td headers="h_cc" class="searchable">
+        </td>
+        <th id="h_repo">
+          Repository:
+        </th>
+        <td headers="h_repo">
+              <a href="../query%3Fstatus=!closed&amp;repo=ckan.html">ckan</a>
+        </td>
+    </tr><tr>
+        <th id="h_theme">
+          Theme:
+        </th>
+        <td headers="h_theme">
+              <a href="../query%3Fstatus=!closed&amp;theme=none.html">none</a>
+        </td>
+        <th>
+        </th>
+        <td>
+        </td>
+    </tr>
+  </table>
+  <div class="description">
+    <h3 id="comment:description">
+      Description
+      <span class="lastmod" title="2012-03-02 08:12:10+00:00">
+        (last modified by rgrp)
+        (<a href="1521%3Faction=diff&amp;version=17.html">diff</a>)
+      </span>
+    </h3>
+    <div class="searchable">
+      <p>
+Various UX and UI improvements to groups.
+</p>
+<p>
+Etherpad: <a class="ext-link" href="http://ckan.okfnpad.org/feature-1521-groups-ux"><span class="icon">​</span>http://ckan.okfnpad.org/feature-1521-groups-ux</a>
+</p>
+<h2 id="Improvedgroups">Improved groups</h2>
+<p>
+From Richard Cyganiak.
+</p>
+<p>
+This is a set of proposals to make the groups feature more powerful. As a result, currently separate CKAN instances such as <a class="ext-link" href="http://ie.ckan.net/"><span class="icon">​</span>http://ie.ckan.net/</a> could be turned into a simple group on the <a class="ext-link" href="http://thedatahub.org"><span class="icon">​</span>Data Hub</a> without losing their separate identity.
+</p>
+<ul><li><del><strong>Group homepages:</strong> Make the group pages more attractive and welcoming as homepages. The main Data Hub homepage does a great job at this now – can the group pages be made more like that? They're quite uninformative and bland right now.</del>
+</li><li><strong>Subdomains for groups:</strong> Enable subdomains such as <tt>ie.thedatahub.org</tt> as aliases for <tt>thedatahub.org/group/ireland</tt>
+</li><li><del><strong>Search within the group:</strong> Have a big search box that searches just within the group on the group page, with a look like on <a class="ext-link" href="http://thedatahub.org/dataset"><span class="icon">​</span>http://thedatahub.org/dataset</a></del>
+</li><li><del>Have an <strong>Add a dataset to this group</strong> link on the group page, perhaps in the sidebar.</del>
+</li><li><del><strong>Navigation within the group:</strong> Have some more navigation starting points on the group page, e.g., the Tags + Resource Format sidebar from <a class="ext-link" href="http://thedatahub.org/dataset"><span class="icon">​</span>http://thedatahub.org/dataset</a></del>
+</li><li><del><strong>Group documentation:</strong> Add the ability to add more “About this group” text, or pages like “FAQ” and “Extra field conventions”.</del>
+<ul><li><del>The only place where one can currently put group-specific text is before the dataset list. Putting much text there is bad as it moves the datasets below the fold.</del>
+</li><li>Can the top-level sections of a group's description be automatically turned into separate pages that are linked from the sidebar? With headlines <em>About</em>, <em>Frequently Asked Questions</em> and <em>How to get involved</em>, we'd then get three links in the sidebar that point to <tt>datahub.org/group/ireland/about</tt>, <tt>datahub.org/group/ireland/frequently-asked-questions</tt>, <tt>datahub.org/group/ireland/how-to-get-involved</tt>
+<ul><li>RP: WONTFIX this is being considered for future (generally useful) but  cost/benefit here was low particularly as it wasn't clear what optimal implementation was.
+</li></ul></li></ul></li></ul><h2 id="Additional">Additional</h2>
+<ul><li><del>Display members of a group as well as admins (if less than 10? If more than 10 display count only ...?)</del>
+</li><li>Better group index page (sort by number of dataset, allow searching ...) - <a class="new ticket" href="1403.html" title="enhancement: Refactor groups index page (new)">#1403</a>
+<ul><li>Add search to groups: <a class="ext-link" href="http://thedatahub.org/group"><span class="icon">​</span>http://thedatahub.org/group</a>
+</li><li>Way to filter by activity, number of datasets
+</li></ul></li><li><a class="closed ticket" href="1597.html" title="enhancement: Tag search - filter by group (closed: fixed)">#1597</a> <strong>Tag search, filtered by group</strong>
+<ul><li>RP: not worth it in terms of benefit/cost IMO
+</li></ul></li></ul><h2 id="Steps">Steps</h2>
+<ul><li><del>"Add Dataset" button on action bar</del>
+<ul><li><del>Make it a dropdown? -&gt; New Dataset / Existing Dataset</del>
+</li><li><del>Redirect Add Existing -&gt; Edit</del>
+</li><li><del>Check permissions</del>
+</li></ul></li><li><del>Expandable "about this group" box</del>
+</li><li><del>Implement simplest search-this-group box</del>
+<ul><li><del>turn the list of datasets into a dynamic list of search results</del>
+<ul><li><del>pagination</del>
+</li></ul></li><li><del>Matching set of facets in the sidebar (matches 'real' search page)</del>
+<ul><li><del>Deleteable, displayed facets</del>
+</li></ul></li></ul></li></ul><h2 id="Nice-To-Have">Nice-To-Have</h2>
+<ul><li>Get rid of the old group_package_show action (confirm with team)
+</li><li>Tabbed "about this group" box (extract headers?)
+</li><li><del>Scrollable group members widget in the sidebar</del>
+</li></ul>
+    </div>
+  </div>
+</div>
+          
+
+        <div>
+          <h2 class="foldable">Change History</h2>
+          <div id="changelog">
+              <div class="change" id="trac-change-1">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:1" class="cnum">
+      <a href="1521.html#comment:1">comment:1</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-12-06T11:19:18Z&amp;precision=second.html" title="2011-12-06T11:19:18Z in Timeline">2 years</a> ago by shevski
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Keywords</strong>
+        <em>ux</em> added
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-2">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:2" class="cnum">
+      <a href="1521.html#comment:2">comment:2</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-12-06T12:30:18Z&amp;precision=second.html" title="2011-12-06T12:30:18Z in Timeline">2 years</a> ago by thejimmyg
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+It would be nice if the new UX also made it clearer that a user has to login, before they click the "Add a group" link which currently takes them to the login page with the message "Unauthorized to create a group".
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-3">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:3" class="cnum">
+      <a href="1521.html#comment:3">comment:3</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-12-21T19:42:16Z&amp;precision=second.html" title="2011-12-21T19:42:16Z in Timeline">2 years</a> ago by rgrp
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Priority</strong>
+        changed from <em>awaiting triage</em> to <em>major</em>
+    </li><li>
+      <strong>Description</strong>
+        modified (<a href="1521%3Faction=diff&amp;version=3.html">diff</a>)
+    </li><li>
+      <strong>Summary</strong>
+        changed from <em>Groups UI/UX improvements post refactor</em> to <em>[super] Groups UI and UX improvements in v1.6 from Cygri</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-4">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:4" class="cnum">
+      <a href="1521.html#comment:4">comment:4</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-12-22T10:42:37Z&amp;precision=second.html" title="2011-12-22T10:42:37Z in Timeline">2 years</a> ago by dread
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Description</strong>
+        modified (<a href="1521%3Faction=diff&amp;version=4.html">diff</a>)
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-5">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:5" class="cnum">
+      <a href="1521.html#comment:5">comment:5</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-12-22T10:43:19Z&amp;precision=second.html" title="2011-12-22T10:43:19Z in Timeline">2 years</a> ago by dread
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Description</strong>
+        modified (<a href="1521%3Faction=diff&amp;version=5.html">diff</a>)
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-6">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:6" class="cnum">
+      <a href="1521.html#comment:6">comment:6</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-12-30T11:32:36Z&amp;precision=second.html" title="2011-12-30T11:32:36Z in Timeline">2 years</a> ago by rgrp
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Description</strong>
+        modified (<a href="1521%3Faction=diff&amp;version=6.html">diff</a>)
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-7">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:7" class="cnum">
+      <a href="1521.html#comment:7">comment:7</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-12-30T11:39:22Z&amp;precision=second.html" title="2011-12-30T11:39:22Z in Timeline">2 years</a> ago by rgrp
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Description</strong>
+        modified (<a href="1521%3Faction=diff&amp;version=7.html">diff</a>)
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-8">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:8" class="cnum">
+      <a href="1521.html#comment:8">comment:8</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-12-30T11:53:57Z&amp;precision=second.html" title="2011-12-30T11:53:57Z in Timeline">2 years</a> ago by rgrp
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Description</strong>
+        modified (<a href="1521%3Faction=diff&amp;version=8.html">diff</a>)
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-9">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:9" class="cnum">
+      <a href="1521.html#comment:9">comment:9</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-01-02T03:08:21Z&amp;precision=second.html" title="2012-01-02T03:08:21Z in Timeline">2 years</a> ago by rgrp
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Priority</strong>
+        changed from <em>major</em> to <em>critical</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-10">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:10" class="cnum">
+      <a href="1521.html#comment:10">comment:10</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-01-20T17:22:16Z&amp;precision=second.html" title="2012-01-20T17:22:16Z in Timeline">2 years</a> ago by zephod
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+This function can be deprecated, as groups will use Solr searching to list their packages.
+</p>
+<p>
+<a class="ext-link" href="https://github.com/okfn/ckan/blob/master/ckan/logic/action/get.py#L398"><span class="icon">​</span>https://github.com/okfn/ckan/blob/master/ckan/logic/action/get.py#L398</a>
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-11">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:11" class="cnum">
+      <a href="1521.html#comment:11">comment:11</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-01-20T18:44:19Z&amp;precision=second.html" title="2012-01-20T18:44:19Z in Timeline">2 years</a> ago by zephod
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Description</strong>
+        modified (<a href="1521%3Faction=diff&amp;version=11.html">diff</a>)
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-12">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:12" class="cnum">
+      <a href="1521.html#comment:12">comment:12</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-01-20T18:44:37Z&amp;precision=second.html" title="2012-01-20T18:44:37Z in Timeline">2 years</a> ago by zephod
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Description</strong>
+        modified (<a href="1521%3Faction=diff&amp;version=12.html">diff</a>)
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-13">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:13" class="cnum">
+      <a href="1521.html#comment:13">comment:13</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-01-23T11:00:35Z&amp;precision=second.html" title="2012-01-23T11:00:35Z in Timeline">2 years</a> ago by rgrp
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Milestone</strong>
+        changed from <em>ckan-v1.6</em> to <em>current-ckan-sprint-2012-01-23</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-14">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:14" class="cnum">
+      <a href="1521.html#comment:14">comment:14</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-01-23T11:09:06Z&amp;precision=second.html" title="2012-01-23T11:09:06Z in Timeline">2 years</a> ago by rgrp
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Owner</strong>
+        set to <em>zephod</em>
+    </li><li>
+      <strong>Status</strong>
+        changed from <em>new</em> to <em>assigned</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-15">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:15" class="cnum">
+      <a href="1521.html#comment:15">comment:15</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-01-24T11:43:14Z&amp;precision=second.html" title="2012-01-24T11:43:14Z in Timeline">2 years</a> ago by zephod
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Status</strong>
+        changed from <em>assigned</em> to <em>closed</em>
+    </li><li>
+      <strong>Resolution</strong>
+        set to <em>fixed</em>
+    </li><li>
+      <strong>Description</strong>
+        modified (<a href="1521%3Faction=diff&amp;version=15.html">diff</a>)
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+Resolved in this merge: 
+</p>
+<p>
+<a class="ext-link" href="https://github.com/okfn/ckan/commit/2337424dd4ebe3b81b6da454f2305031922d3d5c"><span class="icon">​</span>https://github.com/okfn/ckan/commit/2337424dd4ebe3b81b6da454f2305031922d3d5c</a>
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-16">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:16" class="cnum">
+      <a href="1521.html#comment:16">comment:16</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-02-24T11:56:39Z&amp;precision=second.html" title="2012-02-24T11:56:39Z in Timeline">2 years</a> ago by dread
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+This went into CKAN 1.6
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-17">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:17" class="cnum">
+      <a href="1521.html#comment:17">comment:17</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-03-02T08:12:10Z&amp;precision=second.html" title="2012-03-02T08:12:10Z in Timeline">2 years</a> ago by rgrp
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Description</strong>
+        modified (<a href="1521%3Faction=diff&amp;version=17.html">diff</a>)
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+          </div>
+        </div>
+      <div id="help"><strong>Note:</strong> See
+        <a href="../wiki/TracTickets.html">TracTickets</a> for help on using
+        tickets.</div>
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="first">
+          <a rel="nofollow" href="1521%3Fformat=csv" class="csv">Comma-delimited Text</a>
+        </li><li>
+          <a rel="nofollow" href="1521%3Fformat=tab" class="tab">Tab-delimited Text</a>
+        </li><li class="last">
+          <a rel="nofollow" href="1521%3Fformat=rss" class="rss">RSS Feed</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1681,Core storage document,ross,ross,"Document all of the changes and usage for #1574 so that we can mark it 'done done'.
+
+Make sure we document any setup issues/processes and the settings.py setup required for CKAN so that Mark can announce next week and it should be easily deployable/testable.
+
+Internal (perhaps in README somewhere or wiki): how does process work, where does data end up and in what order etc
+
+External: here's how to configure it and here's what you get ... (goes in main sphinx docs)",enhancement,new,critical,,ckan,,[1d],,ckan,none

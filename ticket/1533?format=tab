@@ -1,0 +1,17 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1533	Make sure ckanext-wordpresser works on CKAN 1.5.1	amercader	rgrp	"Superceded by #2234
+
+Super ticket: #1508
+
+Etherpad: http://ckan.okfnpad.org/wordpresser
+
+The wordpresser extension does not work with ckan 1.5.1. The wordpress page is not loaded.
+
+Looks like this changeset may be involved
+https://github.com/okfn/ckanext-wordpresser/commit/0efa0649896a7339865f178a302be639ddc561e1
+
+I think that even before that changeset, the page was shown without any margins.
+
+In any case, the extension seems to be too sensible to changes in the ckan layout so perhaps it should take into account the CKAN version and have a fixed set of xpaths and templates that work for each version
+
+"	defect	closed	major	ckan-backlog	ckan	wontfix		friedrich.lindenberg@… rgrp ross.jones@…	ckan	none

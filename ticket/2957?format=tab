@@ -1,0 +1,2 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2957	New datastore on postgres prior to 9.0	dominik		The ``GRANT SELECT ON ALL`` and ``ALTER DEFAULT PRIVILEGES`` are not available in Postgres prior to version 9.0. 	task	new	awaiting triage		ckan		datastore		ckan	none

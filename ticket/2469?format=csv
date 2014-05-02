@@ -1,0 +1,10 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2469,Find a better way to deploy CKAN instances,seanh,seanh,"We want a much quicker and easier way of deploying multiple CKAN instances to the same or multiple servers and managing them (e.g. configuration, themes, extensions, upgrades, and adding new instances). Currently we just deploy and manage each instance separately, which doesn't scale.. We'd also want to have (as far as possible) one single way of deploying CKAN that works across different situations, e.g. deployment server, demo server, jenkins, local deployment for development, these should share the same tools for installing CKAN and its dependencies.
+
+Components that this might include:
+
+Virtualenv bootstrap script https://gist.github.com/2206132
+
+Ansible http://ansible.github.com/
+
+CKAN deb package",enhancement,closed,awaiting triage,ckanbuild,ckan,duplicate,deployment,,ckan,none

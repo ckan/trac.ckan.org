@@ -1,0 +1,8 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+508,Create branch ultrastable,dread,dread," * Create a branch named ultrastable that represents latest version of 1.0 ''as found on dgu''
+  * Going forward ultrastable will act as stable - 1 (and either ultrastable or stable will be on the rock-solid production systems such as dgu)
+ * Do '''not''' deprecate the stable or metastable branch for the present
+ * Ask for recommendations on mailing list about best practice for branching (e.g. versioned based versus a simple HEAD versus stable) and how this affects standard operations such as applying bugfixes.
+  * For useful discussion of how to do backporting and applying bugfix patches see: http://www.python.org/dev/peps/pep-0374/#backport
+  * NB: in general do '''not''' always have to apply in stable/ultrastable and merge upwards for bugfixes -- can use transplant extension as well.
+",task,closed,,ckan-v1.2,,fixed,,,,

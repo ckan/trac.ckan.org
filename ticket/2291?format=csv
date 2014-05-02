@@ -1,0 +1,6 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2291,DataStorer incorrectly attempts to store JSON in DataStore,rgrp,kindly,"See http://thedatahub.org/dataset/ecb13156-cf11-4e91-b51c-f287d154276e/resource/5db67915-40cb-467e-9d72-194ea4973670
+
+This was marked as json format (and is JSON) but appears to have been imported as a quasi-CSV. Either this hsould not be imported at all or it should be imported as JSON ... (which is straightforward to do).
+
+Assigning to David for triage and review.",enhancement,new,awaiting triage,ckan-v1.9,ckan,,,,ckan,none

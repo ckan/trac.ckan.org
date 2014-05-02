@@ -1,0 +1,4 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1674	Test auth logic hooks for publisher profile	ross	ross	"Super #1669
+
+Test all of the new auth logic hooks for publisher profile to make sure they work as expected. Also make sure that we have a test to compare the naming of the core auth funcs with the profile hooks (so we can see what may have changed in one but not the other)."	enhancement	new	awaiting triage		ckan		[3d]		ckan	none

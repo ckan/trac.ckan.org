@@ -1,0 +1,42 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1515	[super] Activity Streams	seanh	seanh	"We want to add github-like ""activity streams"" (chronological lists of events) to CKAN.
+
+Super branch where I'm pushing all my commits for this feature: https://github.com/okfn/ckan/tree/feature-1515-activity-streams
+
+Etherpad: http://ckan.okfnpad.org/notifications (most relevant parts inlined here)
+
+Friedrich's mockup: http://datahub.pudo.org/pudo
+
+== Tasks ==
+
+~~Strikethrough~~ means the task is done.
+
+ * ~~New domain objects Activity and ActivityStream [2d] #1298~~
+
+ * Migrate existing data into activity streams model [3.5d] #1510 
+
+ * ~~Generate activity events when objects are saved [4d] #1298~~
+
+ * ~~Get the activity stream for a given user as a JSONifiable list of dictionaries [1d] #1511~~
+
+ * ~~API call for getting a user's public activity stream as JSON [0.5d] #1495~~
+
+ * ~~API call for getting a user's public activity stream as rendered text, HTML, etc. [5d] #1494~~
+
+ * ~~Render a user's activity stream on her user page [3d] #1496~~ (needs review/page design work)
+
+ * Generate activity events for other types of objects besides users (e.g. ~~packages~~, ~~groups~~, tags, sets of multiple sources that users subscribe to, etc.) and save them in the database.
+
+ * Logic functions for getting activity streams for ~~packages~~, ~~groups~~, tags, etc.
+
+ * API calls for getting activity streams of ~~packages~~, ~~groups~~, tags, etc. as JSON.
+
+ * Rendering activity streams for ~~packages~~, ~~groups~~, tags, etc. into their pages.
+
+ * API calls for inserting events into activity streams.
+
+ * Enable users to subscribe to activity streams
+
+ * Deploy to UAT [0.5d]
+
+ * Docs and announce [1d]"	enhancement	new	awaiting triage	ckan-v1.6	ckan				ckan	none

@@ -1,0 +1,15 @@
+A mechanism to allow clients to be alerted when the CKAN model is updated.
+
+== Need ==
+
+Clients can poll the CKAN API or feeds to check for changes, but during the time between polls the client's view of the CKAN data may go out of date, causing the hazard of overwriting changed data, referring to an old name of a package etc. A 'push' mechanism allows a CKAN client to be much more confident that it knows if its knowledge of the data is up to date.
+
+== Analysis ==
+
+Upon a change, CKAN needs to make a request to the client. This is a synchronous event, requiring a response, possible retries, etc. CKAN itself should not block, waiting for this to happen, so the 'push' needs to occur in another thread. A number of events may need queueing up. A number of clients may all want to receive the event. Clients may need to manage their registration for the events. It makes sense to use an existing message queueing module to achieve this side of things, e.g. RabbitMQ.
+
+== Implementation ==
+
+CKAN should have a lightweight core, and features like these alerts can be optional. So users can install queue and get alerts if they want, but it's not necessary. Tests should run without queue module, so have a simple (synchronous?) fallback.
+
+Carrot ( http://github.com/ask/carrot ) provides a python interface to RabbitMQ ( http://www.rabbitmq.com/index.html ) which implements AMQP, a common standard protocol for this. As alternative to RabbitMQ, it can also use the Python Queue module (for testing).

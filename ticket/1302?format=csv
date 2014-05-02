@@ -1,0 +1,2 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1302,Move Resource and Tag search code to logic layer,johnglover,johnglover,Resource and Tag search is currently still using the old ckan query parser which is unnecessary. Refactor this out and move to the logic layer.,refactor,closed,minor,ckan-sprint-2011-09-26,ckan,fixed,search,,ckan,none

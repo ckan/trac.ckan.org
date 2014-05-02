@@ -1,0 +1,11 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+251,"Present in the API a list of revision IDs, and present individual revisions when referenced by ID",johnbywater,johnbywater,"Want to have:
+
+ * /api/search/revision/
+
+Support querying by ""since time"" and ""since revision"". Each individual revision should be available in the REST API (read-only):
+
+ * /api/rest/revision/{revision ID}
+   * should include revision attributes plus revision.packages e.g. like { ""id"": ""..."", ... ""packages"": [ list of revision names ] }
+
+",enhancement,reopened,critical,v1.0,ckan,,,,,

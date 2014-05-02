@@ -1,0 +1,2 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2384,Rights tool factored out,dread,dread,The command line tool 'rights' is quite handy but it is glued to the CLI. I'm going to factor out the bit which searches for objects etc so it can be used by CreateTestData etc and will be used by DGU.,enhancement,closed,major,ckan-sprint-2012-05-15,ckan,fixed,,,ckan,none

@@ -1,0 +1,24 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1576	Move stats extension back into core - 0.5d	rgrp	rgrp	" * Move into core (keeping as an extension) and default enable
+ * Do we need tests for controller? (No: already there)
+ * Documentation (?) - e.g. of basic config options
+ * Remove lib/stats.py which is still in core
+  * dread moved it to extension in https://github.com/okfn/ckanext-stats/commit/293b2544737d8ab7610884bd5e999ee37f1ab813 but did not remove from core
+ * Deprecation notice on ckanext-stats repo and update extension registry
+
+Est: 0.5d.
+
+Questions:
+
+ * Why do this?
+   * tiny extension with few dependencies - and really nice to have out of the box
+   * trial for doing this on larger scale
+ * Do we keep as extension (even if in core)?
+  * Ans: Yes, keep as extension because:
+   * Already set up that way
+   * Cleaner
+   * Easier to disable / enable 
+ * How do we integrate with main them (e.g. have stats link)
+  * Ans: not sure (this is part of more general issue of how we update theme for varying changes elsewhere). Best answer is to have some widgetization in theme.
+ * Hide ratings section (at least until we reinstate ratings #1598)
+  * Ans: no, let's not bother (and having ratings there encourages us to do #1598 and/or find out whether people are interested in ratings)"	enhancement	new	major	ckan-sprint-2012-01-09	ckan				ckan	none

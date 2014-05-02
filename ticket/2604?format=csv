@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2604,Add Requests as requirement for tests,amercader,amercader,"Requests (http://python-requests.org) is really useful to deal with http requests and saves a lot of time.
+
+I propose we include it as a requirement for the tests for the time being, and even for core if necessary at a later stage.",enhancement,closed,minor,ckan-v1.8,ckan,fixed,,,ckan,none

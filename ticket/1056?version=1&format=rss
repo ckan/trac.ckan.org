@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1056: User links for OpenID users are broken</title>
+    <link>http://localhost/ticket/1056</link>
+    <description>&lt;p&gt;
+Solutions:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;User user.id instead of their name
+&lt;/li&gt;&lt;li&gt;Escape the URL properly.
+&lt;/li&gt;&lt;/ul&gt;</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1056</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Fri, 25 Mar 2011 13:46:16 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/1056#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1056#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1056?action=diff&amp;amp;version=1"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Tue, 05 Apr 2011 16:05:43 GMT</pubDate>
+      <title>theme, description changed</title>
+      <link>http://localhost/ticket/1056#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/1056#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;theme&lt;/strong&gt;
+                changed from &lt;em&gt;qa&lt;/em&gt; to &lt;em&gt;none&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1056?action=diff&amp;amp;version=2"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Tue, 12 Apr 2011 16:36:53 GMT</pubDate>
+      <title>milestone changed; owner set</title>
+      <link>http://localhost/ticket/1056#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/1056#comment:3</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;owner&lt;/strong&gt;
+              set to &lt;em&gt;dread&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan-v1.4&lt;/em&gt; to &lt;em&gt;ckan-v1.4-sprint-6&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Tue, 12 Apr 2011 16:39:33 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/1056#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/1056#comment:4</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Fixed in cset:a025b5b3293c on default.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Fri, 15 Apr 2011 15:50:16 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1056#comment:5</link>
+      <guid isPermaLink="false">http://localhost/ticket/1056#comment:5</guid>
+      <description>
+        &lt;p&gt;
+This was broken in cset:b681bbedfa62a68b71260ef48a0da6063109734 which was released in 1.3.2
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

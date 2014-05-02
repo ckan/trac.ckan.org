@@ -1,0 +1,17 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1402,Migrate repository from mercurial to git,rgrp,kindly,"Plan to migrate from mercurial git
+
+ * Convert from mercurial to git
+  * Map named branches to normal branches
+  * Also, if possible map usernames for RP: rgrp <http://rufuspollock.org/> (mercurial) -> rgrp <rufus.pollock@okfn.org>
+ * Place at http://github.com/okfn/ckan (can delete current repo there as an out of date mirror)
+
+Process:
+
+ * Do trial run
+ * Announce conversion date / time
+ * Require everyone to have pushed '''all''' outstanding changes at that time
+ * Do conversion
+ * Test
+ * Announce on list and ckan.org/
+",enhancement,closed,major,ckan-v1.6,ckan,fixed,,,ckan,none

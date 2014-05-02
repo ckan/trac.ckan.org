@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      BranchingPolicy – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="help" href="TracGuide.html" />
+        <link rel="alternate" href="BranchingPolicy%3Fversion=9&amp;format=txt" type="text/x-trac-wiki" title="Plain Text" />
+        <link rel="up" href="BranchingPolicy.html" title="View latest version" />
+        <link rel="next" href="BranchingPolicy%3Fversion=10.html" title="Version 10" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/wiki.css" type="text/css" />
+        <link rel="prev" href="BranchingPolicy%3Fversion=8.html" title="Version 8" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("#content").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $("#content").find(".wikianchor").each(function() {
+          $(this).addAnchor(babel.format(_("Link to #%(id)s"), {id: $(this).attr('id')}));
+        });
+        $(".foldable").enableFolding(true, true);
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last active"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="pagepath" class="noprint">
+  <a class="pathentry first" title="View WikiStart" href="../wiki.1.html">wiki:</a><a class="pathentry" href="BranchingPolicy.html" title="View BranchingPolicy">BranchingPolicy</a>
+</div>
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="BranchingPolicy%3Fversion=8.html" title="Version 8">Previous Version</a></span></li><li><a href="BranchingPolicy.html" title="View latest version">View Latest Version</a></li><li class="last"><span><a class="next" href="BranchingPolicy%3Fversion=10.html" title="Version 10">Next Version</a> &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="wiki">
+        <br />
+        <table id="info" summary="Revision info">
+          <tbody>
+            <tr><th scope="row">Version 9 (modified by dread, <a class="timeline" href="../timeline%3Ffrom=2011-03-15T18:58:42Z&amp;precision=second.html" title="2011-03-15T18:58:42Z in Timeline">3 years</a> ago)
+               (<a href="BranchingPolicy%3Faction=diff&amp;version=9.html">diff</a>)</th></tr>
+            <tr><td class="message">
+              <p>
+Agreed to allow single changeset tickets not branched.
+</p>
+
+            </td></tr>
+          </tbody>
+        </table>
+      <div class="wikipage searchable">
+        
+          
+          
+          <div id="wikipage"><h1 id="BranchingPolicy">Branching Policy</h1>
+<p>
+CKAN is stored in a mercurial repo. This policy covers development and branching policy for this repo.
+</p>
+<h1 id="General:OneBranchperFeatureandDefect">General: One Branch per Feature and Defect</h1>
+<p>
+We will be following the process described in (1) but applied to mercurial. Key aspects:
+</p>
+<ol><li>There will be three 'core' branches: "stable", "metastable" and "default" (in article stable=master and develop=default)
+<ul><li>stable: stable code
+</li><li>metastable: (will soon be deprecated) for code preparing to be stable
+</li><li>default: development HEAD
+</li></ul></li><li>A (named) branch will be created for each feature or defect (bug), unless it is almost certain that the ticket only requires one changeset.
+Branch naming convention:
+<ul><li>defect-{ticket-number}[-optional-name] e.g. defect-902-my-bad-bug
+</li><li>feature-{ticket-number}[-optional-name] e.g. feature-903-my-amazing-feature
+</li></ul></li><li>A (named) branch will be created for each release: release-v{release-number} e.g. release-v1.3
+</li></ol><p>
+Feature, bug and release branches may be "closed" once appropriately merged. To summarize the work-flow:
+</p>
+<ul><li>Almost no work should be done in default or stable directly - only tickets requiring single changesets area allowed. Otherwise work in branches.
+</li><li>feature branches branch off default and merge back into default
+</li><li>defect branches branch off default *or* stable and merge back into respective branches. Fixes on stable get merged to default as appropriate.
+<ul><li>NB: if a fix needs to go from default to stable (it happens!) then you can use mercurial's transplant (as you obviously must *not* merge from default to stable)
+</li></ul></li><li>release branches branch off metastable (in future off stable)
+</li></ul><p>
+More in article (1).
+</p>
+<p>
+We also strongly recommend that users push *by default* to their own personal repo rather than the main repo. This allows for code review by another dev before merging into the main repo and should reduce the number of "oops, I've pushed and broken the build" moments.
+</p>
+<h2 id="ClosingBranches">Closing Branches</h2>
+<pre class="wiki">hg up -r {branch-name}
+hg ci --close-branch {branch-name}
+# may now want to merge to default or you'll be left with a dangling head
+hg up -r default
+hg merge -r {branch-name}
+</pre><h2 id="Transplantingchangesets">Transplanting changesets</h2>
+<p>
+When you merge, you can't cherry pick changesets - you have to take all of them up to a certain one. In these cases transplant can be useful to copy a changeset across (though mercurial will not be aware of this copy).
+</p>
+<h2 id="tipnote">'tip' note</h2>
+<p>
+Mercurial tags the latest commit with the tag <tt>tip</tt>. This means it changes on every commit and might be on <em>any</em> branch. So it's best not to refer to it in documentation, emails or changeset comments.
+</p>
+<h1 id="Furtherreferences">Further references</h1>
+<ol><li><a class="ext-link" href="http://nvie.com/posts/a-successful-git-branching-model/"><span class="icon">​</span>http://nvie.com/posts/a-successful-git-branching-model/</a>
+</li><li><a class="ext-link" href="http://forceten.tidalwave.it/development/mercurial-best-practices/"><span class="icon">​</span>http://forceten.tidalwave.it/development/mercurial-best-practices/</a>
+</li><li><a class="ext-link" href="http://www.rabbitmq.com/mercurial.html#branchperbug"><span class="icon">​</span>http://www.rabbitmq.com/mercurial.html#branchperbug</a>
+</li><li><a class="ext-link" href="http://stevelosh.com/blog/2009/08/a-guide-to-branching-in-mercurial/"><span class="icon">​</span>http://stevelosh.com/blog/2009/08/a-guide-to-branching-in-mercurial/</a>
+</li><li>Original thread <a class="ext-link" href="http://lists.okfn.org/pipermail/ckan-dev/2010-November/000034.html"><span class="icon">​</span>http://lists.okfn.org/pipermail/ckan-dev/2010-November/000034.html</a>
+</li></ol></div>
+        
+        
+      </div>
+      
+
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="last first">
+          <a rel="nofollow" href="BranchingPolicy%3Fversion=9&amp;format=txt">Plain Text</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

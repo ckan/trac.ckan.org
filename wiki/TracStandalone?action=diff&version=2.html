@@ -1,0 +1,445 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+    <html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      TracStandalone (diff) – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="help" href="TracGuide.html" />
+        <link rel="up" href="TracStandalone%3Faction=history.html" title="Page history" />
+        <link rel="next" href="TracStandalone%3Faction=diff&amp;version=3.html" title="Version 3" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/wiki.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/diff.css" type="text/css" />
+        <link rel="prev" href="TracStandalone%3Faction=diff&amp;version=1.html" title="Version 1" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/diff.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="../chrome/common/css/diff.css" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last active"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="TracStandalone%3Faction=diff&amp;version=1.html" title="Version 1">Previous Change</a></span></li><li><a href="TracStandalone%3Faction=history.html" title="Page history">Wiki History</a></li><li class="last"><span><a class="next" href="TracStandalone%3Faction=diff&amp;version=3.html" title="Version 3">Next Change</a> &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="wiki">
+      <h1>
+        Changes between
+          <a href="TracStandalone%3Fversion=1.html">Version 1</a> and
+          <a href="TracStandalone%3Fversion=2.html">Version 2</a> of
+          <a href="TracStandalone%3Fversion=2.html">TracStandalone</a>
+      </h1>
+      <form method="post" id="prefs" action="TracStandalone%3Fversion=2.html"><div><input type="hidden" name="__FORM_TOKEN" value="93d81ccf9a7bb1c456462f62" /></div>
+        <div>
+          <input type="hidden" name="action" value="diff" />
+          <input type="hidden" name="version" value="2" />
+          <input type="hidden" name="old_version" value="1" />
+          
+  <label for="style">View differences</label>
+  <select id="style" name="style">
+    <option selected="selected" value="inline">inline</option>
+    <option value="sidebyside">side by side</option>
+  </select>
+  <div class="field">
+    <label><input type="radio" name="contextall" value="0" checked="checked" />
+             Show</label>
+      <label><input type="text" name="contextlines" id="contextlines" size="2" maxlength="3" value="2" />
+             lines around each change</label><br />
+    <label><input type="radio" name="contextall" value="1" />
+           Show the changes in full context</label>
+  </div>
+  <fieldset id="ignore">
+    <legend>Ignore:</legend>
+    <div class="field">
+      <input type="checkbox" id="ignoreblanklines" name="ignoreblanklines" />
+      <label for="ignoreblanklines">Blank lines</label>
+    </div>
+    <div class="field">
+      <input type="checkbox" id="ignorecase" name="ignorecase" />
+      <label for="ignorecase">Case changes</label>
+    </div>
+    <div class="field">
+      <input type="checkbox" id="ignorewhitespace" name="ignorewhitespace" />
+      <label for="ignorewhitespace">White space changes</label>
+    </div>
+  </fieldset>
+  <div class="buttons">
+    <input type="submit" name="update" value="Update" />
+  </div>
+
+        </div>
+      </form>
+      <dl id="overview">
+        <dt class="property time">Timestamp:</dt>
+        <dd class="time">
+            07/30/07 11:26:42 (<a class="timeline" href="../timeline%3Ffrom=2007-07-30T11:26:42Z&amp;precision=second.html" title="2007-07-30T11:26:42Z in Timeline">7 years</a> ago)
+        </dd>
+        <dt class="property author">Author:</dt>
+        <dd class="author">
+          trac
+        </dd>
+        <dt class="property message">Comment:</dt>
+        <dd class="message">
+          
+          <p>
+--
+</p>
+
+        </dd>
+      </dl>
+      <div class="diff">
+        <div class="legend" id="diff-legend">
+          <h3>Legend:</h3>
+          <dl>
+            <dt class="unmod"></dt><dd>Unmodified</dd>
+            <dt class="add"></dt><dd>Added</dd>
+            <dt class="rem"></dt><dd>Removed</dd>
+            <dt class="mod"></dt><dd>Modified</dd>
+          </dl>
+        </div>
+        <div class="diff">
+  <ul class="entries">
+      <li class="entry">
+        <h2 id="file0">
+          <a href="TracStandalone%3Fversion=2.html">TracStandalone</a>
+        </h2>
+        <table class="trac-diff inline" summary="Differences" cellspacing="0">
+              <colgroup><col class="lineno" /><col class="lineno" /><col class="content" /></colgroup>
+              <thead>
+                <tr>
+                  <th title="Version 1">
+                    <a href="TracStandalone%3Fversion=1.html#L6">
+                      v1</a>
+                  </th>
+                  <th title="Version 2">
+                    <a href="TracStandalone%3Fversion=2.html#L6">
+                      v2</a>
+                  </th>
+                  <td> </td>
+                </tr>
+              </thead>
+            <tbody class="unmod">
+                  <tr>
+                          <th>6</th><th>6</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>7</th><th>7</th><td class="l"><span>&nbsp;* Fewer dependencies: You don't need to install apache or any other web-server.</span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>8</th><th> </th><td class="l"><span>&nbsp;* Fast: Should be as fast as the [wiki:TracModPython mod_python] version (and much faster than the [wiki:TracCgi CGI]).</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>8</th><td class="r"><span>&nbsp;* Fast: Should be almost as fast as the [wiki:TracModPython mod_python] version (and much faster than the [wiki:TracCgi CGI]).</span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>9</th><td class="r"><span>&nbsp;* Automatic reloading: For development, Tracd can be used in ''auto_reload'' mode, which will automatically restart the server whenever you make a change to the code (in Trac itself or in a plugin).</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>9</th><th>10</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>10</th><th>11</th><td class="l"><span>== Cons ==</span> </td>
+                  </tr><tr>
+                          <th>11</th><th>12</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>12</th><th> </th><td class="l"><span>&nbsp;* <del>Less features: Tracd implements a very simple web-server and is not as configur</del>able as Apache HTTPD.</span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>13</th><td class="r"><span>&nbsp;* <ins>Fewer features: Tracd implements a very simple web-server and is not as configurable or as scal</ins>able as Apache HTTPD.</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>13</th><th>14</th><td class="l"><span>&nbsp;* No native HTTPS support: [http://www.rickk.com/sslwrap/ sslwrap] can be used instead,</span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>14</th><th> </th><td class="l"><span>&nbsp; &nbsp;or [http://<del>lists.edgewall.com/archive/trac/2005-August/004381.html STUNNEL]</del>.</span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>15</th><td class="r"><span>&nbsp; &nbsp;or [http://<ins>trac.edgewall.org/wiki/STunnelTracd stunnel -- a tutorial on how to use stunnel with tracd] or Apache with mod_proxy</ins>.</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>15</th><th>16</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>16</th><th>17</th><td class="l"><span>== Usage examples ==</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracStandalone%3Fversion=1.html#L25">…</a></th>
+                  <th><a href="TracStandalone%3Fversion=2.html#L26">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>25</th><th>26</th><td class="l"><span>}}}</span> </td>
+                  </tr><tr>
+                          <th>26</th><th>27</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>27</th><th> </th><td class="l"><span>You can't have the last portion of the path identical between the projects since that's how trac keeps the URLs of the</span> </td>
+                      </tr><tr>
+                        <th>28</th><th> </th><td class="l"><span>different projects unique. So if you use /project1/path/to and /project2/path/to, you will only see the second project.</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>28</th><td class="r"><span>You can't have the last portion of the path identical between the projects since Trac uses that name to keep the URLs of the</span> </td>
+                      </tr><tr>
+                        <th> </th><th>29</th><td class="r"><span>different projects unique. So if you use `/project1/path/to` and `/project2/path/to`, you will only see the second project.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>30</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>31</th><td class="r"><span>An alternative way to serve multiple projects is to specify a parent directory in which each subdirectory is a Trac project, using the `-e` option. The example above could be rewritten:</span> </td>
+                      </tr><tr>
+                        <th> </th><th>32</th><td class="r"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th> </th><th>33</th><td class="r"><span>&nbsp;$ tracd -p 8080 -e /path/to</span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>34</th><td class="r"><span>}}}</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>29</th><th>35</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>30</th><th>36</th><td class="l"><span>== Using Authentication ==</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracStandalone%3Fversion=1.html#L32">…</a></th>
+                  <th><a href="TracStandalone%3Fversion=2.html#L38">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>32</th><th>38</th><td class="l"><span>Tracd provides support for both Basic and Digest authentication. The default is to use Digest; to use Basic authentication, replace `--auth` with `--basic-auth` in the examples below, and omit the realm.</span> </td>
+                  </tr><tr>
+                          <th>33</th><th>39</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>34</th><th> </th><td class="l"><span>If the file `/path/to/users.htdigest` contain user accounts for project1 with the realm "mycompany.com", you'd use the following command-line to start tracd:</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>40</th><td class="r"><span>&nbsp; ''Support for Basic authentication was added in version 0.9.''</span> </td>
+                      </tr><tr>
+                        <th> </th><th>41</th><td class="r"><span></span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>42</th><td class="r"><span>If the file `/path/to/users.htdigest` contains user accounts for project1 with the realm "mycompany.com", you'd use the following command-line to start tracd:</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>35</th><th>43</th><td class="l"><span>{{{</span> </td>
+                  </tr><tr>
+                          <th>36</th><th>44</th><td class="l"><span>&nbsp;$ tracd -p 8080 --auth project1,/path/to/users.htdigest,mycompany.com /path/to/project1</span> </td>
+                  </tr><tr>
+                          <th>37</th><th>45</th><td class="l"><span>}}}</span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>38</th><th> </th><td class="l"><span>''Note that the project “name” passed to the `--auth` option is actually the base name of the project environment directory.""</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>46</th><td class="r"><span></span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>47</th><td class="r"><span>'''Note''': the project "name" passed to the `--auth` option is the base name of the project environment directory.</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>39</th><th>48</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>40</th><th>49</th><td class="l"><span>Of course, the digest file can be be shared so that it is used for more than one project:</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracStandalone%3Fversion=1.html#L45">…</a></th>
+                  <th><a href="TracStandalone%3Fversion=2.html#L54">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>45</th><th>54</th><td class="l"><span>&nbsp; &nbsp;/path/to/project1 /path/to/project2</span> </td>
+                  </tr><tr>
+                          <th>46</th><th>55</th><td class="l"><span>}}}</span> </td>
+                  </tr>
+            </tbody><tbody class="add">
+                  <tr class="first">
+                          <th> </th><th>56</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>57</th><td class="r"><ins>Another way to share the digest file is to specify "*"</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>58</th><td class="r"><ins>for the project name:</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>59</th><td class="r"><ins>{{{</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>60</th><td class="r"><ins>&nbsp;$ tracd -p 8080 \</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>61</th><td class="r"><ins>&nbsp; &nbsp;--auth *,/path/to/users.htdigest,mycompany.com \</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>62</th><td class="r"><ins>&nbsp; &nbsp;/path/to/project1 /path/to/project2</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>63</th><td class="r"><ins>}}}</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>64</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>65</th><td class="r"><ins>== How to set up an htdigest password file ==</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>66</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>67</th><td class="r"><ins>If you have Apache available, you can use the htdigest command to generate the password file. Type 'htdigest' to get some usage instructions, or read [http://httpd.apache.org/docs/2.0/programs/htdigest.html this page] from the Apache manual to get precise instructions.&nbsp; You'll be prompted for a password to enter for each user that you create.&nbsp; For the name of the password file, you can use whatever you like, but if you use something like `users.htdigest` it will remind you what the file contains. As a suggestion, put it in your &lt;projectname&gt;/conf folder along with the [TracIni trac.ini] file.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>68</th><td class="r"><ins></ins> </td>
+                  </tr><tr class="last">
+                          <th> </th><th>69</th><td class="r"><ins>Note that you can start tracd without the --auth argument, but if you click on the ''Login'' link you will get an error.</ins> </td>
+                  </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>47</th><th>70</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>48</th><th>71</th><td class="l"><span>== Generating Passwords Without Apache ==</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracStandalone%3Fversion=1.html#L73">…</a></th>
+                  <th><a href="TracStandalone%3Fversion=2.html#L96">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>73</th><th>96</th><td class="l"><span>}}}</span> </td>
+                  </tr><tr>
+                          <th>74</th><th>97</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="add">
+                  <tr class="first">
+                          <th> </th><th>98</th><td class="r"><ins>Note: If you use the above script you must use the --auth option to tracd, not --basic-auth, and you must set the realm in the --auth value to 'trac' (without the quotes). Example usage (assuming you saved the script as trac-digest.py):</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>99</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>100</th><td class="r"><ins>{{{</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>101</th><td class="r"><ins>python trac-digest.py -u username -p password &gt;&gt; c:\digest.txt</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>102</th><td class="r"><ins>python tracd --port 8000 --auth proj_name,c:\digest.txt,trac c:\path\to\proj_name</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>103</th><td class="r"><ins>}}}</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>104</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>105</th><td class="r"><ins>== Tips ==</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>106</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>107</th><td class="r"><ins>=== Serving static content ===</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>108</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>109</th><td class="r"><ins>If `tracd` is the only webserver used for the project, </ins> </td>
+                  </tr><tr>
+                          <th> </th><th>110</th><td class="r"><ins>it can also be used to distribute static content </ins> </td>
+                  </tr><tr>
+                          <th> </th><th>111</th><td class="r"><ins>(tarballs, Doxygen documentation, etc.)</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>112</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>113</th><td class="r"><ins>This static content should be put in the `$TRAC_ENV/htdocs` folder,</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>114</th><td class="r"><ins>and is accessed by URLs like `&lt;project_URL&gt;/chrome/site/...`.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>115</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>116</th><td class="r"><ins>Example: given a `$TRAC_ENV/htdocs/software-0.1.tar.gz` file,</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>117</th><td class="r"><ins>the corresponding relative URL would be `/&lt;project_name&gt;/chrome/site/software-0.1.tar.gz`, </ins> </td>
+                  </tr><tr>
+                          <th> </th><th>118</th><td class="r"><ins>which in turn can be written using the relative link syntax</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>119</th><td class="r"><ins>in the Wiki: `[/&lt;project_name&gt;/chrome/site/software-0.1.tar.gz]` </ins> </td>
+                  </tr><tr>
+                          <th> </th><th>120</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>121</th><td class="r"><ins>The development version of Trac supports a new `htdocs:` TracLinks </ins> </td>
+                  </tr><tr>
+                          <th> </th><th>122</th><td class="r"><ins>syntax for the above. With this, the example link above can be written simply </ins> </td>
+                  </tr><tr>
+                          <th> </th><th>123</th><td class="r"><ins>`htdocs:software-0.1.tar.gz`. </ins> </td>
+                  </tr><tr class="last">
+                          <th> </th><th>124</th><td class="r"><ins></ins> </td>
+                  </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>75</th><th>125</th><td class="l"><span>----</span> </td>
+                  </tr><tr>
+                          <th>76</th><th>126</th><td class="l"><span>See also: TracInstall, TracCgi, TracModPython, TracGuide</span> </td>
+                  </tr>
+            </tbody><tbody class="add">
+                  <tr class="first">
+                          <th> </th><th>127</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>128</th><td class="r"><ins>----</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>129</th><td class="r"><ins>'''Translation:'''</ins> </td>
+                  </tr><tr class="last">
+                          <th> </th><th>130</th><td class="r"><ins>&nbsp;* [https://opensvn.csie.org/traccgi/trac_rus/wiki/StandAloneTracForTeapot Russian] (перевод на Русский)</ins> </td>
+                  </tr>
+            </tbody>
+        </table>
+      </li>
+  </ul>
+</div>
+      </div>
+  </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

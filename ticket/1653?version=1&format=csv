@@ -1,0 +1,11 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1653,Change URLs for multilingual site,ross,ross,"To support multiple languages we should have an easy way to specify the language as part of the URL, so that URLs are both specific and we also reduce the dependency on the session.
+
+* Analysis [1d] - Find the best way of implementing this and how everyone else does their language URLs.
+
+* Write Middleware + update url_for to take account of the language. [2d]
+ 
+
+* Document the language setup, and how to replicate it. [1d]
+
+",enhancement,new,awaiting triage,,ckan,,[4d],,ckan,none

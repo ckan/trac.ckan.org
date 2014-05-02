@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1468,Update the search index for individual packages,thejimmyg,johnglover,"When I delete a package from the pylons shell I need to remove that package's entry from the Solr search index. That doesn't happen at the moment.
+
+It would be useful if the search-index rebuild command could take a list of package IDs to rebuild.",defect,closed,minor,ckan-sprint-2011-12-05,ckan,fixed,search,,ckan,none

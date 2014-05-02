@@ -1,0 +1,69 @@
+id	summary	component	owner	type	priority	milestone
+2291	DataStorer incorrectly attempts to store JSON in DataStore	ckan	kindly	enhancement	awaiting triage	ckan-v1.9
+2294	Unauthorized action on Data API gets 302 rather than 401 or similar	ckan	kindly	defect	minor	ckan-v1.9
+2298	Add sort-by controls to the search results page	ckan	icmurray	enhancement	minor	ckan-v1.9
+2320	Introduce new state: archived	ckan		enhancement	awaiting triage	ckan-v1.9
+2321	Use resource names/titles in URLs	ckan		enhancement	awaiting triage	ckan-v1.9
+2324	Link API docs to relevant version not just latest	ckan		enhancement	awaiting triage	ckan-v1.9
+2328	Link to Catalog API for each Dataset, Group and Tag	ckan		enhancement	awaiting triage	ckan-v1.9
+2333	Introduce new resource type datastore	ckan		enhancement	awaiting triage	ckan-v1.9
+2334	Improved data import	ckan	kindly	enhancement	awaiting triage	ckan-v1.9
+2335	Unicode characters don't work in CKAN ini files	ckan	seanh	defect	awaiting triage	ckan-v1.9
+2337	Sort out ini file confusion in docs	ckan	seanh	enhancement	awaiting triage	ckan-v1.9
+2350	Hooks  in package controller for validating form data	ckan	icmurray	enhancement	minor	ckan-v1.9
+2370	Add examples of all config settings in default config file	ckan	seanh	enhancement	awaiting triage	ckan-v1.9
+2405	Improvements to data viewer embed	ckan	icmurray	defect	major	ckan-v1.9
+2406	Errors in source install doc	ckan	kindly	defect	awaiting triage	ckan-v1.9
+2407	'Access denied' message is unhelpful	ckan	amercader	enhancement	awaiting triage	ckan-v1.9
+2415	Confusing message on attempting to register new account with upper case	ckan	kindly	defect	awaiting triage	ckan-v1.9
+2426	Get rid of CKAN's formalchemy dependency	ckan	kindly	enhancement	awaiting triage	ckan-v1.9
+2427	Reduce cruft installed into CKAN's virtualenv due to Pylons	ckan	kindly	enhancement	awaiting triage	ckan-v1.9
+2473	Make datstorer store field ordering in _meta field	ckan	kindly	enhancement	awaiting triage	ckan-v1.9
+2479	Meanings of Author and Maintainer fields are unclear	ckan		enhancement	awaiting triage	ckan-v1.9
+2480	Better message when dataset has no resources	ckan		enhancement	awaiting triage	ckan-v1.9
+2483	Non-local resources should not have Download links	ckan		enhancement	awaiting triage	ckan-v1.9
+2485	Encourage leak containment by limiting the number of requests a CKAN process serves	ckan	icmurray	defect	awaiting triage	ckan-v1.9
+2520	Document undocumented config options	ckan	seanh	defect	awaiting triage	ckan-v1.9
+2529	DataHub (or CKAN) widgets	ckan		enhancement	awaiting triage	ckan-v1.9
+2530	DataHub purge fails on some revisions	ckan	kindly	enhancement	minor	ckan-v1.9
+2543	facet.sort is not available in the package_search action	ckan		enhancement	awaiting triage	ckan-v1.9
+2572	clean up stats plugin	ckan	toby	enhancement	awaiting triage	ckan-v1.9
+2579	move sort_by functions into lib.helpers	ckan	toby	enhancement	awaiting triage	ckan-v1.9
+2582	Do not hide notes / readme on dataset pages	ckan		enhancement	blocker	ckan-v1.9
+2585	Escape solr control characters in search queries, add advanced search screen	ckan		enhancement	awaiting triage	ckan-v1.9
+2603	Remove deprecated 'fields' parameter from resource_search	ckan	icmurray	refactor	minor	ckan-v1.9
+2619	Omit private datasets from public activity streams	ckan	seanh	enhancement	awaiting triage	ckan-v1.9
+2621	Remove the deprecated 'fields' parameter from tag_search and tag_autocomplete	ckan	icmurray	refactor	minor	ckan-v1.9
+2625	Add i18n strings from non-core but supported extensions to ckan.pot file	ckan		enhancement	awaiting triage	ckan-v1.9
+2663	h.resource_display_name needs love	ckan	toby	enhancement	awaiting triage	ckan-v1.9
+2679	Change default behaviour of TemplateController.view to 404.	ckan	icmurray	enhancement	minor	ckan-v1.9
+2708	limit extra data for package/group show	ckan	kindly	enhancement	awaiting triage	ckan-v1.9
+2733	Datastore logic functions	ckan	johnglover	enhancement	major	ckan-v1.9
+2745	Password reset returns an exception if the key parameter is missing	ckan		defect	major	ckan-v1.9
+2758	file storage gives error if config not available but no useful user information	ckan	toby	enhancement	awaiting triage	ckan-v1.9
+2773	About page needs improving	ckan	markw	enhancement	awaiting triage	ckan-v1.9
+2788	Speed improvements on creating/updating and indexing	ckan	amercader	enhancement	awaiting triage	ckan-v1.9
+2829	Archiver fails on 403 http response	ckan	johnglover	enhancement	awaiting triage	ckan-v1.9
+2838	Context variables accepted by action functions need to be documented	ckan		enhancement	awaiting triage	ckan-v1.9
+2885	Labels (editor, admin) not translated in authorization pages for datasets or groups	ckan		enhancement	awaiting triage	ckan-v1.9
+2889	Support JSON values in extras, when returning JSON from API	ckan		enhancement	awaiting triage	ckan-v1.9
+2547	ODS Initial data sets	ckan	shevski	enhancement	awaiting triage	opendatasuite 2
+2548	Object ownership for groups/package	ckan	kindly	enhancement	awaiting triage	datahub-july
+2550	User types	ckan	icmurray	enhancement	awaiting merge	datahub-july
+2412	More than one resource invalidatiing breaks dataset edit form	ckan	zephod	defect	major	ckan-sprint-2012-06-25
+2279	Write tutorial for our DataStore API / Data Explorer	ckan	rgrp	enhancement	major	ckan-v1.8
+2363	Documentation of best caching practice.	ckan	toby	enhancement	major	ckan-v1.8
+2433	API uses name not id for some version 3 calls	ckan	toby	defect	minor	ckan-v1.8
+2499	Documentation for the internal analytics	ckan	toby	enhancement	awaiting triage	ckan-v1.8
+2761	Document all the errors you can get when setting up filestore, and how to fix them	ckan		enhancement	awaiting triage	ckan-v1.8
+2762	test_related.py crashes	ckan		defect	awaiting triage	ckan-v1.8
+2771	Documentation and examples for IDatasetForm and IGroupForm	ckan	seanh	enhancement	awaiting triage	ckan-v1.8
+2859	Fix the build	ckan	icmurray	defect	blocker	ckan-v1.8
+2919	Remove IController from docs	ckan		defect	awaiting triage	ckan-v1.8
+2936	Updating a group via the API clears its packages	ckan		defect	awaiting triage	ckan-v1.8
+2958	Uploading files with unicode characters in filename fails in CKAN 1.7 and 1.8	ckan		defect	awaiting triage	ckan-v1.8
+2963	Timeout on tag pages with lots of datasets	ckan		defect	major	ckan-v1.8
+2965	Stats extension broken on 1.8	ckan		defect	awaiting triage	ckan-v1.8
+3002	API v1/2 'legacy' search parameters must be escaped before they are put into a Solr query string	ckan		defect	minor	ckan-v1.8
+3003	New pg databases should be created with UTF8 encoding rather than system default	ckan		enhancement	awaiting triage	ckan-v1.8
+2331	Search should AND terms not OR terms	ckan	kindly	defect	major	ckan-sprint-2012-05-29

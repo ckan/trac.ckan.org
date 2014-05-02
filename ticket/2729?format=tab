@@ -1,0 +1,5 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2729	searching for tags:[tag] works but tag:[tag] doesn't	shevski	kindly	"which is confusing since you can only search for one tag like this at a time. I.e.
+tags:economics,cvs or tags:economics, csv or tags:economics+CSV doesn't work for example; therefore tag:economics, should also work!
+
+http://s031.okserver.org:2375/dataset?q=tags%3Aeconomics&sort=relevance+asc"	enhancement	new	awaiting triage	ckan-backlog	ckan		ux	ross	ckan	none

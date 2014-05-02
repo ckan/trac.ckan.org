@@ -1,0 +1,6 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2687,uploading file breaks add dataset process,shevski,aron.carroll,"Once you upload a file, all the buttons on the page stop working. You can't complete & go to next step or save & add another or go to previous
+
+Clicking on these just seems to re-load the page
+
+http://s031.okserver.org:2375/dataset/new_resource/super",defect,closed,major,demo phase 2,ckan,fixed,demo-theme,toby,ckan,none

@@ -1,0 +1,7 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+841	Caching docs (as a whole)	dread	kindly	"Documentation article on caching / improving performance. (To complement configuration docs.)
+
+ * Different sorts of cache - beaker style, etags, package_dict in search results(?)
+ * How each one affects performance
+ * How to turn them on/off and configure them
+ * Is it possible to bypass each of them in the browser or with wget/curl?"	enhancement	closed	minor	ckan-v1.4-sprint-4	ckan	duplicate			ckan	none

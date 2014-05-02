@@ -1,0 +1,6 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2508	Make it possible to run CKAN tests for each language	seanh		"Mistakes in translated strings can cause CKAN to crash or otherwise not work, but it's not practical to manually test every page and function of CKAN in every language that we have new translations for before a CKAN release. It'd be great if the tests could automatically be run for each language.
+
+This is probably a big job, we would have to get the tests to respect a language setting in the ini file, check for any individual test cases that specify the language (e.g. in the URL), and also fix test cases that look for specific English words in HTML output, etc.
+
+In the meantime, a good stop-gap solution might be a script that tests for common mistakes in the po files."	enhancement	new	awaiting triage	ckan-backlog	ckan		i18n		ckan	none

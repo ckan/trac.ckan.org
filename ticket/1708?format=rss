@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1708: SOLR configuration lost</title>
+    <link>http://localhost/ticket/1708</link>
+    <description>&lt;p&gt;
+The SOLR url, user and password defined in the CKAN config file are ignored and the default SOLR url is used.
+&lt;/p&gt;
+&lt;p&gt;
+This causes:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;"0 datasets" displayed on the home page
+&lt;/li&gt;&lt;li&gt;Dataset searches result in 0 results and a small message "There was an error while searching". (Nothing about it in the logs)
+&lt;/li&gt;&lt;/ul&gt;&lt;h2 id="Toreproduce"&gt;To reproduce&lt;/h2&gt;
+&lt;p&gt;
+This bug is only visible if your SOLR instance is not at the default place. To quickly reproduce this problem, setup your machine as a SOLR multicore instance and run: "paster db clean &amp;amp;&amp;amp; paster create-test-data &amp;amp;&amp;amp; paster serve development.ini". It quits with the error: "solr.core.&lt;a class="missing wiki"&gt;SolrException?&lt;/a&gt;: HTTP code=400, reason=Missing solr core name in path"
+&lt;/p&gt;
+&lt;h2 id="Codeaffected"&gt;Code affected&lt;/h2&gt;
+&lt;ul&gt;&lt;li&gt;Does not affect any released versions (1.5.1 is clean).
+&lt;/li&gt;&lt;li&gt;Introduced to master: &lt;a class="ext-link" href="https://github.com/okfn/ckan/commit/627382e6ff575146da221efc50321a41152d8b0f"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;https://github.com/okfn/ckan/commit/627382e6ff575146da221efc50321a41152d8b0f&lt;/a&gt; by Ross
+&lt;/li&gt;&lt;/ul&gt;</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1708</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Wed, 25 Jan 2012 12:10:57 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1708#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1708#comment:1</guid>
+      <description>
+        &lt;p&gt;
+I've got a fix for this and am just looking to see where this problem started now.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Wed, 25 Jan 2012 12:26:55 GMT</pubDate>
+      <title>cc deleted</title>
+      <link>http://localhost/ticket/1708#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/1708#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;cc&lt;/strong&gt;
+              &lt;em&gt;ross&lt;/em&gt; removed
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+The problem has traced back to this commit by Ian:
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a class="ext-link" href="https://github.com/okfn/ckan/commit/51136465fb1bb94ea70df32be00eaef6ae43792b"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;https://github.com/okfn/ckan/commit/51136465fb1bb94ea70df32be00eaef6ae43792b&lt;/a&gt;
+ckan/config/routing.py
+&lt;/p&gt;
+&lt;pre class="wiki"&gt;-from ckan.plugins import PluginImplementations, IRoutes
+ 	 10
++from ckan.controllers.package import set_fallback_controller as set_fallback_package_controller,\
+ 	 11
++                                     add_package_controller,\
+ 	 12
++                                     set_default_as_fallback_controller_if_required as set_default_as_fallback_package_controller_if_required
+ 	 13
++from ckan.plugins import PluginImplementations, IRoutes, IPluggablePackageController
+&lt;/pre&gt;&lt;p&gt;
+By importing the package controller at this earlier point, it sets the ckan_url quasi-global variable before the config file has been loaded.
+&lt;/p&gt;
+&lt;pre class="wiki"&gt;  /home/dread/gitroot/ckan/ckan/config/middleware.py(18)&amp;lt;module&amp;gt;()
+-&amp;gt; from ckan.config.environment import load_environment
+  /home/dread/gitroot/ckan/ckan/config/environment.py(20)&amp;lt;module&amp;gt;()
+-&amp;gt; from ckan.config.routing import make_map
+  /home/dread/gitroot/ckan/ckan/config/routing.py(10)&amp;lt;module&amp;gt;()
+-&amp;gt; from ckan.controllers.package import set_fallback_controller as set_fallback_package_controller,\
+  /home/dread/gitroot/ckan/ckan/controllers/package.py(20)&amp;lt;module&amp;gt;()
+-&amp;gt; from ckan.lib.search import SearchIndexError, SearchError
+  /home/dread/gitroot/ckan/ckan/lib/search/__init__.py(9)&amp;lt;module&amp;gt;()
+-&amp;gt; from common import (SearchIndexError, SearchError, SearchQueryError,
+&amp;gt; /home/dread/gitroot/ckan/ckan/lib/search/common.py(11)&amp;lt;module&amp;gt;()
+-&amp;gt; solr_url = config.get('solr_url', DEFAULT_SOLR_URL)
+&lt;/pre&gt;&lt;p&gt;
+In retrospect we should have not initialised the variables from the config during import.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Wed, 25 Jan 2012 15:38:09 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1708#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/1708#comment:3</guid>
+      <description>
+        &lt;p&gt;
+Fix on its way.
+&lt;/p&gt;
+&lt;p&gt;
+This problem also stopped simple_search and affected reading the beaker settings.
+&lt;/p&gt;
+&lt;p&gt;
+Patch will make SOLR settings initialised consciously in config/environment.ini, rather than at search import time. I've also moved the search import time to be later.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Thu, 26 Jan 2012 12:29:55 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/1708#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/1708#comment:4</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Fixed in [master 0d3543c]
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

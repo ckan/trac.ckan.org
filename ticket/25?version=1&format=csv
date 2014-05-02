@@ -1,0 +1,6 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+25,A registered person creates their own tags for a package,johnbywater,johnbywater,"== Notes ==
+
+  * Should provide a text box where users can add space separated tags (a la delicious).
+  * if though tags are only associated tag creation should be seemless (so if a tag does not already tag exists it should automatically be created in the background)
+  * would like to provide a list of relevant existing tags. For time being could just list all existing tags below entry box but in long run would like auto-updating/auto-suggesting listing a la delicious",enhancement,new,major,milestone2,ckan,,,,,

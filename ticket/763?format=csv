@@ -1,0 +1,6 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+763,Read-only mode - Setup,dread,,"Admin configures entering read-only mode in one of two places:
+ * CKAN config file (e.g. ckan.ini)
+ * environment variable from Apache config
+
+Once enabled, no writes can occur to the database (including user ratings and other usage stats).",enhancement,assigned,minor,ckan-future,ckan,,,,ckan,none

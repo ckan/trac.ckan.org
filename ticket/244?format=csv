@@ -1,0 +1,9 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+244,Several links preceded by link URL,dread,rgrp,"e.g. Text on ckan.net home page:
+
+""All material available under an /licenseopen license""
+
+Also seen on the package edit page:
+""/user/loginClick here to sign in""
+
+I believe this is due to the i18n additions from Benoit. Maybe needs new Genshi. Maybe best to work round in the meantime.",defect,closed,awaiting triage,,ckan,fixed,,,,

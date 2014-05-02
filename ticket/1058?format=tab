@@ -1,0 +1,14 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1058	Give 400 error (not 500) for invalid locale or package_form	dread	dread	"Examples which prompt annoying exception emails:
+{{{
+http://ckan.net/locale?locale=ja
+Module ckan.i18n:21 in set_session_locale
+           assert locale in _KNOWN_LOCALES
+}}}
+A bot has caused these:
+{{{
+http://ca.ckan.net/package/new?package_form=gov
+Module ckan.forms.registry:32 in get_fieldset
+               raise ValueError('Could not find package_form name %r in those found: \n%r' % (package_form, [en.name for en in entrypoints]))
+ValueError: Could not find package_form name u'gov)' in those found: ['gov', 'standard', 'ca']
+}}}"	defect	closed	trivial	ckan-v1.4-sprint-4	ckan	fixed			ckan	none

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2893: Tags missing from form_to_db_package_schema()</title>
+    <link>http://localhost/ticket/2893</link>
+    <description>&lt;p&gt;
+With an IDatasetForm plugin active with a form_to_db_package_schema() method that returns a schema based on ckan/logic/schema.py:form_to_db_package_schema() I'm getting validation errors like this:
+&lt;/p&gt;
+&lt;p&gt;
+[ckan.controllers.api] Validation error: "{'&lt;span class="underline"&gt;type': 'Validation Error', '&lt;/span&gt;junk': [u'The input field &lt;span class="underline"&gt;junk was not expected.']}"
+&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;
+They seem to be caused when a data dict with key 'tags' is passed to e.g. the package_update API, for example in ckan/tests/functional/api/model/test_vocabulary.py there are various tests that get this error when they call package_update (if you run the tests with a suitable IDatasetForm plugin active).
+&lt;/p&gt;
+&lt;p&gt;
+In ckan/logic/schema.py:form_to_db_package_schema() 'tags' is for some reason deliberately removed from the schema.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2893</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+ </channel>
+</rss>

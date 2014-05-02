@@ -1,0 +1,8 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+85	Convert state from an object to an enumeration	rgrp	rgrp	"No real benefit of having State object as opposed to a simple text field with enumerated values and this second option is both simpler and more flexible.
+
+Main hassle here is that it requires migration in all projects that use vdm.
+
+If we're going to do this we should do it sooner rather than later.
+
+Cost: 2h (+ 1h for a conversion method)"	enhancement	closed	critical		vdm	fixed				

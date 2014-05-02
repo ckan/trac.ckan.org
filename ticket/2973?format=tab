@@ -1,0 +1,6 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2973	Move new_authz.py into logic/auth/__init__.py	seanh		"Makes sense to keep all auth stuff under logic/auth.
+
+Also decide which functions from new_authz.pu should be marked private with _.
+
+Also decide which functions from new_authz.py are really helpers for the auth functions in get.py, update.py and delete.py, and should maybe moved to another file, e.g. logic/auth/helpers.py"	enhancement	new	awaiting triage	ckan 2.0	ckan		organizations		ckan	none

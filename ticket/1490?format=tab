@@ -1,0 +1,12 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1490	Standardize output from package listings coming from the logic layer	amercader	amercader	"Right now, the two logic functions that return a list of packages (package_search [1] and group_packages_list [2])use custom functions to generate the output dict. That's suboptimal because:
+- The template function that renders the package listing (package_list_from_dict) could end up receiving different dicts.
+- Not all package properties are available at the template level (e.g extras, tags...). These can be really useful to customize the listing from an extension.
+
+In general only the functions present in lib/dictization/model_dictize.py should be used to build the output of a logic function, in that case package_dictize. If necessary, they can be modified to include missing properties, like on this particular case the ""isopen"" property, needed by the template renderer.
+
+
+
+
+[1] https://github.com/okfn/ckan/blob/master/ckan/logic/action/get.py#L685
+[2] https://github.com/okfn/ckan/blob/master/ckan/logic/action/get.py#L442"	enhancement	closed	minor	ckan-sprint-2011-12-05	ckan	fixed		johnglover kindly	ckan	dictization

@@ -1,0 +1,10 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2896,resource_create crashes on ValidationErrors with KeyError: 'resources',seanh,,"ckan/logic/action/create.py:resource_create():
+
+    try:
+        pkg_dict = _get_action('package_update')(context, pkg_dict)
+    except ValidationError, e:
+        errors = e.error_dict['resources'][-1]
+        raise ValidationError(errors)
+
+This assumes that package_update always returns an error dict with 'resources' in it. This assumption doesn't hold.",defect,new,awaiting triage,ckan-v1.8.1,ckan,,,,ckan,none

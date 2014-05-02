@@ -1,0 +1,7 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2986,Make lib/base.py more like it was originally intended,seanh,,"From Toby: make lib/base.py be more like it was originally intended eg defines
+stuff that is shared eg _ but maybe try to include stuff like
+render/get_action if the circular import stuff can be solved - which should
+be doable if hard and likely needs an extra file or two for the externals _
+etc
+",refactor,new,awaiting triage,ckan 2.0,ckan,,,,ckan,none

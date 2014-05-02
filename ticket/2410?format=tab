@@ -1,0 +1,77 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2410	New RDF serialization required VOID vocab for related datasets	ross	ross	"Taken from http://lists.okfn.org/pipermail/ckan-dev/2012-May/002218.html
+
+----
+
+A few months ago, the RDF provided when dereferencing a dataset's URI was very useful.
+It described the datasets using many of the ""right"" RDF vocabularies (dcterms, void, etc).
+
+The RDF that is returned now no longer has these nice descriptions. 
+Instead, it seems to be a mindless transcription of the CKAN record.
+
+For example, the older descriptions gave:
+
+<http://thedatahub.org/dataset/farmers-markets-geographic-data-united-states>
+   void:subset [
+       void:target <http://thedatahub.org/dataset/farmers-markets-geographic-data-united-states>, <http://thedatahub.org/dataset/geonames-semantic-web> ;
+       void:triples 50 ;
+       a void:Linkset
+   ], [
+       void:target <http://thedatahub.org/dataset/dbpedia>, <http://thedatahub.org/dataset/farmers-markets-geographic-data-united-states> ;
+       void:triples 52 ;
+       a void:Linkset
+   ], [
+       void:target <http://thedatahub.org/dataset/farmers-markets-geographic-data-united-states>, <http://thedatahub.org/dataset/govtrack> ;
+       void:triples 52 ;
+       a void:Linkset
+   ] ;
+   void:triples 130005 ;
+
+
+
+but now it's simply:
+
+<http://thedatahub.org/dataset/farmers-markets-geographic-data-united-states>
+   dct:relation  [
+       rdf:value ""130005"" ;
+       rdfs:label ""triples""
+   ], [
+       rdf:value ""52"" ;
+       rdfs:label ""links:dbpedia""
+   ], [
+       rdf:value ""50"" ;
+       rdfs:label ""links:geonames-semantic-web""
+   ], [
+       rdf:value ""52"" ;
+       rdfs:label ""links:govtrack""
+   ] ;
+
+
+My old copies of the dataset descriptions mentioned a ""GoLD CKAN 1.0"" that was credited for the nicer modeling.
+
+Where did that go? Can we get it back?
+
+Thanks,
+Tim Lebo
+
+
+
+
+<http://semantic.ckan.net/record/91d2c0de-75a4-4bb6-b260-bc2946e1be8b>
+   dc:source <http://ckan.net/> ;
+   opmv:wasGeneratedBy [
+       opmv:used <http://ckan.net/api/rest/package/farmers-markets-geographic-data-united-states>, <http://ckan.net/api/rest/revision/9c2545b8-ebf1-42bf-ac92-633ff5ceba3f> ;
+       opmv:wasControlledBy [
+           a foaf:Agent ;
+           foaf:name ""GoLD CKAN 1.0""
+       ] ;
+       opmv:wasPerformedAt [
+           a time:Instant ;
+           time:inXSDDateTime ""2012-01-31T05:34:32Z""^^xsd:dateTime
+       ] ;
+       a opmv:Process
+   ] ;
+   a dcat:CatalogRecord ;
+   dcat:dataset <http://thedatahub.org/dataset/farmers-markets-geographic-data-united-states> ;
+
+…"	enhancement	closed	awaiting triage	ckan-sprint-2012-05-29	ckan	wontfix			ckan	none

@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      PackageResources – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="help" href="TracGuide.html" />
+        <link rel="alternate" href="PackageResources%3Fformat=txt" type="text/x-trac-wiki" title="Plain Text" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/wiki.css" type="text/css" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("#content").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $("#content").find(".wikianchor").each(function() {
+          $(this).addAnchor(babel.format(_("Link to #%(id)s"), {id: $(this).attr('id')}));
+        });
+        $(".foldable").enableFolding(true, true);
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last active"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="pagepath" class="noprint">
+  <a class="pathentry first" title="View WikiStart" href="../wiki.1.html">wiki:</a><a class="pathentry" href="PackageResources.html" title="View PackageResources">PackageResources</a>
+</div>
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><a href="WikiStart.html">Start Page</a></li><li><a href="TitleIndex.html">Index</a></li><li class="last"><a href="PackageResources%3Faction=history.html">History</a></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="wiki">
+      <div class="wikipage searchable">
+        
+          
+          <div class="trac-modifiedby">
+            <span><a href="PackageResources%3Faction=diff&amp;version=2.html" title="Version 2 by rgrp">Last modified</a> <a class="timeline" href="../timeline%3Ffrom=2009-11-10T10:56:08Z&amp;precision=second.html" title="2009-11-10T10:56:08Z in Timeline">4 years</a> ago</span>
+            <span class="trac-print">Last modified on 11/10/09 10:56:08</span>
+          </div>
+          <div id="wikipage"><p>
+Discussion of resources referred to in package meta data (currently Download URL)
+</p>
+<p>
+On CKAN a Package just has metadata and doesn't store the resource (payload) (CKAN is just a registry). The CKAN metadata has a pointer, the download URL to find the associated resources.
+</p>
+<p>
+Two sorts of resource links:
+</p>
+<ol><li>Manifest
+</li></ol><p>
+A set of filenames with accompanying description.<br />
+e.g. [('!UkBirths1998.xls', '1998 data'), ('!UkBirths1999.xls', '1999 data')]
+</p>
+<ol start="2"><li>Distributions
+</li></ol><p>
+Each distribution is a serialisation / representation of the full Package - metadata + payload. (Or sometimes just the payload).<br />
+e.g. mysite.com/births.xls.zip which contains the two excel files<br />
+But it also includes cases where we have:
+</p>
+<ul><li>  mysite.com/births.csv.zip
+</li><li>  mysite.com/births/api (restful api to the same data)
+</li><li>  mysite.com/births.html (WUI to the same data)
+</li></ul><p>
+Different representations of the same material - how do we deal with this? Options:
+</p>
+<ol><li>Each distribution has its own CKAN package. The "Debian approach"
+</li><li>A CKAN package can refer to multiple distributions (e.g. via multiple download_urls). The "registry" approach.
+</li></ol><p>
+Both options could be used in practice with the choice dictated by how different the representations are (e.g. it might be that the RDF representation is really quite different from the csv -- and certainly more different than files zip versus tar.gz).
+</p>
+<h3 id="Proposal">Proposal</h3>
+<p>
+We should support both options.
+</p>
+<p>
+Option 1 requires no changes to CKAN.
+</p>
+<p>
+Option 2 does. Also suggest that we do more than simply provide additional download_url and as will likely want additional metadata (plus ability to set default etc etc). This should be discussed more in light of further discussion of requirements.
+</p>
+</div>
+        
+        
+      </div>
+      
+
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="last first">
+          <a rel="nofollow" href="PackageResources%3Fformat=txt">Plain Text</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

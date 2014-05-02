@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1804,CKAN mounted at URL - changing language problem,dread,toby,"e.g. http://189.9.137.65/dados/ clicking on Deutsch link is {{{http://189.9.137.65/dados/locale?locale=de&return_to=%2Fdados%2F&hash=1dc17c315c419df850da0dd3599eefa9da76fbeb}}} and redirect goes to {{{http://189.9.137.65/dados/dados/?__cache=97995106}}} so /dados/dados/ when it should be /dados.
+
+Affects CKAN 1.6b only (not yet released).",defect,closed,major,ckan-sprint-2012-03-05,ckan,fixed,[0.5d],augusto.herrmann@…,ckan,none

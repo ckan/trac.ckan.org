@@ -1,0 +1,14 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1574	[super] Storage changes	ross		"Allow uploading of files to push the data into webstore.  Initially we were going to suggest changes to ckanext-storage but after further analysis we arrived at the conclusion that this should be implemented by ckanext-archiver as it already handles archiving of data from various sources and would be the best place to 'archive' to webstore.
+
+1. A user wants to upload a file to CKAN, and so chooses the file upload option as they do currently with ckanext-storage. The file upload itself should be handled by this code internal to core (see #1608) but still using ofs
+
+2. The user is provided the link to the file as currently. 
+
+3. The archiver's update task will check configuration to determine if it should upload some mime-types (tabular formats) to webstore. Configuration should also determine where webstore is. (see #1609)
+
+	3a. It should be stored in webstore using {username}/{resource-id} where {username} is the name of the user uploading 	
+	    the original file.
+
+4. The archiver will continue to move the file into permanent storage as per current practice.
+"	enhancement	new	awaiting triage	ckan-backlog	ckan		storage,archiver		ckan	none

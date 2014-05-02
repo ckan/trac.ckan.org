@@ -1,0 +1,5 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2519	Dataproxy (converters) enhancement	ross	ross	"
+Whilst the error messages returned from the dataproxy are informative, they aren't particularly human readable.  It isn't clear to the user whether they should retry, or whether the format of their data is causing the problem etc...
+
+Would be lovely if the error messages returned contained a human readable version of the error."	enhancement	closed	awaiting triage	ckan-v1.9	ckan	fixed			ckan	none

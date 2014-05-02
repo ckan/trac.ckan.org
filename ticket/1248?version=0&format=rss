@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1248: License exception</title>
+    <link>http://localhost/ticket/1248</link>
+    <description>&lt;p&gt;
+Exception received on test.ckan.net at 10.12 on 29/7/11
+&lt;/p&gt;
+&lt;pre class="wiki"&gt;http://test.ckan.net/package?__cache=2759373&amp;amp;page=4
+Module pylons.controllers.core:60 in _perform_call
+&amp;lt;&amp;lt;          """Hide the traceback for everything above this method"""
+               __traceback_hide__ = 'before_and_this'
+               return func(**args)
+           def _inspect_call(self, func):
+&amp;gt;&amp;gt;  return func(**args)
+Module ckan.controllers.package:153 in search
+&amp;lt;&amp;lt;                          }
+                   query = get.package_search(context,data_dict)
+                   c.page = h.Page(
+&amp;gt;&amp;gt;  query = get.package_search(context,data_dict)
+Module ckan.logic.action.get:514 in package_search
+&amp;lt;&amp;lt;      for package in query.results:
+               result_dict = table_dictize(package, context)
+               result_dict = _extend_package_dict(result_dict,context)
+               results.append(result_dict)
+&amp;gt;&amp;gt;  result_dict = _extend_package_dict(result_dict,context)
+Module ckan.logic.action.get:537 in _extend_package_dict
+&amp;lt;&amp;lt;      license_id = package_dict['license_id']
+           if license_id:
+               isopen = model.Package.get_license_register()[license_id].isopen()
+               package_dict['isopen'] = isopen
+           else:
+&amp;gt;&amp;gt;  isopen = model.Package.get_license_register()[license_id].isopen()
+Module ckan.model.license:59 in __getitem__
+&amp;lt;&amp;lt;              return default
+               else:
+                   raise KeyError, "License not found: %s" % key
+           def get(self, key, default=None):
+&amp;gt;&amp;gt;  raise KeyError, "License not found: %s" % key
+KeyError: u'License not found: None'
+&lt;/pre&gt;</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1248</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Fri, 29 Jul 2011 15:43:19 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/1248#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1248#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1248?action=diff&amp;amp;version=1"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Fri, 28 Oct 2011 10:29:23 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/1248#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/1248#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Fixed in cset:188d27a56c89c35f97f3a79fdd0a6460223f86cf on branch release-v1.4.3.
+&lt;/p&gt;
+&lt;p&gt;
+This was only seen in CKAN 1.4.3beta.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

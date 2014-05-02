@@ -1,0 +1,10 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1294	[super] Package creation and editing UX improvements	rgrp	rgrp	"Largely an integration of work from ckanjs
+
+ * Simplify package create
+  * Initial screen just title, name, description (notes), license (and tags?). State that you can add data and more information on next screen. This takes you to Package 'view' where you can then do more stuff.
+ * Add resource via js pop-up
+ * #878 File upload integrated into resource creation
+ * In-place editing of notes field for existing packages
+ * In form user before save if not logged in and provide easy way to login or sign up
+"	enhancement	new	awaiting triage	ckan-v1.5	ckan				ckan	none

@@ -1,0 +1,33 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2547,ODS Initial data sets,ross,shevski,"
+== Requirements ==
+
+The ODS demo site will need data adding, initially as fixtures but it would also be useful if we started evaluating datasets that we can ship with ODS installations (at least in the UK) from places such as DGU and ONS.
+
+May wish to create a ticket for making sure the datasets within the system are reset every X hours. Perhaps.
+
+
+== Interface ==
+
+None
+
+== User Stories ==
+
+ * As a new system administrator for an ODS instance, I don't want to have a site devoid of any data. Geographically relevant datasets would be welcomed.
+
+ * As a bizdev person I would like to be able to demonstrate how ODS works with real datasets.
+
+
+== Tasks ==
+
+[ ] Identify relevant sources for datasets
+
+[ ] Pick datasets
+
+[ ] Set them up for import
+
+
+== Estimates ==
+
+
+",enhancement,assigned,awaiting triage,opendatasuite 2,ckan,,ods requirement,,ckan,none

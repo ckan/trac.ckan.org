@@ -1,0 +1,21 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2500,get_action should raise an exception if the action requested doesn't exist,icmurray,ross,"== Original bug report: ==
+
+> Hi CKAN devs,
+>
+> Can I request that ckan.logic.get_action raises an exception if
+> the action requested doesn't exist?
+
+> Two of us had a frustrating time tracking down an exception this
+> morning. It's difficult when the exception is raised in python in a
+> template because you don't get a line number. The problem was caused
+> by a new logic function being added to another extension, and we
+> hadn't updated the code there. So if get_action raised an proper
+> exception rather than silently returning None then I think we'd have
+> found the problem quicker.
+
+> I'd write the code for this, but as I understand that the new system
+> would require a ticket, branch, pull request, code review, merge. It
+> seems a lot to do for such a small thing.
+
+> Dave",defect,closed,awaiting merge,ckan-v1.8,ckan,fixed,,,ckan,none

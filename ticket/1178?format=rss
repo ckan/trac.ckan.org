@@ -1,0 +1,559 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1178: Local storage issue with ckanext-storage</title>
+    <link>http://localhost/ticket/1178</link>
+    <description>&lt;p&gt;
+I have followed the instruction for installation a configuration of ckanext-storage, but I am getting this error when I try to access the /storage/upload url:
+&lt;/p&gt;
+&lt;p&gt;
+URL: &lt;a class="ext-link" href="http://ckan.emap.fgv.br/storage/upload"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://ckan.emap.fgv.br/storage/upload&lt;/a&gt;
+Module weberror.errormiddleware:162 in &lt;span class="underline"&gt;call&lt;/span&gt;
+&amp;lt;&amp;lt;              &lt;span class="underline"&gt;traceback_supplement&lt;/span&gt; = Supplement, self, environ
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+sr_checker = &lt;a class="missing wiki"&gt;ResponseStartChecker?&lt;/a&gt;(start_response)
+app_iter = self.application(environ, sr_checker)
+return self.make_catching_iter(app_iter, environ, sr_checker)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+except:
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+app_iter = self.application(environ, sr_checker)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module beaker.middleware:73 in &lt;span class="underline"&gt;call&lt;/span&gt;
+&amp;lt;&amp;lt;                                                     self.cache_manager)
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+environ[self.environ_key] = self.cache_manager
+return self.app(environ, start_response)
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+return self.app(environ, start_response)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module beaker.middleware:152 in &lt;span class="underline"&gt;call&lt;/span&gt;
+&amp;lt;&amp;lt;                          headers.append(('Set-cookie', cookie))
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+return start_response(status, headers, exc_info)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+return self.wrap_app(environ, session_start_response)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+def _get_session(self):
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+return self.wrap_app(environ, session_start_response)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module routes.middleware:130 in &lt;span class="underline"&gt;call&lt;/span&gt;
+&amp;lt;&amp;lt;                  environ&lt;a class="missing wiki"&gt;SCRIPT_NAME?&lt;/a&gt; = environ&lt;a class="missing wiki"&gt;SCRIPT_NAME?&lt;/a&gt;[:-1]
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+response = self.app(environ, start_response)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+# Wrapped in try as in rare cases the attribute will be gone already
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+response = self.app(environ, start_response)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module pylons.wsgiapp:124 in &lt;span class="underline"&gt;call&lt;/span&gt;
+&amp;lt;&amp;lt;                  return &lt;a class="missing wiki"&gt;% paste.registry.restorer.get_request_id(environ)?&lt;/a&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+controller = self.resolve(environ, start_response)
+response = self.dispatch(controller, environ, start_response)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+controller = self.resolve(environ, start_response)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module pylons.wsgiapp:263 in resolve
+&amp;lt;&amp;lt;          if self.log_debug:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+log.debug("Resolved URL to controller: %r", controller)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+return self.find_controller(controller)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+def find_controller(self, controller):
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+return self.find_controller(controller)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module ckan.config.environment:39 in find_controller
+&amp;lt;&amp;lt;          # Check to see if its a dotted name
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+if '.' in controller or ':' in controller:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+mycontroller = pkg_resources.&lt;a class="missing wiki"&gt;EntryPoint?&lt;/a&gt;.parse('x=%s' % controller).load(False)
+self.controller_classes[controller] = mycontroller
+return mycontroller
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+mycontroller = pkg_resources.&lt;a class="missing wiki"&gt;EntryPoint?&lt;/a&gt;.parse('x=%s' % controller).load(False)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module pkg_resources:1954 in load
+&amp;lt;&amp;lt;      def load(self, require=True, env=None, installer=None):
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+if require: self.require(env, installer)
+entry = &lt;span class="underline"&gt;import&lt;/span&gt;(self.module_name, globals(),globals(), &lt;a class="missing wiki"&gt;__name__?&lt;/a&gt;)
+for attr in self.attrs:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+try:
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+entry = &lt;span class="underline"&gt;import&lt;/span&gt;(self.module_name, globals(),globals(), &lt;a class="missing wiki"&gt;__name__?&lt;/a&gt;)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module ?:87 in &amp;lt;module&amp;gt;
+&amp;lt;&amp;lt;  class StorageAPIController(&lt;a class="missing wiki"&gt;BaseController?&lt;/a&gt;):
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+ofs = get_ofs()
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+class StorageAPIController(&lt;a class="missing wiki"&gt;BaseController?&lt;/a&gt;):
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module ?:88 in StorageAPIController
+&amp;lt;&amp;lt;  class StorageAPIController(&lt;a class="missing wiki"&gt;BaseController?&lt;/a&gt;):
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+ofs = get_ofs()
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+@jsonpify
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+ofs = get_ofs()
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module ?:69 in get_ofs
+&amp;lt;&amp;lt;              continue
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+kw[k[4:]] = v
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+ofs = get_impl(storage_backend)(&lt;strong&gt;kw)
+return ofs
+&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+ofs = get_impl(storage_backend)(&lt;strong&gt;kw)
+&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module ofs.local.pairtreestore:26 in &lt;span class="underline"&gt;init&lt;/span&gt;
+&amp;lt;&amp;lt;          self.hashing_type = hashing_type
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+self.shorty_length = shorty_length
+self._open_store()
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+def _open_store(self):
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+self._open_store()
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module ofs.local.pairtreestore:30 in _open_store
+&amp;lt;&amp;lt;      def _open_store(self):
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+if self.hashing_type:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+self._store = &lt;a class="missing wiki"&gt;PairtreeStorageClient?&lt;/a&gt;(self.uri_base, self.storage_dir, shorty_length=self.shorty_length, hashing_type=self.hashing_type)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+else:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+self._store = &lt;a class="missing wiki"&gt;PairtreeStorageClient?&lt;/a&gt;(self.uri_base, self.storage_dir, shorty_length=shorty_length)
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+self._store = &lt;a class="missing wiki"&gt;PairtreeStorageClient?&lt;/a&gt;(self.uri_base, self.storage_dir, shorty_length=self.shorty_length, hashing_type=self.hashing_type)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module pairtree.pairtree_client:91 in &lt;span class="underline"&gt;init&lt;/span&gt;
+&amp;lt;&amp;lt;          self._decode = re.compile(r"\&lt;sup&gt;(..)", re.U)
+&lt;/sup&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+self._init_store()
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+def &lt;span class="underline"&gt;char2hex(self, m):
+&lt;/span&gt;&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+self._init_store()
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module pairtree.pairtree_client:264 in _init_store
+&amp;lt;&amp;lt;                      self.uri_base = prefix
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+else:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+raise NotAPairtreeStoreException
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+if not os.path.isdir(self.store_dir):
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+raise NotAPairtreeStoreException
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+NotAPairtreeStoreException:
+CGI Variables
+AUTH_TYPE         'cookie'
+DOCUMENT_ROOT         '/etc/apache2/htdocs'
+GATEWAY_INTERFACE         'CGI/1.1'
+HTTP_ACCEPT         'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+HTTP_ACCEPT_CHARSET         'ISO-8859-1,utf-8;q=0.7,*;q=0.7'
+HTTP_ACCEPT_ENCODING         'gzip, deflate'
+HTTP_ACCEPT_LANGUAGE         'pt-br,pt;q=0.8,en-us;q=0.5,en;q=0.3'
+HTTP_CONNECTION         'keep-alive'
+HTTP_COOKIE         '&lt;span class="underline"&gt;utma=4669863.1260802706.1295364409.1306935693.1306960483.86; &lt;/span&gt;utmz=4669863.1295364409.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); SESS61faf7f7d2406929b2f9eb4cbfff17d2=a3306f5d1194cf0d8a51dbf7b42c1259; ckan=d4951177ef995d92f0f987d481bd9180aa0f89e4518921db9cd9b6ac75fdd3fab4a25d06; auth_tkt="c6c3c3e0b3fe7bb765356659992760b24da43221flaviouserid_type:unicode"; auth_tkt="c6c3c3e0b3fe7bb765356659992760b24da43221flaviouserid_type:unicode"; ckan_user="flavio"; ckan_display_name="Fl\xc3\xa1vio Code\xc3\xa7o Coelho"; ckan_apikey="c139718d-918f-4a2b-b219-e33cb05cbe23"; &lt;span class="underline"&gt;utmc=4669863; hide_welcome_message=1'
+HTTP_HOST         'ckan.emap.fgv.br'
+HTTP_KEEP_ALIVE         '115'
+HTTP_USER_AGENT         'Mozilla/5.0 (X11; Linux x86_64; rv:2.0.1) Gecko/20100101 Firefox/4.0.1'
+PATH_INFO         '/storage/upload'
+PATH_TRANSLATED         '/home/flavio/var/srvc/ckan.emap.fgv.br/pyenv/bin/ckan.emap.fgv.br.py/storage/upload'
+REMOTE_ADDR         '10.250.48.110'
+REMOTE_PORT         '57426'
+REMOTE_USER         u'flavio'
+REMOTE_USER_DATA         'userid_type:unicode'
+REMOTE_USER_TOKENS         [&lt;em&gt;]
+REQUEST_METHOD         'GET'
+REQUEST_URI         '/storage/upload'
+SCRIPT_FILENAME         '/home/flavio/var/srvc/ckan.emap.fgv.br/pyenv/bin/ckan.emap.fgv.br.py'
+SERVER_ADDR         '10.252.2.60'
+SERVER_ADMIN         '[no address given]'
+SERVER_NAME         'ckan.emap.fgv.br'
+SERVER_PORT         '80'
+SERVER_PROTOCOL         'HTTP/1.1'
+SERVER_SIGNATURE         '&amp;lt;address&amp;gt;Apache/2.2.16 (Debian) Server at ckan.emap.fgv.br Port 80&amp;lt;/address&amp;gt;\n'
+SERVER_SOFTWARE         'Apache/2.2.16 (Debian)'
+WSGI Variables
+application         &amp;lt;beaker.middleware.&lt;a class="missing wiki"&gt;CacheMiddleware?&lt;/a&gt; object at 0x7fc2999a6cd0&amp;gt;
+beaker.cache         &amp;lt;beaker.cache.&lt;a class="missing wiki"&gt;CacheManager?&lt;/a&gt; object at 0x7fc2999a6d90&amp;gt;
+beaker.get_session         &amp;lt;bound method &lt;a class="missing wiki"&gt;SessionMiddleware?&lt;/a&gt;._get_session of &amp;lt;beaker.middleware.&lt;a class="missing wiki"&gt;SessionMiddleware?&lt;/a&gt; object at 0x7fc2999a6d10&amp;gt;&amp;gt;
+beaker.session         {'locale': u'pt_BR', '_accessed_time': 1307373458.4790759, '_creation_time': 1302605470.0245121}
+mod_wsgi.application_group         'dck093|'
+mod_wsgi.callable_object         'application'
+mod_wsgi.handler_script         &lt;/em&gt;
+mod_wsgi.input_chunked         '0'
+mod_wsgi.listener_host         &lt;em&gt;
+mod_wsgi.listener_port         '80'
+mod_wsgi.process_group         'ckan'
+mod_wsgi.request_handler         'wsgi-script'
+mod_wsgi.script_reloading         '1'
+mod_wsgi.version         (3, 3)
+paste.cookies         (&amp;lt;SimpleCookie: SESS61faf7f7d2406929b2f9eb4cbfff17d2='a3306f5d1194cf0d8a51dbf7b42c1259' __utma='4669863.1260802706.1295364409.1306935693.1306960483.86' __utmc='4669863' __utmz='4669863.1295364409.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)' auth_tkt='c6c3c3e0b3fe7bb765356659992760b24da43221flavio!userid_type:unicode' ckan='d4951177ef995d92f0f987d481bd9180aa0f89e4518921db9cd9b6ac75fdd3fab4a25d06' ckan_apikey='c139718d-918f-4a2b-b219-e33cb05cbe23' ckan_display_name='Fl\xc3\xa1vio Code\xc3\xa7o Coelho' ckan_user='flavio' hide_welcome_message='1'&amp;gt;, '&lt;/em&gt;&lt;/span&gt;&lt;em&gt;utma=4669863.1260802706.1295364409.1306935693.1306960483.86; &lt;span class="underline"&gt;utmz=4669863.1295364409.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); SESS61faf7f7d2406929b2f9eb4cbfff17d2=a3306f5d1194cf0d8a51dbf7b42c1259; ckan=d4951177ef995d92f0f987d481bd9180aa0f89e4518921db9cd9b6ac75fdd3fab4a25d06; auth_tkt="c6c3c3e0b3fe7bb765356659992760b24da43221flavio!userid _type:unicode"; auth_tkt="c6c3c3e0b3fe7bb765356659992760b24da43221fla...lcome_message=1')
+paste.registry         &amp;lt;paste.registry.Registry object at 0x7fc299de4f50&amp;gt;
+paste.throw_errors         True
+pylons.environ_config         {'session': 'beaker.session', 'cache': 'beaker.cache'}
+pylons.pylons         &amp;lt;pylons.util.&lt;a class="missing wiki"&gt;PylonsContext?&lt;/a&gt; object at 0x7fc299e27d50&amp;gt;
+pylons.routes_dict         {'action': u'index', 'controller': u'ckanext.storage.controller:StorageController'}
+repoze.who.identity         &amp;lt;repoze.who identity (hidden, dict-like) at 140473773131872&amp;gt;
+repoze.who.logger         &amp;lt;logging.Logger instance at 0x7fc2999a3b48&amp;gt;
+repoze.who.plugins         {'openid': &amp;lt;&lt;a class="missing wiki"&gt;OpenIdIdentificationPlugin?&lt;/a&gt; 140473779397008&amp;gt;, 'friendlyform': &amp;lt;&lt;a class="missing wiki"&gt;FriendlyFormPlugin?&lt;/a&gt; 140473777417040&amp;gt;, 'ckan.lib.authenticator:UsernamePasswordAuthenticator': &amp;lt;ckan.lib.authenticator.&lt;a class="missing wiki"&gt;UsernamePasswordAuthenticator?&lt;/a&gt; object at 0x7fc299b93a50&amp;gt;, 'auth_tkt': &amp;lt;&lt;a class="missing wiki"&gt;AuthTktCookiePlugin?&lt;/a&gt; 140473779397136&amp;gt;, 'ckan.lib.authenticator:OpenIDAuthenticator': &amp;lt;ckan.lib.authenticator.OpenIDAuthenticator object at 0x7fc299b934d0&amp;gt;}
+routes.route         &amp;lt;routes.route.Route object at 0x7fc299864090&amp;gt;
+routes.url         &amp;lt;routes.util.URLGenerator object at 0x7fc299e27ed0&amp;gt;
+webob._parsed_query_vars         (GET([]), &lt;/span&gt;&lt;/em&gt;&lt;span class="underline"&gt;)
+webob.adhoc_attrs         {'language': 'en-us'}
+wsgi process         'Multi process AND threads (?)'
+wsgi.file_wrapper         &amp;lt;built-in method file_wrapper of mod_wsgi.Adapter object at 0x7fc299dae4e0&amp;gt;
+wsgi.version         (1, 1)
+wsgiorg.routing_args         (&amp;lt;routes.util.URLGenerator object at 0x7fc299e27ed0&amp;gt;, {'action': u'index', 'controller': u'ckanext.storage.controller:StorageController'})
+Reply
+Reply to all
+Forward
+Reply to all
+paste@localhost to fccoelho
+show details 10:17 (2 hours ago)
+&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Show quoted text -
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+CGI Variables
+AUTH_TYPE         'cookie'
+DOCUMENT_ROOT         '/etc/apache2/htdocs'
+GATEWAY_INTERFACE         'CGI/1.1'
+HTTP_ACCEPT         'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+HTTP_ACCEPT_CHARSET         'ISO-8859-1,utf-8;q=0.7,*;q=0.7'
+HTTP_ACCEPT_ENCODING         'gzip, deflate'
+HTTP_ACCEPT_LANGUAGE         'pt-br,pt;q=0.8,en-us;q=0.5,en;q=0.3'
+HTTP_CONNECTION         'keep-alive'
+HTTP_COOKIE         '&lt;span class="underline"&gt;utma=4669863.1260802706.1295364409.1306935693.1306960483.86; &lt;/span&gt;utmz=4669863.1295364409.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); SESS61faf7f7d2406929b2f9eb4cbfff17d2=a3306f5d1194cf0d8a51dbf7b42c1259; ckan=d4951177ef995d92f0f987d481bd9180aa0f89e4518921db9cd9b6ac75fdd3fab4a25d06; auth_tkt="c6c3c3e0b3fe7bb765356659992760b24da43221flaviouserid_type:unicode"; auth_tkt="c6c3c3e0b3fe7bb765356659992760b24da43221flaviouserid_type:unicode"; ckan_user="flavio"; ckan_display_name="Fl\xc3\xa1vio Code\xc3\xa7o Coelho"; ckan_apikey="c139718d-918f-4a2b-b219-e33cb05cbe23"; &lt;span class="underline"&gt;utmc=4669863; hide_welcome_message=1'
+HTTP_HOST         'ckan.emap.fgv.br'
+HTTP_KEEP_ALIVE         '115'
+HTTP_USER_AGENT         'Mozilla/5.0 (X11; Linux x86_64; rv:2.0.1) Gecko/20100101 Firefox/4.0.1'
+PATH_INFO         '/storage/upload'
+PATH_TRANSLATED         '/home/flavio/var/srvc/ckan.emap.fgv.br/pyenv/bin/ckan.emap.fgv.br.py/storage/upload'
+REMOTE_ADDR         '10.250.48.110'
+REMOTE_PORT         '57429'
+REMOTE_USER         u'flavio'
+REMOTE_USER_DATA         'userid_type:unicode'
+REMOTE_USER_TOKENS         [&lt;em&gt;]
+REQUEST_METHOD         'GET'
+REQUEST_URI         '/storage/upload'
+SCRIPT_FILENAME         '/home/flavio/var/srvc/ckan.emap.fgv.br/pyenv/bin/ckan.emap.fgv.br.py'
+SERVER_ADDR         '10.252.2.60'
+SERVER_ADMIN         '[no address given]'
+SERVER_NAME         'ckan.emap.fgv.br'
+SERVER_PORT         '80'
+SERVER_PROTOCOL         'HTTP/1.1'
+SERVER_SIGNATURE         '&amp;lt;address&amp;gt;Apache/2.2.16 (Debian) Server at ckan.emap.fgv.br Port 80&amp;lt;/address&amp;gt;\n'
+SERVER_SOFTWARE         'Apache/2.2.16 (Debian)'
+WSGI Variables
+application         &amp;lt;beaker.middleware.&lt;a class="missing wiki"&gt;CacheMiddleware?&lt;/a&gt; object at 0x7fc2999a6cd0&amp;gt;
+beaker.cache         &amp;lt;beaker.cache.&lt;a class="missing wiki"&gt;CacheManager?&lt;/a&gt; object at 0x7fc2999a6d90&amp;gt;
+beaker.get_session         &amp;lt;bound method &lt;a class="missing wiki"&gt;SessionMiddleware?&lt;/a&gt;._get_session of &amp;lt;beaker.middleware.&lt;a class="missing wiki"&gt;SessionMiddleware?&lt;/a&gt; object at 0x7fc2999a6d10&amp;gt;&amp;gt;
+beaker.session         {'locale': u'pt_BR', '_accessed_time': 1307373466.085686, '_creation_time': 1302605470.0245121}
+mod_wsgi.application_group         'dck093|'
+mod_wsgi.callable_object         'application'
+mod_wsgi.handler_script         &lt;/em&gt;
+mod_wsgi.input_chunked         '0'
+mod_wsgi.listener_host         &lt;em&gt;
+mod_wsgi.listener_port         '80'
+mod_wsgi.process_group         'ckan'
+mod_wsgi.request_handler         'wsgi-script'
+mod_wsgi.script_reloading         '1'
+mod_wsgi.version         (3, 3)
+paste.cookies         (&amp;lt;SimpleCookie: SESS61faf7f7d2406929b2f9eb4cbfff17d2='a3306f5d1194cf0d8a51dbf7b42c1259' __utma='4669863.1260802706.1295364409.1306935693.1306960483.86' __utmc='4669863' __utmz='4669863.1295364409.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)' auth_tkt='c6c3c3e0b3fe7bb765356659992760b24da43221flavio!userid_type:unicode' ckan='d4951177ef995d92f0f987d481bd9180aa0f89e4518921db9cd9b6ac75fdd3fab4a25d06' ckan_apikey='c139718d-918f-4a2b-b219-e33cb05cbe23' ckan_display_name='Fl\xc3\xa1vio Code\xc3\xa7o Coelho' ckan_user='flavio' hide_welcome_message='1'&amp;gt;, '&lt;/em&gt;&lt;/span&gt;&lt;em&gt;utma=4669863.1260802706.1295364409.1306935693.1306960483.86; &lt;span class="underline"&gt;utmz=4669863.1295364409.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); SESS61faf7f7d2406929b2f9eb4cbfff17d2=a3306f5d1194cf0d8a51dbf7b42c1259; ckan=d4951177ef995d92f0f987d481bd9180aa0f89e4518921db9cd9b6ac75fdd3fab4a25d06; auth_tkt="c6c3c3e0b3fe7bb765356659992760b24da43221flavio!userid _type:unicode"; auth_tkt="c6c3c3e0b3fe7bb765356659992760b24da43221fla...lcome_message=1')
+paste.registry         &amp;lt;paste.registry.Registry object at 0x7fc29a9da850&amp;gt;
+paste.throw_errors         True
+pylons.environ_config         {'session': 'beaker.session', 'cache': 'beaker.cache'}
+pylons.pylons         &amp;lt;pylons.util.&lt;a class="missing wiki"&gt;PylonsContext?&lt;/a&gt; object at 0x7fc29a9ef950&amp;gt;
+pylons.routes_dict         {'action': u'index', 'controller': u'ckanext.storage.controller:StorageController'}
+repoze.who.identity         &amp;lt;repoze.who identity (hidden, dict-like) at 140473790084352&amp;gt;
+repoze.who.logger         &amp;lt;logging.Logger instance at 0x7fc2999a3b48&amp;gt;
+repoze.who.plugins         {'openid': &amp;lt;&lt;a class="missing wiki"&gt;OpenIdIdentificationPlugin?&lt;/a&gt; 140473779397008&amp;gt;, 'friendlyform': &amp;lt;&lt;a class="missing wiki"&gt;FriendlyFormPlugin?&lt;/a&gt; 140473777417040&amp;gt;, 'ckan.lib.authenticator:UsernamePasswordAuthenticator': &amp;lt;ckan.lib.authenticator.&lt;a class="missing wiki"&gt;UsernamePasswordAuthenticator?&lt;/a&gt; object at 0x7fc299b93a50&amp;gt;, 'auth_tkt': &amp;lt;&lt;a class="missing wiki"&gt;AuthTktCookiePlugin?&lt;/a&gt; 140473779397136&amp;gt;, 'ckan.lib.authenticator:OpenIDAuthenticator': &amp;lt;ckan.lib.authenticator.OpenIDAuthenticator object at 0x7fc299b934d0&amp;gt;}
+routes.route         &amp;lt;routes.route.Route object at 0x7fc299864090&amp;gt;
+routes.url         &amp;lt;routes.util.URLGenerator object at 0x7fc29a9efcd0&amp;gt;
+webob._parsed_query_vars         (GET([]), &lt;/span&gt;&lt;/em&gt;&lt;span class="underline"&gt;)
+webob.adhoc_attrs         {'language': 'en-us'}
+wsgi process         'Multi process AND threads (?)'
+wsgi.file_wrapper         &amp;lt;built-in method file_wrapper of mod_wsgi.Adapter object at 0x7fc29a9d7d50&amp;gt;
+wsgi.version         (1, 1)
+wsgiorg.routing_args         (&amp;lt;routes.util.URLGenerator object at 0x7fc29a9efcd0&amp;gt;, {'action': u'index', 'controller': u'ckanext.storage.controller:StorageController'})
+&lt;/span&gt;&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1178</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Tue, 14 Jun 2011 09:55:51 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/1178#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1178#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Fixed. This was due to incorrect config of bucket option.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

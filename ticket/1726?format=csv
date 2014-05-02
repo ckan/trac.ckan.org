@@ -1,0 +1,7 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1726,Update harvesting model,amercader,amercader,"We need:
+ * ""current"" column in harvest_object
+ * ""harvest_source_id"" column in harvest_object, foreign key to harvest_source
+ * ""title"" column in harvest_source
+
+The extension should check on startup if the db needs updating and run the necessary scripts.",enhancement,closed,major,ckan-sprint-2012-02-06,ckan,fixed,"harvesting, uklp, 1.5d",,ckanext-harvest,none

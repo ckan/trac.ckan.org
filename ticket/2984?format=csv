@@ -1,0 +1,5 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2984,"Auto-populate context with user, model, session, etc.",seanh,,"From Toby: make the context auto-populated with things like user/model/session if
+not user supplied - especially for extensions (pre 2.0) maybe via a helper
+or else a decorator on the action - helper seems nicer maybe done via
+get_action()",refactor,new,awaiting triage,ckan 2.0,ckan,,,,ckan,none

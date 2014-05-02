@@ -1,0 +1,7 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2197	Storage Metadata API: add/update not working with local file storage (Pairtree)	zydio		"If OFS is configured with Pairtree to use a local file storage, all POST requests to add/update metadata ( /api/storage/metadata/{label} ) will fail.
+
+This is due to the use of [https://github.com/okfn/ofs/blob/master/ofs/remote/botostore.py BotoOFS] specific ''private'' methods in [https://github.com/okfn/ckan/blob/master/ckan/controllers/storage.py StorageAPIController.set_metadata()], eg: self.ofs.'''_require_bucket'''(bucket), self.ofs.'''_get_key'''(b, label), self.ofs.'''_update_key_metadata'''(k, metadata) ... those methods can't be found in [https://github.com/okfn/ofs/blob/master/ofs/local/pairtreestore.py POTFS] and this causes errors.
+The API should use only [https://github.com/okfn/ofs/blob/master/ofs/base.py OFSInterface] methods, or should conditionally make calls based off the actual type of ''self.ofs''.
+
+''PS: I did set ""ckan"" as ""Component"" in the ticket because storage has been integrated back into the core in CKAN 1.6''"	defect	assigned	awaiting triage	ckan-backlog	ckan		storage ckanext-storage		ckan	none

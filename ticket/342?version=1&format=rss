@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #342: JSONP parameter in API</title>
+    <link>http://localhost/ticket/342</link>
+    <description>&lt;h2 id="Asa"&gt;As a&lt;/h2&gt;
+&lt;p&gt;
+CKAN client using JQuery
+&lt;/p&gt;
+&lt;h2 id="Iwantto"&gt;I want to&lt;/h2&gt;
+&lt;p&gt;
+call the CKAN API and instead of receiving back JSON I get JSONP. i.e. "%s(%s)" % (callback, json_content)
+&lt;/p&gt;
+&lt;h2 id="Suggestedimplementation"&gt;Suggested implementation&lt;/h2&gt;
+&lt;p&gt;
+All API calls allow the JSONP 'callback' parameter to be specified in the request and this wraps the JSON response. See suggested patch to rest.py by Donovan Hide:
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a class="ext-link" href="http://knowledgeforge.net/ckan/trac/attachment/ticket/336/resource.patch"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://knowledgeforge.net/ckan/trac/attachment/ticket/336/resource.patch&lt;/a&gt;
+&lt;/p&gt;
+&lt;h2 id="Test"&gt;Test&lt;/h2&gt;
+&lt;p&gt;
+import re
+import unittest
+&lt;/p&gt;
+&lt;p&gt;
+def test_jsonp_callback():
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+response = self.app.get('/api/search/resource/?url=&lt;a class="ext-link" href="http://www.scraperwiki.com&amp;amp;callback=jsoncallback"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://www.scraperwiki.com&amp;amp;callback=jsoncallback&lt;/a&gt;')
+match = re.match('jsoncallback\(.*\);',response)
+self.assertTrue(match)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+response = self.app.get('/api/search/resource/?url=&lt;a class="ext-link" href="http://www.scraperwiki.com"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://www.scraperwiki.com&lt;/a&gt;')
+match = re.match('jsoncallback\(.*\);',response)
+self.assertFalse(match)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+I think the point needs to be made that JSONP only works for GET
+requests and not POST/PUT/DELETE, so there needs to be a check
+for that in the _finish_ok method.
+&lt;/p&gt;
+&lt;p&gt;
+(thanks to Donovan Hide for test)
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/342</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Thu, 10 Jun 2010 13:17:19 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/342#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/342#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/342?action=diff&amp;amp;version=1"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Fri, 11 Jun 2010 17:48:05 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/342#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/342#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Done in cset:61f145b7d4a8
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

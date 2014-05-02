@@ -1,0 +1,61 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2551	Feature metrics	ross	johnglover	"
+== Requirements ==
+
+Would be useful if we could extend the Google Analytics extension to push track events to GA so that we can determine how the system is being used, and where we can optimise the workflow.
+
+Assuming it isn't configured to be off, track events should be added to some key action buttons so that the information on what users are doing is logged for analysis.
+
+
+== Interface ==
+
+This could possibly just be a list of JS calls to $('x').click(_gaq.push('track'...))
+
+
+== User Stories ==
+
+ * As a developer I would like to know which components of the system are used the most so I can streamline the processes.
+
+ * As a support developer I would like to know which parts add complexity to the system for minimal gain and could possibly be removed, de-prioritised.
+
+For which metrics, as many of the following as possible that are achievable without changing the templates. I think for now it is enough to just record counts of these pages/actions.
+
+ * Any group link on homepage
+ 
+ * Clicking on username (to go to profile)
+ 
+ * In user profile, clicking on Edit Profile
+ 
+ * Clicking Save Changes on Edit Profile page
+ 
+ * Clicking on any dataset link on User Profile page
+ 
+ * Any of the group links on /group
+ 
+ * Clicking any of the right hand sidebar tags on /group/X
+ 
+ * Visiting /group/history/X 
+ 
+ * Compare Button on /group/history/X
+ 
+ * Compare Button on /dataset/history/X  
+ 
+ * Tags on right hand sidebar of /dataset/X   
+ 
+ * Download button on any /dataset/X/resource/* page 
+ 
+ * Data API button on any /dataset/X/resource/* page
+
+
+== Tasks ==
+
+[ ] Analysis/Clarification
+
+[ ] Code/Config changes
+
+[ ] Documentation
+
+
+== Estimates ==
+
+"	enhancement	assigned	awaiting triage	datahub-oct	ckan				ckan	none

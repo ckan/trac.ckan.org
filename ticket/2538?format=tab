@@ -1,0 +1,4 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2538	Add multiple-instance support to ckanbuild	seanh	seanh	"Probably use ansible to do this. To create an instance, create a dir at /etc/ckan/MYSITE, and put MYSITE.wsgi, MYSITE.ini and who.ini files in it. Also put a MYSITE file in /etc/apache2/sites-available. See the example files already present in ckanbuild. Booting a new site should be a single command.
+
+May not handle the postgres/solr/elastic-search side of things yet, could just require the user to set these up herself first and then pass them as args to the create-instance command."	enhancement	accepted	awaiting triage	ckanbuild	ckan		deployment		ckan	none

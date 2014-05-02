@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1290: Better error when blank database</title>
+    <link>http://localhost/ticket/1290</link>
+    <description>&lt;p&gt;
+When installing CKAN, when doing "paster serve development.ini", lots of users encounter the error for every request:
+&lt;/p&gt;
+&lt;pre class="wiki"&gt;ProgrammingError: (ProgrammingError) relation "user" does not exist
+&lt;/pre&gt;&lt;p&gt;
+This is because the database tables have not been created - they have forgotten or missed the "paster db init" step.
+&lt;/p&gt;
+&lt;p&gt;
+Can we provide a better error to say that the database is not initialised yet?
+&lt;/p&gt;
+&lt;p&gt;
+Implementation options
+======================
+&lt;/p&gt;
+&lt;ol&gt;&lt;li&gt;At the start of every request we reflect the database tables and check they are there. This is rather expensive!
+&lt;/li&gt;&lt;/ol&gt;&lt;ol start="2"&gt;&lt;li&gt;Uncached requests to the home page start with a cheap database query. If there is an exception then return this error about database setup. I really like Drupal's page for this that has in large letters that the site is currently off-line. Below a line, in small letters, there are developer suggestions on what is wrong and where to look to fix it.
+&lt;/li&gt;&lt;/ol&gt;</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1290</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Thu, 25 Aug 2011 09:24:43 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/1290#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1290#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1290?action=diff&amp;amp;version=1"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Thu, 25 Aug 2011 11:14:54 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/1290#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/1290#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Improved on option 2. For requests to Home controller, the first thing it does is check the user. I catch SQL errors that are to do with missing tables and that now produces a template-less error saying the site is off-line and then mentions database initialisation.
+&lt;/p&gt;
+&lt;p&gt;
+Done in cset:484e50c4f989 on default for ckan 1.4.4.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

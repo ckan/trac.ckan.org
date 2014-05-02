@@ -1,0 +1,8 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1509	Mis-dated old revisions of datasets	dread		"e.g. http://thedatahub.org/dataset/osm%402011-07-12T12%3A16%3A47.590358 gives:
+{{{
+This is the current revision of this dataset, as edited at 2011-07-12 12:16.
+}}}
+but it should say the date 2011-07-12 (which is the data being displayed).
+
+The problem is looking at PackageRevision, when it might be a tag or extra."	defect	assigned	minor		ckan				ckan	none

@@ -1,0 +1,37 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2550,User types,ross,ross,"== Requirements ==
+
+In the data hub plugin we require the ability to differentiate users between those that have paid for a service, and those that haven't. The distinction isn't boolean as there may be levels of service for paid users, so it may be that we need a 'type' of user where there are various grades of 'paid' which are likely to be strings (specific to the data hub).
+
+== Required interface ==
+
+Once changes have been made to the user schema, for a given user we want to be able to:
+
+ * determine if they have a paid or a free account, and
+ * get a string name of the type of paid account.
+
+Care should be taken to ensure that the 'paid' status of the user cannot be set through the API and only by the datahub plugin.
+
+== User Stories ==
+
+None
+
+== Tasks ==
+
+[ ] Tests
+
+[ ] Plugin based migration
+
+[ ] Code
+
+    [ ] Model
+
+    [ ] API
+
+[ ] Documentation
+
+
+== Estimates ==
+
+
+",enhancement,accepted,awaiting triage,datahub-july,ckan,,,,ckan,none

@@ -1,0 +1,30 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1217	Diff exception	dread	dread	"Exception raised doing this particular diff.
+
+http://ckan.net/revision/diff/sudocfr?diff_entity=package&oldid=a18b2520-09e0-44be-80dd-4fea94ffe7d1&diff=3934ff16-a3a7-4481-b390-72944903b945
+
+{{{
+...
+Module ckan.controllers.revision:142 in diff
+<<          if c.diff_entity == 'package':
+                   c.pkg = model.Package.by_name(id)
+                   diff = c.pkg.diff(c.revision_to, c.revision_from)
+               elif c.diff_entity == 'group':
+                   c.group = model.Group.by_name(id)
+>>  diff = c.pkg.diff(c.revision_to, c.revision_from)
+Module ckan.model.package:449 in diff
+<<                              display_id = to_obj_rev.tag.name
+                               elif obj_class.__name__ == 'PackageExtra':
+                                   display_id = to_obj_rev.key
+                               else:
+                                   display_id = related_obj_id[:4]
+>>  display_id = to_obj_rev.key
+AttributeError: 'NoneType' object has no attribute 'key'
+}}}
+
+Seems to be to do with this particular extra key:
+{{{
+[<PackageExtraRevision id=ba1f3b3e-f61f-4924-bae0-ec3dd2163ae4 package_id=febe4da9-5874-4411-a7da-b497fdebf739 key=namespace value=http://www.sudoc.fr/ state=active revision_id=5ec8e730-c73d-4f1c-989b-2e015eb3d315 continuity_id=ba1f3b3e-f61f-4924-bae0-ec3dd2163ae4 expired_id=None revision_timestamp=2011-07-08 13:48:11.027260 expired_timestamp=9999-12-31 00:00:00 current=True>]
+}}}
+
+Is it because it was created between the from_revision and to_revision?"	defect	closed	minor	ckan-sprint-2011-11-07	ckan	invalid			ckan	none

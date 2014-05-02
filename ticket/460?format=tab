@@ -1,0 +1,19 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+460	State field changed by non-sysadmin	johnbywater	pudo	"This package:
+
+http://ckan.net/package/dbtune-audioscrobbler
+
+was:
+ 1. created by Richard (logged-in)
+ 2. edited by Richard (logged-in)
+(According to the logs, at this point the state was changed from 'active' to 'deleted') -- RP was it set to 'deleted' or just ''?
+ 3. pudo changed the state back to active
+
+Similarly an incident with bibbase package where field set to '' (see http://ckan.net/revision/diff/bibbase?diff=702bb0a3-03b7-49ac-87ad-e489c414962f&oldid=5447842d-b6ed-41d9-9cfd-8bb73b85c409)
+
+Need to investigate how this got changed, fix if necessary and report back to Richard. Note that package 'admins' as well as sysadmins can change the state of a package (though note that bibbase did not appear to have an owner).
+
+Suggested solution (for setting to ''):
+
+  * Ensure in ckan/forms.py that there is a validator for state field that ensures only set to valid values.
+  * Check that we do not allow state to be changed in the api except by package owner or sysadmin"	defect	closed	critical		ckan	fixed			ckan	none

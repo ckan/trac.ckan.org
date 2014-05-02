@@ -1,0 +1,24 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+368	500 Server error when creating package	anonymous		"
+I've just started writing the importer from cap.open.org.nz and was running an initial import of just the package name and titles. The packages were created however I received a 500 error in response:
+
+""publish: New Zealand Coastline (new-zealand-coastline)""
+opening connection to nz.ckan.net...
+opened
+<- ""POST /api/rest/package HTTP/1.1\r\nContent-Type: application/x-www-form-urlencoded\r\nConnection: close\r\nAuthorization: 81179ade-fa4a-4632-9b89-3d0c98bfc8b8\r\nContent-Length: 64\r\nHost: nz.ckan.net\r\n\r\n""
+<- ""{\""name\"":\""new-zealand-coastline\"",\""title\"":\""New Zealand Coastline\""}""
+-> ""HTTP/1.1 500 Internal Server Error\r\n""
+-> ""Date: Tue, 20 Jul 2010 10:20:35 GMT\r\n""
+-> ""Server: Apache/2.2.9 (Debian) mod_wsgi/2.5 Python/2.5.2\r\n""
+-> ""Vary: Accept-Encoding\r\n""
+-> ""Content-Type: text/html; charset=iso-8859-1\r\n""
+-> ""Cache-Control: proxy-revalidate\r\n""
+-> ""Content-Length: 640\r\n""
+-> ""Connection: close\r\n""
+-> ""\r\n""
+reading 640 bytes...
+-> ""<!DOCTYPE HTML PUBLIC \""-//IETF//DTD HTML 2.0//EN\"">\n<html><head>\n<title>500 Internal Server Error</title>\n</head><body>\n<h1>Internal Server Error</h1>\n<p>The server encountered an internal error or\nmisconfiguration and was unable to complete\nyour request.</p>\n<p>Please contact the server administrator,\n [no address given] and inform them of the time the error occurred,\nand anything you might have done that may have\ncaused the error.</p>\n<p>More information about this error may be available\nin the server error log.</p>\n<hr>\n<address>Apache/2.2.9 (Debian) mod_wsgi/2.5 Python/2.5.2 Server at nz.ckan.net Port 80</address>\n</body></html>\n""
+read 640 bytes
+Conn close
+
+The server should not respond with a 500 error if the package was created. "	defect	closed	awaiting triage		ckan	wontfix				

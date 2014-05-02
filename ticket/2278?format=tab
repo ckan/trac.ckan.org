@@ -1,0 +1,4 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2278	DataStore enabled is disabled by default but is needed for DataStorer to run	rgrp	rgrp	"Major UX gotcha reported by several people is that DataStore is disabled by default and must be enabled for DataStorer to run and import data.
+
+Suggest switch to enable datastore by default for file and file.upload types (disable for API). People can always disable if they want."	defect	closed	awaiting triage	ckan-sprint-2012-04-16	ckan	fixed	[0.1d]		ckan	none

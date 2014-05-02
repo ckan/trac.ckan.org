@@ -1,0 +1,22 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2951	Paster command for building css from less	icmurray		"With the latest template, css and js changes in 2.0, there are a number of things that need preparation prior to a production deployment. One of these is:
+
+ - the less files should be compiled to css (main.css, not just main.debug.css)
+
+This ticket is to provide a paster command which will compile the .less into the main.css file.  The idea of the paster command is that it will be run by developers, and they will check in the resulting .css files.  It will also provide a convenient mechanism for production scenarios with node.js installed on the production server, as they will be able to compile the .less there as well.
+
+## Background
+
+The .css files that need to be served are built using `less`.  The css files that are generated *are* checked-in to the repo; but they are a build artifact.  So the general workflow is:
+
+ - commit changes to the less files
+ - build the main.css file and commit
+
+This paster command slots into the above workflow for convenience.
+
+## Notes
+
+ - doc/frontend-development.rst
+ - bin/less
+
+to run this paster command, `Node` will be required.  So that dependency should be checked."	enhancement	new	minor	ckan 2.0	ckan				ckan	none

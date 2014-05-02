@@ -1,0 +1,1128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      TracQuery – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="help" href="TracGuide.html" />
+        <link rel="alternate" href="TracQuery%3Fversion=4&amp;format=txt" type="text/x-trac-wiki" title="Plain Text" />
+        <link rel="up" href="TracQuery.html" title="View latest version" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/wiki.css" type="text/css" />
+        <link rel="prev" href="TracQuery%3Fversion=3.html" title="Version 3" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("#content").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $("#content").find(".wikianchor").each(function() {
+          $(this).addAnchor(babel.format(_("Link to #%(id)s"), {id: $(this).attr('id')}));
+        });
+        $(".foldable").enableFolding(true, true);
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last active"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="pagepath" class="noprint">
+  <a class="pathentry first" title="View WikiStart" href="../wiki.1.html">wiki:</a><a class="pathentry" href="TracQuery.html" title="View TracQuery">TracQuery</a>
+</div>
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="TracQuery%3Fversion=3.html" title="Version 3">Previous Version</a></span></li><li><a href="TracQuery.html" title="View latest version">View Latest Version</a></li><li class="last"><span class="missing">Next Version &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="wiki">
+        <br />
+        <table id="info" summary="Revision info">
+          <tbody>
+            <tr><th scope="row">Version 4 (modified by trac, <a class="timeline" href="../timeline%3Ffrom=2014-05-02T01:33:04Z&amp;precision=second.html" title="2014-05-02T01:33:04Z in Timeline">7 minutes</a> ago)
+               (<a href="TracQuery%3Faction=diff&amp;version=4.html">diff</a>)</th></tr>
+            <tr><td class="message">
+              <p>
+--
+</p>
+
+            </td></tr>
+          </tbody>
+        </table>
+      <div class="wikipage searchable">
+        
+          
+          
+          <div id="wikipage"><h1 id="TracTicketQueries">Trac Ticket Queries</h1>
+<p>
+</p><div class="wiki-toc"><h4>Table of Contents</h4><ul><li class="False"><a class="False" href="TracGuide.html">Index</a></li><li class="False"><a class="False" href="TracInstall.html">Installation</a></li><li class="False"><a class="False" href="TracInterfaceCustomization.html">Customization</a></li><li class="False"><a class="False" href="TracPlugins.html">Plugins</a></li><li class="False"><a class="False" href="TracUpgrade.html">Upgrading</a></li><li class="False"><a class="False" href="TracIni.html">Configuration</a></li><li class="False"><a class="False" href="TracAdmin.html">Administration</a></li><li class="False"><a class="False" href="TracBackup.html">Backup</a></li><li class="False"><a class="False" href="TracLogging.html">Logging</a></li><li class="False"><a class="False" href="TracPermissions.html">Permissions</a></li><li class="False"><a class="False" href="TracWiki.html">The Wiki</a></li><li class="False"><a class="False" href="WikiFormatting.html">Wiki Formatting</a></li><li class="False"><a class="False" href="TracTimeline.html">Timeline</a></li><li class="False"><a class="False" href="TracBrowser.html">Repository Browser</a></li><li class="False"><a class="False" href="TracRevisionLog.html">Revision Log</a></li><li class="False"><a class="False" href="TracChangeset.html">Changesets</a></li><li class="False"><a class="False" href="TracTickets.html">Tickets</a></li><li class="False"><a class="False" href="TracWorkflow.html">Workflow</a></li><li class="False"><a class="False" href="TracRoadmap.html">Roadmap</a></li><li class="active"><a class="False" href="TracQuery.html">Ticket Queries</a></li><li class="False"><a class="False" href="TracReports.html">Reports</a></li><li class="False"><a class="False" href="TracRss.html">RSS Support</a></li><li class="False"><a class="False" href="TracNotification.html">Notification</a></li></ul></div><p>
+</p>
+<p>
+In addition to <a class="wiki" href="TracReports.html">reports</a>, Trac provides support for <em>custom ticket queries</em>, used to display lists of tickets meeting a specified set of criteria. 
+</p>
+<p>
+To configure and execute a custom query, switch to the <em>View Tickets</em> module from the navigation bar, and select the <em>Custom Query</em> link.
+</p>
+<h2 id="Filters">Filters</h2>
+<p>
+When you first go to the query page the default filter will display tickets relevant to you:
+</p>
+<ul><li>If logged in then all open tickets it will display open tickets assigned to you.
+</li><li>If not logged in but you have specified a name or email address in the preferences then it will display all open tickets where your email (or name if email not defined) is in the CC list.
+</li><li>If not logged and no name/email defined in the preferences then all open issues are displayed.
+</li></ul><p>
+Current filters can be removed by clicking the button to the left with the minus sign on the label.  New filters are added from the pulldown lists at the bottom corners of the filters box ('And' conditions on the left, 'Or' conditions on the right).  Filters with either a text box or a pulldown menu of options can be added multiple times to perform an <em>or</em> of the criteria.
+</p>
+<p>
+You can use the fields just below the filters box to group the results based on a field, or display the full description for each ticket.
+</p>
+<p>
+Once you've edited your filters click the <em>Update</em> button to refresh your results.
+</p>
+<h2 id="NavigatingTickets">Navigating Tickets</h2>
+<p>
+Clicking on one of the query results will take you to that ticket.  You can navigate through the results by clicking the <em>Next Ticket</em> or <em>Previous Ticket</em> links just below the main menu bar, or click the <em>Back to Query</em> link to return to the query page.  
+</p>
+<p>
+You can safely edit any of the tickets and continue to navigate through the results using the <em>Next/Previous/Back to Query</em> links after saving your results.  When you return to the query <em>any tickets which were edited</em> will be displayed with italicized text.  If one of the tickets was edited such that <span style="color: grey">it no longer matches the query criteria </span> the text will also be greyed. Lastly, if <strong>a new ticket matching the query criteria has been created</strong>, it will be shown in bold. 
+</p>
+<p>
+The query results can be refreshed and cleared of these status indicators by clicking the <em>Update</em> button again.
+</p>
+<h2 id="SavingQueries">Saving Queries</h2>
+<p>
+Trac allows you to save the query as a named query accessible from the reports module. To save a query ensure that you have <em>Updated</em> the view and then click the <em>Save query</em> button displayed beneath the results.
+You can also save references to queries in Wiki content, as described below.
+</p>
+<p>
+<em>Note:</em> one way to easily build queries like the ones below, you can build and test the queries in the Custom report module and when ready - click <em>Save query</em>. This will build the query string for you. All you need to do is remove the extra line breaks.
+</p>
+<p>
+<em>Note:</em> you must have the <strong>REPORT_CREATE</strong> permission in order to save queries to the list of default reports. The <em>Save query</em> button will only appear if you are logged in as a user that has been granted this permission. If your account does not have permission to create reports, you can still use the methods below to save a query.
+</p>
+<h3 id="UsingTracLinks">Using <a class="wiki" href="TracLinks.html">TracLinks</a></h3>
+<p>
+You may want to save some queries so that you can come back to them later.  You can do this by making a link to the query from any Wiki page.
+</p>
+<pre class="wiki">[query:status=new|assigned|reopened&amp;version=1.0 Active tickets against 1.0]
+</pre><p>
+Which is displayed as:
+</p>
+<blockquote>
+<p>
+<a class="query" href="../query%3Fstatus=new&amp;status=assigned&amp;status=reopened&amp;order=priority.html">Active tickets against 1.0</a>
+</p>
+</blockquote>
+<p>
+This uses a very simple query language to specify the criteria (see <a class="wiki" href="TracQuery.html#QueryLanguage">Query Language</a>).
+</p>
+<p>
+Alternatively, you can copy the query string of a query and paste that into the Wiki link, including the leading <tt>?</tt> character:
+</p>
+<pre class="wiki">[query:?status=new&amp;status=assigned&amp;status=reopened&amp;group=owner Assigned tickets by owner]
+</pre><p>
+Which is displayed as:
+</p>
+<blockquote>
+<p>
+<a class="query" href="../query%3Fstatus=new&amp;status=assigned&amp;status=reopened&amp;group=owner.html">Assigned tickets by owner</a>
+</p>
+</blockquote>
+<h3 id="UsingtheTicketQueryMacro">Using the <tt>[[TicketQuery]]</tt> Macro</h3>
+<p>
+The <a class="ext-link" href="http://trac.edgewall.org/intertrac/TicketQuery" title="TicketQuery in Trac project trac"><span class="icon">​</span>TicketQuery</a> macro lets you display lists of tickets matching certain criteria anywhere you can use <a class="wiki" href="WikiFormatting.html">WikiFormatting</a>.
+</p>
+<p>
+Example:
+</p>
+<pre class="wiki">[[TicketQuery(version=0.6|0.7&amp;resolution=duplicate)]]
+</pre><p>
+This is displayed as:
+</p>
+<blockquote>
+<p>
+</p><div><dl class="wiki compact"><dt><a class="closed" href="../ticket/26.html" title="A registered person creates their own tags for a package">#26</a></dt><dd>A registered person creates their own tags for a package</dd><dt><a class="closed" href="../ticket/75.html" title="Record and display package &#34;usage&#34; information">#75</a></dt><dd>Record and display package "usage" information</dd><dt><a class="closed" href="../ticket/87.html" title="Multiple download links">#87</a></dt><dd>Multiple download links</dd><dt><a class="closed" href="../ticket/97.html" title="Do not create a distribution on a path is something already exists there">#97</a></dt><dd>Do not create a distribution on a path is something already exists there</dd><dt><a class="closed" href="../ticket/106.html" title="Regularly convert CKAN data to RDF and put on Talis CC">#106</a></dt><dd>Regularly convert CKAN data to RDF and put on Talis CC</dd><dt><a class="closed" href="../ticket/125.html" title="Edit Generic Package Attributes in WUI">#125</a></dt><dd>Edit Generic Package Attributes in WUI</dd><dt><a class="closed" href="../ticket/137.html" title="User has editable home page">#137</a></dt><dd>User has editable home page</dd><dt><a class="closed" href="../ticket/144.html" title="Most popular packages listed on homepage">#144</a></dt><dd>Most popular packages listed on homepage</dd><dt><a class="closed" href="../ticket/147.html" title="Parser and loader for esw.org data">#147</a></dt><dd>Parser and loader for esw.org data</dd><dt><a class="closed" href="../ticket/151.html" title="User object should have a created attribute">#151</a></dt><dd>User object should have a created attribute</dd><dt><a class="closed" href="../ticket/153.html" title="Group's packages listed alphabetically">#153</a></dt><dd>Group's packages listed alphabetically</dd><dt><a class="closed" href="../ticket/155.html" title="Adding multiple packages to a group">#155</a></dt><dd>Adding multiple packages to a group</dd><dt><a class="closed" href="../ticket/168.html" title="Show admins for a group in group view">#168</a></dt><dd>Show admins for a group in group view</dd><dt><a class="closed" href="../ticket/169.html" title="Package derivations">#169</a></dt><dd>Package derivations</dd><dt><a class="closed" href="../ticket/176.html" title="Package dependencies">#176</a></dt><dd>Package dependencies</dd><dt><a class="closed" href="../ticket/180.html" title="Tag cloud as way to view CKAN tags">#180</a></dt><dd>Tag cloud as way to view CKAN tags</dd><dt><a class="closed" href="../ticket/186.html" title="Automated upload to archive.org s3">#186</a></dt><dd>Automated upload to archive.org s3</dd><dt><a class="closed" href="../ticket/188.html" title="Improve package listing views">#188</a></dt><dd>Improve package listing views</dd><dt><a class="closed" href="../ticket/228.html" title="Deal with duplicate packages">#228</a></dt><dd>Deal with duplicate packages</dd><dt><a class="closed" href="../ticket/245.html" title="Support for composite primary keys">#245</a></dt><dd>Support for composite primary keys</dd><dt><a class="closed" href="../ticket/246.html" title="Support for primary key not named id">#246</a></dt><dd>Support for primary key not named id</dd><dt><a class="closed" href="../ticket/268.html" title="Select groups in Package edit form">#268</a></dt><dd>Select groups in Package edit form</dd><dt><a class="closed" href="../ticket/294.html" title="Add/remove extra fields in Package edit form">#294</a></dt><dd>Add/remove extra fields in Package edit form</dd><dt><a class="closed" href="../ticket/296.html" title="Commit CKAN revisions to changeset system">#296</a></dt><dd>Commit CKAN revisions to changeset system</dd><dt><a class="closed" href="../ticket/297.html" title="Update CKAN repository from changeset system">#297</a></dt><dd>Update CKAN repository from changeset system</dd><dt><a class="closed" href="../ticket/298.html" title="Pull changesets from remote CKAN instance">#298</a></dt><dd>Pull changesets from remote CKAN instance</dd><dt><a class="closed" href="../ticket/299.html" title="Merge diverging lines of changesets">#299</a></dt><dd>Merge diverging lines of changesets</dd><dt><a class="closed" href="../ticket/306.html" title="datapkg build command">#306</a></dt><dd>datapkg build command</dd><dt><a class="closed" href="../ticket/308.html" title="Autocomplete package names &amp; tags in package search">#308</a></dt><dd>Autocomplete package names &amp; tags in package search</dd><dt><a class="closed" href="../ticket/321.html" title="Delegate authentication to Drupal">#321</a></dt><dd>Delegate authentication to Drupal</dd><dt><a class="closed" href="../ticket/358.html" title="Resources in REST API">#358</a></dt><dd>Resources in REST API</dd><dt><a class="closed" href="../ticket/394.html" title="Fix munin on DGU (?)">#394</a></dt><dd>Fix munin on DGU (?)</dd><dt><a class="closed" href="../ticket/395.html" title="Set up profiling to analyze performance issues">#395</a></dt><dd>Set up profiling to analyze performance issues</dd><dt><a class="closed" href="../ticket/402.html" title="Archiving worker to back up package resources from a CKAN instance">#402</a></dt><dd>Archiving worker to back up package resources from a CKAN instance</dd><dt><a class="closed" href="../ticket/440.html" title="Write and pass comprehensive performance tests">#440</a></dt><dd>Write and pass comprehensive performance tests</dd><dt><a class="closed" href="../ticket/441.html" title="CKAN read-only state">#441</a></dt><dd>CKAN read-only state</dd><dt><a class="closed" href="../ticket/444.html" title="Discuss package relationships ideas with JF">#444</a></dt><dd>Discuss package relationships ideas with JF</dd><dt><a class="closed" href="../ticket/456.html" title="Daily dump">#456</a></dt><dd>Daily dump</dd><dt><a class="closed" href="../ticket/464.html" title="Request dgu db server access">#464</a></dt><dd>Request dgu db server access</dd><dt><a class="closed" href="../ticket/467.html" title="Admin configures CKAN to expect API key in named HTTP header">#467</a></dt><dd>Admin configures CKAN to expect API key in named HTTP header</dd><dt><a class="closed" href="../ticket/477.html" title="Discover location of the daily database dumps">#477</a></dt><dd>Discover location of the daily database dumps</dd><dt><a class="closed" href="../ticket/485.html" title="Performance beats QoS criteria">#485</a></dt><dd>Performance beats QoS criteria</dd><dt><a class="closed" href="../ticket/486.html" title="Catalogue service shall notify and query SOLR service">#486</a></dt><dd>Catalogue service shall notify and query SOLR service</dd><dt><a class="closed" href="../ticket/487.html" title="Notify SOLR service of model events">#487</a></dt><dd>Notify SOLR service of model events</dd><dt><a class="closed" href="../ticket/497.html" title="Respond to CSW &#34;GetRecords&#34; request">#497</a></dt><dd>Respond to CSW "GetRecords" request</dd><dt><a class="closed" href="../ticket/500.html" title="Exception from diff">#500</a></dt><dd>Exception from diff</dd><dt><a class="closed" href="../ticket/501.html" title="Read-only maintenance mode">#501</a></dt><dd>Read-only maintenance mode</dd><dt><a class="closed" href="../ticket/512.html" title="User creates package via API with incorrect core fields specified">#512</a></dt><dd>User creates package via API with incorrect core fields specified</dd><dt><a class="closed" href="../ticket/514.html" title="Inconsistent use of 'location' header in API">#514</a></dt><dd>Inconsistent use of 'location' header in API</dd><dt><a class="closed" href="../ticket/535.html" title="genshi error when logged into sl.ckan.net">#535</a></dt><dd>genshi error when logged into sl.ckan.net</dd><dt><a class="closed" href="../ticket/537.html" title="Caching and Performance improvement">#537</a></dt><dd>Caching and Performance improvement</dd><dt><a class="closed" href="../ticket/543.html" title="Investigate partial page caching and edge-side includes">#543</a></dt><dd>Investigate partial page caching and edge-side includes</dd><dt><a class="closed" href="../ticket/544.html" title="Backport facet browsing to CKAN 1.2">#544</a></dt><dd>Backport facet browsing to CKAN 1.2</dd><dt><a class="closed" href="../ticket/561.html" title="Deleted packages are returned in the API">#561</a></dt><dd>Deleted packages are returned in the API</dd><dt><a class="closed" href="../ticket/563.html" title="Support a minimal CSW server interface or export to GeoNetwork">#563</a></dt><dd>Support a minimal CSW server interface or export to GeoNetwork</dd><dt><a class="closed" href="../ticket/570.html" title="Validate metadata document against UKLP schematron">#570</a></dt><dd>Validate metadata document against UKLP schematron</dd><dt><a class="closed" href="../ticket/573.html" title="Add metadata entity to harvesting queue">#573</a></dt><dd>Add metadata entity to harvesting queue</dd><dt><a class="closed" href="../ticket/574.html" title="Create UKLII package with attributes from remote metadata record">#574</a></dt><dd>Create UKLII package with attributes from remote metadata record</dd><dt><a class="closed" href="../ticket/580.html" title="Write (create or update) CKAN package for metadata document">#580</a></dt><dd>Write (create or update) CKAN package for metadata document</dd><dt><a class="closed" href="../ticket/612.html" title="Check given XML schema validates given metadata document">#612</a></dt><dd>Check given XML schema validates given metadata document</dd><dt><a class="closed" href="../ticket/617.html" title="Check UKLP schematron validates given metadata document">#617</a></dt><dd>Check UKLP schematron validates given metadata document</dd><dt><a class="closed" href="../ticket/665.html" title="The system shall support withdrawing a harvested dataset or service from ...">#665</a></dt><dd>The system shall support withdrawing a harvested dataset or service from publication</dd><dt><a class="closed" href="../ticket/691.html" title="Package Relationships">#691</a></dt><dd>Package Relationships</dd><dt><a class="closed" href="../ticket/702.html" title="The system shall support changing package groups when editing a package">#702</a></dt><dd>The system shall support changing package groups when editing a package</dd><dt><a class="closed" href="../ticket/730.html" title="Back up package data from all CKAN packages to storage.ckan.net">#730</a></dt><dd>Back up package data from all CKAN packages to storage.ckan.net</dd><dt><a class="closed" href="../ticket/740.html" title="Get copy of harvested metadata for a given package">#740</a></dt><dd>Get copy of harvested metadata for a given package</dd><dt><a class="closed" href="../ticket/748.html" title="Link new sample package to previous sample package of continuous series">#748</a></dt><dd>Link new sample package to previous sample package of continuous series</dd><dt><a class="closed" href="../ticket/749.html" title="Fold up continuous series in search results behind newest sample package">#749</a></dt><dd>Fold up continuous series in search results behind newest sample package</dd><dt><a class="closed" href="../ticket/750.html" title="Get CSW records modified since given time">#750</a></dt><dd>Get CSW records modified since given time</dd><dt><a class="closed" href="../ticket/751.html" title="Get harvested document for a given package">#751</a></dt><dd>Get harvested document for a given package</dd><dt><a class="closed" href="../ticket/752.html" title="Change package attribute names used by Gemini harvesting to DGU &#34;v.4&#34;">#752</a></dt><dd>Change package attribute names used by Gemini harvesting to DGU "v.4"</dd><dt><a class="closed" href="../ticket/755.html" title="Add filter attribute to harvest source entity">#755</a></dt><dd>Add filter attribute to harvest source entity</dd><dt><a class="closed" href="../ticket/756.html" title="Add filter field to harvest source form">#756</a></dt><dd>Add filter field to harvest source form</dd><dt><a class="closed" href="../ticket/757.html" title="Create migration script to add harvest source filter attribute to existing ...">#757</a></dt><dd>Create migration script to add harvest source filter attribute to existing tables</dd><dt><a class="closed" href="../ticket/758.html" title="Change API documentation to indicate harvest source entity has filter ...">#758</a></dt><dd>Change API documentation to indicate harvest source entity has filter attribute</dd><dt><a class="closed" href="../ticket/759.html" title="Construct and send filtered CSW GetRecords request">#759</a></dt><dd>Construct and send filtered CSW GetRecords request</dd><dt><a class="closed" href="../ticket/760.html" title="Change &#34;CSW Get Records&#34; request class to accept and used given CSW filter">#760</a></dt><dd>Change "CSW Get Records" request class to accept and used given CSW filter</dd><dt><a class="closed" href="../ticket/764.html" title="Read-only CKAN Web UI">#764</a></dt><dd>Read-only CKAN Web UI</dd><dt><a class="closed" href="../ticket/766.html" title="The system shall support harvesting metadata from ArcGIS">#766</a></dt><dd>The system shall support harvesting metadata from ArcGIS</dd><dt><a class="closed" href="../ticket/768.html" title="Obtain example ArcGIS CSW server">#768</a></dt><dd>Obtain example ArcGIS CSW server</dd><dt><a class="closed" href="../ticket/769.html" title="Tests for harvesting metadata from ArcGIS CSW API">#769</a></dt><dd>Tests for harvesting metadata from ArcGIS CSW API</dd><dt><a class="closed" href="../ticket/772.html" title="Run CLI harvester command without arguments">#772</a></dt><dd>Run CLI harvester command without arguments</dd><dt><a class="closed" href="../ticket/773.html" title="Fix CLI help command to return CLI help message">#773</a></dt><dd>Fix CLI help command to return CLI help message</dd><dt><a class="closed" href="../ticket/774.html" title="Fix CLI harvester command to return harvester help message">#774</a></dt><dd>Fix CLI harvester command to return harvester help message</dd><dt><a class="closed" href="../ticket/776.html" title="Avoid generating vdm warnings">#776</a></dt><dd>Avoid generating vdm warnings</dd><dt><a class="closed" href="../ticket/781.html" title="Package edit form - 'extra' fields have 'add' and 'delete' buttons">#781</a></dt><dd>Package edit form - 'extra' fields have 'add' and 'delete' buttons</dd><dt><a class="closed" href="../ticket/783.html" title="Delete harvested documents when remote metadata disappears from harvest ...">#783</a></dt><dd>Delete harvested documents when remote metadata disappears from harvest source</dd><dt><a class="closed" href="../ticket/786.html" title="The system shall support deleting a registered harvest source">#786</a></dt><dd>The system shall support deleting a registered harvest source</dd><dt><a class="closed" href="../ticket/788.html" title="API user deletes harvest source">#788</a></dt><dd>API user deletes harvest source</dd><dt><a class="closed" href="../ticket/789.html" title="The harvest source form shall validate location field by positive ...">#789</a></dt><dd>The harvest source form shall validate location field by positive identification of source type</dd><dt><a class="closed" href="../ticket/790.html" title="Submit  harvest source form with valid CSW location">#790</a></dt><dd>Submit  harvest source form with valid CSW location</dd><dt><a class="closed" href="../ticket/791.html" title="Submit harvest source form with invalid CSW location">#791</a></dt><dd>Submit harvest source form with invalid CSW location</dd><dt><a class="closed" href="../ticket/795.html" title="&#34;Match up&#34; GEMINI2 &#34;metadata point of contact&#34; with registered entities">#795</a></dt><dd>"Match up" GEMINI2 "metadata point of contact" with registered entities</dd><dt><a class="closed" href="../ticket/799.html" title="WAF harvesting shall be optimised in respect of reharvesting only records ...">#799</a></dt><dd>WAF harvesting shall be optimised in respect of reharvesting only records that have changed</dd><dt><a class="closed" href="../ticket/800.html" title="Get WAF records modified since given time">#800</a></dt><dd>Get WAF records modified since given time</dd><dt><a class="closed" href="../ticket/801.html" title="Get/Set last harvested time for a given harvest source">#801</a></dt><dd>Get/Set last harvested time for a given harvest source</dd><dt><a class="closed" href="../ticket/802.html" title="Save last harvested time on source">#802</a></dt><dd>Save last harvested time on source</dd><dt><a class="closed" href="../ticket/815.html" title="Autocomplete for the search field">#815</a></dt><dd>Autocomplete for the search field</dd><dt><a class="closed" href="../ticket/841.html" title="Caching docs (as a whole)">#841</a></dt><dd>Caching docs (as a whole)</dd><dt><a class="closed" href="../ticket/849.html" title="Import extra CSS from main template">#849</a></dt><dd>Import extra CSS from main template</dd><dt><a class="closed" href="../ticket/886.html" title="move uklii forms api to dgu module">#886</a></dt><dd>move uklii forms api to dgu module</dd><dt><a class="closed" href="../ticket/896.html" title="Distributed Data and Syncing Between CKAN Instances">#896</a></dt><dd>Distributed Data and Syncing Between CKAN Instances</dd><dt><a class="closed" href="../ticket/897.html" title="&#34;New package&#34; highlighted in Navigator when searching">#897</a></dt><dd>"New package" highlighted in Navigator when searching</dd><dt><a class="closed" href="../ticket/916.html" title="Port new vdm to Mongodb">#916</a></dt><dd>Port new vdm to Mongodb</dd><dt><a class="closed" href="../ticket/922.html" title="Make Resources first class entity.">#922</a></dt><dd>Make Resources first class entity.</dd><dt><a class="closed" href="../ticket/947.html" title="Move the assignment of roles to a package on package creation to an ...">#947</a></dt><dd>Move the assignment of roles to a package on package creation to an extension</dd><dt><a class="closed" href="../ticket/958.html" title="ui for new kind field">#958</a></dt><dd>ui for new kind field</dd><dt><a class="closed" href="../ticket/971.html" title="Support middleware as a plugin">#971</a></dt><dd>Support middleware as a plugin</dd><dt><a class="closed" href="../ticket/985.html" title="Harvest other data catalogues">#985</a></dt><dd>Harvest other data catalogues</dd><dt><a class="closed" href="../ticket/987.html" title="Common harvesting framework">#987</a></dt><dd>Common harvesting framework</dd><dt><a class="closed" href="../ticket/997.html" title="change create on cli to upgrade">#997</a></dt><dd>change create on cli to upgrade</dd><dt><a class="closed" href="../ticket/1005.html" title="Editing in ckan missing publishers">#1005</a></dt><dd>Editing in ckan missing publishers</dd><dt><a class="closed" href="../ticket/1024.html" title="Lock down all controller actions in CKAN">#1024</a></dt><dd>Lock down all controller actions in CKAN</dd><dt><a class="closed" href="../ticket/1034.html" title="Flash message cached">#1034</a></dt><dd>Flash message cached</dd><dt><a class="closed" href="../ticket/1064.html" title="Remove Workers from ckanext-queue">#1064</a></dt><dd>Remove Workers from ckanext-queue</dd><dt><a class="closed" href="../ticket/1094.html" title="[super] Refactor the Auth System">#1094</a></dt><dd>[super] Refactor the Auth System</dd><dt><a class="closed" href="../ticket/1102.html" title="searching broken in development setup">#1102</a></dt><dd>searching broken in development setup</dd><dt><a class="closed" href="../ticket/1103.html" title="searching broken in development setup">#1103</a></dt><dd>searching broken in development setup</dd><dt><a class="closed" href="../ticket/1161.html" title="Build a simplified theme for PDEU">#1161</a></dt><dd>Build a simplified theme for PDEU</dd><dt><a class="closed" href="../ticket/1200.html" title="Port PDEU theme to CKAN.net">#1200</a></dt><dd>Port PDEU theme to CKAN.net</dd><dt><a class="closed" href="../ticket/1279.html" title="Refactor or deprecate Authorization Groups">#1279</a></dt><dd>Refactor or deprecate Authorization Groups</dd><dt><a class="closed" href="../ticket/1309.html" title="Registering new user requires immediate login">#1309</a></dt><dd>Registering new user requires immediate login</dd><dt><a class="closed" href="../ticket/1313.html" title="Tweaks to captcha configuration">#1313</a></dt><dd>Tweaks to captcha configuration</dd><dt><a class="closed" href="../ticket/1327.html" title="[super] Dataset Archiving">#1327</a></dt><dd>[super] Dataset Archiving</dd><dt><a class="closed" href="../ticket/1410.html" title="Add Gravatars to user profiles">#1410</a></dt><dd>Add Gravatars to user profiles</dd><dt><a class="closed" href="../ticket/1418.html" title="If default language is not 'en' then you can't switch language to 'en'">#1418</a></dt><dd>If default language is not 'en' then you can't switch language to 'en'</dd><dt><a class="closed" href="../ticket/1514.html" title="Modifying user name loses connection with revisions">#1514</a></dt><dd>Modifying user name loses connection with revisions</dd><dt><a class="closed" href="../ticket/1568.html" title="Moderated Edits">#1568</a></dt><dd>Moderated Edits</dd><dt><a class="closed" href="../ticket/1586.html" title="'Sort by' field for package search">#1586</a></dt><dd>'Sort by' field for package search</dd><dt><a class="closed" href="../ticket/1603.html" title="Search query builder">#1603</a></dt><dd>Search query builder</dd><dt><a class="closed" href="../ticket/1610.html" title="Move webstore to Postgres instead of Sqlite">#1610</a></dt><dd>Move webstore to Postgres instead of Sqlite</dd><dt><a class="closed" href="../ticket/1611.html" title="Implement auth API calls for webstore/external use">#1611</a></dt><dd>Implement auth API calls for webstore/external use</dd><dt><a class="closed" href="../ticket/1634.html" title="Allow users to follow/unfollow activity streams of other users, datasets ...">#1634</a></dt><dd>Allow users to follow/unfollow activity streams of other users, datasets and groups</dd><dt><a class="closed" href="../ticket/1656.html" title="Configuration for reverse proxying">#1656</a></dt><dd>Configuration for reverse proxying</dd><dt><a class="closed" href="../ticket/1677.html" title="Make synchronous search the default behaviour">#1677</a></dt><dd>Make synchronous search the default behaviour</dd><dt><a class="closed" href="../ticket/1682.html" title="[super] Translatability for EC">#1682</a></dt><dd>[super] Translatability for EC</dd><dt><a class="closed" href="../ticket/1702.html" title="Normalize character encoding for ckan search.">#1702</a></dt><dd>Normalize character encoding for ckan search.</dd><dt><a class="closed" href="../ticket/1706.html" title="Tag taxonomies package schema">#1706</a></dt><dd>Tag taxonomies package schema</dd><dt><a class="closed" href="../ticket/1707.html" title="Over-long URLs in QA ext broken links list">#1707</a></dt><dd>Over-long URLs in QA ext broken links list</dd><dt><a class="closed" href="../ticket/1729.html" title="Helper function for extensions to add vocabularies to a ckan instance">#1729</a></dt><dd>Helper function for extensions to add vocabularies to a ckan instance</dd><dt><a class="closed" href="../ticket/1780.html" title="Api to add translations.">#1780</a></dt><dd>Api to add translations.</dd><dt><a class="closed" href="../ticket/1793.html" title="Publisher changes">#1793</a></dt><dd>Publisher changes</dd><dt><a class="closed" href="../ticket/2201.html" title="Add citation info to Dataset and Resource page">#2201</a></dt><dd>Add citation info to Dataset and Resource page</dd><dt><a class="closed" href="../ticket/2222.html" title="Tests are broken for some of us: NotAPairTreeStoreException">#2222</a></dt><dd>Tests are broken for some of us: NotAPairTreeStoreException</dd><dt><a class="closed" href="../ticket/2238.html" title="Deploy some test vocabs and publishers on test.ckan.net, check ...">#2238</a></dt><dd>Deploy some test vocabs and publishers on test.ckan.net, check tutorial-style instructions for these</dd><dt><a class="closed" href="../ticket/2273.html" title="Review publisher organisations code with Ross">#2273</a></dt><dd>Review publisher organisations code with Ross</dd><dt><a class="closed" href="../ticket/2312.html" title="Analysis of how datasets could belong to users instead of Groups">#2312</a></dt><dd>Analysis of how datasets could belong to users instead of Groups</dd><dt><a class="closed" href="../ticket/2344.html" title="Get jenkins install script into CKAN core">#2344</a></dt><dd>Get jenkins install script into CKAN core</dd><dt><a class="closed" href="../ticket/2380.html" title="DataGM Upgrade">#2380</a></dt><dd>DataGM Upgrade</dd><dt><a class="closed" href="../ticket/2398.html" title="Ubuntu 10.04 source install instructions not working?">#2398</a></dt><dd>Ubuntu 10.04 source install instructions not working?</dd><dt><a class="closed" href="../ticket/2423.html" title="Get rid of CKAN's lxml dependency">#2423</a></dt><dd>Get rid of CKAN's lxml dependency</dd><dt><a class="closed" href="../ticket/2424.html" title="Get rid of CKAN's autoneg dependency">#2424</a></dt><dd>Get rid of CKAN's autoneg dependency</dd><dt><a class="closed" href="../ticket/2462.html" title="Add converter to rename resource_type field to type">#2462</a></dt><dd>Add converter to rename resource_type field to type</dd><dt><a class="closed" href="../ticket/2469.html" title="Find a better way to deploy CKAN instances">#2469</a></dt><dd>Find a better way to deploy CKAN instances</dd><dt><a class="closed" href="../ticket/2495.html" title="Stats page has lost styling ...">#2495</a></dt><dd>Stats page has lost styling ...</dd><dt><a class="closed" href="../ticket/2534.html" title="ckanext-spatial is broken with CKAN 1.8b">#2534</a></dt><dd>ckanext-spatial is broken with CKAN 1.8b</dd><dt><a class="closed" href="../ticket/2544.html" title="facet.sort is not available in the package_search action">#2544</a></dt><dd>facet.sort is not available in the package_search action</dd><dt><a class="closed" href="../ticket/2610.html" title="Text / link changes">#2610</a></dt><dd>Text / link changes</dd><dt><a class="closed" href="../ticket/2628.html" title="Add docs for upgrading a source install">#2628</a></dt><dd>Add docs for upgrading a source install</dd><dt><a class="closed" href="../ticket/2629.html" title="Move ckanext-examplevocabs into master and document">#2629</a></dt><dd>Move ckanext-examplevocabs into master and document</dd><dt><a class="closed" href="../ticket/2630.html" title="UPdate docs after IDatasetForm schema change">#2630</a></dt><dd>UPdate docs after IDatasetForm schema change</dd><dt><a class="closed" href="../ticket/2636.html" title="Style activity stream in user profile">#2636</a></dt><dd>Style activity stream in user profile</dd><dt><a class="closed" href="../ticket/2681.html" title="autofill on resource format">#2681</a></dt><dd>autofill on resource format</dd><dt><a class="closed" href="../ticket/2764.html" title="Simplify filestore">#2764</a></dt><dd>Simplify filestore</dd><dt><a class="closed" href="../ticket/2832.html" title="can't add a dataset to more than one group">#2832</a></dt><dd>can't add a dataset to more than one group</dd><dt><a class="closed" href="../ticket/2946.html" title="Pdf preview does not load in IE">#2946</a></dt><dd>Pdf preview does not load in IE</dd></dl></div><p>
+</p>
+</blockquote>
+<p>
+Just like the <a class="wiki" href="TracQuery.html#UsingTracLinks">query: wiki links</a>, the parameter of this macro expects a query string formatted according to the rules of the simple <a class="wiki" href="TracQuery.html#QueryLanguage">ticket query language</a>. This also allows displaying the link and description of a single ticket:
+</p>
+<pre class="wiki">[[TicketQuery(id=123)]]
+</pre><p>
+This is displayed as:
+</p>
+<blockquote>
+<p>
+</p><div><dl class="wiki compact"><dt><a class="closed" href="../ticket/123.html" title="Ability to edit Group in WUI">#123</a></dt><dd>Ability to edit Group in WUI</dd></dl></div><p>
+</p>
+</blockquote>
+<p>
+A more compact representation without the ticket summaries is also available:
+</p>
+<pre class="wiki">[[TicketQuery(version=0.6|0.7&amp;resolution=duplicate, compact)]]
+</pre><p>
+This is displayed as:
+</p>
+<blockquote>
+<p>
+<span><a class="closed" href="../ticket/26.html" title="A registered person creates their own tags for a package">#26</a>, <a class="closed" href="../ticket/75.html" title="Record and display package &#34;usage&#34; information">#75</a>, <a class="closed" href="../ticket/87.html" title="Multiple download links">#87</a>, <a class="closed" href="../ticket/97.html" title="Do not create a distribution on a path is something already exists there">#97</a>, <a class="closed" href="../ticket/106.html" title="Regularly convert CKAN data to RDF and put on Talis CC">#106</a>, <a class="closed" href="../ticket/125.html" title="Edit Generic Package Attributes in WUI">#125</a>, <a class="closed" href="../ticket/137.html" title="User has editable home page">#137</a>, <a class="closed" href="../ticket/144.html" title="Most popular packages listed on homepage">#144</a>, <a class="closed" href="../ticket/147.html" title="Parser and loader for esw.org data">#147</a>, <a class="closed" href="../ticket/151.html" title="User object should have a created attribute">#151</a>, <a class="closed" href="../ticket/153.html" title="Group's packages listed alphabetically">#153</a>, <a class="closed" href="../ticket/155.html" title="Adding multiple packages to a group">#155</a>, <a class="closed" href="../ticket/168.html" title="Show admins for a group in group view">#168</a>, <a class="closed" href="../ticket/169.html" title="Package derivations">#169</a>, <a class="closed" href="../ticket/176.html" title="Package dependencies">#176</a>, <a class="closed" href="../ticket/180.html" title="Tag cloud as way to view CKAN tags">#180</a>, <a class="closed" href="../ticket/186.html" title="Automated upload to archive.org s3">#186</a>, <a class="closed" href="../ticket/188.html" title="Improve package listing views">#188</a>, <a class="closed" href="../ticket/228.html" title="Deal with duplicate packages">#228</a>, <a class="closed" href="../ticket/245.html" title="Support for composite primary keys">#245</a>, <a class="closed" href="../ticket/246.html" title="Support for primary key not named id">#246</a>, <a class="closed" href="../ticket/268.html" title="Select groups in Package edit form">#268</a>, <a class="closed" href="../ticket/294.html" title="Add/remove extra fields in Package edit form">#294</a>, <a class="closed" href="../ticket/296.html" title="Commit CKAN revisions to changeset system">#296</a>, <a class="closed" href="../ticket/297.html" title="Update CKAN repository from changeset system">#297</a>, <a class="closed" href="../ticket/298.html" title="Pull changesets from remote CKAN instance">#298</a>, <a class="closed" href="../ticket/299.html" title="Merge diverging lines of changesets">#299</a>, <a class="closed" href="../ticket/306.html" title="datapkg build command">#306</a>, <a class="closed" href="../ticket/308.html" title="Autocomplete package names &amp; tags in package search">#308</a>, <a class="closed" href="../ticket/321.html" title="Delegate authentication to Drupal">#321</a>, <a class="closed" href="../ticket/358.html" title="Resources in REST API">#358</a>, <a class="closed" href="../ticket/394.html" title="Fix munin on DGU (?)">#394</a>, <a class="closed" href="../ticket/395.html" title="Set up profiling to analyze performance issues">#395</a>, <a class="closed" href="../ticket/402.html" title="Archiving worker to back up package resources from a CKAN instance">#402</a>, <a class="closed" href="../ticket/440.html" title="Write and pass comprehensive performance tests">#440</a>, <a class="closed" href="../ticket/441.html" title="CKAN read-only state">#441</a>, <a class="closed" href="../ticket/444.html" title="Discuss package relationships ideas with JF">#444</a>, <a class="closed" href="../ticket/456.html" title="Daily dump">#456</a>, <a class="closed" href="../ticket/464.html" title="Request dgu db server access">#464</a>, <a class="closed" href="../ticket/467.html" title="Admin configures CKAN to expect API key in named HTTP header">#467</a>, <a class="closed" href="../ticket/477.html" title="Discover location of the daily database dumps">#477</a>, <a class="closed" href="../ticket/485.html" title="Performance beats QoS criteria">#485</a>, <a class="closed" href="../ticket/486.html" title="Catalogue service shall notify and query SOLR service">#486</a>, <a class="closed" href="../ticket/487.html" title="Notify SOLR service of model events">#487</a>, <a class="closed" href="../ticket/497.html" title="Respond to CSW &#34;GetRecords&#34; request">#497</a>, <a class="closed" href="../ticket/500.html" title="Exception from diff">#500</a>, <a class="closed" href="../ticket/501.html" title="Read-only maintenance mode">#501</a>, <a class="closed" href="../ticket/512.html" title="User creates package via API with incorrect core fields specified">#512</a>, <a class="closed" href="../ticket/514.html" title="Inconsistent use of 'location' header in API">#514</a>, <a class="closed" href="../ticket/535.html" title="genshi error when logged into sl.ckan.net">#535</a>, <a class="closed" href="../ticket/537.html" title="Caching and Performance improvement">#537</a>, <a class="closed" href="../ticket/543.html" title="Investigate partial page caching and edge-side includes">#543</a>, <a class="closed" href="../ticket/544.html" title="Backport facet browsing to CKAN 1.2">#544</a>, <a class="closed" href="../ticket/561.html" title="Deleted packages are returned in the API">#561</a>, <a class="closed" href="../ticket/563.html" title="Support a minimal CSW server interface or export to GeoNetwork">#563</a>, <a class="closed" href="../ticket/570.html" title="Validate metadata document against UKLP schematron">#570</a>, <a class="closed" href="../ticket/573.html" title="Add metadata entity to harvesting queue">#573</a>, <a class="closed" href="../ticket/574.html" title="Create UKLII package with attributes from remote metadata record">#574</a>, <a class="closed" href="../ticket/580.html" title="Write (create or update) CKAN package for metadata document">#580</a>, <a class="closed" href="../ticket/612.html" title="Check given XML schema validates given metadata document">#612</a>, <a class="closed" href="../ticket/617.html" title="Check UKLP schematron validates given metadata document">#617</a>, <a class="closed" href="../ticket/665.html" title="The system shall support withdrawing a harvested dataset or service from ...">#665</a>, <a class="closed" href="../ticket/691.html" title="Package Relationships">#691</a>, <a class="closed" href="../ticket/702.html" title="The system shall support changing package groups when editing a package">#702</a>, <a class="closed" href="../ticket/730.html" title="Back up package data from all CKAN packages to storage.ckan.net">#730</a>, <a class="closed" href="../ticket/740.html" title="Get copy of harvested metadata for a given package">#740</a>, <a class="closed" href="../ticket/748.html" title="Link new sample package to previous sample package of continuous series">#748</a>, <a class="closed" href="../ticket/749.html" title="Fold up continuous series in search results behind newest sample package">#749</a>, <a class="closed" href="../ticket/750.html" title="Get CSW records modified since given time">#750</a>, <a class="closed" href="../ticket/751.html" title="Get harvested document for a given package">#751</a>, <a class="closed" href="../ticket/752.html" title="Change package attribute names used by Gemini harvesting to DGU &#34;v.4&#34;">#752</a>, <a class="closed" href="../ticket/755.html" title="Add filter attribute to harvest source entity">#755</a>, <a class="closed" href="../ticket/756.html" title="Add filter field to harvest source form">#756</a>, <a class="closed" href="../ticket/757.html" title="Create migration script to add harvest source filter attribute to existing ...">#757</a>, <a class="closed" href="../ticket/758.html" title="Change API documentation to indicate harvest source entity has filter ...">#758</a>, <a class="closed" href="../ticket/759.html" title="Construct and send filtered CSW GetRecords request">#759</a>, <a class="closed" href="../ticket/760.html" title="Change &#34;CSW Get Records&#34; request class to accept and used given CSW filter">#760</a>, <a class="closed" href="../ticket/764.html" title="Read-only CKAN Web UI">#764</a>, <a class="closed" href="../ticket/766.html" title="The system shall support harvesting metadata from ArcGIS">#766</a>, <a class="closed" href="../ticket/768.html" title="Obtain example ArcGIS CSW server">#768</a>, <a class="closed" href="../ticket/769.html" title="Tests for harvesting metadata from ArcGIS CSW API">#769</a>, <a class="closed" href="../ticket/772.html" title="Run CLI harvester command without arguments">#772</a>, <a class="closed" href="../ticket/773.html" title="Fix CLI help command to return CLI help message">#773</a>, <a class="closed" href="../ticket/774.html" title="Fix CLI harvester command to return harvester help message">#774</a>, <a class="closed" href="../ticket/776.html" title="Avoid generating vdm warnings">#776</a>, <a class="closed" href="../ticket/781.html" title="Package edit form - 'extra' fields have 'add' and 'delete' buttons">#781</a>, <a class="closed" href="../ticket/783.html" title="Delete harvested documents when remote metadata disappears from harvest ...">#783</a>, <a class="closed" href="../ticket/786.html" title="The system shall support deleting a registered harvest source">#786</a>, <a class="closed" href="../ticket/788.html" title="API user deletes harvest source">#788</a>, <a class="closed" href="../ticket/789.html" title="The harvest source form shall validate location field by positive ...">#789</a>, <a class="closed" href="../ticket/790.html" title="Submit  harvest source form with valid CSW location">#790</a>, <a class="closed" href="../ticket/791.html" title="Submit harvest source form with invalid CSW location">#791</a>, <a class="closed" href="../ticket/795.html" title="&#34;Match up&#34; GEMINI2 &#34;metadata point of contact&#34; with registered entities">#795</a>, <a class="closed" href="../ticket/799.html" title="WAF harvesting shall be optimised in respect of reharvesting only records ...">#799</a>, <a class="closed" href="../ticket/800.html" title="Get WAF records modified since given time">#800</a>, <a class="closed" href="../ticket/801.html" title="Get/Set last harvested time for a given harvest source">#801</a>, <a class="closed" href="../ticket/802.html" title="Save last harvested time on source">#802</a>, <a class="closed" href="../ticket/815.html" title="Autocomplete for the search field">#815</a>, <a class="closed" href="../ticket/841.html" title="Caching docs (as a whole)">#841</a>, <a class="closed" href="../ticket/849.html" title="Import extra CSS from main template">#849</a>, <a class="closed" href="../ticket/886.html" title="move uklii forms api to dgu module">#886</a>, <a class="closed" href="../ticket/896.html" title="Distributed Data and Syncing Between CKAN Instances">#896</a>, <a class="closed" href="../ticket/897.html" title="&#34;New package&#34; highlighted in Navigator when searching">#897</a>, <a class="closed" href="../ticket/916.html" title="Port new vdm to Mongodb">#916</a>, <a class="closed" href="../ticket/922.html" title="Make Resources first class entity.">#922</a>, <a class="closed" href="../ticket/947.html" title="Move the assignment of roles to a package on package creation to an ...">#947</a>, <a class="closed" href="../ticket/958.html" title="ui for new kind field">#958</a>, <a class="closed" href="../ticket/971.html" title="Support middleware as a plugin">#971</a>, <a class="closed" href="../ticket/985.html" title="Harvest other data catalogues">#985</a>, <a class="closed" href="../ticket/987.html" title="Common harvesting framework">#987</a>, <a class="closed" href="../ticket/997.html" title="change create on cli to upgrade">#997</a>, <a class="closed" href="../ticket/1005.html" title="Editing in ckan missing publishers">#1005</a>, <a class="closed" href="../ticket/1024.html" title="Lock down all controller actions in CKAN">#1024</a>, <a class="closed" href="../ticket/1034.html" title="Flash message cached">#1034</a>, <a class="closed" href="../ticket/1064.html" title="Remove Workers from ckanext-queue">#1064</a>, <a class="closed" href="../ticket/1094.html" title="[super] Refactor the Auth System">#1094</a>, <a class="closed" href="../ticket/1102.html" title="searching broken in development setup">#1102</a>, <a class="closed" href="../ticket/1103.html" title="searching broken in development setup">#1103</a>, <a class="closed" href="../ticket/1161.html" title="Build a simplified theme for PDEU">#1161</a>, <a class="closed" href="../ticket/1200.html" title="Port PDEU theme to CKAN.net">#1200</a>, <a class="closed" href="../ticket/1279.html" title="Refactor or deprecate Authorization Groups">#1279</a>, <a class="closed" href="../ticket/1309.html" title="Registering new user requires immediate login">#1309</a>, <a class="closed" href="../ticket/1313.html" title="Tweaks to captcha configuration">#1313</a>, <a class="closed" href="../ticket/1327.html" title="[super] Dataset Archiving">#1327</a>, <a class="closed" href="../ticket/1410.html" title="Add Gravatars to user profiles">#1410</a>, <a class="closed" href="../ticket/1418.html" title="If default language is not 'en' then you can't switch language to 'en'">#1418</a>, <a class="closed" href="../ticket/1514.html" title="Modifying user name loses connection with revisions">#1514</a>, <a class="closed" href="../ticket/1568.html" title="Moderated Edits">#1568</a>, <a class="closed" href="../ticket/1586.html" title="'Sort by' field for package search">#1586</a>, <a class="closed" href="../ticket/1603.html" title="Search query builder">#1603</a>, <a class="closed" href="../ticket/1610.html" title="Move webstore to Postgres instead of Sqlite">#1610</a>, <a class="closed" href="../ticket/1611.html" title="Implement auth API calls for webstore/external use">#1611</a>, <a class="closed" href="../ticket/1634.html" title="Allow users to follow/unfollow activity streams of other users, datasets ...">#1634</a>, <a class="closed" href="../ticket/1656.html" title="Configuration for reverse proxying">#1656</a>, <a class="closed" href="../ticket/1677.html" title="Make synchronous search the default behaviour">#1677</a>, <a class="closed" href="../ticket/1682.html" title="[super] Translatability for EC">#1682</a>, <a class="closed" href="../ticket/1702.html" title="Normalize character encoding for ckan search.">#1702</a>, <a class="closed" href="../ticket/1706.html" title="Tag taxonomies package schema">#1706</a>, <a class="closed" href="../ticket/1707.html" title="Over-long URLs in QA ext broken links list">#1707</a>, <a class="closed" href="../ticket/1729.html" title="Helper function for extensions to add vocabularies to a ckan instance">#1729</a>, <a class="closed" href="../ticket/1780.html" title="Api to add translations.">#1780</a>, <a class="closed" href="../ticket/1793.html" title="Publisher changes">#1793</a>, <a class="closed" href="../ticket/2201.html" title="Add citation info to Dataset and Resource page">#2201</a>, <a class="closed" href="../ticket/2222.html" title="Tests are broken for some of us: NotAPairTreeStoreException">#2222</a>, <a class="closed" href="../ticket/2238.html" title="Deploy some test vocabs and publishers on test.ckan.net, check ...">#2238</a>, <a class="closed" href="../ticket/2273.html" title="Review publisher organisations code with Ross">#2273</a>, <a class="closed" href="../ticket/2312.html" title="Analysis of how datasets could belong to users instead of Groups">#2312</a>, <a class="closed" href="../ticket/2344.html" title="Get jenkins install script into CKAN core">#2344</a>, <a class="closed" href="../ticket/2380.html" title="DataGM Upgrade">#2380</a>, <a class="closed" href="../ticket/2398.html" title="Ubuntu 10.04 source install instructions not working?">#2398</a>, <a class="closed" href="../ticket/2423.html" title="Get rid of CKAN's lxml dependency">#2423</a>, <a class="closed" href="../ticket/2424.html" title="Get rid of CKAN's autoneg dependency">#2424</a>, <a class="closed" href="../ticket/2462.html" title="Add converter to rename resource_type field to type">#2462</a>, <a class="closed" href="../ticket/2469.html" title="Find a better way to deploy CKAN instances">#2469</a>, <a class="closed" href="../ticket/2495.html" title="Stats page has lost styling ...">#2495</a>, <a class="closed" href="../ticket/2534.html" title="ckanext-spatial is broken with CKAN 1.8b">#2534</a>, <a class="closed" href="../ticket/2544.html" title="facet.sort is not available in the package_search action">#2544</a>, <a class="closed" href="../ticket/2610.html" title="Text / link changes">#2610</a>, <a class="closed" href="../ticket/2628.html" title="Add docs for upgrading a source install">#2628</a>, <a class="closed" href="../ticket/2629.html" title="Move ckanext-examplevocabs into master and document">#2629</a>, <a class="closed" href="../ticket/2630.html" title="UPdate docs after IDatasetForm schema change">#2630</a>, <a class="closed" href="../ticket/2636.html" title="Style activity stream in user profile">#2636</a>, <a class="closed" href="../ticket/2681.html" title="autofill on resource format">#2681</a>, <a class="closed" href="../ticket/2764.html" title="Simplify filestore">#2764</a>, <a class="closed" href="../ticket/2832.html" title="can't add a dataset to more than one group">#2832</a>, <a class="closed" href="../ticket/2946.html" title="Pdf preview does not load in IE">#2946</a></span>
+</p>
+</blockquote>
+<p>
+Finally, if you wish to receive only the number of defects that match the query, use the <tt></tt>count<tt></tt> parameter.
+</p>
+<pre class="wiki">[[TicketQuery(version=0.6|0.7&amp;resolution=duplicate, count)]]
+</pre><p>
+This is displayed as:
+</p>
+<blockquote>
+<p>
+<span class="query_count" title="166 tickets for which version=0.6|0.7&amp;resolution=duplicate&amp;max=0&amp;order=id">166</span>
+</p>
+</blockquote>
+<h3 id="Customizingthetableformat">Customizing the <em>table</em> format</h3>
+<p>
+You can also customize the columns displayed in the table format (<em>format=table</em>) by using <em>col=&lt;field&gt;</em> - you can specify multiple fields and what order they are displayed by placing pipes (<tt>|</tt>) between the columns like below:
+</p>
+<pre class="wiki">[[TicketQuery(max=3,status=closed,order=id,desc=1,format=table,col=resolution|summary|owner|reporter)]]
+</pre><p>
+This is displayed as:
+</p><div xmlns="http://www.w3.org/1999/xhtml">
+  <h2 class="report-result">
+    Results <span class="numresults">(1 - 3 of 2152)</span>
+  </h2>
+  <div class="paging"> 
+
+     
+     
+      <span> 
+        <span class="current">1</span> 
+      </span> 
+       
+     
+       
+      <span> 
+        <a href="../query%3Fstatus=closed&amp;max=3&amp;page=2&amp;col=id&amp;col=resolution&amp;col=summary&amp;col=owner&amp;col=reporter&amp;desc=1&amp;order=id.html" title="Page 2">2</a> 
+      </span> 
+     
+       
+      <span> 
+        <a href="../query%3Fstatus=closed&amp;max=3&amp;page=3&amp;col=id&amp;col=resolution&amp;col=summary&amp;col=owner&amp;col=reporter&amp;desc=1&amp;order=id.html" title="Page 3">3</a> 
+      </span> 
+     
+       
+      <span> 
+        <a href="../query%3Fstatus=closed&amp;max=3&amp;page=4&amp;col=id&amp;col=resolution&amp;col=summary&amp;col=owner&amp;col=reporter&amp;desc=1&amp;order=id.html" title="Page 4">4</a> 
+      </span> 
+     
+       
+      <span> 
+        <a href="../query%3Fstatus=closed&amp;max=3&amp;page=5&amp;col=id&amp;col=resolution&amp;col=summary&amp;col=owner&amp;col=reporter&amp;desc=1&amp;order=id.html" title="Page 5">5</a> 
+      </span> 
+     
+       
+      <span> 
+        <a href="../query%3Fstatus=closed&amp;max=3&amp;page=6&amp;col=id&amp;col=resolution&amp;col=summary&amp;col=owner&amp;col=reporter&amp;desc=1&amp;order=id.html" title="Page 6">6</a> 
+      </span> 
+     
+       
+      <span> 
+        <a href="../query%3Fstatus=closed&amp;max=3&amp;page=7&amp;col=id&amp;col=resolution&amp;col=summary&amp;col=owner&amp;col=reporter&amp;desc=1&amp;order=id.html" title="Page 7">7</a> 
+      </span> 
+     
+       
+      <span> 
+        <a href="../query%3Fstatus=closed&amp;max=3&amp;page=8&amp;col=id&amp;col=resolution&amp;col=summary&amp;col=owner&amp;col=reporter&amp;desc=1&amp;order=id.html" title="Page 8">8</a> 
+      </span> 
+     
+       
+      <span> 
+        <a href="../query%3Fstatus=closed&amp;max=3&amp;page=9&amp;col=id&amp;col=resolution&amp;col=summary&amp;col=owner&amp;col=reporter&amp;desc=1&amp;order=id.html" title="Page 9">9</a> 
+      </span> 
+     
+       
+      <span> 
+        <a href="../query%3Fstatus=closed&amp;max=3&amp;page=10&amp;col=id&amp;col=resolution&amp;col=summary&amp;col=owner&amp;col=reporter&amp;desc=1&amp;order=id.html" title="Page 10">10</a> 
+      </span> 
+     
+       
+      <span> 
+        <a href="../query%3Fstatus=closed&amp;max=3&amp;page=11&amp;col=id&amp;col=resolution&amp;col=summary&amp;col=owner&amp;col=reporter&amp;desc=1&amp;order=id.html" title="Page 11">11</a> 
+      </span> 
+     
+    <span class="next"> 
+      <a href="../query%3Fstatus=closed&amp;max=3&amp;page=2&amp;col=id&amp;col=resolution&amp;col=summary&amp;col=owner&amp;col=reporter&amp;desc=1&amp;order=id.html" title="Next Page">→</a> 
+    </span> 
+
+</div>
+  
+  
+  
+    
+  
+  <table class="listing tickets">
+    <thead>
+      
+    <tr class="trac-columns">
+      <th class="id desc">
+        
+        <a title="Sort by Ticket (ascending)" href="../query%3Fstatus=closed&amp;max=3&amp;col=id&amp;col=resolution&amp;col=summary&amp;col=owner&amp;col=reporter&amp;order=id.html">Ticket</a>
+      </th><th class="resolution">
+        
+        <a title="Sort by Resolution (ascending)" href="../query%3Fstatus=closed&amp;max=3&amp;col=id&amp;col=resolution&amp;col=summary&amp;col=owner&amp;col=reporter&amp;order=resolution.html">Resolution</a>
+      </th><th class="summary">
+        
+        <a title="Sort by Summary (ascending)" href="../query%3Fstatus=closed&amp;max=3&amp;col=id&amp;col=resolution&amp;col=summary&amp;col=owner&amp;col=reporter&amp;order=summary.html">Summary</a>
+      </th><th class="owner">
+        
+        <a title="Sort by Owner (ascending)" href="../query%3Fstatus=closed&amp;max=3&amp;col=id&amp;col=resolution&amp;col=summary&amp;col=owner&amp;col=reporter&amp;order=owner.html">Owner</a>
+      </th><th class="reporter">
+        
+        <a title="Sort by Reporter (ascending)" href="../query%3Fstatus=closed&amp;max=3&amp;col=id&amp;col=resolution&amp;col=summary&amp;col=owner&amp;col=reporter&amp;order=reporter.html">Reporter</a>
+      </th>
+    </tr>
+  
+    </thead>
+    
+      
+      <tbody>
+        
+        
+          
+            
+
+              <tr class="even prio6">
+                
+                  
+                    <td class="id"><a href="../ticket/3024.html" title="View ticket" class="closed">#3024</a></td>
+                    
+                  
+                
+                  
+                    
+                    <td class="resolution">
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      fixed
+                    </td>
+                  
+                
+                  
+                    
+                    <td class="summary">
+                      <a href="../ticket/3024.html" title="View ticket">Add activity stream tab to dataset read page</a>
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                    </td>
+                  
+                
+                  
+                    
+                    <td class="owner">
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                    </td>
+                  
+                
+                  
+                    
+                    <td class="reporter">
+                      
+                      
+                      seanh
+                      
+                      
+                      
+                      
+                      
+                    </td>
+                  
+                
+              </tr>
+
+              
+                
+                
+                  
+                  
+                
+              
+            
+          
+        
+          
+            
+
+              <tr class="odd prio6">
+                
+                  
+                    <td class="id"><a href="../ticket/3022.html" title="View ticket" class="closed">#3022</a></td>
+                    
+                  
+                
+                  
+                    
+                    <td class="resolution">
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      fixed
+                    </td>
+                  
+                
+                  
+                    
+                    <td class="summary">
+                      <a href="../ticket/3022.html" title="View ticket">setup_template_variables method of IDatasetForm never called</a>
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                    </td>
+                  
+                
+                  
+                    
+                    <td class="owner">
+                      
+                      
+                      
+                      
+                      amercader
+                      
+                      
+                      
+                    </td>
+                  
+                
+                  
+                    
+                    <td class="reporter">
+                      
+                      
+                      amercader
+                      
+                      
+                      
+                      
+                      
+                    </td>
+                  
+                
+              </tr>
+
+              
+                
+                
+                  
+                  
+                
+              
+            
+          
+        
+          
+            
+
+              <tr class="even prio6">
+                
+                  
+                    <td class="id"><a href="../ticket/3015.html" title="View ticket" class="closed">#3015</a></td>
+                    
+                  
+                
+                  
+                    
+                    <td class="resolution">
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      invalid
+                    </td>
+                  
+                
+                  
+                    
+                    <td class="summary">
+                      <a href="../ticket/3015.html" title="View ticket">Dropdowns don't work without JavaScript</a>
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                    </td>
+                  
+                
+                  
+                    
+                    <td class="owner">
+                      
+                      
+                      
+                      
+                      johnmartin
+                      
+                      
+                      
+                    </td>
+                  
+                
+                  
+                    
+                    <td class="reporter">
+                      
+                      
+                      johnmartin
+                      
+                      
+                      
+                      
+                      
+                    </td>
+                  
+                
+              </tr>
+
+              
+                
+                
+                  
+                  
+                
+              
+            
+          
+        
+        
+      </tbody>
+    
+  </table>
+  <div class="paging"> 
+
+     
+     
+      <span> 
+        <span class="current">1</span> 
+      </span> 
+       
+     
+       
+      <span> 
+        <a href="../query%3Fstatus=closed&amp;max=3&amp;page=2&amp;col=id&amp;col=resolution&amp;col=summary&amp;col=owner&amp;col=reporter&amp;desc=1&amp;order=id.html" title="Page 2">2</a> 
+      </span> 
+     
+       
+      <span> 
+        <a href="../query%3Fstatus=closed&amp;max=3&amp;page=3&amp;col=id&amp;col=resolution&amp;col=summary&amp;col=owner&amp;col=reporter&amp;desc=1&amp;order=id.html" title="Page 3">3</a> 
+      </span> 
+     
+       
+      <span> 
+        <a href="../query%3Fstatus=closed&amp;max=3&amp;page=4&amp;col=id&amp;col=resolution&amp;col=summary&amp;col=owner&amp;col=reporter&amp;desc=1&amp;order=id.html" title="Page 4">4</a> 
+      </span> 
+     
+       
+      <span> 
+        <a href="../query%3Fstatus=closed&amp;max=3&amp;page=5&amp;col=id&amp;col=resolution&amp;col=summary&amp;col=owner&amp;col=reporter&amp;desc=1&amp;order=id.html" title="Page 5">5</a> 
+      </span> 
+     
+       
+      <span> 
+        <a href="../query%3Fstatus=closed&amp;max=3&amp;page=6&amp;col=id&amp;col=resolution&amp;col=summary&amp;col=owner&amp;col=reporter&amp;desc=1&amp;order=id.html" title="Page 6">6</a> 
+      </span> 
+     
+       
+      <span> 
+        <a href="../query%3Fstatus=closed&amp;max=3&amp;page=7&amp;col=id&amp;col=resolution&amp;col=summary&amp;col=owner&amp;col=reporter&amp;desc=1&amp;order=id.html" title="Page 7">7</a> 
+      </span> 
+     
+       
+      <span> 
+        <a href="../query%3Fstatus=closed&amp;max=3&amp;page=8&amp;col=id&amp;col=resolution&amp;col=summary&amp;col=owner&amp;col=reporter&amp;desc=1&amp;order=id.html" title="Page 8">8</a> 
+      </span> 
+     
+       
+      <span> 
+        <a href="../query%3Fstatus=closed&amp;max=3&amp;page=9&amp;col=id&amp;col=resolution&amp;col=summary&amp;col=owner&amp;col=reporter&amp;desc=1&amp;order=id.html" title="Page 9">9</a> 
+      </span> 
+     
+       
+      <span> 
+        <a href="../query%3Fstatus=closed&amp;max=3&amp;page=10&amp;col=id&amp;col=resolution&amp;col=summary&amp;col=owner&amp;col=reporter&amp;desc=1&amp;order=id.html" title="Page 10">10</a> 
+      </span> 
+     
+       
+      <span> 
+        <a href="../query%3Fstatus=closed&amp;max=3&amp;page=11&amp;col=id&amp;col=resolution&amp;col=summary&amp;col=owner&amp;col=reporter&amp;desc=1&amp;order=id.html" title="Page 11">11</a> 
+      </span> 
+     
+    <span class="next"> 
+      <a href="../query%3Fstatus=closed&amp;max=3&amp;page=2&amp;col=id&amp;col=resolution&amp;col=summary&amp;col=owner&amp;col=reporter&amp;desc=1&amp;order=id.html" title="Next Page">→</a> 
+    </span> 
+
+</div>
+</div><p>
+</p>
+<h4 id="Fullrows">Full rows</h4>
+<p>
+In <em>table</em> format you can also have full rows by using <em>rows=&lt;field&gt;</em> like below:
+</p>
+<pre class="wiki">[[TicketQuery(max=3,status=closed,order=id,desc=1,format=table,col=resolution|summary|owner|reporter,rows=description)]]
+</pre><p>
+This is displayed as:
+</p><div xmlns="http://www.w3.org/1999/xhtml">
+  <h2 class="report-result">
+    Results <span class="numresults">(1 - 3 of 2152)</span>
+  </h2>
+  <div class="paging"> 
+
+     
+     
+      <span> 
+        <span class="current">1</span> 
+      </span> 
+       
+     
+       
+      <span> 
+        <a href="../query%3Fstatus=closed&amp;max=3&amp;page=2&amp;col=id&amp;col=resolution&amp;col=summary&amp;col=owner&amp;col=reporter&amp;desc=1&amp;order=id&amp;row=description.html" title="Page 2">2</a> 
+      </span> 
+     
+       
+      <span> 
+        <a href="../query%3Fstatus=closed&amp;max=3&amp;page=3&amp;col=id&amp;col=resolution&amp;col=summary&amp;col=owner&amp;col=reporter&amp;desc=1&amp;order=id&amp;row=description.html" title="Page 3">3</a> 
+      </span> 
+     
+       
+      <span> 
+        <a href="../query%3Fstatus=closed&amp;max=3&amp;page=4&amp;col=id&amp;col=resolution&amp;col=summary&amp;col=owner&amp;col=reporter&amp;desc=1&amp;order=id&amp;row=description.html" title="Page 4">4</a> 
+      </span> 
+     
+       
+      <span> 
+        <a href="../query%3Fstatus=closed&amp;max=3&amp;page=5&amp;col=id&amp;col=resolution&amp;col=summary&amp;col=owner&amp;col=reporter&amp;desc=1&amp;order=id&amp;row=description.html" title="Page 5">5</a> 
+      </span> 
+     
+       
+      <span> 
+        <a href="../query%3Fstatus=closed&amp;max=3&amp;page=6&amp;col=id&amp;col=resolution&amp;col=summary&amp;col=owner&amp;col=reporter&amp;desc=1&amp;order=id&amp;row=description.html" title="Page 6">6</a> 
+      </span> 
+     
+       
+      <span> 
+        <a href="../query%3Fstatus=closed&amp;max=3&amp;page=7&amp;col=id&amp;col=resolution&amp;col=summary&amp;col=owner&amp;col=reporter&amp;desc=1&amp;order=id&amp;row=description.html" title="Page 7">7</a> 
+      </span> 
+     
+       
+      <span> 
+        <a href="../query%3Fstatus=closed&amp;max=3&amp;page=8&amp;col=id&amp;col=resolution&amp;col=summary&amp;col=owner&amp;col=reporter&amp;desc=1&amp;order=id&amp;row=description.html" title="Page 8">8</a> 
+      </span> 
+     
+       
+      <span> 
+        <a href="../query%3Fstatus=closed&amp;max=3&amp;page=9&amp;col=id&amp;col=resolution&amp;col=summary&amp;col=owner&amp;col=reporter&amp;desc=1&amp;order=id&amp;row=description.html" title="Page 9">9</a> 
+      </span> 
+     
+       
+      <span> 
+        <a href="../query%3Fstatus=closed&amp;max=3&amp;page=10&amp;col=id&amp;col=resolution&amp;col=summary&amp;col=owner&amp;col=reporter&amp;desc=1&amp;order=id&amp;row=description.html" title="Page 10">10</a> 
+      </span> 
+     
+       
+      <span> 
+        <a href="../query%3Fstatus=closed&amp;max=3&amp;page=11&amp;col=id&amp;col=resolution&amp;col=summary&amp;col=owner&amp;col=reporter&amp;desc=1&amp;order=id&amp;row=description.html" title="Page 11">11</a> 
+      </span> 
+     
+    <span class="next"> 
+      <a href="../query%3Fstatus=closed&amp;max=3&amp;page=2&amp;col=id&amp;col=resolution&amp;col=summary&amp;col=owner&amp;col=reporter&amp;desc=1&amp;order=id.html" title="Next Page">→</a> 
+    </span> 
+
+</div>
+  
+  
+  
+    
+  
+  <table class="listing tickets">
+    <thead>
+      
+    <tr class="trac-columns">
+      <th class="id desc">
+        
+        <a title="Sort by Ticket (ascending)" href="../query%3Fstatus=closed&amp;max=3&amp;col=id&amp;col=resolution&amp;col=summary&amp;col=owner&amp;col=reporter&amp;order=id&amp;row=description.html">Ticket</a>
+      </th><th class="resolution">
+        
+        <a title="Sort by Resolution (ascending)" href="../query%3Fstatus=closed&amp;max=3&amp;col=id&amp;col=resolution&amp;col=summary&amp;col=owner&amp;col=reporter&amp;order=resolution&amp;row=description.html">Resolution</a>
+      </th><th class="summary">
+        
+        <a title="Sort by Summary (ascending)" href="../query%3Fstatus=closed&amp;max=3&amp;col=id&amp;col=resolution&amp;col=summary&amp;col=owner&amp;col=reporter&amp;order=summary&amp;row=description.html">Summary</a>
+      </th><th class="owner">
+        
+        <a title="Sort by Owner (ascending)" href="../query%3Fstatus=closed&amp;max=3&amp;col=id&amp;col=resolution&amp;col=summary&amp;col=owner&amp;col=reporter&amp;order=owner&amp;row=description.html">Owner</a>
+      </th><th class="reporter">
+        
+        <a title="Sort by Reporter (ascending)" href="../query%3Fstatus=closed&amp;max=3&amp;col=id&amp;col=resolution&amp;col=summary&amp;col=owner&amp;col=reporter&amp;order=reporter&amp;row=description.html">Reporter</a>
+      </th>
+    </tr>
+  
+    </thead>
+    
+      
+      <tbody>
+        
+        
+          
+            
+
+              <tr class="even prio6">
+                
+                  
+                    <td class="id"><a href="../ticket/3024.html" title="View ticket" class="closed">#3024</a></td>
+                    
+                  
+                
+                  
+                    
+                    <td class="resolution">
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      fixed
+                    </td>
+                  
+                
+                  
+                    
+                    <td class="summary">
+                      <a href="../ticket/3024.html" title="View ticket">Add activity stream tab to dataset read page</a>
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                    </td>
+                  
+                
+                  
+                    
+                    <td class="owner">
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                    </td>
+                  
+                
+                  
+                    
+                    <td class="reporter">
+                      
+                      
+                      seanh
+                      
+                      
+                      
+                      
+                      
+                    </td>
+                  
+                
+              </tr>
+
+              
+                
+                
+                  
+                  
+                
+              
+            
+          
+        
+          
+            
+
+              <tr class="odd prio6">
+                
+                  
+                    <td class="id"><a href="../ticket/3022.html" title="View ticket" class="closed">#3022</a></td>
+                    
+                  
+                
+                  
+                    
+                    <td class="resolution">
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      fixed
+                    </td>
+                  
+                
+                  
+                    
+                    <td class="summary">
+                      <a href="../ticket/3022.html" title="View ticket">setup_template_variables method of IDatasetForm never called</a>
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                    </td>
+                  
+                
+                  
+                    
+                    <td class="owner">
+                      
+                      
+                      
+                      
+                      amercader
+                      
+                      
+                      
+                    </td>
+                  
+                
+                  
+                    
+                    <td class="reporter">
+                      
+                      
+                      amercader
+                      
+                      
+                      
+                      
+                      
+                    </td>
+                  
+                
+              </tr>
+
+              
+                <tr class="fullrow">
+                  <td colspan="5">
+                    <p class="meta">Reported by <strong>amercader</strong>,
+                      <span title="11/22/12 16:45:43">18 months</span> ago.</p>
+                  </td>
+                </tr>
+                
+                  
+                  <tr class="fullrow">
+                    <th class="meta">Description</th>
+                    <td colspan="4">
+                      <p>
+On the package controller the package_type is not passed to the lookup function, so the setup_template_variables defined on the extensions is never called
+</p>
+
+                    </td>
+                  </tr>
+                
+              
+            
+          
+        
+          
+            
+
+              <tr class="even prio6">
+                
+                  
+                    <td class="id"><a href="../ticket/3015.html" title="View ticket" class="closed">#3015</a></td>
+                    
+                  
+                
+                  
+                    
+                    <td class="resolution">
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      invalid
+                    </td>
+                  
+                
+                  
+                    
+                    <td class="summary">
+                      <a href="../ticket/3015.html" title="View ticket">Dropdowns don't work without JavaScript</a>
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                    </td>
+                  
+                
+                  
+                    
+                    <td class="owner">
+                      
+                      
+                      
+                      
+                      johnmartin
+                      
+                      
+                      
+                    </td>
+                  
+                
+                  
+                    
+                    <td class="reporter">
+                      
+                      
+                      johnmartin
+                      
+                      
+                      
+                      
+                      
+                    </td>
+                  
+                
+              </tr>
+
+              
+                <tr class="fullrow">
+                  <td colspan="5">
+                    <p class="meta">Reported by <strong>johnmartin</strong>,
+                      <span title="11/13/12 11:19:13">18 months</span> ago.</p>
+                  </td>
+                </tr>
+                
+                  
+                  <tr class="fullrow">
+                    <th class="meta">Description</th>
+                    <td colspan="4">
+                      <p>
+Essentially the default bootstrap dropdowns don't work properly without <a class="missing wiki">JavaScript?</a> which is a little bit of an issue with JS not working.
+</p>
+
+                    </td>
+                  </tr>
+                
+              
+            
+          
+        
+        
+      </tbody>
+    
+  </table>
+  <div class="paging"> 
+
+     
+     
+      <span> 
+        <span class="current">1</span> 
+      </span> 
+       
+     
+       
+      <span> 
+        <a href="../query%3Fstatus=closed&amp;max=3&amp;page=2&amp;col=id&amp;col=resolution&amp;col=summary&amp;col=owner&amp;col=reporter&amp;desc=1&amp;order=id&amp;row=description.html" title="Page 2">2</a> 
+      </span> 
+     
+       
+      <span> 
+        <a href="../query%3Fstatus=closed&amp;max=3&amp;page=3&amp;col=id&amp;col=resolution&amp;col=summary&amp;col=owner&amp;col=reporter&amp;desc=1&amp;order=id&amp;row=description.html" title="Page 3">3</a> 
+      </span> 
+     
+       
+      <span> 
+        <a href="../query%3Fstatus=closed&amp;max=3&amp;page=4&amp;col=id&amp;col=resolution&amp;col=summary&amp;col=owner&amp;col=reporter&amp;desc=1&amp;order=id&amp;row=description.html" title="Page 4">4</a> 
+      </span> 
+     
+       
+      <span> 
+        <a href="../query%3Fstatus=closed&amp;max=3&amp;page=5&amp;col=id&amp;col=resolution&amp;col=summary&amp;col=owner&amp;col=reporter&amp;desc=1&amp;order=id&amp;row=description.html" title="Page 5">5</a> 
+      </span> 
+     
+       
+      <span> 
+        <a href="../query%3Fstatus=closed&amp;max=3&amp;page=6&amp;col=id&amp;col=resolution&amp;col=summary&amp;col=owner&amp;col=reporter&amp;desc=1&amp;order=id&amp;row=description.html" title="Page 6">6</a> 
+      </span> 
+     
+       
+      <span> 
+        <a href="../query%3Fstatus=closed&amp;max=3&amp;page=7&amp;col=id&amp;col=resolution&amp;col=summary&amp;col=owner&amp;col=reporter&amp;desc=1&amp;order=id&amp;row=description.html" title="Page 7">7</a> 
+      </span> 
+     
+       
+      <span> 
+        <a href="../query%3Fstatus=closed&amp;max=3&amp;page=8&amp;col=id&amp;col=resolution&amp;col=summary&amp;col=owner&amp;col=reporter&amp;desc=1&amp;order=id&amp;row=description.html" title="Page 8">8</a> 
+      </span> 
+     
+       
+      <span> 
+        <a href="../query%3Fstatus=closed&amp;max=3&amp;page=9&amp;col=id&amp;col=resolution&amp;col=summary&amp;col=owner&amp;col=reporter&amp;desc=1&amp;order=id&amp;row=description.html" title="Page 9">9</a> 
+      </span> 
+     
+       
+      <span> 
+        <a href="../query%3Fstatus=closed&amp;max=3&amp;page=10&amp;col=id&amp;col=resolution&amp;col=summary&amp;col=owner&amp;col=reporter&amp;desc=1&amp;order=id&amp;row=description.html" title="Page 10">10</a> 
+      </span> 
+     
+       
+      <span> 
+        <a href="../query%3Fstatus=closed&amp;max=3&amp;page=11&amp;col=id&amp;col=resolution&amp;col=summary&amp;col=owner&amp;col=reporter&amp;desc=1&amp;order=id&amp;row=description.html" title="Page 11">11</a> 
+      </span> 
+     
+    <span class="next"> 
+      <a href="../query%3Fstatus=closed&amp;max=3&amp;page=2&amp;col=id&amp;col=resolution&amp;col=summary&amp;col=owner&amp;col=reporter&amp;desc=1&amp;order=id.html" title="Next Page">→</a> 
+    </span> 
+
+</div>
+</div><p>
+</p>
+<h3 id="QueryLanguage">Query Language</h3>
+<p>
+<tt>query:</tt> <a class="wiki" href="TracLinks.html">TracLinks</a> and the <tt>[[TicketQuery]]</tt> macro both use a mini “query language” for specifying query filters. Basically, the filters are separated by ampersands (<tt>&amp;</tt>). Each filter then consists of the ticket field name, an operator, and one or more values. More than one value are separated by a pipe (<tt>|</tt>), meaning that the filter matches any of the values. To include a literal <tt>&amp;</tt> or <tt>|</tt> in a value, escape the character with a backslash (<tt>\</tt>).
+</p>
+<p>
+The available operators are:
+</p>
+<table class="wiki">
+<tr><td> <strong><tt>=</tt></strong> </td><td> the field content exactly matches one of the values 
+</td></tr><tr><td> <strong><tt>~=</tt></strong> </td><td> the field content contains one or more of the values 
+</td></tr><tr><td> <strong><tt>^=</tt></strong> </td><td> the field content starts with one of the values 
+</td></tr><tr><td> <strong><tt>$=</tt></strong> </td><td> the field content ends with one of the values 
+</td></tr></table>
+<p>
+All of these operators can also be negated:
+</p>
+<table class="wiki">
+<tr><td> <strong><tt>!=</tt></strong> </td><td> the field content matches none of the values 
+</td></tr><tr><td> <strong><tt>!~=</tt></strong> </td><td> the field content does not contain any of the values 
+</td></tr><tr><td> <strong><tt>!^=</tt></strong> </td><td> the field content does not start with any of the values 
+</td></tr><tr><td> <strong><tt>!$=</tt></strong> </td><td> the field content does not end with any of the values 
+</td></tr></table>
+<p>
+The date fields <tt>created</tt> and <tt>modified</tt> can be constrained by using the <tt>=</tt> operator and specifying a value containing two dates separated by two dots (<tt>..</tt>). Either end of the date range can be left empty, meaning that the corresponding end of the range is open. The date parser understands a few natural date specifications like "3 weeks ago", "last month" and "now", as well as Bugzilla-style date specifications like "1d", "2w", "3m" or "4y" for 1 day, 2 weeks, 3 months and 4 years, respectively. Spaces in date specifications can be left out to avoid having to quote the query string. 
+</p>
+<table class="wiki">
+<tr><td> <strong><tt>created=2007-01-01..2008-01-01</tt></strong> </td><td> query tickets created in 2007 
+</td></tr><tr><td> <strong><tt>created=lastmonth..thismonth</tt></strong> </td><td> query tickets created during the previous month 
+</td></tr><tr><td> <strong><tt>modified=1weekago..</tt></strong> </td><td> query tickets that have been modified in the last week 
+</td></tr><tr><td> <strong><tt>modified=..30daysago</tt></strong> </td><td> query tickets that have been inactive for the last 30 days 
+</td></tr></table>
+<hr />
+<p>
+See also: <a class="wiki" href="TracTickets.html">TracTickets</a>, <a class="wiki" href="TracReports.html">TracReports</a>, <a class="wiki" href="TracGuide.html">TracGuide</a>
+</p>
+</div>
+        
+        
+      </div>
+      
+
+    </div>
+    <script type="text/javascript">
+        jQuery.loadStyleSheet("/chrome/common/css/report.css", "text/css");
+    </script>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="last first">
+          <a rel="nofollow" href="TracQuery%3Fversion=4&amp;format=txt">Plain Text</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

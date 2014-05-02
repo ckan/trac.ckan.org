@@ -1,0 +1,6 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+819,Tag autocompletion widget broken,cygri,,"The widget for tag autocompletion is broken in various ways.
+
+For example, if I edit a package that is tagged ""music"", and just tab through the form fields to get to the Author field, then the widget changes to ""industrial-music"" as I tab through it.
+
+Or if the tag is ""foo bar"" and I hit alt-right to jump to the end of the text field (with the intent of adding a third tag), then the contents change to ""foo barbecue"".",defect,closed,awaiting triage,ckan-backlog,ckan,fixed,,,ckan,none

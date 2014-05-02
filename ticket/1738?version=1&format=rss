@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1738: Add extension point to search index, so can modify dataset dict before index.</title>
+    <link>http://localhost/ticket/1738</link>
+    <description>&lt;p&gt;
+It is useful for extensions to add or change items that go into the search index. Add an extension point for this.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1738</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>kindly</dc:creator>
+
+      <pubDate>Tue, 31 Jan 2012 17:39:55 GMT</pubDate>
+      <title>status, description changed; owner set</title>
+      <link>http://localhost/ticket/1738#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1738#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;owner&lt;/strong&gt;
+              set to &lt;em&gt;kindly&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;assigned&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1738?action=diff&amp;amp;version=1"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>kindly</dc:creator>
+
+      <pubDate>Mon, 06 Feb 2012 02:18:29 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/1738#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/1738#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;assigned&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+cset: 117dce4d64de731e7b0a3c55175a1d093f2bf540
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Fri, 24 Feb 2012 12:21:45 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1738#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/1738#comment:3</guid>
+      <description>
+        &lt;p&gt;
+Cset is actually dd2c0c677117f06a52aa22b3b2717bb605263570 and went into CKAN 1.6
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

@@ -1,0 +1,11 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2770,Some strings potentially not marked for translation,seanh,seanh,"Luca De Santis reported these strings not marked in 1.7.1:
+
+> - /user/login.html (""Remember me"" & ""Sign in"")
+> - /package/search.html and template/package/group/read.html (Tags, Resource Formats, Groups)
+> - /package/resource_read.html (the ""No description"" message)
+> - the ""Add related item"" dialog (some strings are i18n savvy, others not)
+> - the stats page (labels on the graphs)
+> - the history page (as far as the log messages are concerned).
+
+lets check that they are marked in 1.8",defect,closed,blocker,ckan-v1.8,ckan,fixed,,,ckan,none

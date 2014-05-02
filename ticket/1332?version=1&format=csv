@@ -1,0 +1,30 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1332,i18n IndexError exceptions,dread,,"We get this i18n error for the URL http://no.ckan.net/authorizationgroup (which runs 1.4.2 with Norwegian translation). I'm not sure why it occurs. Fixing it is low importance though, because this site doesn't use Authorization Group feature
+
+Usually caused by bots. The user does not appear to be logged in.
+
+{{{
+WebApp Error: <type 'exceptions.IndexError'>: list index out of range
+...
+Module genshi.filters.i18n:177 in _generate
+<<                  msgbuf.append(*previous)
+                       previous = None
+                   for event in msgbuf.translate(gettext(msgbuf.format())):
+                       yield event
+                   if previous:
+>>  for event in msgbuf.translate(gettext(msgbuf.format())):
+Module genshi.filters.i18n:1029 in translate
+<<                      )
+       
+               parts = parse_msg(string)
+               parts_counter = {}
+               for order, string in parts:
+>>  parts = parse_msg(string)
+Module genshi.filters.i18n:1143 in parse_msg
+<<      if string:
+               parts.append((stack[-1], string))
+       
+           return parts
+>>  parts.append((stack[-1], string))
+IndexError: list index out of range
+}}}",defect,new,minor,,ckan,,,havardfe@…,ckan,none

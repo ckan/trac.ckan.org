@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2952: incorporate javascriopt translations into translations workflow</title>
+    <link>http://localhost/ticket/2952</link>
+    <description>&lt;p&gt;
+There are now javascript translations.  There's a paster command, &lt;tt&gt;trans js&lt;/tt&gt;.  This is a ticket to ensure that using &lt;tt&gt;trans js&lt;/tt&gt; is documented in the normal ckan translation workflow (which is followed after a feature freeze, prior to release).  And to see if there's any need for further incorporation into the current translation process.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2952</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+ </channel>
+</rss>

@@ -1,0 +1,10 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+312	Race condition creating PackageRating	dread	rgrp	"On ckan.net there are a few packages which cause a 403 exception when you try to rate them:
+http://www.ckan.net/package/rate/coins-data?rating=3
+
+The exception is occuring here:
+ckan.rating:39 in set_rating
+rating_obj = rating_query.one()
+InvalidRequestError: Multiple rows returned for one()
+
+It looks like this package got rated twice in quick succession, creating two similar PackageRating objects. This race condition needs to be solved and these particular rating objects repaired."	defect	closed	awaiting triage		ckan	invalid			ckan	none

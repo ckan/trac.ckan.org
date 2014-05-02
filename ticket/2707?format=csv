@@ -1,0 +1,8 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2707,Tidy up additional info boxes on dataset and resource pages,shevski,toby,"This currently looks terrible. Some simple things we should do to improve this.
+
+ * Localise and captitalise known (non custom) keys into human titles. eg. ""size"", ""created_at"", ""mime_type"".
+ * Apply units to values of known keys where possible eg. ""size in appropiate units""
+ * Convert dates into a more human friendly format. We can avoid localisation hell by using an ISO format like YYYY/MM/DD hh:mm:ss which is still better than ISO8061
+ * Move the non user fields to the top of the table.
+",enhancement,closed,major,demo phase 3,ckan,fixed,demo-theme,shevski,ckan,none

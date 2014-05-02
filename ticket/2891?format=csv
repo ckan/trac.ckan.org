@@ -1,0 +1,8 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2891,Update or remove DataStore google presentation,seanh,,"Currently this page:
+
+http://docs.ckan.org/en/ckan-1.8/datastore.html
+
+has an embedded Google docs presentation about data store which contains some outdated information, e.g. links to datastoreclient which was merged into ckanclient.
+
+Suggest moving the google presentation into the documentation proper, so it works with grep etc.",defect,new,awaiting triage,ckan-v1.8.1,ckan,,docs,,ckan,none

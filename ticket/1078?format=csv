@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1078,Refactors WUI controllers and forms to use logic layer,rgrp,kindly," * Deserialize forms to new dict format.
+ * Replace controllers/forms to use dictization.
+",enhancement,closed,awaiting triage,ckan-v1.5,ckan,fixed,,,ckan,dictization

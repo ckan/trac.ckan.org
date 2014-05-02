@@ -1,0 +1,14 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1623,Dump to exclude deleted objects,dread,dread,"The database dump currently contains all Packages and their associated objects, even those that have been set to state=deleted. We should exclude these from the dump now.
+
+Dump = paster db simple-dump-csv/json
+
+== reasoning ==
+
+The dumps are designed for end-users to be able to run scripts on the mass of data. Since end-users don't see state=deleted packages then they shouldn't need them in the dump. In fact their presence in the dump probably confuses them.
+
+Admins get the full database anyway in the backup pg_dump.
+
+We only included them in the user dump because it was designed before use of state=deleted was established.
+
+Time estimate: 2h",enhancement,closed,trivial,ckan-sprint-2012-01-23,ckan,fixed,,,ckan,none

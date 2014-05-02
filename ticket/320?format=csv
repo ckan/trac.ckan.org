@@ -1,0 +1,15 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+320,site_title configuration variable which is used in template,rgrp,dread,"As a sysadmin I want to configure basic site title information for use in the site templates.
+
+Implementation:
+
+  * ckan.site_title config variable
+  * set this on g in app_globals.py e.g.
+    * from pylons import config; g.site_title = config.get('ckan.site_title, 'CKAN - Comprehensive Knowledge Archive Network')
+  * use in head title and in main site title/logo section (use it as alt on logo image)
+  * Also all other pages (e.g. index, about) which talk about CKAN
+    * Is this needed? Would it not be better for people who want to customize the site to simply overwrite those templates?
+
+Questions:
+  * Do we want a site_logo variable whic his use for site title/logo section instead of site_title if site_logo defined?
+  * Probably yes, but '''not''' part of this ticket.",enhancement,closed,major,v1.1,ckan,fixed,,,,

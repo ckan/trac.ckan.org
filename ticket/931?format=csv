@@ -1,0 +1,2 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+931,Search results generator hides paging functionality,dread,dread,ckanclient's search results list only packages up to the 'limit'. It would be good to return a generator instead of a list. When the limit is reached on the generator then another 'page' is loaded automatically.,enhancement,closed,awaiting triage,ckan-v1.4-sprint-1,ckanclient,fixed,,,,

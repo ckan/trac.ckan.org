@@ -1,0 +1,71 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+277,Set some config options / settings in WUI (extension),dread,zephod,"== Use case ==
+
+As a ckan administrator I want to easily change options about the CKAN install.
+
+== Implementation ==
+
+=== Settings to be in DB ===
+
+Suggested:
+
+{{{
+## Title of site (using in several places including templates and <title> tag
+ckan.site_title = CKAN
+
+## Logo image to use (replaces site_title string on front page if defined)
+ckan.site_logo = http://assets.okfn.org/p/ckan/img/ckan_logo_box.png
+
+## Site tagline / description (used on front page)
+ckan.site_description = 
+
+## Used in creating some absolute urls (such as rss feeds, css files) and 
+## dump filenames
+ckan.site_url =
+
+## Favicon (default is the CKAN software favicon)
+ckan.favicon = http://assets.okfn.org/p/ckan/img/ckan.ico
+
+
+## An 'id' for the site (using, for example, when creating entries in a common search index) 
+## If not specified derived from the site_url
+# ckan.site_id = ckan.net
+
+## API url to use (e.g. in AJAX callbacks)
+## Enable if the API is at a different domain
+# ckan.api_url = http://www.ckan.net
+
+## html content to be inserted just before </body> tag (e.g. google analytics code)
+## NB: can use html e.g. <strong>blah</strong>
+## NB: can have multiline strings just indent following lines
+# ckan.template_footer_end = 
+}}}
+
+
+NB: these will still need to be stored somewhere for loading on initialization. do this in db init function ...
+
+=== Settings / Options / KeyValues Table ===
+
+Columns:
+
+ * [namespace]: ? only if KeyValues (for settings this would then always be settings)
+ * key
+ * label
+ * value (json)
+ * type (e.g. date and to specify in advance what type should be)
+ * description
+ * tags: ?? (for grouping ...)
+
+=== Loading settings from DB ===
+
+Do this in ckan/config/environment.py
+
+=== WUI ===
+
+ * /ckan-admin/settings
+ * Show label, plus description plus text field
+
+== Depends ==
+
+  * Would be part of ckan-admin section and hence build on ticket:833 (Administrative dashboard)
+",enhancement,assigned,awaiting triage,ckan-sprint-2011-10-10,ckan,,,,ckan,none

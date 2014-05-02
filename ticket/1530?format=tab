@@ -1,0 +1,5 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1530	URL field help text in wrong place	lucychambers	zephod	"Confusion between entering values in the title and name/url fields in datacatalogs.org.
+
+The help text ""Url must be purely lowercase alphanumeric (ascii) characters and these symbols: -_"" applies to the name/url field, yet in Lucy's browser the text that is actually hovering over the title field in my browser.
+"	defect	closed	critical	ckan-v1.7	ckan	fixed		dread johnglover	ckan	none

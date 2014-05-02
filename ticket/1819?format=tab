@@ -1,0 +1,2 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1819	change search index code to use package_dictize instead of obj.to_dict	kindly	kindly	Search index code needs to use package_dictize so that it can get the new vocablurary information and is more consistant with the rest of the system.  This is in preperation for their translation being put in the search indexer.	enhancement	closed	awaiting triage	ckan-sprint-2012-04-02	ecportal	fixed	2d		ckan	none

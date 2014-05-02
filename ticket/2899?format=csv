@@ -1,0 +1,12 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2899,Step 2 > Save & add another bug,johnmartin,,"Goto:
+
+1. Add dataset
+
+2. Get to step 2
+
+3. Click ""Save & add another"" without adding any data
+
+4. Ends on step 3
+
+Should: fail to validate and remain on step 2",enhancement,new,awaiting triage,demo phase 5,ckan,,,,ckan,none

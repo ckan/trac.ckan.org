@@ -1,0 +1,12 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2679	Change default behaviour of TemplateController.view to 404.	icmurray	icmurray	"The current behaviour of TemplateController.view() (which is the fallback controller should all others fail) is to attempt to render (as a genshi template) the requested file.
+
+Although this may be a feature that some instances want.  In general, it leads to:
+
+- 500s when attempting to access a normal template (eg - http://datahub.io/importer/preview)
+- A way of inadvertantly serving things you may not want to serve.  (Small risk, as it needs to be renderable as a genshi template).
+
+Solution:
+
+- Change the controller to 404
+- Ensure there's a way for existing ckan instances to override that behaviour should they need it."	enhancement	new	minor	ckan-v1.9	ckan				ckan	none

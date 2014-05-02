@@ -1,0 +1,12 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+221,UI Review - Package edit,dread,dread,"Package edit page [/package/edit/mypackagename]
+  * Ability to add the package to groups on this page.
+  * Fields could be grouped.
+  * Inconsistent capitalisation (Url -> URL).
+  * Tag editor YUI script appears to break occasionally.
+  * Perhaps move to two column forms to save vertical space?
+  * Notes field to monospace?
+  * Extras fields need some jQuery love -- shouldn't have a fixed number available.
+  * Typography is a bit of a mess.
+	
+",enhancement,closed,major,v1.0,ckan,fixed,,,,

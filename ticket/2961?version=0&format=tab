@@ -1,0 +1,14 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2961	Preview plugin endpoint	dominik		"Users could write ckan extensions that offer previews for a certain datatype. 
+
+Advantages:
+ - We can say that you can add your own previews
+ - Every preview would have to define it's own dependencies
+ - External development (community creates new extensions?)
+
+Questions to answer:
+ - Specification
+ - Precedence
+ - Plugins only define the datatype that they are responsible for or do we call a function that returns whether the extension is responsible. 
+
+As far as I can see, this should be fairly easy to implement by following these instructions: http://docs.ckan.org/en/latest/writing-extensions.html#writing-a-plugin-interface"	enhancement	new	awaiting triage	ckan 2.0	ckan		iframe, preview, extension		ckan	none

@@ -1,0 +1,29 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1386,Disallow account creation via openid,rgrp,rgrp,"Superticket: #1343
+
+Creation of accounts from OpenID causes large number of problems:
+ * No guarantee of other profile info
+ * Poor username (just from openid)
+
+We therefore will:
+
+ 1. Require creation of user account via register (no auto-creation of accounts via openid)
+  * sidebar of register page should point to login page rather than openid signin
+ 
+ 2. Permit association of an openid with an account ...
+  * How: paste in your openid url (requires change to edit form to have this)
+    * won't work for google with their weird openid urls
+  * [future] Nicer way is to have login via openid while logged in (which association then happening in background)
+
+ 3. Migration (for 1+2):
+  * (?) Generate decent usernames for all existing accounts
+  * As this is nontrivial suggest instead we allow editing of usernames (by account owner and sysadmins). This is useful in its own right and is a reasonable 80/20 solution.
+    * This does present the problem of re-associating commits with the new username. Best solution to this would be to switch revisions to point to userid rather than username. See #1534
+
+ 4. [optional] Change display_name to always be username
+  * Change My Account to Username at top right of all pages (once we know
+    usernames are short ...)
+    * could do this straight away by truncating long usernames (e.g. truncate
+      at 20 chars ...)
+    * Also should we lose the icon?
+",enhancement,closed,major,ckan-sprint-2011-10-24,vdm,fixed,,,ckan,none

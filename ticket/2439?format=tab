@@ -1,0 +1,2 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2439	tag_search and tag_autocomplete not fully available via GET request	icmurray	icmurray	`tag_search` and `tag_autocomplete`: The `fields` argument is not available when accessing this action with a GET request.	defect	closed	awaiting merge	ckan-v1.8	ckan	fixed	[0.5d]		ckan	none

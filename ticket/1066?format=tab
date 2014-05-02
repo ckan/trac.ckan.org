@@ -1,0 +1,11 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1066	Default reader role too permissive	dread	dread	"The definition of the 'reader' role includes creating packages, which is too permissive for some CKAN instances (e.g. DGU). 'Reader' suggests only reading, so I think this role should avoid creating and editing.
+
+All projects so far want all roles to be able to create users, so this stays as a Reader action for now, as a convenience.
+
+Implementation:
+
+ * Action.PACKAGE_CREATE removed from reader's default_role_actions
+ * Visitor has a new default role, called 'anon_editor' which can edit packages, but not groups / auth groups - you have to log in for that.
+ * Migration script not needed?
+ * Code comments written, to make clear the suggested policy"	enhancement	closed	major	ckan-v1.4-sprint-5	ckan	fixed			ckan	none

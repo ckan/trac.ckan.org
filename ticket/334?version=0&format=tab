@@ -1,0 +1,5 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+334	Wrong link for package feed icon	dread	johnbywater	"This is a problem with the package page e.g. http://ckan.net/package/open-election-data-project . The feed icon links to [1]  and the text next to it ""Subscribe"" links to [2]. Surely these should be the same? The second link seems to right one to me.
+
+[1] http://ckan.net/package/open-election-data-project?format=atom
+[2] http://ckan.net/package/history/open-election-data-project?format=atom&days=7"	defect	new	awaiting triage	v1.1	ckan					

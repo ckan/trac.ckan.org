@@ -1,0 +1,38 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1621	UnicodeDecodeError when validating user password	seanh	seanh	"A test case is currently failing for me on master:
+
+
+{{{
+ERROR: ckan.tests.functional.test_user.TestUserController.test_user_create_unicode
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File ""/home/seanh/pyenv/lib/python2.6/site-packages/nose/case.py"", line 197, in runTest
+    self.test(*self.arg)
+  File ""/home/seanh/pyenv/src/ckan/ckan/tests/functional/test_user.py"", line 342, in test_user_create_unicode
+    res = res.follow()
+  File ""/usr/lib/pymodules/python2.6/paste/fixture.py"", line 603, in follow
+    return self.test_app.get(location, **kw)
+  File ""/usr/lib/pymodules/python2.6/paste/fixture.py"", line 208, in get
+    return self.do_request(req, status=status)
+  File ""/usr/lib/pymodules/python2.6/paste/fixture.py"", line 389, in do_request
+    **req.environ)
+  File ""/usr/lib/pymodules/python2.6/paste/wsgilib.py"", line 343, in raw_interactive
+    app_iter = application(basic_environ, start_response)
+  File ""/usr/lib/pymodules/python2.6/paste/lint.py"", line 170, in lint_app
+    iterator = application(environ, start_response_wrapper)
+  File ""/usr/lib/pymodules/python2.6/paste/cascade.py"", line 130, in __call__
+    return self.apps[-1](environ, start_response)
+  File ""/usr/lib/pymodules/python2.6/paste/registry.py"", line 350, in __call__
+    app_iter = self.application(environ, start_response)
+  File ""/usr/lib/pymodules/python2.6/repoze/who/middleware.py"", line 69, in __call__
+    auth_ids = self.authenticate(environ, classification, ids)
+  File ""/usr/lib/pymodules/python2.6/repoze/who/middleware.py"", line 201, in authenticate
+    userid = plugin.authenticate(environ, identity)
+  File ""/home/seanh/pyenv/src/ckan/ckan/lib/authenticator.py"", line 29, in authenticate
+    if user.validate_password(identity.get('password')):
+  File ""/home/seanh/pyenv/src/ckan/ckan/model/user.py"", line 113, in validate_password
+    hashed_pass = sha1(password_8bit + self.password[:40])
+UnicodeDecodeError: 'ascii' codec can't decode byte 0xc3 in position 12: ordinal not in range(128)
+
+}}}
+"	defect	closed	awaiting triage		ckan	fixed			ckan	none

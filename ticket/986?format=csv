@@ -1,0 +1,11 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+986,Broken link report from the ckanext-qa code,thejimmyg,wwitzel3,"Should have the following features:
+
+* A list of all packages with broken links on the resource
+* Under each packages a description of any resources with broken links to include:
+  * Link
+  * Description
+  * Format
+  * First found to be broken date
+
+[If you can't do the last one yet, don't worry]",defect,closed,minor,ckan-v1.4-sprint-2,ckan,fixed,,,,

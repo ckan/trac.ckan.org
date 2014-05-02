@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #324: Search indexing using notifications</title>
+    <link>http://localhost/ticket/324</link>
+    <description>&lt;p&gt;
+Currently search indexing is triggered directly using a Postgresql db callback. Now take advantage of the Notification system to register interest in all package changes and db changes to trigger this instead.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/324</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>pudo</dc:creator>
+
+      <pubDate>Tue, 25 May 2010 17:19:30 GMT</pubDate>
+      <title>cc set</title>
+      <link>http://localhost/ticket/324#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/324#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;cc&lt;/strong&gt;
+              &lt;em&gt;pudo&lt;/em&gt; added
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+I am currently writing a Solr subclass for the search index (&lt;a class="closed ticket" href="http://localhost/ticket/317" title="enhancement: Make search pluggable (closed: fixed)"&gt;#317&lt;/a&gt;) and would propose adding standard methods to the ckan.libn.search.Search class: index_package(), index_tag(), index_group(). Those could then be called by a generic queue consumer, irrespective of the used search back-end. I will prototype such a consumer soon, so we should talk to avoid doing some duplicate work here.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Mon, 21 Jun 2010 12:54:35 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/324#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/324#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/324?action=diff&amp;amp;version=2"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Thu, 08 Jul 2010 14:38:47 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/324#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/324#comment:3</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Done in changesets leading up to cset:ca565562129d.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

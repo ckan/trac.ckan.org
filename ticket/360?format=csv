@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+360,New sqlite-based DB index,rgrp,rgrp,"In 0.5 and 0.6 have been more oriented to getting file indexes working to support the convenience of using packages on disk directly. However we now need to go back to having a better central/default index and the best model for this is a simple db index using sqlite (which is now supported in the standard library).
+
+NB: this is a retrospective ticket (been working on this for a couple of months)",defect,closed,critical,datapkg-0.7,dpm,fixed,,,,

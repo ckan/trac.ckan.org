@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #340: Web UI theme easier to configure</title>
+    <link>http://localhost/ticket/340</link>
+    <description>&lt;p&gt;
+An install of CKAN should be configurable without changing any of the installed files. This makes it clear to upgrade CKAN. Complete the changes in this wiki page to allow static files to be served from outside CKAN paths over CKAN versions and additional CSS file to be pulled in.
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a class="ext-link" href="http://wiki.okfn.org/ckan/doc/theme"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://wiki.okfn.org/ckan/doc/theme&lt;/a&gt;
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/340</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Tue, 08 Jun 2010 15:17:14 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/340#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/340#comment:1</guid>
+      <description>
+        &lt;p&gt;
+Done in cset:f77639ddcf0d
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Tue, 08 Jun 2010 16:41:18 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/340#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/340#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Thu, 09 Feb 2012 17:08:37 GMT</pubDate>
+      <title>repo, theme set</title>
+      <link>http://localhost/ticket/340#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/340#comment:3</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;repo&lt;/strong&gt;
+                set to &lt;em&gt;ckan&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;theme&lt;/strong&gt;
+                set to &lt;em&gt;none&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Went into CKAN 1.0.2?
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

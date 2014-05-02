@@ -1,0 +1,29 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1380	Making customizing CSS easier	zephod	zephod	"While integrating the new theme and making a large number of UX tweaks, I've allowed the CSS file to bloat out of control with some very specific rules and subtle hacks, as well as a couple of clearfix <div> objects in the markup which isn't really good practice.
+
+In general we want a logical CSS structure which is as easy to modify as possible. You should not find yourself being overwritten by highly specific rules all the time!
+
+== Actions ==
+
+ 1. Clean up css
+ 2. Add a config option ckan.template_head_end - arbitrary string inserted at end of <head> tag so you can add custom css etc (may also want to update theming docs to reflect possibility of using this)
+ 3. (While we're at it): Add ckan.template_footer_end config option to deployment.ini_template. (This already exists, we just haven't told anybody)
+ 4. The /users index page isn't linked anywhere. Clean it up and link it in the footer next to Groups etc.
+ 5. package/new, package/edit, group/new and group/edit all include their forms differently. Use h.literal in all cases.
+ 6. Fix the padding on minornavigation.
+
+== Background ==
+
+David Read sent me the following as background:
+
+V. basic theming is described here: http://docs.ckan.org/en/latest/theming.html
+
+Deep customisation of the templates is done by creating an extension, with this as a template: https://bitbucket.org/okfn/ckanext-exampletheme/overview
+
+That's what Augusto and the Brazilians have done http://alpha.dados.gov.br/dados/ and their code is here:
+hg clone http://dev.dados.gov.br/codigo/dev/tema-ckan
+<snip>
+Another thing of interest was us becoming compatible with Wordpress themes last December. Richard Pope worked with Rufus on this. I believe the base theme is 'twentyten' and I'm guessing that one would swap that css file with another to change theme, but I don't know. I don't know if this feature has been dropped since then.
+http://lists.okfn.org/pipermail/ckan-dev/2010-December/000073.html
+
+Dave"	enhancement	closed	major	ckan-sprint-2011-11-07	ckan	fixed		dread	ckan	none

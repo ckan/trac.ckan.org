@@ -1,0 +1,2 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1809	Catch request exceptions in archiver link_checker task	johnglover	johnglover	Some request exceptions are currently not being caught (see the celery log on thedatahub for examples)	enhancement	closed	major	ckan-sprint-2012-03-05	ckan	fixed	0.5d		ckan	none

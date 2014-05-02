@@ -1,0 +1,12 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1692,Add image attribute to Dataset and Group,rgrp,,"Add image attribute for Dataset and Group which would be shown in prominent place.
+
+For dataset this could be a relevant image and for Group this would be move of a logo.
+
+I think this has very high value from a UX point of view.
+
+== Issues ==
+
+ * Do we need to support storing the image (and resizing etc)?
+  * Could use something like transloadit service
+  * Use our own storage facility with a reserved directory",enhancement,new,awaiting triage,ckan-v1.6,ckan,,,,ckan,none

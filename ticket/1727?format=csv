@@ -1,0 +1,9 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1727,"Add ""current"" property to harvest objects",amercader,amercader,"Right now is quite difficult to get the most current version of a package via the harvest objects, and the queries involved are prone to errors.
+A new ""current"" field will be added which will identify unequivocally the most recent harvested object.
+Unfortunately this will involve some major changes:
+ * Model update (See #1726)
+ * Update queries for getting harvest sources' datasets
+ * Update ckanext-csw queries for getting the objects
+ * Update inspire and ckan harvesters
+ * Document new field",enhancement,closed,major,ckan-sprint-2012-02-06,ckan,fixed,"harvesting, uklp, 1.5d",,ckan,none

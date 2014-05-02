@@ -1,0 +1,2 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+880	ONS loader tripping up on deleted packages	dread		Deleted packages with the same title and extra fields as an active package trip up the loader. It finds them in the search, but due to ckanclient not using the apikey when you 'get' the package to examine it further, it causes an exception.	defect	closed	critical	ckan-v1.3-sprint-2	ckan	fixed				

@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2503: Look into allowing theme extensions to extend base templates</title>
+    <link>http://localhost/ticket/2503</link>
+    <description>&lt;p&gt;
+For example:
+&lt;/p&gt;
+&lt;p&gt;
+Creating a template in ckanext-demo/templates/base.html containing something like
+&lt;/p&gt;
+&lt;p&gt;
+@@@
+{% ckan_extends "base.html" %}
+@@@
+&lt;/p&gt;
+&lt;p&gt;
+Will extend ckan/templates/base.html
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2503</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>aron.carroll</dc:creator>
+
+      <pubDate>Thu, 07 Jun 2012 16:05:42 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/2503#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/2503#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/2503?action=diff&amp;amp;version=1"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>toby</dc:creator>
+
+      <pubDate>Tue, 12 Jun 2012 10:02:13 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/2503#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/2503#comment:2</guid>
+      <description>
+        &lt;p&gt;
+@aron,
+&lt;/p&gt;
+&lt;p&gt;
+To clarify this a bit.
+&lt;/p&gt;
+&lt;p&gt;
+We want this so that a extension can create a new template say dataset/read.html but rather than rewriting the &lt;tt&gt;core&lt;/tt&gt; template in ckan it can extend it in the same way as {% extends %}.
+&lt;/p&gt;
+&lt;p&gt;
+The main difference is that {% ckan_extends 'template.html' %} would &lt;tt&gt;walk&lt;/tt&gt; the ckan template tree rather than the extensions template tree.
+&lt;/p&gt;
+&lt;p&gt;
+Is that what we are thinking?
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>aron.carroll</dc:creator>
+
+      <pubDate>Tue, 12 Jun 2012 10:59:11 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/2503#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/2503#comment:3</guid>
+      <description>
+        &lt;p&gt;
+Toby yeah, that's exactly it.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>toby</dc:creator>
+
+      <pubDate>Wed, 13 Jun 2012 09:44:35 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/2503#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/2503#comment:4</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+implemented in commit 14067ff
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

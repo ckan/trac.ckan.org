@@ -1,0 +1,4 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1310	API GET of a revision that has been approved causes exception	dread	dread	"e.g. this particular revision on ckan.net: http://ckan.net/api/rest/revision/9601fbcb-03a7-4ebc-981d-5aa16df4852c
+(most others have not been approved)
+Causes 500 error."	defect	closed	minor	ckan-sprint-2011-09-12	ckan	fixed			ckan	none

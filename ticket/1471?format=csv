@@ -1,0 +1,12 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1471,Be compatible with new ubuntu release in April,dread,seanh,"Nils flagged up that Ubuntu launches another LTS in April which we should probably move to. This ticket is to get the ball rolling with what we do. We can always include in our package the exact package versions of deps that we want, but it is good to be in line with the release if possible.
+
+Here's how to see the packages included with it:
+http://packages.ubuntu.com/search?keywords=python-pylons&searchon=names&suite=all&section=all
+
+Pylons 0.9.7 -> 1.0-2 Requires a small amount of work
+SQLAlchemy 0.7.3-2 OK
+Babel 0.9.6-1 OK
+Genshi 0.6-2 Perfect
+
+Another alternative is to move to another web framework, especially minding that Pylons is not being further developed.",enhancement,closed,awaiting triage,ckan-v1.8,ckan,fixed,,,ckan,none

@@ -1,0 +1,4 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2933	Update theming docs	seanh		"There's quite a lot of custom stuff going on, with all the custom jinja extensions, and the use of Fanstatic plus custom fanstatic extensions. People who are new to CKAN wanting to write CKAN themes are likely to be confused. I think the whole lot could do with documentation, maybe in the Theming and Customizing chapter in the sphinx docs.
+
+I suggest completely replacing the contents of doc/theming.rst, and putting a 'legacy theming' link at the bottom linking to a doc/legacy_theming.rst file with the old contents."	enhancement	new	awaiting triage	ckan 2.0	ckan				ckan	none

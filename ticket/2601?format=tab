@@ -1,0 +1,70 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2601	500 Server Error when editing datasets with organizations plugins enabled	seanh	ross	"Add the organizations and organizations_dataset plugins to ini file, run ckan, login, create an organization, create a dataset and put in organization, edit the dataset and set organization to none, try to edit the dataset again (you must be sysadmin to do this) and get a 500:
+
+{{{
+Error - <class 'genshi.template.eval.UndefinedError'>: [] has no member named ""get""
+URL: http://127.0.0.1:5000/dataset/edit/fooset
+File '/home/seanh/.virtualenvs/ckan/local/lib/python2.7/site-packages/weberror/errormiddleware.py', line 162 in __call__
+  app_iter = self.application(environ, sr_checker)
+File '/home/seanh/.virtualenvs/ckan/local/lib/python2.7/site-packages/beaker/middleware.py', line 73 in __call__
+  return self.app(environ, start_response)
+File '/home/seanh/.virtualenvs/ckan/local/lib/python2.7/site-packages/beaker/middleware.py', line 155 in __call__
+  return self.wrap_app(environ, session_start_response)
+File '/home/seanh/.virtualenvs/ckan/local/lib/python2.7/site-packages/routes/middleware.py', line 130 in __call__
+  response = self.app(environ, start_response)
+File '/home/seanh/.virtualenvs/ckan/local/lib/python2.7/site-packages/pylons/wsgiapp.py', line 125 in __call__
+  response = self.dispatch(controller, environ, start_response)
+File '/home/seanh/.virtualenvs/ckan/local/lib/python2.7/site-packages/pylons/wsgiapp.py', line 324 in dispatch
+  return controller(environ, start_response)
+File '/home/seanh/Projects/ckan/ckan/ckan/lib/base.py', line 221 in __call__
+  res = WSGIController.__call__(self, environ, start_response)
+File '/home/seanh/.virtualenvs/ckan/local/lib/python2.7/site-packages/pylons/controllers/core.py', line 221 in __call__
+  response = self._dispatch_call()
+File '/home/seanh/.virtualenvs/ckan/local/lib/python2.7/site-packages/pylons/controllers/core.py', line 172 in _dispatch_call
+  response = self._inspect_call(func)
+File '/home/seanh/.virtualenvs/ckan/local/lib/python2.7/site-packages/pylons/controllers/core.py', line 107 in _inspect_call
+  result = self._perform_call(func, args)
+File '/home/seanh/.virtualenvs/ckan/local/lib/python2.7/site-packages/pylons/controllers/core.py', line 60 in _perform_call
+  return func(**args)
+File '/home/seanh/Projects/ckan/ckan/ckan/controllers/package.py', line 499 in edit
+  extra_vars=vars)
+File '/home/seanh/Projects/ckan/ckan/ckan/lib/base.py', line 148 in render
+  return cached_template(template_name, render_template, loader_class=loader_class)
+File '/home/seanh/.virtualenvs/ckan/local/lib/python2.7/site-packages/pylons/templating.py', line 249 in cached_template
+  return render_func()
+File '/home/seanh/Projects/ckan/ckan/ckan/lib/base.py', line 101 in render_template
+  return literal(stream.render(method=method, encoding=None, strip_whitespace=True))
+File '/home/seanh/.virtualenvs/ckan/local/lib/python2.7/site-packages/genshi/core.py', line 183 in render
+  return encode(generator, method=method, encoding=encoding, out=out)
+File '/home/seanh/.virtualenvs/ckan/local/lib/python2.7/site-packages/genshi/output.py', line 57 in encode
+  return _encode(''.join(list(iterator)))
+File '/home/seanh/.virtualenvs/ckan/local/lib/python2.7/site-packages/genshi/output.py', line 339 in __call__
+  for kind, data, pos in stream:
+File '/home/seanh/.virtualenvs/ckan/local/lib/python2.7/site-packages/genshi/output.py', line 670 in __call__
+  for kind, data, pos in stream:
+File '/home/seanh/.virtualenvs/ckan/local/lib/python2.7/site-packages/genshi/output.py', line 771 in __call__
+  for kind, data, pos in chain(stream, [(None, None, None)]):
+File '/home/seanh/.virtualenvs/ckan/local/lib/python2.7/site-packages/genshi/output.py', line 586 in __call__
+  for ev in stream:
+File '/home/seanh/.virtualenvs/ckan/local/lib/python2.7/site-packages/genshi/core.py', line 288 in _ensure
+  for event in stream:
+File '/home/seanh/.virtualenvs/ckan/local/lib/python2.7/site-packages/genshi/template/base.py', line 605 in _include
+  for event in stream:
+File '/home/seanh/.virtualenvs/ckan/local/lib/python2.7/site-packages/genshi/template/markup.py', line 327 in _match
+  for event in stream:
+File '/home/seanh/.virtualenvs/ckan/local/lib/python2.7/site-packages/genshi/template/base.py', line 545 in _flatten
+  for kind, data, pos in stream:
+File '/home/seanh/.virtualenvs/ckan/local/lib/python2.7/site-packages/genshi/template/directives.py', line 169 in _generate
+  attrs = _eval_expr(self.expr, ctxt, vars)
+File '/home/seanh/.virtualenvs/ckan/local/lib/python2.7/site-packages/genshi/template/base.py', line 277 in _eval_expr
+  retval = expr.evaluate(ctxt)
+File '/home/seanh/.virtualenvs/ckan/local/lib/python2.7/site-packages/genshi/template/eval.py', line 178 in evaluate
+  return eval(self.code, _globals, {'__data__': data})
+File '/home/seanh/Projects/ckan/ckan/ckanext/organizations/templates/organization_package_form.html', line 110 in <Expression u""{'selected':'selected'} if organization.get('id','') == group['id'] else {}"">
+  <option value=""${group['id']}"" py:attrs=""{'selected':'selected'} if organization.get('id','') == group['id'] else {}"">${group['title']}</option>
+File '/home/seanh/Projects/ckan/ckan/ckan/config/environment.py', line 248 in genshi_lookup_attr
+  val = cls.undefined(key, owner=obj)
+File '/home/seanh/.virtualenvs/ckan/local/lib/python2.7/site-packages/genshi/template/eval.py', line 410 in undefined
+  raise UndefinedError(key, owner=owner)
+UndefinedError: [] has no member named ""get""
+}}}"	defect	closed	awaiting merge		ckan	fixed	organizations cmap		ckan	none

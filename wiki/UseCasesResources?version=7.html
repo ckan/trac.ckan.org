@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      UseCasesResources – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="help" href="TracGuide.html" />
+        <link rel="alternate" href="UseCasesResources%3Fversion=7&amp;format=txt" type="text/x-trac-wiki" title="Plain Text" />
+        <link rel="up" href="UseCasesResources.html" title="View latest version" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/wiki.css" type="text/css" />
+        <link rel="prev" href="UseCasesResources%3Fversion=6.html" title="Version 6" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("#content").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $("#content").find(".wikianchor").each(function() {
+          $(this).addAnchor(babel.format(_("Link to #%(id)s"), {id: $(this).attr('id')}));
+        });
+        $(".foldable").enableFolding(true, true);
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last active"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="pagepath" class="noprint">
+  <a class="pathentry first" title="View WikiStart" href="../wiki.1.html">wiki:</a><a class="pathentry" href="UseCasesResources.html" title="View UseCasesResources">UseCasesResources</a>
+</div>
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="UseCasesResources%3Fversion=6.html" title="Version 6">Previous Version</a></span></li><li><a href="UseCasesResources.html" title="View latest version">View Latest Version</a></li><li class="last"><span class="missing">Next Version &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="wiki">
+        <br />
+        <table id="info" summary="Revision info">
+          <tbody>
+            <tr><th scope="row">Version 7 (modified by kindly, <a class="timeline" href="../timeline%3Ffrom=2011-01-31T17:32:47Z&amp;precision=second.html" title="2011-01-31T17:32:47Z in Timeline">3 years</a> ago)
+               (<a href="UseCasesResources%3Faction=diff&amp;version=7.html">diff</a>)</th></tr>
+            <tr><td class="message">
+              <p>
+--
+</p>
+
+            </td></tr>
+          </tbody>
+        </table>
+      <div class="wikipage searchable">
+        
+          
+          
+          <div id="wikipage"><p>
+<strong>Current Situation</strong>
+</p>
+<p>
+A resource belongs to a single package. A resource can only hold very limited pieces of information i.e a url, hash, a description and its format/type.  It also has state i.e whether it is active and not active.  They are versioned but not dated.
+</p>
+<p>
+The user is given an option to reorder the resources against a package, this order has no relevance apart from how the information is displayed.
+</p>
+<p>
+<strong>Use Cases</strong>
+</p>
+<ul><li>Data should be able to be grouped for the same information in different formats, so you do not get duplicated data. 
+</li></ul><ul><li>There needs to be a mechanism to timeseries data, so that search results only display the latest package. This needs to be done in a way that the older data is still easily accessible. This should be done with the minimum of user effort.
+</li></ul><ul><li>The ordering of the data should be presented without the need for user input.
+</li></ul><ul><li>There needs to more information stored against the data, beyond just its format and a description.
+</li></ul><ul><li>Users should be able to refashion the data and post a whole new set of this derived data.
+</li></ul><ul><li>Groups of data should be able to be synced across packages/instances.  In order for derived data set to be associated with existing packages.
+</li></ul><ul><li>When new versions of the data arrive it should be easy to copy an old one and change versions/dates as required.
+</li></ul><ul><li>A user may want to upload a resource separately from the package and decide later on where the best place for it is.
+</li></ul><ul><li>A place to put a time-to-release date against a piece of potential data. 
+</li></ul><ul><li>We need a marker to show that the certain data sets are missing.
+</li></ul><ul><li>Dashboard of what data has been released, when is going to be released.
+</li></ul><p>
+<strong> Possible solutions </strong>
+</p>
+<ol><li>Make the data model for resources richer.  The suggested model would be
+</li></ol><p>
+  
+</p>
+<pre class="wiki">Package  &lt;m2m&gt;  data_group &lt;o2m&gt; data &lt;o2m&gt;  resource
+</pre><p>
+data_group now becomes a first class entity.
+</p>
+<p>
+The data group would be a holder for a timeseries of "data"
+</p>
+<p>
+Each bit of data can have multiple resources of different data_types.
+</p>
+<ol start="2"><li>Improve package relationships.  This will involve giving package relationships more informations such as the date of the relationship in order to make a time series. (this date information could also be against the package)
+</li></ol><ol start="3"><li>Add a package group table.  All current packages get a package_group and then we will have a way to add packages in a time-line.  Packages will have time series data information.
+</li></ol></div>
+        
+        
+      </div>
+      
+
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="last first">
+          <a rel="nofollow" href="UseCasesResources%3Fversion=7&amp;format=txt">Plain Text</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

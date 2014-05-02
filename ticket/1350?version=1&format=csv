@@ -1,0 +1,8 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1350,i18n of new javascript,zephod,zephod,"New js code running produced in the work following #1294 contains various string literals, and needs proper internationalisation.
+
+See files:
+  * application.js
+  * templates.js
+
+Furthermore, efforts can be made to tidy up strings as described in #1329.",enhancement,new,awaiting triage,ckan-current-sprint,ckan,,,,ckan,none

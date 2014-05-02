@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1166: Less stringent filters for displaying the WMS preview</title>
+    <link>http://localhost/ticket/1166</link>
+    <description>&lt;p&gt;
+Right now, for the "View available WMS layers" link to be displayed, the package needs to have an "INSPIRE=True" extra, a "resource-type=service" extra and a resource of type "WMS".
+&lt;/p&gt;
+&lt;p&gt;
+This is due to DGU (the project this was developed for) related reasons, but for a generic support, the resource type should probably be enough.
+&lt;/p&gt;
+&lt;p&gt;
+(The repository for this is ckanext-spatial, but it's not on the list)
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1166</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>amercader</dc:creator>
+
+      <pubDate>Thu, 26 May 2011 15:18:58 GMT</pubDate>
+      <title>cc set</title>
+      <link>http://localhost/ticket/1166#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1166#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;cc&lt;/strong&gt;
+              &lt;em&gt;james.gardner@…&lt;/em&gt; added
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>thejimmyg</dc:creator>
+
+      <pubDate>Tue, 31 May 2011 13:08:46 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1166#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/1166#comment:2</guid>
+      <description>
+        &lt;p&gt;
+Also, rather than INSPIRE=true we should probably have information about the harvesting mechanism and the harvest object type? This also relates to our use of the kind field on the resource.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>thejimmyg</dc:creator>
+
+      <pubDate>Fri, 08 Jul 2011 11:41:50 GMT</pubDate>
+      <title>component, milestone changed</title>
+      <link>http://localhost/ticket/1166#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/1166#comment:3</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;component&lt;/strong&gt;
+                changed from &lt;em&gt;ckan&lt;/em&gt; to &lt;em&gt;uklii&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan-v1.5&lt;/em&gt; to &lt;em&gt;ckan-backlog&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>amercader</dc:creator>
+
+      <pubDate>Mon, 15 Aug 2011 12:37:08 GMT</pubDate>
+      <title>keywords set</title>
+      <link>http://localhost/ticket/1166#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/1166#comment:4</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;keywords&lt;/strong&gt;
+              &lt;em&gt;geo&lt;/em&gt; added
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>amercader</dc:creator>
+
+      <pubDate>Fri, 30 Sep 2011 11:25:32 GMT</pubDate>
+      <title>status, milestone changed; resolution set</title>
+      <link>http://localhost/ticket/1166#comment:5</link>
+      <guid isPermaLink="false">http://localhost/ticket/1166#comment:5</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan-backlog&lt;/em&gt; to &lt;em&gt;ckan-sprint-2011-10-10&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Fixed on d5bee3de9957
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

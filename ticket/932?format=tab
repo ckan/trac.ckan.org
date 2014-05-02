@@ -1,0 +1,6 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+932	Move to SQLAlchemy-Migrate 0.6	dread	dread	"Basic steps from kindly:
+
+ * changing the setup.py dependencies for sqlalchemy-migrate and sqlalchemy to their latest versions.
+ * running the migrate script on the repository (or changing the repository scripts manually).
+ * checking in both these changes at once."	enhancement	closed	critical	ckan-v1.3	ckan	fixed		pudo kindly		

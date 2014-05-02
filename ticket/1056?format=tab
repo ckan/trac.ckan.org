@@ -1,0 +1,9 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1056	User links for OpenID users are broken	pudo	dread	"Use case:
+ * Login using OpenID
+ * Click on 'My account' - results in 404
+
+Solutions:
+
+ * User user.id instead of their name
+ * Escape the URL properly. "	defect	closed	critical	ckan-v1.4-sprint-6	ckan	fixed			ckan	none

@@ -1,0 +1,4 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2879	Datasets (Package) should have a 'public' field	ross	ross	"The Package model should have a boolean field added to it describing its visibility beyond that supplied via auth.  
+
+The related permission for viewing packages where public is set to False would be package.view (show, whatever), and *never* visible for unauthenticated users."	enhancement	closed	awaiting merge	ckan 2.0	ckan	wontfix	organizations		ckan	none

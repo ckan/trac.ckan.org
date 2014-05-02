@@ -1,0 +1,7 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1195,Storage extension to handle incorrect routes better,dread,rgrp,"We've seen exceptions caused by people getting the file storage link wrong, adding a slash to the end.
+
+e.g.
+http://ckan.net/storage/f/file/e696d857-e997-41c8-be08-408697168ca8/
+
+We should aim to handle all requests better than causing exception. 404 (or even 302 in this case) is better than 500.",defect,closed,minor,ckan-sprint-2011-10-28,ckan,fixed,,,ckanext-storage,none

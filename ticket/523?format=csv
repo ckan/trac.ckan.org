@@ -1,0 +1,6 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+523,Read/write APIs for users and publishing entities,pudo,pudo,"Read/write APIs for users and publishing entities to access and register data
+
+ * Users have read access
+ * Publishing entities have both (though can only write to 'their' records)
+ * Priority: 4 for write (read access is 3)",requirement,closed,,iati-1,iati,fixed,,,,

@@ -1,0 +1,2 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2374	tag search paging	dread	ross	Currently in the logic function tag_search you can specify limit and offset, but no count is returned. Therefore pagination is not possible for tag results. This is desired though.	enhancement	closed	major	ckan-v1.8	ckan	worksforme			ckan	none

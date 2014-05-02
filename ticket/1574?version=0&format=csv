@@ -1,0 +1,20 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1574,[super] Storage changes,ross,,"It would be great to allow uploading of files to push the data into webstore.  Initially we were going to suggest changes to ckanext-storage but after further analysis we arrived at the conclusion that this should be implemented by ckanext-archiver as it already handles archiving of data from various sources and would be the best place to 'archive' to webstore.
+
+1. A user wants to upload a file to CKAN, and so chooses the file upload option as they do currently with ckanext-storage.
+
+2. The file upload is performed by ckanext-storage to whichever data sink was configured.
+
+3. The user is provided the link to the file as they are currently, except the link is to a short-link, a la bit.ly, which resolves to the file itself. [Note: this may not be necessary, we may be able to manage this with resource properties]
+
+4. A configurable celery task checks the uploaded content and decides what to do with the file based on the mime-type or the file size, or a combination of the two.  In some cases this will send the file up to  webstore from wherever it was uploaded to.
+
+5. The short link code [or resource]  is updated to point to the new location (e.g. changed  from http://ckaninstance/ to http://webstoreinstance/) so that future requests will go to the correct location.
+
+6. After each file has been processed, the archiver will determine whether the file is deleted, kept or moved to an archive [Do we need to make sure some tasks only happen in sequence?]
+
+This would require some change to the webstore to have it interoperate more cleanly with CKAN - Username handling should be modified to allow use of IDs rather than  trying to mangle CKAN usernames that don't fit the current scheme, and we need to change to using the API rather than the DB directly (see #1550)
+
+A new celery task would be necessary in ckanext-archiver although it would beat some resemblance to ckanext-webstorer.
+
+        ",enhancement,new,awaiting triage,ckan-backlog,ckan,,"storage,archiver",,ckan,none

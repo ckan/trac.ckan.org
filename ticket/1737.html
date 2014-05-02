@@ -1,0 +1,905 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      #1737 (Expose solr-based search API)
+     – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="prev" href="1736.html" title="Ticket #1736" />
+        <link rel="last" href="3030.html" title="Ticket #3030" />
+        <link rel="help" href="../wiki/TracGuide.html" />
+        <link rel="alternate" href="1737%3Fformat=csv" type="text/csv" class="csv" title="Comma-delimited Text" /><link rel="alternate" href="1737%3Fformat=tab" type="text/tab-separated-values" class="tab" title="Tab-delimited Text" /><link rel="alternate" href="1737%3Fformat=rss" type="application/rss+xml" class="rss" title="RSS Feed" />
+        <link rel="next" href="1738.html" title="Ticket #1738" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/ticket.css" type="text/css" />
+        <link rel="first" href="1.html" title="Ticket #1" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript">
+      var auto_preview_timeout=2.0;
+      var form_token="93d81ccf9a7bb1c456462f62";
+    </script>
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script><script type="text/javascript" src="../chrome/common/js/wikitoolbar.js"></script><script type="text/javascript" src="../chrome/common/js/resizer.js"></script><script type="text/javascript" src="../chrome/common/js/auto_preview.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("div.description").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $(".foldable").enableFolding(false, true);
+        var args = {realm: "ticket", id: 1737, escape_newlines: 0}
+        $("#comment").autoPreview("/wiki_render", args, function(textarea, text, rendered) {
+            $("#ticketchange div.comment").html(rendered);
+            if (rendered)
+              $("#ticketchange").show();
+            else if ($("#ticketchange ul.changes").length == 0)
+              $("#ticketchange").hide();
+        });
+        $("#trac-comment-editor textarea").autoPreview("/wiki_render", args,
+                                                       function(textarea, text, rendered) {
+          var comment = $("#trac-comment-editor").next("div.comment");
+          comment.html(rendered);
+          if (rendered)
+            comment.show();
+          else
+            comment.hide();
+        });
+        $("#modify").parent().toggleClass("collapsed");
+        $(".trac-topnav a").click(function() { $("#modify").parent().removeClass("collapsed"); });
+        /* only enable control elements for the currently selected action */
+        var actions = $("#action input[name='action']");
+        function updateActionFields() {
+          actions.each(function () {
+            $(this).siblings().find("*[id]").enable($(this).checked());
+            $(this).siblings().filter("*[id]").enable($(this).checked());
+          });
+        }
+        actions.click(updateActionFields);
+        updateActionFields();
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="../wiki/TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li class="active"><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="1736.html" title="Ticket #1736">Previous Ticket</a></span></li><li class="last"><span><a class="next" href="1738.html" title="Ticket #1738">Next Ticket</a> &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="ticket">
+      <h1 id="trac-ticket-title">
+          <a href="1737.html">Ticket #1737</a>
+          <span class="status">(closed enhancement: fixed)</span>
+      </h1>
+      <div id="ticket">
+  <div class="date">
+    <p>Opened <a class="timeline" href="../timeline%3Ffrom=2012-01-31T12:57:06Z&amp;precision=second.html" title="2012-01-31T12:57:06Z in Timeline">2 years</a> ago</p>
+    <p>Last modified <a class="timeline" href="../timeline%3Ffrom=2012-06-19T13:32:12Z&amp;precision=second.html" title="2012-06-19T13:32:12Z in Timeline">23 months</a> ago</p>
+  </div>
+  <h2 class="summary searchable">Expose solr-based search API</h2>
+  <table class="properties">
+    <tr>
+      <th id="h_reporter">Reported by:</th>
+      <td headers="h_reporter" class="searchable">
+        <a href="../query%3Fstatus=!closed&amp;reporter=rgrp.html">rgrp</a>
+      </td>
+      <th id="h_owner">Owned by:</th>
+      <td headers="h_owner">
+        <a href="../query%3Fstatus=!closed&amp;owner=icmurray.html">icmurray</a>
+      </td>
+    </tr>
+    <tr>
+        <th id="h_priority">
+          Priority:
+        </th>
+        <td headers="h_priority">
+              <a href="../query%3Fstatus=!closed&amp;priority=major.html">major</a>
+        </td>
+        <th id="h_milestone">
+          Milestone:
+        </th>
+        <td headers="h_milestone">
+              <a class="milestone" href="../milestone/ckan-v1.8.html">ckan-v1.8</a>
+        </td>
+    </tr><tr>
+        <th id="h_component">
+          Component:
+        </th>
+        <td headers="h_component">
+              <a href="../query%3Fstatus=!closed&amp;component=ckan.html">ckan</a>
+        </td>
+        <th id="h_keywords">
+          Keywords:
+        </th>
+        <td headers="h_keywords" class="searchable">
+              <a href="../query%3Fstatus=!closed&amp;keywords=~[0.5d].html">[0.5d]</a>
+        </td>
+    </tr><tr>
+        <th id="h_cc">
+          Cc:
+        </th>
+        <td headers="h_cc" class="searchable">
+              <a href="../query%3Fstatus=!closed&amp;cc=~rgrp.html">rgrp</a>
+        </td>
+        <th id="h_repo">
+          Repository:
+        </th>
+        <td headers="h_repo">
+              <a href="../query%3Fstatus=!closed&amp;repo=ckan.html">ckan</a>
+        </td>
+    </tr><tr>
+        <th id="h_theme">
+          Theme:
+        </th>
+        <td headers="h_theme">
+              <a href="../query%3Fstatus=!closed&amp;theme=none.html">none</a>
+        </td>
+        <th>
+        </th>
+        <td>
+        </td>
+    </tr>
+  </table>
+  <div class="description">
+    <h3 id="comment:description">
+      Description
+      <span class="lastmod" title="2012-02-02 23:22:34+00:00">
+        (last modified by rgrp)
+        (<a href="1737%3Faction=diff&amp;version=2.html">diff</a>)
+      </span>
+    </h3>
+    <div class="searchable">
+      <p>
+Super ticket: <a class="new ticket" href="1745.html" title="enhancement: Dataset search UX improvements as of Jan 2012 (new)">#1745</a>
+</p>
+<ul><li>Convert /api/rest/dataset to be search query (i.e. take arguments in ?....)
+</li><li>Directly expose solr though may want to override limit. See <a class="ext-link" href="https://github.com/okfn/openspending/blob/master/openspending/ui/controllers/api.py#L48"><span class="icon">​</span>https://github.com/okfn/openspending/blob/master/openspending/ui/controllers/api.py#L48</a>
+</li></ul><p>
+Required for some improvements to UX (such as autocomplete and better search).
+</p>
+
+    </div>
+  </div>
+</div>
+          
+
+        <div>
+          <h2 class="foldable">Change History</h2>
+          <div id="changelog">
+              <div class="change" id="trac-change-1">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:1" class="cnum">
+      <a href="1737.html#comment:1">comment:1</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-01-31T12:57:18Z&amp;precision=second.html" title="2012-01-31T12:57:18Z in Timeline">2 years</a> ago by rgrp
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Keywords</strong>
+        <em>1d</em> added
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-2">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:2" class="cnum">
+      <a href="1737.html#comment:2">comment:2</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-02-02T23:22:34Z&amp;precision=second.html" title="2012-02-02T23:22:34Z in Timeline">2 years</a> ago by rgrp
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Description</strong>
+        modified (<a href="1737%3Faction=diff&amp;version=2.html">diff</a>)
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-3">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:3" class="cnum">
+      <a href="1737.html#comment:3">comment:3</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-02-02T23:24:15Z&amp;precision=second.html" title="2012-02-02T23:24:15Z in Timeline">2 years</a> ago by rgrp
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Milestone</strong>
+        changed from <em>ckan-sprint-2012-02-20</em> to <em>ckan-v1.7</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-4">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:4" class="cnum">
+      <a href="1737.html#comment:4">comment:4</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-02-06T11:47:12Z&amp;precision=second.html" title="2012-02-06T11:47:12Z in Timeline">2 years</a> ago by rgrp
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Status</strong>
+        changed from <em>new</em> to <em>assigned</em>
+    </li><li>
+      <strong>Milestone</strong>
+        changed from <em>ckan-v1.7</em> to <em>current-ckan-sprint-2012-02-20</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-5">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:5" class="cnum">
+      <a href="1737.html#comment:5">comment:5</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-02-06T12:07:39Z&amp;precision=second.html" title="2012-02-06T12:07:39Z in Timeline">2 years</a> ago by rgrp
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Keywords</strong>
+        <em>[1d]</em> added; <em>1d</em> removed
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-6">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:6" class="cnum">
+      <a href="1737.html#comment:6">comment:6</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-02-07T00:39:05Z&amp;precision=second.html" title="2012-02-07T00:39:05Z in Timeline">2 years</a> ago by rgrp
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Owner</strong>
+        changed from <em>zephod</em> to <em>rgrp</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-7">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:7" class="cnum">
+      <a href="1737.html#comment:7">comment:7</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-02-22T13:19:41Z&amp;precision=second.html" title="2012-02-22T13:19:41Z in Timeline">2 years</a> ago by dread
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+SOLR syntax is already accepted in:
+</p>
+<ul><li>api/3/search/package
+</li><li>Action API "package_search"
+</li></ul><p>
+Actually api/1/search/package and api/1/search/package accept SOLR syntax too, but they also translate old-CKAN search parameters syntax to SOLR as well.
+</p>
+<p>
+See: <a class="ext-link" href="http://docs.ckan.org/en/latest/apiv3.html"><span class="icon">​</span>http://docs.ckan.org/en/latest/apiv3.html</a>
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-8">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:8" class="cnum">
+      <a href="1737.html#comment:8">comment:8</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-03-05T00:43:55Z&amp;precision=second.html" title="2012-03-05T00:43:55Z in Timeline">2 years</a> ago by rgrp
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Milestone</strong>
+        changed from <em>current-ckan-sprint-2012-03-05</em> to <em>ckan-v1.7</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+Did not get to this sprint as focused on <a class="closed ticket" href="1797.html" title="enhancement: [super] Webstore v2 - Integrated and based on ElasticSearch (closed: fixed)">#1797</a>.
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-9">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:9" class="cnum">
+      <a href="1737.html#comment:9">comment:9</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-04-16T15:47:26Z&amp;precision=second.html" title="2012-04-16T15:47:26Z in Timeline">2 years</a> ago by icmurray
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Keywords</strong>
+        <em>[1-2d]</em> added; <em>[1d]</em> removed
+    </li><li>
+      <strong>Owner</strong>
+        changed from <em>rgrp</em> to <em>icmurray</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+See <a class="ext-link" href="http://ckan.okfnpad.org/feature-1737-expose-solr-based-search-api"><span class="icon">​</span>http://ckan.okfnpad.org/feature-1737-expose-solr-based-search-api</a>
+</p>
+<h1 id="Immediateactions">Immediate actions</h1>
+<ul><li>analysis of whether the current action/get.py:package_search() function exposes all we currently need for the use cases described above.
+</li><li>how to return that data (expand the current format?)
+</li><li>analysis of whether the current (action) API v.3 can use query parameters rather than as well as POSTed data.
+</li></ul><blockquote>
+<blockquote>
+<p>
+(controlles/api.py:action() )
+uses "self._get_request_data()" which in-turn pulls out data from POST body.
+</p>
+</blockquote>
+</blockquote>
+<h1 id="Tasks">Tasks</h1>
+<p>
+Extend the existing package_search action.
+</p>
+<ul><li>pass the facet fields into the logic layer from the request parameters.
+<ul><li>/api/3/action/package_search
+</li></ul></li><li>facet information not being returned via package_search action (is empty).
+<ul><li>curl -X POST -d '{"q": "{!lucene q.op=AND df=text}tags:health +community -profile"}' '<a class="ext-link" href="http://thedatahub.org/api/3/action/package_search"><span class="icon">​</span>http://thedatahub.org/api/3/action/package_search</a>'
+</li><li>figure out why it's not working, and what the facet information should look like
+</li></ul></li><li>whitelist any GETable api actions, and optionally construct the query from url params rather than body
+</li></ul>
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-10">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:10" class="cnum">
+      <a href="1737.html#comment:10">comment:10</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-04-16T15:48:17Z&amp;precision=second.html" title="2012-04-16T15:48:17Z in Timeline">2 years</a> ago by icmurray
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Milestone</strong>
+        changed from <em>ckan-v1.7</em> to <em>current-ckan-sprint-2012-04-30</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-11">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:11" class="cnum">
+      <a href="1737.html#comment:11">comment:11</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-04-26T17:18:03Z&amp;precision=second.html" title="2012-04-26T17:18:03Z in Timeline">2 years</a> ago by icmurray
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Status</strong>
+        changed from <em>assigned</em> to <em>closed</em>
+    </li><li>
+      <strong>Resolution</strong>
+        set to <em>worksforme</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+Facet results <strong>are</strong> already available through the package_search action api.  The facet fields need to be specified in the query, otherwise no faceting will be done (ie - the default facets specified in the .ini file are not used).
+</p>
+<p>
+This leaves "whitelist any GETable api actions, and optionally construct the query from url params rather than body" todo, which I've pulled out into another ticket, as it wasn't originally in this ticket.  (<a class="closed ticket" href="2330.html" title="enhancement: Make api read-actions GETable (closed: fixed)">#2330</a>)
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-12">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:12" class="cnum">
+      <a href="1737.html#comment:12">comment:12</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-04-26T17:23:17Z&amp;precision=second.html" title="2012-04-26T17:23:17Z in Timeline">2 years</a> ago by icmurray
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+... just to add to the above:
+</p>
+<pre class="wiki">
+&gt;&gt;&gt; pprint(json.loads(requests.post('http://127.0.0.1:8088/api/3/action/package_search', json.dumps({'facet.field': ["tags", "groups"]})).content))
+
+&lt;snip&gt;
+
+
+u'search_facets': {u'groups': {u'items': [{u'count': 1,
+                                                        u'display_name': u"Roger's books",
+                                                        u'name': u'roger'},
+                                                       {u'count': 2,
+                                                        u'display_name': u"Dave's books",
+                                                        u'name': u'david'}],
+                                            u'title': u'groups'},
+                                u'tags': {u'items': [{u'count': 1,
+                                                      u'display_name': u'tolstoy',
+                                                      u'name': u'tolstoy'},
+                                                     {u'count': 2,
+                                                      u'display_name': u'russian',
+                                                      u'name': u'russian'},
+                                                     {u'count': 2,
+                                                      u'display_name': u'Flexible \u30a1',
+                                                      u'name': u'Flexible \u30a1'}],
+                                          u'title': u'tags'}}},
+ u'success': True}
+
+</pre>
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-13">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:13" class="cnum">
+      <a href="1737.html#comment:13">comment:13</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-05-06T18:29:07Z&amp;precision=second.html" title="2012-05-06T18:29:07Z in Timeline">2 years</a> ago by rgrp
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Status</strong>
+        changed from <em>closed</em> to <em>reopened</em>
+    </li><li>
+      <strong>Resolution</strong>
+        <em>worksforme</em> deleted
+    </li><li>
+      <strong>Milestone</strong>
+        changed from <em>ckan-sprint-2012-04-30</em> to <em>current-ckan-sprint-2012-05-15</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+Having now thought about this I'm re-opening this ticket for the following reasons:
+</p>
+<ul><li>No real documentation (other than that in this ticket yet available)
+<ul><li>It would also be nice to know how this maps to SOLR API (can i use all of the facet options solr provides or not ...?)
+</li><li>And I would again emphasize my preference for having *direct* access to something that looks *exactly* like SOLR API as I can then use client and docs from SOLR to work with it.
+</li></ul></li><li>No clear resolution of separation between Action and REST API (and search API). Really seems to me there should be convergence between latter 2 (as suggested in the ticket) -- this would also resolve the problem that having GET /api/dataset return all datasets is *not* a great idea
+</li><li>The Action API requires a POST request. Since the primary purpose of the search API would be usage from JS it would be nice if GET and JSONP were supported. (Though given our CORS support we could argue this was optional).
+</li></ul><p>
+Not saying *all* of this needs fixing but some clear approach here would be useful
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-14">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:14" class="cnum">
+      <a href="1737.html#comment:14">comment:14</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-05-16T09:07:58Z&amp;precision=second.html" title="2012-05-16T09:07:58Z in Timeline">2 years</a> ago by icmurray
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Keywords</strong>
+        <em>[0.5d]</em> added; <em>[1-2d]</em> removed
+    </li><li>
+      <strong>Milestone</strong>
+        changed from <em>ckan-sprint-2012-05-15</em> to <em>current-ckan-sprint-2012-05-29</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-15">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:15" class="cnum">
+      <a href="1737.html#comment:15">comment:15</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-05-21T09:59:12Z&amp;precision=second.html" title="2012-05-21T09:59:12Z in Timeline">2 years</a> ago by icmurray
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <ul><li>package_search action is now documented, with reference to the solr search parameters available. <a class="ext-link" href="http://docs.ckan.org/en/latest/apiv3.html"><span class="icon">​</span>http://docs.ckan.org/en/latest/apiv3.html</a> (auto-docs not working on rtd at the moment).
+</li></ul><ul><li>actions defined in get.py are now GETable.  <a class="ext-link" href="http://docs.ckan.org/en/latest/apiv3.html#get-able-actions"><span class="icon">​</span>http://docs.ckan.org/en/latest/apiv3.html#get-able-actions</a>
+</li></ul><ul><li>we won't be providing direct access to solr api, as we think the cost outweighs the benefit.
+</li></ul>
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-16">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:16" class="cnum">
+      <a href="1737.html#comment:16">comment:16</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-05-21T09:59:30Z&amp;precision=second.html" title="2012-05-21T09:59:30Z in Timeline">2 years</a> ago by icmurray
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Cc</strong>
+        <em>rgrp</em> added
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-17">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:17" class="cnum">
+      <a href="1737.html#comment:17">comment:17</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-05-25T10:39:05Z&amp;precision=second.html" title="2012-05-25T10:39:05Z in Timeline">2 years</a> ago by rgrp
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+I *strongly* disagree re access to solr API -- i don't really care if it is direct but I want something that looks like it at least for core query parameters and facets ...
+</p>
+<p>
+Is there some major issue around security etc (e.g. limiting to only public datasets or similar?)
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-18">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:18" class="cnum">
+      <a href="1737.html#comment:18">comment:18</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-05-25T11:01:11Z&amp;precision=second.html" title="2012-05-25T11:01:11Z in Timeline">2 years</a> ago by icmurray
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+For completeness, package_search docs can be viewed at <a class="ext-link" href="https://github.com/okfn/ckan/blob/master/ckan/logic/action/get.py#L983"><span class="icon">​</span>https://github.com/okfn/ckan/blob/master/ckan/logic/action/get.py#L983</a>
+</p>
+<p>
+@rgrp: are you happy with this ticket now, does it expose all you need?  If so, I'll close it...
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-19">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:19" class="cnum">
+      <a href="1737.html#comment:19">comment:19</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-05-28T11:24:59Z&amp;precision=second.html" title="2012-05-28T11:24:59Z in Timeline">2 years</a> ago by ross
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Milestone</strong>
+        changed from <em>current-ckan-sprint-2012-05-29</em> to <em>ckan-v1.8</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-20">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:20" class="cnum">
+      <a href="1737.html#comment:20">comment:20</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-06-03T10:27:00Z&amp;precision=second.html" title="2012-06-03T10:27:00Z in Timeline">2 years</a> ago by rgrp
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+Let's close. What would be nice though is ETA on the GET support getting deployed on the <a class="missing wiki">DataHub?</a> -- just tried using it today and realized it didn't work :-)
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-21">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:21" class="cnum">
+      <a href="1737.html#comment:21">comment:21</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-06-18T09:16:41Z&amp;precision=second.html" title="2012-06-18T09:16:41Z in Timeline">23 months</a> ago by icmurray
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Status</strong>
+        changed from <em>reopened</em> to <em>closed</em>
+    </li><li>
+      <strong>Resolution</strong>
+        set to <em>fixed</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+The GET-able actions ( <a class="closed ticket" href="2330.html" title="enhancement: Make api read-actions GETable (closed: fixed)">#2330</a> ) are in master, and will make it into 1.8
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-22">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:22" class="cnum">
+      <a href="1737.html#comment:22">comment:22</a>
+    </span>
+                          <span>follow-up:</span>
+      <a href="1737.html#comment:23">↓ 23</a>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-06-18T09:20:03Z&amp;precision=second.html" title="2012-06-18T09:20:03Z in Timeline">23 months</a> ago by rgrp
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+But not v1.7.1? (When is v1.8 due?).
+</p>
+<p>
+Also for the record a couple of things I found when trying to use this:
+</p>
+<ul><li>No support for facet sort order or facet limit afaict ...
+</li></ul>
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-23">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:23" class="cnum">
+      <a href="1737.html#comment:23">comment:23</a>
+    </span>
+                        in reply to:
+      <a href="1737.html#comment:22">↑ 22</a>
+                        ;
+                          <span>follow-up:</span>
+      <a href="1737.html#comment:24">↓ 24</a>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-06-18T10:34:55Z&amp;precision=second.html" title="2012-06-18T10:34:55Z in Timeline">23 months</a> ago by icmurray
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+Replying to <a href="1737.html#comment:22" title="Comment 22 for Ticket #1737">rgrp</a>:
+</p>
+<blockquote class="citation">
+<p>
+But not v1.7.1? (When is v1.8 due?).
+</p>
+</blockquote>
+<p>
+Not 1.7.1 as it's not a bug fix (<a class="ext-link" href="https://docs.google.com/document/d/170fxET3kd9dJ4L6VAj3yZugtK0rrVe44J4HuLbTUsEU/"><span class="icon">​</span>https://docs.google.com/document/d/170fxET3kd9dJ4L6VAj3yZugtK0rrVe44J4HuLbTUsEU/</a>)
+</p>
+<p>
+I don't know when 1.8 is due.
+</p>
+<blockquote class="citation">
+<p>
+Also for the record a couple of things I found when trying to use this:
+</p>
+<ul><li>No support for facet sort order or facet limit afaict ...
+</li></ul></blockquote>
+<p>
+Thanks, that's good to know.
+</p>
+<p>
+facet.limit should be working <a class="missing changeset" title="No default repository defined">[1]</a>, so if it's not, then that's a bug.  I can check that.
+</p>
+<p>
+for facet.sort, I've added ticket <a class="new ticket" href="2543.html" title="enhancement: facet.sort is not available in the package_search action (new)">#2543</a>
+</p>
+<p>
+<a class="missing changeset" title="No default repository defined">[1]</a> <a class="ext-link" href="https://github.com/okfn/ckan/blob/master/ckan/logic/action/get.py#L1022"><span class="icon">​</span>https://github.com/okfn/ckan/blob/master/ckan/logic/action/get.py#L1022</a>
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-24">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:24" class="cnum">
+      <a href="1737.html#comment:24">comment:24</a>
+    </span>
+                        in reply to:
+      <a href="1737.html#comment:23">↑ 23</a>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-06-19T13:32:12Z&amp;precision=second.html" title="2012-06-19T13:32:12Z in Timeline">23 months</a> ago by icmurray
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+Replying to <a href="1737.html#comment:23" title="Comment 23 for Ticket #1737">icmurray</a>:
+</p>
+<blockquote class="citation">
+<blockquote class="citation">
+<p>
+Also for the record a couple of things I found when trying to use this:
+</p>
+<ul><li>No support for facet sort order or facet limit afaict ...
+</li></ul></blockquote>
+<p>
+Thanks, that's good to know.
+</p>
+<p>
+facet.limit should be working <a class="missing changeset" title="No default repository defined">[1]</a>, so if it's not, then that's a bug.  I can check that.
+</p>
+</blockquote>
+<p>
+facet.limit is working as I'd expect. eg (on master):
+</p>
+<pre class="wiki">import requests
+import json
+from pprint import pprint as pp
+pp(json.loads(requests.get('http://ian-laptop:5000/api/3/action/package_search?q=data&amp;facet.field=tags&amp;facet.limit=1').content))
+</pre><p>
+Returns a result where only the tag with the highest count is returned in the search_facets result dict.
+</p>
+<p>
+One thing I did spot though was that we aren't able to specify per-field parameters.  ie whilst <tt>facet.limit</tt> sets the facet limit for <em>all</em> facet fields, solr allows that to be overridden on a per-field basis, eg <tt>facet.tags.limit</tt>.  This isn't something we support at the moment.  I've created a ticket for this, <a class="new ticket" href="2573.html" title="enhancement: package_search does not allow solr's per-field facet parameters (new)">#2573</a> .  Let me know if this something that you'd find useful, otherwise I'll leave it on the backlog for a future iteration.
+</p>
+
+    </div>
+
+              </div>
+          </div>
+        </div>
+      <div id="help"><strong>Note:</strong> See
+        <a href="../wiki/TracTickets.html">TracTickets</a> for help on using
+        tickets.</div>
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="first">
+          <a rel="nofollow" href="1737%3Fformat=csv" class="csv">Comma-delimited Text</a>
+        </li><li>
+          <a rel="nofollow" href="1737%3Fformat=tab" class="tab">Tab-delimited Text</a>
+        </li><li class="last">
+          <a rel="nofollow" href="1737%3Fformat=rss" class="rss">RSS Feed</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

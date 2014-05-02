@@ -1,0 +1,17 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+5	Browse list of packages and select one to view	johnbywater	johnbywater	"== As a ==
+
+Visitor
+
+== I want to ==
+
+Browse a list of packages resulting from a search or browse request (see other use cases)
+
+== So that ==
+
+I can select one of the packages to view in more detail (-> viewing an individual package ticket:6)
+
+== Notes ==
+  * When browsing a list of packages you should be able to see summary information about the package such as title (though this may be shortened in order to conveniently fit the list 
+  * The list should be broken up into pages so that the number of packages per page should be kept to a reasonable number (<= 50). Response time should be kept reasonable
+"	enhancement	closed	critical	v0.3	ckan	fixed				

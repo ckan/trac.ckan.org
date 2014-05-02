@@ -1,0 +1,7 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+309	Tag list shows unused tags	dread	pudo	"Deleted tags are visible on the /tag page and are searchable.
+
+Delete tags are ones that were in use once and then discarded, so this includes ones which are not used on any packages any more, including misspelling, mistakes, and deprecated tags. It would makes sense to remove them.
+
+Example tag that is viewed at /tag and searchable:
+http://ckan.net/tag/2rand[0"	defect	closed	awaiting triage		ckan	fixed				

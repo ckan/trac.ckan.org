@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+257,Package relationships - 4. Read in API,dread,dread,"API:
+  * Appear in package listing Example: 'relationships': [{'is_dependency_of':'osm', comments:'Since version 0.2'}, {'is_parent_of':'bobs_maps'}]
+",enhancement,closed,blocker,v1.0,ckan,fixed,,,,

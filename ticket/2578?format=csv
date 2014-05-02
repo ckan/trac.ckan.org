@@ -1,0 +1,6 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2578,demo theme breaks the tests,toby,toby,"The demo branch fails huge numbers of tests.
+
+many are going to be template based - these need to be sorted - ideally we need to get them to work with legacy/new templates but see how we go on that one
+
+anyhow this is not a priority whilst we are branched but needs resolving before we merge into master",defect,closed,blocker,demo phase 4,ckan,fixed,demo-theme,,ckan,none

@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #873: ONS loader assigns packages to same package even when dept name added manually</title>
+    <link>http://localhost/ticket/873</link>
+    <description>&lt;p&gt;
+e.g. national_child_measurement_programme had no department but "Information Centre for Health and Social Care" for agency, and TNA inferred it should be under department DoH. But now the next ONS update to this series expects a blank department, so creates a new package national_child_measurement_programme_.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/873</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Tue, 21 Dec 2010 13:47:54 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/873#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/873#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Fixed in dgu cset:8bfb867e247a and ckanext cset:fabd31544a73
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2951: Paster command for building css from less</title>
+    <link>http://localhost/ticket/2951</link>
+    <description>&lt;p&gt;
+With the latest template, css and js changes in 2.0, there are a number of things that need preparation prior to a production deployment. One of these is:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;the less files should be compiled to css (main.css, not just main.debug.css)
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+This ticket is to provide a paster command which will compile the .less into the main.css file.  The idea of the paster command is that it will be run by developers, and they will check in the resulting .css files.  It will also provide a convenient mechanism for production scenarios with node.js installed on the production server, as they will be able to compile the .less there as well.
+&lt;/p&gt;
+&lt;p&gt;
+## Background
+&lt;/p&gt;
+&lt;p&gt;
+The .css files that need to be served are built using &lt;tt&gt;less&lt;/tt&gt;.  The css files that are generated *are* checked-in to the repo; but they are a build artifact.  So the general workflow is:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;commit changes to the less files
+&lt;/li&gt;&lt;li&gt;build the main.css file and commit
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+This paster command slots into the above workflow for convenience.
+&lt;/p&gt;
+&lt;p&gt;
+## Notes
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;doc/frontend-development.rst
+&lt;/li&gt;&lt;li&gt;bin/less
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+to run this paster command, &lt;tt&gt;Node&lt;/tt&gt; will be required.  So that dependency should be checked.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2951</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>toby</dc:creator>
+
+      <pubDate>Tue, 02 Oct 2012 09:09:41 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/2951#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/2951#comment:1</guid>
+      <description>
+        &lt;p&gt;
+the files like red.css should also be done as part of this. and before minification of files - should really be part of same process
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>icmurray</dc:creator>
+
+      <pubDate>Tue, 02 Oct 2012 10:50:30 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/2951#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/2951#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/2951?action=diff&amp;amp;version=2"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

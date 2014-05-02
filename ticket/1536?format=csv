@@ -1,0 +1,2 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1536,Group deletion doesn't work,dread,dread,"In the Web interface and API, an administrator can set the 'state' field of a group to 'deleted' but this change is ignored in the save/submit and it doesn't get deleted.",defect,closed,minor,ckan-sprint-2011-12-19,ckan,fixed,,richard@…,ckan,none

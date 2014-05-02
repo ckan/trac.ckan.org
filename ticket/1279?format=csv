@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1279,Refactor or deprecate Authorization Groups,amercader,ross,"Authorization Groups are going to be deprecated in 1.8
+
+It is still unclear how Authorization Groups fit in the new authz model, so they have been left out of the logic and auth refactoring (Tickets #1229 and #1253)",enhancement,closed,awaiting triage,ckan-v1.8,ckan,duplicate,authz,,ckan,none

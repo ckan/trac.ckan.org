@@ -1,0 +1,10 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+868,Test improvements,thejimmyg,sebbacon,"The tests currently take 41 mins to run on most laptops. This slows down development and discourages a test-driven approach.
+
+We'd like to see the tests pass in 5 mins or less (but anything would be an improvement!)
+
+Some suggestions for achieving this include:
+
+ * Upgrading the entire codebase to SQLAlchemy 0.6 so that tests could run against an in-memory SQLite database
+ * Not setting up and tearing down the database so frequently.
+",enhancement,closed,critical,,ckan,fixed,,,,

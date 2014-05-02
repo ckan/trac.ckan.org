@@ -1,0 +1,7 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1319,Require an email address on User registration,dread,rgrp,"Superticket: #1343
+
+This avoids difficulties when they forget their password.
+
+* (?) Email validation (navl does not have one!)
+* Require email confirmation to be activated (?) (Answer: no, not at present -- see discussion below)",enhancement,closed,major,ckan-sprint-2011-10-24,ckan,fixed,,shevski,ckan,none

@@ -1,0 +1,4 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1320	Extend basic markdown to support normal http / https links	rgrp	zephod	"It is very annoying that you have to wrap links in <...> and most people don't bother. Extend h.markdown in code and markdown in js to fix this.
+
+(We should also support 'package' links etc in javascript?)"	enhancement	new	major	ckan-backlog	ckan				ckan	none

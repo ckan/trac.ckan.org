@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2395: paster db clean/init don't work when spatial extension enabled</title>
+    <link>http://localhost/ticket/2395</link>
+    <description>&lt;p&gt;
+If you have a spatial enabled database then if you don't disable the spatial extension in the CKAN config temporarily then you get errors when you run paster db clean and paster db init.
+&lt;/p&gt;
+&lt;p&gt;
+Can't you just modify the clean and init functions to run without extensions enabled?
+&lt;/p&gt;
+&lt;p&gt;
+The wider problem is that extensions do their own inits every time you do load_environment, which seems crazy and inefficient to me, since this occurs every time a request comes into CKAN. But that is another problem/ticket.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2395</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>kindly</dc:creator>
+
+      <pubDate>Fri, 15 Jun 2012 14:41:53 GMT</pubDate>
+      <title>milestone set</title>
+      <link>http://localhost/ticket/2395#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/2395#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                set to &lt;em&gt;ckan-backlog&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

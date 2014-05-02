@@ -1,0 +1,21 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1167,Create a standard CKAN system image for Amazon EC2 (AMI),nils.toedtmann,,"We should create a public AMI with CKAN pre-installed and configured such that users can easily create their own EC2 machine with a running CKAN to play with.
+
+There are three phases:
+ 1. [nils] Deploy an empty EC2 instance to become the CKAN image master instance
+ 2. Install a CKAN and give it a standard configuration.
+ 3. [nils] Create a AMI from the CKAN image master instance and publish it.
+
+I am happy to do first and last. Who is installing and configuring CKAN?
+
+Unfortunately AMIs are specific to region, architecture and storage type. We cannot maintain too many images, so a number of choices have to be made:
+ * Which distribution/version? '''Ubuntu 10.04 LTS'''
+ * Which architecture/instance-type? I suggest 64-bit/t1.micro
+ * Which region? I suggest us-east-1 and maybe eu-west-1
+ * Which storage type? '''EBS''' (way easier to make an AMI from than instance-store)
+ * Install CKAN from deb packages via mercurial/virtualenv? I assume the latter because the AMI is targeted to developers?
+
+
+----
+[http://alestic.com/2009/06/ec2-ami-bundle 1]
+[http://uec-images.ubuntu.com/releases/10.04/release/ 2]",task,closed,awaiting triage,,ckan,fixed,,rgrp thejimmyg pudo dread,ckan,none

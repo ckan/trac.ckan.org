@@ -1,0 +1,8 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+889	Support extra footer material in config option (e.g. for google analytics)	rgrp	rgrp	"Add a config option 'template_footer_end' which is inserted in layout_template just before </body>.
+
+This allows sysadmins to add extra items, especially, scripts directly into site without having to do any theming and is especially useful for things like google analytics.
+
+Aside: going forward may want to turn this into a extension.
+
+Cost: 1h"	enhancement	closed	major	ckan-v1.3-sprint-2	ckan	fixed				

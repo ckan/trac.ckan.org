@@ -1,0 +1,15 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1290	Better error when blank database	dread	dread	"When installing CKAN, when doing ""paster serve development.ini"", lots of users encounter the error for every request: 
+{{{
+ProgrammingError: (ProgrammingError) relation ""user"" does not exist
+}}}
+This is because the database tables have not been created - they have forgotten or missed the ""paster db init"" step.
+
+Can we provide a better error to say that the database is not initialised yet?
+
+Implementation options
+======================
+
+1. At the start of every request we reflect the database tables and check they are there. This is rather expensive!
+
+2. Uncached requests to the home page start with a cheap database query. If there is an exception then return this error about database setup. I really like Drupal's page for this that has in large letters that the site is currently off-line. Below a line, in small letters, there are developer suggestions on what is wrong and where to look to fix it."	enhancement	new	minor	ckan-backlog	ckan			kindly	ckan	none

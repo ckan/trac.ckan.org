@@ -1,0 +1,6 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+216,UI Review - Search,dread,nickstenning," * allow clicking on 'only openly licensed'/'only downloadable' to select/deselect checkboxes: make them <label>s.
+ * cut 'only's -- use word 'filter' instead
+ * doesn't appear to match substrings!? A search for 'anna' doesn't return match the 'annakarenina' package.
+ * autocomplete package names & tags
+",enhancement,closed,critical,v1.0,ckan,fixed,,,,

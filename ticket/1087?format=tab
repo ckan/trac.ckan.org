@@ -1,0 +1,9 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1087	version and contact info api call	wwaites		"a simple api call that returns data like this:
+
+{{{
+{ ""version"": ckan_software_version,
+  ""contact"": { ""name"": ""Some Admin"", ""mbox"": ""admin@exmaple.org"" },
+  ""description"": ""Site Description"",
+  ""url"": ""http://canonical.name.ckan.net/""
+}}}"	enhancement	closed	awaiting triage	ckan-sprint-2011-11-21	ckan	fixed			ckan	none

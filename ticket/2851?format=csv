@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2851,Preview of PDF tries to connect to datastore,ross,,"e.g. http://datahub.io/dataset/ccc-gistemp/resource/80ebdbd6-d91b-4fef-9db4-d3dfbd7e868e
+
+CKAN attempts to render the PDF as a datastore tabular date even though the mimetype of the PDF is correctly specified.",enhancement,new,awaiting triage,,ckan,,,,ckan,none

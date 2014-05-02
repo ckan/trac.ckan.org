@@ -1,0 +1,239 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2209: Object-&gt;RDF mapping</title>
+    <link>http://localhost/ticket/2209</link>
+    <description>&lt;p&gt;
+Super is &lt;a class="missing changeset" title="No default repository defined"&gt;[1649]&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+We need to provide customisable mappings between CKAN models and RDF. This needs to be easily configurable for different clients and should take into account objects related to the model being mapped.
+&lt;/p&gt;
+&lt;p&gt;
+Current contenders for impl are:
+&lt;/p&gt;
+&lt;ol&gt;&lt;li&gt;ordf.org's Object Description Mapper (which uses OWL)
+&lt;/li&gt;&lt;/ol&gt;&lt;ol start="2"&gt;&lt;li&gt;RDFAlchemy, although this looks like it may result in fixed mappings
+&lt;/li&gt;&lt;/ol&gt;&lt;ol start="3"&gt;&lt;li&gt;A custom scheme with a simple json file
+&lt;/li&gt;&lt;/ol&gt;&lt;ol start="4"&gt;&lt;li&gt;A template based approach using Genshi templates?
+&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;
+Approach is to get a mapping complete of the attributes directly in the package class, and then provide mappings for related objects (tags/resources etc).
+&lt;/p&gt;
+&lt;p&gt;
+We'll then need to be able to publish the RDF to a triplestore.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2209</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>ross</dc:creator>
+
+      <pubDate>Tue, 06 Mar 2012 10:06:33 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/2209#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/2209#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/2209?action=diff&amp;amp;version=1"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>ross</dc:creator>
+
+      <pubDate>Tue, 06 Mar 2012 10:58:08 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/2209#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/2209#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/2209?action=diff&amp;amp;version=2"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>ross</dc:creator>
+
+      <pubDate>Mon, 12 Mar 2012 10:20:39 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/2209#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/2209#comment:3</guid>
+      <description>
+        &lt;p&gt;
+Option 4 is the most appealing at this point, although you probably should look at &lt;a class="closed ticket" href="http://localhost/ticket/2209" title="enhancement: Object-&amp;gt;RDF mapping (closed: fixed)"&gt;#2209&lt;/a&gt;
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>ross</dc:creator>
+
+      <pubDate>Mon, 12 Mar 2012 10:21:14 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/2209#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/2209#comment:4</guid>
+      <description>
+        &lt;p&gt;
+Previous comment should read:
+&lt;/p&gt;
+&lt;p&gt;
+Option 4 is the most appealing at this point, although you probably should look at &lt;a class="closed ticket" href="http://localhost/ticket/1649" title="enhancement: Verify RDF Extension (ckanext-rdf) works (closed: fixed)"&gt;#1649&lt;/a&gt;
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>ross</dc:creator>
+
+      <pubDate>Mon, 12 Mar 2012 11:19:30 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/2209#comment:5</link>
+      <guid isPermaLink="false">http://localhost/ticket/2209#comment:5</guid>
+      <description>
+        &lt;p&gt;
+Current thinking is that option 4 is a default (as per ckanext-rdf) rdf output that is generated not in code (as currently) but using a genshi xml template to read the package into an RDF format (as if it were HTML).  This would then be overrideable so that for ecportal where the format of the RDF is different (change of vocabs etc) we can just point the config to a new template.
+&lt;/p&gt;
+&lt;p&gt;
+Pros:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+Easy to implement
+Easy to use
+Not hard-coded as currently
+Fast execution
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Cons:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+Requires knowledge of required RDF output if default is not useful
+RDF and not any of the other formats yet.
+Only works with package/resource/tags unless more work is done
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>ross</dc:creator>
+
+      <pubDate>Mon, 12 Mar 2012 11:23:13 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/2209#comment:6</link>
+      <guid isPermaLink="false">http://localhost/ticket/2209#comment:6</guid>
+      <description>
+        &lt;p&gt;
+Can't edit comments .. so
+&lt;/p&gt;
+&lt;p&gt;
+Current thinking is that option 4 is a default (as per ckanext-rdf) rdf output that is generated not in code (as currently) but using a genshi xml template to read the package into an RDF format (as if it were HTML). This would then be overrideable so that for ecportal where the format of the RDF is different (change of vocabs etc) we can just point the config to a new template.
+&lt;/p&gt;
+&lt;p&gt;
+Pros:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+Easy to implement
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+Easy to use
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+Not hard-coded as currently
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+Fast execution
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Cons:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+Requires knowledge of required RDF output if default is not useful
+RDF and not any of the other formats yet.
+Only works with package/resource/tags unless more work is done
+&lt;/p&gt;
+&lt;/blockquote&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>ross</dc:creator>
+
+      <pubDate>Thu, 15 Mar 2012 12:13:16 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/2209#comment:7</link>
+      <guid isPermaLink="false">http://localhost/ticket/2209#comment:7</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/2209?action=diff&amp;amp;version=7"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>ross</dc:creator>
+
+      <pubDate>Mon, 19 Mar 2012 09:24:34 GMT</pubDate>
+      <title>keywords changed</title>
+      <link>http://localhost/ticket/2209#comment:8</link>
+      <guid isPermaLink="false">http://localhost/ticket/2209#comment:8</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;keywords&lt;/strong&gt;
+              &lt;em&gt;[?d][a:1.5d][r:0.5d]&lt;/em&gt; added; &lt;em&gt;[?d]&lt;/em&gt; removed
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>ross</dc:creator>
+
+      <pubDate>Wed, 09 May 2012 12:20:51 GMT</pubDate>
+      <title>keywords, status changed; resolution set</title>
+      <link>http://localhost/ticket/2209#comment:9</link>
+      <guid isPermaLink="false">http://localhost/ticket/2209#comment:9</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;keywords&lt;/strong&gt;
+              &lt;em&gt;[?d][a:2.0d]&lt;/em&gt; added; &lt;em&gt;[?d][a:1.5d][r:0.5d]&lt;/em&gt; removed
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

@@ -1,0 +1,6 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+947	Move the assignment of roles to a package on package creation to an extension	rgrp		"At the moment the assignment of user roles on package creation is done in setup_user_roles method in ckan/model/authz.py and is hard-coded.
+
+This can be a pain to override (you can use a Plugin listening for package create events) and makes some things such as putting system in restricted mode more complex than it should be (see ticket:833).
+
+An elegant solution would be to move this into an Extension this simplifies the code and make it easier for people override (just remove the default extension and plugin your own)."	enhancement	closed	awaiting triage		ckan	duplicate	extension authz		ckan	none

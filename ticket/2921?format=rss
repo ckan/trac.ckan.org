@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2921: Add docstring to top of lib/extract.py file</title>
+    <link>http://localhost/ticket/2921</link>
+    <description>&lt;p&gt;
+I think it couldn't hurt for this module to have a docstring at the top
+of the file explaining what the module is for. I know from setup.py that
+it's there to provide the extract_ckan() string extractor function for
+Babel, but I think looking at the file on its own it's not so obvious.
+&lt;/p&gt;
+&lt;p&gt;
+Also a couple of other small fixes:
+&lt;/p&gt;
+&lt;p&gt;
+jinja2_cleaner looks like a helper function only meant to be used by
+extract_ckan(), might make things clearer if it was called
+_jinja2_cleaner(), just so it doesn't look like a public function the
+module wants to export.
+&lt;/p&gt;
+&lt;p&gt;
+jinja_extensions seems to be a module-level variable that is only used
+in one function, could be moved into the function, unless you think
+there might be more functions that want it in future.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2921</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+ </channel>
+</rss>

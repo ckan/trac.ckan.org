@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2211,Logic layer access to publisher functionality,ross,ross,"Most of the get_group/add_member style calls should be handled, or at least provided via logic layer.
+
+Don't need to break existing code, but do need to provide access via logic layer",enhancement,closed,awaiting triage,ckan-sprint-2012-03-19,ckan,fixed,[2.5d][a:2d],,ckan,none

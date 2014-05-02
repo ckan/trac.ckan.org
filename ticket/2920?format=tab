@@ -1,0 +1,9 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2920	Genshi text template message extractor no longer needed?	seanh		"In setup.py, do we still need:
+
+    ('templates/**.txt', 'genshi', {
+        'template_class': 'genshi.template:TextTemplate'
+    }),
+
+in message_extractors? Doesn't like there are any txt files in there
+anymore."	defect	new	awaiting triage	ckan 2.0	ckan				ckan	none

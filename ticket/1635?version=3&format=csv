@@ -1,0 +1,10 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1635,Email notifications (e.g. for activity streams),seanh,seanh,"CKAN should be able to send email notifications to users.
+
+Maybe have a notifications table in the db, and a server-side job that runs periodically and consumes rows from this table, mailing them to the users.
+
+One thing that we may want to send users notifications of is activity stream events. So the activity streams code would have to add rows to the notifications table for the mailer job to consume. But remember that email notifications feature is separate from activity streams - we may want to send notifications of other things as well.
+
+Need to implement (at least some of) #1634 before this can be implemented, in order to have something to send notifications about.
+
+Analysis here: http://ckan.okfnpad.org/27",enhancement,new,awaiting triage,ckan-v1.7,ckan,,9d activity_streams,,ckan,none

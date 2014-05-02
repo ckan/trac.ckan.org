@@ -1,0 +1,6 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+313	Allow packages to be specified by IDs in REST interface	dread	rgrp	"If a package name changes, a simple CKAN client may not be aware of this (not monitoring the push notifications, revisions or feed), so it is preferable to refer to the package by its (invariant) ID.
+
+It is still useful to refer to a package by its name though, so both should be valid arguments in the REST interface.
+
+"	enhancement	closed	critical	v1.1	ckan	fixed				

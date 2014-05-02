@@ -1,0 +1,4 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+432	Creating package over REST gives 500 error	dread	dread	"This occurs when CKAN is run with mod_wsgi (not under paster).
+
+This is because of a unicode header being creating in rest.py."	defect	closed	blocker	ckan-v1.2		fixed				

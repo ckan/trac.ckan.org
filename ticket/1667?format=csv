@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1667,Add an extension point for rendering activity streams,seanh,seanh,"Currently rendering of activity stream events to HTML works by looking up a rendering function in a dictionary that maps activity types ('new package', 'changed group', etc.) to rendering functions that take an activity stream event and return the rendered HTML.
+
+There needs to be an extension point where extensions can register their own rendering functions for particular activity types.",enhancement,new,awaiting triage,ckan-future,ckan,,4d activity_streams,,ckan,none

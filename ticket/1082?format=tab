@@ -1,0 +1,11 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1082	language changes behave strangely	johnlawrenceaspden		"Set language to Greek, flash message says 'Language set to: English', but page is now about half in Greek.
+
+Set language back to English causes server error:
+
+AttributeError: 'NoneType' object has no attribute 'path'
+
+Module ckan.controllers.error:29 in document          view
+>>  if original_request.path.startswith('/api'):
+
+However going to a new page reveals that it's back to English"	defect	closed	awaiting triage		ckan	fixed			ckan	none

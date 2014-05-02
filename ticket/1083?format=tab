@@ -1,0 +1,9 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1083	userobjectroles added twice can't be deleted	johnlawrenceaspden	johnlawrenceaspden	"the add_user_to_role/remove_user_from_role functions are asymmetrical
+in that the add function is happy to add the same role twice but the remove asserts that it's only in the table once and crashes if that's not true.
+
+an attempt has been made to guard against this, but fails, I think because the add functions rely on the caller committing the change to the db.
+
+same problem affects corresponding authorization_group functions
+
+I'll try to sort this out. Making a note here."	defect	closed	awaiting triage	ckan-v1.5-sprint-1	ckan	fixed			ckan	none

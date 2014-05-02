@@ -1,0 +1,780 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      #1214 (API improvements (following javascript use))
+     – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="prev" href="1413.html" title="Ticket #1413" />
+        <link rel="last" href="23.html" title="Ticket #23" />
+        <link rel="help" href="../wiki/TracGuide.html" />
+        <link rel="alternate" href="1214%3Fformat=csv" type="text/csv" class="csv" title="Comma-delimited Text" /><link rel="alternate" href="1214%3Fformat=tab" type="text/tab-separated-values" class="tab" title="Tab-delimited Text" /><link rel="alternate" href="1214%3Fformat=rss" type="application/rss+xml" class="rss" title="RSS Feed" />
+        <link rel="up" href="../report/23%3Fsort=newvalue&amp;asc=1&amp;page=1.html" />
+        <link rel="next" href="1292.html" title="Ticket #1292" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/ticket.css" type="text/css" />
+        <link rel="first" href="336.html" title="Ticket #336" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript">
+      var auto_preview_timeout=2.0;
+      var form_token="93d81ccf9a7bb1c456462f62";
+    </script>
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script><script type="text/javascript" src="../chrome/common/js/wikitoolbar.js"></script><script type="text/javascript" src="../chrome/common/js/resizer.js"></script><script type="text/javascript" src="../chrome/common/js/auto_preview.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("div.description").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $(".foldable").enableFolding(false, true);
+        var args = {realm: "ticket", id: 1214, escape_newlines: 0}
+        $("#comment").autoPreview("/wiki_render", args, function(textarea, text, rendered) {
+            $("#ticketchange div.comment").html(rendered);
+            if (rendered)
+              $("#ticketchange").show();
+            else if ($("#ticketchange ul.changes").length == 0)
+              $("#ticketchange").hide();
+        });
+        $("#trac-comment-editor textarea").autoPreview("/wiki_render", args,
+                                                       function(textarea, text, rendered) {
+          var comment = $("#trac-comment-editor").next("div.comment");
+          comment.html(rendered);
+          if (rendered)
+            comment.show();
+          else
+            comment.hide();
+        });
+        $("#modify").parent().toggleClass("collapsed");
+        $(".trac-topnav a").click(function() { $("#modify").parent().removeClass("collapsed"); });
+        /* only enable control elements for the currently selected action */
+        var actions = $("#action input[name='action']");
+        function updateActionFields() {
+          actions.each(function () {
+            $(this).siblings().find("*[id]").enable($(this).checked());
+            $(this).siblings().filter("*[id]").enable($(this).checked());
+          });
+        }
+        actions.click(updateActionFields);
+        updateActionFields();
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="../wiki/TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li class="active"><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="1413.html" title="Ticket #1413">Previous Ticket</a></span></li><li><a href="../report/23%3Fsort=newvalue&amp;asc=1&amp;page=1.html">Back to Query</a></li><li class="last"><span><a class="next" href="1292.html" title="Ticket #1292">Next Ticket</a> &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="ticket">
+      <h1 id="trac-ticket-title">
+          <a href="1214.html">Ticket #1214</a>
+          <span class="status">(closed defect: worksforme)</span>
+      </h1>
+      <div id="ticket">
+  <div class="date">
+    <p>Opened <a class="timeline" href="../timeline%3Ffrom=2011-07-06T18:00:22Z&amp;precision=second.html" title="2011-07-06T18:00:22Z in Timeline">3 years</a> ago</p>
+    <p>Last modified <a class="timeline" href="../timeline%3Ffrom=2011-08-22T16:13:48Z&amp;precision=second.html" title="2011-08-22T16:13:48Z in Timeline">3 years</a> ago</p>
+  </div>
+  <h2 class="summary searchable">API improvements (following javascript use)</h2>
+  <table class="properties">
+    <tr>
+      <th id="h_reporter">Reported by:</th>
+      <td headers="h_reporter" class="searchable">
+        <a href="../query%3Fstatus=!closed&amp;reporter=dread.html">dread</a>
+      </td>
+      <th id="h_owner">Owned by:</th>
+      <td headers="h_owner">
+        <a href="../query%3Fstatus=!closed&amp;owner=dread.html">dread</a>
+      </td>
+    </tr>
+    <tr>
+        <th id="h_priority">
+          Priority:
+        </th>
+        <td headers="h_priority">
+              <a href="../query%3Fstatus=!closed&amp;priority=major.html">major</a>
+        </td>
+        <th id="h_milestone">
+          Milestone:
+        </th>
+        <td headers="h_milestone">
+              <a class="missing milestone"></a>
+        </td>
+    </tr><tr>
+        <th id="h_component">
+          Component:
+        </th>
+        <td headers="h_component">
+              <a href="../query%3Fstatus=!closed&amp;component=ckan.html">ckan</a>
+        </td>
+        <th id="h_keywords">
+          Keywords:
+        </th>
+        <td headers="h_keywords" class="searchable">
+        </td>
+    </tr><tr>
+        <th id="h_cc">
+          Cc:
+        </th>
+        <td headers="h_cc" class="searchable">
+              aron@…
+        </td>
+        <th id="h_repo">
+          Repository:
+        </th>
+        <td headers="h_repo">
+              <a href="../query%3Fstatus=!closed&amp;repo=ckan.html">ckan</a>
+        </td>
+    </tr><tr>
+        <th id="h_theme">
+          Theme:
+        </th>
+        <td headers="h_theme">
+              <a href="../query%3Fstatus=!closed&amp;theme=none.html">none</a>
+        </td>
+        <th>
+        </th>
+        <td>
+        </td>
+    </tr>
+  </table>
+  <div class="description">
+    <h3 id="comment:description">
+      Description
+    </h3>
+    <div class="searchable">
+      <p>
+Notes on the CKAN API from Aron:
+</p>
+<ul><li>Server returns text/html for errors even when "Accept: application/json" header is set.
+</li><li>DELETE package request requires a Content-Length? Should be 405 Method Not Allowed?
+</li><li>Tag returned as a JSON object when updating but as a string when requesting. Same with "extras" content.
+</li><li>How to remove key from "extras" object? Passing None as described in the docs is invalid JSON and using null doesn't work.
+</li><li>Tags return package names rather than ids when querying GET /tag/{id}
+</li><li>Doesn't return rendered_text property on package update.
+</li><li>Relationships use "object" key rather than id or package_id.
+</li></ul>
+    </div>
+  </div>
+</div>
+          
+
+        <div>
+          <h2 class="foldable">Change History</h2>
+          <div id="changelog">
+              <div class="change" id="trac-change-1">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:1" class="cnum">
+      <a href="1214.html#comment:1">comment:1</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-07-06T20:07:08Z&amp;precision=second.html" title="2011-07-06T20:07:08Z in Timeline">3 years</a> ago by dread
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+I'm working through these on branch defect-1214-api-improvements.
+</p>
+<p>
+"Server returns text/html for errors" - now fixed in cset:0a533a8da3df
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-2">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:2" class="cnum">
+      <a href="1214.html#comment:2">comment:2</a>
+    </span>
+                          <span>follow-up:</span>
+      <a href="1214.html#comment:7">↓ 7</a>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-07-07T12:18:03Z&amp;precision=second.html" title="2011-07-07T12:18:03Z in Timeline">3 years</a> ago by dread
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+Aron, 
+I've fixed the second item (on my branch), so you can DELETE a package without Content-Length. But I'm not sure what you mean here: "Should be 405 Method Not Allowed?" DELETE should be allowed. Or is that a response you're getting?
+David
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-3">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:3" class="cnum">
+      <a href="1214.html#comment:3">comment:3</a>
+    </span>
+                          <span>follow-up:</span>
+      <a href="1214.html#comment:8">↓ 8</a>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-07-07T12:26:45Z&amp;precision=second.html" title="2011-07-07T12:26:45Z in Timeline">3 years</a> ago by dread
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+"Tag returned as a JSON object when updating but as a string when requesting."
+I'm not sure what you mean.
+</p>
+<p>
+<a class="ext-link" href="http://test.ckan.net/api/2/rest/package/reference-example"><span class="icon">​</span>http://test.ckan.net/api/2/rest/package/reference-example</a>
+gives tags: <tt>"tags": ["country-uk", "example-package"],</tt>
+</p>
+<p>
+Is it this - returning package names, rather than ids? Here is certainly a bug I'll fix.
+<a class="ext-link" href="http://test.ckan.net/api/2/rest/tag/country-uk"><span class="icon">​</span>http://test.ckan.net/api/2/rest/tag/country-uk</a>
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-4">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:4" class="cnum">
+      <a href="1214.html#comment:4">comment:4</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-07-07T12:37:48Z&amp;precision=second.html" title="2011-07-07T12:37:48Z in Timeline">3 years</a> ago by dread
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+Fixed tag entity returning package names for apiv2 - it now gives IDs.
+</p>
+<p>
+The problem mentioned about "Extras" content - I'm not sure what's meant here. Package extras are just strings. You might choose to store a package name in an extra, but there is no magic to convert it to a package id should you retrieve the package via apiv2. Is this just a misunderstanding or have I missed your point?
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-5">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:5" class="cnum">
+      <a href="1214.html#comment:5">comment:5</a>
+    </span>
+                          <span>follow-up:</span>
+      <a href="1214.html#comment:9">↓ 9</a>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-07-07T13:15:31Z&amp;precision=second.html" title="2011-07-07T13:15:31Z in Timeline">3 years</a> ago by dread
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+Deleting an extra using 'null' works for me:
+</p>
+<pre class="wiki">$ curl -d '{"name":"dtest2", "extras":{"1":"1", "2":"2", "3":"3"}}' http://test.ckan.net/api/rest/package -H "Authorization: tester" 
+...
+$ curl -d '{"name":"dtest2", "extras":{"1":"1", "2":"2", "3":null}}' http://test.ckan.net/api/rest/package -H "Authorization: tester" 
+{"maintainer": null, "name": "dtest2", "relationships_as_subject": [], "author": null, "url": null, "relationships_as_object": [], "notes": null, "title": "dtest2", "maintainer_email": null, "revision_timestamp": "2011-07-07T12:57:18.454890", "author_email": null, "state": "active", "version": null, "groups": [], "license_id": null, "revision_id": "f0ff31c0-027b-49ce-9daf-94a73d96a913", "tags": [], "id": "fdeeb287-2783-4aac-9fc7-a6717e54e22f", "resources": [], "extras": [{"state": "active", "value": "\"1\"", "revision_timestamp": "2011-07-07T12:57:18.454890", "package_id": "fdeeb287-2783-4aac-9fc7-a6717e54e22f", "key": "1", "revision_id": "f0ff31c0-027b-49ce-9daf-94a73d96a913", "id": "d1937073-7bfc-48c5-b6ff-b00d90b451ae"}, {"state": "active", "value": "\"2\"", "revision_timestamp": "2011-07-07T12:57:18.454890", "package_id": "fdeeb287-2783-4aac-9fc7-a6717e54e22f", "key": "2", "revision_id": "f0ff31c0-027b-49ce-9daf-94a73d96a913", "id": "8147886f-9769-440c-8c35-b7d6a2f46de7"}]}
+</pre>
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-6">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:6" class="cnum">
+      <a href="1214.html#comment:6">comment:6</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-07-07T13:23:46Z&amp;precision=second.html" title="2011-07-07T13:23:46Z in Timeline">3 years</a> ago by dread
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+Ok I see the problem with extras. When you create a package you get back 'simple' extras:
+</p>
+<pre class="wiki">$ curl -d '{"name":"dtest3", "extras":{"1":"1"}, "tags":["australia", "barbeque"]}' http://test.ckan.net/api/rest/package -H "Authorization: tester" --trace log
+{"maintainer": null, "maintainer_email": null, "id": "33d75910-ae5e-45b0-a154-d00022555a43", "metadata_created": "2007-04-10T21:19:38", "relationships": [], "metadata_modified": "2011-07-07T13:06:06.228718", "author": null, "author_email": null, "state": "active", "version": null, "license_id": null, "resources": [], "tags": ["australia", "barbeque"], "groups": [], "name": "dtest3", "license": null, "notes_rendered": "", "url": null, "ckan_url": "http://test.ckan.net/package/dtest3", "notes": null, "title": "dtest3", "ratings_average": null, "extras": {"1": "1"}, "ratings_count": 0, "revision_id": "31cb22d4-3452-4adc-b572-cd173aea7d
+</pre><p>
+i.e. "extras": {"1": "1"}
+and that's what you get if you GET the package:
+</p>
+<pre class="wiki">$ curl http://test.ckan.net/api/rest/package/dtest3
+{"maintainer": null, "maintainer_email": null, "id": "33d75910-ae5e-45b0-a154-d00022555a43", "metadata_created": "2007-04-10T21:19:38", "relationships": [], "metadata_modified": "2011-07-07T13:06:06.228718", "author": null, "author_email": null, "state": "active", "version": null, "license_id": null, "resources": [], "tags": ["australia", "barbeque"], "groups": [], "name": "dtest3", "license": null, "notes_rendered": "", "url": null, "ckan_url": "http://test.ckan.net/package/dtest3", "notes": null, "title": "dtest3", "ratings_average": null, "extras": {"1": "1"}, "ratings_count": 0, "revision_id": "31cb22d4-3452-4adc-b572-cd173aea7d11"}
+</pre><p>
+but if you then edit it you get them expressed much more verbosely:
+</p>
+<pre class="wiki">$ curl -d '{"name":"dtest3", "extras":{"1":"2"}, "tags":["australia", "barbeque"]}' http://test.ckan.net/api/rest/package/dtest3 -H "Authorization: tester" --trace log
+{"maintainer": null, "name": "dtest3", "relationships_as_subject": [], "author": null, "url": null, "relationships_as_object": [], "notes": null, "title": "dtest3", "maintainer_email": null, "revision_timestamp": "2011-07-07T13:06:06.228718", "author_email": null, "state": "active", "version": null, "groups": [], "license_id": null, "revision_id": "31cb22d4-3452-4adc-b572-cd173aea7d11", "tags": [{"revision_timestamp": "2011-07-07T13:06:06.228718", "state": "active", "id": "4aa0e776-ac2a-4a8b-82ba-d80237d35596", "name": "australia"}, {"revision_timestamp": "2011-07-07T13:06:06.228718", "state": "active", "id": "e890354d-e170-44c1-94b1-f0d8b38a49fc", "name": "barbeque"}], "id": "33d75910-ae5e-45b0-a154-d00022555a43", "resources": [], "extras": [{"state": "active", "value": "\"2\"", "revision_timestamp": "2011-07-07T13:21:02.220368", "package_id": "33d75910-ae5e-45b0-a154-d00022555a43", "key": "1", "revision_id": "61703821-a2f1-41f8-8f39-71130c5e6c1b", "id": "87d7d4fc-7eb7-4760-b199-e460ce505632"}]}
+</pre><p>
+I'm going to ask David Raznick about what's best here. It would be good to make them uniform.
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-7">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:7" class="cnum">
+      <a href="1214.html#comment:7">comment:7</a>
+    </span>
+                        in reply to:
+      <a href="1214.html#comment:2">↑ 2</a>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-07-07T15:40:25Z&amp;precision=second.html" title="2011-07-07T15:40:25Z in Timeline">3 years</a> ago by aron
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+Replying to <a href="1214.html#comment:2" title="Comment 2 for Ticket #1214">dread</a>:
+</p>
+<blockquote class="citation">
+<p>
+Aron, 
+I've fixed the second item (on my branch), so you can DELETE a package without Content-Length. But I'm not sure what you mean here: "Should be 405 Method Not Allowed?" DELETE should be allowed. Or is that a response you're getting?
+David
+</p>
+</blockquote>
+<p>
+If I send a HEAD request to the server eg.
+</p>
+<pre class="wiki">curl -i -XHEAD http://test.ckan.net:80/api/2/rest/package/ec9cb930-d15f-441f-a1e1-36f4d5df19bf
+</pre><p>
+I get the following in the  Access-Control-Allow-Methods header
+</p>
+<pre class="wiki">Access-Control-Allow-Methods: POST, PUT, GET, OPTIONS
+</pre><p>
+I've just realised that the "Access-Control" headers are for cross origin browser requests so I think you can ignore my comments about the correct response being 405 Method Not Allowed but perhaps DELETE should be added to the Access-Control-Allow-Methods list?
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-8">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:8" class="cnum">
+      <a href="1214.html#comment:8">comment:8</a>
+    </span>
+                        in reply to:
+      <a href="1214.html#comment:3">↑ 3</a>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-07-07T15:58:25Z&amp;precision=second.html" title="2011-07-07T15:58:25Z in Timeline">3 years</a> ago by aron
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+Replying to <a href="1214.html#comment:3" title="Comment 3 for Ticket #1214">dread</a>:
+</p>
+<blockquote class="citation">
+<p>
+"Tag returned as a JSON object when updating but as a string when requesting."
+I'm not sure what you mean.
+</p>
+<p>
+<a class="ext-link" href="http://test.ckan.net/api/2/rest/package/reference-example"><span class="icon">​</span>http://test.ckan.net/api/2/rest/package/reference-example</a>
+gives tags: <tt>"tags": ["country-uk", "example-package"],</tt>
+</p>
+</blockquote>
+<p>
+I'm getting back objects for each tag in the response body from a PUT request. For example "country-uk" would be something like.
+</p>
+<pre class="wiki">{ 
+        "id" : "600dc72e-6127-4704-b801-bee00474ec0c",
+        "name" : "country-uk",
+        "revision_timestamp" : "2011-07-06T09:09:21.578034",
+        "state" : "active"
+}
+</pre><p>
+Hopefully this gist &lt;<a class="ext-link" href="https://gist.github.com/97447d0b28bf52f3e06b"><span class="icon">​</span>https://gist.github.com/97447d0b28bf52f3e06b</a>&gt; will illustrate the issue.
+</p>
+<blockquote class="citation">
+<p>
+Is it this - returning package names, rather than ids? Here is certainly a bug I'll fix.
+<a class="ext-link" href="http://test.ckan.net/api/2/rest/tag/country-uk"><span class="icon">​</span>http://test.ckan.net/api/2/rest/tag/country-uk</a>
+</p>
+</blockquote>
+<p>
+That was the fifth point on the list.
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-9">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:9" class="cnum">
+      <a href="1214.html#comment:9">comment:9</a>
+    </span>
+                        in reply to:
+      <a href="1214.html#comment:5">↑ 5</a>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-07-07T16:07:43Z&amp;precision=second.html" title="2011-07-07T16:07:43Z in Timeline">3 years</a> ago by aron
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+Replying to <a href="1214.html#comment:5" title="Comment 5 for Ticket #1214">dread</a>:
+</p>
+<blockquote class="citation">
+<p>
+Deleting an extra using 'null' works for me:
+</p>
+</blockquote>
+<p>
+Hmm, it works for me too when there are other keys remaining in the "extras" object. However I can't seem to delete the last one. Take the following example.
+</p>
+<pre class="wiki">curl -i -XPUT -d'{"extras": {"Tester": null}}' -H"X-CKAN-Type: application/json" http://test.ckan.net:80/api/2/rest/package/ec9cb930-d15f-441f-a1e1-36f4d5df19bf
+</pre><p>
+Gives:
+</p>
+<pre class="wiki">{ "author" : "",
+  "author_email" : "",
+  "extras" : [ { "id" : "88cc50ca-9e29-4499-a542-09d364f5f64f",
+        "key" : "Tester",
+        "package_id" : "ec9cb930-d15f-441f-a1e1-36f4d5df19bf",
+        "revision_id" : "e5c3ca9c-1dae-4a86-837f-b8c19ac31964",
+        "revision_timestamp" : "2011-07-07T16:01:05.696025",
+        "state" : "active",
+        "value" : "\"Test Value\""
+      } ],
+  "groups" : [  ],
+  "id" : "ec9cb930-d15f-441f-a1e1-36f4d5df19bf",
+  "license_id" : "",
+  "maintainer" : "aron",
+  "maintainer_email" : "",
+  "name" : "my-test-package",
+  "notes" : "Heading\r\n===\r\nThis _is_ some text",
+  "relationships_as_object" : [  ],
+  "relationships_as_subject" : [  ],
+  "resources" : [  ],
+  "revision_id" : "688d33fb-5629-4ab3-9f59-a649fc7caa00",
+  "revision_timestamp" : "2011-07-06T10:37:50.182894",
+  "state" : "active",
+  "tags" : [ { "id" : "600dc72e-6127-4704-b801-bee00474ec0c",
+        "name" : "test-tag",
+        "revision_timestamp" : "2011-07-06T09:09:21.578034",
+        "state" : "active"
+      } ],
+  "title" : "My Test Package",
+  "url" : "",
+  "version" : ""
+}
+</pre>
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-10">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:10" class="cnum">
+      <a href="1214.html#comment:10">comment:10</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-07-07T16:12:49Z&amp;precision=second.html" title="2011-07-07T16:12:49Z in Timeline">3 years</a> ago by aron
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+Another edge case that popped up while verifying the above issues. A PUT request without a body throws a 500 Internal Sever Error
+</p>
+<pre class="wiki">curl -i -XPUT  -H"X-CKAN-API-KEY: tester" -H"Content-Type: application/json" http://test.ckan.net:80/api/2/rest/package/ec9cb930-d15f-441f-a1e1-36f4d5df19bf
+</pre>
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-11">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:11" class="cnum">
+      <a href="1214.html#comment:11">comment:11</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-07-07T16:59:02Z&amp;precision=second.html" title="2011-07-07T16:59:02Z in Timeline">3 years</a> ago by aron
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+One more for today. Please do let me know if I should be filing these as separate tickets?
+</p>
+<p>
+For some reason performing a search query for packages with an underscore "_ " as a query string key fails to return any results.
+</p>
+<pre class="wiki">curl "http://test.ckan.net/api/2/search/package?q=osm"
+</pre><p>
+Gives me 4 results.
+</p>
+<pre class="wiki">curl "http://test.ckan.net/api/2/search/package?q=osm&amp;_=1310056826904"
+</pre><p>
+Gives me none.
+</p>
+<p>
+The underscore is generally used by <a class="missing wiki">JavaScript?</a> libraries as a way of bypassing the browser cache when making JSONP calls. It's easily worked around but is odd none the less.
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-12">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:12" class="cnum">
+      <a href="1214.html#comment:12">comment:12</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-07-07T18:16:10Z&amp;precision=second.html" title="2011-07-07T18:16:10Z in Timeline">3 years</a> ago by dread
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+Fixes have gone into the branch for "Tag returned as a JSON object when updating but as a string when requesting. Same with "extras" content." and "Doesn't return rendered_text property on package update.".
+</p>
+<p>
+I've added DELETE to the Access-Control-Allow-Methods on the server, so you can try that now.
+</p>
+<p>
+I've added a failing test for the problem of deleting the last extra. Am discussing with David Raznick how to fix that best.
+</p>
+<p>
+I think the only other ones left to address are: 
+</p>
+<ul><li>Relationships use "object" key rather than id or package_id.
+</li><li>underscore in search parameters
+</li></ul>
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-13">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:13" class="cnum">
+      <a href="1214.html#comment:13">comment:13</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-07-07T18:17:01Z&amp;precision=second.html" title="2011-07-07T18:17:01Z in Timeline">3 years</a> ago by dread
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+I believe "A PUT request without a body throws a 500 Internal Sever Error" was fixed yesterday in the code. (Not deployed to test.ckan.net yet though)
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-14">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:14" class="cnum">
+      <a href="1214.html#comment:14">comment:14</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-07-07T19:35:27Z&amp;precision=second.html" title="2011-07-07T19:35:27Z in Timeline">3 years</a> ago by dread
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <blockquote>
+<p>
+Relationships use "object" key rather than id or package_id.
+</p>
+</blockquote>
+<p>
+I'm not totally clear on this one. The URLs for relationship editing can be package ids or names. When you GET a relationship packages are referred to in IDs for v2 API. When you create or update a relationship it returns package IDs for v2 API. Are you referring to the relationships listed in the response when you PUT a package? (If so that would be fixed by my previous fix.)
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-15">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:15" class="cnum">
+      <a href="1214.html#comment:15">comment:15</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-07-07T19:43:51Z&amp;precision=second.html" title="2011-07-07T19:43:51Z in Timeline">3 years</a> ago by dread
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <blockquote>
+<p>
+underscore in search parameters
+</p>
+</blockquote>
+<p>
+I think its trying to filter search results by values of an extra field called "_", even though this probably doesn't occur. If it is not too ugly, I suggest using one of your other ideas for solving the cache issue. I suggest you bring it up with Rufus or the ckan-dev list to get opinions.
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-16">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:16" class="cnum">
+      <a href="1214.html#comment:16">comment:16</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-07-07T21:06:48Z&amp;precision=second.html" title="2011-07-07T21:06:48Z in Timeline">3 years</a> ago by dread
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Status</strong>
+        changed from <em>new</em> to <em>closed</em>
+    </li><li>
+      <strong>Resolution</strong>
+        set to <em>fixed</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+I've put the fixes onto test.ckan.net - repoen the ticket if there are any issues.
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-17">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:17" class="cnum">
+      <a href="1214.html#comment:17">comment:17</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-07-11T14:59:59Z&amp;precision=second.html" title="2011-07-11T14:59:59Z in Timeline">3 years</a> ago by aron
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Status</strong>
+        changed from <em>closed</em> to <em>reopened</em>
+    </li><li>
+      <strong>Resolution</strong>
+        <em>fixed</em> deleted
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+The groups property in the package resource is always empty (or is for all packages I have viewed).
+</p>
+<p>
+The following group lists one package.
+</p>
+<pre class="wiki">http://test.ckan.net/api/2/rest/group/0ac963e7-ba29-49bc-83c8-98f8c1991649
+</pre><p>
+But when viewing the package the groups array is empty.
+</p>
+<pre class="wiki">http://test.ckan.net/api/2/rest/package/758c26d4-5949-4347-8b4d-023374146d94
+</pre>
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-18">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:18" class="cnum">
+      <a href="1214.html#comment:18">comment:18</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-08-22T16:13:48Z&amp;precision=second.html" title="2011-08-22T16:13:48Z in Timeline">3 years</a> ago by dread
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Status</strong>
+        changed from <em>reopened</em> to <em>closed</em>
+    </li><li>
+      <strong>Resolution</strong>
+        set to <em>worksforme</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+This appears to have been fixed by version 1.4.3.
+</p>
+
+    </div>
+
+              </div>
+          </div>
+        </div>
+      <div id="help"><strong>Note:</strong> See
+        <a href="../wiki/TracTickets.html">TracTickets</a> for help on using
+        tickets.</div>
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="first">
+          <a rel="nofollow" href="1214%3Fformat=csv" class="csv">Comma-delimited Text</a>
+        </li><li>
+          <a rel="nofollow" href="1214%3Fformat=tab" class="tab">Tab-delimited Text</a>
+        </li><li class="last">
+          <a rel="nofollow" href="1214%3Fformat=rss" class="rss">RSS Feed</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

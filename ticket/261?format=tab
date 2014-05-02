@@ -1,0 +1,48 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+261	License does not work through REST API	rgrp	dread	"Presence of license_id field in JSON input show below breaks REST API (with weird error about int not being subscriptable as if license_id field is being subscripted).
+
+Using normal license field does not cause breakage but has no effect. 
+
+(Also think we should remove license_id from the API since there is no guarantee this cross system compatible since locally generated on install).
+
+{{{
+    ourjson = '''{
+   ""maintainer"" : ""Applications Division"",
+   ""version"" : ""1999-01-01"",
+   ""license_id"" : 9,
+   ""name"" : ""geogratiswaterfraction1km_v100"",
+   ""author_email"" : ""..."",
+   ""author"" : ""Dissemination Branch"",
+   ""tags"" : [
+      ""GeoGratis"",
+      ""Canada"",
+      ""GCMD"",
+      ""Hydrosphere"",
+      ""Ground Water"",
+      ""Surface Water"",
+      ""Hydropattern"",
+      ""Earth Science"",
+      ""Land Surface"",
+      ""Land Cover"",
+      ""Landscape""
+   ],
+   ""extras"" : {
+      ""License"" : ""http://geogratis.ca/geogratis/en/licence.jsp"",
+      ""Ministry"" : ""Natural Resources Canada"",
+      ""Level of Government"" : ""Federal""
+   },
+   ""maintainer_email"" : ""richard.fernandes@nrcan.gc.ca"",
+   ""notes"" : ""This product is a raster coverage"",
+   ""url"" : ""http://geogratis.cgdi.gc.ca/geogratis/en/collection/metadata.do?id=67"",
+   ""title"" : ""Geogratis - 1-km Water Fraction From National Topographic Data Base Maps, Canada""
+}
+'''
+    def test_15_random(self):
+        offset = '/api/rest/package'
+        import urllib
+        tmpjson = simplejson.dumps(simplejson.loads(self.ourjson))
+        postparams = urllib.urlencode({tmpjson: 1})
+        res = self.app.post(offset, params=postparams, status=[200],
+                extra_environ=self.extra_environ)
+        model.Session.remove()
+}}}"	defect	closed	major	v1.0	ckan	fixed				

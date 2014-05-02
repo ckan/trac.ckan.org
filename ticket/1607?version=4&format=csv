@@ -1,0 +1,25 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1607,[super] Data.gov.uk Maintenance Refactor and UKLP Development Support,dread,icmurray,"A ticket to collect all of the changes needed for CKAN to become the 'data' tab on DGU.
+
+Design doc: https://docs.google.com/document/d/19h9bA1G4cQkv031m8jNCu6FEB3a8qpXUmdPAguM-Ofs/edit?hl=en_GB  The design doc is the authoritative source of tasks.  This ticket acts as a synopsis.
+
+Current sprint (2012-02-20):
+
+ * 7a. ~~Public Publisher Dashboard (including QA Work and notifications) MUST PHASE 1~~
+ * 6. ~~Publisher Registration Improvements MUST PHASE 1~~
+ * 3. ~~Themes/Taxonomy as well as tags WONT PHASE 2~~
+ * 32. ~~Browse by Tags PHASE 1 MUST~~
+ * 12. ~~Edit/Delete for Harvested Datasets MUST URGENT PHASE 1~~
+ * 13. ~~Provider labelling MUST PHASE 1 [UKLP #14 MUST]~~
+ * 17. ~~Filter “UK Location Records” MUST PHASE 1 [UKLP #21 SHOULD]~~
+ * 22. ~~Mixed Licenses MUST PHASE 2~~
+
+Plus, brought forward from last sprint:
+
+ * ~~Publisher hierarchy support~~
+ * ~~Improved dataset creation tools (form) - #1525~~
+ * ~~Edit/delete for harvested datasets~~
+
+
+
+Overview of tasks: see the design doc.",enhancement,closed,major,ckan-v1.7,ckan,fixed,,,ckanext-dgu,none

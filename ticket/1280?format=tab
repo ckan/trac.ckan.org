@@ -1,0 +1,2 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1280	fix sqlalchemy so that it works with postgres 9.0	kindly		After the ckan migrate process, sqlalcehmy reflect does not work and causes an error when reflecting indexes.  A bug report needs to be put into sqlalchemy.	defect	closed	awaiting triage	ckan-backlog	ckan	fixed			ckan	none

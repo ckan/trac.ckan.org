@@ -1,0 +1,20 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+314	Bugs getting revisions from the REST API	johnbywater	johnbywater	"Bug report regarding getting revisions:
+
+Getting revisons by ID (on the latest ID)
+ 
+GET ""http://test-hmg.ckan.net/api/search/revision?since_revision=44aac9b6-ba24-43a8-87a1-f6923dc523ff""
+
+Returns a whole load of stuff (it's also quite slow - about 10 seconds)
+
+I'm expecting it to return just an empty array - am I doing something
+wrong here - if so could you clarify correct use of the API?
+
+
+GET ""http://test-hmg.ckan.net/api/search/revision?since_time=2010-04-30T23:45""
+Returns the empty string - I'd expect an empty array ie []
+
+GET ""http://test-hmg.ckan.net/api/search/revision?since_time=2010-04-31T23:45""
+Returns an internal server error 500 - I think it should probably be ""bad
+Request"" 400 (the date is invalid)
+"	defect	closed	awaiting triage		ckan	fixed				

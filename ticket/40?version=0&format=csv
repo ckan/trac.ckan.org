@@ -1,0 +1,6 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+40,Reserved html characters (such as &) in urls mean package does not render for read view,rgrp,rgrp,"A url such as: http://someurl.com/xyz?x=1&VERSION=1.1&Service=WFS when set as url or download_url breaks the rendering of the package with an error like:
+
+There was an error rendering the pacakge: not well-formed (invalid token): line 1, column 181
+
+Have checked that removing the & stuff makes the error go away so this looks like an issue with escaping urls when displaying them ...",defect,new,major,v0.5,ckan,,,,,

@@ -1,0 +1,55 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1077,Move to simpler vdm system,rgrp,kindly,"== Option 1: 'Changeset' Model ==
+
+See ticket:1135 for vdm ticket. This would involve a) moving to changeset in vdm b) doing the migration in ckan to support this.
+
+Have developed a new ""changeset"" based model for revisioning in vdm. 
+
+
+=== Implementation ===
+
+ * The main challenge with this change is schema and data migration
+
+Every revisioned object has a revision_id and revision attribute.
+
+Approximate algorithm:
+
+{{{
+Revision -> Changeset
+
+for revtype in [PackageRevision, ...]:
+    for pkgrev in package_revision:
+        changeset = lookupchangeset(package_revision)
+        ChangeObject(cset, (table, id), dictize(pkgrev))
+}}}
+
+Question:
+   * does pkg include tags attributes or not? or we have to dictize, pkgrev, pkg2tagrev, and tag. Probably the latter.
+
+== Option 2: Simplify Revision Object Model ==
+
+Just use a simpler vdm, see ticket:1136 (move to !SessionExtension) and ticket:1137 (remove need for statefulness in vdm).
+
+== Discussion ==
+
+Advantage of Option 1 versus 2:
+
+ * Easier support for pending state and similar behaviour
+ * No need to introduce new tables (and hence migrations) when making something revisioned (or not).
+
+=== Disadvantages ===
+
+ * Migration is required
+ * More difficult to query revision history.
+  * Could be addressed by having !ChangeObject have separate cols for table name and id but would likely be more difficult.
+ * Performance (?)
+  * Have one big !ChangeObject table to query when looking at changed objects rather than many revision tables.
+   * Not sure this is a biggie as even with Revision model biggest revision object tables are probably on the order of the !ChangeObject table
+
+== Conclusion ==
+
+Implement Option 2 and leave Option 1 for present.
+
+Option 1 includes Option 2 so it seems that that is required in either case (so we may as well with Option 2).
+
+Option 1 requires significant effort (esp migration) so leave for present and then review the situation at some later date.",enhancement,new,critical,ckan-v1.5,ckan,,,,ckan,none

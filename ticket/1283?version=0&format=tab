@@ -1,0 +1,6 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1283	Deleted packages shouldn't be searchable or browsable	dread	dread	"A package in deleted state doesn't show to general users, but admins DO see them. The idea is that they can resurrect them if they want. But now we have the trash can that lists deleted packages. So we don't want admins to see the deleted packages anywhere else. 
+
+(But an admin should still be able to READ and EDIT a deleted package, so if he clicks on it in the trash list he can see it to decide whether to resurrect and actually be able to change its state.)
+
+This ticket ties in with #948 highlighting a package being deleted (when viewing or editing) and follows on from the introduction of the trash can #1076."	enhancement	new	major	ckan-backlog	ckan				ckan	none

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #3010: Pin images don't appear in data explorer</title>
+    <link>http://localhost/ticket/3010</link>
+    <description>&lt;p&gt;
+When minified files are in use (set debug = false in ini file) the pin images for points don't show up in the data explorer map view when viewing a resource with geolocation data.
+&lt;/p&gt;
+&lt;p&gt;
+set debug = true will fix the problem by using unminified files instead but also turns on a bunch of debug stuff you wouldn't want on a production site.
+&lt;/p&gt;
+&lt;p&gt;
+middleware.py, around line 73, is where the decision to turn minified files on or off based on the debug setting is made. This can be hacked on a production site to run with unminified files but otherwise run on production mode thereby getting around the issue with the pins. But that doesn't fix the underlying bug.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/3010</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+ </channel>
+</rss>

@@ -1,0 +1,29 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2731	Some sites permanently 'down for maintenance'	markw		"A large number of XXX.ckan.net sites give the following message:
+
+""This Site is Down for Maintenance
+We apologize for the inconvenience.
+~ The Open Knowledge Foundation sysadmins.""
+
+The message is unhelpful and patently false - the sites do not exist. Some of them were supposed to have been redirected to a relevant group at thedatahub.org in this ticket (now closed):
+
+http://trac.okfn.org/ticket/933
+
+However, the redirection only seems to have worked in one case, http://si.ckan.net. 
+
+The problem still affects the following sites - the first 4 of which have supposedly been merged:
+
+ * http://lt.ckan.net
+ * http://hu.ckan.net
+ * http://be.ckan.net
+ * http://gr.ckan.net
+
+ * http://nz.ckan.net
+ * http://bg.ckan.net
+ * http://fi.ckan.net
+ * http://katalogdanych.centrumcyfrowe.pl
+ * http://pl.ckan.net
+ * http://southampton.ckan.net
+ * http://sl.ckan.net
+
+Please sort this out by redirecting, removing the sites, giving a more helpful (and accurate) failure message, etc, as appropriate."	enhancement	new	awaiting triage		ckan				ckan	none

@@ -1,0 +1,17 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2254	better hooks for templates	toby	toby	"TD look at issues and then email ckan-dev
+
+meeting notes from 21-3-2012
+general ideas non specific
+
+Problem:
+* We want to remove the Transformer usage due to performance and its close tie to genshi
+* Want a standard way for core code and extensions to put code into the templates where *templates request it* (templates control insertion rather than extensions ...)
+* Stacking versus overwriting on entry points
+    * Relationship to h.requires('jquery', version) - http://codex.wordpress.org/Function_Reference/wp_enqueue_script
+Options:
+* placeholders or helper methods
+* {{user _info}} {{sub_menu}} is this equivalent to <span class=""insert-user-info""></span>
+    * [xyz arguments] -> h.load_snippet('xyz', ...)
+* ${h.snipit()}
+"	enhancement	closed	awaiting triage		ckan	fixed			ckan	none

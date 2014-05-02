@@ -1,0 +1,6 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+843,user list ui for group curation,wwaites,,"  * perhaps we should show the openid as well to distinguish between users with the same name.
+
+  * perhaps on account creation, the user should be redirected to their personal details page to encourage them to fill in a human readable name.
+
+  * also the list is much too long. can we make it work some other way? javascript is an option, but must be careful to fail gracefully when the browser does not support it.",defect,new,critical,ckan-v1.4,ckan,,,,,

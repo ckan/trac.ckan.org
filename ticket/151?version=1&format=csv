@@ -1,0 +1,8 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+151,User object should have a created attribute,rgrp,dread,"User object should have a ""created"" attribute initialized on creation CREATE INDEX pgweb_idx ON pgweb USING gin(to_tsvector(config_name, body));
+
+where config_name is a column in the pgweb table. This allows mixed configurations in the same index while recording which configuration was used for each index entry. This would be useful, for example, if the document collection contained documents in different languages. Again, queries that are to use the index must be phrased to match, e.g. WHERE to_tsvector(config_name, body) @@ 'a & b'. to current datetime.
+
+Require a db migration but o/w very simple.
+
+Cost: 1.5h",enhancement,new,critical,v0.11,ckan,,,,,

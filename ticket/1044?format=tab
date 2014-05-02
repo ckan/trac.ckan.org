@@ -1,0 +1,13 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1044	Sysadmins locked-out of API without Right: (visitor, SITE_READ, System)	dread	pudo	"The problem is that in ckan/controllers/rest.py the BaseApiController has this method:
+{{{
+    def __before__(self, action, **env):
+        BaseController.__before__(self, action, **env)
+        if not self.authorizer.am_authorized(c, model.Action.SITE_READ, model.System):
+            abort(401, _('Not authorized to see this page'))
+}}}
+which works on the basis of your c.user, rather than your apikey. All API users are treated as visitors (since API users don't get a login cookie) and even a sysadmin's apikey is blocked unless there is a right for a Visitor to SITE_READ.
+
+Also needs tests.
+
+(Also, why is this restriction only on the API, package search, group index and tags and agroup index? I'm guessing SITE_READ is only for places where other authz don't apply, but maybe it should not be called 'SITE_READ' but 'OTHER_READ' or something?)"	defect	closed	blocker		ckan	fixed		pudo	ckan	none

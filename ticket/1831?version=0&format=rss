@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1831: Login with email address</title>
+    <link>http://localhost/ticket/1831</link>
+    <description>&lt;p&gt;
+Users should be able to log in using either their username, or their email address, both of which are unique.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1831</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>ross</dc:creator>
+
+      <pubDate>Fri, 24 Feb 2012 09:03:50 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/1831#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1831#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1831?action=diff&amp;amp;version=1"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>ross</dc:creator>
+
+      <pubDate>Mon, 05 Mar 2012 14:10:31 GMT</pubDate>
+      <title>status, milestone changed</title>
+      <link>http://localhost/ticket/1831#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/1831#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;assigned&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan-backlog&lt;/em&gt; to &lt;em&gt;current-ckan-sprint-2012-03-19&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Already have a branch for this.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>ross</dc:creator>
+
+      <pubDate>Mon, 12 Mar 2012 10:48:04 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1831#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/1831#comment:3</guid>
+      <description>
+        &lt;p&gt;
+Email is not currently 'unique' in the user model.  Find out if this is intentional or not.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>ross</dc:creator>
+
+      <pubDate>Tue, 13 Mar 2012 16:17:38 GMT</pubDate>
+      <title>milestone changed</title>
+      <link>http://localhost/ticket/1831#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/1831#comment:4</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;current-ckan-sprint-2012-03-19&lt;/em&gt; to &lt;em&gt;ckan-backlog&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Decided to delay this until later but code is in feature-1831-login-by-email
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>ross</dc:creator>
+
+      <pubDate>Mon, 03 Sep 2012 11:08:24 GMT</pubDate>
+      <title>owner deleted</title>
+      <link>http://localhost/ticket/1831#comment:5</link>
+      <guid isPermaLink="false">http://localhost/ticket/1831#comment:5</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;owner&lt;/strong&gt;
+              &lt;em&gt;ross&lt;/em&gt; deleted
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

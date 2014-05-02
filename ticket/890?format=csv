@@ -1,0 +1,8 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+890,Introduce timed actions into ckanext-queue,pudo,kindly,"The ckan queuing system should provide the option to subscribe to timed re-submissions of specific resources. This could look as follows: 
+
+ * routing_key: Package 
+ * operation: daily 
+ * payload: pkg.as_dict() 
+
+Where operation is one of daily, weekly, monthly or any other interval. ",enhancement,closed,major,ckan-v1.6,ckan,invalid,,,ckan,none

@@ -1,0 +1,17 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+939	Notification bar at top of site shown to new users pointing them to simple instructions	rgrp		"On http://getthedata.org/ or stackoverflow there is a pop-up bar for new users that give them some simple instructions.
+
+Talking with users it is clear that some people are not clear how ckan.net (or other sites) work and what they are and are not 'allowed to do. This could help make this better.
+
+== Implementation ==
+
+ * Pop-up bar (based on a cookie or just being not logged in?) - uses ticket:938 (message flashing)
+ * FAQ/instructions page (use the new wiki?)
+
+== Depends ==
+
+ * ticket:938
+
+== Estimate ==
+
+ * Cost: 1h"	enhancement	closed	awaiting triage		ckan	fixed	ux wui anyone		ckan	none

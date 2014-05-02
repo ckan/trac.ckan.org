@@ -1,0 +1,9 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1377,Ckan admin repair,zephod,zephod,"Integrating ckanext-admin into core has thrown up a number of problems:
+  * Look & feel does not match the rest of the site
+  * Tests are not passing
+  * On the trash page, clicking 'undelete' triggers a purge
+  * Using the purge functionality is dangerous; deleting and purging the latest revision will corrupt a dataset (& several corrupt datasets have been found on thedatahub.org)
+  * Trash page can contain nested form tags in certain cases (breaking test harness & form redirection)
+
+",defect,closed,awaiting triage,ckan-sprint-2011-10-10,ckan,fixed,,,ckan,none

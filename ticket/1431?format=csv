@@ -1,0 +1,21 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1431,Captcha field - foreign chars cause exception,dread,dread,"During registering a user, the user inputs foreign chars into the captcha field.
+{{{
+URL: http://thedatahub.org/user/register
+...
+Module ckan.lib.captcha:22 in check_recaptcha
+<<                                     remoteip=client_ip_address,
+                                          challenge=recaptcha_challenge_field,
+                                          response=recaptcha_response_field))
+           f = urllib2.urlopen(recaptcha_server_name, params)
+           data = f.read()
+>>  response=recaptcha_response_field))
+Module urllib:1267 in urlencode
+<<          for k, v in query:
+                   k = quote_plus(str(k))
+                   v = quote_plus(str(v))
+                   l.append(k + '=' + v)
+           else:
+>>  v = quote_plus(str(v))
+UnicodeEncodeError: 'ascii' codec can't encode character u'\xea' in position 0: ordinal not in range(128)
+}}}",defect,closed,minor,ckan-v1.5,ckan,fixed,,,ckan,none

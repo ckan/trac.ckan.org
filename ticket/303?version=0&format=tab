@@ -1,0 +1,4 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+303	Package history & feed to show changes to tags, extras and resources	dread	johnbywater	"Currently a package's history page (/package/history/xyz) and related feed only shows changes to the core package i.e. ones which create a PackageResource. This doesn't include changes to tags, extras and resources. These need to be added.
+
+There is the complication that the 'diff' function doesn't currently work beyond PackageResource. Unless this is quick and simple to fix, I suggest we let the diff remain slightly broken for now."	defect	new	awaiting triage	v1.0	ckan					

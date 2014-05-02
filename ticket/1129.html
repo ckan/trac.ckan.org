@@ -1,0 +1,610 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      #1129 (CREP0002: Moderated  Edits)
+     – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="last" href="1127.html" title="Ticket #1127" />
+        <link rel="help" href="../wiki/TracGuide.html" />
+        <link rel="alternate" href="1129%3Fformat=csv" type="text/csv" class="csv" title="Comma-delimited Text" /><link rel="alternate" href="1129%3Fformat=tab" type="text/tab-separated-values" class="tab" title="Tab-delimited Text" /><link rel="alternate" href="1129%3Fformat=rss" type="application/rss+xml" class="rss" title="RSS Feed" />
+        <link rel="up" href="../query%3Ftype=CREP&amp;max=200&amp;col=id&amp;col=summary&amp;col=component&amp;col=owner&amp;col=type&amp;col=priority&amp;col=milestone&amp;report=14&amp;order=milestone.html" />
+        <link rel="next" href="1134.html" title="Ticket #1134" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/ticket.css" type="text/css" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript">
+      var auto_preview_timeout=2.0;
+      var form_token="93d81ccf9a7bb1c456462f62";
+    </script>
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script><script type="text/javascript" src="../chrome/common/js/wikitoolbar.js"></script><script type="text/javascript" src="../chrome/common/js/resizer.js"></script><script type="text/javascript" src="../chrome/common/js/auto_preview.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("div.description").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $(".foldable").enableFolding(false, true);
+        var args = {realm: "ticket", id: 1129, escape_newlines: 0}
+        $("#comment").autoPreview("/wiki_render", args, function(textarea, text, rendered) {
+            $("#ticketchange div.comment").html(rendered);
+            if (rendered)
+              $("#ticketchange").show();
+            else if ($("#ticketchange ul.changes").length == 0)
+              $("#ticketchange").hide();
+        });
+        $("#trac-comment-editor textarea").autoPreview("/wiki_render", args,
+                                                       function(textarea, text, rendered) {
+          var comment = $("#trac-comment-editor").next("div.comment");
+          comment.html(rendered);
+          if (rendered)
+            comment.show();
+          else
+            comment.hide();
+        });
+        $("#modify").parent().toggleClass("collapsed");
+        $(".trac-topnav a").click(function() { $("#modify").parent().removeClass("collapsed"); });
+        /* only enable control elements for the currently selected action */
+        var actions = $("#action input[name='action']");
+        function updateActionFields() {
+          actions.each(function () {
+            $(this).siblings().find("*[id]").enable($(this).checked());
+            $(this).siblings().filter("*[id]").enable($(this).checked());
+          });
+        }
+        actions.click(updateActionFields);
+        updateActionFields();
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="../wiki/TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li class="active"><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span class="missing">&larr; Previous Ticket</span></li><li><a href="../query%3Ftype=CREP&amp;max=200&amp;col=id&amp;col=summary&amp;col=component&amp;col=owner&amp;col=type&amp;col=priority&amp;col=milestone&amp;report=14&amp;order=milestone.html">Back to Query</a></li><li class="last"><span><a class="next" href="1134.html" title="Ticket #1134">Next Ticket</a> &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="ticket">
+      <h1 id="trac-ticket-title">
+          <a href="1129.html">Ticket #1129</a>
+          <span class="status">(closed CREP: fixed)</span>
+      </h1>
+      <div id="ticket">
+  <div class="date">
+    <p>Opened <a class="timeline" href="../timeline%3Ffrom=2011-05-08T10:44:58Z&amp;precision=second.html" title="2011-05-08T10:44:58Z in Timeline">3 years</a> ago</p>
+    <p>Last modified <a class="timeline" href="../timeline%3Ffrom=2011-12-30T18:01:40Z&amp;precision=second.html" title="2011-12-30T18:01:40Z in Timeline">2 years</a> ago</p>
+  </div>
+  <h2 class="summary searchable">CREP0002: Moderated  Edits</h2>
+  <table class="properties">
+    <tr>
+      <th id="h_reporter">Reported by:</th>
+      <td headers="h_reporter" class="searchable">
+        <a href="../query%3Fstatus=!closed&amp;reporter=kindly.html">kindly</a>
+      </td>
+      <th id="h_owner">Owned by:</th>
+      <td headers="h_owner">
+      </td>
+    </tr>
+    <tr>
+        <th id="h_priority">
+          Priority:
+        </th>
+        <td headers="h_priority">
+              <a href="../query%3Fstatus=!closed&amp;priority=major.html">major</a>
+        </td>
+        <th id="h_milestone">
+          Milestone:
+        </th>
+        <td headers="h_milestone">
+              <a class="closed milestone" href="../milestone/ckan-v1.5.html">ckan-v1.5</a>
+        </td>
+    </tr><tr>
+        <th id="h_component">
+          Component:
+        </th>
+        <td headers="h_component">
+              <a href="../query%3Fstatus=!closed&amp;component=ckan.html">ckan</a>
+        </td>
+        <th id="h_keywords">
+          Keywords:
+        </th>
+        <td headers="h_keywords" class="searchable">
+        </td>
+    </tr><tr>
+        <th id="h_cc">
+          Cc:
+        </th>
+        <td headers="h_cc" class="searchable">
+              rufus.pollock@…
+        </td>
+        <th id="h_repo">
+          Repository:
+        </th>
+        <td headers="h_repo">
+              <a href="../query%3Fstatus=!closed&amp;repo=ckan.html">ckan</a>
+        </td>
+    </tr><tr>
+        <th id="h_theme">
+          Theme:
+        </th>
+        <td headers="h_theme">
+              <a href="../query%3Fstatus=!closed&amp;theme=none.html">none</a>
+        </td>
+        <th>
+        </th>
+        <td>
+        </td>
+    </tr>
+  </table>
+  <div class="description">
+    <h3 id="comment:description">
+      Description
+      <span class="lastmod" title="2011-05-19 19:07:48+00:00">
+        (last modified by kindly)
+        (<a href="1129%3Faction=diff&amp;version=5.html">diff</a>)
+      </span>
+    </h3>
+    <div class="searchable">
+      <p>
+<strong>Proposer:</strong> David Raznick<br />
+</p>
+<h2 id="Abstract.">Abstract.</h2>
+<p>
+We are trying to achieve these goals.
+</p>
+<ul><li>To get people involved with making edits to CKAN metadata. 
+</li><li>To have an ownership model as to who can moderate and validate these changes
+</li><li>To not put too huge a burden on these owners.
+</li></ul><p>
+In order to achieve this, a feature which lets anyone edit a package but only let the moderator/owner accept it.  The moderator should be able to look at a list of changes and accept the ones that
+</p>
+<p>
+This cep is not about 'if' we need such a feature, it is about 'how' we go about implementing it. Another cep may needed for the 'if' case.
+</p>
+<h2 id="TheProblem">The Problem</h2>
+<p>
+We need the following to be possible.
+</p>
+<ul><li>Storing revision of objects that are not the current active one.
+</li><li>A way of the user viewing past revisions.
+</li><li>Accessing not only the history of a particular object but also of related objects at that time. i.e If a resource related to a package changes we need a way to see this when looking at the package.
+</li><li>A robust way of doing this in the face of database schema changes.
+</li><li>Make sure database queries are quick.
+</li></ul><h2 id="Solutions.">Solutions.</h2>
+<ol><li> Store the whole dictization of the package and all its related objects every time you change anything in its dictized representation and only save to the database proper if accepted.
+</li></ol><blockquote>
+<p>
+Pros
+</p>
+</blockquote>
+<ul><li>Easy to implement, we already have a preview which makes the dictized form of a package without actually saving it.  This will just need to be persisted in some way.
+</li><li>Fast retrieval.
+</li><li>Potential to store a branching revision tree of changes.
+</li></ul><blockquote>
+<p>
+Cons
+</p>
+</blockquote>
+<ul><li>No easy way to remake the dictized packages historically or if there is an there a change in the way we represent packages, i.e schema changes.
+</li><li>Will only work for the particular objects we decide to store these changes for.
+</li><li>Stores a lot of repeated information
+</li></ul><ol start="2"><li> Write specialized queries for every read of the database looking only at the revision tables.
+</li></ol><p>
+This method requires there to be a change in the way we use VDM, so that we manage statefulness ourselves. We will need to add other states such as 'waiting for approval'.
+</p>
+<blockquote>
+<p>
+Pros
+</p>
+</blockquote>
+<ul><li>No specialized storage required
+</li><li>Only need to change queries when schema changes
+</li><li>Can be made to work easily for other objects
+</li></ul><blockquote>
+<p>
+Cons
+</p>
+</blockquote>
+<ul><li>Slower query time on read, as even looking at the last active package will need to do a fairly complicated query.
+</li></ul><h2 id="Implementationdetails.">Implementation details.</h2>
+<p>
+1.
+</p>
+<blockquote>
+<p>
+A new table with columns  id, user, package_id, timestamp, revision_id, parent_id, dictized_package.
+revision_id should be null unless it is actually persisted to the database.  parent_id is the id that this package_dict was changed from.
+</p>
+</blockquote>
+<blockquote>
+<p>
+We could store only the diffs of the dictized_package as long as we assure that everything inside the json is stably sorted, this will make getting the historical data out slower.
+</p>
+</blockquote>
+<blockquote>
+<p>
+Getting out the history of the dictized packages is an intensive task, as it will require replaying the whole history of all the changes and creating the dict for each change.  This re-caching will need to be redone for every change we make to dictized representation of a package.
+</p>
+</blockquote>
+<p>
+2.
+</p>
+<blockquote>
+<p>
+Every normal packages read needs to look at the revision table to see the last accepted change in the dictized representation of the package. 
+We also need to way to get what the dictized representation of the package was like at any point of its revision history.  This querying is non-trivial in sql.
+</p>
+</blockquote>
+<h3 id="Participants">Participants</h3>
+<p>
+David Raznick to do it.
+</p>
+<h2 id="Progress.">Progress.</h2>
+<p>
+Decided to go with option 2. However we will change the revisioning system to be like the schema attached.
+This gets rid of difficult querying problems caused by querying the revision tables by adding an end date, meaning you can do range queries.
+</p>
+<p>
+The better and more normalized version of a revisioning system is outlined <a class="ext-link" href="https://docs.google.com/drawings/d/1Y7nMgVsrs081Pame2RdbZHlCAlV33ddTZ8VAsab1j-0/edit?hl=en_GB&amp;authkey=CJfd8vsB"><span class="icon">​</span>https://docs.google.com/drawings/d/1Y7nMgVsrs081Pame2RdbZHlCAlV33ddTZ8VAsab1j-0/edit?hl=en_GB&amp;authkey=CJfd8vsB</a>. 
+We will be a step closer to that, with this change, but we will keep the current vdm more or less, intact.
+</p>
+
+    </div>
+  </div>
+</div>
+          
+    <div id="attachments">
+        <h2 class="foldable">Attachments</h2>
+        <div>
+          <dl class="attachments">
+              <dt>
+    <a href="../attachment/ticket/1129/sqlspeed.py.html" title="View attachment">sqlspeed.py</a><a href="../raw-attachment/ticket/1129/sqlspeed.py" class="trac-rawlink" title="Download">​</a>
+       (<span title="2697 bytes">2.6 KB</span>) -
+      added by <em>kindly</em> <a class="timeline" href="../timeline%3Ffrom=2011-05-08T10:49:02Z&amp;precision=second.html" title="2011-05-08T10:49:02Z in Timeline">3 years</a> ago.
+  </dt>
+              <dd>
+                script run do test speed of various ways of doing a "last before this date" query
+              </dd>
+              <dt>
+    <a href="../attachment/ticket/1129/sudgested_vdm.svg.html" title="View attachment">sudgested_vdm.svg</a><a href="../raw-attachment/ticket/1129/sudgested_vdm.svg" class="trac-rawlink" title="Download">​</a>
+       (<span title="31600 bytes">30.9 KB</span>) -
+      added by <em>kindly</em> <a class="timeline" href="../timeline%3Ffrom=2011-05-19T19:18:38Z&amp;precision=second.html" title="2011-05-19T19:18:38Z in Timeline">3 years</a> ago.
+  </dt>
+              <dt>
+    <a href="../attachment/ticket/1129/suggested_vdm.png.html" title="View attachment">suggested_vdm.png</a><a href="../raw-attachment/ticket/1129/suggested_vdm.png" class="trac-rawlink" title="Download">​</a>
+       (<span title="120103 bytes">117.3 KB</span>) -
+      added by <em>kindly</em> <a class="timeline" href="../timeline%3Ffrom=2011-05-19T19:19:16Z&amp;precision=second.html" title="2011-05-19T19:19:16Z in Timeline">3 years</a> ago.
+  </dt>
+          </dl>
+          
+        </div>
+    </div>
+
+        <div>
+          <h2 class="foldable">Change History</h2>
+          <div id="changelog">
+              <div class="change">
+                <h3 class="change">
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-05-08T10:49:02Z&amp;precision=second.html" title="2011-05-08T10:49:02Z in Timeline">3 years</a> ago by kindly
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Attachment</strong>
+        <a href="../attachment/ticket/1129/sqlspeed.py.html"><em>sqlspeed.py</em></a><a href="../raw-attachment/ticket/1129/sqlspeed.py" title="Download" class="trac-rawlink">​</a>
+          added
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+script run do test speed of various ways of doing a "last before this date" query
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-1">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:1" class="cnum">
+      <a href="1129.html#comment:1">comment:1</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-05-11T12:20:19Z&amp;precision=second.html" title="2011-05-11T12:20:19Z in Timeline">3 years</a> ago by thejimmyg
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Cc</strong>
+        <em>rufus.pollock@…</em> added
+    </li><li>
+      <strong>Priority</strong>
+        changed from <em>awaiting triage</em> to <em>major</em>
+    </li><li>
+      <strong>state</strong>
+        changed from <em>draft</em> to <em>accepted</em>
+    </li><li>
+      <strong>Milestone</strong>
+        set to <em>ckan-v1.5</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+Great proposal, here's my thinking:
+</p>
+<ul><li>The current VDM model (where we have things like a single package table which logs changes to a package_revision table) is very well tested and works well and we should only consider a radical change with good reason
+</li><li>Although we are making a move from *model objects* being the central components to the *logic layer functions* being the central components, there is no need yet to have the database structures we store (for revisioning or otherwise) start to look like the dictized representation. The logic layer itself is designed to do that mapping.
+</li><li>Since we do have this logic layer though, there is less need for "magic" SQLAlchemy objects to support dicts and lists (eg the stateful objects used to make a list of tags on a package behave like a list), a few simple (and easily debuggable) queries in the logic layer would work better.
+</li></ul><p>
+In the longer term we may want to look at serialising more dictized-looking objects and that may lend itself to a more dictized changeset model or even a more dictized storage system (eg no-SQL) but for the time being we are not at that point.
+</p>
+<p>
+I recommend the following:
+</p>
+<ul><li>We continue to use the current default branch of VDM (not the changeset branch)
+</li><li>We continue to treat the package table (and other non-revision tables) as the most recent revision (even though the *active* revision displayed in CKAN might well be in the revision tables because more recent changes haven't been moderated yet)
+</li><li>We slowly stop using stateful lists and dicts in CKAN because we have move control with explicit queries in the logic layer
+</li></ul><p>
+Sound good?
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-2">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:2" class="cnum">
+      <a href="1129.html#comment:2">comment:2</a>
+    </span>
+                          <span>follow-ups:</span>
+      <a href="1129.html#comment:3">↓ 3</a>
+      <a href="1129.html#comment:4">↓ 4</a>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-05-11T18:53:00Z&amp;precision=second.html" title="2011-05-11T18:53:00Z in Timeline">3 years</a> ago by rgrp
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+It seems like this ticket is getting a bit confused with <a class="closed ticket" href="1076.html" title="enhancement: Improve revision and package purge system (closed: fixed)">ticket:1076</a> (changes re vdm) :-)
+</p>
+<p>
+Some general conclusions relevant to both:
+</p>
+<ul><li>General feeling is not to change to changeset model
+<ul><li>I'm personally +0 on changeset model
+</li><li>I would note main benefit is simplicity and orthogonality of changesets to core system. I also think cost of change is small.
+</li><li>That said we can simplify current model as well.
+</li></ul></li><li>There seems some misunderstanding: change to have logic layer has almost nothing to do with being able to remove main stateful stuff in vdm. To be able to remove most of stateful stuff in vdm requires us to make some other changes (re foreign keys from revision objects to continuity)
+</li><li>There are other simplifications we should make to vdm before embarking on this (e.g. move to <a class="missing wiki">SessionExtension?</a> from <a class="missing wiki">MapperExtension?</a>). This is easy as that work has been done in changeset branch and can be backported.
+</li></ul><p>
+What I don't see in this CEP as yet is any discussion of the complexities around pending stuff (e.g. do we allow multiple pending, do new edits get shown current or latest pending). I'll try and comment more on this but a lot of this was in original vdm discussion last summer.
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-3">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:3" class="cnum">
+      <a href="1129.html#comment:3">comment:3</a>
+    </span>
+                        in reply to:
+      <a href="1129.html#comment:2">↑ 2</a>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-05-12T14:13:21Z&amp;precision=second.html" title="2011-05-12T14:13:21Z in Timeline">3 years</a> ago by rgrp
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+Replying to <a href="1129.html#comment:2" title="Comment 2 for Ticket #1129">rgrp</a>:
+</p>
+<blockquote class="citation">
+<p>
+It seems like this ticket is getting a bit confused with <a class="closed ticket" href="1076.html" title="enhancement: Improve revision and package purge system (closed: fixed)">ticket:1076</a> (changes re vdm) :-)
+</p>
+</blockquote>
+<p>
+I of course ;0 meant <a class="new ticket" href="1077.html" title="enhancement: Move to simpler vdm system (new)">ticket:1077</a>
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-4">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:4" class="cnum">
+      <a href="1129.html#comment:4">comment:4</a>
+    </span>
+                        in reply to:
+      <a href="1129.html#comment:2">↑ 2</a>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-05-12T15:01:07Z&amp;precision=second.html" title="2011-05-12T15:01:07Z in Timeline">3 years</a> ago by kindly
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <blockquote class="citation">
+<ul><li>There seems some misunderstanding: change to have logic layer has almost nothing to do with being able to remove main stateful stuff in vdm. To be able to remove most of stateful stuff in vdm requires us to make some other changes (re foreign keys from revision objects to continuity)
+</li></ul></blockquote>
+<p>
+The logic layer does not automatically help out, however it makes our life easier if we want to handle state ourselves.  For example take package tags, if we remove the stateful_m2m properties and just use normal sqlalchemy relations. We will still want statefullness (i.e active, pending, deleted) on the package_tags table. We should update those on the table ourselves in the  logic layer.
+</p>
+<blockquote class="citation">
+<ul><li>There are other simplifications we should make to vdm before embarking on this (e.g. move to <a class="missing wiki">SessionExtension?</a> from <a class="missing wiki">MapperExtension?</a>). This is easy as that work has been done in changeset branch and can be backported.
+</li></ul></blockquote>
+<p>
+I agree but event thought the <a class="missing wiki">MapperExtension?</a> way is not great, it is very well field tested.
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-5">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:5" class="cnum">
+      <a href="1129.html#comment:5">comment:5</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-05-19T19:07:48Z&amp;precision=second.html" title="2011-05-19T19:07:48Z in Timeline">3 years</a> ago by kindly
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Description</strong>
+        modified (<a href="1129%3Faction=diff&amp;version=5.html">diff</a>)
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change">
+                <h3 class="change">
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-05-19T19:18:38Z&amp;precision=second.html" title="2011-05-19T19:18:38Z in Timeline">3 years</a> ago by kindly
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Attachment</strong>
+        <a href="../attachment/ticket/1129/sudgested_vdm.svg.html"><em>sudgested_vdm.svg</em></a><a href="../raw-attachment/ticket/1129/sudgested_vdm.svg" title="Download" class="trac-rawlink">​</a>
+          added
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change">
+                <h3 class="change">
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-05-19T19:19:16Z&amp;precision=second.html" title="2011-05-19T19:19:16Z in Timeline">3 years</a> ago by kindly
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Attachment</strong>
+        <a href="../attachment/ticket/1129/suggested_vdm.png.html"><em>suggested_vdm.png</em></a><a href="../raw-attachment/ticket/1129/suggested_vdm.png" title="Download" class="trac-rawlink">​</a>
+          added
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-6">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:6" class="cnum">
+      <a href="1129.html#comment:6">comment:6</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-07-08T12:41:02Z&amp;precision=second.html" title="2011-07-08T12:41:02Z in Timeline">3 years</a> ago by thejimmyg
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Status</strong>
+        changed from <em>new</em> to <em>closed</em>
+    </li><li>
+      <strong>Resolution</strong>
+        set to <em>fixed</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-7">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:7" class="cnum">
+      <a href="1129.html#comment:7">comment:7</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-12-30T18:01:40Z&amp;precision=second.html" title="2011-12-30T18:01:40Z in Timeline">2 years</a> ago by rgrp
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+More UI work remains in <a class="closed ticket" href="1141.html" title="CREP: [super] Moderated Edits User Interface (closed: fixed)">#1141</a>
+</p>
+
+    </div>
+
+              </div>
+          </div>
+        </div>
+      <div id="help"><strong>Note:</strong> See
+        <a href="../wiki/TracTickets.html">TracTickets</a> for help on using
+        tickets.</div>
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="first">
+          <a rel="nofollow" href="1129%3Fformat=csv" class="csv">Comma-delimited Text</a>
+        </li><li>
+          <a rel="nofollow" href="1129%3Fformat=tab" class="tab">Tab-delimited Text</a>
+        </li><li class="last">
+          <a rel="nofollow" href="1129%3Fformat=rss" class="rss">RSS Feed</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

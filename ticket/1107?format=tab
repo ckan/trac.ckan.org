@@ -1,0 +1,4 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1107	Move package autocomplete from package controller and move to API	rgrp	tidy-up bitesize	"Currently autocomplete method on package controller. This method should be in API (like other autocomplete methods).
+
+Will need to update client code (just forms atm I think)."	refactor	closed	minor		ckan	fixed			ckan	none

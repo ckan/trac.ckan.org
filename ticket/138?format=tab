@@ -1,0 +1,14 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+138	User has editable home page	dread	rgrp	" * Generic text box for markdown about the user 'About'
+
+Model's user table reflects these:
+ * 'about' attribute
+ * 'created' attribute is a default=datetime.now() - so when user was created
+
+Need edit page for this.
+
+Only user should be able to edit it.
+
+Follows on from ticket:136 and ticket:142
+
+Cost: 2h"	enhancement	closed	blocker	v1.0	ckan	fixed				

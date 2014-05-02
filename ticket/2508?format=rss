@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2508: Make it possible to run CKAN tests for each language</title>
+    <link>http://localhost/ticket/2508</link>
+    <description>&lt;p&gt;
+Mistakes in translated strings can cause CKAN to crash or otherwise not work, but it's not practical to manually test every page and function of CKAN in every language that we have new translations for before a CKAN release. It'd be great if the tests could automatically be run for each language.
+&lt;/p&gt;
+&lt;p&gt;
+This is probably a big job, we would have to get the tests to respect a language setting in the ini file, check for any individual test cases that specify the language (e.g. in the URL), and also fix test cases that look for specific English words in HTML output, etc.
+&lt;/p&gt;
+&lt;p&gt;
+In the meantime, a good stop-gap solution might be a script that tests for common mistakes in the po files.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2508</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>kindly</dc:creator>
+
+      <pubDate>Fri, 15 Jun 2012 14:32:51 GMT</pubDate>
+      <title>milestone set</title>
+      <link>http://localhost/ticket/2508#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/2508#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                set to &lt;em&gt;ckan-backlog&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

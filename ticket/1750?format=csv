@@ -1,0 +1,2 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1750,Move ckan/lib/activity.py into the model,seanh,,"Move ckan/lib/activity.py moved to into the model - say ckan/model/activity_extension.py, because it's so tightly knit with the model code, whereas most of the lib code is used in the controllers.",enhancement,new,awaiting triage,ckan-backlog,ckan,,activity_streams,,ckan,none

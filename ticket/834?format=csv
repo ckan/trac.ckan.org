@@ -1,0 +1,16 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+834,Searching in CKAN,Alexander,,"Hello.
+
+I've installed stable CKAN v1.1 from PyPI.
+
+I can't find any docs about using CKAN API in order to query packages.
+
+Query ./api/search/package?q=str works fine, but with extra parameters, such as limit, offset, fullinfo, order_by, search_notes, don't. Should I use new version for this? How can I perform this query via Ckanclient? Is it possible?
+
+Also I'm interested how to find open-licensed files? I tied URL ./api/search/package?q=str&open_only=1&downloadable_only=1 and Ckanclient:
+
+result = ckan.package_search('str', {'open_only': 1, 'downloadable_only': 1})
+
+As result nothing found.
+
+Thanks.",task,closed,awaiting triage,ckan-v1.3,ckan,worksforme,,,,

@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1406,Re-enable RSS subscriptions,zephod,,"RSS 'subscribe' buttons appeared in many places on the site but were not very helpful. They took (confused) users pointed to the raw feed code, and Google Reader could not understand the feed. Safari, however, could interpret it correctly.
+
+Their presentation needs to be clear and consistent; the RSS feed really needs testing in a variety of readers; and we need to decide exactly which items should get a feed. (Package updates? Groups?)",enhancement,new,awaiting triage,ckan-backlog,ckan,,,,ckan,none

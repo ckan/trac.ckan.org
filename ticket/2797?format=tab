@@ -1,0 +1,4 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2797	plain_textarea styling	toby	aron.carroll	"http://localhost:5000/ckan-admin/config uses a plain (non markup) textarea for custom css
+
+I've added form macro plain_textarea to provide one, however it renders without a bottom border due to markup textarea styling can you fix this - thanks"	enhancement	closed	awaiting triage	demo phase 3	ckan	fixed			ckan	none

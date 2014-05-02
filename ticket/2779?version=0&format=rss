@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2779: add 'deleted' to deleted datasets that admins can view</title>
+    <link>http://localhost/ticket/2779</link>
+    <description>&lt;p&gt;
+Currently, as a logged in admin, you can view deleted datasets just as if they are live datasets. Nothing distinguishes them apart from normal datasets other than they don't show up on the dataset page
+&lt;/p&gt;
+&lt;p&gt;
+This is potentially very confusing
+Can we add some kind of banner / label to deleted datasets to show they have been deleted?
+&lt;/p&gt;
+&lt;p&gt;
+&amp;amp; Do you guys need Sam to design this?
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2779</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>shevski</dc:creator>
+
+      <pubDate>Tue, 31 Jul 2012 12:21:10 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/2779#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/2779#comment:1</guid>
+      <description>
+        &lt;p&gt;
+Related ticket for undeleting datasets - &lt;a class="ext-link" href="http://trac.ckan.org/ticket/2780"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://trac.ckan.org/ticket/2780&lt;/a&gt;
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>shevski</dc:creator>
+
+      <pubDate>Tue, 31 Jul 2012 12:21:25 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/2779#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/2779#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/2779?action=diff&amp;amp;version=2"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>aron.carroll</dc:creator>
+
+      <pubDate>Wed, 01 Aug 2012 10:51:40 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/2779#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/2779#comment:3</guid>
+      <description>
+        &lt;p&gt;
+Toby is there a flag on the dataset object that tells me if it has been deleted?
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>toby</dc:creator>
+
+      <pubDate>Wed, 01 Aug 2012 11:03:10 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/2779#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/2779#comment:4</guid>
+      <description>
+        &lt;p&gt;
+@aron,
+&lt;/p&gt;
+&lt;p&gt;
+pkg_dict.state
+&lt;/p&gt;
+&lt;p&gt;
+I think the options are
+&lt;/p&gt;
+&lt;p&gt;
+active -  all good
+draft/draft-complete - partially created dataset
+deleted - deleted
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>aron.carroll</dc:creator>
+
+      <pubDate>Thu, 02 Aug 2012 10:30:55 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/2779#comment:5</link>
+      <guid isPermaLink="false">http://localhost/ticket/2779#comment:5</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Done in d17358f
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

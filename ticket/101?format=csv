@@ -1,0 +1,22 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+101,(Improved) Download support,rgrp,rgrp,"  1. Given a url download from that url to disk
+  2. Given a package use download url to download to disk
+
+Once on disk should uncompress (if necessary).
+
+== Details ==
+
+  * Should download either to tmp directory (defaulted in config) or a specified path on disk
+  * In download would like to support as many types of target urls as possible:
+    1. Single files (usually compressed filesets but could be individual files)
+    2. Index pages listing files to download
+    3. Revision control repositories
+    4. ...
+
+  This will obviously be a significant amount of work. Suggest:
+    1. Start off just supporting the first option.
+    2. Have something like a plugin system to handle new target types
+    3. Reuse existing work (e.g. easy_install and pip handle standard vcs such as svn, hg, git etc)
+
+Cost: 1d
+",enhancement,closed,critical,,dpm,fixed,,,,

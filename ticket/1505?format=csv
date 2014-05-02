@@ -1,0 +1,5 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1505,SearchError and SearchQueryError cause exception in Action API,dread,dread,"This query caused ckan to except because ckan/controllers/api.py doesn't catch SearchError and SearchQueryError:
+{{{
+curl http://localhost:5000/api/action/package_search -d '{""sort"": ""metadata_modified""}'
+}}}",defect,closed,minor,ckan-sprint-2011-12-05,ckan,fixed,,,ckan,none

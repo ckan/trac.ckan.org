@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1808,Translation of eurovoc tags on dataset view pages,seanh,seanh,"Tag names will be eurovoc ID codes. When viewing a dataset page, look up the current language of the interface (ckan_lang or something in the environs) and display the string for the tag in that language.
+
+Related to the dataset view extension points for translation, recently added by kindly/=.",enhancement,new,awaiting triage,ckan-sprint-2012-03-05,ckan,,,,ckan,none

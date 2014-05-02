@@ -1,0 +1,9 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1339	Issues / question re navl and data conversion	rgrp	kindly	"I ran into a bug with the size field on resources.
+
+ * It would not accept an empty value from form (IMO this clearly equates to null/None)
+ * This could be fixed via using ignore_empty instead of ignore_missing
+ * However using this means there was no way to empty the field (e.g. i may just want to set the size field back to null not just change to another value)
+ * similar issues could arise around other fields (such as last_modified ...)
+
+To solve this i create an int_converter temporarily in logic/schema.py (this is almost certainly the wrong place). But I think it raises a bigger issue about the conversion layer and how it works."	enhancement	new	awaiting triage	ckan-backlog	ckan				ckan	none

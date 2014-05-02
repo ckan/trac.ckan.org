@@ -1,0 +1,41 @@
+= CKAN Extensions =
+
+The CKAN codebase is open source so that different organisations can customise it for their own needs. As CKAN has grown in popularity it has become
+especially important to organise the code in a way that can accommodate the customisations which different organisations require without those changes
+interfering with customizations required by other organisations.
+
+To meet this need we have introduced the concepts of CKAN extensions, plugin interfaces and workers. These work together to provide a simple mechanism to
+extend core CKAN functionality. '''Full documentation of these features for developers can be found here: http://packages.python.org/ckan/plugins.html'''
+
+If you create a new extension, please document it here. Implementations of plugin interfaces should be documented separately on the [wiki:Plugins Plugins] page.
+
+== Disqus Comments ==
+
+Lets users add comments to packages. Can also display latest comments on the CKAN front page.
+
+ * Name: disqus
+ * Author: Friedrich Lindenberg
+ * Code repo: http://bitbucket.org/okfn/ckanext-disqus
+ * Pip path: {{{hg+http://bitbucket.org/okfn/ckanext-disqus}}}
+
+== Form API Tester ==
+
+This provides a controller linked to the CKAN Form API, for manually testing purposes. Not for production use.
+
+ * Name: form-api-tester
+ * Code repo: https://knowledgeforge.net/ckan/ckanext
+ * Pip path: {{{hg+https://knowledgeforget.net/ckan/ckanext}}}
+
+== Data API ==
+
+Provides API for getting raw data from CKAN resources
+
+ * Name: dataapi 
+ * Code repo: https://bitbucket.org/okfn/ckanext-dataapi/
+ * PyPI: http://pypi.python.org/pypi/ckanext-dataapi
+
+Use: 
+
+{{{CKAN_URL/api/data/RESOURCE_ID?PARAMETERS}}}
+
+Currently supported resources: XLS, CSV. For more information and for list of available PARAMETERS, please refer to the [http://packages.python.org/dataproxy/ dataproxy documentation]

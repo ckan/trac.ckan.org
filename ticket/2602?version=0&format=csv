@@ -1,0 +1,2 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2602,"Users can set a dataset's organization to None, and then they cannot edit it",seanh,,"With the organizations and organizations_dataset plugins enabled login and create a new dataset, adding it to a group that you are a member of. Edit the dataset and set the group to none. Now you can no longer edit your own dataset.",defect,new,awaiting triage,,ckan,,organizations cmap,,ckan,none

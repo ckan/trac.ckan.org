@@ -1,0 +1,17 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+189	Multiple download urls	dread	rgrp	"Cost: 4 days
+
+Replacement of the single 'Download url' field with a table that can have multiple rows, each containing a URL, the format and a description. Full read and write access to this table in the Web UI and over the REST API.
+
+Example part of package:
+
+=== Downloads: ===
+|| http://some.com/pollution.xls || PDF || Original report ||
+|| http://some.com/pollution.csv || csv || Original data ||
+|| http://some.com/pollution || sparql || Linked version of data ||
+
+= Implementation details =
+Download table has columns: 
+||id || package_id || url (text) || format (text) || description (text) ||
+Existing data to be migrated to new structure.
+"	enhancement	new	awaiting triage		ckan					

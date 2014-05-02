@@ -1,0 +1,7 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+328,Mention code libraries in API documentation,rgrp,dread,"Should prominently (at the top?) mention existing code libraries for working with ckan api. Have:
+
+  * Python: ckanclient
+  * Perl: luke closs wrote something
+  * PHP: drupal library?
+  * ...?",enhancement,closed,critical,v1.1,ckan,fixed,documentation,,,

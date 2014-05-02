@@ -1,0 +1,8 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1827	'Register' link should be hidden if you not allowed to register	dread		"{{{
+I have just deny visitors the create-user permission:
+sudo -u ckanstd paster --plugin=ckan roles deny reader create-user -c /etc/ckan/std/std.ini
+sudo -u ckanstd paster --plugin=ckan roles deny anon_editor create-user -c /etc/ckan/std/std.ini
+
+and after restarting, the register link is *not* hidden, but now when you access the register page, it shows you this message ""Unauthorized to create a user"" (when not logged in). But anyway that is an improvement.
+}}}"	enhancement	new	major	ckan-backlog	ckan			ruben.martin@…	ckan	none

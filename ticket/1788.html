@@ -1,0 +1,402 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      #1788 (IE7 compatibility problems)
+     – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="prev" href="1787.html" title="Ticket #1787" />
+        <link rel="last" href="3030.html" title="Ticket #3030" />
+        <link rel="help" href="../wiki/TracGuide.html" />
+        <link rel="alternate" href="1788%3Fformat=csv" type="text/csv" class="csv" title="Comma-delimited Text" /><link rel="alternate" href="1788%3Fformat=tab" type="text/tab-separated-values" class="tab" title="Tab-delimited Text" /><link rel="alternate" href="1788%3Fformat=rss" type="application/rss+xml" class="rss" title="RSS Feed" />
+        <link rel="next" href="1789.html" title="Ticket #1789" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/ticket.css" type="text/css" />
+        <link rel="first" href="1.html" title="Ticket #1" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript">
+      var auto_preview_timeout=2.0;
+      var form_token="93d81ccf9a7bb1c456462f62";
+    </script>
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script><script type="text/javascript" src="../chrome/common/js/wikitoolbar.js"></script><script type="text/javascript" src="../chrome/common/js/resizer.js"></script><script type="text/javascript" src="../chrome/common/js/auto_preview.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("div.description").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $(".foldable").enableFolding(false, true);
+        var args = {realm: "ticket", id: 1788, escape_newlines: 0}
+        $("#comment").autoPreview("/wiki_render", args, function(textarea, text, rendered) {
+            $("#ticketchange div.comment").html(rendered);
+            if (rendered)
+              $("#ticketchange").show();
+            else if ($("#ticketchange ul.changes").length == 0)
+              $("#ticketchange").hide();
+        });
+        $("#trac-comment-editor textarea").autoPreview("/wiki_render", args,
+                                                       function(textarea, text, rendered) {
+          var comment = $("#trac-comment-editor").next("div.comment");
+          comment.html(rendered);
+          if (rendered)
+            comment.show();
+          else
+            comment.hide();
+        });
+        $("#modify").parent().toggleClass("collapsed");
+        $(".trac-topnav a").click(function() { $("#modify").parent().removeClass("collapsed"); });
+        /* only enable control elements for the currently selected action */
+        var actions = $("#action input[name='action']");
+        function updateActionFields() {
+          actions.each(function () {
+            $(this).siblings().find("*[id]").enable($(this).checked());
+            $(this).siblings().filter("*[id]").enable($(this).checked());
+          });
+        }
+        actions.click(updateActionFields);
+        updateActionFields();
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="../wiki/TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li class="active"><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="1787.html" title="Ticket #1787">Previous Ticket</a></span></li><li class="last"><span><a class="next" href="1789.html" title="Ticket #1789">Next Ticket</a> &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="ticket">
+      <h1 id="trac-ticket-title">
+          <a href="1788.html">Ticket #1788</a>
+          <span class="status">(closed defect: fixed)</span>
+      </h1>
+      <div id="ticket">
+  <div class="date">
+    <p>Opened <a class="timeline" href="../timeline%3Ffrom=2012-02-09T14:54:10Z&amp;precision=second.html" title="2012-02-09T14:54:10Z in Timeline">2 years</a> ago</p>
+    <p>Last modified <a class="timeline" href="../timeline%3Ffrom=2012-03-30T18:49:25Z&amp;precision=second.html" title="2012-03-30T18:49:25Z in Timeline">2 years</a> ago</p>
+  </div>
+  <h2 class="summary searchable">IE7 compatibility problems</h2>
+  <table class="properties">
+    <tr>
+      <th id="h_reporter">Reported by:</th>
+      <td headers="h_reporter" class="searchable">
+        <a href="../query%3Fstatus=!closed&amp;reporter=zephod.html">zephod</a>
+      </td>
+      <th id="h_owner">Owned by:</th>
+      <td headers="h_owner">
+        <a href="../query%3Fstatus=!closed&amp;owner=zephod.html">zephod</a>
+      </td>
+    </tr>
+    <tr>
+        <th id="h_priority">
+          Priority:
+        </th>
+        <td headers="h_priority">
+              <a href="../query%3Fstatus=!closed&amp;priority=major.html">major</a>
+        </td>
+        <th id="h_milestone">
+          Milestone:
+        </th>
+        <td headers="h_milestone">
+              <a class="closed milestone" href="../milestone/ckan-sprint-2012-03-05.html">ckan-sprint-2012-03-05</a>
+        </td>
+    </tr><tr>
+        <th id="h_component">
+          Component:
+        </th>
+        <td headers="h_component">
+              <a href="../query%3Fstatus=!closed&amp;component=ckan.html">ckan</a>
+        </td>
+        <th id="h_keywords">
+          Keywords:
+        </th>
+        <td headers="h_keywords" class="searchable">
+        </td>
+    </tr><tr>
+        <th id="h_cc">
+          Cc:
+        </th>
+        <td headers="h_cc" class="searchable">
+        </td>
+        <th id="h_repo">
+          Repository:
+        </th>
+        <td headers="h_repo">
+              <a href="../query%3Fstatus=!closed&amp;repo=ckan.html">ckan</a>
+        </td>
+    </tr><tr>
+        <th id="h_theme">
+          Theme:
+        </th>
+        <td headers="h_theme">
+              <a href="../query%3Fstatus=!closed&amp;theme=none.html">none</a>
+        </td>
+        <th>
+        </th>
+        <td>
+        </td>
+    </tr>
+  </table>
+  <div class="description">
+    <h3 id="comment:description">
+      Description
+    </h3>
+    <div class="searchable">
+      <p>
+From Antonia Acuno, via Ira:
+</p>
+<p>
+It appears that the current layout for the datahub does not work in
+IE7, which would mean a problem for us as most gov uses it and is one
+of those we have to support...any views?
+</p>
+<p>
+Tested in several gov departments computers, so a common enough issue.
+</p>
+<p>
+<a class="ext-link" href="http://imgur.com/ip4xa"><span class="icon">​</span>http://imgur.com/ip4xa</a>
+</p>
+<p>
+From Rufus:
+We haven't officially supported IE7 so far but can put engineering
+effort into this if absolutely needed. I note that IE 7 is now 3y out
+of date and is likely a security risk. Obviously this is something to
+ask Antonio about.
+</p>
+
+    </div>
+  </div>
+</div>
+          
+
+        <div>
+          <h2 class="foldable">Change History</h2>
+          <div id="changelog">
+              <div class="change" id="trac-change-1">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:1" class="cnum">
+      <a href="1788.html#comment:1">comment:1</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-02-24T19:19:22Z&amp;precision=second.html" title="2012-02-24T19:19:22Z in Timeline">2 years</a> ago by rgrp
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Owner</strong>
+        set to <em>zephod</em>
+    </li><li>
+      <strong>Priority</strong>
+        changed from <em>awaiting triage</em> to <em>major</em>
+    </li><li>
+      <strong>Status</strong>
+        changed from <em>new</em> to <em>assigned</em>
+    </li><li>
+      <strong>Milestone</strong>
+        changed from <em>ckan-backlog</em> to <em>current-ckan-sprint-2012-03-05</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+Believe most of these are resolved by <a class="ext-link" href="https://github.com/okfn/ckan/commit/27f4fc776b9199621d259749cf20787328df101f"><span class="icon">​</span>https://github.com/okfn/ckan/commit/27f4fc776b9199621d259749cf20787328df101f</a>
+</p>
+<p>
+@zephod: could you check again and see if anything remains?
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-2">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:2" class="cnum">
+      <a href="1788.html#comment:2">comment:2</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-03-01T17:45:13Z&amp;precision=second.html" title="2012-03-01T17:45:13Z in Timeline">2 years</a> ago by zydio
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+Replying to <a href="1788.html#comment:1" title="Comment 1 for Ticket #1788">rgrp</a>:
+</p>
+<blockquote class="citation">
+<p>
+Believe most of these are resolved by <a class="ext-link" href="https://github.com/okfn/ckan/commit/27f4fc776b9199621d259749cf20787328df101f"><span class="icon">​</span>https://github.com/okfn/ckan/commit/27f4fc776b9199621d259749cf20787328df101f</a>
+</p>
+<p>
+@zephod: could you check again and see if anything remains?
+</p>
+</blockquote>
+<p>
+I noticed that Thedatahub with latest code is still messed up..I was working with absolute paths in my environment without the h.url_for_static() to include the html5shiv.js script so I missed a problem, which can be fixed with my new [pull request <a class="closed ticket" href="4.html" title="enhancement: Find a package (closed: fixed)">#4</a>](<a class="ext-link" href="https://github.com/okfn/ckan/pull/4"><span class="icon">​</span>https://github.com/okfn/ckan/pull/4</a>).
+</p>
+<p>
+I'm aware of only one problem left: when you hit the "Upload a File" button inside the Dataset <a class="missing wiki">Edit/Resources?</a> tab nothing happens in IE &lt; 9.
+This is related to those IE versions not being able to dynamically insert HTML 5 tags, which breaks some jquery-tmpl (actually JQuery) operation (if you debug the code everything works in jquery-tmpl until one of the latest operation involving JQuery returns null instead of the expected object).
+I was able to fix the issue in my environment by adding the following conditional comment:
+</p>
+<pre class="wiki"> &lt;/script&gt;
+ &lt;!--[if lt IE 9]&gt;
+ &lt;script type="text/javascript" src="/scripts/jquery.html5.preie9fix.js"&gt;
+ &lt;/script&gt;
+ &lt;![endif]--&gt;
+</pre><p>
+where the jquery.html5.preie9fix.js is simply the [gist](<a class="ext-link" href="https://gist.github.com/887560"><span class="icon">​</span>https://gist.github.com/887560</a>) published by Akkuma in a [jquery-tmpl issue (<a class="closed ticket" href="36.html" title="enhancement: Edit package page should support previews (closed: fixed)">#36</a>)](<a class="ext-link" href="https://github.com/jquery/jquery-tmpl/issues/36#issuecomment-918495"><span class="icon">​</span>https://github.com/jquery/jquery-tmpl/issues/36#issuecomment-918495</a>).
+</p>
+<p>
+This script patches JQuery on the fly on IE &lt; 9 to rework in memory html 5 blocks handled by JQuery, so that it doesn't break.
+</p>
+<p>
+And this fixes the "Upload a File" button on IE.
+I didn't commit/pull this specific fix for the following reasons:
+</p>
+<ul><li>the script embeds innerShiv, which is a previous incarnation of html5shiv (now included in CKAN). It doesn't sound fine to include 2 pieces of code with similar effect, but I couldn't reproduce the fix with html5shiv!
+</li><li>in my environment I have included this fix sitewide even if I didn't spot other problematic features..I don't know if it would be better to include it only on the dataset edit page in the official CKAN code.
+</li></ul><p>
+Summary: I leave to you guys the choice on how to deal with this problem.
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-3">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:3" class="cnum">
+      <a href="1788.html#comment:3">comment:3</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-03-01T17:49:15Z&amp;precision=second.html" title="2012-03-01T17:49:15Z in Timeline">2 years</a> ago by zydio
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+Erh...sorry for some formatting errors in my comment.
+I used markdown formatting for links, and used the #NUMBER format to cite issues, which obviously is interpreted by Trac as references to his own issues...my bad.
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-4">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:4" class="cnum">
+      <a href="1788.html#comment:4">comment:4</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-03-01T23:20:56Z&amp;precision=second.html" title="2012-03-01T23:20:56Z in Timeline">2 years</a> ago by rgrp
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+Re the Upload file button not sure what's best. We do have plans to replace jquery-tmpl with mustache in the near future (but not clear exactly *how* near). We'll think about this and get back to you. Thanks for the detailed debug report.
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-5">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:5" class="cnum">
+      <a href="1788.html#comment:5">comment:5</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-03-30T18:49:25Z&amp;precision=second.html" title="2012-03-30T18:49:25Z in Timeline">2 years</a> ago by zephod
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Status</strong>
+        changed from <em>assigned</em> to <em>closed</em>
+    </li><li>
+      <strong>Resolution</strong>
+        set to <em>fixed</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+I've been performing a full sweep of the site to rebuild the markup &amp; stylesheets using Bootstrap, and in doing so have managed to close off this ticket. Bootstrap allows us to delegate lots of clever functionality and layouts to Twitter's tried-and-tested code, making it easier to be compatible with IE7.
+</p>
+<p>
+It has brought up plenty of issues: Lots of Javascript was broken; plenty of pages generate broken doctypes causing the browser to go into quirks mode (which in turn causes the page to explode all over the screen); most dynamic content would fail to generate properly in one way or another.... (see the <a class="closed ticket" href="1788.html" title="defect: IE7 compatibility problems (closed: fixed)">#1788</a> branch for a log of issues encountered).
+</p>
+<p>
+I've been refactoring our JS and have managed to strip ckanjs, too, because the only significant element we'd used was the File Upload view (which also now works in IE7).
+</p>
+<p>
+test.ckan.net has been redeployed on master; I'm browsing the site in IE7 and everything is looking great :-)
+</p>
+
+    </div>
+
+              </div>
+          </div>
+        </div>
+      <div id="help"><strong>Note:</strong> See
+        <a href="../wiki/TracTickets.html">TracTickets</a> for help on using
+        tickets.</div>
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="first">
+          <a rel="nofollow" href="1788%3Fformat=csv" class="csv">Comma-delimited Text</a>
+        </li><li>
+          <a rel="nofollow" href="1788%3Fformat=tab" class="tab">Tab-delimited Text</a>
+        </li><li class="last">
+          <a rel="nofollow" href="1788%3Fformat=rss" class="rss">RSS Feed</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

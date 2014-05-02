@@ -1,0 +1,21 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2234	Write a CKAN extension for pulling items from RSS/Atom feeds into CKAN templates	seanh		"You configure the extension with some RSS and/or Atom feeds, it automatically reads items from these feeds and makes them available in the template context, you write a custom template to e.g. display 'news' items from a Wordpress blog on your front page.
+
+This extension might be simpler and less fragile than ckanext-wordpresser, and also more generally useful.
+
+Details
+
+- Mark Pilgrim's Universal Feed Parser might be useful for reading the feeds
+
+- Feed items should probably be cached somewhere
+
+
+Suggested 
+
+- The news item 'widget' should be wrapped in a known class so that it can be styled easily regardless of the format of any HTML entry.
+
+- For non-HTML formatted items (Atom should tell you the content type of the entry) maybe we should have a template for rendering each item along with any enclosures that it might reference
+
+- Caching is pretty crucial and should probably obey the ttl of the feed.
+
+"	enhancement	new	awaiting triage	ckan-future	ckan				ckan	none

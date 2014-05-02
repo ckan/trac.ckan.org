@@ -1,0 +1,13 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2346,EC ODP Theme updates,johnglover,johnglover,"Changes:
+
+ * tidy up activity feed on home page or replace with search results (by modified date)
+ * ~~move ckan menu to a left sidebar (see Sam's template)~~ (not doing this now)
+ * update templates with changes from master
+ * use local image in language dropdown (ecportal.js)
+ * update dataset read template
+
+
+To discuss:
+
+ * should we rename 'organization' to 'publisher'? Requires updating all templates and the url mapping.",enhancement,closed,major,ckan-sprint-2012-05-15,ecportal,fixed,[3d],,ckan,none

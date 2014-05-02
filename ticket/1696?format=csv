@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1696,Maintain backwards compatibility with older way of creating custom forms,johnglover,johnglover,"To maintain backwards compatibility, the package controller (new/edit) should check to see if the controller has a package_form variable defined, and if so render the form pointed to by this variable before calling the new self._package_form() function.
+
+This behaviour is now deprecated however.",defect,closed,major,ckan-sprint-2012-02-06,ckan,fixed,,,ckan,none

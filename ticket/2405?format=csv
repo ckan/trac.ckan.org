@@ -1,0 +1,7 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2405,Improvements to data viewer embed,rgrp,icmurray," * Decent powered by icon for the Embed for the DataHub? (make this text customizable and allow html ...)
+   * Current icon and text looks really bad
+ * Embed link uses uuid rather than dataset name (this goes to perma-url question ...)
+ * Data viewer embed url includes all the resource info (not needed -- just url and backend info ...)
+ * Embed extension urls do not respect original domain but instead use site_url (I'm guessing). E.g. datahub.io domain ends up with links to embed on thedatahub.org
+",defect,assigned,major,ckan-v1.9,ckan,,[?d],ross rgrp,ckan,none

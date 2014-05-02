@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2915,Refactor form_to_db_schema_options(),seanh,,"Having two methods form_to_db_schema(self) and form_to_db_schema_options(self, options) seems unnecessary, why not just have form_to_db_schema(self, options=None)?
+
+Fixing this might break existing extensions although I don't think any are using form_to_db_schema_options() so it should be okay.",refactor,new,awaiting triage,ckan 2.0,ckan,,,,ckan,none

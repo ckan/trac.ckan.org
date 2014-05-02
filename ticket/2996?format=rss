@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2996: Fix behaviour of View Profile button in user popover when already on user's profile</title>
+    <link>http://localhost/ticket/2996</link>
+    <description>&lt;p&gt;
+The user popovers that appear when you hover the mouse over a user in an activity stream include a View Profile button that takes you to that user's profile page. If you are already on that user's profile page then it simply reloads the same page, but it sends you to the Datasets tab if you were on another tab.
+&lt;/p&gt;
+&lt;p&gt;
+Possible solutions:
+&lt;/p&gt;
+&lt;p&gt;
+Don't show button if already on user's page?
+&lt;/p&gt;
+&lt;p&gt;
+Button just makes popover disappear, if already on user's page?
+&lt;/p&gt;
+&lt;p&gt;
+Button does reload the page, but reloads the same tab (datasets, followers, activity stream) that you were on.
+&lt;/p&gt;
+&lt;p&gt;
+Marking this low priority
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2996</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+ </channel>
+</rss>

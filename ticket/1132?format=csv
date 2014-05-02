@@ -1,0 +1,10 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1132,test_authz doesn't run,johnlawrenceaspden,,"Trying to run the tests in test_authz.py with
+
+$ nosetests --ckan ckan/tests/functional/test_authz.py
+results in no tests being run:
+
+----------------------------------------------------------------------
+Ran 0 tests in 0.840s
+
+OK (SKIP=3)",defect,closed,awaiting triage,ckan-backlog,ckan,invalid,,,ckan,none

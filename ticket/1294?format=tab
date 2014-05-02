@@ -1,0 +1,11 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1294	[super] Package creation and editing UX improvements	rgrp	rgrp	"Largely an integration of work from ckanjs
+
+ * #1295 Simplify package create form
+ * Improvements to edit form
+  * Split edit form into sections
+  * Remove preview from edit form (introduce inline preview on description/notes field)
+ * #1296 Improved resource adding/editing on dataset/page page
+ * #878 File upload integrated into resource creation
+ * #1297 In-place editing of notes field for existing packages
+"	enhancement	closed	critical	ckan-v1.5	ckan	fixed			ckan	none

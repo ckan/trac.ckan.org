@@ -1,0 +1,23 @@
+Discussion of resources referred to in package meta data (currently Download URL)
+
+On CKAN a Package just has metadata and doesn't store the resource (payload) (CKAN is just a registry). The CKAN metadata has a pointer, the download URL to find the associated resources.
+
+Two sorts of resource links:
+
+ 1. Manifest
+A set of filenames with accompanying description.[[br]]
+e.g. [('!UkBirths1998.xls', '1998 data'), ('!UkBirths1999.xls', '1999 data')]
+
+ 2. Distributions
+Each distribution is a serialisation / representation of the full Package - metadata + payload. (Or sometimes just the payload).[[br]]
+e.g. mysite.com/births.xls.zip which contains the two excel files[[br]]
+But it also includes cases where we have:
+ *   mysite.com/births.csv.zip
+ *   mysite.com/births/api (restful api to the same data)
+ *   mysite.com/births.html (WUI to the same data)
+
+Different representations of the same material - how do we deal with this? Options:
+ 1. each distribution has its own CKAN package.
+ 1. a CKAN package can refer to multiple distributions.
+
+package.distributions ?

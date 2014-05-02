@@ -1,0 +1,7 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1025,Default authz can be set in config,dread,dread,"Currently the default authz for a package is hard-coded to: 
+{{{
+ <PackageRole user=""visitor"" role=""editor"" context=""Package"">,
+ <PackageRole user=""logged_in"" role=""editor"" context=""Package"">,
+}}}
+This should be configurable in the config, so that you can have a more locked down instance etc. ",enhancement,closed,blocker,ckan-v1.4-sprint-3,ckan,fixed,,,,

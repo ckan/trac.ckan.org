@@ -1,0 +1,13 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2833,Load module templates before calling .initialize(),aron.carroll,,"I think this would be a nice feature for remote loading templates if the options.template value ends in "".html"".
+
+{{{
+ckan.module('my-module', {
+  options: {
+    template: 'my-template.html'
+  },
+  initialize: function () {
+    this.template // This is the loaded template.
+  }
+});
+}}}",enhancement,new,minor,demo phase 5,ckan,,,,ckan,none

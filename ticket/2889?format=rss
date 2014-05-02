@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2889: Support JSON values in extras, when returning JSON from API</title>
+    <link>http://localhost/ticket/2889</link>
+    <description>&lt;p&gt;
+For example, edit the warandpeace dataset and add an extra with key "comments" and value "[{u'date': u'Tue Aug 21 13:01:48 GMT 2012', u'comment': u'testing ckan', u'userId': u'11702'}, {u'date': u'Wed Aug 22 13:01:48 GMT 2012', u'comment': u'testing ckan again', u'userId': u'11702'}]", now visit API URLs such as:
+&lt;/p&gt;
+&lt;p&gt;
+/api/search/dataset?sort=metadata_modified+desc&amp;amp;all_fields=1&amp;amp;limit=10
+&lt;/p&gt;
+&lt;p&gt;
+/api/rest/dataset/warandpeace
+&lt;/p&gt;
+&lt;p&gt;
+/api/action/package_show?id=warandpeace
+&lt;/p&gt;
+&lt;p&gt;
+The value of the extra comes out as a string in the dataset JSON, rather than having its contents unpacked into a list of JSON objects.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2889</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+ </channel>
+</rss>

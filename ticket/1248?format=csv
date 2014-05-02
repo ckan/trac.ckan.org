@@ -1,0 +1,125 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1248,License exception,dread,dread,"Exception received on test.ckan.net at 10.12 on 29/7/11
+{{{
+http://test.ckan.net/package?__cache=2759373&page=4
+Module pylons.controllers.core:60 in _perform_call
+<<          """"""Hide the traceback for everything above this method""""""
+               __traceback_hide__ = 'before_and_this'
+               return func(**args)
+           
+           def _inspect_call(self, func):
+>>  return func(**args)
+Module ckan.controllers.package:153 in search
+<<                          }
+       
+                   query = get.package_search(context,data_dict)
+       
+                   c.page = h.Page(
+>>  query = get.package_search(context,data_dict)
+Module ckan.logic.action.get:514 in package_search
+<<      for package in query.results:
+               result_dict = table_dictize(package, context)
+               result_dict = _extend_package_dict(result_dict,context)
+       
+               results.append(result_dict)
+>>  result_dict = _extend_package_dict(result_dict,context)
+Module ckan.logic.action.get:537 in _extend_package_dict
+<<      license_id = package_dict['license_id']
+           if license_id:
+               isopen = model.Package.get_license_register()[license_id].isopen()
+               package_dict['isopen'] = isopen
+           else:
+>>  isopen = model.Package.get_license_register()[license_id].isopen()
+Module ckan.model.license:59 in __getitem__
+<<              return default
+               else:
+                   raise KeyError, ""License not found: %s"" % key
+       
+           def get(self, key, default=None):
+>>  raise KeyError, ""License not found: %s"" % key
+KeyError: u'License not found: None'
+}}}
+
+and a similar one: 
+{{{
+ http://test.ckan.net/tag/barbecue
+Module pylons.wsgiapp:324 in dispatch
+<<          if log_debug:
+                   log.debug(""Calling controller class with WSGI interface"")
+               return controller(environ, start_response)
+           
+           def load_test_env(self, environ):
+>>  return controller(environ, start_response)
+Module ckan.lib.base:118 in __call__
+<<          # available in environ['pylons.routes_dict']    
+               try:
+                   return WSGIController.__call__(self, environ, start_response)
+               finally:
+                   model.Session.remove()
+>>  return WSGIController.__call__(self, environ, start_response)
+Module pylons.controllers.core:221 in __call__
+<<                  return response(environ, self.start_response)
+               
+               response = self._dispatch_call()
+               if not start_response_called:
+                   self.start_response = start_response
+>>  response = self._dispatch_call()
+Module pylons.controllers.core:172 in _dispatch_call
+<<              req.environ['pylons.action_method'] = func
+                   
+                   response = self._inspect_call(func)
+               else:
+                   if log_debug:
+>>  response = self._inspect_call(func)
+Module pylons.controllers.core:107 in _inspect_call
+<<                        func.__name__, args)
+               try:
+                   result = self._perform_call(func, args)
+               except HTTPException, httpe:
+                   if log_debug:
+>>  result = self._perform_call(func, args)
+Module pylons.controllers.core:60 in _perform_call
+<<          """"""Hide the traceback for everything above this method""""""
+               __traceback_hide__ = 'before_and_this'
+               return func(**args)
+           
+           def _inspect_call(self, func):
+>>  return func(**args)
+Module ckan.controllers.tag:2 in read
+Module ckan.lib.cache:167 in wrapper
+<<      log = __import__(""logging"").getLogger(""proxy_cache"")
+           def wrapper(func, *args, **kwargs):
+               result = func(*args, **kwargs)
+       
+               pylons = get_pylons(args)
+>>  result = func(*args, **kwargs)
+Module ckan.controllers.tag:64 in read
+<<          data_dict = {'id':id}
+               try:
+                   c.tag = get.tag_show(context,data_dict)
+               except NotFound:
+                   abort(404, _('Tag not found'))
+>>  c.tag = get.tag_show(context,data_dict)
+Module ckan.logic.action.get:341 in tag_show
+<<      extended_packages = []
+           for package in tag_dict['packages']:
+               extended_packages.append(_extend_package_dict(package,context))
+       
+           tag_dict['packages'] = extended_packages
+>>  extended_packages.append(_extend_package_dict(package,context))
+Module ckan.logic.action.get:537 in _extend_package_dict
+<<      license_id = package_dict['license_id']
+           if license_id:
+               isopen = model.Package.get_license_register()[license_id].isopen()
+               package_dict['isopen'] = isopen
+           else:
+>>  isopen = model.Package.get_license_register()[license_id].isopen()
+Module ckan.model.license:59 in __getitem__
+<<              return default
+               else:
+                   raise KeyError, ""License not found: %s"" % key
+       
+           def get(self, key, default=None):
+>>  raise KeyError, ""License not found: %s"" % key
+KeyError: u'License not found: CreativeCommonsAttributionCCBY25'
+}}}",defect,closed,minor,ckan-sprint-2011-11-07,ckan,fixed,,,ckan,none

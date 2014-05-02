@@ -1,0 +1,28 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1654,Update Publicdata.eu to CKAN 1.5.1,amercader,amercader,"Tasks include:
+
+Time estimate: 4d
+
+'''ckanext-pdeu'''
+
+
+ * Upgrade to CKAN 1.5.1
+   - Update requirements (git)
+   - Search facets error
+   - Error on dataset read (extras in context)
+   - Url generator for rdf
+   - Use dicts in templates (isopen())
+   - ...
+ * Upgrade CKAN harvesters (default tags and extras...)
+ * Check non-CKAN harvesters (specially scrappers)
+
+'''ckanext-rdf'''
+
+ * Upgrade to CKAN 1.5.1 (See #1649)
+   - Use logic functions
+
+ * Sparql endpoint ???
+
+'''ckanext-apps'''
+
+ * Upgrade to CKAN 1.5.1 (Also needed for IATI at some point)",task,new,major,ckan-sprint-2012-01-23,pdeu,,pdeu [4d],,ckan,none

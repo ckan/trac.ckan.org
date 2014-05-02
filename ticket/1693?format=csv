@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1693,register_pluggable_behaviour should not be in routing,ross,ross,"We should try and move register_pluggable_behaviour into environment and out of routing as it is causing import issues when using simple search.
+
+These functions already take a map and so they should be fine any time after the call to make_map",defect,closed,awaiting triage,,ckan,fixed,,,ckan,none

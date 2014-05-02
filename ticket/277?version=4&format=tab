@@ -1,0 +1,21 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+277	Settings in WUI (extension)	dread	rgrp	"== Use case ==
+
+As a ckan administrator I want to easily change options about the CKAN install.
+
+== Implementation ==
+
+  * Start storing majority of settings in db
+  * Have editor for settings as part of admin wui
+  * Settings are also loaded from pylons ini file on start up (or based on a specific command)
+
+Potential options to show in WUI:
+
+ * Default Schema (e.g. default, uk government, others)
+ * Search caching (on/off)
+ * License service URL
+
+== Depends ==
+
+  * Would be part of ckan-admin section and hence build on ticket:833 (Administrative dashboard)
+"	enhancement	new	awaiting triage		ckan					

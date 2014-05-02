@@ -1,0 +1,18 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+15	Create a file associated with a release	johnbywater	somebody	"== As a ==
+
+Authenticated user
+
+== I want to ==
+
+Create a file associated with a release
+
+== So that ==
+
+The release has a new file associated with it
+
+== Notes ==
+  * Permissions are as for package updating (../UseCase12)
+  * file attributes are described in file updating: ../UseCase18)
+    * there are no attributes that are required to be supplied to create a file
+"	enhancement	new	major		ckan					

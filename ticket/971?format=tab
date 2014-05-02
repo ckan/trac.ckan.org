@@ -1,0 +1,2 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+971	Support middleware as a plugin	sebbacon	sebbacon	I need to completely munge the rendered data coming from the app.  There's not currently a plugin hook for this, where I get access to the entire environment.  The most generic form of plugin would be WSGI Middleware.  I propose adding an IMiddleware plugin hook for inserting abritrary middleware via our plugin system.	enhancement	closed	awaiting triage		ckan	duplicate				

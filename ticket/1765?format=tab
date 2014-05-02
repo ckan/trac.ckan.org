@@ -1,0 +1,2 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1765	Enhance Tag and Package models with vocabularies	seanh	seanh	Add a vocabulary column to the tags database table, change tags to have unique (tag_name, vocabulary_id) instrad of unique tag name, update methods in the Tag and Package classes to deal with the fact that tags may belong to vocabularies and that tag names are no longer unique.	enhancement	closed	awaiting triage	ckan-sprint-2012-02-20	ecportal	fixed	taxonomies [4d]		ckan	none

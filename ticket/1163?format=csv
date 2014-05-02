@@ -1,0 +1,15 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1163,Improvements to Storage Extension,rgrp,rgrp,"Storage is now working but there are 
+
+ * Integrate with Resources (e.g. create a resource for each file upload and give option to associate with a package)
+  * Should we introduce rule that files *not* associated with a Resource are periodically deleted?
+ * Allow setting of a file name/path before upload
+ * Allow for file overwriting/deleting etc (how should this work -- do we want to allow this sort of thing)
+ * Integrate local file upload stuff in api/auth/*
+
+== Different Backend Issues ==
+
+Local file store is rather different from 'remote' storage in various ways:
+
+ * For remote you don't want to use many buckets as there are bucket limits while for local you want to. Should we there have a single path that users provide which we then partition differently for different backends.
+",enhancement,new,major,ckan-backlog,ckan,,,,ckanext-storage,none

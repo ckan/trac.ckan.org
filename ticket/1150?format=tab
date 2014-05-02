@@ -1,0 +1,9 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1150	Non-ASCII chars prevent data preview	timmcnamara	johnglover	"Characters outside of ASCII range are not supported within data previews.
+
+Steps to reproduce:
+
+1. Visit http://ckan.net/package/kivele2010
+2. Click on [preview] for any of the resources
+
+"	defect	closed	awaiting triage	ckan-sprint-2011-10-28	ckan	fixed			ckan	none

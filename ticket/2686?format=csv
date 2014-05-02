@@ -1,0 +1,5 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2686,enabling datastore & data API breaks recline,shevski,,"First I noticed that the gold prices dataset preview was not displaying & has data API enabled
+Secondly I tried enabling datastore for http://datahub.io/dataset/adur_district_spending/resource/281dffa6-ea9b-4446-be41-05dced06591f and after I saved the preview no longer worked. Unticking the datastore & data api checkbox brought it back
+
+Is this a known issue?",defect,assigned,critical,ckan-backlog,ckan,,,kindly,ckan,none

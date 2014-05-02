@@ -1,0 +1,2 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1318,'Register user' doesn't log you in,dread,dread,"When you register a user, it doesn't seem to be logged in properly straight away. Top-right it invites you to ""log in"" and ""register"". Also the ""create package"" menu option doesn't appear. Going to /user/me sends you to login page. If you then login, then all these things are corrected.",defect,closed,blocker,ckan-sprint-2011-10-28,ckan,fixed,,shevski,ckan,none

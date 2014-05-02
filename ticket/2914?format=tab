@@ -1,0 +1,2 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2914	Add form_to_db_schema_options() to IDatasetForm and IGroupForm	seanh		This optional method is supported when creating or updating groups and packages and is used in DefaultGroupForm and DefaultPackageForm, but seems to be missing from the interfaces. Should be added with docstring.	defect	new	awaiting triage	ckan-v1.8.1	ckan				ckan	none

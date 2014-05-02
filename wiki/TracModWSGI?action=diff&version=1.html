@@ -1,0 +1,979 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+    <html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      TracModWSGI (diff) – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="help" href="TracGuide.html" />
+        <link rel="up" href="TracModWSGI%3Faction=history.html" title="Page history" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/wiki.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/diff.css" type="text/css" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/diff.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="../chrome/common/css/diff.css" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last active"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span class="missing">&larr; Previous Change</span></li><li><a href="TracModWSGI%3Faction=history.html" title="Page history">Wiki History</a></li><li class="last"><span class="missing">Next Change &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="wiki">
+      <h1>
+        Changes between
+          <a href="http://localhost/wiki/TracModWSGI?version=0">Initial Version</a> and
+          <a href="TracModWSGI%3Fversion=1.html">Version 1</a> of
+          <a href="TracModWSGI%3Fversion=1.html">TracModWSGI</a>
+      </h1>
+      <form method="post" id="prefs" action="TracModWSGI%3Fversion=1.html"><div><input type="hidden" name="__FORM_TOKEN" value="93d81ccf9a7bb1c456462f62" /></div>
+        <div>
+          <input type="hidden" name="action" value="diff" />
+          <input type="hidden" name="version" value="1" />
+          <input type="hidden" name="old_version" value="0" />
+          
+  <label for="style">View differences</label>
+  <select id="style" name="style">
+    <option selected="selected" value="inline">inline</option>
+    <option value="sidebyside">side by side</option>
+  </select>
+  <div class="field">
+    <label><input type="radio" name="contextall" value="0" checked="checked" />
+             Show</label>
+      <label><input type="text" name="contextlines" id="contextlines" size="2" maxlength="3" value="2" />
+             lines around each change</label><br />
+    <label><input type="radio" name="contextall" value="1" />
+           Show the changes in full context</label>
+  </div>
+  <fieldset id="ignore">
+    <legend>Ignore:</legend>
+    <div class="field">
+      <input type="checkbox" id="ignoreblanklines" name="ignoreblanklines" />
+      <label for="ignoreblanklines">Blank lines</label>
+    </div>
+    <div class="field">
+      <input type="checkbox" id="ignorecase" name="ignorecase" />
+      <label for="ignorecase">Case changes</label>
+    </div>
+    <div class="field">
+      <input type="checkbox" id="ignorewhitespace" name="ignorewhitespace" />
+      <label for="ignorewhitespace">White space changes</label>
+    </div>
+  </fieldset>
+  <div class="buttons">
+    <input type="submit" name="update" value="Update" />
+  </div>
+
+        </div>
+      </form>
+      <dl id="overview">
+        <dt class="property time">Timestamp:</dt>
+        <dd class="time">
+            05/02/14 01:33:04 (<a class="timeline" href="../timeline%3Ffrom=2014-05-02T01:33:04Z&amp;precision=second.html" title="2014-05-02T01:33:04Z in Timeline">9 minutes</a> ago)
+        </dd>
+        <dt class="property author">Author:</dt>
+        <dd class="author">
+          trac
+        </dd>
+        <dt class="property message">Comment:</dt>
+        <dd class="message">
+          
+          <p>
+--
+</p>
+
+        </dd>
+      </dl>
+      <div class="diff">
+        <div class="legend" id="diff-legend">
+          <h3>Legend:</h3>
+          <dl>
+            <dt class="unmod"></dt><dd>Unmodified</dd>
+            <dt class="add"></dt><dd>Added</dd>
+            <dt class="rem"></dt><dd>Removed</dd>
+            <dt class="mod"></dt><dd>Modified</dd>
+          </dl>
+        </div>
+        <div class="diff">
+  <ul class="entries">
+      <li class="entry">
+        <h2 id="file0">
+          <a href="TracModWSGI%3Fversion=1.html">TracModWSGI</a>
+        </h2>
+        <table class="trac-diff inline" summary="Differences" cellspacing="0">
+              <colgroup><col class="lineno" /><col class="lineno" /><col class="content" /></colgroup>
+              <thead>
+                <tr>
+                  <th title="Version currently edited">
+                    <a href="TracModWSGI%3Faction=diff&amp;version=1.html#L1">
+                      v1</a>
+                  </th>
+                  <th title="Version 1">
+                    <a href="TracModWSGI%3Fversion=1.html#L1">
+                      v1</a>
+                  </th>
+                  <td> </td>
+                </tr>
+              </thead>
+            <tbody class="add">
+                  <tr class="first">
+                          <th> </th><th>1</th><td class="r"><ins>= Trac and mod_wsgi =</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>2</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>3</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>4</th><td class="r"><ins>[http://code.google.com/p/modwsgi/ mod_wsgi] is an Apache module for running WSGI-compatible Python applications directly on top of the Apache webserver. The mod_wsgi adapter is written completely in C and provides very good performances.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>5</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>6</th><td class="r"><ins>[[PageOutline(2-3,Overview,inline)]]</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>7</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>8</th><td class="r"><ins>== The `trac.wsgi` script</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>9</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>10</th><td class="r"><ins>Trac can be run on top of mod_wsgi with the help of the following application script, which is just a Python file, though usually saved with a `.wsgi` extension). </ins> </td>
+                  </tr><tr>
+                          <th> </th><th>11</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>12</th><td class="r"><ins>=== A very basic script</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>13</th><td class="r"><ins>In its simplest form, the script could be:</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>14</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>15</th><td class="r"><ins>{{{#!python</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>16</th><td class="r"><ins>import os</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>17</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>18</th><td class="r"><ins>os.environ['TRAC_ENV'] = '/usr/local/trac/mysite'</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>19</th><td class="r"><ins>os.environ['PYTHON_EGG_CACHE'] = '/usr/local/trac/mysite/eggs'</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>20</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>21</th><td class="r"><ins>import trac.web.main</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>22</th><td class="r"><ins>application = trac.web.main.dispatch_request</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>23</th><td class="r"><ins>}}}</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>24</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>25</th><td class="r"><ins>The `TRAC_ENV` variable should naturally be the directory for your Trac environment (if you have several Trac environments in a directory, you can also use `TRAC_ENV_PARENT_DIR` instead), while the `PYTHON_EGG_CACHE` should be a directory where Python can temporarily extract Python eggs.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>26</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>27</th><td class="r"><ins>=== A more elaborate script</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>28</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>29</th><td class="r"><ins>If you're using multiple `.wsgi` files (for example one per Trac environment) you must ''not'' use `os.environ['TRAC_ENV']` to set the path to the Trac environment. Using this method may lead to Trac delivering the content of another Trac environment, as the variable may be filled with the path of a previously viewed Trac environment. </ins> </td>
+                  </tr><tr>
+                          <th> </th><th>30</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>31</th><td class="r"><ins>To solve this problem, use the following `.wsgi` file instead:</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>32</th><td class="r"><ins>{{{#!python</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>33</th><td class="r"><ins>import os</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>34</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>35</th><td class="r"><ins>os.environ['PYTHON_EGG_CACHE'] = '/usr/local/trac/mysite/eggs'</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>36</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>37</th><td class="r"><ins>import trac.web.main</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>38</th><td class="r"><ins>def application(environ, start_response):</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>39</th><td class="r"><ins>&nbsp; environ['trac.env_path'] = '/usr/local/trac/mysite' </ins> </td>
+                  </tr><tr>
+                          <th> </th><th>40</th><td class="r"><ins>&nbsp; return trac.web.main.dispatch_request(environ, start_response)</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>41</th><td class="r"><ins>}}}</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>42</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>43</th><td class="r"><ins>For clarity, you should give this file a `.wsgi` extension. You should probably put the file in its own directory, since you will expose it to Apache. </ins> </td>
+                  </tr><tr>
+                          <th> </th><th>44</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>45</th><td class="r"><ins>If you have installed Trac and eggs in a path different from the standard one you should add that path by adding the following code at the top of the wsgi script:</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>46</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>47</th><td class="r"><ins>{{{#!python</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>48</th><td class="r"><ins>import site</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>49</th><td class="r"><ins>site.addsitedir('/usr/local/trac/lib/python2.4/site-packages')</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>50</th><td class="r"><ins>}}}</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>51</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>52</th><td class="r"><ins>Change it according to the path you installed the Trac libs at.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>53</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>54</th><td class="r"><ins>=== Recommended `trac.wsgi` script</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>55</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>56</th><td class="r"><ins>A somewhat robust and generic version of this file can be created using the `trac-admin &lt;env&gt; deploy &lt;dir&gt;` command which automatically substitutes the required paths (see TracInstall#cgi-bin).</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>57</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>58</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>59</th><td class="r"><ins>== Mapping requests to the script</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>60</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>61</th><td class="r"><ins>After you've done preparing your .wsgi script, add the following to your Apache configuration file (`httpd.conf` for example).</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>62</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>63</th><td class="r"><ins>{{{</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>64</th><td class="r"><ins>WSGIScriptAlias /trac /usr/local/trac/mysite/apache/mysite.wsgi</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>65</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>66</th><td class="r"><ins>&lt;Directory /usr/local/trac/mysite/apache&gt;</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>67</th><td class="r"><ins>&nbsp; &nbsp; WSGIApplicationGroup %{GLOBAL}</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>68</th><td class="r"><ins>&nbsp; &nbsp; Order deny,allow</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>69</th><td class="r"><ins>&nbsp; &nbsp; Allow from all</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>70</th><td class="r"><ins>&lt;/Directory&gt;</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>71</th><td class="r"><ins>}}}</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>72</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>73</th><td class="r"><ins>Here, the script is in a subdirectory of the Trac environment.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>74</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>75</th><td class="r"><ins>If you followed the directions [http://trac.edgewall.org/wiki/TracInstall#cgi-bin Generating the Trac cgi-bin directory], your Apache configuration file should look like following:</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>76</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>77</th><td class="r"><ins>{{{</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>78</th><td class="r"><ins>WSGIScriptAlias /trac /usr/share/trac/cgi-bin/trac.wsgi</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>79</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>80</th><td class="r"><ins>&lt;Directory /usr/share/trac/cgi-bin&gt;</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>81</th><td class="r"><ins>&nbsp; &nbsp; WSGIApplicationGroup %{GLOBAL}</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>82</th><td class="r"><ins>&nbsp; &nbsp; Order deny,allow</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>83</th><td class="r"><ins>&nbsp; &nbsp; Allow from all</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>84</th><td class="r"><ins>&lt;/Directory&gt;</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>85</th><td class="r"><ins>}}}</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>86</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>87</th><td class="r"><ins>In order to let Apache run the script, access to the directory in which the script resides is opened up to all of Apache. Additionally, the `WSGIApplicationGroup` directive ensures that Trac is always run in the first Python interpreter created by mod_wsgi; this is necessary because the Subversion Python bindings, which are used by Trac, don't always work in other sub-interpreters and may cause requests to hang or cause Apache to crash as a result. After adding this configuration, restart Apache, and then it should work.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>88</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>89</th><td class="r"><ins>To test the setup of Apache, mod_wsgi and Python itself (ie. without involving Trac and dependencies), this simple wsgi application can be used to make sure that requests gets served (use as only content in your `.wsgi` script):</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>90</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>91</th><td class="r"><ins>{{{#!python</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>92</th><td class="r"><ins>def application(environ, start_response):</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>93</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; start_response('200 OK',[('Content-type','text/html')])</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>94</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; return ['&lt;html&gt;&lt;body&gt;Hello World!&lt;/body&gt;&lt;/html&gt;']</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>95</th><td class="r"><ins>}}}</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>96</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>97</th><td class="r"><ins>For more information about using the mod_wsgi specific directives, see the [http://code.google.com/p/modwsgi/wiki/ mod_wsgi's wiki] and more specifically the [http://code.google.com/p/modwsgi/wiki/IntegrationWithTrac IntegrationWithTrac] page.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>98</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>99</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>100</th><td class="r"><ins>== Configuring Authentication</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>101</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>102</th><td class="r"><ins>We describe in the the following sections different methods for setting up authentication.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>103</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>104</th><td class="r"><ins>See also [http://httpd.apache.org/docs/2.2/howto/auth.html Authentication, Authorization and Access Control] in the Apache guide.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>105</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>106</th><td class="r"><ins>=== Using Basic Authentication ===</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>107</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>108</th><td class="r"><ins>The simplest way to enable authentication with Apache is to create a password file. Use the `htpasswd` program to create the password file:</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>109</th><td class="r"><ins>{{{</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>110</th><td class="r"><ins>$ htpasswd -c /somewhere/trac.htpasswd admin</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>111</th><td class="r"><ins>New password: &lt;type password&gt;</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>112</th><td class="r"><ins>Re-type new password: &lt;type password again&gt;</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>113</th><td class="r"><ins>Adding password for user admin</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>114</th><td class="r"><ins>}}}</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>115</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>116</th><td class="r"><ins>After the first user, you dont need the "-c" option anymore:</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>117</th><td class="r"><ins>{{{</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>118</th><td class="r"><ins>$ htpasswd /somewhere/trac.htpasswd john</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>119</th><td class="r"><ins>New password: &lt;type password&gt;</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>120</th><td class="r"><ins>Re-type new password: &lt;type password again&gt;</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>121</th><td class="r"><ins>Adding password for user john</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>122</th><td class="r"><ins>}}}</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>123</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>124</th><td class="r"><ins>&nbsp; ''See the man page for `htpasswd` for full documentation.''</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>125</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>126</th><td class="r"><ins>After you've created the users, you can set their permissions using TracPermissions.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>127</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>128</th><td class="r"><ins>Now, you'll need to enable authentication against the password file in the Apache configuration:</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>129</th><td class="r"><ins>{{{</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>130</th><td class="r"><ins>&lt;Location "/trac/login"&gt;</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>131</th><td class="r"><ins>&nbsp; AuthType Basic</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>132</th><td class="r"><ins>&nbsp; AuthName "Trac"</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>133</th><td class="r"><ins>&nbsp; AuthUserFile /somewhere/trac.htpasswd</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>134</th><td class="r"><ins>&nbsp; Require valid-user</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>135</th><td class="r"><ins>&lt;/Location&gt;</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>136</th><td class="r"><ins>}}}</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>137</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>138</th><td class="r"><ins>If you're hosting multiple projects you can use the same password file for all of them:</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>139</th><td class="r"><ins>{{{</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>140</th><td class="r"><ins>&lt;LocationMatch "/trac/[^/]+/login"&gt;</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>141</th><td class="r"><ins>&nbsp; AuthType Basic</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>142</th><td class="r"><ins>&nbsp; AuthName "Trac"</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>143</th><td class="r"><ins>&nbsp; AuthUserFile /somewhere/trac.htpasswd</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>144</th><td class="r"><ins>&nbsp; Require valid-user</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>145</th><td class="r"><ins>&lt;/LocationMatch&gt;</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>146</th><td class="r"><ins>}}}</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>147</th><td class="r"><ins>Note that neither a file nor a directory named 'login' needs to exist.[[BR]]</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>148</th><td class="r"><ins>See also the [http://httpd.apache.org/docs/2.2/mod/mod_auth_basic.html mod_auth_basic] documentation.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>149</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>150</th><td class="r"><ins>=== Using Digest Authentication ===</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>151</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>152</th><td class="r"><ins>For better security, it is recommended that you either enable SSL or at least use the “digest” authentication scheme instead of “Basic”. </ins> </td>
+                  </tr><tr>
+                          <th> </th><th>153</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>154</th><td class="r"><ins>You'll have to create your `.htpasswd` file with the `htdigest` command instead of `htpasswd`, as follows:</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>155</th><td class="r"><ins>{{{</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>156</th><td class="r"><ins># htdigest -c /somewhere/trac.htpasswd trac admin</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>157</th><td class="r"><ins>}}}</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>158</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>159</th><td class="r"><ins>The "trac" parameter above is the "realm", and will have to be reused in the Apache configuration in the !AuthName directive:</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>160</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>161</th><td class="r"><ins>{{{</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>162</th><td class="r"><ins>&lt;Location "/trac/login"&gt;</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>163</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>164</th><td class="r"><ins>&nbsp; &nbsp; AuthType Digest</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>165</th><td class="r"><ins>&nbsp; &nbsp; AuthName "trac"</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>166</th><td class="r"><ins>&nbsp; &nbsp; AuthDigestDomain /trac</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>167</th><td class="r"><ins>&nbsp; &nbsp; AuthUserFile /somewhere/trac.htpasswd</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>168</th><td class="r"><ins>&nbsp; &nbsp; Require valid-user</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>169</th><td class="r"><ins>&lt;/Location&gt;</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>170</th><td class="r"><ins>}}}</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>171</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>172</th><td class="r"><ins>For multiple environments, you can use the same `LocationMatch` as described with the previous method.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>173</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>174</th><td class="r"><ins>Don't forget to activate the mod_auth_digest. For example, on a Debian 4.0r1 (etch) system:</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>175</th><td class="r"><ins>{{{</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>176</th><td class="r"><ins>&nbsp; &nbsp; LoadModule auth_digest_module /usr/lib/apache2/modules/mod_auth_digest.so</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>177</th><td class="r"><ins>}}}</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>178</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>179</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>180</th><td class="r"><ins>See also the [http://httpd.apache.org/docs/2.2/mod/mod_auth_digest.html mod_auth_digest] documentation.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>181</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>182</th><td class="r"><ins>=== Using LDAP Authentication </ins> </td>
+                  </tr><tr>
+                          <th> </th><th>183</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>184</th><td class="r"><ins>Configuration for [http://httpd.apache.org/docs/2.2/mod/mod_ldap.html mod_ldap] authentication in Apache is a bit tricky (httpd 2.2.x and OpenLDAP: slapd 2.3.19)</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>185</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>186</th><td class="r"><ins>1. You need to load the following modules in Apache httpd.conf</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>187</th><td class="r"><ins>{{{</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>188</th><td class="r"><ins>LoadModule ldap_module modules/mod_ldap.so</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>189</th><td class="r"><ins>LoadModule authnz_ldap_module modules/mod_authnz_ldap.so</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>190</th><td class="r"><ins>}}}</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>191</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>192</th><td class="r"><ins>2. Your httpd.conf also needs to look something like:</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>193</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>194</th><td class="r"><ins>{{{</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>195</th><td class="r"><ins>&lt;Location /trac/&gt;</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>196</th><td class="r"><ins>&nbsp; # (if you're using it, mod_python specific settings go here)</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>197</th><td class="r"><ins>&nbsp; Order deny,allow</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>198</th><td class="r"><ins>&nbsp; Deny from all</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>199</th><td class="r"><ins>&nbsp; Allow from 192.168.11.0/24</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>200</th><td class="r"><ins>&nbsp; AuthType Basic</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>201</th><td class="r"><ins>&nbsp; AuthName "Trac"</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>202</th><td class="r"><ins>&nbsp; AuthBasicProvider "ldap"</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>203</th><td class="r"><ins>&nbsp; AuthLDAPURL "ldap://127.0.0.1/dc=example,dc=co,dc=ke?uid?sub?(objectClass=inetOrgPerson)"</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>204</th><td class="r"><ins>&nbsp; authzldapauthoritative Off</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>205</th><td class="r"><ins>&nbsp; Require valid-user</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>206</th><td class="r"><ins>&lt;/Location&gt;</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>207</th><td class="r"><ins>}}}</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>208</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>209</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>210</th><td class="r"><ins>3. You can use the LDAP interface as a way to authenticate to a Microsoft Active Directory:</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>211</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>212</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>213</th><td class="r"><ins>Use the following as your LDAP URL:</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>214</th><td class="r"><ins>{{{</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>215</th><td class="r"><ins>&nbsp; &nbsp; AuthLDAPURL "ldap://directory.example.com:3268/DC=example,DC=com?sAMAccountName?sub?(objectClass=user)"</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>216</th><td class="r"><ins>}}}</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>217</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>218</th><td class="r"><ins>You will also need to provide an account for Apache to use when checking</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>219</th><td class="r"><ins>credentials. As this password will be listed in plaintext in the</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>220</th><td class="r"><ins>config, you should be sure to use an account specifically for this task:</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>221</th><td class="r"><ins>{{{</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>222</th><td class="r"><ins>&nbsp; &nbsp; AuthLDAPBindDN ldap-auth-user@example.com</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>223</th><td class="r"><ins>&nbsp; &nbsp; AuthLDAPBindPassword "password"</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>224</th><td class="r"><ins>}}}</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>225</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>226</th><td class="r"><ins>The whole section looks like:</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>227</th><td class="r"><ins>{{{</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>228</th><td class="r"><ins>&lt;Location /trac/&gt;</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>229</th><td class="r"><ins>&nbsp; # (if you're using it, mod_python specific settings go here)</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>230</th><td class="r"><ins>&nbsp; Order deny,allow</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>231</th><td class="r"><ins>&nbsp; Deny from all</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>232</th><td class="r"><ins>&nbsp; Allow from 192.168.11.0/24</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>233</th><td class="r"><ins>&nbsp; AuthType Basic</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>234</th><td class="r"><ins>&nbsp; AuthName "Trac"</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>235</th><td class="r"><ins>&nbsp; AuthBasicProvider "ldap"</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>236</th><td class="r"><ins>&nbsp; AuthLDAPURL "ldap://adserver.company.com:3268/DC=company,DC=com?sAMAccountName?sub?(objectClass=user)"</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>237</th><td class="r"><ins>&nbsp; AuthLDAPBindDN&nbsp; &nbsp; &nbsp; &nbsp;ldap-auth-user@company.com</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>238</th><td class="r"><ins>&nbsp; AuthLDAPBindPassword "the_password"</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>239</th><td class="r"><ins>&nbsp; authzldapauthoritative Off</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>240</th><td class="r"><ins>&nbsp; # require valid-user</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>241</th><td class="r"><ins>&nbsp; require ldap-group CN=Trac Users,CN=Users,DC=company,DC=com</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>242</th><td class="r"><ins>&lt;/Location&gt;</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>243</th><td class="r"><ins>}}}</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>244</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>245</th><td class="r"><ins>Note 1: This is the case where the LDAP search will get around the multiple OUs, conecting to Global Catalog Server portion of AD (Notice the port is 3268, not the normal LDAP 389). The GCS is basically a "flattened" tree which allows searching for a user without knowing to which OU they belong.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>246</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>247</th><td class="r"><ins>Note 2: You can also require the user be a member of a certain LDAP group, instead of</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>248</th><td class="r"><ins>just having a valid login:</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>249</th><td class="r"><ins>{{{</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>250</th><td class="r"><ins>&nbsp; &nbsp; Require ldap-group CN=Trac Users,CN=Users,DC=example,DC=com</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>251</th><td class="r"><ins>}}}</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>252</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>253</th><td class="r"><ins>See also:</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>254</th><td class="r"><ins>&nbsp; - [http://httpd.apache.org/docs/2.2/mod/mod_authnz_ldap.html mod_authnz_ldap], documentation for mod_authnz_ldap</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>255</th><td class="r"><ins>&nbsp; &nbsp; </ins> </td>
+                  </tr><tr>
+                          <th> </th><th>256</th><td class="r"><ins>&nbsp;- [http://httpd.apache.org/docs/2.2/mod/mod_ldap.html mod_ldap], documentation for mod_ldap, which provides connection pooling and a shared cache.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>257</th><td class="r"><ins>&nbsp;- [http://trac-hacks.org/wiki/LdapPlugin TracHacks:LdapPlugin] for storing TracPermissions in LDAP.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>258</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>259</th><td class="r"><ins>=== Using SSPI Authentication</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>260</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>261</th><td class="r"><ins>If you are using Apache on Windows, you can use mod_auth_sspi to provide</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>262</th><td class="r"><ins>single-sign-on. Download the module from the !SourceForge [http://sourceforge.net/projects/mod-auth-sspi/ mod-auth-sspi project] and then add the</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>263</th><td class="r"><ins>following to your !VirtualHost:</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>264</th><td class="r"><ins>{{{</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>265</th><td class="r"><ins>&nbsp; &nbsp; &lt;Location /trac/login&gt;</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>266</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; AuthType SSPI</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>267</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; AuthName "Trac Login"</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>268</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; SSPIAuth On</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>269</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; SSPIAuthoritative On</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>270</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; SSPIDomain MyLocalDomain</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>271</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; SSPIOfferBasic On</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>272</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; SSPIOmitDomain Off</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>273</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; SSPIBasicPreferred On</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>274</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; Require valid-user</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>275</th><td class="r"><ins>&nbsp; &nbsp; &lt;/Location&gt;</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>276</th><td class="r"><ins>}}}</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>277</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>278</th><td class="r"><ins>Using the above, usernames in Trac will be of the form `DOMAIN\username`, so</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>279</th><td class="r"><ins>you may have to re-add permissions and such. If you do not want the domain to</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>280</th><td class="r"><ins>be part of the username, set `SSPIOmitDomain On` instead.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>281</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>282</th><td class="r"><ins>Some common problems with SSPI authentication: [trac:#1055], [trac:#1168] and [trac:#3338].</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>283</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>284</th><td class="r"><ins>See also [trac:TracOnWindows/Advanced].</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>285</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>286</th><td class="r"><ins>=== Using Apache authentication with the Account Manager plugin's Login form ===</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>287</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>288</th><td class="r"><ins>To begin with, see the basic instructions for using the Account Manager plugin's [http://trac-hacks.org/wiki/AccountManagerPlugin/Modules#LoginModule Login module] and its [http://trac-hacks.org/wiki/AccountManagerPlugin/AuthStores#HttpAuthStore HttpAuthStore authentication module].</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>289</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>290</th><td class="r"><ins>'''Note:''' If is difficult to get !HttpAuthStore to work with WSGI when using any Account Manager version prior to acct_mgr-0.4. Upgrading is recommended.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>291</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>292</th><td class="r"><ins>Here is an example (from the !HttpAuthStore link) using acct_mgr-0.4 for hosting a single project:</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>293</th><td class="r"><ins>{{{</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>294</th><td class="r"><ins>[components]</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>295</th><td class="r"><ins>; be sure to enable the component</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>296</th><td class="r"><ins>acct_mgr.http.HttpAuthStore = enabled</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>297</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>298</th><td class="r"><ins>[account-manager]</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>299</th><td class="r"><ins>; configure the plugin to use a page that is secured with http authentication</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>300</th><td class="r"><ins>authentication_url = /authFile</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>301</th><td class="r"><ins>password_store = HttpAuthStore</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>302</th><td class="r"><ins>}}}</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>303</th><td class="r"><ins>This will generally be matched with an Apache config like:</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>304</th><td class="r"><ins>{{{</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>305</th><td class="r"><ins>&lt;Location /authFile&gt;</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>306</th><td class="r"><ins>&nbsp; &nbsp;…HTTP authentication configuration…</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>307</th><td class="r"><ins>&nbsp; &nbsp;Require valid-user</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>308</th><td class="r"><ins>&lt;/Location&gt;</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>309</th><td class="r"><ins>}}}</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>310</th><td class="r"><ins>Note that '''authFile''' need not exist. See the !HttpAuthStore link above for examples where multiple Trac projects are hosted on a server.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>311</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>312</th><td class="r"><ins>=== Example: Apache/mod_wsgi with Basic Authentication, Trac being at the root of a virtual host</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>313</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>314</th><td class="r"><ins>Per the mod_wsgi documentation linked to above, here is an example Apache configuration that a) serves the Trac instance from a virtualhost subdomain and b) uses Apache basic authentication for Trac authentication.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>315</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>316</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>317</th><td class="r"><ins>If you want your Trac to be served from e.g. !http://trac.my-proj.my-site.org, then from the folder e.g. `/home/trac-for-my-proj`, if you used the command `trac-admin the-env initenv` to create a folder `the-env`, and you used `trac-admin the-env deploy the-deploy` to create a folder `the-deploy`, then first:</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>318</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>319</th><td class="r"><ins>Create the htpasswd file:</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>320</th><td class="r"><ins>{{{</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>321</th><td class="r"><ins>cd /home/trac-for-my-proj/the-env</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>322</th><td class="r"><ins>htpasswd -c htpasswd firstuser</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>323</th><td class="r"><ins>### and add more users to it as needed:</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>324</th><td class="r"><ins>htpasswd htpasswd seconduser</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>325</th><td class="r"><ins>}}}</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>326</th><td class="r"><ins>(keep the file above your document root for security reasons)</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>327</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>328</th><td class="r"><ins>Create this file e.g. (ubuntu) `/etc/apache2/sites-enabled/trac.my-proj.my-site.org.conf` with the following contents:</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>329</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>330</th><td class="r"><ins>{{{</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>331</th><td class="r"><ins>&lt;Directory /home/trac-for-my-proj/the-deploy/cgi-bin/trac.wsgi&gt;</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>332</th><td class="r"><ins>&nbsp; WSGIApplicationGroup %{GLOBAL}</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>333</th><td class="r"><ins>&nbsp; Order deny,allow</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>334</th><td class="r"><ins>&nbsp; Allow from all</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>335</th><td class="r"><ins>&lt;/Directory&gt;</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>336</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>337</th><td class="r"><ins>&lt;VirtualHost *:80&gt;</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>338</th><td class="r"><ins>&nbsp; ServerName trac.my-proj.my-site.org</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>339</th><td class="r"><ins>&nbsp; DocumentRoot /home/trac-for-my-proj/the-env/htdocs/</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>340</th><td class="r"><ins>&nbsp; WSGIScriptAlias / /home/trac-for-my-proj/the-deploy/cgi-bin/trac.wsgi</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>341</th><td class="r"><ins>&nbsp; &lt;Location '/'&gt;</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>342</th><td class="r"><ins>&nbsp; &nbsp; AuthType Basic</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>343</th><td class="r"><ins>&nbsp; &nbsp; AuthName "Trac"</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>344</th><td class="r"><ins>&nbsp; &nbsp; AuthUserFile /home/trac-for-my-proj/the-env/htpasswd</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>345</th><td class="r"><ins>&nbsp; &nbsp; Require valid-user</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>346</th><td class="r"><ins>&nbsp; &lt;/Location&gt;</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>347</th><td class="r"><ins>&lt;/VirtualHost&gt;</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>348</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>349</th><td class="r"><ins>}}}</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>350</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>351</th><td class="r"><ins>Note: for subdomains to work you would probably also need to alter `/etc/hosts` and add A-Records to your host's DNS.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>352</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>353</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>354</th><td class="r"><ins>== Troubleshooting</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>355</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>356</th><td class="r"><ins>=== Use a recent version</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>357</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>358</th><td class="r"><ins>Please use either version 1.6, 2.4 or later of `mod_wsgi`. Versions prior to 2.4 in the 2.X branch have problems with some Apache configurations that use WSGI file wrapper extension. This extension is used in Trac to serve up attachments and static media files such as style sheets. If you are affected by this problem attachments will appear to be empty and formatting of HTML pages will appear not to work due to style sheet files not loading properly. Another frequent symptom is that binary attachment downloads are truncated. See mod_wsgi tickets [http://code.google.com/p/modwsgi/issues/detail?id=100 #100] and [http://code.google.com/p/modwsgi/issues/detail?id=132 #132].</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>359</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>360</th><td class="r"><ins>''Note: using mod_wsgi 2.5 and Python 2.6.1 gave an Internal Server Error on my system (Apache 2.2.11 and Trac 0.11.2.1). Upgrading to Python 2.6.2 (as suggested [http://www.mail-archive.com/modwsgi@googlegroups.com/msg01917.html here]) solved this for me[[BR]]-- Graham Shanks''</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>361</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>362</th><td class="r"><ins>=== Getting Trac to work nicely with SSPI and 'Require Group' ===</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>363</th><td class="r"><ins>If like me you've set Trac up on Apache, Win32 and configured SSPI, but added a 'Require group' option to your apache configuration, then the SSPIOmitDomain option is probably not working.&nbsp; If its not working your usernames in trac are probably looking like 'DOMAIN\user' rather than 'user'.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>364</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>365</th><td class="r"><ins>This WSGI script 'fixes' things, hope it helps:</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>366</th><td class="r"><ins>{{{#!python</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>367</th><td class="r"><ins>import os</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>368</th><td class="r"><ins>import trac.web.main</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>369</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>370</th><td class="r"><ins>os.environ['TRAC_ENV'] = '/usr/local/trac/mysite'</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>371</th><td class="r"><ins>os.environ['PYTHON_EGG_CACHE'] = '/usr/local/trac/mysite/eggs'</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>372</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>373</th><td class="r"><ins>def application(environ, start_response):</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>374</th><td class="r"><ins>&nbsp; &nbsp; if "\\" in environ['REMOTE_USER']:</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>375</th><td class="r"><ins>&nbsp; &nbsp; &nbsp; &nbsp; environ['REMOTE_USER'] = environ['REMOTE_USER'].split("\\", 1)[1]</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>376</th><td class="r"><ins>&nbsp; &nbsp; return trac.web.main.dispatch_request(environ, start_response)</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>377</th><td class="r"><ins>}}}</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>378</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>379</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>380</th><td class="r"><ins>=== Trac with PostgreSQL ===</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>381</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>382</th><td class="r"><ins>When using the mod_wsgi adapter with multiple Trac instances and PostgreSQL (or MySQL?) as a database back-end, the server ''may'' create a lot of open database connections and thus PostgreSQL processes.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>383</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>384</th><td class="r"><ins>A somewhat brutal workaround is to disabled connection pooling in Trac. This is done by setting `poolable = False` in `trac.db.postgres_backend` on the `PostgreSQLConnection` class.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>385</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>386</th><td class="r"><ins>But it's not necessary to edit the source of Trac, the following lines in `trac.wsgi` will also work:</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>387</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>388</th><td class="r"><ins>{{{</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>389</th><td class="r"><ins>import trac.db.postgres_backend</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>390</th><td class="r"><ins>trac.db.postgres_backend.PostgreSQLConnection.poolable = False</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>391</th><td class="r"><ins>}}}</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>392</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>393</th><td class="r"><ins>Now Trac drops the connection after serving a page and the connection count on the database will be kept minimal.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>394</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>395</th><td class="r"><ins>//This is not a recommended approach though. See also the notes at the bottom of the [http://code.google.com/p/modwsgi/wiki/IntegrationWithTrac mod_wsgi's IntegrationWithTrac] wiki page.//</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>396</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>397</th><td class="r"><ins>=== Other resources</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>398</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>399</th><td class="r"><ins>For more troubleshooting tips, see also the [TracModPython#Troubleshooting mod_python troubleshooting] section, as most Apache-related issues are quite similar, plus discussion of potential [http://code.google.com/p/modwsgi/wiki/ApplicationIssues application issues] when using mod_wsgi.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>400</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>401</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>402</th><td class="r"><ins>----</ins> </td>
+                  </tr><tr class="last">
+                          <th> </th><th>403</th><td class="r"><ins>See also:&nbsp; TracGuide, TracInstall, [wiki:TracFastCgi FastCGI], [wiki:TracModPython ModPython], [trac:TracNginxRecipe TracNginxRecipe]</ins> </td>
+                  </tr>
+            </tbody>
+        </table>
+      </li>
+  </ul>
+</div>
+      </div>
+  </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

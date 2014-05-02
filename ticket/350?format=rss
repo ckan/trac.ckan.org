@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #350: Search engine optimisation</title>
+    <link>http://localhost/ticket/350</link>
+    <description>&lt;p&gt;
+Need to research what can easily be done to improve CKAN packages in the search rankings.
+&lt;/p&gt;
+&lt;p&gt;
+Comments from Glen Barnes:
+&lt;/p&gt;
+&lt;p&gt;
+We've been pretty successful at SEO without even really trying (see &lt;a class="ext-link" href="http://www.google.co.nz/search?client=safari&amp;amp;rls=en&amp;amp;q=auckland+google+transit+feed&amp;amp;ie=UTF-8&amp;amp;oe=UTF-8&amp;amp;redir_esc=&amp;amp;ei=dsYSTOzJLs2eceuZiI8I"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://www.google.co.nz/search?client=safari&amp;amp;rls=en&amp;amp;q=auckland+google+transit+feed&amp;amp;ie=UTF-8&amp;amp;oe=UTF-8&amp;amp;redir_esc=&amp;amp;ei=dsYSTOzJLs2eceuZiI8I&lt;/a&gt; as an example). This to me is key. If we are to make data available it has to be findable which is the main reason for a catalogue. There are probably things we should be doing on CKAN like using slugged urls (&lt;a class="ext-link" href="http://www.ckan.net/package/ascoe"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://www.ckan.net/package/ascoe&lt;/a&gt; -&amp;gt; &lt;a class="ext-link" href="http://www.ckan.net/package/ascoe/atmospheric-chemistry-studies-in-the-oceanic-environment"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://www.ckan.net/package/ascoe/atmospheric-chemistry-studies-in-the-oceanic-environment&lt;/a&gt;), setting the H1 tag correctly ("Atmospheric Chemistry Studies in the Oceanic Environment"  on the example above). Some basic SEO 101 on page optimisations.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/350</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>glen@…</dc:creator>
+
+      <pubDate>Sun, 20 Jun 2010 22:27:02 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/350#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/350#comment:1</guid>
+      <description>
+        &lt;p&gt;
+Also check out the SEO review done by Charles Coxhead - &lt;a class="ext-link" href="http://www.quicksitereviews.com/ckan-net/"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://www.quicksitereviews.com/ckan-net/&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+Pagination – In the tag section of the site particularly I’d suggest replacing the traditional numbered pagination with alphabetical links, ie, display 26 links A-Z and then on each of those pages displaying the relevant tags. The point being that the tag pages represent an opportunity to index pages which intersect with very targeted search demand, so let’s give them all every opportunity to get crawled and indexed. Linking to all 26 alphabetically arranged pages from the main tag page (and maybe even the home page) will bring all the tag pages closer to the home page and give them all some more link popularity. Also suggest something similar to this for the listings in the Packages section, so arrange these on alphabetical pages.
+&lt;/p&gt;
+&lt;p&gt;
+Tag page titles – Take a programmatic, but more focussed approach to these. Currently all tag pages have the title “CKAN – Comprehensive Knowledge Archive Network – Tags – [tag]” – I would make this something like “[tag] – Open Data  – CKAN” or something like that which puts the emphasis on the tag keyword and adds some meaningful qualifiers to that.
+&lt;/p&gt;
+&lt;p&gt;
+Tag page listings – On the tag pages there are related open data sets listed and next to each the associated tags. This leads to masses of tag links on the page and loads of duplicated links. If possible I recommend removing the tags from each data set listing, and instead displaying a cloud of “Related tags” on the right hand side.
+&lt;/p&gt;
+&lt;p&gt;
+Group pages – The user curated group pages are possibly even better than the tag pages from a search perspective because they all intersect with very clear search demand, so would also benefit from having improved page titles. I suggest a similar approach to the above where the group name becomes the main keyword with some qualifiers added. It might even be a good idea to let group owners define their own page titles.
+&lt;/p&gt;
+&lt;p&gt;
+Data set pages – These also could do with improved page titles, presumably the data set name, eg. “[data-set-name] – CKAN”
+Heading tags – not a big deal but I’m always in favor of using H tags strictly for headlines (rather than wrapping an H1 around the site logo for example).
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Thu, 15 Jul 2010 21:51:26 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/350#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/350#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Done in cset:b9b82e7ae078
+Cost 9 hours, including: alphabetical pager, title changes, removed links from tags in package list.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Mon, 06 Dec 2010 09:44:04 GMT</pubDate>
+      <title>status changed; cc set; resolution deleted</title>
+      <link>http://localhost/ticket/350#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/350#comment:3</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;cc&lt;/strong&gt;
+              &lt;em&gt;glen@…&lt;/em&gt; added
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;closed&lt;/em&gt; to &lt;em&gt;reopened&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                &lt;em&gt;fixed&lt;/em&gt; deleted
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>seanh</dc:creator>
+
+      <pubDate>Fri, 15 Jun 2012 15:38:10 GMT</pubDate>
+      <title>repo, theme, milestone set</title>
+      <link>http://localhost/ticket/350#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/350#comment:4</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;repo&lt;/strong&gt;
+                set to &lt;em&gt;ckan&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;theme&lt;/strong&gt;
+                set to &lt;em&gt;none&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                set to &lt;em&gt;ckan-backlog&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

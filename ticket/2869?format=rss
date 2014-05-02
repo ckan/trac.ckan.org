@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2869: user profile not linked on disqus until page refresh</title>
+    <link>http://localhost/ticket/2869</link>
+    <description>&lt;p&gt;
+Reported by Daniel:
+&lt;/p&gt;
+&lt;p&gt;
+Problem: DISQUS comments don't appear with profile details (inc. username).
+How to reproduce:
+1) Go to a dataset, e.g. I went to &lt;a class="ext-link" href="http://s031.okserver.org:2375/dataset/ff"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://s031.okserver.org:2375/dataset/ff&lt;/a&gt;
+2) I logged into DISQUS using the Google Authentication, e.g. in my case that is okfn.daniel.lewis@…
+3) I made a comment and submitted
+4) It comes up with the comment, but no linked profile until the page gets refreshed
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2869</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+ </channel>
+</rss>

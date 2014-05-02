@@ -1,0 +1,9 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2432	Draft new trac methodology	seanh	seanh	"We want a new way of working with trac tickets and milestones etc:
+
+- We will have a single queue of tickets, ordered by priority, that we all work on
+
+- Tickets only get into the queue after triaging (which the devs do at regular intervals), so we and others can use new trac tickets as a dumping ground for any and all CKAN bugs and ideas without messing up the priority queue. Therefore the priority queue needs to be a special CKAN milestone or something. The devs need to regularly go through the inbox of untriaged tickets and triage them all, moving them all out of the inbox.
+
+- Will we also assign tickets from the priority queue to individual devs in sprint planning meetings like we currently do?
+"	enhancement	closed	major	ckan-sprint-2012-06-25	ckan	fixed	dev_meetup_2012-05 trac		ckan	none

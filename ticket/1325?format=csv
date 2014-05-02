@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1325,python 2.5 incompatibilities,dread,dread,"We claim to support Python 2.5 (useful for Lenny), yet a few problems have crept in:
+ * 'with' statement requires {{{from __future__ import with_statement}}}
+ * import json from ckan.lib.helpers, rather than directly, since it copes with reverting to simplejson, used in python 2.5.",defect,closed,minor,ckan-sprint-2011-09-12,ckan,fixed,,kindly,ckan,none

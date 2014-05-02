@@ -1,0 +1,6 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1679,Default roles problem,dread,,"The 'editor', 'anon_editor' and 'reader' roles are intended to have immutable actions. This was designed to prevent their names being subverted - e.g. an editor should always be able to edit! It also meant that when we add Actions (e.g. DELETE-PACKAGE) then it can be added sensibly to these roles in an upgrade just by changing the defaults table (ckan/model/authz.py).
+
+The problem is that this immutability is only enforced on 'db upgrade'. So you can happily change the editor role using the paster command and it works, right up until you do an upgrade and realise permissions are different. 
+
+We should stop the paster commands being able to edit these roles. Or get rid of the immutability completely. Views?",enhancement,new,awaiting triage,ckan-backlog,ckan,,,kindly,ckan,none

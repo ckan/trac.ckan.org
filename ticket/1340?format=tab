@@ -1,0 +1,16 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1340	Editing non-existent group causes Exception	dread	dread	"e.g. http://ckan.net/group/edit/history
+{{{
+Module ckan.controllers.group:135 in edit
+<<          try:
+                   old_data = get_action('group_show')(context, data_dict)
+                   c.grouptitle = old_data.get('title')
+                   c.groupname = old_data.get('name')
+>>  old_data = get_action('group_show')(context, data_dict)
+Module ckan.logic.action.get:347 in group_show
+<<      if group is None:
+               raise NotFound
+       
+           check_access('group_show',context, data_dict)
+>>  raise NotFound
+}}}"	defect	closed	minor	ckan-sprint-2011-10-28	ckan	fixed			ckan	none

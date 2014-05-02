@@ -1,0 +1,16 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1104	create-test-data doesn't index the packages it creates	johnlawrenceaspden	dread	"With the default test data created by
+
+paster db clean
+paster db init
+paster create-test-data
+
+going to the front page shows two recently changed packages
+A Wonderful Story
+A Novel by Tolstoy
+
+But none of those words ""Wonderful"", etc produce search hits.
+In fact as far as I can tell, nothing produces any search hits.
+
+That isn't true on ckan.net, where searching seems to work.
+"	defect	closed	awaiting triage	ckan-v1.4-sprint-7	ckan	fixed			ckan	none

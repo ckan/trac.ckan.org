@@ -1,0 +1,12 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2282	log api calls for users	toby	toby	"This was part of #2251 but is now it's own ticket.
+
+we need clarity on this.  The use cases so far have been possible limiting api calls for users.
+
+so we want to monitor the user or ip address
+
+what about the api calls?
+
+do we want to record all calls or just some?  do we want to record the type of call and to what level of detail?
+
+recording the url just seems to specific to me."	enhancement	new	awaiting triage	ckan-future	ckan				ckan	none

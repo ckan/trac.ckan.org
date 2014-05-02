@@ -1,0 +1,15 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2814,Demo: upload file behaves oddly,markw,shevski,"3. Uploading a file behaves counter-intuitively (I would suggest wrongly).
+
+When adding a new resource by uploading a file, I select a file called
+say create-group.png. I expect the following to happen:
+
+ * the pathname of that file is filled in the box;
+ * nothing is actually uploaded till I hit 'add' (confirming that I've got the right file etc).
+
+Instead of this,
+
+ * the file is immediately and, seemingly, irrevocably uploaded;
+ * the box is filled with a mysterious URL (https://commondatastorage.googleapis.com/ckan-demo ...)
+ * the mysterious URL is so long I can't even see the final element, which is my file name.
+",enhancement,assigned,awaiting triage,,ckan,,,,ckan,none

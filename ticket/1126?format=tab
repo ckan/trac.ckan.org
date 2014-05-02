@@ -1,0 +1,15 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1126	Exceptions arising from error page	dread	dread	"I'm not completely clear what the use case is for loading the error page in this way, but somehow original_request is None and that creates an unnecessary exception with the logic refactor.
+
+{{{
+http://ckan.net/error/document?__cache=39020485
+...
+Module ckan.controllers.error:29 in document
+<<          original_response = request.environ.get('pylons.original_response')
+               # Bypass error template for API operations.
+               if original_request.path.startswith('/api'):
+                   return original_response.body
+               # Otherwise, decorate original response with error template.
+>>  if original_request.path.startswith('/api'):
+AttributeError: 'NoneType' object has no attribute 'path'
+}}}"	enhancement	closed	minor	ckan-v1.4-sprint-7	ckan	fixed			ckan	none

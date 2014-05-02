@@ -1,0 +1,8 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+711	Packages shall support both UK government and location information with a common set of attributes	johnbywater	thejimmyg	"Previously, a package type attribute was intended to distinguish between package data that came from government depts. and publishers location information (GEMINI). Now there is an intention use a common set of attributes to support data from either source.
+
+Hence, there currently a v.3 of the government attributes, a document about extracting the attributes from Gemini document using XPath, and a comparison documents mapping between governemtn attributes and Gemini attributes.
+
+That means there are potentially four different list of attributes. I'm not sure how to go about reviewing the lists and converging any differences.
+
+But we do want to end up with a list of names, a description of their purpose, and then perhaps the XPath which would reveal the value from a Gemini doc?"	requirement	closed	minor	ckan-v1.3	uklii	fixed				

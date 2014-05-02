@@ -1,0 +1,16 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1712,DGU /data page,icmurray,icmurray,"CKAN provides the /data page page of data.gov.uk
+
+Breakdown of tasks:
+
+ * [x] Analysis / refinement of spec.
+ * [x] Log-in / register as publisher
+       (Waiting on publisher form)
+ * [x] Population of ""browse by publisher""
+       list groups ordered by most datasets
+       (Waiting on publisher integration)
+ * [ ] ~~Browse by nation~~
+ * [ ] ~~Featured datasets~~
+       Now a possible integration point with drupal
+ * [X] Tag cloud
+ * [X] Developers section",enhancement,closed,major,ckan-sprint-2012-02-06,dgu,fixed,[r:0.5d],,ckanext-dgu,none

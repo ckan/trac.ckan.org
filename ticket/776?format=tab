@@ -1,0 +1,11 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+776	Avoid generating vdm warnings	dread	rgrp	"We get a host of vdm warnings frequently in the CKAN logs. Are these genuine worries or can they be avoided?
+
+{{{
+2010-10-29 17:10:06,003 WARNI [vdm] Skipping adding property Package.package_search (PackageSearch) to revisioned object
+2010-10-29 17:10:06,015 WARNI [vdm] Skipping adding property Package.all_revisions_unordered (PackageRevision) to revisioned object
+2010-10-29 17:10:06,024 WARNI [vdm] Skipping adding property PackageTag.all_revisions_unordered (PackageTagRevision) to revisioned object
+2010-10-29 17:10:06,081 WARNI [vdm] Skipping adding property PackageExtra.all_revisions_unordered (PackageExtraRevision) to revisioned object
+2010-10-29 17:10:06,105 WARNI [vdm] Skipping adding property PackageResource.all_revisions_unordered (PackageResourceRevision) to revisioned object
+2010-10-29 17:10:06,129 WARNI [vdm] Skipping adding property PackageRelationship.all_revisions_unordered (PackageRelationshipRevision) to revisioned object
+}}}"	enhancement	closed	awaiting triage		vdm	duplicate				

@@ -1,0 +1,8 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+315	Improvements and fixes to csv dump	rgrp	dread	"1. Issues with quote in fields: http://lists.okfn.org/pipermail/ckan-discuss/2010-May/000240.html
+
+2. Issues with package resource serialization into csv table.
+
+<quote>
+In the latest dump there were 116(!) sets of the three columns (“resource-[n]-url”, “resource-[n]-format”, and “resource-[n]-description”). However, these are an extract of the packed “resource” column and I’m not sure whether they’re needed. Also, they irritatingly don’t appear in order in the CSV serialisation. If the resource columns could be ordered in the file that would be great; if a second version without the unpacked resource data would be excellent.
+</quote>"	defect	closed	critical	v1.1	ckan	fixed				

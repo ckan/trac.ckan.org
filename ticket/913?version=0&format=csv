@@ -1,0 +1,5 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+913,Handle licenses in dcat-tools,pudo,pudo,"
+ * Create a list of all valid predicates where licenses are stored.
+ * Create a license normalization registry in GSpread
+ * Fill spreadsheet from OKD/OSI lists. ",enhancement,new,critical,ckan-v1.5,lod2,,,,,

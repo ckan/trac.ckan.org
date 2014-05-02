@@ -1,0 +1,7 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2564,Updates to additional info fields on datasets,shevski,aron.carroll,"E.g. http://s031.okserver.org:2375/en/dataset/adur_district_spending/resource/04127ad5-77e5-4a08-9f40-12d3c383e460
+
+When there are no maintainer/contact details or extra fields we should hide the additional info box completely. Otherwise hide the last updated and licence fields which are already displayed in sidebar.
+
+Update sidebar to provide context - so 'CSV' -> 'CSV format' + 'unknown' -> 'Last updated: unknown'
+",enhancement,closed,minor,demo phase 1,ckan,fixed,demo-theme,toby,ckan,none

@@ -1,0 +1,2 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2470,Fix inconsistency in package_list snippet,johnglover,johnglover,"Datasets listed in search results have not gone through schema validation (but on the user page they do), so package_list snippet currently has to display both 'notes' and 'description'.",enhancement,new,minor,ckan-sprint-2012-06-25,ecportal,,,,ckan,none

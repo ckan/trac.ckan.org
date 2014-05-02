@@ -1,0 +1,9 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1349,Template tidying,zephod,zephod,"Various things in templates can be tidied up after work has finished on #1294:
+  * remove styling in page in group/index.html (put in css main)
+    * ditto for package/search.html
+    * ditto for home/index.html 
+  * Forms.css - to merge into style.css; remove explicit imports elsewhere
+    * @import at the top of style.css @import url(forms.css)
+  * Make a note: Success/failure controllers clash CSS with success/failure flash banners
+",enhancement,closed,awaiting triage,ckan-sprint-2011-09-26,ckan,fixed,,,ckan,none

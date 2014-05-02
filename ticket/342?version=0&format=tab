@@ -1,0 +1,12 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+342	JSONP parameter in API	dread	dread	"== As a ==
+
+CKAN client using JQuery
+
+== I want to ==
+
+call the CKAN API and instead of receiving back JSON I get JSONP. i.e. ""%s(%s)"" % (callback, json_content)
+
+== Suggested implementation ==
+
+All API calls allow the JSONP 'callback' parameter to be specified in the request and this wraps the JSON response."	enhancement	new	awaiting triage		ckan					

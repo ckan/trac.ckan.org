@@ -1,0 +1,7 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2805,zh_TW has no Plural-Forms,toby,seanh,"the .po file for zh_TW does not contain Plural-Forms which breaks the i18n JavaScript Extractions for ckan-demo.
+
+I've added the following which may or may not be correct - from web search
+""Plural-Forms: nplurals=1; plural=0\n""
+
+I suspect it will get overwritten when translations are pulled from transiflex so passing to you as you are the expert in that realm",enhancement,closed,awaiting triage,,ckan,fixed,,,ckan,none

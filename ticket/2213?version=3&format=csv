@@ -1,0 +1,7 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2213,Update geographical coverage tags,johnglover,johnglover," * ~~create importer for geo tags~~
+ * ~~add translations to database~~
+ * translate tags in WUI (API?)
+ * test
+ * deploy
+ * document how to add a geo coverage field in http://docs.ckan.org/en/latest/forms.html",enhancement,new,major,ckan-sprint-2012-03-19,ecportal,,[2d],,ckan,none

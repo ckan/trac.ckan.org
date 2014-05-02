@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2513: Dataproxy should not default to utf8</title>
+    <link>http://localhost/ticket/2513</link>
+    <description>&lt;p&gt;
+Unless explicitly told by the source web server the dataproxy should not assume that the content it has can be encoded as UTF-8.  Even though the chars from 128 - 255 overlap an attempt to decode some byte array as utf8 will fail whenever a latin1 char whose bitpattern has the MSB set.
+&lt;/p&gt;
+&lt;p&gt;
+This will mean that the UTF8Recoder can be more rigid in its acceptance of data, Postel aside.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2513</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>ross</dc:creator>
+
+      <pubDate>Wed, 20 Jun 2012 10:13:50 GMT</pubDate>
+      <title>milestone changed</title>
+      <link>http://localhost/ticket/2513#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/2513#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan-v1.8&lt;/em&gt; to &lt;em&gt;ckan-v1.9&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Have pushed back to 1.9 but if may be the the converter service will replace it in the meantime.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>ross</dc:creator>
+
+      <pubDate>Mon, 03 Sep 2012 10:54:06 GMT</pubDate>
+      <title>status, milestone changed; owner deleted</title>
+      <link>http://localhost/ticket/2513#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/2513#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;owner&lt;/strong&gt;
+              &lt;em&gt;ross&lt;/em&gt; deleted
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;assigned&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan-v1.9&lt;/em&gt; to &lt;em&gt;ckan-backlog&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

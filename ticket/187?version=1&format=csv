@@ -1,0 +1,19 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+187,Full-text search,rgrp,rgrp,"Standard search should search notes field in addition to name, title and tags (discussed in ticket:108 but not done). For this to work we need proper text search since o/w we get poor ordering and lots of bad results.
+
+If we do this we need:
+  1. To weight across fields in a sensible way
+  2. We can also use proper text search on title or ...
+
+Easiest way to do this is to use existing facilities in dbs e.g. postgres has full text support since 8.3: http://www.postgresql.org/docs/8.3/static/textsearch.html
+
+Using this with sqlalchemy: http://lowmanio.co.uk/blog/entries/postgresql-full-text-search-and-sqlalchemy/
+
+Issues with fulltext search:
+
+ * tags not indexed, so would need to 'or' search of tags. This would cause problems with the order_by of the query, since the tags wouldn't have a ranking.
+ * if tags are indexed then perhaps we don't want them converted into lexemes? Exact match could well be better.
+ * can we split the name on dash or underscore before being indexed?
+ * natural language search doesn't do partial words, so search for 'gov' doesn't bring up 'government'.
+ * do we keep the existing search system usable with a config file switch for if we install on a db aside from postgres?
+ * we want to weight name and title higher than other fields - achievable with custom trigger.",enhancement,new,critical,v1.0,ckan,,,,,

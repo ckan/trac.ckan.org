@@ -1,0 +1,9 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2666	templates/package/resource_edit.html	toby	aron.carroll	"There is a new template for editing resources outside of the add dataset logic
+
+this is the template it just throws some crap onto the page at the moment - we need to create a form - the form will end up with the usual data/edit stuff but for now you can use the resource to populate the form and I can then change it to use data - I just want to know which fields we'll have
+
+
+templates/package/resource_edit.html
+
+when done reassign to me and I'll get it functioning"	enhancement	closed	critical		ckan	fixed	demo-theme		ckan	none

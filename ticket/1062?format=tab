@@ -1,0 +1,6 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1062	Data preview encoding error	sebbacon	johnglover	"The preview of ""Species Misc Turtle Download"" at http://ckan.net/package/taxonconcept results in the following error:
+
+Unable to Preview - Had an error from dataproxy:
+Data Transformation Error (Data transformation failed. Reason: 'utf8' codec can't decode byte 0x8b in position 1: unexpected code byte
+"	defect	assigned	minor	ckan-backlog	ckan				ckan	none

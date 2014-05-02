@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #344: REST Create package with incorrect format gives 500 error</title>
+    <link>http://localhost/ticket/344</link>
+    <description>&lt;p&gt;
+PUT to /rest/api/package of &lt;tt&gt; {"name": "name", "resources": ["someurl.com/data"] } &lt;/tt&gt; (i.e. resource is a string, not a dictionary) gives 500 error, when it should give a 400 error and helpful error message.
+&lt;/p&gt;
+&lt;p&gt;
+Exception:
+&lt;/p&gt;
+&lt;pre class="wiki"&gt;Module ckan.controllers.rest:154 in create
+&amp;lt;&amp;lt;              if register == 'package' and not subregister:
+                       fs = ckan.forms.get_standard_fieldset()
+                       request_fa_dict = ckan.forms.edit_package_dict(ckan.forms.get_package_dict(fs=fs), request_data)
+                       fs = fs.bind(model.Package, data=request_fa_dict, session=model.Session)
+                   elif register == 'package' and subregister in model.PackageRelationship.get_all_types():
+&amp;gt;&amp;gt;  request_fa_dict = ckan.forms.edit_package_dict(ckan.forms.get_package_dict(fs=fs), request_data)
+Module ckan.forms.package_dict:88 in edit_package_dict
+&amp;lt;&amp;lt;                      for res_dict in value:
+                               res_dict_str = {}
+                               for key, value in res_dict.items():
+                                   res_dict_str[str(key)] = value
+                               resources.append(res_dict_str)
+&amp;gt;&amp;gt;  for key, value in res_dict.items():
+AttributeError: 'unicode' object has no attribute 'items'
+&lt;/pre&gt;</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/344</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Fri, 25 Jun 2010 14:55:12 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/344#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/344#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Done in cset:13737a7ba4d9
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

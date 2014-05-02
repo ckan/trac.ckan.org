@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2774: Provide a method of passing localised strings into the JavaScript</title>
+    <link>http://localhost/ticket/2774</link>
+    <description>&lt;p&gt;
+We need to be able to do the following:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Rip the localised strings from the &lt;a class="missing wiki"&gt;JavaScript?&lt;/a&gt; source code. These are strings that look like &lt;tt&gt;_('String')&lt;/tt&gt;, &lt;tt&gt;translate('String') &lt;/tt&gt; and &lt;tt&gt; isPlural('String') &lt;/tt&gt;.
+&lt;/li&gt;&lt;li&gt;An endpoint that provides the translations in the correct locale for the user.
+&lt;/li&gt;&lt;li&gt;The endpoint should provide the locale as JSON (possibly using &lt;a class="ext-link" href="http://jsgettext.berlios.de/doc/html/po2json.html"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://jsgettext.berlios.de/doc/html/po2json.html&lt;/a&gt; or similar tool)
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+The &lt;a class="missing wiki"&gt;JavaScript?&lt;/a&gt; can then read this file on page load.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2774</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>toby</dc:creator>
+
+      <pubDate>Fri, 03 Aug 2012 11:39:16 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/2774#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/2774#comment:1</guid>
+      <description>
+        &lt;p&gt;
+@aron
+&lt;/p&gt;
+&lt;p&gt;
+I've created some js translations note that they are untranslated except for zh_TW which is mangled.  At the moment they are just a json blob in public/base/i18n/&amp;lt;locale&amp;gt;.js
+&lt;/p&gt;
+&lt;p&gt;
+What more do you need? It seems to me that you just need either
+&lt;/p&gt;
+&lt;p&gt;
+&lt;tt&gt;some_var = {json}&lt;/tt&gt;  or  &lt;tt&gt;some_function({json})&lt;/tt&gt;
+&lt;/p&gt;
+&lt;p&gt;
+let me know your preference or do we want this purely as an ajax call?  If it's ajax I think we want a common approach like in &lt;a class="ext-link" href="http://trac.ckan.org/ticket/2698"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://trac.ckan.org/ticket/2698&lt;/a&gt; which I prefer to a unhelpful response
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>aron.carroll</dc:creator>
+
+      <pubDate>Fri, 03 Aug 2012 15:38:32 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/2774#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/2774#comment:2</guid>
+      <description>
+        &lt;p&gt;
+I'm happy to just make ajax requests to public/base/i18n/&amp;lt;locale&amp;gt;.js, however this will use the language set in the &amp;lt;html lang&amp;gt; attribute. So if this file doesn't exist then we'll get a 404 and show the english.
+&lt;/p&gt;
+&lt;p&gt;
+If we want something more sophisticated, determine an appropriate fallback etc, then I think the API is the way to go. Or we could get CKAN to determine the appropriate language file and include it in the page source...
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>toby</dc:creator>
+
+      <pubDate>Fri, 03 Aug 2012 15:55:50 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/2774#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/2774#comment:3</guid>
+      <description>
+        &lt;p&gt;
+for now shall we just include it in the page?
+&lt;/p&gt;
+&lt;p&gt;
+let me know how you want it included eg
+&lt;/p&gt;
+&lt;p&gt;
+var = {}, fn({}),  $(fn({})) etc
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>aron.carroll</dc:creator>
+
+      <pubDate>Tue, 07 Aug 2012 15:00:26 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/2774#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/2774#comment:4</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

@@ -1,0 +1,57 @@
+diff -r ba5615dcf132 ckan/model/__init__.py
+--- a/ckan/model/__init__.py	Thu Jan 06 23:13:47 2011 +0000
++++ b/ckan/model/__init__.py	Fri Jan 07 01:03:28 2011 +0000
+@@ -42,14 +42,16 @@
+ class Repository(vdm.sqlalchemy.Repository):
+     migrate_repository = ckan.migration.__path__[0]
+ 
++    inited = False
++
+     def init_db(self, conditional=False):
+-        if conditional:
+-            already_done = Session.connection()\
+-                           .engine.has_table("user")
+-        else:
+-            already_done = False
+-        if not already_done:
++        #sqlite database needs to be recreted each time as the memory database
++        #is lost.
++        if not self.inited or self.metadata.bind.name == 'sqlite':
+             super(Repository, self).init_db()
++
++        self.session.rollback()
++        self.session.remove()
+         self.add_initial_data()
+ 
+     def add_initial_data(self):
+@@ -98,9 +100,9 @@
+         else:
+             tables = reversed(metadata.sorted_tables)
+         for table in tables:
+-            connection.execute('drop table "%s"' % table.name)
++            connection.execute('delete from "%s"' % table.name)
+         self.session.commit()
+-        #self.add_initial_data()
++        self.add_initial_data()
+ 
+     def setup_migration_version_control(self, version=None):
+         import migrate.versioning.exceptions
+diff -r ba5615dcf132 ckan/tests/__init__.py
+--- a/ckan/tests/__init__.py	Thu Jan 06 23:13:47 2011 +0000
++++ b/ckan/tests/__init__.py	Fri Jan 07 01:03:28 2011 +0000
+@@ -56,7 +56,14 @@
+ cmd.run([config_path])
+ 
+ import ckan.model as model
+-model.repo.rebuild_db()
++model.repo.init_db()
++
++#make sure that the database is droped and recreated first
++#so that any schema changes will be made.
++model.repo.metadata.drop_all(bind=model.repo.metadata.bind)
++model.repo.init_db()
++#tell repo it does not need to drop and craete any more
++model.repo.inited = True
+ 
+ class BaseCase(object):
+ 

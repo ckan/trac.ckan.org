@@ -1,0 +1,4 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2926	I*Form tests for per-type templates	seanh		"Finish the tests for the per-package-type custom template support in IPackageForm, IGroupForm and IOrganizationForm (i.e. the new_template(), read_template() etc. methods).
+
+The new way that template inheritance works in jinja looks like it should allow this to be tested nicely without duplicating entire templates in the example extensions."	enhancement	new	awaiting triage	ckan 2.0	ckan				ckan	none

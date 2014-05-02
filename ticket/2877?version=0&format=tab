@@ -1,0 +1,6 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2877	Bugs with datastore v2	rgrp		"In progress
+
+ * Query on search with limit 0 results in total of 0 (should either be null or correct total). Queries with other limits yield correct total AFAICT
+  * Also weird fact that limit is returned but as as as string - should it not be an integer
+ * Types on fields: could these not be canonical and as per recline (or is it important to allow exact sql types ...)"	enhancement	new	awaiting triage		ckan				ckan	none

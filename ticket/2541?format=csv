@@ -1,0 +1,2 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2541,Add non-core extensions to ckanbuild,seanh,seanh,We want some extensions from outside of CKAN core to be included in ckanbuild. These would be pip installed into the virtualenv before packaging the debian package. Decide which extensions to include.,enhancement,accepted,awaiting triage,ckanbuild,ckan,,deployment,,ckan,none

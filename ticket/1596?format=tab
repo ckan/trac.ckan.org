@@ -1,0 +1,8 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1596	Refactor authz roles	dread		"Suggestions from rgrp:
+
+ * Get rid of Roles, and replace them with direct assignment of actions, even though there are many actions, and extensions can add arbitrary ones.
+ * Debatable whether we should cut the number of actions to correspond to the three roles defined by the base system.
+ * Have a method of finding roles (or, in future, actions) relevant to a given protection object (e.g. FILE-UPLOAD(ER) not relevant to Packages)
+
+(This ticket is split off from #1065)"	enhancement	new	awaiting triage	ckan-future	ckan			rgrp	ckan	none

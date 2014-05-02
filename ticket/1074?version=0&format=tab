@@ -1,0 +1,9 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1074	Refactor authz web user interface to have common code and templating	rgrp	johnlawrenceaspden	"Currently repeat the same template and code across Package Authz, Group Authz, and Authz Group authz.
+
+Having now implemented a new, cleaner setup in ckanext-admin we should port this back into core.
+
+ * Common template code (checkbox template)
+ * Logic code (or just common code) for wiring into authz system
+
+Will also deliver a significant improvement in the form of ajax user lookup."	enhancement	new	major	ckan-v1.4	ckan				ckan	none

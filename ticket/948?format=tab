@@ -1,0 +1,4 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+948	Highlight (to a sysadmin) which packages are deleted	dread		"When a customer logs in as a sysadmin then he/she see all packages, including deleted and pending ones. These are hidden to the average user, but the sysadmin has no idea of this until he clicks on the package and sees at the bottom 'state: deleted'. 
+
+It should be more obvious than that on the search view - an icon, message or crossed-out name to packages are deleted."	enhancement	assigned	minor	ckan-future	ckan				ckan	none

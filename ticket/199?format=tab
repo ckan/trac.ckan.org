@@ -1,0 +1,16 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+199	Fix failing tests and provide documentation on how to run tests in datapkg	casbon	rgrp	"As of 80:099bdc5b07a6 datapkg has 4 test fails and 1 test error.
+
+There is no documentation on how to run them, so I am using 'python setup.py test'.
+
+{{{
+datapkg.tests.test_cli.TestCLI.test_ckan ... FAIL
+datapkg.tests.test_cli.TestCLI.test_walkthrough ... FAIL
+datapkg.tests.test_index.TestDbIndex.test_get ... /Users/james/Documents/virtualenvs/okfn/src/datapkg/datapkg/index.py:97: SADeprecationWarning: Use session.add()
+  self.session.update(pkg)
+FAIL
+datapkg.tests.test_index.TestDbIndex.test_get_when_loaded_as_new_and_init_not_called ... /Users/james/Documents/virtualenvs/okfn/src/datapkg/datapkg/tests/test_index.py:57: SADeprecationWarning: Use session.expunge_all()
+  self.index.session.clear()
+FAIL
+}}}
+"	defect	closed	major		dpm	fixed				

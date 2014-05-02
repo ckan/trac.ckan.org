@@ -1,0 +1,9 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1657	Configuration for reverse proxying	ross	ross	"Provide configuration for reverse proxying that will correctly handle the mapping of a URL to a sub-folder (using X-SCRIPT-NAME)
+
+* Analysis of the best solution [1d]
+
+* Implement reverse proxying in tandem with #1653  [2d]
+
+* Document and store the configuration files. [1d]
+"	enhancement	closed	awaiting triage		ckan	wontfix	[4d]		ckan	none

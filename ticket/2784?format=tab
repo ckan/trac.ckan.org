@@ -1,0 +1,2 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2784	model dictize sensitive data	icmurray	icmurray	The model dictize layer doesn't consistently remove sensitive data from the dictized models.  It should use the current context to decide whether to include sensitive data or not.	defect	new	awaiting triage		ckan				ckan	none

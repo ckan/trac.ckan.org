@@ -1,0 +1,6 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1447,disk space leakage,dread,kindly,"Periodically we see some CKAN servers fall over because they run out of disk space. We need to find out if there is a common cause and fix it.
+
+One problem in the past has been file handles running out when creating lots of tiny files in the data directory.
+
+Another problem has been several enourmous backups being created every day - pdeu on eu25.",defect,assigned,major,ckan-backlog,ckan,,,nils.toedtmann@… pudo,ckan,none

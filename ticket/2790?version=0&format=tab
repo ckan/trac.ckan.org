@@ -1,0 +1,9 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2790	logic.action.user_show is slow	toby	kindly	"This is a very slow call it would benefit from the sort of speed-ups that package-search received
+
+for me locally this is taking 6 seconds for rufus using the datahub data I have I think a lot of this is the dataset retrival/dictization
+can we just grab json blobs from solr?
+
+also is it possible to specify a sort order/paging?
+
+I've put this as a demo-theme ticket as it is an big issue on the demo we are at 25 second page loads - which i can get down to about 8.8 secs so this is the main pain point now"	enhancement	new	awaiting triage	demo phase 3	ckan				ckan	none

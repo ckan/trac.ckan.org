@@ -1,0 +1,2 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1196,Markdown logging ignores config settings,dread,dread,"Markdown produces Debug logging, even when the pylons logging config is set to level of Info or Warning. This clogs up the logfile.",defect,closed,minor,ckan-v1.5-sprint-3,ckan,fixed,,,ckan,none

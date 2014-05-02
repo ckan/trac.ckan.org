@@ -1,0 +1,17 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+888	Improvements to the dataproxy and the data API	rgrp	johnglover	"First version of dataproxy and data API working (ticket:698) but have identified a variety of important improvements. (Should split these into sub-tickets ...):
+
+For dataproxy:
+
+  * Testing for dataproxy
+    * Can start by using known good remote urls (moving forward could switch to providing/mocking these locally)
+  * Remove content-lenght for csv requirement: just read the first x rows (up to some configurable maximum)
+  * Google docs style row/column selections
+  * Use the swiss library - https://bitbucket.org/okfn/swiss
+    * Support google docs spreadsheets (format = service/gdocs/ccc or gdocs/ccc or gdocs/spreadsheet)
+  * Handle redirects for content-length?
+  * Ignore resource type if not recognized and fall-back to trying to identify from extension (or mime-type?)
+
+For dataapi:
+
+  * Ensure we pass on resource format as part of redirect i.e. /api/data/{id} -> {dataproxy}?url={resource-url}&type={resource-type}"	enhancement	closed	major	ckan-sprint-2011-10-28	ckan	fixed			ckan	none

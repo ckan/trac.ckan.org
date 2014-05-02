@@ -1,0 +1,476 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      #876 (Support sqlite as a database backend for CKAN)
+     – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="prev" href="875.html" title="Ticket #875" />
+        <link rel="last" href="3030.html" title="Ticket #3030" />
+        <link rel="help" href="../wiki/TracGuide.html" />
+        <link rel="alternate" href="876%3Fformat=csv" type="text/csv" class="csv" title="Comma-delimited Text" /><link rel="alternate" href="876%3Fformat=tab" type="text/tab-separated-values" class="tab" title="Tab-delimited Text" /><link rel="alternate" href="876%3Fformat=rss" type="application/rss+xml" class="rss" title="RSS Feed" />
+        <link rel="next" href="877.html" title="Ticket #877" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/ticket.css" type="text/css" />
+        <link rel="first" href="1.html" title="Ticket #1" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript">
+      var auto_preview_timeout=2.0;
+      var form_token="93d81ccf9a7bb1c456462f62";
+    </script>
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script><script type="text/javascript" src="../chrome/common/js/wikitoolbar.js"></script><script type="text/javascript" src="../chrome/common/js/resizer.js"></script><script type="text/javascript" src="../chrome/common/js/auto_preview.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("div.description").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $(".foldable").enableFolding(false, true);
+        var args = {realm: "ticket", id: 876, escape_newlines: 0}
+        $("#comment").autoPreview("/wiki_render", args, function(textarea, text, rendered) {
+            $("#ticketchange div.comment").html(rendered);
+            if (rendered)
+              $("#ticketchange").show();
+            else if ($("#ticketchange ul.changes").length == 0)
+              $("#ticketchange").hide();
+        });
+        $("#trac-comment-editor textarea").autoPreview("/wiki_render", args,
+                                                       function(textarea, text, rendered) {
+          var comment = $("#trac-comment-editor").next("div.comment");
+          comment.html(rendered);
+          if (rendered)
+            comment.show();
+          else
+            comment.hide();
+        });
+        $("#modify").parent().toggleClass("collapsed");
+        $(".trac-topnav a").click(function() { $("#modify").parent().removeClass("collapsed"); });
+        /* only enable control elements for the currently selected action */
+        var actions = $("#action input[name='action']");
+        function updateActionFields() {
+          actions.each(function () {
+            $(this).siblings().find("*[id]").enable($(this).checked());
+            $(this).siblings().filter("*[id]").enable($(this).checked());
+          });
+        }
+        actions.click(updateActionFields);
+        updateActionFields();
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="../wiki/TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li class="active"><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="875.html" title="Ticket #875">Previous Ticket</a></span></li><li class="last"><span><a class="next" href="877.html" title="Ticket #877">Next Ticket</a> &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="ticket">
+      <h1 id="trac-ticket-title">
+          <a href="876.html">Ticket #876</a>
+          <span class="status">(closed enhancement: fixed)</span>
+      </h1>
+      <div id="ticket">
+  <div class="date">
+    <p>Opened <a class="timeline" href="../timeline%3Ffrom=2010-12-20T15:25:11Z&amp;precision=second.html" title="2010-12-20T15:25:11Z in Timeline">3 years</a> ago</p>
+    <p>Last modified <a class="timeline" href="../timeline%3Ffrom=2011-01-11T13:51:29Z&amp;precision=second.html" title="2011-01-11T13:51:29Z in Timeline">3 years</a> ago</p>
+  </div>
+  <h2 class="summary searchable">Support sqlite as a database backend for CKAN</h2>
+  <table class="properties">
+    <tr>
+      <th id="h_reporter">Reported by:</th>
+      <td headers="h_reporter" class="searchable">
+        <a href="../query%3Fstatus=!closed&amp;reporter=rgrp.html">rgrp</a>
+      </td>
+      <th id="h_owner">Owned by:</th>
+      <td headers="h_owner">
+        <a href="../query%3Fstatus=!closed&amp;owner=sebbacon.html">sebbacon</a>
+      </td>
+    </tr>
+    <tr>
+        <th id="h_priority">
+          Priority:
+        </th>
+        <td headers="h_priority">
+              <a href="../query%3Fstatus=!closed&amp;priority=critical.html">critical</a>
+        </td>
+        <th id="h_milestone">
+          Milestone:
+        </th>
+        <td headers="h_milestone">
+              <a class="closed milestone" href="../milestone/ckan-v1.3-sprint-2.html">ckan-v1.3-sprint-2</a>
+        </td>
+    </tr><tr>
+        <th id="h_component">
+          Component:
+        </th>
+        <td headers="h_component">
+              <a href="../query%3Fstatus=!closed&amp;component=ckan.html">ckan</a>
+        </td>
+        <th id="h_keywords">
+          Keywords:
+        </th>
+        <td headers="h_keywords" class="searchable">
+        </td>
+    </tr><tr>
+        <th id="h_cc">
+          Cc:
+        </th>
+        <td headers="h_cc" class="searchable">
+        </td>
+        <th id="h_repo">
+          Repository:
+        </th>
+        <td headers="h_repo">
+              <a href="../query%3Fstatus=!closed.html"></a>
+        </td>
+    </tr><tr>
+        <th id="h_theme">
+          Theme:
+        </th>
+        <td headers="h_theme">
+              <a href="../query%3Fstatus=!closed.html"></a>
+        </td>
+        <th>
+        </th>
+        <td>
+        </td>
+    </tr>
+  </table>
+  <div class="description">
+    <h3 id="comment:description">
+      Description
+    </h3>
+    <div class="searchable">
+      <p>
+Among other things this will allow the tests to run much quicker.
+</p>
+
+    </div>
+  </div>
+</div>
+          
+
+        <div>
+          <h2 class="foldable">Change History</h2>
+          <div id="changelog">
+              <div class="change" id="trac-change-1">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:1" class="cnum">
+      <a href="876.html#comment:1">comment:1</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2010-12-21T00:25:33Z&amp;precision=second.html" title="2010-12-21T00:25:33Z in Timeline">3 years</a> ago by kindly@…
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+I have looked into this already so I can give you a head start.  I am working on a project that uses many backends so I have some experience. So here is what I have found so far. 
+</p>
+<h2 id="nestedtransactions">nested transactions</h2>
+<p>
+VDM does not support sqlite, as it uses nested transactions.  I do not think vdm needs nested transactions. It can use a flush instead.  Here is the patch that works. All vdm tests pass.
+</p>
+<pre class="wiki">--- a/vdm/sqlalchemy/base.py	Sat Sep 11 23:06:26 2010 +0000
++++ b/vdm/sqlalchemy/base.py	Mon Dec 20 16:16:34 2010 +0000
+@@ -40,9 +40,8 @@
+         self.setattr(session, 'HEAD', True)
+         self.setattr(session, 'revision', revision)
+         if revision.id is None:
+-            session.begin_nested()
+             session.add(revision)
+-            session.commit()
++            session.flush()
+</pre><h2 id="indexes">indexes</h2>
+<p>
+The index file 021_postgres_upgrade.sql in the migrate repository will not run as it uses syntax particular to postgres. Another will need to be made thats similar. sqlite does not support complex indexes like upper(text), so a work around will need to be found.
+</p>
+<h2 id="unicode">unicode</h2>
+<p>
+The harvesting returns utf8 encoded strings and pysqlite dbapi only supports python unicode objects (as far as I can tell).  There will need to be a process in converting all strings that get into the database with string.decode("utf8")
+</p>
+<h2 id="dates">dates</h2>
+<p>
+Have not looked into this one too much. However, as sqlite stores everything as strings the timestamps appear to be failing on conversion back into python.
+</p>
+<p>
+I have solved the above two issues before by adding attribute extensions to sqlalchemy mappers to do the conversions without effecting too much code.
+</p>
+<h2 id="inmemorysqlite">in memory sqlite</h2>
+<p>
+Some tests need to change in order to make sure the database is created first because the database gets lost each time.  In the tests that I have made pass, they run in about a seventh of the time as they do on postgres. 
+</p>
+<h2 id="Otherthingstokeepinmind.">Other things to keep in mind.</h2>
+<ul><li>Need a new flag in test.ini to remove full text indexing completely, or always use it with solr.
+</li><li>There are enough incompatibilities between the databases that you would also want to test against postgres as well, at least before a release.  
+</li><li>I would probably upgrade sqlalchemy first, so you will not have to the changes twice. The new versions are significantly faster too.
+</li><li>I have submitted a patch to <a class="closed ticket" href="868.html" title="enhancement: Test improvements (closed: fixed)">#868</a> that makes the tests run about 2.5 times as fast and I think there are more low hanging fruit if the aim is test speed. 
+</li></ul>
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-2">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:2" class="cnum">
+      <a href="876.html#comment:2">comment:2</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2010-12-21T09:34:24Z&amp;precision=second.html" title="2010-12-21T09:34:24Z in Timeline">3 years</a> ago by sebbacon
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+Thanks for the info!
+</p>
+<p>
+Re. nested transactions.  I am getting repeated non-deterministic test failures against sqlite (and indeed postgres, but these failures appear more frequent against sqlite).  One of them I seemed to be able to get rid of by eliminating the savepoint as per your first point.  However, it appears that sqlite <a class="ext-link" href="http://www.sqlite.org/lang_savepoint.html"><span class="icon">​</span>does</a> support savepoints; to demonstrate it, the following test code appears to work in the latest sqlalchemy:
+</p>
+<div class="code"><pre><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="kn">import</span> <span class="o">*</span>
+
+db <span class="o">=</span> create_engine<span class="p">(</span><span class="s">'sqlite:///'</span><span class="p">)</span>
+
+metadata <span class="o">=</span> MetaData<span class="p">(</span>db<span class="p">)</span>
+
+users <span class="o">=</span> Table<span class="p">(</span><span class="s">'users'</span><span class="p">,</span> metadata<span class="p">,</span>
+    Column<span class="p">(</span><span class="s">'user_id'</span><span class="p">,</span> Integer<span class="p">,</span> primary_key<span class="o">=</span><span class="bp">True</span><span class="p">),</span>
+    Column<span class="p">(</span><span class="s">'name'</span><span class="p">,</span> String<span class="p">(</span><span class="mi">40</span><span class="p">)),)</span>
+users<span class="o">.</span>create<span class="p">()</span>
+
+<span class="k">class</span> <span class="nc">User</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+usermapper <span class="o">=</span> mapper<span class="p">(</span>User<span class="p">,</span> users<span class="p">)</span>
+
+Session <span class="o">=</span> sessionmaker<span class="p">()</span>
+session <span class="o">=</span> Session<span class="p">()</span>
+
+fred <span class="o">=</span> User<span class="p">()</span>
+fred<span class="o">.</span>name <span class="o">=</span> <span class="s">"Fred"</span>
+
+sue <span class="o">=</span> User<span class="p">()</span>
+sue<span class="o">.</span>name <span class="o">=</span> <span class="s">"Sue"</span>
+
+amy <span class="o">=</span> User<span class="p">()</span>
+amy<span class="o">.</span>name <span class="o">=</span> <span class="s">"Amy"</span>
+
+session<span class="o">.</span>add<span class="p">(</span>fred<span class="p">)</span>
+session<span class="o">.</span>add<span class="p">(</span>amy<span class="p">)</span>
+session<span class="o">.</span>begin_nested<span class="p">()</span>
+session<span class="o">.</span>add<span class="p">(</span>sue<span class="p">)</span>
+session<span class="o">.</span>rollback<span class="p">()</span>
+session<span class="o">.</span>commit<span class="p">()</span>
+<span class="k">assert</span> session<span class="o">.</span>query<span class="p">(</span>User<span class="p">)</span><span class="o">.</span>count<span class="p">()</span> <span class="o">==</span> <span class="mi">2</span>
+<span class="k">print</span> <span class="s">"OK"</span>
+
+</pre></div><p>
+So, while I agree they're not needed, I'm not sure they're a problem.  What do you think?  Also, have you seen non-deterministic test errors like this?
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-3">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:3" class="cnum">
+      <a href="876.html#comment:3">comment:3</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2010-12-21T13:55:11Z&amp;precision=second.html" title="2010-12-21T13:55:11Z in Timeline">3 years</a> ago by kindly@…
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+I have read quite a lot of people having problems with savepoints with sqlite and thought they were not supported on sqlalchemy.  They are at least not consistant with postgres ones.  I may well be out of date on this.  
+Here is an <a class="ext-link" href="http://groups.google.com/group/sqlalchemy/browse_thread/thread/dc9d1b61044bf730/65a62a33ec313842?lnk=gst&amp;q=no+such+savepoint#65a62a33ec313842"><span class="icon">​</span>example</a> even though its a bit old. 
+</p>
+<p>
+I did get some non deterninistic errors, the above seemed to fix them. A failed subtransaction is not handled well by sqlalchemy and I think this causes knockon effects due to the unresolved transaction.  I would stay well clear of them entirely if possible.
+</p>
+<p>
+What are the errors you are getting??
+</p>
+<p>
+My 2 cents. ignore me at will...
+</p>
+<p>
+I would think about using a different backend for testing than production. <a class="ext-link" href="http://stackoverflow.com/questions/2716847/sqlalchemy-sqlite-for-testing-and-postgresql-for-development-how-to-port"><span class="icon">​</span>look here</a>.
+If you want to support both then you should test on both. 
+There are simple ways to scrape a few more minutes off the tests.  If you want real speed, then a multiprocess solution (with a database per core) would be sensible if a bit tricky.
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-4">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:4" class="cnum">
+      <a href="876.html#comment:4">comment:4</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2010-12-24T10:54:48Z&amp;precision=second.html" title="2010-12-24T10:54:48Z in Timeline">3 years</a> ago by anonymous
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+Thanks for your feedback, very useful.  
+</p>
+<p>
+I don't really agree with the people in the linked discussion who say it's pointless testing against a different database from production.
+</p>
+<p>
+The goal here is to make it easy enough for people to run as many tests as possible that they actually do so.  Even 15 minutes is too long in that case.  With sqlite we can get it in at under 5 minutes.  I would also like to identify the longest running tests (which I would characterise as "functional" or "integration" tests and make them run as a separate suite, and then encourage a culture of writing true unit tests before functional tests, so that running unit tests can happen in 1 minute and be part of the regular development cycle.
+</p>
+<p>
+That's no replacement for also running *all* tests periodically, and also running tests under postgres, which we can continue to do on the continuous integration server.  
+</p>
+<p>
+Longer term I agree that it would be better to run local tests against postgres too, but that will I think involve refactoring many of the tests.
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-5">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:5" class="cnum">
+      <a href="876.html#comment:5">comment:5</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2010-12-24T19:25:14Z&amp;precision=second.html" title="2010-12-24T19:25:14Z in Timeline">3 years</a> ago by anonymous
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+I agree with all your points about testing apart form using sqlite, especially splitting out the functional tests and continuous integration.
+</p>
+<blockquote class="citation">
+<p>
+Longer term I agree that it would be better to run local tests against postgres too, but that will I think involve refactoring many of the tests. 
+</p>
+</blockquote>
+<p>
+Well there are two options
+</p>
+<ol><li>refactor the tests
+</li><li>refactor the code to use sqlite and postress
+</li></ol><p>
+It is a value judgment as to which is more complicated. I personally think 2 is more complicated but may be wrong on that. The real danger with 2 is that you are needlessly adding complication to production code, with 1 you are only changing the tests.
+</p>
+<p>
+Upgrading to sqlalchemy 0.5+ should happen first regardless.  You will need upto date documentation. 
+</p>
+<p>
+There is another option too.  Put the postgres data directory on tempfs/ramfs and turn off durability <a class="ext-link" href="http://www.postgresql.org/docs/9.0/static/non-durability.html"><span class="icon">​</span>here</a>.  We would need a way to db init before the tests where run (or) at boot). This may be the best of both worlds.
+</p>
+<p>
+Anyway Happy xmas!!
+</p>
+<p>
+ 
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-6">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:6" class="cnum">
+      <a href="876.html#comment:6">comment:6</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-01-11T13:51:29Z&amp;precision=second.html" title="2011-01-11T13:51:29Z in Timeline">3 years</a> ago by dread
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Status</strong>
+        changed from <em>new</em> to <em>closed</em>
+    </li><li>
+      <strong>Resolution</strong>
+        set to <em>fixed</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+Seb and David have completed this I believe. I've merged the changes into core CKAN in cset:68d63fda4814.
+</p>
+
+    </div>
+
+              </div>
+          </div>
+        </div>
+      <div id="help"><strong>Note:</strong> See
+        <a href="../wiki/TracTickets.html">TracTickets</a> for help on using
+        tickets.</div>
+    </div>
+    <script type="text/javascript">
+        jQuery.loadStyleSheet("/pygments/trac.css", "text/css");
+    </script>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="first">
+          <a rel="nofollow" href="876%3Fformat=csv" class="csv">Comma-delimited Text</a>
+        </li><li>
+          <a rel="nofollow" href="876%3Fformat=tab" class="tab">Tab-delimited Text</a>
+        </li><li class="last">
+          <a rel="nofollow" href="876%3Fformat=rss" class="rss">RSS Feed</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

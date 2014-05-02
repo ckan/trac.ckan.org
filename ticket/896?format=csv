@@ -1,0 +1,15 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+896,Distributed Data and Syncing Between CKAN Instances,thejimmyg,,"Based on the ideas in:
+
+ * DistributingChanges
+ * SyncingInstances
+
+Merging the tickets #296, #297, #298, #299 into this one.
+
+Related ideas include:
+
+ * Using dcat to exchange data
+ * Using couchDB to have a stub package record synchronised between multiple CKAN instances, each linking to the main record in the correct instance
+
+This should be considered a wishlist item for the timebeing.
+",story,closed,minor,,ckan,duplicate,,,,

@@ -1,0 +1,29 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1547,Add search methods (before and after) to the IPackageController interface,amercader,amercader,"Time estimate: 1d
+
+Add a two search method to the IPackageController interface so extensions can:
+
+ * Modify the query being sent to Solr 
+
+ {{{
+
+def before_search(search_params):
+
+    return search_params
+
+}}}
+
+ * Modify the results returned (`after_search`)
+
+ {{{
+
+def after_search(search_results, search_params):
+
+    return search_results
+
+}}}
+
+
+Please see this pad for implementation details:
+
+http://ckan.okfnpad.org/search",enhancement,new,major,current-ckan-sprint-2012-01-23,ckan,,search,,ckan,none

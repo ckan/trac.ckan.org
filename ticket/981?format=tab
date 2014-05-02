@@ -1,0 +1,2 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+981	fix authorization_group_user.id so it's added in migrate	kindly	kindly	This was missed out the migrate script. It should be to be added as a conditional script at the end of the repository so that databases can catch up.	defect	closed	critical	ckan-v1.4-sprint-2	ckan	fixed				

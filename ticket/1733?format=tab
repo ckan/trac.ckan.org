@@ -1,0 +1,22 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1733	Delete (inactivate) harvest sources	amercader	amercader	"Right now harvest sources can be inactivated (only via the cli), but we need to make sure:
+
+ * Expose this on the web interface (only for sysadmins, see #1731)
+ * Inactive sources are not shown in the web interface
+
+Also for deleted packages:
+
+ a) Deleted packages get state=""deleted"" (not actually purged) so they are hidden on front end
+ ACTION: need a button on the front end for ""Delete"" for sysamdins
+Done in #1425. Not sure if the button is only shown to sysadmins.
+
+ b) No undelete: If you reharvest a deleted package, it remains deleted
+   * Publisher should create a new record with new identifier and same/different content as applicable.
+   * If publisher reharvests, a deleted document they get a error and are told to create new identifier for their updated.
+   * You won't get the state where a package is updated in its deleted state
+   * If they change the ID and reharvest, a new record appears on DGU.
+ c) Update CSW interface so that export doesn't export deleted packages
+ d) Check geospatial search doesn't search deleted pacakges
+ e) Check deleted packages don't appear in harvest source details, or in the counts or anywhere in the harvest interface or API.
+
+"	enhancement	closed	major	ckan-sprint-2012-02-20	ckan	fixed	harvesting, uklp, 2d		ckanext-harvest	none

@@ -1,0 +1,17 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1324,Add extra fields to resource table,kindly,kindly,"add extra fields to resource as outlined in
+
+http://wiki.ckan.net/Domain_Model/Resource
+
+Specifically (all unicode strings except for those noted):
+
+ * ''name'': a name for this resource (could be used in a ckan url)
+ * ''type'': the type of the resource. One of: file | api | service | listing
+ * ''mimetype'': standard mimetype (e.g. for zipped csv would be application/zip)
+ * ''mimetype_inner'': mimetype of innermost object (so for example would be text/csv)
+ * ''size'': [integer] size of the resource (content length) in bytes. Usually only relevant for resources of type file.
+ * ''last_modified'': [datetime] the date when this resource's data was last modified (NB: ''not'' the date when the metadata was modified).
+ * cache_url: url for cache of object in ckan storage
+ * cache_last_updated: [datetime] timestamp when cached version was created
+ * webstore_url: 
+ * webstore_last_updated: [datetime] timestamp when webstore was last updated",enhancement,closed,awaiting triage,ckan-sprint-2011-09-12,ckan,fixed,,,ckan,none

@@ -1,0 +1,9 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2389,More robust handling of DataExplorer errors,amercader,amercader,"US-0a
+
+Do not show failed preview with red-bar (esp when just empty datastore ...)
+ * Data Viewer checks if datastore is empty nad falls back to ther options if emtpy 
+ * DataStore enabled is off by default and only turned on either explicitly by user or by DataStorer on successful store ...
+
+Loading/showing error reports
+",defect,closed,major,ckan-v1.8,ckan,fixed,,,ckan,none

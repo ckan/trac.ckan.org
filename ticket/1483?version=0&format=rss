@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1483: Tasks sometimes fail to update task_status table when trying to report a failure</title>
+    <link>http://localhost/ticket/1483</link>
+    <description>&lt;p&gt;
+The error reports do not have a "value".  The original task in the task status table is not made and it tries to make a new task, but can't.
+&lt;/p&gt;
+&lt;p&gt;
+Issue: why is the original task_status entry not made?
+&lt;/p&gt;
+&lt;p&gt;
+kindly: there is a chance of course that the task is quicker than the plugin to get to the point where it needs to update the table.
+kindly: so we may have to find a way to update the task status before we run the task.
+kindly: I think you can supply a task_id to celery. i.e we make our own guid as the task id. So we can use that one to populate the task status.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1483</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>johnglover</dc:creator>
+
+      <pubDate>Wed, 23 Nov 2011 12:18:08 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/1483#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1483#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1483?action=diff&amp;amp;version=1"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>johnglover</dc:creator>
+
+      <pubDate>Tue, 06 Dec 2011 10:43:42 GMT</pubDate>
+      <title>milestone changed</title>
+      <link>http://localhost/ticket/1483#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/1483#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan-sprint-2011-12-05&lt;/em&gt; to &lt;em&gt;current-ckan-sprint-2011-12-19&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>johnglover</dc:creator>
+
+      <pubDate>Wed, 07 Dec 2011 17:32:31 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/1483#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/1483#comment:3</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Fixed.
+&lt;/p&gt;
+&lt;p&gt;
+Updated logic layer:
+&lt;a class="ext-link" href="https://github.com/okfn/ckan/commit/520959ca6f83586d33cf7d4015d625a776ee46a1"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;https://github.com/okfn/ckan/commit/520959ca6f83586d33cf7d4015d625a776ee46a1&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+Updated tasks (qa, archiver, webstorer):
+&lt;a class="ext-link" href="https://github.com/okfn/ckanext-qa/commit/78cbf5c6d16225e1580aee23fdf884f88d2475f5"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;https://github.com/okfn/ckanext-qa/commit/78cbf5c6d16225e1580aee23fdf884f88d2475f5&lt;/a&gt;
+&lt;a class="ext-link" href="https://github.com/okfn/ckanext-qa/commit/8553348942adad0babd4bdd91820c1d75a1784a7"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;https://github.com/okfn/ckanext-qa/commit/8553348942adad0babd4bdd91820c1d75a1784a7&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a class="ext-link" href="https://github.com/okfn/ckanext-archiver/commit/8ed419280bd7f2e66aeb4f17f3f546d941fe11fb"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;https://github.com/okfn/ckanext-archiver/commit/8ed419280bd7f2e66aeb4f17f3f546d941fe11fb&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a class="ext-link" href="https://github.com/okfn/ckanext-webstorer/commit/d16fb090533a716c856e59838f79bbaa0ea42e76"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;https://github.com/okfn/ckanext-webstorer/commit/d16fb090533a716c856e59838f79bbaa0ea42e76&lt;/a&gt;
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

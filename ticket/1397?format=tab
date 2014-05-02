@@ -1,0 +1,45 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1397	[super] Resource archiving	rgrp	kindly	"We want to cache/archive data associated to a resource so it is available if the resource url disappears (and in order to support other processing we may wish to do e.g. webstorer ...)
+
+Etherpad: http://ckan.okfnpad.org/queue (most relevant parts inlined here)
+
+== Preliminaries ==
+
+ * Add task_status table to store qa/archiever/webstore information that does not need to be versioned. - #1363 (and #1371 - related logic functions)
+===  Configuration setup for daemons ===
+
+Pass config through to workers i.e site_url, user, api_key.
+Need to make site user account. #1408
+
+celeryd config:
+
+All providers of tasks will add an item to the following entry point:
+
+{{{
+[ckan.tasks]
+name = ckanext.{name}.tasks:....
+}}}
+
+celeryconfig.py
+
+{{{
+from pkg_resources import iter_entry_points
+for entry in iter_entry_points:
+     celeryimports.appen(....)
+
+CELERY_IMPORTS = celeryimports
+}}}
+
+== Work Items ==
+
+ * Resource change notifications in core - Make an IResourceChange and IResourceUrlChange. [1d] [0.75d] -  #1383
+ * Generate archiving request on resource url change [0.25d][0.25d] - #1399
+ * Make site user account.
+ * Make entry point system for celery config
+ * Archiver daemon #891
+   1. implement link-check function and task (point 2 from Archiver.update above) [1d] [0.5d]
+   2. Rewrite archiver to use external storage. (decide how!)[3d][~2d]
+ * Write to resource and task status table.[1d][0.75d]
+ * [Required?] Make archived data available in WUI - #892
+ * Documentation - #1400
+"	enhancement	closed	major	ckan-v1.7	ckan	fixed			ckan	none

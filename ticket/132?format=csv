@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+132,Security hole - read package/group list (REST),dread,rgrp,"Using REST interface you can list packages and groups without authorization being checked.
+
+Can be fixed using more advanced query to check authz.",defect,closed,minor,,ckan,fixed,,,,

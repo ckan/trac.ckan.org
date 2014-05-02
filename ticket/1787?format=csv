@@ -1,0 +1,5 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1787,[super] Improve RESTful API,dread,," * Lists of entities should be full URLs, rather than just the names
+ * Discoverability - /api/v3/rest should list the entity types that can be listed
+
+This could be v3 of the RESTful interface.",enhancement,new,awaiting triage,ckan-future,ckan,,,kindly,ckan,none

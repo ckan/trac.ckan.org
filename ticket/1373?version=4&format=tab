@@ -1,0 +1,10 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1373	home page view does not react to logging in / out	shevski		"Either: thedatahub.org does not display 'add a dataset' top navigation link or the 'create dataset' main central link to logged in user - instead showing 'sign up' link in the central box. It does however display the 'my account' and 'logout' link in the top right correctly.
+
+Navigating to another part of the site (e.g. search or about or my account) does bring the 'add a dataset' navigation link back and the functionality works.
+
+Works fine on test.ckan.net so only on thedatahub.
+
+Not obviously a caching problem, since I did try clearing cache.
+
+OR: it displays as if you're logged in even when you log out. The links doesn't work and prompt you to log in though."	defect	assigned	minor	ckan-sprint-2011-11-07	ckan				ckan	none

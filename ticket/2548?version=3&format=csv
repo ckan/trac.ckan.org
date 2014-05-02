@@ -1,0 +1,38 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2548,Clarify object ownership for groups/package,ross,ross,"
+== Requirements ==
+
+We need to be able to easily determine who the owner of a dataset or group is.  Datasets and Groups should have an Owner, who may change over time but is a specific user within the CKAN instance.  It should be easy for CKAN components to determine the user and for the initial version we should ignore the can of worms labelled 'ownership transfer'.
+
+At this point migration is likely to be the biggest issue, and would suggest that it is acceptable that the last user to edit a dataset be set as the current owner.
+
+More tickets should arise as a result of this work where we may be able to optimise some queries to use the new feature.
+
+
+== Interface ==
+
+None
+
+
+== User Stories ==
+
+None
+
+
+== Tasks ==
+
+[ ] Analysis/Clarification
+
+[ ] Tests
+
+[ ] Migration
+
+[ ] Code/Schema changes
+
+[ ] Documentation
+
+
+== Estimates ==
+
+
+",enhancement,accepted,awaiting triage,datahub-july,ckan,,,,ckan,none

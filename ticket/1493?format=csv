@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1493,'search-index rebuild/clear' doesn't work if no ckan.site_id,dread,dread,"You can't delete things from the SOLR search index if the ckan.site_id and ckan.site_url are blank.
+
+Should assert that one of these are set up.",defect,closed,minor,ckan-sprint-2011-12-05,ckan,fixed,,,ckan,none

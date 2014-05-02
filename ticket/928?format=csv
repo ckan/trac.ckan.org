@@ -1,0 +1,9 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+928,Documentation - CKAN credits / contributors page,rgrp,rgrp," 1. Remove contributors list from about page (out-of-date and does not belong there)
+  * A ""Powered by CKAN"" link in footer is enough
+ 2. Add contributors / team / credits page to ckan.org
+  * May want to separate credits (e.g. software use), from contributors (also is team different from contributors)
+  * (perhaps with photos!) so that people can see who is part of it and from which organisations. (this is medium-term, not really part of this ticket)
+ 3. ? CREDITS.txt file to the source repository and add a link to it on bitbucket for more detailed credits info.
+
+Cost: 1h",enhancement,closed,major,ckan-v1.4-sprint-1,ckan,fixed,,,,

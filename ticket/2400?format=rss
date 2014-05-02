@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2400: Password reset fails</title>
+    <link>http://localhost/ticket/2400</link>
+    <description>&lt;p&gt;
+One user reports that after resetting the password via the reset form he was unable to log in again. He did have an email address associated and received the reset email. After updating his password, login failed
+&lt;/p&gt;
+&lt;pre class="wiki"&gt;"Login failed. Bad username or password. (Or if using OpenID, it hasn't been associated with a user account.)"
+&lt;/pre&gt;</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2400</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>toby</dc:creator>
+
+      <pubDate>Mon, 28 May 2012 11:52:27 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/2400#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/2400#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;worksforme&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+In testing this is not replicable due to lack of info so closing
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1183,"Downloads ""Preview"" button doesn't preview.",nickstenning,johnglover,"The ""Preview"" button is a nice idea, but it doesn't seem to actually ""preview"" anything if the file MIME type would ordinarily cause the browser to download the file. If so, the browser does indeed just download the file.
+
+This is notable in the context of most hosted file services (including Google Storage) which will deliberately serve a MIME type of `application/x-some-junk-here` in order to force a download.",defect,closed,awaiting triage,ckan-sprint-2011-10-28,ckan,fixed,,,ckan,none

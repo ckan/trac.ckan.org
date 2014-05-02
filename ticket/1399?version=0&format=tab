@@ -1,0 +1,9 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1399	Generate archiving request on resource url change	rgrp	kindly	"Superticket: #1397
+
+Process:
+
+ 0. A resource is added to CKAN
+ 1. IResourceCreate event generated
+ 2. IF: resource url points to ckan storage or falls within some other set of exclusion conditions then END else continue
+ 3. Generate a Archiver.Update task with resource.id"	enhancement	new	major	ckan-sprint-2011-10-24	ckan				ckan	none

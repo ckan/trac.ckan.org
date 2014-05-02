@@ -1,0 +1,8 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2942	API POST barfs on interesting Content-Type headers	dread	dread	"When POSTing to the API, if specified, the 'Content-Type' header must be blank or 'application/x-www-form-urlencoded'. Otherwise we get an error like: ""Bad request - JSON Error: Could not extract request body data: Bad content type: \'; charset=utf-8\'""""
+
+The problem is that this is a very reasonable header to send. Indeed requests 0.14 sends this particular header.
+
+This affects all versions of CKAN.
+
+This is due to webob/requests.py:1248 being pretty basic."	defect	closed	minor		ckan	wontfix			ckan	none

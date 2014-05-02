@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2475,Upgrade trac.ckan.org to trac 0.12.3,seanh,seanh,"This is not trivial, requires a database upgrade. But 0.12.3 has some nice new features (multiple vcs repository support, ticket comment editing and nicer preview) and the latest spam filter plugin requires 0.12.
+
+http://trac.edgewall.org/wiki/ChangeLog",enhancement,accepted,awaiting triage,ckan-v1.9,ckan,,trac,,ckan,none

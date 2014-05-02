@@ -1,0 +1,9 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1584,QA report improvements - 2.5d,johnglover,johnglover,"Super: #1594
+
+ * qa/{username}
+ * qa/{groupname}
+ * paginate QA results
+ * search / filter QA results
+ * don't list organisation report by default, specific to DGU, enable via config option or similar
+ * UX tidy up of report pages - hide border if no sidebar, etc",enhancement,new,major,ckan-backlog,ckan,,qa,,ckan,none

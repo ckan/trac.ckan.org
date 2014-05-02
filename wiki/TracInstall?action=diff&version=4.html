@@ -1,0 +1,1307 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+    <html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      TracInstall (diff) – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="help" href="TracGuide.html" />
+        <link rel="up" href="TracInstall%3Faction=history.html" title="Page history" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/wiki.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/diff.css" type="text/css" />
+        <link rel="prev" href="TracInstall%3Faction=diff&amp;version=3.html" title="Version 3" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/diff.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="../chrome/common/css/diff.css" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last active"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="TracInstall%3Faction=diff&amp;version=3.html" title="Version 3">Previous Change</a></span></li><li><a href="TracInstall%3Faction=history.html" title="Page history">Wiki History</a></li><li class="last"><span class="missing">Next Change &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="wiki">
+      <h1>
+        Changes between
+          <a href="TracInstall%3Fversion=3.html">Version 3</a> and
+          <a href="TracInstall%3Fversion=4.html">Version 4</a> of
+          <a href="TracInstall%3Fversion=4.html">TracInstall</a>
+      </h1>
+      <form method="post" id="prefs" action="TracInstall%3Fversion=4.html"><div><input type="hidden" name="__FORM_TOKEN" value="93d81ccf9a7bb1c456462f62" /></div>
+        <div>
+          <input type="hidden" name="action" value="diff" />
+          <input type="hidden" name="version" value="4" />
+          <input type="hidden" name="old_version" value="3" />
+          
+  <label for="style">View differences</label>
+  <select id="style" name="style">
+    <option selected="selected" value="inline">inline</option>
+    <option value="sidebyside">side by side</option>
+  </select>
+  <div class="field">
+    <label><input type="radio" name="contextall" value="0" checked="checked" />
+             Show</label>
+      <label><input type="text" name="contextlines" id="contextlines" size="2" maxlength="3" value="2" />
+             lines around each change</label><br />
+    <label><input type="radio" name="contextall" value="1" />
+           Show the changes in full context</label>
+  </div>
+  <fieldset id="ignore">
+    <legend>Ignore:</legend>
+    <div class="field">
+      <input type="checkbox" id="ignoreblanklines" name="ignoreblanklines" />
+      <label for="ignoreblanklines">Blank lines</label>
+    </div>
+    <div class="field">
+      <input type="checkbox" id="ignorecase" name="ignorecase" />
+      <label for="ignorecase">Case changes</label>
+    </div>
+    <div class="field">
+      <input type="checkbox" id="ignorewhitespace" name="ignorewhitespace" />
+      <label for="ignorewhitespace">White space changes</label>
+    </div>
+  </fieldset>
+  <div class="buttons">
+    <input type="submit" name="update" value="Update" />
+  </div>
+
+        </div>
+      </form>
+      <dl id="overview">
+        <dt class="property time">Timestamp:</dt>
+        <dd class="time">
+            05/02/14 01:33:04 (<a class="timeline" href="../timeline%3Ffrom=2014-05-02T01:33:04Z&amp;precision=second.html" title="2014-05-02T01:33:04Z in Timeline">7 minutes</a> ago)
+        </dd>
+        <dt class="property author">Author:</dt>
+        <dd class="author">
+          trac
+        </dd>
+        <dt class="property message">Comment:</dt>
+        <dd class="message">
+          
+          <p>
+--
+</p>
+
+        </dd>
+      </dl>
+      <div class="diff">
+        <div class="legend" id="diff-legend">
+          <h3>Legend:</h3>
+          <dl>
+            <dt class="unmod"></dt><dd>Unmodified</dd>
+            <dt class="add"></dt><dd>Added</dd>
+            <dt class="rem"></dt><dd>Removed</dd>
+            <dt class="mod"></dt><dd>Modified</dd>
+          </dl>
+        </div>
+        <div class="diff">
+  <ul class="entries">
+      <li class="entry">
+        <h2 id="file0">
+          <a href="TracInstall%3Fversion=4.html">TracInstall</a>
+        </h2>
+        <table class="trac-diff inline" summary="Differences" cellspacing="0">
+              <colgroup><col class="lineno" /><col class="lineno" /><col class="content" /></colgroup>
+              <thead>
+                <tr>
+                  <th title="Version 3">
+                    <a href="TracInstall%3Fversion=3.html#L1">
+                      v3</a>
+                  </th>
+                  <th title="Version 4">
+                    <a href="TracInstall%3Fversion=4.html#L1">
+                      v4</a>
+                  </th>
+                  <td> </td>
+                </tr>
+              </thead>
+            <tbody class="mod">
+                      <tr class="first">
+                        <th>1</th><th> </th><td class="l"><span>= Trac Installation Guide for 0.1<del>1</del> = </span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>1</th><td class="r"><span>= Trac Installation Guide for 0.1<ins>2</ins> = </span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>2</th><th>2</th><td class="l"><span>[[TracGuideToc]]</span> </td>
+                  </tr><tr>
+                          <th>3</th><th>3</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>4</th><th>4</th><td class="l"><span>Trac is written in the Python programming language and needs a database, [http://sqlite.org/ SQLite], [http://www.postgresql.org/ PostgreSQL], or [http://mysql.com/ MySQL]. For HTML rendering, Trac uses the [http://genshi.edgewall.org Genshi] templating system.</span> </td>
+                  </tr><tr>
+                          <th>5</th><th>5</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>6</th><th> </th><td class="l"><span><del>What follows are generic instructions for installing and setting up Trac and its requirements. While you can find instructions for installing Trac on specific systems at TracInstallPlatforms on the main Trac site, please be sure to '''first read through these general instructions''' to get a good understanding of the tasks involved</del>.</span> </td>
+                      </tr><tr>
+                        <th>7</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>8</th><th> </th><td class="l"><span>== Short - Install a released version ==</span> </td>
+                      </tr><tr>
+                        <th>9</th><th> </th><td class="l"><span>For the quick install, make sure you have [http://python.org Python-2.5], [http://peak.telecommunity.com/DevCenter/EasyInstall#installing-easy-install easy_install] and SQlite-3.3.4 installed (or above).</span> </td>
+                      </tr><tr>
+                        <th>10</th><th> </th><td class="l"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th>11</th><th> </th><td class="l"><span>sudo easy_install Trac==0.11</span> </td>
+                      </tr><tr>
+                        <th>12</th><th> </th><td class="l"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th>13</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>14</th><th> </th><td class="l"><span>== <del>Requirements - also older versions possible</del> ==</span> </td>
+                      </tr><tr>
+                        <th>15</th><th> </th><td class="l"><span></span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>6</th><td class="r"><span><ins>Since version 0.12, Trac can also be localized, and there's probably a translation available for your language. If you want to be able to use the Trac interface in other languages, then make sure you **first** have installed the optional package [#OtherPythonPackages Babel]. Lacking Babel, you will only get the default English version, as usual. If you install Babel later on, you will need to re-install Trac</ins>.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>7</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>8</th><td class="r"><span>If you're interested in contributing new translations for other languages or enhance the existing translations, then please have a look at [trac:wiki:TracL10N TracL10N].</span> </td>
+                      </tr><tr>
+                        <th> </th><th>9</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>10</th><td class="r"><span>What follows are generic instructions for installing and setting up Trac and its requirements. While you may find instructions for installing Trac on specific systems at [trac:wiki:TracInstallPlatforms TracInstallPlatforms] on the main Trac site, please be sure to '''first read through these general instructions''' to get a good understanding of the tasks involved.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>11</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>12</th><td class="r"><span>[[PageOutline(2-3,Installation Steps,inline)]]</span> </td>
+                      </tr><tr>
+                        <th> </th><th>13</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>14</th><td class="r"><span>== <ins>Dependencies</ins> ==</span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>15</th><td class="r"><span>=== Mandatory Dependencies</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>16</th><th>16</th><td class="l"><span>To install Trac, the following software packages must be installed:</span> </td>
+                  </tr><tr>
+                          <th>17</th><th>17</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>18</th><th> </th><td class="l"><span>&nbsp;* [http://www.python.org/ Python], version &gt;= 2.3</span> </td>
+                      </tr><tr>
+                        <th>19</th><th> </th><td class="l"><span>&nbsp; &nbsp;* if using mod_python together with xml-related things, use python-2.5. expat is namespaced there and does not cause apache to crash any more(see [http://www.dscpl.com.au/wiki/ModPython/Articles/ExpatCausingApacheCrash here] for details).</span> </td>
+                      </tr><tr>
+                        <th>20</th><th> </th><td class="l"><span>&nbsp; &nbsp;* For RPM-based systems you might also need the `python-devel` and `python-xml` packages.</span> </td>
+                      </tr><tr>
+                        <th>21</th><th> </th><td class="l"><span>&nbsp; &nbsp;* See instructions in ["TracOnWindows/Python2.5"]</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>18</th><td class="r"><span>&nbsp;* [http://www.python.org/ Python], version &gt;= 2.4 and &lt; 3.0</span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>19</th><td class="r"><span>&nbsp; &nbsp;//(note that we dropped the support for Python 2.3 in this release and that this will be the last Trac release supporting Python 2.4)//</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>22</th><th>20</th><td class="l"><span>&nbsp;* [http://peak.telecommunity.com/DevCenter/setuptools setuptools], version &gt;= 0.6</span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>23</th><th> </th><td class="l"><span>&nbsp;* [http://genshi.edgewall.org/wiki/Download Genshi], version &gt;= 0.4.1</span> </td>
+                      </tr><tr>
+                        <th>24</th><th> </th><td class="l"><span>&nbsp;* You also need a database system and the corresponding python drivers for it.</span> </td>
+                      </tr><tr>
+                        <th>25</th><th> </th><td class="l"><span>&nbsp; &nbsp;The database can be either SQLite, PostgreSQL or ''MySQL (experimental)''.</span> </td>
+                      </tr><tr>
+                        <th>26</th><th> </th><td class="l"><span>&nbsp;* optional if some plugins require it: [http://www.clearsilver.net/ ClearSilver]</span> </td>
+                      </tr><tr>
+                        <th>27</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>28</th><th> </th><td class="l"><span>=== For SQLite ===</span> </td>
+                      </tr><tr>
+                        <th>29</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>30</th><th> </th><td class="l"><span>&nbsp;* [http://www.sqlite.org/ SQLite], version 3.3.4 and above preferred.</span> </td>
+                      </tr><tr>
+                        <th>31</th><th> </th><td class="l"><span>&nbsp;* If not using Python-2.5: [http://pysqlite.org/ PySQLite], version 1.x (for SQLite 2.x) or version 2.x (for SQLite 3.x), version 2.3.2 preferred. For details see PySqlite</span> </td>
+                      </tr><tr>
+                        <th>32</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>33</th><th> </th><td class="l"><span>''Note: It appears that PySQLite 2.x is required for Trac 0.9+/SQLite 3.x if you plan to use the 'trac-post-commit-hook.py' script available from the 'contrib' section of the source repository.''</span> </td>
+                      </tr><tr>
+                        <th>34</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>35</th><th> </th><td class="l"><span>''Note: Users of Mac OS X please take care; the Apple-supplied SQLite contains additional code to support file locking on network filesystems like AFP or SMB. This is not presently (3.3.6) in the mainline sources, so if you build your own SQLite from source it will not function correctly on such filesystems - typically it gives the error "{{{database is locked}}}". [http://www.alastairs-place.net/2006/07/sqlite_and_mac/ A patch] is available for version 3.3.6, based on Apple's code, otherwise you're probably best off using the Apple supplied version (presently 3.1.3).''</span> </td>
+                      </tr><tr>
+                        <th>36</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>37</th><th> </th><td class="l"><span>=== For PostgreSQL ===</span> </td>
+                      </tr><tr>
+                        <th>38</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>39</th><th> </th><td class="l"><span>&nbsp;* [http://www.postgresql.org/ PostgreSQL]</span> </td>
+                      </tr><tr>
+                        <th>40</th><th> </th><td class="l"><span>&nbsp;* [http://initd.org/projects/psycopg2 psycopg2] or [http://pypgsql.sourceforge.net/ pyPgSQL]</span> </td>
+                      </tr><tr>
+                        <th>41</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>42</th><th> </th><td class="l"><span>'''Warning''': PostgreSQL 8.3 uses a strict type checking mechanism. To use Trac with the 8.3 Version of PostgreSQL, you will need [http://trac.edgewall.org/changeset/6512 trac-0.11] or later.</span> </td>
+                      </tr><tr>
+                        <th>43</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>44</th><th> </th><td class="l"><span>=== For MySQL ===</span> </td>
+                      </tr><tr>
+                        <th>45</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>46</th><th> </th><td class="l"><span>'''Warning''': MySQL support is currently ''still'' experimental. That means it works for some people, but several issues remain, in particular regarding the use of unicode and the key length in the repository cache. See MySqlDb for more detailed information.</span> </td>
+                      </tr><tr>
+                        <th>47</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>48</th><th> </th><td class="l"><span>&nbsp;* [http://mysql.com/ MySQL], version 4.1 or later</span> </td>
+                      </tr><tr>
+                        <th>49</th><th> </th><td class="l"><span>&nbsp;* [http://sf.net/projects/mysql-python MySQLdb], version 1.2.1 or later</span> </td>
+                      </tr><tr>
+                        <th>50</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>51</th><th> </th><td class="l"><span>=== Optional Requirements ===</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>21</th><td class="r"><span>&nbsp;* [http://genshi.edgewall.org/wiki/Download Genshi], version &gt;= 0.6 (but &lt; 0.7dev, i.e. don't use Genshi trunk)</span> </td>
+                      </tr><tr>
+                        <th> </th><th>22</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>23</th><td class="r"><span>You also need a database system and the corresponding python bindings.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>24</th><td class="r"><span>The database can be either SQLite, PostgreSQL or MySQL.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>25</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>26</th><td class="r"><span>==== For the SQLite database #ForSQLite</span> </td>
+                      </tr><tr>
+                        <th> </th><th>27</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>28</th><td class="r"><span>If you're using Python 2.5 or 2.6, you already have everything you need.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>29</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>30</th><td class="r"><span>If you're using Python 2.4 and need pysqlite, you can download from </span> </td>
+                      </tr><tr>
+                        <th> </th><th>31</th><td class="r"><span>[http://code.google.com/p/pysqlite/downloads/list google code] the Windows installers or the tar.gz archive for building from source: </span> </td>
+                      </tr><tr>
+                        <th> </th><th>32</th><td class="r"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th> </th><th>33</th><td class="r"><span>$ tar xvfz &lt;version&gt;.tar.gz </span> </td>
+                      </tr><tr>
+                        <th> </th><th>34</th><td class="r"><span>$ cd &lt;version&gt; </span> </td>
+                      </tr><tr>
+                        <th> </th><th>35</th><td class="r"><span>$ python setup.py build_static install </span> </td>
+                      </tr><tr>
+                        <th> </th><th>36</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>37</th><td class="r"><span>&nbsp;</span> </td>
+                      </tr><tr>
+                        <th> </th><th>38</th><td class="r"><span>This will extract the SQLite code and build the bindings. </span> </td>
+                      </tr><tr>
+                        <th> </th><th>39</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>40</th><td class="r"><span>To install SQLite, your system may require the development headers. Without these you will get various GCC related errors when attempting to build:</span> </td>
+                      </tr><tr>
+                        <th> </th><th>41</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>42</th><td class="r"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th> </th><th>43</th><td class="r"><span>$ apt-get install libsqlite3-dev</span> </td>
+                      </tr><tr>
+                        <th> </th><th>44</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>45</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>46</th><td class="r"><span>SQLite 2.x is no longer supported, and neither is !PySqlite 1.1.x.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>47</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>48</th><td class="r"><span>A known bug !PySqlite versions 2.5.2-4 prohibits upgrade of trac databases</span> </td>
+                      </tr><tr>
+                        <th> </th><th>49</th><td class="r"><span>from 0.11.x to 0.12. Please use versions 2.5.5 and newer or 2.5.1 and</span> </td>
+                      </tr><tr>
+                        <th> </th><th>50</th><td class="r"><span>older. See [trac:#9434] for more detail.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>51</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>52</th><td class="r"><span>See additional information in [trac:PySqlite].</span> </td>
+                      </tr><tr>
+                        <th> </th><th>53</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>54</th><td class="r"><span>==== For the PostgreSQL database #ForPostgreSQL</span> </td>
+                      </tr><tr>
+                        <th> </th><th>55</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>56</th><td class="r"><span>You need to install the database and its Python bindings:</span> </td>
+                      </tr><tr>
+                        <th> </th><th>57</th><td class="r"><span>&nbsp;* [http://www.postgresql.org/ PostgreSQL], version 8.0 or later</span> </td>
+                      </tr><tr>
+                        <th> </th><th>58</th><td class="r"><span>&nbsp;* [http://pypi.python.org/pypi/psycopg2 psycopg2]</span> </td>
+                      </tr><tr>
+                        <th> </th><th>59</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>60</th><td class="r"><span>See [trac:DatabaseBackend#Postgresql DatabaseBackend] for details.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>61</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>62</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>63</th><td class="r"><span>==== For the MySQL database #ForMySQL</span> </td>
+                      </tr><tr>
+                        <th> </th><th>64</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>65</th><td class="r"><span>Trac can now work quite well with MySQL, provided you follow the guidelines.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>66</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>67</th><td class="r"><span>&nbsp;* [http://mysql.com/ MySQL], version 5.0 or later</span> </td>
+                      </tr><tr>
+                        <th> </th><th>68</th><td class="r"><span>&nbsp;* [http://sf.net/projects/mysql-python MySQLdb], version 1.2.2 or later</span> </td>
+                      </tr><tr>
+                        <th> </th><th>69</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>70</th><td class="r"><span>It is '''very''' important to read carefully the&nbsp; [trac:MySqlDb] page before creating the database.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>71</th><td class="r"><span></span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>72</th><td class="r"><span>=== Optional Dependencies</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>52</th><th>73</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>53</th><th>74</th><td class="l"><span>==== Version Control System ====</span> </td>
+                  </tr><tr>
+                          <th>54</th><th>75</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>55</th><th> </th><td class="l"><span>'''Please note:''' if using Subversion, Trac must be installed on the '''same machine'''. Remote repositories are currently not supported.</span> </td>
+                      </tr><tr>
+                        <th>56</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>57</th><th> </th><td class="l"><span>&nbsp;* [http://subversion.tigris.org/ Subversion], version &gt;= 1.0. (versions recommended: 1.2.4, 1.3.2 or 1.4.2) and the '''''corresponding''''' Python bindings. For troubleshooting, check TracSubversion</span> </td>
+                      </tr><tr>
+                        <th>58</th><th> </th><td class="l"><span>&nbsp; &nbsp;* Trac uses the [http://svnbook.red-bean.com/svnbook-1.1/ch08s02.html#svn-ch-8-sect-2.3 SWIG] bindings included in the Subversion distribution, '''not''' [http://pysvn.tigris.org/ PySVN] (which is sometimes confused with the standard SWIG bindings).</span> </td>
+                      </tr><tr>
+                        <th>59</th><th> </th><td class="l"><span>&nbsp; &nbsp;* If Subversion was already installed without the SWIG bindings, on Unix you'll need to re-`configure` Subversion and `make swig-py`, `make install-swig-py`.</span> </td>
+                      </tr><tr>
+                        <th>60</th><th> </th><td class="l"><span>&nbsp; &nbsp;* There are [http://subversion.tigris.org/servlets/ProjectDocumentList?folderID=91 pre-compiled bindings] available for win32. </span> </td>
+                      </tr><tr>
+                        <th>61</th><th> </th><td class="l"><span>&nbsp;* Support for other version control systems is provided via third-parties. See PluginList and VersioningSystemBackend.</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>76</th><td class="r"><span>===== Subversion =====</span> </td>
+                      </tr><tr>
+                        <th> </th><th>77</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>78</th><td class="r"><span>[http://subversion.apache.org/ Subversion] 1.5.x or 1.6.x and the '''''corresponding''''' Python bindings. </span> </td>
+                      </tr><tr>
+                        <th> </th><th>79</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>80</th><td class="r"><span>There are [http://subversion.apache.org/packages.html pre-compiled SWIG bindings] available for various platforms. See also the TracSubversion page for details about Windows packages.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>81</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>82</th><td class="r"><span>Older versions starting from 1.4.0, etc. should still work. For troubleshooting information, check the [trac:TracSubversion#Troubleshooting TracSubversion] page. Versions prior to 1.4.0 won't probably work since trac uses svn core functionality (e.g. svn_path_canonicalize) that is not implemented in the python swig wrapper in svn &lt;= 1.3.x (although it exists in the svn lib itself).</span> </td>
+                      </tr><tr>
+                        <th> </th><th>83</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>84</th><td class="r"><span>Note that Trac '''doesn't''' use [http://pysvn.tigris.org/ PySVN], neither does it work yet with the newer `ctype`-style bindings. </span> </td>
+                      </tr><tr>
+                        <th> </th><th>85</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>86</th><td class="r"><span>'''Please note:''' if using Subversion, Trac must be installed on the '''same machine'''. Remote repositories are currently [trac:#493 not supported].</span> </td>
+                      </tr><tr>
+                        <th> </th><th>87</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>88</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>89</th><td class="r"><span>===== Others =====</span> </td>
+                      </tr><tr>
+                        <th> </th><th>90</th><td class="r"><span></span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>91</th><td class="r"><span>Support for other version control systems is provided via third-parties. See [trac:PluginList] and [trac:VersioningSystemBackend].</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>62</th><th>92</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>63</th><th>93</th><td class="l"><span>==== Web Server ====</span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>64</th><th> </th><td class="l"><span>&nbsp;* A CGI-capable web server (see TracCgi), or</span> </td>
+                      </tr><tr>
+                        <th>65</th><th> </th><td class="l"><span>&nbsp;* a [http://www.fastcgi.com/ FastCGI]-capable web server (see TracFastCgi), or</span> </td>
+                      </tr><tr>
+                        <th>66</th><th> </th><td class="l"><span>&nbsp;* [http://httpd.apache.org/ Apache] with [http://code.google.com/p/modwsgi/ mod_wsgi] (see [wiki:TracModWSGI])</span> </td>
+                      </tr><tr>
+                        <th>67</th><th> </th><td class="l"><span>&nbsp; &nbsp; * This should work with Apache 1.3, 2.0 or 2.2 and promises to deliver more performance than using mod_python. A little less mature than mod_python.</span> </td>
+                      </tr><tr>
+                        <th>68</th><th> </th><td class="l"><span>&nbsp;* [http://httpd.apache.org/ Apache] with [http://www.modpython.org/ mod_python 3.1.3+] (see TracModPython)</span> </td>
+                      </tr><tr>
+                        <th>69</th><th> </th><td class="l"><span>&nbsp; &nbsp; * When installing mod_python the development versions of Python and Apache are required (actually the libraries and header files)</span> </td>
+                      </tr><tr>
+                        <th>70</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>71</th><th> </th><td class="l"><span>For those stuck with Apache 1.3, it is also possible to get Trac working with [http://www.modpython.org/ mod_python 2.7] (see [wiki:TracModPython2.7 TracModPython2.7]). This guide hasn't been updated since 0.84, so it may or may not work.</span> </td>
+                      </tr><tr>
+                        <th>72</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>73</th><th> </th><td class="l"><span>==== Other Python Utilities ====</span> </td>
+                      </tr><tr>
+                        <th>74</th><th> </th><td class="l"><span>&nbsp;* [http://docutils.sourceforge.net/ docutils], version &gt;= 0.3.9 for WikiRestructuredText.</span> </td>
+                      </tr><tr>
+                        <th>75</th><th> </th><td class="l"><span>&nbsp;* [http://pygments.pocoo.org Pygments] for [wiki:TracSyntaxColoring syntax highlighting], also [http://silvercity.sourceforge.net/ SilverCity] and/or [http://gnu.org/software/enscript/enscript.html Enscript] may still be used.</span> </td>
+                      </tr><tr>
+                        <th>76</th><th> </th><td class="l"><span>&nbsp; &nbsp; * Note that !SilverCity 0.9.6 has a [http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1424436&amp;group_id=45693&amp;atid=443739 bug] that breaks Python syntax highlighting in Trac. Until an update is made available, we recommend using version 0.9.5.</span> </td>
+                      </tr><tr>
+                        <th>77</th><th> </th><td class="l"><span>&nbsp;* [http://pytz.sf.net pytz] to get a complete list of time zones, otherwise Trac will fall back on a shorter list from an internal time zone implementation.</span> </td>
+                      </tr><tr>
+                        <th>78</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>79</th><th> </th><td class="l"><span>'''Attention''': The various available versions of these dependencies are not necessarily interchangable, so please pay attention to the version numbers above. If you are having trouble getting Trac to work please double-check all the dependencies before asking for help on the MailingList or IrcChannel.</span> </td>
+                      </tr><tr>
+                        <th>80</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>81</th><th> </th><td class="l"><span>Please refer to the documentation of these packages to find out how they are best installed. In addition, most of the [wiki:TracInstallPlatforms platform-specific instructions] also describe the installation of the dependencies. Keep in mind however that the information there ''probably concern older versions of Trac than the one you're installing'' (there are even some pages that are still talking about Trac 0.8!).</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>94</th><td class="r"><span>A web server is optional because Trac is shipped with a server included, see the [#RunningtheStandaloneServer Running the Standalone Server ] section below.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>95</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>96</th><td class="r"><span>Alternatively you configure Trac to run in any of the following environments.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>97</th><td class="r"><span>&nbsp;* [http://httpd.apache.org/ Apache] with </span> </td>
+                      </tr><tr>
+                        <th> </th><th>98</th><td class="r"><span>&nbsp; &nbsp;- [http://code.google.com/p/modwsgi/ mod_wsgi], see [wiki:TracModWSGI] (preferred)</span> </td>
+                      </tr><tr>
+                        <th> </th><th>99</th><td class="r"><span>&nbsp; &nbsp;- //[http://modpython.org/ mod_python 3.3.1], see TracModPython (deprecated)//</span> </td>
+                      </tr><tr>
+                        <th> </th><th>100</th><td class="r"><span>&nbsp;* any [http://www.fastcgi.com/ FastCGI]-capable web server, see TracFastCgi</span> </td>
+                      </tr><tr>
+                        <th> </th><th>101</th><td class="r"><span>&nbsp;* any [http://tomcat.apache.org/connectors-doc/ajp/ajpv13a.html AJP]-capable web</span> </td>
+                      </tr><tr>
+                        <th> </th><th>102</th><td class="r"><span>&nbsp; &nbsp;server, see [trac:TracOnWindowsIisAjp]</span> </td>
+                      </tr><tr>
+                        <th> </th><th>103</th><td class="r"><span>&nbsp;* IIS with [http://code.google.com/p/isapi-wsgi/ Isapi-wsgi], see [trac:TracOnWindowsIisIsapi]</span> </td>
+                      </tr><tr>
+                        <th> </th><th>104</th><td class="r"><span>&nbsp;* //as a last resort, a CGI-capable web server (see TracCgi), but usage of Trac as a cgi script </span> </td>
+                      </tr><tr>
+                        <th> </th><th>105</th><td class="r"><span>&nbsp; &nbsp;is highly discouraged, better use one of the previous options.//</span> </td>
+                      </tr><tr>
+                        <th> </th><th>106</th><td class="r"><span>&nbsp; &nbsp;</span> </td>
+                      </tr><tr>
+                        <th> </th><th>107</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>108</th><td class="r"><span>==== Other Python Packages ====</span> </td>
+                      </tr><tr>
+                        <th> </th><th>109</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>110</th><td class="r"><span>&nbsp;* [http://babel.edgewall.org Babel], version 0.9.5, </span> </td>
+                      </tr><tr>
+                        <th> </th><th>111</th><td class="r"><span>&nbsp; &nbsp;needed for localization support[[BR]]</span> </td>
+                      </tr><tr>
+                        <th> </th><th>112</th><td class="r"><span>&nbsp; &nbsp;''Note: '' If you want to be able to use the Trac interface in other languages, then make sure you first have installed the optional package Babel. Lacking Babel, you will only get the default english version, as usual. If you install Babel later on, you will need to re-install Trac. </span> </td>
+                      </tr><tr>
+                        <th> </th><th>113</th><td class="r"><span>&nbsp;* [http://docutils.sourceforge.net/ docutils], version &gt;= 0.3.9 </span> </td>
+                      </tr><tr>
+                        <th> </th><th>114</th><td class="r"><span>&nbsp; &nbsp;for WikiRestructuredText.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>115</th><td class="r"><span>&nbsp;* [http://pygments.pocoo.org Pygments] for </span> </td>
+                      </tr><tr>
+                        <th> </th><th>116</th><td class="r"><span>&nbsp; &nbsp;[wiki:TracSyntaxColoring syntax highlighting].</span> </td>
+                      </tr><tr>
+                        <th> </th><th>117</th><td class="r"><span>&nbsp; &nbsp;[http://silvercity.sourceforge.net/ SilverCity] and/or </span> </td>
+                      </tr><tr>
+                        <th> </th><th>118</th><td class="r"><span>&nbsp; &nbsp;[http://gnu.org/software/enscript/enscript.html Enscript] may still be used</span> </td>
+                      </tr><tr>
+                        <th> </th><th>119</th><td class="r"><span>&nbsp; &nbsp;but are deprecated and you really should be using Pygments.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>120</th><td class="r"><span>&nbsp;* [http://pytz.sf.net pytz] to get a complete list of time zones,</span> </td>
+                      </tr><tr>
+                        <th> </th><th>121</th><td class="r"><span>&nbsp; &nbsp;otherwise Trac will fall back on a shorter list from </span> </td>
+                      </tr><tr>
+                        <th> </th><th>122</th><td class="r"><span>&nbsp; &nbsp;an internal time zone implementation.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>123</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>124</th><td class="r"><span>'''Attention''': The various available versions of these dependencies are not necessarily interchangable, so please pay attention to the version numbers above. If you are having trouble getting Trac to work please double-check all the dependencies before asking for help on the [trac:MailingList] or [trac:IrcChannel].</span> </td>
+                      </tr><tr>
+                        <th> </th><th>125</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>126</th><td class="r"><span>Please refer to the documentation of these packages to find out how they are best installed. In addition, most of the [trac:TracInstallPlatforms platform-specific instructions] also describe the installation of the dependencies. Keep in mind however that the information there ''probably concern older versions of Trac than the one you're installing'' (there are even some pages that are still talking about Trac 0.8!).</span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>127</th><td class="r"><span></span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>82</th><th>128</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>83</th><th>129</th><td class="l"><span>== Installing Trac ==</span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>84</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>85</th><th> </th><td class="l"><span>One way to install Trac is using `setuptools`.</span> </td>
+                      </tr><tr>
+                        <th>86</th><th> </th><td class="l"><span>With setuptools you can install Trac from the subversion repository; for example,</span> </td>
+                      </tr><tr>
+                        <th>87</th><th> </th><td class="l"><span>to install release version 0.11b2 do:</span> </td>
+                      </tr><tr>
+                        <th>88</th><th> </th><td class="l"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th>89</th><th> </th><td class="l"><span>easy_install http://svn.edgewall.org/repos/trac/tags/trac-0.11b2</span> </td>
+                      </tr><tr>
+                        <th>90</th><th> </th><td class="l"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th>91</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>92</th><th> </th><td class="l"><span>But of course the python-typical setup at the top of the source directory also works:</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>130</th><td class="r"><span>=== Using `easy_install`</span> </td>
+                      </tr><tr>
+                        <th> </th><th>131</th><td class="r"><span>One way to install Trac is using [http://pypi.python.org/pypi/setuptools setuptools].</span> </td>
+                      </tr><tr>
+                        <th> </th><th>132</th><td class="r"><span>With setuptools you can install Trac from the subversion repository; </span> </td>
+                      </tr><tr>
+                        <th> </th><th>133</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>134</th><td class="r"><span>A few examples:</span> </td>
+                      </tr><tr>
+                        <th> </th><th>135</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>136</th><td class="r"><span>&nbsp;- first install of the latest stable version Trac 0.12.2, with i18n support:</span> </td>
+                      </tr><tr>
+                        <th> </th><th>137</th><td class="r"><span>&nbsp; &nbsp;{{{</span> </td>
+                      </tr><tr>
+                        <th> </th><th>138</th><td class="r"><span>&nbsp; &nbsp;easy_install Babel==0.9.5</span> </td>
+                      </tr><tr>
+                        <th> </th><th>139</th><td class="r"><span>&nbsp; &nbsp;easy_install Trac</span> </td>
+                      </tr><tr>
+                        <th> </th><th>140</th><td class="r"><span>&nbsp; &nbsp;}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>141</th><td class="r"><span>&nbsp; &nbsp;''It's very important to run the two `easy_install` commands separately, otherwise the message catalogs won't be generated.''</span> </td>
+                      </tr><tr>
+                        <th> </th><th>142</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>143</th><td class="r"><span>&nbsp;- upgrade to the latest stable version of Trac:</span> </td>
+                      </tr><tr>
+                        <th> </th><th>144</th><td class="r"><span>&nbsp; &nbsp;{{{</span> </td>
+                      </tr><tr>
+                        <th> </th><th>145</th><td class="r"><span>&nbsp; &nbsp;easy_install -U Trac</span> </td>
+                      </tr><tr>
+                        <th> </th><th>146</th><td class="r"><span>&nbsp; &nbsp;}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>147</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>148</th><td class="r"><span>&nbsp;- upgrade to the latest trunk development version (0.13dev):</span> </td>
+                      </tr><tr>
+                        <th> </th><th>149</th><td class="r"><span>&nbsp; &nbsp;{{{</span> </td>
+                      </tr><tr>
+                        <th> </th><th>150</th><td class="r"><span>&nbsp; &nbsp;easy_install -U Trac==dev</span> </td>
+                      </tr><tr>
+                        <th> </th><th>151</th><td class="r"><span>&nbsp; &nbsp;}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>152</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>153</th><td class="r"><span>For upgrades, reading the TracUpgrade page is mandatory, of course.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>154</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>155</th><td class="r"><span>=== From source</span> </td>
+                      </tr><tr>
+                        <th> </th><th>156</th><td class="r"><span>If you want more control, you can download the source in archive form, or do a checkout from one of the official [[Trac:TracRepositories|source code repositories]].</span> </td>
+                      </tr><tr>
+                        <th> </th><th>157</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>158</th><td class="r"><span>Be sure to have the prerequisites already installed. You can also obtain the Genshi and Babel source packages from http://www.edgewall.org and follow for them a similar installation procedure, or you can just `easy_install` those, see [#Usingeasy_install above].</span> </td>
+                      </tr><tr>
+                        <th> </th><th>159</th><td class="r"><span></span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>160</th><td class="r"><span>Once you've unpacked the Trac archive or performed the checkout, move in the top-level folder and do:</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>93</th><th>161</th><td class="l"><span>{{{</span> </td>
+                  </tr><tr>
+                          <th>94</th><th>162</th><td class="l"><span>$ python ./setup.py install</span> </td>
+                  </tr><tr>
+                          <th>95</th><th>163</th><td class="l"><span>}}}</span> </td>
+                  </tr><tr>
+                          <th>96</th><th>164</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>97</th><th> </th><td class="l"><span>''Note: you'll need root permissions or equivalent for this step.''</span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>165</th><td class="r"><span>You'll need root permissions or equivalent for this step.</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>98</th><th>166</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>99</th><th>167</th><td class="l"><span>This will byte-compile the python source code and install it as an .egg file or folder in the `site-packages` directory</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracInstall%3Fversion=3.html#L102">…</a></th>
+                  <th><a href="TracInstall%3Fversion=4.html#L170">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>102</th><th>170</th><td class="l"><span>The script will also install the [wiki:TracAdmin trac-admin] command-line tool, used to create and maintain [wiki:TracEnvironment project environments], as well as the [wiki:TracStandalone tracd] standalone server.</span> </td>
+                  </tr><tr>
+                          <th>103</th><th>171</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="add">
+                  <tr class="first">
+                          <th> </th><th>172</th><td class="r"><ins>If you install from source and want to make Trac available in other languages, make sure&nbsp; Babel is installed. Only then, perform the `install` (or simply redo the `install` once again afterwards if you realize Babel was not yet installed):</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>173</th><td class="r"><ins>{{{</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>174</th><td class="r"><ins>$ python ./setup.py install</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>175</th><td class="r"><ins>}}}</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>176</th><td class="r"><ins>Alternatively, you can do a `bdist_egg` and copy the .egg from dist/ to the place of your choice, or you can create a Windows installer (`bdist_wininst`).</ins> </td>
+                  </tr><tr class="last">
+                          <th> </th><th>177</th><td class="r"><ins></ins> </td>
+                  </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>104</th><th>178</th><td class="l"><span>=== Advanced Options ===</span> </td>
+                  </tr><tr>
+                          <th>105</th><th>179</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="add">
+                  <tr class="first">
+                          <th> </th><th>180</th><td class="r"><ins>==== Custom location with `easy_install`</ins> </td>
+                  </tr><tr class="last">
+                          <th> </th><th>181</th><td class="r"><ins></ins> </td>
+                  </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>106</th><th>182</th><td class="l"><span>To install Trac to a custom location, or find out about other advanced installation options, run:</span> </td>
+                  </tr><tr>
+                          <th>107</th><th>183</th><td class="l"><span>{{{</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracInstall%3Fversion=3.html#L119">…</a></th>
+                  <th><a href="TracInstall%3Fversion=4.html#L195">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>119</th><th>195</th><td class="l"><span>easy_install --prefix=/usr/local --install-dir=/Library/Python/2.5/site-packages</span> </td>
+                  </tr><tr>
+                          <th>120</th><th>196</th><td class="l"><span>}}}</span> </td>
+                  </tr>
+            </tbody><tbody class="add">
+                  <tr class="last first">
+                          <th> </th><th>197</th><td class="r"><ins>Note: If installing on Mac OS X 10.6 running {{{ easy_install http://svn.edgewall.org/repos/trac/trunk }}} will install into {{{ /usr/local }}} and {{{ /Library/Python/2.6/site-packages }}} by default</ins> </td>
+                  </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>121</th><th>198</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>122</th><th>199</th><td class="l"><span>The above will place your `tracd` and `trac-admin` commands into `/usr/local/bin` and will install the Trac libraries and dependencies into `/Library/Python/2.5/site-packages`, which is Apple's preferred location for third-party Python application installations.</span> </td>
+                  </tr><tr>
+                          <th>123</th><th>200</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="add">
+                  <tr class="first">
+                          <th> </th><th>201</th><td class="r"><ins>==== Using `pip`</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>202</th><td class="r"><ins>'pip' is an easy_install replacement that is very useful to quickly install python packages.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>203</th><td class="r"><ins>To get a trac installation up and running in less than 5 minutes:</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>204</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>205</th><td class="r"><ins>Assuming you want to have your entire pip installation in /opt/user/trac:</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>206</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>207</th><td class="r"><ins>&nbsp;- </ins> </td>
+                  </tr><tr>
+                          <th> </th><th>208</th><td class="r"><ins>{{{</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>209</th><td class="r"><ins>pip -E /opt/user/trac install trac psycopg2 </ins> </td>
+                  </tr><tr>
+                          <th> </th><th>210</th><td class="r"><ins>}}}</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>211</th><td class="r"><ins>or</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>212</th><td class="r"><ins>&nbsp;- </ins> </td>
+                  </tr><tr>
+                          <th> </th><th>213</th><td class="r"><ins>{{{</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>214</th><td class="r"><ins>pip -E /opt/user/trac install trac mysql-python </ins> </td>
+                  </tr><tr>
+                          <th> </th><th>215</th><td class="r"><ins>}}}</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>216</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>217</th><td class="r"><ins>Make sure your OS specific headers are available for pip to automatically build PostgreSQL (libpq-dev) or MySQL (libmysqlclient-dev) bindings.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>218</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>219</th><td class="r"><ins>pip will automatically resolve all dependencies (like Genshi, pygments, etc.) and download the latest packages on pypi.python.org and create a self contained installation in /opt/user/trac .</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>220</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>221</th><td class="r"><ins>All commands (tracd, trac-admin) are available in /opt/user/trac/bin. This can also be leveraged for mod_python (using !PythonHandler directive) and mod_wsgi (using WSGIDaemonProcess directive)</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>222</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>223</th><td class="r"><ins>Additionally, you can install several trac plugins (listed [http://pypi.python.org/pypi?:action=search&amp;term=trac&amp;submit=search here]) through pip.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>224</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>225</th><td class="r"><ins></ins> </td>
+                  </tr><tr class="last">
+                          <th> </th><th>226</th><td class="r"><ins></ins> </td>
+                  </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>124</th><th>227</th><td class="l"><span>== Creating a Project Environment ==</span> </td>
+                  </tr><tr>
+                          <th>125</th><th>228</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>126</th><th> </th><td class="l"><span>A [<del>wiki:TracEnvironment Trac environment] is the backend storage where Trac stores information like wiki pages, tickets, reports, settings, etc. An environment is basically a directory that contains a human-readable configuration file</del> and various other files and directories.</span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>229</th><td class="r"><span>A [<ins>TracEnvironment Trac environment] is the backend storage where Trac stores information like wiki pages, tickets, reports, settings, etc. An environment is basically a directory that contains a human-readable [TracIni configuration file],</ins> and various other files and directories.</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>127</th><th>230</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>128</th><th>231</th><td class="l"><span>A new environment is created using [wiki:TracAdmin trac-admin]:</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracInstall%3Fversion=3.html#L131">…</a></th>
+                  <th><a href="TracInstall%3Fversion=4.html#L234">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>131</th><th>234</th><td class="l"><span>}}}</span> </td>
+                  </tr><tr>
+                          <th>132</th><th>235</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>133</th><th> </th><td class="l"><span>[wiki:TracAdmin trac-admin] will prompt you for the information it needs to create the environment, such as the name of the project, the type and the path to an existing [wiki:TracEnvironment#SourceCodeRepository source code repository], the [wiki:TracEnvironment#DatabaseConnectionStrings database connection string], and so on. If you're not sure what to specify for one of these options, just leave it blank to use the default value. The database connection string in particular will always work as long as you have SQLite installed. Leaving the path to the source code repository empty will disable any functionality related to version control, but you can always add that back when the basic system is running.</span> </td>
+                      </tr><tr>
+                        <th>134</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>135</th><th> </th><td class="l"><span>Also note that the values you specify here can be changed later by directly editing the [wiki:TracIni] configuration file.</span> </td>
+                      </tr><tr>
+                        <th>136</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>137</th><th> </th><td class="l"><span>''Note: The user account under which the web server runs will require write permissions to the environment directory and all the files inside.&nbsp; On Linux, with the web server running as user apache and group apache, enter:''</span> </td>
+                      </tr><tr>
+                        <th>138</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>139</th><th> </th><td class="l"><span>&nbsp; chown -R apache.apache /path/to/myproject</span> </td>
+                      </tr><tr>
+                        <th>140</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>141</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>142</th><th> </th><td class="l"><span>== Running the Standalone Server ==</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>236</th><td class="r"><span>[TracAdmin trac-admin] will prompt you for the information it needs to create the environment, such as the name of the project and the [TracEnvironment#DatabaseConnectionStrings database connection string]. If you're not sure what to specify for one of these options, just press `&lt;Enter&gt;` to use the default value. </span> </td>
+                      </tr><tr>
+                        <th> </th><th>237</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>238</th><td class="r"><span>Using the default database connection string in particular will always work as long as you have SQLite installed.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>239</th><td class="r"><span>For the other [DatabaseBackend database backends] you should plan ahead and already have a database ready to use at this point.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>240</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>241</th><td class="r"><span>Since 0.12, Trac doesn't ask for a [TracEnvironment#SourceCodeRepository source code repository] anymore when creating an environment. Repositories can be [TracRepositoryAdmin added] afterward, or the version control support can be disabled completely if you don't need it.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>242</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>243</th><td class="r"><span>Also note that the values you specify here can be changed later by directly editing the [TracIni conf/trac.ini] configuration file.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>244</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>245</th><td class="r"><span>Finally, make sure the user account under which the web front-end runs will have '''write permissions''' to the environment directory and all the files inside. This will be the case if you run `trac-admin ... initenv` as this user. If not, you should set the correct user afterwards. For example on Linux, with the web server running as user `apache` and group `apache`, enter:</span> </td>
+                      </tr><tr>
+                        <th> </th><th>246</th><td class="r"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th> </th><th>247</th><td class="r"><span># chown -R apache.apache /path/to/myproject</span> </td>
+                      </tr><tr>
+                        <th> </th><th>248</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>249</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>250</th><td class="r"><span>{{{#!div class=important</span> </td>
+                      </tr><tr>
+                        <th> </th><th>251</th><td class="r"><span>'''Warning:''' Please only use ASCII-characters for account name and project path, unicode characters are not supported there.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>252</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>253</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>254</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>255</th><td class="r"><span>== Deploying Trac</span> </td>
+                      </tr><tr>
+                        <th> </th><th>256</th><td class="r"><span></span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>257</th><td class="r"><span>=== Running the Standalone Server ===</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>143</th><th>258</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>144</th><th>259</th><td class="l"><span>After having created a Trac environment, you can easily try the web interface by running the standalone server [wiki:TracStandalone tracd]:</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracInstall%3Fversion=3.html#L147">…</a></th>
+                  <th><a href="TracInstall%3Fversion=4.html#L262">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>147</th><th>262</th><td class="l"><span>}}}</span> </td>
+                  </tr><tr>
+                          <th>148</th><th>263</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>149</th><th> </th><td class="l"><span>Then, fire up a browser and visit `http://localhost:8000/`. You should get a simple listing of all environments that <del>tracd knows about. Follow the link to the environment you just created, and you should see Trac in action. If you only plan on managing a single project with t</del>rac you can have the standalone server skip the environment list by starting it like this:</span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>264</th><td class="r"><span>Then, fire up a browser and visit `http://localhost:8000/`. You should get a simple listing of all environments that <ins>`tracd` knows about. Follow the link to the environment you just created, and you should see Trac in action. If you only plan on managing a single project with T</ins>rac you can have the standalone server skip the environment list by starting it like this:</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>150</th><th>265</th><td class="l"><span>{{{</span> </td>
+                  </tr><tr>
+                          <th>151</th><th>266</th><td class="l"><span>$ tracd -s --port 8000 /path/to/myproject</span> </td>
+                  </tr><tr>
+                          <th>152</th><th>267</th><td class="l"><span>}}}</span> </td>
+                  </tr><tr>
+                          <th>153</th><th>268</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>154</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>155</th><th> </th><td class="l"><span>== Running Trac on a Web Server ==</span> </td>
+                      </tr><tr>
+                        <th>156</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>157</th><th> </th><td class="l"><span>Trac provides three options for connecting to a "real" web server: [wiki:TracCgi CGI], [wiki:TracFastCgi FastCGI] and [wiki:TracModPython mod_python]. For decent performance, it is recommended that you use either FastCGI or mod_python.</span> </td>
+                      </tr><tr>
+                        <th>158</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>159</th><th> </th><td class="l"><span>If you're not afraid of running development code, you can also try running Trac on [wiki:TracModWSGI mod_wsgi]. This should deliver even better performance than mod_python, but the module is not considered stable just yet.</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>269</th><td class="r"><span>=== Running Trac on a Web Server ===</span> </td>
+                      </tr><tr>
+                        <th> </th><th>270</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>271</th><td class="r"><span>Trac provides various options for connecting to a "real" web server: </span> </td>
+                      </tr><tr>
+                        <th> </th><th>272</th><td class="r"><span>&nbsp;- [wiki:TracFastCgi FastCGI]</span> </td>
+                      </tr><tr>
+                        <th> </th><th>273</th><td class="r"><span>&nbsp;- [wiki:TracModWSGI mod_wsgi] </span> </td>
+                      </tr><tr>
+                        <th> </th><th>274</th><td class="r"><span>&nbsp;- //[wiki:TracModPython mod_python] (no longer recommended, as mod_python is not actively maintained anymore)//</span> </td>
+                      </tr><tr>
+                        <th> </th><th>275</th><td class="r"><span>&nbsp;- //[wiki:TracCgi CGI] (should not be used, as the performance is far from optimal)//</span> </td>
+                      </tr><tr>
+                        <th> </th><th>276</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>277</th><td class="r"><span>Trac also supports [trac:TracOnWindowsIisAjp AJP] which may be your choice if you want to connect to IIS. Other deployment scenarios are possible: [trac:TracNginxRecipe nginx], [http://projects.unbit.it/uwsgi/wiki/Example#Traconapacheinasub-uri uwsgi], [trac:TracOnWindowsIisIsapi Isapi-wsgi] etc.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>278</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>279</th><td class="r"><span>==== Generating the Trac cgi-bin directory ==== #cgi-bin</span> </td>
+                      </tr><tr>
+                        <th> </th><th>280</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>281</th><td class="r"><span>In order for Trac to function properly with FastCGI you need to have a `trac.fcgi` file and for mod_wsgi a `trac.wsgi` file. These are Python scripts which load the appropriate Python code. They can be generated using the `deploy` option of [wiki:TracAdmin trac-admin].</span> </td>
+                      </tr><tr>
+                        <th> </th><th>282</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>283</th><td class="r"><span>There is, however, a bit of a chicken-and-egg problem. The [wiki:TracAdmin trac-admin] command requires an existing environment to function, but complains if the deploy directory already exists. This is a problem, because environments are often stored in a subdirectory of the deploy. The solution is to do something like this:</span> </td>
+                      </tr><tr>
+                        <th> </th><th>284</th><td class="r"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th> </th><th>285</th><td class="r"><span>mkdir -p /usr/share/trac/projects/my-project</span> </td>
+                      </tr><tr>
+                        <th> </th><th>286</th><td class="r"><span>trac-admin /usr/share/trac/projects/my-project initenv</span> </td>
+                      </tr><tr>
+                        <th> </th><th>287</th><td class="r"><span>trac-admin /usr/share/trac/projects/my-project deploy /tmp/deploy</span> </td>
+                      </tr><tr>
+                        <th> </th><th>288</th><td class="r"><span>mv /tmp/deploy/* /usr/share/trac</span> </td>
+                      </tr><tr>
+                        <th> </th><th>289</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>290</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>291</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>292</th><td class="r"><span>==== Mapping Static Resources ====</span> </td>
+                      </tr><tr>
+                        <th> </th><th>293</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>294</th><td class="r"><span>Out of the box, Trac will pass static resources such as style sheets or images through itself. For anything but a tracd only based deployment, this is far from optimal as the web server could be set up to directly serve those static resources (for CGI setup, this is '''highly undesirable''' and will cause abysmal performance).</span> </td>
+                      </tr><tr>
+                        <th> </th><th>295</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>296</th><td class="r"><span>Web servers such as [http://httpd.apache.org/ Apache] allow you to create “Aliases” to resources, giving them a virtual URL that doesn't necessarily reflect the layout of the servers file system. We also can map requests for static resources directly to the directory on the file system, avoiding processing these requests by Trac itself.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>297</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>298</th><td class="r"><span>There are two primary URL paths for static resources - `/chrome/common` and `/chrome/site`. Plugins can add their own resources, usually accessible by `/chrome/&lt;plugin&gt;` path, so its important to override only known paths and not try to make universal `/chrome` alias for everything.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>299</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>300</th><td class="r"><span>Note that in order to get those static resources on the filesystem, you need first to extract the relevant resources from Trac using the [TracAdmin trac-admin]` &lt;environment&gt; deploy` command:</span> </td>
+                      </tr><tr>
+                        <th> </th><th>301</th><td class="r"><span>[[TracAdminHelp(deploy)]]</span> </td>
+                      </tr><tr>
+                        <th> </th><th>302</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>303</th><td class="r"><span>The target `&lt;directory&gt;` will then contain an `htdocs` directory with:</span> </td>
+                      </tr><tr>
+                        <th> </th><th>304</th><td class="r"><span>&nbsp;- `site/` - a copy of the environment's directory `htdocs/` </span> </td>
+                      </tr><tr>
+                        <th> </th><th>305</th><td class="r"><span>&nbsp;- `common/` - the static resources of Trac itself</span> </td>
+                      </tr><tr>
+                        <th> </th><th>306</th><td class="r"><span>&nbsp;- `&lt;plugins&gt;/` - one directory for each resource directory managed by the plugins enabled for this environment</span> </td>
+                      </tr><tr>
+                        <th> </th><th>307</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>308</th><td class="r"><span>===== Example: Apache and `ScriptAlias` ===== #ScriptAlias-example</span> </td>
+                      </tr><tr>
+                        <th> </th><th>309</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>310</th><td class="r"><span>Assuming the deployment has been done this way:</span> </td>
+                      </tr><tr>
+                        <th> </th><th>311</th><td class="r"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th> </th><th>312</th><td class="r"><span>$ trac-admin /var/trac/env deploy /path/to/trac/htdocs/common</span> </td>
+                      </tr><tr>
+                        <th> </th><th>313</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>314</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>315</th><td class="r"><span>Add the following snippet to Apache configuration ''before'' the `ScriptAlias` or `WSGIScriptAlias` (which map all the other requests to the Trac application), changing paths to match your deployment:</span> </td>
+                      </tr><tr>
+                        <th> </th><th>316</th><td class="r"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th> </th><th>317</th><td class="r"><span>Alias /trac/chrome/common /path/to/trac/htdocs/common</span> </td>
+                      </tr><tr>
+                        <th> </th><th>318</th><td class="r"><span>Alias /trac/chrome/site /path/to/trac/htdocs/site</span> </td>
+                      </tr><tr>
+                        <th> </th><th>319</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>320</th><td class="r"><span>&lt;Directory "/path/to/www/trac/htdocs"&gt;</span> </td>
+                      </tr><tr>
+                        <th> </th><th>321</th><td class="r"><span>&nbsp; Order allow,deny</span> </td>
+                      </tr><tr>
+                        <th> </th><th>322</th><td class="r"><span>&nbsp; Allow from all</span> </td>
+                      </tr><tr>
+                        <th> </th><th>323</th><td class="r"><span>&lt;/Directory&gt;</span> </td>
+                      </tr><tr>
+                        <th> </th><th>324</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>325</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>326</th><td class="r"><span>If using mod_python, you might want to add this too (otherwise, the alias will be ignored):</span> </td>
+                      </tr><tr>
+                        <th> </th><th>327</th><td class="r"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th> </th><th>328</th><td class="r"><span>&lt;Location "/trac/chrome/common/"&gt;</span> </td>
+                      </tr><tr>
+                        <th> </th><th>329</th><td class="r"><span>&nbsp; SetHandler None</span> </td>
+                      </tr><tr>
+                        <th> </th><th>330</th><td class="r"><span>&lt;/Location&gt;</span> </td>
+                      </tr><tr>
+                        <th> </th><th>331</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>332</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>333</th><td class="r"><span>Note that we mapped `/trac` part of the URL to the `trac.*cgi` script, and the path `/trac/chrome/common` is the path you have to append to that location to intercept requests to the static resources. </span> </td>
+                      </tr><tr>
+                        <th> </th><th>334</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>335</th><td class="r"><span>Similarly, if you have static resources in a project's `htdocs` directory (which is referenced by `/trac/chrome/site` URL in themes), you can configure Apache to serve those resources (again, put this ''before'' the `ScriptAlias` or `WSGIScriptAlias` for the .*cgi scripts, and adjust names and locations to match your installation):</span> </td>
+                      </tr><tr>
+                        <th> </th><th>336</th><td class="r"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th> </th><th>337</th><td class="r"><span>Alias /trac/chrome/site /path/to/projectenv/htdocs</span> </td>
+                      </tr><tr>
+                        <th> </th><th>338</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>339</th><td class="r"><span>&lt;Directory "/path/to/projectenv/htdocs"&gt;</span> </td>
+                      </tr><tr>
+                        <th> </th><th>340</th><td class="r"><span>&nbsp; Order allow,deny</span> </td>
+                      </tr><tr>
+                        <th> </th><th>341</th><td class="r"><span>&nbsp; Allow from all</span> </td>
+                      </tr><tr>
+                        <th> </th><th>342</th><td class="r"><span>&lt;/Directory&gt;</span> </td>
+                      </tr><tr>
+                        <th> </th><th>343</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>344</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>345</th><td class="r"><span>Alternatively to aliasing `/trac/chrome/common`, you can tell Trac to generate direct links for those static resources (and only those), using the [[wiki:TracIni#trac-section| [trac] htdocs_location]] configuration setting:</span> </td>
+                      </tr><tr>
+                        <th> </th><th>346</th><td class="r"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th> </th><th>347</th><td class="r"><span>[trac]</span> </td>
+                      </tr><tr>
+                        <th> </th><th>348</th><td class="r"><span>htdocs_location = http://static.example.org/trac-common/</span> </td>
+                      </tr><tr>
+                        <th> </th><th>349</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>350</th><td class="r"><span>Note that this makes it easy to have a dedicated domain serve those static resources (preferentially [http://code.google.com/speed/page-speed/docs/request.html#ServeFromCookielessDomain cookie-less]).</span> </td>
+                      </tr><tr>
+                        <th> </th><th>351</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>352</th><td class="r"><span>Of course, you still need to make the Trac `htdocs/common` directory available through the web server at the specified URL, for example by copying (or linking) the directory into the document root of the web server:</span> </td>
+                      </tr><tr>
+                        <th> </th><th>353</th><td class="r"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th> </th><th>354</th><td class="r"><span>$ ln -s /path/to/trac/htdocs/common /var/www/static.example.org/trac-common</span> </td>
+                      </tr><tr>
+                        <th> </th><th>355</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>356</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>357</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>358</th><td class="r"><span>==== Setting up the Plugin Cache ====</span> </td>
+                      </tr><tr>
+                        <th> </th><th>359</th><td class="r"><span></span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>360</th><td class="r"><span>Some Python plugins need to be extracted to a cache directory. By default the cache resides in the home directory of the current user. When running Trac on a Web Server as a dedicated user (which is highly recommended) who has no home directory, this might prevent the plugins from starting. To override the cache location you can set the PYTHON_EGG_CACHE environment variable. Refer to your server documentation for detailed instructions on how to set environment variables.</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>160</th><th>361</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>161</th><th>362</th><td class="l"><span>== Configuring Authentication ==</span> </td>
+                  </tr><tr>
+                          <th>162</th><th>363</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>163</th><th> </th><td class="l"><span>The process of adding, removing, and configuring user accounts for authentication depends on the specific way you run Trac. The basic procedure is described in the [wiki:TracCgi#AddingAuthentication "Adding Authentication"] section on the TracCgi page. To learn how to setup authentication for the frontend you're using, please refer to one of the following pages:</span> </td>
+                      </tr><tr>
+                        <th>164</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>165</th><th> </th><td class="l"><span>&nbsp;* TracStandalone if you use the standalone server, `tracd`.</span> </td>
+                      </tr><tr>
+                        <th>166</th><th> </th><td class="l"><span>&nbsp;* TracCgi if you use the CGI or FastCGI methods.</span> </td>
+                      </tr><tr>
+                        <th>167</th><th> </th><td class="l"><span>&nbsp;* TracModPython if you use the mod_python method.</span> </td>
+                      </tr><tr>
+                        <th>168</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>169</th><th> </th><td class="l"><span>== Trac 0.11 &amp; SVN on Mac OS X Leopard (10.5) ==</span> </td>
+                      </tr><tr>
+                        <th>170</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>171</th><th> </th><td class="l"><span>&nbsp;* TracOnLeopardServer</span> </td>
+                      </tr><tr>
+                        <th>172</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>173</th><th> </th><td class="l"><span>== Using Trac ==</span> </td>
+                      </tr><tr>
+                        <th>174</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>175</th><th> </th><td class="l"><span>Once you have your Trac site up and running, you should be able to browse your subversion repository, create tickets, view the timeline, etc.</span> </td>
+                      </tr><tr>
+                        <th>176</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>177</th><th> </th><td class="l"><span>Keep in mind that anonymous (not logged in) users can by default access most but not all of the features. You will need to configure authentication and grant additional [wiki:TracPermissions permissions] to authenticated users to see the full set of features.</span> </td>
+                      </tr>
+                      <tr>
+                        <th> </th><th>364</th><td class="r"><span>Trac uses HTTP authentication. You'll need to configure your webserver to request authentication when the `.../login` URL is hit (the virtual path of the "login" button). Trac will automatically pick the REMOTE_USER variable up after you provide your credentials. Therefore, all user management goes through your web server configuration. Please consult the documentation of your web server for more info.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>365</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>366</th><td class="r"><span>The process of adding, removing, and configuring user accounts for authentication depends on the specific way you run Trac. </span> </td>
+                      </tr><tr>
+                        <th> </th><th>367</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>368</th><td class="r"><span>Please refer to one of the following sections:</span> </td>
+                      </tr><tr>
+                        <th> </th><th>369</th><td class="r"><span>&nbsp;* TracStandalone#UsingAuthentication if you use the standalone server, `tracd`.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>370</th><td class="r"><span>&nbsp;* [wiki:TracModWSGI#ConfiguringAuthentication TracModWSGI#ConfiguringAuthentication] if you use the Apache web server, with any of its front end: `mod_wsgi` of course, but the same instructions applies also for `mod_python`, `mod_fcgi` or `mod_fastcgi`.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>371</th><td class="r"><span>&nbsp;* TracFastCgi if you're using another web server with FCGI support (Cherokee, Lighttpd, !LiteSpeed, nginx)</span> </td>
+                      </tr><tr>
+                        <th> </th><th>372</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>373</th><td class="r"><span>== Granting admin rights to the admin user</span> </td>
+                      </tr><tr>
+                        <th> </th><th>374</th><td class="r"><span>Grant admin rights to user admin:</span> </td>
+                      </tr><tr>
+                        <th> </th><th>375</th><td class="r"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th> </th><th>376</th><td class="r"><span>$ trac-admin /path/to/myproject permission add admin TRAC_ADMIN</span> </td>
+                      </tr><tr>
+                        <th> </th><th>377</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>378</th><td class="r"><span>This user will have an "Admin" entry menu that will allow you to admin your trac project.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>379</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>380</th><td class="r"><span>== Finishing the install</span> </td>
+                      </tr><tr>
+                        <th> </th><th>381</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>382</th><td class="r"><span>=== Automatic reference to the SVN changesets in Trac tickets ===</span> </td>
+                      </tr><tr>
+                        <th> </th><th>383</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>384</th><td class="r"><span>You can configure SVN to automatically add a reference to the changeset into the ticket comments, whenever changes are committed to the repository. The description of the commit needs to contain one of the following formulas:</span> </td>
+                      </tr><tr>
+                        <th> </th><th>385</th><td class="r"><span>&nbsp;* '''`Refs #123`''' - to reference this changeset in `#123` ticket</span> </td>
+                      </tr><tr>
+                        <th> </th><th>386</th><td class="r"><span>&nbsp;* '''`Fixes #123`''' - to reference this changeset and close `#123` ticket with the default status ''fixed''</span> </td>
+                      </tr><tr>
+                        <th> </th><th>387</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>388</th><td class="r"><span>This functionality requires a post-commit hook to be installed as described in [wiki:TracRepositoryAdmin#ExplicitSync TracRepositoryAdmin], and enabling the optional commit updater components by adding the following line to the `[components]` section of your [wiki:TracIni#components-section trac.ini], or enabling the components in the "Plugins" admin panel.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>389</th><td class="r"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th> </th><th>390</th><td class="r"><span>tracopt.ticket.commit_updater.* = enabled</span> </td>
+                      </tr><tr>
+                        <th> </th><th>391</th><td class="r"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th> </th><th>392</th><td class="r"><span>For more information, see the documentation of the `CommitTicketUpdater` component in the "Plugins" admin panel.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>393</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>394</th><td class="r"><span>=== Using Trac ===</span> </td>
+                      </tr><tr>
+                        <th> </th><th>395</th><td class="r"><span></span> </td>
+                      </tr><tr>
+                        <th> </th><th>396</th><td class="r"><span>Once you have your Trac site up and running, you should be able to create tickets, view the timeline, browse your version control repository if configured, etc.</span> </td>
+                      </tr><tr>
+                        <th> </th><th>397</th><td class="r"><span></span> </td>
+                      </tr><tr class="last">
+                        <th> </th><th>398</th><td class="r"><span>Keep in mind that //anonymous// (not logged in) users can by default access only a few of the features, in particular they will have a read-only access to the resources. You will need to configure authentication and grant additional [wiki:TracPermissions permissions] to authenticated users to see the full set of features.</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>178</th><th>399</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>179</th><th>400</th><td class="l"><span>'' Enjoy! ''</span> </td>
+                  </tr><tr>
+                          <th>180</th><th>401</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>181</th><th> </th><td class="l"><span>[<del>wiki</del>:TracTeam The Trac Team]</span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>402</th><td class="r"><span>[<ins>trac</ins>:TracTeam The Trac Team]</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>182</th><th>403</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>183</th><th>404</th><td class="l"><span>----</span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>184</th><th> </th><td class="l"><span>See also:&nbsp; TracGuide, TracCgi, TracFastCgi, TracModPython, [wiki:TracModWSGI], TracUpgrade, TracPermissions</span> </td>
+                      </tr><tr>
+                        <th>185</th><th> </th><td class="l"><span></span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>405</th><td class="r"><span>See also: [trac:TracInstallPlatforms TracInstallPlatforms], TracGuide, TracUpgrade, TracPermissions</span> </td>
+                      </tr>
+            </tbody>
+        </table>
+      </li>
+  </ul>
+</div>
+      </div>
+  </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

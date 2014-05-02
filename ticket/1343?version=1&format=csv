@@ -1,0 +1,15 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1343,"[super] User related improvements (login, user pages etc)",rgrp,rgrp," * Minor: sidebar of register page should point to login page rather than openid signin
+ * Improvements to registration
+  * #1319 Require email field
+  * Require email confirmation to be activated (?)
+ * #1311 - modal user login
+ * Do not allow account creation via OpenID (only login)
+  * need to allow association of openid to an account (how do we do this?) -- simply paste of url is possible but won't work for google with their weird openid urls
+ * User page UX:
+  * show member since
+  * Allow users to provide a home page, organization
+  * Display email?
+  * Should have activity (once activity available)
+  * List all owned datasets (in standard manner)
+",enhancement,new,major,ckan-backlog,ckan,,,,ckan,none

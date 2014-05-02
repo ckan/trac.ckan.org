@@ -1,0 +1,8 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2333	Introduce new resource type datastore	rgrp		"This is a resource that is *just* in the datastore. At the moment there are hacky ways to do this (create resource with meaningless URL etc) but we should do this properly:
+
+ * New Option: DataStore Table in add a resource form
+ * URL field is disabled (or points at /api/data or something rather pointless)
+ * Download button is disabled
+   * Better would be to find a way to serialize an ES table or stream it ...
+"	enhancement	new	awaiting triage	ckan-v1.9	ckan				ckan	none

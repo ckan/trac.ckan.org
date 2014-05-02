@@ -1,0 +1,6 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2662	adding colons in tags results in server error on demo	shevski	toby	"changing a tag from ""country-uk"" to ""country:uk"" and updating gives server error
+
+otherwise updating metadata / adding tags seem fine
+
+either we should allow colons or form should return a message indicating what characters are allowed"	defect	closed	major	demo phase 2	ckan	fixed	demo-theme		ckan	none

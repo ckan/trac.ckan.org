@@ -1,0 +1,4 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+129	Secure db access by centralising query generation through authz module	dread	rgrp	"Controllers and templates should not access db objects directly - they should do all access via authz module giving username. They are handed by a query that has already been filtered by the packages they are authorized to read. 
+
+When they request a package object, they are handed an copy of the db object - disconnected from the database - so it the db object can't be changed."	enhancement	new	major	v0.10	ckan					

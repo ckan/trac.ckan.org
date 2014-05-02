@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+806,Metadata created and last modified timestamps for packages,rgrp,rgrp,"Packages should provide create and last modified attributes which are included in package dict exposed via api.
+
+These attributes will not be in db but are computed (depend not just on package but related objects -- package tags, package resources, package extras etc)",enhancement,closed,major,ckan-v1.3,component1,fixed,,,ckan,none

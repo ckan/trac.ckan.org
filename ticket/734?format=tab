@@ -1,0 +1,26 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+734	Investigate department issue (ONS import)	dread	dread	"Creation of duplicate packages named with trailing underscore
+
+ww 22/9/10:
+
+>> Need to ...
+>> merge some packages (the ""find packages by attributes""
+>> is not 100% reliable because of inconsistent data
+>> already in there).
+
+The ""find by tags"" algorithm uses (title, department).
+Unfortunately some of the data already there has no
+department. This causes it to make a new package (with
+trailing underscore).
+
+dread 24/9/10:
+
+I've done a test for the missing department issue and I can't
+reproduce the problem. This may be due to my general tidy up and
+getting tests passing using the latest ckanclient. Anyway, can you
+check over my test to see if this is what you mean?:
+dgu/ckanext/dgu/tests/ons/test_ons_loader.py:TestOnsLoadMissingDept
+
+ww 20/10/10:
+
+you should uncover it if you run against (a copy of) the dgu database."	task	closed	awaiting triage	ckan-v1.3	ckan	fixed				

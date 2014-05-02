@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+118,Use paginate in webhelpers,dread,dread,"Take out import of paginate in setup.py.
+Use paginate in webhelpers instead.
+Make changes to take account of any i/f changes.",enhancement,closed,major,v0.10,ckan,fixed,,,,

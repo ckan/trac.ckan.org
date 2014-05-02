@@ -1,0 +1,6 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1666	Add activity stream events for tags	seanh	seanh	"...and show them on the tag pages.
+
+This means adding tag_activity_list() and tag_activity_list_html() logic functions, adding the templating to render tags as HTML, and adding the tag HTML into the tag pages.
+
+What exactly should go into a tag's activity stream? As with datasets we may want a more complex SQL query, where events from objects related to the tag (datasets, users, etc.) appear in the tag's stream."	enhancement	closed	awaiting triage	ckan-sprint-2012-02-06	ckan	fixed	2d activity_streams		ckan	none

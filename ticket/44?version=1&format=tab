@@ -1,0 +1,18 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+44	Provide RSS/Atom Feed of Repository History	rgrp	rgrp	"= As A =
+
+Visitor
+
+= I Want To =
+
+Get an RSS/Atom Feed of the Repository History to use in my feed reader (or elsewhere).
+
+= Details =
+
+  * Preference for Atom.
+  * should just add parameter to /revision/list/ (or /revision/) to select atom format e.g. ?format=atom.
+  * should have a 'days' attribute specifying number of days back to go e.g. &days=30
+
+= Cost =
+
+Low"	enhancement	new	major	v0.6	ckan					

@@ -1,0 +1,13 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1215,Edit Resources table - removing all rows prevents adding them again,dread,,"I'm not sure if this was reported earlier, but I have found a minor bug in the ""Add new package"" form. As far as I can see this bug exists in v1.3.2 and also in v1.4.1a (that runs on ckan.net). This is a problem with adding new resources in ""Resources"" section. To reproduce the bug do the following:
+
+ 1. Go to ""Add new package"", for instance http://ckan.net/package/new
+ 2. Scroll down to ""Resources"" section.
+ 3. Click on ""Remove this row"" link (red circle).
+ 4. Say ""Yes"" to ""Are you sure you wish to remove this row?""
+ 5. Now there should be no rows. Only the header ""URL*   Format  Description""
+ 6. Click on ""Add row to table""
+ 7. All you get now is another row with table header ""URL*        Format Description"". You will not be able to add any resources now. Solution is to reload the page.
+
+The simplest solution to this bug will be to hide the ""Remove this
+row"" link if there is only one row.",defect,closed,minor,,ckan,fixed,,,ckan,none

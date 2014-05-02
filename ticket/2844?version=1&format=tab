@@ -1,0 +1,3 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2844	SQL-only (no solr) version of CKAN	rgrp		" * ~~Search needs to run of local DB (again)~~
+ * paster db clean attemps to connect to SOLR (still works as does db first but then excepts which is not nice UX)"	enhancement	new	awaiting triage		ckan				ckan	none

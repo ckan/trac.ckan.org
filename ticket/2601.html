@@ -1,0 +1,417 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      #2601 (500 Server Error when editing datasets with organizations plugins enabled)
+     – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="prev" href="2600.html" title="Ticket #2600" />
+        <link rel="last" href="3030.html" title="Ticket #3030" />
+        <link rel="help" href="../wiki/TracGuide.html" />
+        <link rel="alternate" href="2601%3Fformat=csv" type="text/csv" class="csv" title="Comma-delimited Text" /><link rel="alternate" href="2601%3Fformat=tab" type="text/tab-separated-values" class="tab" title="Tab-delimited Text" /><link rel="alternate" href="2601%3Fformat=rss" type="application/rss+xml" class="rss" title="RSS Feed" />
+        <link rel="next" href="2602.html" title="Ticket #2602" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/ticket.css" type="text/css" />
+        <link rel="first" href="1.html" title="Ticket #1" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript">
+      var auto_preview_timeout=2.0;
+      var form_token="93d81ccf9a7bb1c456462f62";
+    </script>
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script><script type="text/javascript" src="../chrome/common/js/wikitoolbar.js"></script><script type="text/javascript" src="../chrome/common/js/resizer.js"></script><script type="text/javascript" src="../chrome/common/js/auto_preview.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("div.description").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $(".foldable").enableFolding(false, true);
+        var args = {realm: "ticket", id: 2601, escape_newlines: 0}
+        $("#comment").autoPreview("/wiki_render", args, function(textarea, text, rendered) {
+            $("#ticketchange div.comment").html(rendered);
+            if (rendered)
+              $("#ticketchange").show();
+            else if ($("#ticketchange ul.changes").length == 0)
+              $("#ticketchange").hide();
+        });
+        $("#trac-comment-editor textarea").autoPreview("/wiki_render", args,
+                                                       function(textarea, text, rendered) {
+          var comment = $("#trac-comment-editor").next("div.comment");
+          comment.html(rendered);
+          if (rendered)
+            comment.show();
+          else
+            comment.hide();
+        });
+        $("#modify").parent().toggleClass("collapsed");
+        $(".trac-topnav a").click(function() { $("#modify").parent().removeClass("collapsed"); });
+        /* only enable control elements for the currently selected action */
+        var actions = $("#action input[name='action']");
+        function updateActionFields() {
+          actions.each(function () {
+            $(this).siblings().find("*[id]").enable($(this).checked());
+            $(this).siblings().filter("*[id]").enable($(this).checked());
+          });
+        }
+        actions.click(updateActionFields);
+        updateActionFields();
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="../wiki/TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li class="active"><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="2600.html" title="Ticket #2600">Previous Ticket</a></span></li><li class="last"><span><a class="next" href="2602.html" title="Ticket #2602">Next Ticket</a> &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="ticket">
+      <h1 id="trac-ticket-title">
+          <a href="2601.html">Ticket #2601</a>
+          <span class="status">(closed defect: fixed)</span>
+      </h1>
+      <div id="ticket">
+  <div class="date">
+    <p>Opened <a class="timeline" href="../timeline%3Ffrom=2012-06-26T14:59:14Z&amp;precision=second.html" title="2012-06-26T14:59:14Z in Timeline">22 months</a> ago</p>
+    <p>Last modified <a class="timeline" href="../timeline%3Ffrom=2012-07-03T04:56:19Z&amp;precision=second.html" title="2012-07-03T04:56:19Z in Timeline">22 months</a> ago</p>
+  </div>
+  <h2 class="summary searchable">500 Server Error when editing datasets with organizations plugins enabled</h2>
+  <table class="properties">
+    <tr>
+      <th id="h_reporter">Reported by:</th>
+      <td headers="h_reporter" class="searchable">
+        <a href="../query%3Fstatus=!closed&amp;reporter=seanh.html">seanh</a>
+      </td>
+      <th id="h_owner">Owned by:</th>
+      <td headers="h_owner">
+        <a href="../query%3Fstatus=!closed&amp;owner=ross.html">ross</a>
+      </td>
+    </tr>
+    <tr>
+        <th id="h_priority">
+          Priority:
+        </th>
+        <td headers="h_priority">
+              <a href="../query%3Fstatus=!closed&amp;priority=awaiting+merge.html">awaiting merge</a>
+        </td>
+        <th id="h_milestone">
+          Milestone:
+        </th>
+        <td headers="h_milestone">
+              <a class="missing milestone"></a>
+        </td>
+    </tr><tr>
+        <th id="h_component">
+          Component:
+        </th>
+        <td headers="h_component">
+              <a href="../query%3Fstatus=!closed&amp;component=ckan.html">ckan</a>
+        </td>
+        <th id="h_keywords">
+          Keywords:
+        </th>
+        <td headers="h_keywords" class="searchable">
+              <a href="../query%3Fstatus=!closed&amp;keywords=~organizations.html">organizations</a> <a href="../query%3Fstatus=!closed&amp;keywords=~cmap.html">cmap</a>
+        </td>
+    </tr><tr>
+        <th id="h_cc">
+          Cc:
+        </th>
+        <td headers="h_cc" class="searchable">
+        </td>
+        <th id="h_repo">
+          Repository:
+        </th>
+        <td headers="h_repo">
+              <a href="../query%3Fstatus=!closed&amp;repo=ckan.html">ckan</a>
+        </td>
+    </tr><tr>
+        <th id="h_theme">
+          Theme:
+        </th>
+        <td headers="h_theme">
+              <a href="../query%3Fstatus=!closed&amp;theme=none.html">none</a>
+        </td>
+        <th>
+        </th>
+        <td>
+        </td>
+    </tr>
+  </table>
+  <div class="description">
+    <h3 id="comment:description">
+      Description
+    </h3>
+    <div class="searchable">
+      <p>
+Add the organizations and organizations_dataset plugins to ini file, run ckan, login, create an organization, create a dataset and put in organization, edit the dataset and set organization to none, try to edit the dataset again (you must be sysadmin to do this) and get a 500:
+</p>
+<pre class="wiki">Error - &lt;class 'genshi.template.eval.UndefinedError'&gt;: [] has no member named "get"
+URL: http://127.0.0.1:5000/dataset/edit/fooset
+File '/home/seanh/.virtualenvs/ckan/local/lib/python2.7/site-packages/weberror/errormiddleware.py', line 162 in __call__
+  app_iter = self.application(environ, sr_checker)
+File '/home/seanh/.virtualenvs/ckan/local/lib/python2.7/site-packages/beaker/middleware.py', line 73 in __call__
+  return self.app(environ, start_response)
+File '/home/seanh/.virtualenvs/ckan/local/lib/python2.7/site-packages/beaker/middleware.py', line 155 in __call__
+  return self.wrap_app(environ, session_start_response)
+File '/home/seanh/.virtualenvs/ckan/local/lib/python2.7/site-packages/routes/middleware.py', line 130 in __call__
+  response = self.app(environ, start_response)
+File '/home/seanh/.virtualenvs/ckan/local/lib/python2.7/site-packages/pylons/wsgiapp.py', line 125 in __call__
+  response = self.dispatch(controller, environ, start_response)
+File '/home/seanh/.virtualenvs/ckan/local/lib/python2.7/site-packages/pylons/wsgiapp.py', line 324 in dispatch
+  return controller(environ, start_response)
+File '/home/seanh/Projects/ckan/ckan/ckan/lib/base.py', line 221 in __call__
+  res = WSGIController.__call__(self, environ, start_response)
+File '/home/seanh/.virtualenvs/ckan/local/lib/python2.7/site-packages/pylons/controllers/core.py', line 221 in __call__
+  response = self._dispatch_call()
+File '/home/seanh/.virtualenvs/ckan/local/lib/python2.7/site-packages/pylons/controllers/core.py', line 172 in _dispatch_call
+  response = self._inspect_call(func)
+File '/home/seanh/.virtualenvs/ckan/local/lib/python2.7/site-packages/pylons/controllers/core.py', line 107 in _inspect_call
+  result = self._perform_call(func, args)
+File '/home/seanh/.virtualenvs/ckan/local/lib/python2.7/site-packages/pylons/controllers/core.py', line 60 in _perform_call
+  return func(**args)
+File '/home/seanh/Projects/ckan/ckan/ckan/controllers/package.py', line 499 in edit
+  extra_vars=vars)
+File '/home/seanh/Projects/ckan/ckan/ckan/lib/base.py', line 148 in render
+  return cached_template(template_name, render_template, loader_class=loader_class)
+File '/home/seanh/.virtualenvs/ckan/local/lib/python2.7/site-packages/pylons/templating.py', line 249 in cached_template
+  return render_func()
+File '/home/seanh/Projects/ckan/ckan/ckan/lib/base.py', line 101 in render_template
+  return literal(stream.render(method=method, encoding=None, strip_whitespace=True))
+File '/home/seanh/.virtualenvs/ckan/local/lib/python2.7/site-packages/genshi/core.py', line 183 in render
+  return encode(generator, method=method, encoding=encoding, out=out)
+File '/home/seanh/.virtualenvs/ckan/local/lib/python2.7/site-packages/genshi/output.py', line 57 in encode
+  return _encode(''.join(list(iterator)))
+File '/home/seanh/.virtualenvs/ckan/local/lib/python2.7/site-packages/genshi/output.py', line 339 in __call__
+  for kind, data, pos in stream:
+File '/home/seanh/.virtualenvs/ckan/local/lib/python2.7/site-packages/genshi/output.py', line 670 in __call__
+  for kind, data, pos in stream:
+File '/home/seanh/.virtualenvs/ckan/local/lib/python2.7/site-packages/genshi/output.py', line 771 in __call__
+  for kind, data, pos in chain(stream, [(None, None, None)]):
+File '/home/seanh/.virtualenvs/ckan/local/lib/python2.7/site-packages/genshi/output.py', line 586 in __call__
+  for ev in stream:
+File '/home/seanh/.virtualenvs/ckan/local/lib/python2.7/site-packages/genshi/core.py', line 288 in _ensure
+  for event in stream:
+File '/home/seanh/.virtualenvs/ckan/local/lib/python2.7/site-packages/genshi/template/base.py', line 605 in _include
+  for event in stream:
+File '/home/seanh/.virtualenvs/ckan/local/lib/python2.7/site-packages/genshi/template/markup.py', line 327 in _match
+  for event in stream:
+File '/home/seanh/.virtualenvs/ckan/local/lib/python2.7/site-packages/genshi/template/base.py', line 545 in _flatten
+  for kind, data, pos in stream:
+File '/home/seanh/.virtualenvs/ckan/local/lib/python2.7/site-packages/genshi/template/directives.py', line 169 in _generate
+  attrs = _eval_expr(self.expr, ctxt, vars)
+File '/home/seanh/.virtualenvs/ckan/local/lib/python2.7/site-packages/genshi/template/base.py', line 277 in _eval_expr
+  retval = expr.evaluate(ctxt)
+File '/home/seanh/.virtualenvs/ckan/local/lib/python2.7/site-packages/genshi/template/eval.py', line 178 in evaluate
+  return eval(self.code, _globals, {'__data__': data})
+File '/home/seanh/Projects/ckan/ckan/ckanext/organizations/templates/organization_package_form.html', line 110 in &lt;Expression u"{'selected':'selected'} if organization.get('id','') == group['id'] else {}"&gt;
+  &lt;option value="${group['id']}" py:attrs="{'selected':'selected'} if organization.get('id','') == group['id'] else {}"&gt;${group['title']}&lt;/option&gt;
+File '/home/seanh/Projects/ckan/ckan/ckan/config/environment.py', line 248 in genshi_lookup_attr
+  val = cls.undefined(key, owner=obj)
+File '/home/seanh/.virtualenvs/ckan/local/lib/python2.7/site-packages/genshi/template/eval.py', line 410 in undefined
+  raise UndefinedError(key, owner=owner)
+UndefinedError: [] has no member named "get"
+</pre>
+    </div>
+  </div>
+</div>
+          
+
+        <div>
+          <h2 class="foldable">Change History</h2>
+          <div id="changelog">
+              <div class="change" id="trac-change-1">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:1" class="cnum">
+      <a href="2601.html#comment:1">comment:1</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-06-26T14:59:40Z&amp;precision=second.html" title="2012-06-26T14:59:40Z in Timeline">22 months</a> ago by seanh
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Keywords</strong>
+        <em>organizations</em> <em>cmap</em> added
+    </li><li>
+      <strong>Type</strong>
+        changed from <em>enhancement</em> to <em>defect</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-2">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:2" class="cnum">
+      <a href="2601.html#comment:2">comment:2</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-06-26T15:07:36Z&amp;precision=second.html" title="2012-06-26T15:07:36Z in Timeline">22 months</a> ago by seanh
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+I think this happens whenever you try to edit a dataset that has no organization
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-3">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:3" class="cnum">
+      <a href="2601.html#comment:3">comment:3</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-06-26T15:09:03Z&amp;precision=second.html" title="2012-06-26T15:09:03Z in Timeline">22 months</a> ago by ross
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Owner</strong>
+        set to <em>ross</em>
+    </li><li>
+      <strong>Status</strong>
+        changed from <em>new</em> to <em>accepted</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-4">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:4" class="cnum">
+      <a href="2601.html#comment:4">comment:4</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-06-29T08:55:28Z&amp;precision=second.html" title="2012-06-29T08:55:28Z in Timeline">22 months</a> ago by ross
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+We've taken steps to make sure that users can't add datasets without a group, and can't remove a dataset from a group (without deleting it).  Will submit patch to restrict adding without group.
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-5">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:5" class="cnum">
+      <a href="2601.html#comment:5">comment:5</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-06-29T09:54:54Z&amp;precision=second.html" title="2012-06-29T09:54:54Z in Timeline">22 months</a> ago by ross
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Priority</strong>
+        changed from <em>awaiting triage</em> to <em>awaiting merge</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-6">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:6" class="cnum">
+      <a href="2601.html#comment:6">comment:6</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-07-03T04:56:19Z&amp;precision=second.html" title="2012-07-03T04:56:19Z in Timeline">22 months</a> ago by ross
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Status</strong>
+        changed from <em>accepted</em> to <em>closed</em>
+    </li><li>
+      <strong>Resolution</strong>
+        set to <em>fixed</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+          </div>
+        </div>
+      <div id="help"><strong>Note:</strong> See
+        <a href="../wiki/TracTickets.html">TracTickets</a> for help on using
+        tickets.</div>
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="first">
+          <a rel="nofollow" href="2601%3Fformat=csv" class="csv">Comma-delimited Text</a>
+        </li><li>
+          <a rel="nofollow" href="2601%3Fformat=tab" class="tab">Tab-delimited Text</a>
+        </li><li class="last">
+          <a rel="nofollow" href="2601%3Fformat=rss" class="rss">RSS Feed</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+-- ## 24: Trac attachments ## --
+
+-- All trac attachments to link to 
+SELECT 
+  id, 
+  filename, 
+  time as PosixTime,
+  author 
+from attachment
+order by id asc

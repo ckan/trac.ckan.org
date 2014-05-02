@@ -1,0 +1,23 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2595	Demo add dataset needs to remember which stages have been visited	aron.carroll	toby	"For example.
+
+ 1. Start on stage one
+ 2. Add dataset click next
+ 3. Click previous
+
+Expect Stage 1 to be ""active"", stage two to be ""complete""
+
+ 1. Start on stage one
+ 2. Add dataset click next
+ 3. Click next
+ 4. Click previous
+
+Expect Stage 2 to be ""active"", stage one and three to be ""complete""
+
+ 1. Start on stage one
+ 2. Add dataset click next
+ 3. Click next
+ 4. Click previous
+ 5. Click previous
+
+Expect Stage 1 to be ""active"", stage two and three to be ""complete"""	enhancement	closed	major	demo phase 2	ckan	fixed	demo-theme		ckan	none

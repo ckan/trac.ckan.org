@@ -1,0 +1,10 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2251,Internal analytics for ckan.,kindly,toby,"Page views and Resources clicks need to be tracked.
+
+Google analytics can not be used for ecportal so build something very quick and simple inside ckan.
+
+* Make javascript to make request to ckan to store clicks and page views.
+* Add middleware so these requests do not go through pylons and just store data quickly.
+* Add config option to enable.
+* Copy reporting from ckanext-googleanalytics.
+",enhancement,new,awaiting triage,ckan-sprint-2012-04-02,ecportal,,4d,,ckan,none

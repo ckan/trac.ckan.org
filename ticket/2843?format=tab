@@ -1,0 +1,4 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2843	Adding existing datasets to organizations is broken	seanh	seanh	"On the organization read page there is only an 'Add Dataset' button, not a drop-down with add new dataset or add existing dataset as on the default group page.
+
+On the organization edit page you do have the drop-down, but if you click add existing dataset nothing happens except it appends #datasets to the URL"	defect	closed	awaiting merge	ckan-v1.8	ckan	fixed	organizations cmap		ckan	none

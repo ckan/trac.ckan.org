@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1457,Bug with DataNL instance,jilly.mathews,," ""when logging into http://register.data.overheid.nl/ with OpenID, the /user/me page gives a 404. CKAN version 1.3.4.""
+
+n the manual it says an API key kan be created via http://test.ckan.net/user/me /. However, when I try the corresponding  http://register.data.overheid.nl/user/me, I get a 404 error (not found).	",defect,new,awaiting triage,ckan-future,ckan,,Data NL,David Raznick <kindly@…>,ckan,none

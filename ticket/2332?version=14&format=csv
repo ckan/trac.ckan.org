@@ -1,0 +1,70 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2332,Fixes for v1.7 release,rgrp,rossjones,"A place to list crucial fixes for v1.7 release:
+
+Related extension:
+
+ * Related Item has comments on index page (they should not show up here -- why is this happening!)
+ * Related item should be to left of history (history could in fact move to RHS)
+   * What about losing icons since we duplicate for related item
+ * Related item plus sign is very poorly aligned within box
+  * Add related items should be in drop down like for resources (?) to make it easy to add items
+  * Hover should show a title that gives some information about what related are (not at all clear)
+ * Related item only includes App, Idea, Visualization but not API  | Post | Paper | News Article options as in original ticket #2204
+
+Search results:
+
+ * #2331 - search should add not or
+ * Search results should be similar across group pages and normal search results (suggest adopting group page style)
+  * Search results resource link should link to resource page rather than url for that resource
+  * Suggest we could tidy this a bit (e.g. have resources in mini-sidebar of search result ...?)
+
+Data viewer:
+
+ * Merge updates to Recline (that did go in before deadline but do not seem to have made v1.7 branch) https://github.com/okfn/ckan/commit/146a5c1130cc77cb2ad2c6ef6b3a53074908bf07
+  * Ensure still using read-only (this seems to have been lost in upgrade)
+ * Do not show failed preview with red-bar (esp when just empty datastore ...)
+ * (? not really a fix) Give out a link as well as embed instructions (I often want to link to the explorer in a given state)
+  * Should this link to the resource page or to a dedicated viewer page - cf # 2322 (resource sub-urls like /download, /api ...)
+  * Do #2322 ...
+ * Decent powered by icon for the Embed for the DataHub (make this text customizable and allow html ...)
+ * Embed link uses uuid rather than dataset name (this goes to perma-url question ...)
+ * Data viewer embed url includes all the resource info
+
+Dataset page:
+
+ * Put home page link somewhere more prominent (e.g. the top of the sidebar)
+ * Put author more prominent (at top right)
+ * (? - new work) List CKAN owners at top right in sidebar
+ * Make resources stand out more
+ * Rename resources tab and heading to Data & Resources
+
+Dataset edit and create:
+
+ * Corrections to dataset creation form for v1.7 - #2317
+ * Better auto-complete for groups on dataset edit/new page - #2319
+  * Remove groups box and replace with tags on the new page (or is this needed for organizations stuff?)
+ * Description / notes text area is not wide enough.
+   * Should also be larger on edit page
+
+Resource view:
+ * Do not show no description in no description (just show dataset info)
+
+Theme:
+ * Fix spacing above page title (i.e. dataset title etc)
+ * Bootstrap 2.0.2 (@zephod was *supposed* to have done this) - should be trivial and gives important bugfixes for data viewer
+ * Fix subnav width on resources pages (does not extend all the way to the right like it should)
+ * Fix spacing of top menu and search box (do not look right)
+ * Group pages:
+  * view page: image / logo is really poorly locate and sized, see e.g. http://datahub.io/group/wikimedia
+  * view page: admin heading on RHS sidebar is wrongly indented
+
+Miscellaneous:
+
+ * Ensure that we out-of-the-box config for CKAN has:
+  * Only logged in users able to create
+  * Creation permissions have only creators able to update a dataset
+
+Deployments (without deployment we cannot know these are working):
+
+ * Social extension
+ * Analytics",enhancement,new,critical,ckan-v1.7,ckan,,,,ckan,none

@@ -1,0 +1,4 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+245	Support for composite primary keys	rgrp	rgrp	"Problem here is that foreign key then becomes ""complicated"" (composite).
+
+  * Could also deprecate continuity_id field in favour of the basic foreign key on ie"	enhancement	closed	major		vdm	duplicate				

@@ -1,0 +1,69 @@
+id	summary	component	owner	type	priority	milestone
+2524	If there are no translation files for selected language fall back to default lang.	ckan	kindly	enhancement	awaiting triage	ckan-ecportal
+2530	DataHub purge fails on some revisions	ckan	kindly	enhancement	minor	ckan-v1.9
+2548	Object ownership for groups/package	ckan	kindly	enhancement	awaiting triage	datahub-july
+2674	Data preview not loading on s031	ckan	kindly	defect	minor	demo phase 5
+2708	limit extra data for package/group show	ckan	kindly	enhancement	awaiting triage	ckan-v1.9
+2729	searching for tags:[tag] works but tag:[tag] doesn't	ckan	kindly	enhancement	awaiting triage	ckan-backlog
+2790	logic.action.user_show is slow	ckan	kindly	enhancement	major	demo phase 4
+2877	Bugs with datastore v2	ckan	kindly	enhancement	awaiting triage	
+3027	solr for 2.0	ckan	kindly	enhancement	awaiting triage	
+2446	Create demo dataset history/comparison page	ckan	johnmartin	enhancement	minor	demo phase 4
+2451	Create demo user list page	ckan	johnmartin	enhancement	minor	demo phase 5
+2457	Create demo tags list page	ckan	johnmartin	enhancement	minor	demo phase 4
+2641	Adapt spatial widgets to new theme	ckan	johnmartin	enhancement	major	demo phase 5
+2697	create dataset validation	ckan	johnmartin	enhancement	awaiting triage	demo phase 5
+2785	Allow resources to be re-ordered	ckan	johnmartin	enhancement	minor	demo phase 5
+2917	Organization admins can delete themselves	ckan	johnmartin	enhancement	awaiting triage	ckan 2.0
+3016	CKAN 2.0 template tweaks	ckan	johnmartin	enhancement	awaiting triage	ckan 2.0
+3018	Load more in activity streams	ckan	johnmartin	enhancement	awaiting triage	ckan 2.0
+1062	Data preview encoding error	ckan	johnglover	defect	minor	ckan-backlog
+1203	"Moderated edits: html code shows as ""changed"" although it is not"	ckan	johnglover	defect	awaiting triage	ckan-backlog
+1259	"""Add a row"" for Extras on Package form"	ckan	johnglover	enhancement	minor	ckan-backlog
+1336	License fudge	ckan	johnglover	defect	minor	ckan-backlog
+1393	Don't skip search tests	ckan	johnglover	enhancement	minor	ckan-backlog
+1584	QA report improvements - 2.5d	ckan	johnglover	enhancement	major	ckan-backlog
+1588	QA - Give SPARQL endpoints a 4 star rating	ckan	johnglover	enhancement	major	ckan-backlog
+1589	QA - Give 5 star rating to datasets with link metadata	ckan	johnglover	enhancement	major	ckan-backlog
+2733	Datastore logic functions	ckan	johnglover	enhancement	major	ckan-v1.9
+2829	Archiver fails on 403 http response	ckan	johnglover	enhancement	awaiting triage	ckan-v1.9
+3011	Recline fixes and updates for CKAN 2.0	ckan	johnglover	enhancement	major	ckan 2.0
+3017	New stable branch for the demo server	ckan	johnglover	enhancement	major	ckan 2.0
+250	RDF link in Atom feed	ckan	icmurray	enhancement	awaiting triage	ckan-v1.9
+2277	Use the new atom feeds in IATI	ckan	icmurray	refactor	minor	ckan-backlog
+2298	Add sort-by controls to the search results page	ckan	icmurray	enhancement	minor	ckan-v1.9
+2310	Refactor the search-query construction in feeds.py	ckan	icmurray	enhancement	minor	ckan-backlog
+2350	Hooks  in package controller for validating form data	ckan	icmurray	enhancement	minor	ckan-v1.9
+2405	Improvements to data viewer embed	ckan	icmurray	defect	major	ckan-v1.9
+2485	Encourage leak containment by limiting the number of requests a CKAN process serves	ckan	icmurray	defect	awaiting triage	ckan-v1.9
+2550	User types	ckan	icmurray	enhancement	awaiting merge	datahub-july
+2603	Remove deprecated 'fields' parameter from resource_search	ckan	icmurray	refactor	minor	ckan-v1.9
+2621	Remove the deprecated 'fields' parameter from tag_search and tag_autocomplete	ckan	icmurray	refactor	minor	ckan-v1.9
+2679	Change default behaviour of TemplateController.view to 404.	ckan	icmurray	enhancement	minor	ckan-v1.9
+2709	Atom feeds are undocumented	ckan	icmurray	enhancement	awaiting triage	
+2784	model dictize sensitive data	ckan	icmurray	defect	awaiting triage	
+2859	Fix the build	ckan	icmurray	defect	blocker	ckan-v1.8
+2959	Changing a Group's name through the action api disassociates it from its datasets in the index	ckan	icmurray	defect	minor	ckan 2.0
+2961	Preview plugin endpoint	ckan	dominik	enhancement	awaiting triage	ckan 2.0
+3013	common-error-messages is unreadable	ckan	dominik	defect	awaiting triage	
+1815	Reenable Sparql endpoint on publicdata.eu	pdeu	amercader	task	awaiting triage	ckan-future
+1818	Spatial metadata editor	ckan	amercader	enhancement	major	ckan-future
+2382	Investigate options for basic geocoding	ckan	amercader	task	awaiting triage	ckan-future
+2407	'Access denied' message is unhelpful	ckan	amercader	enhancement	awaiting triage	ckan-v1.9
+2788	Speed improvements on creating/updating and indexing	ckan	amercader	enhancement	awaiting triage	ckan-v1.9
+2949	Reenable Data API button on the new theme	ckan	amercader	defect	major	
+3023	New methods on IPackageController to provide access to the data_dict	ckan	amercader	enhancement	awaiting triage	
+3025	Add requests to core requirements	ckan	amercader	enhancement	awaiting triage	
+3026	Support icons on  nav_named_link	ckan	amercader	enhancement	minor	
+2938	Explain bundling in doc/resources.rst	ckan	Toby	enhancement	awaiting triage	
+1565	Admin dashboard finished?	ckan	Rufus Pollock	enhancement	awaiting triage	ckan-future
+1558	Publisher Tools	ckan	David Raznik	enhancement	awaiting triage	ckan-future
+1560	Follow extension	ckan	David Raznik	enhancement	awaiting triage	ckan-future
+1561	To do extension	ckan	David Raznik	enhancement	awaiting triage	ckan-future
+1564	Structured Data (Data API)	ckan	David Raznik	enhancement	awaiting triage	ckan-future
+1567	Finish QA extension	ckan	David Raznik	enhancement	awaiting triage	ckan-future
+1569	Wordpressser	ckan	David Raznik	enhancement	awaiting triage	ckan-future
+1572	Meta data Harvester	ckan	David Raznik	enhancement	awaiting triage	ckan-future
+1573	Apps and Ideas	ckan	David Raznik	enhancement	awaiting triage	ckan-future
+1557	Complete Webstore Preview Extension	ckan	David Rasnik	enhancement	awaiting triage	ckan-future
+1562	Finish Geo Spatial	ckan	Adria	enhancement	awaiting triage	ckan-future

@@ -1,0 +1,26 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1106	Bugs related to routes arising from API refactor + removal of default routes	rgrp	rgrp	"Various bugs I've been encountering:
+
+ * Autocomplete of tag names no longer works (no longer works on http://ckan.net/). Appears to be due to no longer have a routes for apiv2 (i'm seeing failing calls to:  http://ckan.net/apiv2/package/autocomplete?callback=callback&incomplete=a)
+ * Incorrect url generated for API in page footer (e.g.  http://ckan.net/rest/get_api) due to use of old 'rest' rather than new 'api'
+
+Latter issue was masked by existence of 'default' routes:
+
+{{{
+   map.connect('/{controller}', action='index')
+   map.connect('/:controller/{action}')
+   map.connect('/{controller}/{action}/{id}')
+}}}
+
+Having these is, I think, bad practice as it is better to be explicit and we should therefore remove asap.
+
+In addition I think we should be cautious about 'default' routes in core such as:
+
+{{{
+    map.connect('/api/rest/:register', controller='api', action='list',
+        conditions=dict(method=['GET'])
+        )
+}}}
+
+As it makes it harder for extensions to introduce their own APIs (here one could perhaps add something at /api/rest/{my-object} but only by using before_map rather than after_map).
+"	defect	closed	blocker	ckan-v1.4-sprint-6	ckan	fixed		kindly	ckan	none

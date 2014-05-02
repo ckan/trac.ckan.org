@@ -1,0 +1,10 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+192	Time-related package field	dread	rgrp	"Cost - 2 days
+
+The time period to which a package's data applies is stored in a new field called 'Relevant Date Range'. The value of this field is up to two calendar dates: i.e. either a point in time (e.g. date of a river map is 5/10/09) or a time period (e.g. pollution measurements 1/1/09-1/4/09).
+
+Example part of package:
+
+'''Date:'''	5/10/09
+[[br]] or [[br]]
+'''Date:'''	1/1/09 – 1/4/09"	enhancement	closed	awaiting triage		ckan	fixed				

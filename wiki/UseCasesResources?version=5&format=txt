@@ -1,0 +1,43 @@
+'''Current Situation'''
+
+A resource belongs to a single package. A resource can only hold very limited pieces of information i.e a url, hash, a description and its format/type.  It also has state i.e whether it is active and not active.  They are versioned but not dated.
+
+The user is given an option to reorder the resources against a package, this order has no relevance apart from how the information is displayed.
+
+
+'''Use Cases'''
+
+
+ * Data should be able to be grouped by various different factors (type, date).
+
+ * There needs to be a mechanism to timeline data, so that search results only display the latest package. This needs to be done in a way that the older data is still easily accessible. This should be done with the minimum of user effort.
+
+ * The ordering of the data should be presented without the need for user input.
+
+ * There needs to more information stored against the data, beyond just its format and a description.
+
+ * Users should be able to refashion the data and post a whole new set of this refashioned data.
+
+ * Groups of data should be able to be synced across packages/instances.
+
+ * When new versions of the data arrive it should be easy to copy an old one and change versions/dates as required.
+
+ * A user may want to upload a resource separately from the package and decide later on where its the best place for it is.
+
+''' Possible solutions '''
+
+1. Make the data model for resources richer.  The suggested model would be
+  
+{{{
+Package  <m2m>  data_group <o2m> data <o2m>  resource
+}}}
+data_group now becomes a first class entity.
+
+The data group would be a holder for a timeseries of "data"
+
+Each bit of data can have many resources of different types.
+
+2. Improve package relationships.  This will involve giving package relationships more informations such as the date of the relationship in order to make a time series. (this date information could also be against the package)
+
+3. Add a package group table.  All current packages get a package_group and then we will have a way to add packages in a time-line.  Packages will have time series data information.
+

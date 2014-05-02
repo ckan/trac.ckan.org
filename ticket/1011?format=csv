@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1011,Make pluggable AuthzGroups implementation,sebbacon,sebbacon,"I have a requirement to allow an external source to define the groups of which a user is a member.
+
+I propose to create an IAuthzUserGroups plugin interface that allows an extension to arbitrarily extend the list of AuthzGroups that a user is in.",enhancement,closed,awaiting triage,ckan-v1.4-sprint-3,ckan,fixed,,,,

@@ -1,0 +1,28 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1593	[super] Create feeds from search results	amercader	amercader	"Recent changes (see #191 and #1498) have made really easy to get search results ordered chronologically, and creating RSS or Atom feeds from them is relatively easy.
+
+Feeds are extremely popular and there are several tools for consuming them, so it would be a great way to allow users to follow datasets related with their topics of interest.
+
+Apart from the general feed with changes on the whole instance, other different ""pre-set"" feed endpoints could be implemented. The most obvious choices for custom feeds could be groups and tags:
+{{{
+http://<ckan_server>/feed/group/{id}.{format:rss|atom}
+http://<ckan_server>/feed/tag/{id}.{format:rss|atom}
+}}}
+
+These could be shown on the group/tag page, both on the <head> section, so browsers can autodiscover them, and on the UI, with a message like ""Subscribe to this group/tag"".
+
+Another powerful option is to have a custom feed builder that accepts the same parameters as the search page, so users can subscribe to whatever query they are interested on
+
+{{{
+http://<ckan_server>/feed/custom.{format:rss|atom}?res_format=api%2Fsparql
+http://<ckan_server>/feed/custom.{format:rss|atom}?q=tags:animal*
+}}}
+
+Note that a lot of work on this front needs to be done for the IATI registry project (see #1590)
+
+
+Other tickets related:
+ * #1592: metadata_modified and metadata_created are not included in the search results, so an extra query for each package is needed right now.
+
+
+"	enhancement	new	minor	ckan-v1.7	ckan			rgrp	ckan	none

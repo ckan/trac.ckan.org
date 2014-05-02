@@ -1,0 +1,7 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1538,Store partially-filled in package form data as a draft.,icmurray,icmurray,"Allow a user to save a partially-complete and probably invalid package-create form in order to come back to it later.
+
+We decided on blob storage over a state field on the package:
+
+ - prevents a history of the drafts being stored in the revision history.  This is a particular problem if we start auto-saving, say every 20s.
+ - the blob can store arbitrary extra data, such as how far through the wizard we are.",enhancement,closed,major,ckan-v1.7,dgu,wontfix,dgu form refactor wizard #1525,dread kindly shevski,ckanext-dgu,none

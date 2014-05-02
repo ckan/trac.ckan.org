@@ -1,0 +1,4 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+86	Support for stateful dict-like collections	rgrp	rgrp	"Already support stateful list-like collections and should extend this to dict-like collections.
+
+(This is prerequisite for implementing versioned ""extra"" (key/value) attributes on packages in CKAN and elsewhere)."	enhancement	closed	critical		vdm	fixed				

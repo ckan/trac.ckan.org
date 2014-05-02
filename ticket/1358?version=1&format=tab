@@ -1,0 +1,6 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1358	Generate configuration documentation automatically from the deployment_ini_tmpl file	rgrp	zephod	"At the moment documentation of config options is duplicated between source (deployment_ini_tmpl in ckan/config which is used to generate user ini file) and the docs.
+
+Suggest we write a script that automatedly generates reference documentation for the config from the source.
+
+May be obsoleted by #277 (some config in db)"	enhancement	assigned	awaiting triage	ckan-backlog	ckan				ckan	none

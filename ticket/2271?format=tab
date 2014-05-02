@@ -1,0 +1,4 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2271	IATI: Some datasets not being indexed	amercader	amercader	"When importing a CSV file for a certain publisher, records don't come up on the search index. 
+After some investigation this has tunrn out to be caused by the records being deleted. We need to investigate if this was caused by the import or just made by the users.
+"	defect	closed	awaiting triage	ckan-sprint-2012-04-16	iati	fixed	iati [0.5d]		ckan	none

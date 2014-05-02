@@ -1,0 +1,85 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1797,[super] Webstore v2 - Integrated and based on ElasticSearch,rgrp,rgrp,"Main tasks:
+
+ * Integrated seamlessly into CKAN (authorization etc)
+ * Based off ElasticSearch
+
+Etherpad: http://ckan.okfnpad.org/webstore
+
+= Tasks =
+
+ * ~~New API point (config + controller) [0.75d]~~
+   * /api/data/{resource-id}
+ * ~~Authorization [0.5d]~~
+ * ~~Documentation [0.25d]~~
+ * ~~Upgrade data viewer to use ES [0.5d]~~
+ * Convert webstorer to new setup - http://github.com/okfn/ckanext-webstorer [1d] - #1753
+  * See below
+ * ""Create DataStore Resource"" in Resource creation (??)
+ * Tick box to enable DataStore in Resource edit form (for time being would just set webstore_url to any non-null/non-empty value)
+  * Also need to use this info in DataStore extension?
+ * Create nice instructions on Resource page about using the DataStore
+ * Rename webstore -> datastore
+ * ~~Deploy [0.5d]~~
+
+= Details =
+
+== Layout on ES ==
+
+{{{
+elasticsearch/{index}/{type-id}
+
+index = ckan-{ckan-id}
+type-id = resource-id (1)
+}}}
+
+== Request path ==
+
+Req => Nginx => CKAN App (authz) => req to elasticsearch and returns results
+
+See as an example: https://github.com/okfn/elastic-proxy
+
+== Questions ==
+
+1. How do we decide what to use in the viewer e.g. Webstore data versus DataProxy
+    * Check for existence of webstore_url on Resource (should really be webstore_enabled boolean or similar, however we stick with url for the time being because it exists and we avoid migration). If exists use Webstore o/w don't.
+2. How do we decide when webstore is activated
+    * Ans: see previous.
+3. Do we (and how do we) allow for resources which are just for webstores
+    * Ans: we have to set webstore_url = True ... on save. Or add a big button saying: ""Create Blank Resource"" ...
+4. How does webstorer work ...
+    * CSV import - NS: make sure we add e.g. rownum or __id__ = rownum ...
+    * Separate mini-service (webstorer.thedatahub.org ...)
+5. How do we selectively disable recline where not appropriate (e.g. query support makes no sense for DataProxy)
+    * Ans: do not bother at present. Focus on Webstore route.
+6. Where does geodata support come in (in Recline or separately)
+    * This is a separate issue
+
+== User Story 1 ==
+
+User -> CKAN instance -> Add Dataset -> Adds a Resource via uploading a CSV file -> Save
+
+=> Result = New Dataset + Resource + Data API to resource and nice Preview of the data
+
+Solution:
+
+ 1. Allow normal upload process
+ 2. Webstorer queue task which should get triggered by new resource. Check the resource and if it can convert into the associated resource webstore database.
+ 3. Update the resource in some way (set webstore_url)
+
+= User Stories =
+
+== User Story 2 ==
+
+User -> CKAN instance -> Add Dataset -> Adds a Resource via linking to some remote file (CSV or otherwise) or uploading some data (CSV or otherwise)
+
+=> Result = New Dataset + Resource + nice Preview of the data (wherever possible)
+
+
+== User Story 3 ==
+
+User -> CKAN instance -> Add Dataset -> Adds a Resource which will be webstore database in CKAN -> User saves data to this data store.
+
+=> Result = New Dataset + Resource (Webstore resource) which can now be written to or read from by the user
+
+Solution: just create a resource with blank url (or better, have a new option to create webstore resource ...)",enhancement,new,critical,current-ckan-sprint-2012-03-05,ckan,,[4d],,ckan,none

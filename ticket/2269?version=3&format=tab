@@ -1,0 +1,16 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2269	EC ODP review and server setup	johnglover	johnglover	" * code review with D.R. for ckanext-ecportal
+ * merge and test all multilingual code
+ * fix server issues: routing, Git access to CKAN repository
+
+Bugs to fix:
+
+ * ~~rename groups to publishers~~
+ * ~~update home page layout (recent updates along side publishers)~~
+ * ~~don't add 'en' to main menu links if english~~
+ * resource edit page, fix missing images
+ * change dataset 'settings' to 'edit'
+ * translate 'published by' drop-down list
+ * fix JS on 'add a dataset page'
+ * chosen broken (dataset edit) if in different language
+"	enhancement	new	major	current-ckan-sprint-2012-04-30	ecportal		[2d]		ckan	none

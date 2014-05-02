@@ -1,0 +1,4 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+513	Creating a package with API should warn if there are incorrect fields	dread		"When you create a package using the API, you might get a core field name wrong e.g. 'title' mispelt as 'titel' or 'groups' (which can't be specified in package creation). Currently that field will be ignored by the API. It should warn or give an error, rather than give 200 OK.
+
+"	task	closed	awaiting triage		ckan	wontfix			ckan	none

@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #317: Make search pluggable</title>
+    <link>http://localhost/ticket/317</link>
+    <description>&lt;p&gt;
+Make lib/search.py pluggable so that we can plug in different search systems (e.g. SOLR).
+&lt;/p&gt;
+&lt;p&gt;
+Suggest we define a base Search class from which specific search implementations inherit (e.g. SQLSearch, SOLRSearch etc). The specific one being used would then be set via a config variable.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/317</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>pudo</dc:creator>
+
+      <pubDate>Tue, 13 Jul 2010 07:14:38 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/317#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/317#comment:1</guid>
+      <description>
+        &lt;p&gt;
+this has been in for a while now but still needs to be extended to include the indexing of entities (ckan.model.search_index)
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>pudo</dc:creator>
+
+      <pubDate>Fri, 16 Jul 2010 13:14:01 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/317#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/317#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+should be done after refactoring the search functions.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

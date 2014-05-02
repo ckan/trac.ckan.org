@@ -1,0 +1,57 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1442,You can't GET then POST a dataset as new,dread,dread,"If you try to GET a dataset, purge it then POST it again, it fails checking authz for the group:
+{{{
+Module ckan.controllers.api:278 in create
+<<                  (register, subregister))
+               try:
+                   response_data = action(context, data_dict)
+                   location = None
+                   if ""id"" in data_dict:
+>>  response_data = action(context, data_dict)
+Module ckan.logic.action.create:240 in package_create_rest
+<<      api = context.get('api_version') or '1'
+       
+           check_access('package_create_rest', context, data_dict)
+       
+           dictized_package = package_api_to_dict(data_dict, context)
+>>  check_access('package_create_rest', context, data_dict)
+Module ckan.logic:129 in check_access
+<<          #    log.debug('Valid API key needed to make changes')
+               #    raise NotAuthorized
+               logic_authorization = new_authz.is_authorized(action, context, data_dict)
+               if not logic_authorization['success']:
+                   msg = logic_authorization.get('msg','')
+>>  logic_authorization = new_authz.is_authorized(action, context, data_dict)
+Module ckan.new_authz:16 in is_authorized
+<<      auth_function = _get_auth_function(action)
+           if auth_function:
+               return auth_function(context, data_dict)
+           else:
+               raise ValueError(_('Authorization function not found: %s' % action))
+>>  return auth_function(context, data_dict)
+Module ckan.logic.auth.create:115 in package_create_rest
+<<          return {'success': False, 'msg': _('Valid API key needed to create a package')}
+       
+           return package_create(context, data_dict)
+       
+       def group_create_rest(context, data_dict):
+>>  return package_create(context, data_dict)
+Module ckan.logic.auth.create:15 in package_create
+<<      else:
+               
+               check2 = check_group_auth(context,data_dict)
+               if not check2:
+                   return {'success': False, 'msg': _('User %s not authorized to edit these groups') % str(user)}
+>>  check2 = check_group_auth(context,data_dict)
+Module ckan.logic.auth.create:90 in check_group_auth
+<<      groups = set()
+           for group_dict in group_dicts:
+               id = group_dict.get('id')
+               if not id:
+                   continue
+>>  id = group_dict.get('id')
+AttributeError: 'unicode' object has no attribute 'get'
+}}}
+(using RESTful Model API)
+
+The reason is the POST is expecting the group to be expressed as a dict, not the list of names that GET returns.",defect,closed,major,ckan-sprint-2011-11-07,ckan,fixed,,kindly,ckan,none

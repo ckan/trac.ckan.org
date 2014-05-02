@@ -1,0 +1,15 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1278,Refactor authorized_query calls,amercader,,"There are some functions that still use the Auhtorizer().authorized_query method:
+
+{{{
+./ckan/controllers/authorization_group.py:24:        query = ckan.authz.Authorizer().authorized_query(c.user, model.AuthorizationGroup)
+./ckan/lib/base.py:237:        groups = ckan.authz.Authorizer.authorized_query(c.user, model.Group, 
+./ckan/lib/search/sql.py:55:        q = authz.Authorizer().authorized_query(username, model.Group)
+./ckan/lib/search/sql.py:118:        q = authz.Authorizer().authorized_query(self.options.get('username'), model.Package)
+./ckan/logic/action/get.py:154:    query = Authorizer().authorized_query(user, model.Group, model.Action.EDIT)
+
+./ckan/tests/test_authz.py:158:        q = self.authorizer.authorized_query(self.notadmin.name, model.Package)
+./ckan/tests/test_authz.py:353:        q = self.authorizer.authorized_query(self.notmember.name, model.Package)
+./ckan/tests/test_authz.py:357:        q = self.authorizer.authorized_query(self.member.name, model.Package)
+./ckan/tests/functional/test_authorization_group.py:44:        group_count = Authorizer.authorized_query(u'russianfan', model.AuthorizationGroup).count()
+}}}",enhancement,new,awaiting triage,ckan-backlog,ckan,,authz,,ckan,none

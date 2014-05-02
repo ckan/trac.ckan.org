@@ -1,0 +1,15 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1708,SOLR configuration lost,dread,dread,"The SOLR url, user and password defined in the CKAN config file are ignored and the default SOLR url is used.
+
+This causes:
+ * ""0 datasets"" displayed on the home page
+ * Dataset searches result in 0 results and a small message ""There was an error while searching"". (Nothing about it in the logs)
+
+== To reproduce ==
+
+This bug is only visible if your SOLR instance is not at the default place. To quickly reproduce this problem, setup your machine as a SOLR multicore instance and run: ""paster db clean && paster create-test-data && paster serve development.ini"". It quits with the error: ""solr.core.SolrException: HTTP code=400, reason=Missing solr core name in path""
+
+== Code affected ==
+
+* Does not affect any released versions (1.5.1 is clean).
+* Introduced to master: https://github.com/okfn/ckan/commit/627382e6ff575146da221efc50321a41152d8b0f by Ross",defect,closed,blocker,ckan-sprint-2012-02-06,ckan,fixed,,,ckan,none

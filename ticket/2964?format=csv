@@ -1,0 +1,6 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2964,Last organization admin can remove herself,seanh,,"If you are the only admin of an organization you can edit the organization's members and demote yourself, then the org has no admins and no one (except sysadmins maybe) can edit it.
+
+Last admin should not be able to remove or demote herself.
+
+Also applies to groups.",defect,new,awaiting triage,ckan 2.0,ckan,,organizations,,ckan,none

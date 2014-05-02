@@ -1,0 +1,3 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1354	Pass the context object to plugins implementing the IPackageController and IGroupController	amercader	amercader	"Plugins implementing some IPackageController or IGroupController operations (i.e. read, create, edit, delete) may need the context used in the logic action. For instance, to access the Session that created a package to perform additional queries from the extension (In that case the main logic action will still perform the final commit).
+"	enhancement	closed	major	ckan-v1.5	ckan	wontfix	plugins	david.raznick@…	ckan	none

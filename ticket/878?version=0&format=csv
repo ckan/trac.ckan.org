@@ -1,0 +1,10 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+878,Integrate file upload with workflow around package resources,rgrp,,"Create/edit a package -> add a resource -> Oh, i haven't uploaded yet, 'upload here' -> /upload -> standard upload form
+
+Do we need to create a resource out of the file after upload? Do we sync file metadata with local Resource metadata?
+
+If yes suggests (need to ticket):
+
+  * 'ResourceExtras' for extra metadata on resources
+  * Makes 'Resource' into first class object (and make available in WUI)?
+",enhancement,new,awaiting triage,,ckan,,,,,

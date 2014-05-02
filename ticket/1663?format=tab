@@ -1,0 +1,2 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1663	API call for creating an activity streams event	seanh	seanh	The create_activity() logic function already exists, but validation and authorization need to be added before it's hooked up to an API call.	enhancement	closed	awaiting triage	ckan-sprint-2012-02-06	ckan	fixed	4d, activity_streams		ckan	none

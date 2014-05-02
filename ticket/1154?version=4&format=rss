@@ -1,0 +1,313 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1154: Make ckan robust against solr failure</title>
+    <link>http://localhost/ticket/1154</link>
+    <description>&lt;p&gt;
+According to pudo, a ckan with activated solr extension throws a 5xx when solr is unreachable. Instead, it should behave more like a ckan without ckanext-solr when this happens.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1154</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>johnglover</dc:creator>
+
+      <pubDate>Mon, 15 Aug 2011 13:03:37 GMT</pubDate>
+      <title>status, cc, priority changed; owner, milestone, keywords set</title>
+      <link>http://localhost/ticket/1154#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1154#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;assigned&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;cc&lt;/strong&gt;
+              &lt;em&gt;sebbacon&lt;/em&gt; removed
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;priority&lt;/strong&gt;
+                changed from &lt;em&gt;awaiting triage&lt;/em&gt; to &lt;em&gt;major&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;owner&lt;/strong&gt;
+              set to &lt;em&gt;johnglover&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                set to &lt;em&gt;ckan-current-sprint&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;keywords&lt;/strong&gt;
+              &lt;em&gt;search&lt;/em&gt; added
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>johnglover</dc:creator>
+
+      <pubDate>Tue, 23 Aug 2011 17:28:17 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/1154#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/1154#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;assigned&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Fixed in core (branch feature-1275-solr-search).
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Wed, 24 Aug 2011 09:17:57 GMT</pubDate>
+      <title>status changed; resolution deleted</title>
+      <link>http://localhost/ticket/1154#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/1154#comment:3</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;closed&lt;/em&gt; to &lt;em&gt;reopened&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                &lt;em&gt;fixed&lt;/em&gt; deleted
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Looking at the changeset, it now does a connection check at start-up of CKAN. If it fails then CKAN runs but doesn't show any packages, apart from via the Tags interface, and the search page and widget on the front-page are removed. (BTW Is this a useful thing to do? Without search, perhaps CKAN should simply not start?)
+&lt;/p&gt;
+&lt;p&gt;
+I believe the problem pudo is referring to is temporary periods when the SOLR server is slow/overloaded/down. During this time pudo and I get exception emails saying connection failed for request. e.g.
+&lt;/p&gt;
+&lt;pre class="wiki"&gt;Module ckan.controllers.home:29 in index
+&amp;lt;&amp;lt;          query = query_for(model.Package)
+               query.run(query='*:*', facet_by=g.facets,
+                         limit=0, offset=0, username=c.user)
+               c.facets = query.facets
+               c.fields = []
+&amp;gt;&amp;gt;  limit=0, offset=0, username=c.user)
+Module ckan.lib.search.common:115 in run
+&amp;lt;&amp;lt;          self.query = QueryParser(query, terms, fields)
+               self.query.validate()
+               self._run()
+               self._format_results()
+               return {'results': self.results, 'count': self.count}
+&amp;gt;&amp;gt;  self._run()
+Module ckanext.solr.backend:63 in _run
+&amp;lt;&amp;lt;              # this wrapping will be caught further up in the WUI.
+                   log.exception(e)
+                   raise SearchError(e)
+               finally:
+                   conn.close()
+&amp;gt;&amp;gt;  raise SearchError(e)
+SearchError: [Errno 111] Connection refused
+}}} (recently from nl.ckan.net)
+&lt;/pre&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>johnglover</dc:creator>
+
+      <pubDate>Wed, 24 Aug 2011 09:32:05 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/1154#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/1154#comment:4</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1154?action=diff&amp;amp;version=4"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;blockquote class="citation"&gt;
+&lt;p&gt;
+Looking at the changeset, it now does a connection check at start-up of CKAN. If it fails then CKAN runs but doesn't show any
+packages, apart from via the Tags interface, and the search page and widget on the front-page are removed. (BTW Is this a
+useful thing to do? Without search, perhaps CKAN should simply not start?)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+When discussing the ticket we agreed that we should allow ckan to start without search. It is possible that people simply want to list/view information without searching for it and we decided not to prevent them from doing so.
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;p&gt;
+I believe the problem pudo is referring to is temporary periods when the SOLR server is slow/overloaded/down. During this
+time pudo and I get exception emails saying connection failed for request.
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Ok, other options then:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;if an error occurs during search, return 0 results
+&lt;/li&gt;&lt;li&gt;if an error occurs during search, redirect to a generic 'search is unavailable' page
+&lt;/li&gt;&lt;li&gt;if an error occurs during search, retry the query a certain number of times before giving up and doing one of the above.
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+What do you suggest?
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Wed, 24 Aug 2011 09:48:10 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1154#comment:5</link>
+      <guid isPermaLink="false">http://localhost/ticket/1154#comment:5</guid>
+      <description>
+        &lt;p&gt;
+Search requests - option one seems like a bad user experience, and option three seems too complicated. I should do option 2, explain it may well be a temporary problem, and let the user press reload, as per any normal web request.
+&lt;/p&gt;
+&lt;p&gt;
+A more difficult problem though is what to do about a failed search indexing. Because of the try/except catch we've had until the patch yesterday, we get no exception emails for this, but I'm worried that this has caused packages to not be indexed, and hence are essentially lost in CKAN (unless someone realises there is a problem and does a reindex at some point).
+&lt;/p&gt;
+&lt;p&gt;
+BTW I added paster command 'search-index check' for looking at this problem, but I don't think it was ever added to solr. Is it easy to add get_all_entity_ids for the purpose of checking for this problem?
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>johnglover</dc:creator>
+
+      <pubDate>Wed, 24 Aug 2011 13:11:36 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1154#comment:6</link>
+      <guid isPermaLink="false">http://localhost/ticket/1154#comment:6</guid>
+      <description>
+        &lt;p&gt;
+Ok I'll implement option 2 for search query issues.
+&lt;/p&gt;
+&lt;p&gt;
+Yes it is easy to get a list of IDs from Solr so I'll have a look at that command and make sure that it works. I think a case could be made for not allowing a package to be added if it cannot be indexed however, and making the user simply retry the request.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Wed, 24 Aug 2011 13:25:24 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1154#comment:7</link>
+      <guid isPermaLink="false">http://localhost/ticket/1154#comment:7</guid>
+      <description>
+        &lt;p&gt;
+Yes, forcing a retry may be possible, although I guess on these occasions you'd be looking at rolling back the creation of the package object too, which is not really in the spirit of the notifications system at present. This is why we had the queue for solr for occasions like this - is it here no longer?
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>johnglover</dc:creator>
+
+      <pubDate>Wed, 24 Aug 2011 13:32:33 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1154#comment:8</link>
+      <guid isPermaLink="false">http://localhost/ticket/1154#comment:8</guid>
+      <description>
+        &lt;p&gt;
+Not in core, there is a queue feature in the extension still which I could add to core. I think though it was a case of using either the queue or synchronous search, I don't think it would automatically fall back to the queue if there was an indexing problem, but we could look at that. Was there not talk of changing the queue system recently though? There are also no tests for the Solr queue so that would take a bit of work as well.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>johnglover</dc:creator>
+
+      <pubDate>Wed, 24 Aug 2011 13:47:13 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1154#comment:9</link>
+      <guid isPermaLink="false">http://localhost/ticket/1154#comment:9</guid>
+      <description>
+        &lt;p&gt;
+RE search queries failing: Just having a look through the controller code and the package search controller and the search api  both perform option 2 already, so I'll just update the home controller.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Wed, 24 Aug 2011 14:21:24 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1154#comment:10</link>
+      <guid isPermaLink="false">http://localhost/ticket/1154#comment:10</guid>
+      <description>
+        &lt;p&gt;
+Ok, I chatted to David about this and we feel it should go like this: notification to search indexer fails and raises an exception, this gets passed through the notification system back up to the code that creates the package, and you do a roll back. Does this tally with what you mentioned in the last comment or is what's there better?
+&lt;/p&gt;
+&lt;p&gt;
+Thanks for the info on the queue and ckanext-solr. It sounds like this isn't deployed successfully anywhere (or does pudo know if it is?). In this case we should be clear that it is not what it says it is: "This extension adds support for package search using Apache Solr to CKAN" and maybe simply mark it as deprecated. Pudo what do you think?
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>johnglover</dc:creator>
+
+      <pubDate>Wed, 24 Aug 2011 14:38:03 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1154#comment:11</link>
+      <guid isPermaLink="false">http://localhost/ticket/1154#comment:11</guid>
+      <description>
+        &lt;blockquote class="citation"&gt;
+&lt;p&gt;
+Ok, I chatted to David about this and we feel it should go like this: notification to search indexer fails and raises an exception,
+this gets passed through the notification system back up to the code that creates the package, and you do a roll back. Does this
+tally with what you mentioned in the last comment or is what's there better?
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+This sounds good to me, definitely better than what is currently there.
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;p&gt;
+Thanks for the info on the queue and ckanext-solr. It sounds like this isn't deployed successfully anywhere (or does pudo
+know if it is?).
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+I'm not actually sure if the queue works or not, but if it does I'll have to write some tests for it before we could add it to core. A working queue system would be useful generally however, as there are other things that it would be useful for (such as QA), but yes, going forward the Solr extension should really be deprecated.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>johnglover</dc:creator>
+
+      <pubDate>Thu, 25 Aug 2011 15:51:59 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/1154#comment:12</link>
+      <guid isPermaLink="false">http://localhost/ticket/1154#comment:12</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;reopened&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+All attempts to index packages should now throw a &lt;a class="missing wiki"&gt;SearchIndexError?&lt;/a&gt; if Solr is unavailable and the create/update will be rolled back. These errors are caught in the main package controller (redirecting to an error page) and the API controller. I have added tests for both controllers.
+&lt;/p&gt;
+&lt;p&gt;
+Also updated the paster 'search-index check' command to work with solr.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

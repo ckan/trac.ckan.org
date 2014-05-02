@@ -1,0 +1,25 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2428	Reduce/sort out CKAN's dependencies	seanh	seanh	"This ticket depends on #2423, #2424, #2425, #2426 and #2427.
+
+- Try to remove as many of CKAN's dependencies as possible
+
+- Try to update as many of the remaining ones as possible
+
+- Try to get rid of some dependencies that are fetched from random
+  hg or git servers instead of pypi
+
+- Then try to get the order of deps in the requirements files right
+  so that you end up with the right versions of everything
+
+- Each module in the dependencies file should specify the exact
+  version, to protect us from changes due to them upgrading versions
+  under us and breaking things or changing their own deps
+
+- Consider shipping dependencies with ckan instead of pip installing
+  them?
+
+- This is related to moving CKAN to Ubuntu 12.04
+
+- Add a test case that runs pip freeze and tests that all the right
+  versions of deps are installed?
+"	enhancement	new	awaiting triage	current-ckan-sprint-2012-05-29	ckan		dev_meetup_2012-05		ckan	none

@@ -1,0 +1,39 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1600,[super] User guide with integrated help in the WUI,rgrp,,"Provide help to users in the WUI, with this linking to a detailed user guide.
+
+ * User guide (suggest at help.thedatahub.org (or possibly help.ckan.org)
+ * Snippets in the WUI with links to full user guide.
+  * Provide helper methods for creating these links with config options for setting path to user guide so that the link location can vary on install by install basis
+ * General info about publishing/working with/etc data (where we don't duplicate elsewhere)
+
+Est: (?) 5-10d
+
+== Topics ==
+
+See http://ckan.okfnpad.org/datahub-help
+
+ * Step-by-step for adding a dataset including tips
+  * Reuse: http://datapatterns.org/datahub.html
+  * Quick overview of relevant parts of domain model (dataset and resource)
+ * API (perhaps link to main docs)
+ * Command line interface and dpm
+ * Using groups
+
+== Why do this ==
+
+We already have wiki.ckan.org and docs.ckan.org. Why do this?
+
+Answer for docs:
+
+ * This is administrative guide and focused on general CKAN software.
+ * Hard to provide completely generic help.
+ * Integratable with the DataHub site
+
+Answer for wiki:
+ * No spam
+ * General feeling that wikis are a little bit loose and untidy. We want this to be smart, clean and useful.
+ * Integratable with the DataHub
+
+
+
+",enhancement,new,awaiting triage,ckan-v1.7,ckan,,,,ckan,none

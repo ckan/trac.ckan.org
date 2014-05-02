@@ -1,0 +1,26 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+176,Package dependencies,dread,dread,"(Related to ticket:169 - Package derivations)
+
+A 'dependency' relationship can be applied from one package to another. It implies that a package requires the download or existence of another package which it 'depends on'. (Analogous to software package dependencies.)
+
+e.g. london-traffic-visualisation depends on road-map
+
+'Dependency' relationship is:
+ * directional
+ * many:many
+ * stateful
+
+'dependency' table columns:
+ * id (primary key)
+ * dependent (foreign key)
+ * dependency (foreign key)
+
+Further tickets:
+
+ * WUI - package view - have list of dependencies (do not need to list packages which depend on this one)
+ * WUI - package edit form - new option to say 'depends on' (no need for 'has dependent package')
+ * REST api - expose reading and writing 'depends on' property.
+
+=== Issues ===
+
+ * How do we deal with dependency at a particular version?",enhancement,closed,critical,,ckan,duplicate,,,,

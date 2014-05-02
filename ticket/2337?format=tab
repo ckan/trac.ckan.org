@@ -1,0 +1,4 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2337	Sort out ini file confusion in docs	seanh	seanh	"For example if you follow the source install instructions then you have development.ini, then when you go onto Post-Installation Setup it talks about std.ini. People don't realise that these files are the same.
+
+Either fix the docs or fix CKAN to use same ini file names in package and source installs/"	enhancement	assigned	awaiting triage	ckan-v1.9	ckan		docs		ckan	none

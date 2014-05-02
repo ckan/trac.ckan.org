@@ -1,0 +1,19 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1545	Remove external asset dependencies	amercader		"CKAN is pulling a number of resources from external locations. This causes problems when connectivity is limited and you have to work locally. Maybe some of them cold be moved to CKAN source to avoid external requests.
+
+Quick search:
+{{{
+
+./ckan/templates/layout_base.html:            <img src=""http://assets.okfn.org/images/logo/okf_logo_white_and_green_tiny.png"" id=""footer-okf-logo"" />
+./ckan/templates/layout_base.html:            <a href=""http://opendefinition.org/""><img alt=""This Content and Data is Open"" src=""http://assets.okfn.org/images/ok_buttons/od_80x15_blue.png"" style=""border: none ; margin-bottom: -4px;""/></a>
+./ckan/templates/package/resource_read.html:                <img src=""http://assets.okfn.org/images/ok_buttons/od_80x15_blue.png"" alt=""[Open Data]"" />
+./ckan/templates/package/read.html:          <img src=""http://assets.okfn.org/images/ok_buttons/od_80x15_blue.png"" alt=""[Open Data]"" /></a>
+./ckan/templates/_util.html:                    <img src=""http://assets.okfn.org/images/ok_buttons/od_80x15_blue.png"" alt=""[Open Data]"" />
+./ckan/templates/_util.html:                  <img src=""http://assets.okfn.org/images/ok_buttons/od_80x15_blue.png"" alt=""[Open Data]"" />
+./ckan/public/scripts/vendor/ckanjs/1.0.0/ckanjs.js:      this.$dialog.html('<h2>Loading results...</h2><img src=""http://assets.okfn.org/images/icons/ajaxload-circle.gif"" />');
+./ckan/public/scripts/vendor/ckanjs/1.0.0/ckanjs.js:          self.setMessage('Uploading file ... <img src=""http://assets.okfn.org/images/icons/ajaxload-circle.gif"" class=""spinner"" />');
+./ckan/public/scripts/vendor/ckanjs/1.0.0/ckanjs.js:      self.setMessage('Checking upload permissions ... <img src=""http://assets.okfn.org/images/icons/ajaxload-circle.gif"" class=""spinner"" />');
+Binary file ./ckan/lib/app_globals.pyc matches
+./ckan/lib/app_globals.py:                                  'http://assets.okfn.org/p/ckan/img/ckan.ico')
+./ckan/config/deployment.ini_tmpl:ckan.favicon = http://assets.okfn.org/p/ckan/img/ckan.ico
+}}}"	enhancement	closed	minor	ckan-sprint-2012-01-09	ckan	wontfix			ckan	none

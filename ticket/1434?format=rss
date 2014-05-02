@@ -1,0 +1,184 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1434: Add i18n strings from extensions</title>
+    <link>http://localhost/ticket/1434</link>
+    <description>&lt;p&gt;
+Decide which extensions are important.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1434</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>ross</dc:creator>
+
+      <pubDate>Mon, 28 May 2012 11:15:22 GMT</pubDate>
+      <title>milestone changed</title>
+      <link>http://localhost/ticket/1434#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1434#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan-v1.7&lt;/em&gt; to &lt;em&gt;ckan-v1.8&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>seanh</dc:creator>
+
+      <pubDate>Mon, 28 May 2012 11:19:20 GMT</pubDate>
+      <title>status changed; owner set</title>
+      <link>http://localhost/ticket/1434#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/1434#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;owner&lt;/strong&gt;
+              set to &lt;em&gt;seanh&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;assigned&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+At least for the core extensions, any i18n-able strings should be getting pulled into the ckan.pot file by default.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>seanh</dc:creator>
+
+      <pubDate>Mon, 11 Jun 2012 10:44:58 GMT</pubDate>
+      <title>keywords set</title>
+      <link>http://localhost/ticket/1434#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/1434#comment:3</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;keywords&lt;/strong&gt;
+              &lt;em&gt;i18n&lt;/em&gt; added
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>seanh</dc:creator>
+
+      <pubDate>Fri, 15 Jun 2012 13:40:32 GMT</pubDate>
+      <title>owner deleted</title>
+      <link>http://localhost/ticket/1434#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/1434#comment:4</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;owner&lt;/strong&gt;
+              &lt;em&gt;seanh&lt;/em&gt; deleted
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>seanh</dc:creator>
+
+      <pubDate>Fri, 15 Jun 2012 13:46:49 GMT</pubDate>
+      <title>status changed; owner set</title>
+      <link>http://localhost/ticket/1434#comment:5</link>
+      <guid isPermaLink="false">http://localhost/ticket/1434#comment:5</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;owner&lt;/strong&gt;
+              set to &lt;em&gt;seanh&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;assigned&lt;/em&gt; to &lt;em&gt;accepted&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>seanh</dc:creator>
+
+      <pubDate>Fri, 15 Jun 2012 13:46:59 GMT</pubDate>
+      <title>status changed</title>
+      <link>http://localhost/ticket/1434#comment:6</link>
+      <guid isPermaLink="false">http://localhost/ticket/1434#comment:6</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;accepted&lt;/em&gt; to &lt;em&gt;assigned&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>seanh</dc:creator>
+
+      <pubDate>Mon, 25 Jun 2012 15:39:10 GMT</pubDate>
+      <title>status changed</title>
+      <link>http://localhost/ticket/1434#comment:7</link>
+      <guid isPermaLink="false">http://localhost/ticket/1434#comment:7</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;assigned&lt;/em&gt; to &lt;em&gt;accepted&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>seanh</dc:creator>
+
+      <pubDate>Mon, 02 Jul 2012 13:48:41 GMT</pubDate>
+      <title>priority changed</title>
+      <link>http://localhost/ticket/1434#comment:8</link>
+      <guid isPermaLink="false">http://localhost/ticket/1434#comment:8</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;priority&lt;/strong&gt;
+                changed from &lt;em&gt;awaiting triage&lt;/em&gt; to &lt;em&gt;awaiting merge&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Done for the core extensions, pull request: &lt;a class="ext-link" href="https://github.com/okfn/ckan/pull/47"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;https://github.com/okfn/ckan/pull/47&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+Perhaps strings from the non-core but officially supported extensions should be added to, but we haven't decided which extensions those are yet, so add another ticket to do that later:
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a class="ext-link" href="http://trac.ckan.org/ticket/2625"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://trac.ckan.org/ticket/2625&lt;/a&gt;
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>seanh</dc:creator>
+
+      <pubDate>Mon, 02 Jul 2012 16:18:09 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/1434#comment:9</link>
+      <guid isPermaLink="false">http://localhost/ticket/1434#comment:9</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;accepted&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

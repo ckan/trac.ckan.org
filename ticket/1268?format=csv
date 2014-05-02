@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1268,Speed up listing users by revisions by adding db index,rgrp,kindly,"At the moment this appears to be slow (kindly suggests because missing index in db). Page is /user on a ckan instance.
+
+Would this also speed up user page where we recent changes?",enhancement,closed,major,ckan-sprint-2011-10-10,ckan,fixed,,kindly,ckan,none

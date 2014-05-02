@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1586,'Sort by' field for package search,dread,toby,"We default to sort packages search results by ""search rank"", but we can change it to be ""name"", ""title"", ""metadata_modified"" date, ""metadata_created"" date. It works in the API now, so let's have (say) a drop-down in the Web UI for this.
+
+Follows on from #191.",enhancement,closed,major,ckan-v1.7,ckan,duplicate,,,ckan,none

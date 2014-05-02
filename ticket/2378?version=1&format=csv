@@ -1,0 +1,21 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2378,Extract metadata directly from resources that contain it.,ross,ross,"Some files that might be uploaded as resources on a dataset, such as some image formats, already contain metadata.  For example some jpeg files might contain Exif ( http://en.wikipedia.org/wiki/Exchangeable_image_file_format ) data.
+
+[ ] Obtain list of embedded metadata 'standards' 
+
+[ ] Where the metadata is available it  should be added as extra fields on the resource that is uploaded.  
+
+  [ ] HTML?
+
+  [ ] Image formats (exif/gif etc)
+
+  [ ] PDF
+
+[ ] Eventually consider ...
+
+    [ ] MS Office documents
+
+
+ 
+
+",enhancement,new,awaiting triage,ckan-future,ckan,,,,ckan,none

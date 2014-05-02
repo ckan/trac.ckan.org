@@ -1,0 +1,2 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1040	File system mounted	dread	thejimmyg	Public file path code adds a trailing , and thus adds / as a static file app in the Pylons middleware cascade.	defect	closed	blocker	ckan-v1.4	ckan	fixed		nils.toedtmann	ckan	none

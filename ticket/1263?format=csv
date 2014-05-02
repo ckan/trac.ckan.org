@@ -1,0 +1,7 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1263,Bad name for logic action in API causes Exception,dread,dread,"A bad action name:
+e.g.
+curl http://test.ckan.net/api/action/user_showaa -d '{}'
+causes 500 response.
+
+Occurs only on 1.4.3 beta.",enhancement,closed,minor,,ckan,fixed,,,ckan,none

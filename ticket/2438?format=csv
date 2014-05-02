@@ -1,0 +1,2 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2438,resource_search action not accessible via GET request,icmurray,icmurray,This action is not currently usable via a GET request as it relies upon a nested dict of fields.,enhancement,closed,awaiting merge,ckan-v1.8,ckan,fixed,[1d],,ckan,none

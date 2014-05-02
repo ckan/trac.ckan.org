@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1092,"refactor logic layer to seperate out api, form logic",kindly,kindly,"The logic layer is a bit too api centric. Make the reusable parts separate in preparation for the wui refactor.
+
+",defect,closed,awaiting triage,ckan-v1.4-sprint-6,ckan,fixed,,,ckan,none

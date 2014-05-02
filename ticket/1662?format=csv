@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1662,OpenID not compatible with mounting CKAN at non-root URL,dread,,"Mounting CKAN at a non-root URL was made to work properly here: #1659
+
+Unfortunately OpenID doesn't play nicely and would require some work to get working.",defect,closed,awaiting triage,,ckan,wontfix,,,ckan,none

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2928: Run CKAN tests with example_i*form extensions enabled</title>
+    <link>http://localhost/ticket/2928</link>
+    <description>&lt;p&gt;
+Before releasing CKAN 2.0 we need to run all the CKAN tests with a modified test-core.ini with the example_idatasetform, example_igroupform and example_iorganizationform plugins enabled. If any tests fail, fix the bugs. This needs to be done for each release so add it to the release process.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2928</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+ </channel>
+</rss>

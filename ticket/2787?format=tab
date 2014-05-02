@@ -1,0 +1,2 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2787	Ensure templates_legacy directory is loaded for extensions	aron.carroll	toby	Currently the stats plugin has a template and templates_legacy directory. We need to ensure that the templates in templates_legacy are loaded.	enhancement	closed	major	demo phase 5	ckan	fixed			ckan	none

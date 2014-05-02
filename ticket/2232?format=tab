@@ -1,0 +1,35 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2232	Unicode Exception when rebuilding the search index	amercader	amercader	"In some cases this exception is fired when building the search index. As explained in #1616 this makes the whole process stop.
+
+{{{
+
+  File ""/var/lib/ckan/pdeu/pyenv/lib/python2.6/site-packages/solr/core.py"", line 326, in wrapper
+    return self._update(content, query)
+  File ""/var/lib/ckan/pdeu/pyenv/lib/python2.6/site-packages/solr/core.py"", line 550, in _update
+    rsp = self._post(selector, request, self.xmlheaders)
+  File ""/var/lib/ckan/pdeu/pyenv/lib/python2.6/site-packages/solr/core.py"", line 639, in _post
+    return check_response_status(self.conn.getresponse())
+  File ""/var/lib/ckan/pdeu/pyenv/lib/python2.6/site-packages/solr/core.py"", line 1096, in check_response_status
+    raise ex
+SolrException: HTTP code=400, reason=ParseError at [row,col]:[1,2354] Message: An invalid XML character (Unicode: 0x1) was found in the element content of the document.
+Traceback (most recent call last):
+  File ""/var/lib/ckan/pdeu/pyenv/bin/paster"", line 9, in <module>
+    load_entry_point('PasteScript==1.7.3', 'console_scripts', 'paster')()
+  File ""/var/lib/ckan/pdeu/pyenv/lib/python2.6/site-packages/paste/script/command.py"", line 84, in run
+    invoke(command, command_name, options, args[1:])
+  File ""/var/lib/ckan/pdeu/pyenv/lib/python2.6/site-packages/paste/script/command.py"", line 123, in invoke
+    exit_code = runner.run(args)
+  File ""/var/lib/ckan/pdeu/pyenv/lib/python2.6/site-packages/paste/script/command.py"", line 218, in run
+    result = self.command()
+  File ""/var/lib/ckan/pdeu/pyenv/src/ckan/ckan/lib/cli.py"", line 298, in command
+    rebuild()
+  File ""/var/lib/ckan/pdeu/pyenv/src/ckan/ckan/lib/search/__init__.py"", line 134, in rebuild
+    {'id': pkg.id}
+  File ""/var/lib/ckan/pdeu/pyenv/src/ckan/ckan/lib/search/index.py"", line 54, in insert_dict
+    return self.update_dict(data)
+  File ""/var/lib/ckan/pdeu/pyenv/src/ckan/ckan/lib/search/index.py"", line 79, in update_dict
+    self.index_package(pkg_dict)
+  File ""/var/lib/ckan/pdeu/pyenv/src/ckan/ckan/lib/search/index.py"", line 153, in index_package
+    raise SearchIndexError(e)
+ckan.lib.search.common.SearchIndexError: HTTP code=400, reason=ParseError at [row,col]:[1,2354] Message: An invalid XML character (Unicode: 0x1) was found in the element content of the document.
+}}}"	defect	closed	major	ckan-sprint-2012-04-02	ckan	fixed	search		ckan	none

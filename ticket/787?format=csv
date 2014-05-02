@@ -1,0 +1,59 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+787,Auth API,thejimmyg,thejimmyg,"Auth Proposal
+
+Use case: We'd like an authenticated and authorized Drupal user to be able to
+edit/delete packages using the API
+
+To do this a user would need a CKAN API key so we need some way of Drupal
+telling CKAN who a user is so that they can get their API key.
+
+Proposed Implementation
+-----------------------
+
+A user visits the CKAN API key page to get their key. Because CKAN is at
+catalogue.data.gov.uk (a subdomain of the Drupal site) it can read Drupal
+cookies.
+
+If there is no ``DRXtrArgs`` or ``DRXtrArgs2`` cookie, we know the user isn't
+signed in so we redirect them to Drupal to sign in.
+
+WISHLIST: It would be really nice if we could pass the URL to redirect back to
+Drupal so tha Druapl can send them back to the CKAN API key page
+
+Either way, they get back to CKAN and now the cookies exist. When the first
+HTTP request header is sent, CKAN will read the Drupal session ID and then call
+a Drupal API, server to server.
+
+TODO: Implement an API on the drupal server which accepts a Drupal session ID
+as an argument and returns the username and credentials, but only if the
+request if from the CKAN server (perhaps we specify an API key in the request)
+
+If the session is valid CKAN will set its own auth cookie and show them the
+page with the API key. CKAN only considers a user signed in if both the CKAN
+cookie *and* Drupal session ID are present. If at any time they sign out of
+Drupal the Drupal session disappears so they will be signed out of CKAN too.
+
+Now the user has an API key they can use the standard CKAN command line API
+tools.
+
+The API key is the only thing the user will need to use the CKAN API. This
+poses a problem. What if a user is removed from Drupal but still has a CKAN API
+key?
+
+Two solutions:
+
+1. API keys will be set to only be valid for the length of a Drupal session so
+   that a user will only be able to use the write API for a little time after
+   credentials are revoked
+
+2. CKAN provides an API to allow Drupal to revoke keys
+
+Option 1. seems easier to me. If we choose this we will write a ``get_api_key``
+command line tool so that Drupal user can write things like this:
+
+::
+
+    datapkg list_packages --api_key `get_api_key`
+ 
+The ``get_api_key`` function will prompt for username and password and then
+perform the steps necessary to get an API key.",task,closed,major,ckan-sprint-2011-09-12,dgu,fixed,dgu,,ckan,none

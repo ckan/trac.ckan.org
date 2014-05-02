@@ -1,0 +1,18 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+42,In WUI where List of Items to Display is Large Results should be Paged,rgrp,rgrp,"= As A =
+
+Visitor
+
+= I Want To =
+
+View lists of items but not have too many on a page (as this leads to slow page loads and difficulty navigating the list). Where there are more items in the results of my action that can be fit on a single page the results should be 'paged' in some manner.
+
+= Details =
+
+Main place this issue arises:
+
+  * List of tags
+  * List of packages
+  * Repository history (/revision)
+
+Should probably have no more than 50 (or so) items on a page. Obvious solution is for actions that return lists to have some kind of pageno parameter and then use this in controller to select what to display.",enhancement,closed,critical,v0.6,ckan,fixed,,,,

@@ -1,0 +1,18 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2255,Organizations (Privacy + Ownership),ross,ross,"[x] The publisher_form extension and the 'publisher' component of the system will be renamed to organizations to both make its functionality clear, and to differentiate it from the publish auth profile.
+
+Ownership of datasets is important and this ticket will enforce membership for a dataset to a single individual organization.  The workflow for adding a dataset to a publisher/organization will stay the same but there will be no mechanism for adding existing datasets to an organization from within the organization forms.
+
+ [x] New datasets can be created from the organization form, in which case the organization will be set in the dataset form dropdown (with privacy set to private - see below)
+
+ [x] Datasets created from direct access to /dataset/new will have a drop down showing all of the organizations available to the current user.
+
+ [ ] When editing a dataset the organization can only be changed if the current user is the admin of the current organization, and only then to one of the organizations available to the current user.
+
+[x] Privacy will be enforced by changing the dataset form to have a public/private switch next to the organization drop-down which will be set as the capacity with which the dataset is added to an Organization.  Private means visible only within the Organization, and should be the default.
+
+[ ] Search will be affected as the public/private status of a dataset will need to be added to the schema with only public datasets showing in site search, and private showing in organization dataset search (if user is within the organization). 
+
+[ ] Clarify how user can be owners of datasets without an organization
+
+[ ] Documentation should be updated to reflect these changes.",enhancement,new,awaiting triage,ckan-sprint-2012-04-02,ckan,,,,ckan,none

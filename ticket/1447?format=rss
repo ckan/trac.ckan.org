@@ -1,0 +1,519 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1447: disk space leakage</title>
+    <link>http://localhost/ticket/1447</link>
+    <description>&lt;p&gt;
+Periodically we see some CKAN servers fall over because they run out of disk space. We need to find out if there is a common cause and fix it.
+&lt;/p&gt;
+&lt;p&gt;
+One problem in the past has been file handles running out when creating lots of tiny files in the data directory.
+&lt;/p&gt;
+&lt;p&gt;
+Another problem has been several enourmous backups being created every day - pdeu on eu25.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1447</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>nils.toedtmann</dc:creator>
+
+      <pubDate>Mon, 07 Nov 2011 16:49:43 GMT</pubDate>
+      <title>cc set</title>
+      <link>http://localhost/ticket/1447#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1447#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;cc&lt;/strong&gt;
+              &lt;em&gt;nils.toedtmann@…&lt;/em&gt; added
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Fri, 25 Nov 2011 11:31:30 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1447#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/1447#comment:2</guid>
+      <description>
+        &lt;p&gt;
+This appears to have happened again today on test.ckan.net and someone has sorted it.
+&lt;/p&gt;
+&lt;p&gt;
+The problem is visible on munin as inodes running out.
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;eu25 seems ready to fall over in about a week: &lt;a class="ext-link" href="http://munin.okfn.org/okfn.org/eu25.okfn.org-df_inode.html"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://munin.okfn.org/okfn.org/eu25.okfn.org-df_inode.html&lt;/a&gt;
+&lt;/li&gt;&lt;li&gt;thedatahub.org on s055 (and other fry instances) seem to have dynamically adjusted inode table size (by the kernel) so is less of a problem
+&lt;/li&gt;&lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Wed, 30 Nov 2011 10:27:53 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1447#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/1447#comment:3</guid>
+      <description>
+        &lt;p&gt;
+As predicted, this happened again today. From the following analysis it confirms that the problem is the cache growing and growing.
+&lt;/p&gt;
+&lt;p&gt;
+Disk usage in megabytes:
+&lt;/p&gt;
+&lt;pre class="wiki"&gt;okfn@s025:~/var/srvc/publicdata.eu$ du -s -m /*
+7	/bin
+22	/boot
+1	/dev
+10	/etc
+4157	/home
+0	/initrd.img
+0	/initrd.img.old
+114	/lib
+1	/lost+found
+1	/media
+1	/mnt
+1	/opt
+0	/proc
+1	/root
+7	/sbin
+1	/selinux
+1	/srv
+0	/sys
+1	/tmp
+421	/usr
+443	/var
+0	/vmlinuz
+0	/vmlinuz.old
+&lt;/pre&gt;&lt;pre class="wiki"&gt;okfn@s025:~/var/srvc/publicdata.eu$ du -s -m /home/okfn/var/srvc/publicdata.eu/*2173	/home/okfn/var/srvc/publicdata.eu/backup
+1	/home/okfn/var/srvc/publicdata.eu/backup_RENAMED_TO_AVOID_MAYHEM.sh
+1	/home/okfn/var/srvc/publicdata.eu/common.sh
+1893	/home/okfn/var/srvc/publicdata.eu/data
+1	/home/okfn/var/srvc/publicdata.eu/fetch.sh
+1	/home/okfn/var/srvc/publicdata.eu/gather.sh
+1	/home/okfn/var/srvc/publicdata.eu/pip-requirements.txt
+1	/home/okfn/var/srvc/publicdata.eu/publicdata.eu.ini
+86	/home/okfn/var/srvc/publicdata.eu/pyenv
+1	/home/okfn/var/srvc/publicdata.eu/run.sh
+1	/home/okfn/var/srvc/publicdata.eu/sstore
+0	/home/okfn/var/srvc/publicdata.eu/who.ini
+&lt;/pre&gt;&lt;pre class="wiki"&gt;
+okfn@s025:~/var/srvc/publicdata.eu$ ls -l /home/okfn/var/srvc/publicdata.eu/backup
+total 2224588
+-rw-r--r-- 1 okfn okfn 343199744 2011-06-14 20:50 db-20110614-2050.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 20:51 db-20110614-2051.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 20:52 db-20110614-2052.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 20:53 db-20110614-2053.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 20:54 db-20110614-2054.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 20:55 db-20110614-2055.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 20:56 db-20110614-2056.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 20:57 db-20110614-2057.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 20:58 db-20110614-2058.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 20:59 db-20110614-2059.sql
+-rw-r--r-- 1 okfn okfn   1036288 2011-06-14 22:00 db-20110614-2200.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:01 db-20110614-2201.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:02 db-20110614-2202.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:03 db-20110614-2203.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:04 db-20110614-2204.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:05 db-20110614-2205.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:06 db-20110614-2206.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:07 db-20110614-2207.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:08 db-20110614-2208.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:09 db-20110614-2209.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:10 db-20110614-2210.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:11 db-20110614-2211.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:12 db-20110614-2212.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:13 db-20110614-2213.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:14 db-20110614-2214.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:15 db-20110614-2215.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:16 db-20110614-2216.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:17 db-20110614-2217.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:18 db-20110614-2218.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:19 db-20110614-2219.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:20 db-20110614-2220.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:21 db-20110614-2221.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:22 db-20110614-2222.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:23 db-20110614-2223.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:24 db-20110614-2224.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:25 db-20110614-2225.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:26 db-20110614-2226.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:27 db-20110614-2227.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:28 db-20110614-2228.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:29 db-20110614-2229.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:30 db-20110614-2230.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:31 db-20110614-2231.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:32 db-20110614-2232.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:33 db-20110614-2233.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:34 db-20110614-2234.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:35 db-20110614-2235.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:36 db-20110614-2236.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:37 db-20110614-2237.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:38 db-20110614-2238.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:39 db-20110614-2239.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:40 db-20110614-2240.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:41 db-20110614-2241.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:42 db-20110614-2242.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:43 db-20110614-2243.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:44 db-20110614-2244.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:45 db-20110614-2245.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:46 db-20110614-2246.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:47 db-20110614-2247.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:48 db-20110614-2248.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:49 db-20110614-2249.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:50 db-20110614-2250.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:51 db-20110614-2251.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:52 db-20110614-2252.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:53 db-20110614-2253.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:54 db-20110614-2254.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:55 db-20110614-2255.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:56 db-20110614-2256.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:57 db-20110614-2257.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:58 db-20110614-2258.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:59 db-20110614-2259.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:00 db-20110615-0000.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:01 db-20110615-0001.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:02 db-20110615-0002.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:03 db-20110615-0003.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:04 db-20110615-0004.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:05 db-20110615-0005.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:06 db-20110615-0006.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:07 db-20110615-0007.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:08 db-20110615-0008.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:09 db-20110615-0009.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:10 db-20110615-0010.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:11 db-20110615-0011.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:12 db-20110615-0012.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:13 db-20110615-0013.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:14 db-20110615-0014.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:15 db-20110615-0015.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:16 db-20110615-0016.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:17 db-20110615-0017.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:18 db-20110615-0018.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:19 db-20110615-0019.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:20 db-20110615-0020.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:21 db-20110615-0021.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:22 db-20110615-0022.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:23 db-20110615-0023.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:24 db-20110615-0024.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:25 db-20110615-0025.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:26 db-20110615-0026.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:27 db-20110615-0027.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:28 db-20110615-0028.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:29 db-20110615-0029.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:30 db-20110615-0030.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:31 db-20110615-0031.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:32 db-20110615-0032.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:33 db-20110615-0033.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:34 db-20110615-0034.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:35 db-20110615-0035.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:36 db-20110615-0036.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:37 db-20110615-0037.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:38 db-20110615-0038.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:39 db-20110615-0039.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:40 db-20110615-0040.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:41 db-20110615-0041.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:42 db-20110615-0042.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:43 db-20110615-0043.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:44 db-20110615-0044.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:45 db-20110615-0045.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:46 db-20110615-0046.sql
+-rw-r--r-- 1 okfn okfn 483144447 2011-06-15 10:00 db-20110615-1000.sql
+-rw-r--r-- 1 okfn okfn 482136064 2011-06-15 10:07 db-20110615-1007.sql
+-rw-r--r-- 1 okfn okfn 483144447 2011-06-15 10:50 db-20110615-1050.sql
+-rw-r--r-- 1 okfn okfn 483053568 2011-06-15 10:51 db-20110615-1051.sql
+&lt;/pre&gt;&lt;pre class="wiki"&gt;
+okfn@s025:~/var/srvc/publicdata.eu$ du -s -m /home/okfn/var/srvc/publicdata.eu/data/sessions/container_file/*
+117	/home/okfn/var/srvc/publicdata.eu/data/sessions/container_file/0
+116	/home/okfn/var/srvc/publicdata.eu/data/sessions/container_file/1
+117	/home/okfn/var/srvc/publicdata.eu/data/sessions/container_file/2
+116	/home/okfn/var/srvc/publicdata.eu/data/sessions/container_file/3
+116	/home/okfn/var/srvc/publicdata.eu/data/sessions/container_file/4
+116	/home/okfn/var/srvc/publicdata.eu/data/sessions/container_file/5
+116	/home/okfn/var/srvc/publicdata.eu/data/sessions/container_file/6
+117	/home/okfn/var/srvc/publicdata.eu/data/sessions/container_file/7
+116	/home/okfn/var/srvc/publicdata.eu/data/sessions/container_file/8
+117	/home/okfn/var/srvc/publicdata.eu/data/sessions/container_file/9
+117	/home/okfn/var/srvc/publicdata.eu/data/sessions/container_file/a
+116	/home/okfn/var/srvc/publicdata.eu/data/sessions/container_file/b
+116	/home/okfn/var/srvc/publicdata.eu/data/sessions/container_file/c
+116	/home/okfn/var/srvc/publicdata.eu/data/sessions/container_file/d
+117	/home/okfn/var/srvc/publicdata.eu/data/sessions/container_file/e
+116	/home/okfn/var/srvc/publicdata.eu/data/sessions/container_file/f
+&lt;/pre&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Tue, 20 Dec 2011 09:45:24 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1447#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/1447#comment:4</guid>
+      <description>
+        &lt;p&gt;
+Once again eu25 ran out of space again today.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Wed, 11 Jan 2012 10:58:15 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1447#comment:5</link>
+      <guid isPermaLink="false">http://localhost/ticket/1447#comment:5</guid>
+      <description>
+        &lt;p&gt;
+eu25 ran out of space again this weekend and eu8 (at/it/us_co) today.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>nils.toedtmann</dc:creator>
+
+      <pubDate>Wed, 11 Jan 2012 15:49:47 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1447#comment:6</link>
+      <guid isPermaLink="false">http://localhost/ticket/1447#comment:6</guid>
+      <description>
+        &lt;p&gt;
+For time being, i created a cron script &lt;a class="ext-link" href="https://bitbucket.org/okfn/sysadmin/src/default/etc/cron/remove_old_files"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;remove_old_files&lt;/a&gt;.
+&lt;/p&gt;
+&lt;p&gt;
+You could just copy it to /etc/cron.daily/, but i recommend to not run it as root: if it's misconfigured, it could wipe the system!
+&lt;/p&gt;
+&lt;p&gt;
+So you better copy it to /home/okfn/sbin/ (not /home/okfn/bin/ which often is the sysadmin HG repo), and add it to some unprivileged user's crontab. In most cases, the leftover files are owned by user "www-data", so
+&lt;/p&gt;
+&lt;pre class="wiki"&gt;$ sudo crontab -e -u www-data
+&lt;/pre&gt;&lt;p&gt;
+and then add something like
+&lt;/p&gt;
+&lt;pre class="wiki"&gt;37 4 * * *  /home/okfn/sbin/remove_old_files
+&lt;/pre&gt;&lt;p&gt;
+Don't forget to edit the script remove_old_files itself and list the directories you want to be cleaned up.
+&lt;/p&gt;
+&lt;p&gt;
+This is already done on s008/eu8 and s019/eu19. dread, do you want to do this for s025/eu25 and see how this goes?
+&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;
+Todo nils: verify tomorrow on s019 that it worked properly, e.g. this should show only a few files:
+&lt;/p&gt;
+&lt;pre class="wiki"&gt;find /var/lib/ckan/nederland/data/sessions/ -type f -amin +$((7*24*60)) -ls
+&lt;/pre&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>nils.toedtmann</dc:creator>
+
+      <pubDate>Fri, 24 Feb 2012 11:23:56 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1447#comment:7</link>
+      <guid isPermaLink="false">http://localhost/ticket/1447#comment:7</guid>
+      <description>
+        &lt;p&gt;
+I had forgotten to check s019 how well my cleanup script is working (and now s019 is gone), but at least it didn't destroy it :-)
+&lt;/p&gt;
+&lt;p&gt;
+You might want to give it a try on s025/PDEU. (Tell me if you want me to do that).
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Fri, 24 Feb 2012 11:26:48 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1447#comment:8</link>
+      <guid isPermaLink="false">http://localhost/ticket/1447#comment:8</guid>
+      <description>
+        &lt;p&gt;
+Yes please Nils!
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>nils.toedtmann</dc:creator>
+
+      <pubDate>Fri, 24 Feb 2012 13:21:02 GMT</pubDate>
+      <title>cc changed</title>
+      <link>http://localhost/ticket/1447#comment:9</link>
+      <guid isPermaLink="false">http://localhost/ticket/1447#comment:9</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;cc&lt;/strong&gt;
+              &lt;em&gt;pudo&lt;/em&gt; added
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+OK i fixed a bug in my script and refactored it so that it can now be dropped into /etc/cron.daily/ while still deleting as unprivileged user.
+&lt;/p&gt;
+&lt;p&gt;
+It is now running on s025, removing everything older than 7 days. Please verify in 9 days or so that it's working.
+&lt;/p&gt;
+&lt;p&gt;
+Consider to add &lt;a class="ext-link" href="https://bitbucket.org/okfn/sysadmin/src/default/etc/cron/remove_old_files"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;this cron job&lt;/a&gt; to the ckan deb package e.g. as "/etc/cron.daily/ckan-cleanup"
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>nils.toedtmann</dc:creator>
+
+      <pubDate>Fri, 23 Mar 2012 13:53:10 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/1447#comment:10</link>
+      <guid isPermaLink="false">http://localhost/ticket/1447#comment:10</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Just checked s025 (which is depricated now), looks like my script is working fine - nothing older than a week in /home/okfn/var/srvc/publicdata.eu/data/sessions/.
+&lt;/p&gt;
+&lt;p&gt;
+We should activate this script on other hosts as well, e.g. so55/thedatahub.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>nils.toedtmann</dc:creator>
+
+      <pubDate>Fri, 23 Mar 2012 13:55:13 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1447#comment:11</link>
+      <guid isPermaLink="false">http://localhost/ticket/1447#comment:11</guid>
+      <description>
+        &lt;p&gt;
+Just to add: the remove_old_files script is only a workaround, not a fix. CKAN should clean up after itself. Feel free to re-open this ticket for a proper solution ;-)
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Fri, 23 Mar 2012 14:05:02 GMT</pubDate>
+      <title>status changed; resolution deleted</title>
+      <link>http://localhost/ticket/1447#comment:12</link>
+      <guid isPermaLink="false">http://localhost/ticket/1447#comment:12</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;closed&lt;/em&gt; to &lt;em&gt;reopened&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                &lt;em&gt;fixed&lt;/em&gt; deleted
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Fri, 23 Mar 2012 14:05:44 GMT</pubDate>
+      <title>status changed; owner, milestone set</title>
+      <link>http://localhost/ticket/1447#comment:13</link>
+      <guid isPermaLink="false">http://localhost/ticket/1447#comment:13</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;owner&lt;/strong&gt;
+              set to &lt;em&gt;kindly&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;reopened&lt;/em&gt; to &lt;em&gt;assigned&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                set to &lt;em&gt;ckan-v1.7&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+@kindly: hope ok to assign to you (maybe just for review and thought on who would be best placed to look at ...)
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>nils.toedtmann</dc:creator>
+
+      <pubDate>Fri, 23 Mar 2012 16:10:29 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1447#comment:14</link>
+      <guid isPermaLink="false">http://localhost/ticket/1447#comment:14</guid>
+      <description>
+        &lt;p&gt;
+Ticket &lt;a class="ext-link" href="http://trac.okfn.org/ticket/1222"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://trac.okfn.org/ticket/1222&lt;/a&gt; tracks the effort to push the clean-up script onto CKAN hosts.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>kindly</dc:creator>
+
+      <pubDate>Mon, 28 May 2012 10:55:04 GMT</pubDate>
+      <title>milestone changed</title>
+      <link>http://localhost/ticket/1447#comment:15</link>
+      <guid isPermaLink="false">http://localhost/ticket/1447#comment:15</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan-v1.7&lt;/em&gt; to &lt;em&gt;ckan-backlog&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>nils.toedtmann</dc:creator>
+
+      <pubDate>Tue, 26 Jun 2012 15:58:03 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1447#comment:16</link>
+      <guid isPermaLink="false">http://localhost/ticket/1447#comment:16</guid>
+      <description>
+        &lt;p&gt;
+This is becoming painful for the sysadmins. Please fix.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Tue, 26 Jun 2012 16:15:30 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/1447#comment:17</link>
+      <guid isPermaLink="false">http://localhost/ticket/1447#comment:17</guid>
+      <description>
+        &lt;p&gt;
+BTW on DGU I have set it up to use memcached for these sessions (v. easy) and I think it solves the problem.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

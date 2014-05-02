@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #808: Allow i18n language choice on site (and possibly set automatically)</title>
+    <link>http://localhost/ticket/808</link>
+    <description>&lt;p&gt;
+Allow choice of language on ckan instance.
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Configuration variable listing language choices (could try doing this automatically but recommend against this)
+&lt;/li&gt;&lt;li&gt;Switcher option in UI (perhaps on user profile page)
+&lt;/li&gt;&lt;li&gt;Default it automatically based on browser settings (?)
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+Think this is high value (and cost is low)
+&lt;/p&gt;
+&lt;p&gt;
+Cost: low (4h)
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/808</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>dread</dc:creator>
+
+      <pubDate>Thu, 13 Jan 2011 10:54:55 GMT</pubDate>
+      <title>component changed</title>
+      <link>http://localhost/ticket/808#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/808#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;component&lt;/strong&gt;
+                changed from &lt;em&gt;component1&lt;/em&gt; to &lt;em&gt;ckan&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>pudo</dc:creator>
+
+      <pubDate>Mon, 14 Feb 2011 11:02:30 GMT</pubDate>
+      <title>status changed; owner set</title>
+      <link>http://localhost/ticket/808#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/808#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;owner&lt;/strong&gt;
+              set to &lt;em&gt;pudo&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;assigned&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Mon, 14 Feb 2011 15:33:21 GMT</pubDate>
+      <title>milestone changed</title>
+      <link>http://localhost/ticket/808#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/808#comment:3</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan-v1.4&lt;/em&gt; to &lt;em&gt;ckan-v1.4-sprint-2&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>pudo</dc:creator>
+
+      <pubDate>Tue, 15 Feb 2011 15:27:38 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/808#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/808#comment:4</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;assigned&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+implemented in cset:8200247e74e9
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

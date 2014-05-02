@@ -1,0 +1,33 @@
+= The CKAN RESTful API =
+
+== Locations ==
+
+|| '''Resourse Name''' || '''Location''' ||
+|| Package Register || !http://ckan.net/api/rest/package ||
+|| Package Entity || !http://ckan.net/api/rest/package/NAME ||
+|| Tags Regsiter || !http://ckan.net/api/rest/tag ||
+|| Tag Entity || !http://ckan.net/api/rest/tag/NAME ||
+
+== Methods, Data Formats, Status Codes ==
+
+|| '''Resource Name''' || '''HTTP Method''' || '''Data Format''' || ''Status Codes''    ||
+|| Packages Register   || GET               || Package-List      ||  200, 301, 401      ||
+|| Packages Register   || POST              || Package           ||  200, 301, 401, 409 ||
+|| Package Entity      || GET               || Package           ||  200, 301, 401, 404 ||
+|| Package Entity      || PUT               || Package           ||  200, 301, 401, 404 ||
+|| Package Entity      || DELETE            || None              ||  200, 301, 401, 404 ||
+|| Tags Register       || GET               || Tag-List          ||  200, 301, 401      ||
+|| Tags Register       || POST              || Tag               ||  200, 301, 401, 409 ||
+|| Tag Entity          || GET               || Tag               ||  200, 301, 401, 404 ||
+|| Tag Entity          || PUT               || Tag               ||  200, 301, 401, 404 ||
+|| Tag Entity          || DELETE            || None              ||  200, 301, 401, 404 ||
+
+
+== Status Codes ==
+
+|| '''Code''' || '''Name'''         ||
+|| 200        || OK                 ||
+|| 301        || Moved Permanently  ||
+|| 401        || Not Authorised     ||
+|| 404        || Not Found          ||
+|| 409        || Conflict           ||

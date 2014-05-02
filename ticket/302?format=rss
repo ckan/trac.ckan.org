@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #302: Advertise a package's feed visually</title>
+    <link>http://localhost/ticket/302</link>
+    <description>&lt;p&gt;
+Visual display of a package's feed in the Package Read (/package/xyz) and Package History (/package/history/xyz) pages.
+&lt;/p&gt;
+&lt;p&gt;
+Motivation: each package's Atom feed is mentioned in the &amp;lt;link rel="alternate" type="application/atom+xml" ...&amp;gt; tag, which Firefox displays with a feed icon, but the other 3/4 of users may not discover it.
+&lt;/p&gt;
+&lt;p&gt;
+The Repo History (/revision) page has a visual link the feed.
+&lt;/p&gt;
+&lt;p&gt;
+PS It would be nice to display the feed icon in both these places too.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/302</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>johnbywater</dc:creator>
+
+      <pubDate>Wed, 28 Apr 2010 11:23:41 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/302#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/302#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Fixed in 61c8b3107f0e.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

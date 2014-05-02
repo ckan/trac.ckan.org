@@ -1,0 +1,6 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1615	CKAN Should work behind a proxy server	thejimmyg		"This would allow deployment via Nginx or Apache using proxy to Paster, uWSGI. At the moment CKAN isn't aware of the proxy's IP address so when you perform an action which does a redirect (such as adding a package), CKAN redirects you to the *internal IP* not the external *proxy IP*.
+
+We would like this work to facilitate testing within VMs as part of our new build infrastructure.
+
+It would also be nice if CKAN worked when mounted at a path other than /. That could be dealt with in another ticket because it isn't a problem at the moment."	enhancement	closed	major	ckan-v1.6	ckan	worksforme			ckan	none

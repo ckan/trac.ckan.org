@@ -1,0 +1,4 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2936	Updating a group via the API clears its packages	seanh		"If the group dict that you post to the API does not have any 'packages' key then all the group's packages get removed. I think it would be better if you could just update e.g. the group's description without having to also post the list of packages, and apparently this is how other update API actions work.
+
+Might be worth checking all the update API actions for this behaviour, and making sure they're all consistent"	defect	new	awaiting triage	ckan-v1.8	ckan				ckan	none

@@ -1,0 +1,116 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1129	CREP0002: Moderated  Edits	kindly		"'''Proposer:''' David Raznick[[BR]]
+
+== Abstract. ==
+
+We are trying to achieve these goals.
+
+ * To get people involved with making edits to CKAN metadata. 
+ * To have an ownership model as to who can moderate and validate these changes
+ * To not put too huge a burden on these owners.
+
+In order to achieve this, a feature which lets anyone edit a package but only let the moderator/owner accept it.  The moderator should be able to look at a list of changes and accept the ones that
+
+This cep is not about 'if' we need such a feature, it is about 'how' we go about implementing it. Another cep may needed for the 'if' case.
+
+== The Problem ==
+
+We need the following to be possible.
+
+ * Storing revision of objects that are not the current active one.
+ * A way of the user viewing past revisions.
+ * Accessing not only the history of a particular object but also of related objects at that time. i.e If a resource related to a package changes we need a way to see this when looking at the package.
+ * A robust way of doing this in the face of database schema changes.
+ * Make sure database queries are quick.
+
+== Solutions. ==
+
+1.  Store the whole dictization of the package and all its related objects every time you change anything in its dictized representation and only save to the database proper if accepted.
+
+ Pros
+ * Easy to implement, we already have a preview which makes the dictized form of a package without actually saving it.  This will just need to be persisted in some way.
+ * Fast retrieval.
+ * Potential to store a branching revision tree of changes.
+
+ Cons
+ * No easy way to remake the dictized packages historically or if there is an there a change in the way we represent packages, i.e schema changes.
+ * Will only work for the particular objects we decide to store these changes for.
+ * Stores a lot of repeated information
+
+
+2.  Write specialized queries for every read of the database looking only at the revision tables.
+
+This method requires there to be a change in the way we use VDM, so that we manage statefulness ourselves. We will need to add other states such as 'waiting for approval'.
+
+ Pros
+
+ * No specialized storage required
+ * Only need to change queries when schema changes
+ * Can be made to work easily for other objects
+
+ Cons
+
+ * Slower query time on read, as even looking at the last active package will need to do a fairly complicated query.
+
+== Implementation details. ==
+
+1.
+    A new table with columns  id, user, package_id, timestamp, revision_id, parent_id, dictized_package.
+    revision_id should be null unless it is actually persisted to the database.  parent_id is the id that this package_dict was changed from.
+
+    We could store only the diffs of the dictized_package as long as we assure that everything inside the json is stably sorted, this will make getting the historical data out slower.
+
+    Getting out the history of the dictized packages is an intensive task, as it will require replaying the whole history of all the changes and creating the dict for each change.  This re-caching will need to be redone for every change we make to dictized representation of a package.
+
+2.
+    Every normal packages read needs to look at the revision table to see the last accepted change in the dictized representation of the package. 
+    We also need to way to get what the dictized representation of the package was like at any point of its revision history.  This querying is non-trivial in sql.
+
+    There are 3 ways found of doing such queries efficiently. 
+
+    These ways have been profiled/tested against package_extras in dgu.  This was chosen as its likely that the package_extras_revision table is the largest table we currently have, with over 100,000 rows.  
+    The test was to see how long it would take to get out the package_extras for each of the 6864 packages separately as they were 100 days before the test was run. 
+    The test scripts are attached.
+
+    1. Using distinct on.
+
+    Pros:  
+         * The fastest method tested taking 19.622389s
+         * The most intuitive and maintainable script to write.
+         * The shortest script.
+    Cons:
+         * No direct sqlalchemy support (coming in 0.7) so only hand written script.
+         * Very postgres specific and not part of the sql standard.
+        
+    2. Using Window functions
+
+    Pros:  
+         * Very fast method tested taking 21.120075s
+         * Fairly straight forward to write
+         * Part of sql standard.
+    Cons:
+         * No direct sqlalchemy support yet also but coming in 0.7. 
+         * Need upto date version of posgres.
+         * Not supported by sqlite, mysql.
+         
+    3. Self join
+      
+    Pros:  
+         * Database agnostic.
+    Cons:
+         * Fairly slow 35.285168s
+         * Difficult to write in a way thats reusable
+         * Difficult to nicely in sqlalchemy sql expression
+  
+ If we were to use 1 or 2 we would need to drop any sqlite support for the tests.
+
+ There is a forth option of just returning all the rows and finding out the last change before a date however this will throw back a lot of rows especially if there are lots of edits.
+
+=== Participants ===
+
+David Raznick to do it.
+
+== Progress. ==
+
+Need to decide on the correct solution.
+"	CREP	new	awaiting triage		ckan				ckan	none

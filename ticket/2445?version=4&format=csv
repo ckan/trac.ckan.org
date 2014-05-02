@@ -1,0 +1,22 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2445,Create demo dataset add related page,aron.carroll,aron.carroll,"Discussion:
+
+https://okfn.basecamphq.com/projects/9558659-demo-ckan-front-end/posts/62821386/comments
+
+Implementation:
+
+http://s031.okserver.org:2375/dataset/adur_district_spending/related/new
+
+Needs a new endpoint at /dataset/DATASET/related/new this should have a form containing the following fields.
+
+ * Title (required)
+ * Type of item (Application|Visualisation)
+ * Description
+ * URL (required)
+ * Image URL
+
+When submitted if  an item is created it should redirect (303) back to /dataset/DATASET/related with a flash message saying ""Related item was successfully created"".
+
+If failed to create it should redirect (303) back to the form and populate the error messages, see add dataset for examples (https://github.com/okfn/ckan/blob/feature-2375-demo-theme/ckan/templates/package/new_package_form.html)
+
+",enhancement,new,major,current-ckan-sprint-2012-06-25,ckan,,demo-theme,toby ross,ckan,none

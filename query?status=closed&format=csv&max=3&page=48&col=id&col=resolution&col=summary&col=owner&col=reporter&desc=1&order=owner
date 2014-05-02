@@ -1,0 +1,4 @@
+id,resolution,summary,owner,reporter
+658,fixed,Fix harvest source entity get method to default to returning 'None' rather than raising an exception,,johnbywater
+660,invalid,Check CKAN instance works,,dread
+661,fixed,Create CKAN site tester,,dread

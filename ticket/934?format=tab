@@ -1,0 +1,14 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+934	Key value store for extensions to store data	kindly		"We need to allow plugins to store information.
+
+Each plug-in should have its own name space and allow any data to be set.
+
+There are two options.  
+
+ * make a key value table in ckan that will hold random information.
+ * use redis (or other key value store)
+
+If in sql suggest schema of form:
+
+ * (namespace, obj_id, key, value [, value_type])
+ * value is json"	enhancement	closed	awaiting triage		ckan	invalid			ckan	none

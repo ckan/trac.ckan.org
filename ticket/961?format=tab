@@ -1,0 +1,34 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+961	[super] Refactoring of forms, validation and model synchronization	rgrp	kindly	"This is a meta-ticket to hold all of the work on refactoring forms, validation and model-synchronization in CKAN.
+
+ckan-dev thread: http://lists.okfn.org/pipermail/ckan-dev/2011-January/000180.html
+
+== The Issue ==
+
+From #926:
+
+The current formalchemy setup conflates view, controller and model code in a way that makes it hard to debug and customise.
+
+From http://lists.okfn.org/pipermail/ckan-dev/2011-January/000181.html:
+
+... !FormAlchemy, in retrospect, was probably a mistake as it merges too much model/validation/form generation into one thing.
+
+At least 3 functions involved [in this area]:
+
+ 1. Generating (or just filling) a form template with 'form data' (and errors)
+ 2. Converting model data to form data (also happens for APIs in fact) -- let's call this 'dict-ization'
+ 3. Converting form data to model data (and validating) (inverse of previous step)
+
+== Related Tickets ==
+
+ * #926 - Pick a simpler form framework
+ * #1046 'dictization' and the logic layer - serialization / deserialization of package (and other domain objects) to standard intermediate format such as json-convertable python dict
+  * #1079 Refactor API to use new logic layer and dictization
+  * #1078 Refactor WUI controllers and forms to use logic layer
+  * cf existing dumper and importer code
+  * This will fix #662
+ * [not ticketed yet] - validation layer (should work on serialized objects?)
+ * #662 - Can't put entity that is returned by posting to package register (Defect)
+ * #972 - Merge 'extras' into main package dict rather than having separate key
+ * #1035 - Form impressions are given IDs
+ * #810 - Move ""add packages"" field up in group form (easier to do this once forms are done)"	enhancement	closed	blocker	ckan-v1.5	ckan	fixed			ckan	none

@@ -1,0 +1,34 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1479,Can't edit a user with a unicode email address,dread,dread,"1. Register User with an email address with a unicode char (e.g. u'\u044e')
+2. View the User in the UI (/user/) or with 'user_show' Action API
+Exception:
+{{{
+Module ckan.controllers.user:98 in read
+<<          try:
+                   user_dict = get_action('user_show')(context,data_dict)
+               except NotFound:
+                   h.redirect_to(controller='user', action='login', id=None)
+>>  user_dict = get_action('user_show')(context,data_dict)
+Module ckan.logic.action.get:488 in user_show
+<<      check_access('user_show',context, data_dict)
+       
+           user_dict = user_dictize(user_obj,context)
+       
+           if not (Authorizer().is_sysadmin(unicode(user)) or user == user_obj.name):
+>>  user_dict = user_dictize(user_obj,context)
+Module ckan.lib.dictization.model_dictize:189 in user_dictize
+<<      
+           result_dict['display_name'] = user.display_name
+           result_dict['email_hash'] = user.email_hash
+           result_dict['number_of_edits'] = user.number_of_edits()
+           result_dict['number_administered_packages'] = user.number_administered_packages()
+>>  result_dict['email_hash'] = user.email_hash
+Module ckan.model.user:59 in email_hash
+<<          if self.email:
+                   e = self.email.strip().lower()
+               return hashlib.md5(e).hexdigest()
+               
+           def get_reference_preferred_for_uri(self):
+>>  return hashlib.md5(e).hexdigest()
+UnicodeEncodeError: 'ascii' codec can't encode character u'\u044e' in position 17: ordinal not in range(128)
+}}}",defect,new,minor,ckan-sprint-2011-12-05,ckan,,,,ckan,none

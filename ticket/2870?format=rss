@@ -1,0 +1,1524 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2870: 1.8 tag_list not defined</title>
+    <link>http://localhost/ticket/2870</link>
+    <description>&lt;p&gt;
+From: &amp;lt;thedatahub.org@…&amp;gt;
+Date: Thu, Aug 16, 2012 at 3:20 AM
+Subject: &lt;a class="missing wiki"&gt;WebApp?&lt;/a&gt; Error: &amp;lt;class 'genshi.template.eval.&lt;a class="missing wiki"&gt;UndefinedError?&lt;/a&gt;'&amp;gt;: "tag_list" not defined
+To: ckan-sysadmin@…, kindly@…
+&lt;/p&gt;
+&lt;p&gt;
+URL: &lt;a class="ext-link" href="http://ckan.net/dataset/uk-postboxes"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://ckan.net/dataset/uk-postboxes&lt;/a&gt;
+Module weberror.errormiddleware:162 in &lt;span class="underline"&gt;call&lt;/span&gt;
+&amp;lt;&amp;lt;              &lt;span class="underline"&gt;traceback_supplement&lt;/span&gt; = Supplement, self, environ
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+sr_checker = &lt;a class="missing wiki"&gt;ResponseStartChecker?&lt;/a&gt;(start_response)
+app_iter = self.application(environ, sr_checker)
+return self.make_catching_iter(app_iter, environ, sr_checker)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+except:
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+app_iter = self.application(environ, sr_checker)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module beaker.middleware:73 in &lt;span class="underline"&gt;call&lt;/span&gt;
+&amp;lt;&amp;lt;                                                     self.cache_manager)
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+environ[self.environ_key] = self.cache_manager
+return self.app(environ, start_response)
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+return self.app(environ, start_response)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module beaker.middleware:155 in &lt;span class="underline"&gt;call&lt;/span&gt;
+&amp;lt;&amp;lt;                          headers.append(('Set-cookie', cookie))
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+return start_response(status, headers, exc_info)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+return self.wrap_app(environ, session_start_response)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+def _get_session(self):
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+return self.wrap_app(environ, session_start_response)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module routes.middleware:131 in &lt;span class="underline"&gt;call&lt;/span&gt;
+&amp;lt;&amp;lt;                                               r'\1', oldpath)
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+response = self.app(environ, start_response)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+# Wrapped in try as in rare cases the attribute will be gone already
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+response = self.app(environ, start_response)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module pylons.wsgiapp:125 in &lt;span class="underline"&gt;call&lt;/span&gt;
+&amp;lt;&amp;lt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+controller = self.resolve(environ, start_response)
+response = self.dispatch(controller, environ, start_response)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+if 'paste.testing_variables' in environ and hasattr(response,
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+response = self.dispatch(controller, environ, start_response)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module pylons.wsgiapp:324 in dispatch
+&amp;lt;&amp;lt;          if log_debug:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+log.debug("Calling controller class with WSGI interface")
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+return controller(environ, start_response)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+def load_test_env(self, environ):
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+return controller(environ, start_response)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module ckan.lib.base:239 in &lt;span class="underline"&gt;call&lt;/span&gt;
+&amp;lt;&amp;lt;          try:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+res = WSGIController.&lt;span class="underline"&gt;call&lt;/span&gt;(self, environ, start_response)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+finally:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+model.Session.remove()
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+res = WSGIController.&lt;span class="underline"&gt;call&lt;/span&gt;(self, environ, start_response)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module pylons.controllers.core:221 in &lt;span class="underline"&gt;call&lt;/span&gt;
+&amp;lt;&amp;lt;                  return response(environ, self.start_response)
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+response = self._dispatch_call()
+if not start_response_called:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+self.start_response = start_response
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+response = self._dispatch_call()
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module pylons.controllers.core:172 in _dispatch_call
+&amp;lt;&amp;lt;              req.environ&lt;a class="missing wiki"&gt;pylons.action_method?&lt;/a&gt; = func
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+response = self._inspect_call(func)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+else:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+if log_debug:
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+response = self._inspect_call(func)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module pylons.controllers.core:107 in _inspect_call
+&amp;lt;&amp;lt;                        func.&lt;span class="underline"&gt;name&lt;/span&gt;, args)
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+try:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+result = self._perform_call(func, args)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+except HTTPException, httpe:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+if log_debug:
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+result = self._perform_call(func, args)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module pylons.controllers.core:60 in _perform_call
+&amp;lt;&amp;lt;          """Hide the traceback for everything above this method"""
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+&lt;span class="underline"&gt;traceback_hide&lt;/span&gt; = 'before_and_this'
+return func(&lt;strong&gt;args)
+&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+def _inspect_call(self, func):
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+return func(&lt;strong&gt;args)
+&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module ckan.controllers.package:322 in read
+&amp;lt;&amp;lt;          template = template[:template.index('.') + 1] + format
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+return render(template, loader_class=loader)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+def comments(self, id):
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+return render(template, loader_class=loader)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module ckan.lib.base:153 in render
+&amp;lt;&amp;lt;      try:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+return cached_template(template_name, render_template,
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+loader_class=loader_class)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+except ckan.exceptions.&lt;a class="missing wiki"&gt;CkanUrlException?&lt;/a&gt;, e:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+raise
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+loader_class=loader_class)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module pylons.templating:249 in cached_template
+&amp;lt;&amp;lt;          return content
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+else:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+return render_func()
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+return render_func()
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module ckan.lib.base:102 in render_template
+&amp;lt;&amp;lt;          if loader_class == &lt;a class="missing wiki"&gt;NewTextTemplate?&lt;/a&gt;:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+return literal(stream.render(method="text", encoding=None))
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+return literal(stream.render(method=method, encoding=None,
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+return literal(stream.render(method="text", encoding =None))
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module genshi.core:183 in render
+&amp;lt;&amp;lt;              method = self.serializer or 'xml'
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+generator = self.serialize(method=method, &lt;strong&gt;kwargs)
+return encode(generator, method=method, encoding=encoding, out=out)
+&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+def select(self, path, namespaces=None, variables=None):
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+return encode(generator, method=method, encoding=encoding, out =out)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module genshi.output:57 in encode
+&amp;lt;&amp;lt;          _encode = lambda string: string
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+if out is None:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+return _encode(&lt;em&gt;.join(list(iterator)))
+&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+for chunk in iterator:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+out.write(_encode(chunk))
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+return _encode(&lt;em&gt;.join(list(iterator)))
+&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module genshi.output:569 in &lt;span class="underline"&gt;call&lt;/span&gt;
+&amp;lt;&amp;lt;      def &lt;span class="underline"&gt;call&lt;/span&gt;(self, stream):
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+strip_markup = self.strip_markup
+for event in stream:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+if event&lt;a class="missing changeset" title="No default repository defined"&gt;[0]&lt;/a&gt; is TEXT:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+data = event&lt;a class="missing changeset" title="No default repository defined"&gt;[1]&lt;/a&gt;
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+for event in stream:
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module genshi.core:288 in _ensure
+&amp;lt;&amp;lt;      # unchanged
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+yield event
+for event in stream:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+yield event
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+for event in stream:
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module genshi.core:288 in _ensure
+&amp;lt;&amp;lt;      # unchanged
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+yield event
+for event in stream:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+yield event
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+for event in stream:
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module genshi.filters.transform:686 in _unmark
+&amp;lt;&amp;lt;      def _unmark(self, stream):
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+for mark, event in stream:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+kind = event&lt;a class="missing changeset" title="No default repository defined"&gt;[0]&lt;/a&gt;
+if not (kind is None or kind is ATTR or kind is BREAK):
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+for mark, event in stream:
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module genshi.filters.transform:1145 in &lt;span class="underline"&gt;call&lt;/span&gt;
+&amp;lt;&amp;lt;          :param stream: The marked event stream to filter
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+"""
+for mark, event in stream:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+yield mark, event
+if mark is ENTER:
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+for mark, event in stream:
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module genshi.filters.transform:714 in &lt;span class="underline"&gt;call&lt;/span&gt;
+&amp;lt;&amp;lt;          stream = iter(stream)
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+next = stream.next
+for mark, event in stream:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+if mark is None:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+yield mark, event
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+for mark, event in stream:
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module genshi.filters.transform:682 in _mark
+&amp;lt;&amp;lt;      def _mark(self, stream):
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+for event in stream:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+yield OUTSIDE, event
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+for event in stream:
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module genshi.core:288 in _ensure
+&amp;lt;&amp;lt;      # unchanged
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+yield event
+for event in stream:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+yield event
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+for event in stream:
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module genshi.filters.transform:686 in _unmark
+&amp;lt;&amp;lt;      def _unmark(self, stream):
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+for mark, event in stream:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+kind = event&lt;a class="missing changeset" title="No default repository defined"&gt;[0]&lt;/a&gt;
+if not (kind is None or kind is ATTR or kind is BREAK):
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+for mark, event in stream:
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module genshi.filters.transform:1145 in &lt;span class="underline"&gt;call&lt;/span&gt;
+&amp;lt;&amp;lt;          :param stream: The marked event stream to filter
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+"""
+for mark, event in stream:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+yield mark, event
+if mark is ENTER:
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+for mark, event in stream:
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module genshi.filters.transform:714 in &lt;span class="underline"&gt;call&lt;/span&gt;
+&amp;lt;&amp;lt;          stream = iter(stream)
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+next = stream.next
+for mark, event in stream:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+if mark is None:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+yield mark, event
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+for mark, event in stream:
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module genshi.filters.transform:682 in _mark
+&amp;lt;&amp;lt;      def _mark(self, stream):
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+for event in stream:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+yield OUTSIDE, event
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+for event in stream:
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module genshi.core:288 in _ensure
+&amp;lt;&amp;lt;      # unchanged
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+yield event
+for event in stream:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+yield event
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+for event in stream:
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module genshi.filters.transform:686 in _unmark
+&amp;lt;&amp;lt;      def _unmark(self, stream):
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+for mark, event in stream:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+kind = event&lt;a class="missing changeset" title="No default repository defined"&gt;[0]&lt;/a&gt;
+if not (kind is None or kind is ATTR or kind is BREAK):
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+for mark, event in stream:
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module genshi.filters.transform:1145 in &lt;span class="underline"&gt;call&lt;/span&gt;
+&amp;lt;&amp;lt;          :param stream: The marked event stream to filter
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+"""
+for mark, event in stream:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+yield mark, event
+if mark is ENTER:
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+for mark, event in stream:
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module genshi.filters.transform:714 in &lt;span class="underline"&gt;call&lt;/span&gt;
+&amp;lt;&amp;lt;          stream = iter(stream)
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+next = stream.next
+for mark, event in stream:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+if mark is None:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+yield mark, event
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+for mark, event in stream:
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module genshi.filters.transform:682 in _mark
+&amp;lt;&amp;lt;      def _mark(self, stream):
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+for event in stream:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+yield OUTSIDE, event
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+for event in stream:
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module genshi.core:288 in _ensure
+&amp;lt;&amp;lt;      # unchanged
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+yield event
+for event in stream:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+yield event
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+for event in stream:
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module genshi.filters.transform:686 in _unmark
+&amp;lt;&amp;lt;      def _unmark(self, stream):
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+for mark, event in stream:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+kind = event&lt;a class="missing changeset" title="No default repository defined"&gt;[0]&lt;/a&gt;
+if not (kind is None or kind is ATTR or kind is BREAK):
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+for mark, event in stream:
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module ckanext.googleanalytics.plugin:93 in download_adder
+&amp;lt;&amp;lt;                  [downloaded %s times]&amp;lt;/span&amp;gt;&lt;strong&gt;
+&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+count = None
+for mark, (kind, data, pos) in stream:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+if mark and kind == START:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+href = data&lt;a class="missing changeset" title="No default repository defined"&gt;[1]&lt;/a&gt;.get('href')
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+for mark, (kind, data, pos) in stream:
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module genshi.filters.transform:714 in &lt;span class="underline"&gt;call&lt;/span&gt;
+&amp;lt;&amp;lt;          stream = iter(stream)
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+next = stream.next
+for mark, event in stream:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+if mark is None:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+yield mark, event
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+for mark, event in stream:
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module genshi.filters.transform:682 in _mark
+&amp;lt;&amp;lt;      def _mark(self, stream):
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+for event in stream:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+yield OUTSIDE, event
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+for event in stream:
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module genshi.core:288 in _ensure
+&amp;lt;&amp;lt;      # unchanged
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+yield event
+for event in stream:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+yield event
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+for event in stream:
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module genshi.filters.transform:686 in _unmark
+&amp;lt;&amp;lt;      def _unmark(self, stream):
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+for mark, event in stream:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+kind = event&lt;a class="missing changeset" title="No default repository defined"&gt;[0]&lt;/a&gt;
+if not (kind is None or kind is ATTR or kind is BREAK):
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+for mark, event in stream:
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module genshi.filters.transform:1175 in &lt;span class="underline"&gt;call&lt;/span&gt;
+&amp;lt;&amp;lt;          """
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+callable_value = hasattr(self.value, '&lt;span class="underline"&gt;call&lt;/span&gt;')
+for mark, (kind, data, pos) in stream:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+if mark is ENTER:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+if callable_value:
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+for mark, (kind, data, pos) in stream:
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module genshi.filters.transform:714 in &lt;span class="underline"&gt;call&lt;/span&gt;
+&amp;lt;&amp;lt;          stream = iter(stream)
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+next = stream.next
+for mark, event in stream:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+if mark is None:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+yield mark, event
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+for mark, event in stream:
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module genshi.filters.transform:682 in _mark
+&amp;lt;&amp;lt;      def _mark(self, stream):
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+for event in stream:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+yield OUTSIDE, event
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+for event in stream:
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module genshi.core:288 in _ensure
+&amp;lt;&amp;lt;      # unchanged
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+yield event
+for event in stream:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+yield event
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+for event in stream:
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module genshi.filters.transform:686 in _unmark
+&amp;lt;&amp;lt;      def _unmark(self, stream):
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+for mark, event in stream:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+kind = event&lt;a class="missing changeset" title="No default repository defined"&gt;[0]&lt;/a&gt;
+if not (kind is None or kind is ATTR or kind is BREAK):
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+for mark, event in stream:
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module genshi.filters.transform:1145 in &lt;span class="underline"&gt;call&lt;/span&gt;
+&amp;lt;&amp;lt;          :param stream: The marked event stream to filter
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+"""
+for mark, event in stream:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+yield mark, event
+if mark is ENTER:
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+for mark, event in stream:
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module genshi.filters.transform:714 in &lt;span class="underline"&gt;call&lt;/span&gt;
+&amp;lt;&amp;lt;          stream = iter(stream)
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+next = stream.next
+for mark, event in stream:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+if mark is None:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+yield mark, event
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+for mark, event in stream:
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module genshi.filters.transform:682 in _mark
+&amp;lt;&amp;lt;      def _mark(self, stream):
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+for event in stream:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+yield OUTSIDE, event
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+for event in stream:
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module genshi.template.base:605 in _include
+&amp;lt;&amp;lt;          from genshi.template.loader import &lt;a class="missing wiki"&gt;TemplateNotFound?&lt;/a&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+for event in stream:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+if event&lt;a class="missing changeset" title="No default repository defined"&gt;[0]&lt;/a&gt; is INCLUDE:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+href, cls, fallback = event&lt;a class="missing changeset" title="No default repository defined"&gt;[1]&lt;/a&gt;
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+for event in stream:
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module genshi.template.base:565 in _flatten
+&amp;lt;&amp;lt;                  elif kind is EXPR:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+result = _eval_expr(data, ctxt, vars)
+if result is not None:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+# First check for a string, otherwise the iterable test
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+result = _eval_expr(data, ctxt, vars)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module genshi.template.base:277 in _eval_expr
+&amp;lt;&amp;lt;      if vars:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+ctxt.push(vars)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+retval = expr.evaluate(ctxt)
+if vars:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+ctxt.pop()
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+retval = expr.evaluate(ctxt)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module genshi.template.eval:178 in evaluate
+&amp;lt;&amp;lt;          &lt;span class="underline"&gt;traceback_hide&lt;/span&gt; = 'before_and_this'
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+_globals = self._globals(data)
+return eval(self.code, _globals, {'&lt;span class="underline"&gt;data&lt;/span&gt;': data})
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+return eval(self.code, _globals, {'&lt;span class="underline"&gt;data&lt;/span&gt;': data})
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/em&gt;&lt;/blockquote&gt;
+&lt;p&gt;
+Module ?:51 in &amp;lt;Expression u"tag_list(c.pkg_dict.get('tags', &lt;em&gt;))"&amp;gt;
+&amp;lt;&amp;lt;      &amp;lt;li py:if=&amp;#34;c.pkg_dict.get('tags')" class="sidebar-section"&amp;gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+&amp;lt;h3&amp;gt;Tags&amp;lt;/h3&amp;gt;
+${tag_list(c.pkg_dict.get('tags', &lt;em&gt;))}
+&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+&amp;lt;/li&amp;gt;
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+${tag_list(c.pkg_dict.get('tags', &lt;em&gt;))}
+&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module genshi.template.eval:309 in lookup_name
+&amp;lt;&amp;lt;              val = BUILTINS.get(name, val)
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+if val is UNDEFINED:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+val = cls.undefined(name)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+return val
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+val = cls.undefined(name)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Module genshi.template.eval:410 in undefined
+&amp;lt;&amp;lt;          """Raise an &lt;tt&gt;&lt;/tt&gt;&lt;a class="missing wiki"&gt;UndefinedError?&lt;/a&gt;&lt;tt&gt;&lt;/tt&gt; immediately."""
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+&lt;span class="underline"&gt;traceback_hide&lt;/span&gt; = True
+raise &lt;a class="missing wiki"&gt;UndefinedError?&lt;/a&gt;(key, owner=owner)
+&lt;/p&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote class="citation"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+raise &lt;a class="missing wiki"&gt;UndefinedError?&lt;/a&gt;(key, owner=owner)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;a class="missing wiki"&gt;UndefinedError?&lt;/a&gt;: "tag_list" not defined
+CGI Variables
+CKAN_CURRENT_URL        '/dataset/uk-postboxes'
+CKAN_LANG        'en'
+CKAN_LANG_IS_DEFAULT        True
+CKAN_PAGE_CACHABLE        True
+CONTENT_TYPE        '; charset=utf-8'
+DOCUMENT_ROOT        '/etc/apache2/htdocs'
+GATEWAY_INTERFACE        'CGI/1.1'
+HTTP_ACCEPT        'text/html,text/plain,text/xml'
+HTTP_ACCEPT_CHARSET        'ISO-8859-1,utf-8;q=0.7,*;q=0.7'
+HTTP_ACCEPT_ENCODING        'gzip'
+HTTP_ACCEPT_LANGUAGE        'vi,en-us;q=0.7,en;q=0.3'
+HTTP_CONNECTION        'close'
+HTTP_HOST        'ckan.net'
+HTTP_USER_AGENT        'coccoc/1.0 ()'
+PATH_INFO        '/dataset/uk-postboxes'
+PATH_TRANSLATED        '/etc/ckan/datahub/apache.wsgi/dataset/uk-postboxes'
+REMOTE_ADDR        '127.0.0.1'
+REMOTE_PORT        '47065'
+REQUEST_METHOD        'GET'
+REQUEST_URI        '/dataset/uk-postboxes'
+SCRIPT_FILENAME        '/etc/ckan/datahub/apache.wsgi'
+SERVER_ADDR        '127.0.0.1'
+SERVER_ADMIN        '[no address given]'
+SERVER_NAME        'ckan.net'
+SERVER_PORT        '80'
+SERVER_PROTOCOL        'HTTP/1.0'
+SERVER_SIGNATURE        '&amp;lt;address&amp;gt;Apache/2.2.22 (Ubuntu) Server at ckan.net Port 80&amp;lt;/address&amp;gt;\n'
+SERVER_SOFTWARE        'Apache/2.2.22 (Ubuntu)'
+WSGI Variables
+application        &amp;lt;beaker.middleware.&lt;a class="missing wiki"&gt;CacheMiddleware?&lt;/a&gt; object at 0x7f5312a51650&amp;gt;
+beaker.cache        &amp;lt;beaker.cache.&lt;a class="missing wiki"&gt;CacheManager?&lt;/a&gt; object at 0x7f5312a51790&amp;gt;
+beaker.get_session        &amp;lt;bound method &lt;a class="missing wiki"&gt;SessionMiddleware?&lt;/a&gt;._get_session of &amp;lt;beaker.middleware.&lt;a class="missing wiki"&gt;SessionMiddleware?&lt;/a&gt; object at 0x7f5312a516d0&amp;gt;&amp;gt;
+beaker.session        {'_accessed_time': 1345083636.079552, '_creation_time': 1345083636.079552}
+mod_wsgi.application_group        'ckan.net|'
+mod_wsgi.callable_object        'application'
+mod_wsgi.handler_script        &lt;em&gt;
+mod_wsgi.input_chunked        '0'
+mod_wsgi.listener_host        &lt;/em&gt;
+mod_wsgi.listener_port        '8080'
+mod_wsgi.process_group        'datahub'
+mod_wsgi.request_handler        'wsgi-script'
+mod_wsgi.script_reloading        '1'
+mod_wsgi.version        (3, 3)
+paste.cookies        (&amp;lt;SimpleCookie: &amp;gt;, &lt;em&gt;)
+paste.registry        &amp;lt;paste.registry.Registry object at 0x7f52e47477d0&amp;gt;
+paste.throw_errors        True
+pylons.action_method        &amp;lt;bound method &lt;a class="missing wiki"&gt;PackageController?&lt;/a&gt;.read of &amp;lt;ckan.controllers.package.&lt;a class="missing wiki"&gt;PackageController?&lt;/a&gt; object at 0x7f52e477b810&amp;gt;&amp;gt;
+pylons.controller        &amp;lt;ckan.controllers.package.&lt;a class="missing wiki"&gt;PackageController?&lt;/a&gt; object at 0x7f52e477b810&amp;gt;
+pylons.environ_config        {'session': 'beaker.session', 'cache': 'beaker.cache'}
+pylons.pylons        &amp;lt;pylons.util.&lt;a class="missing wiki"&gt;PylonsContext?&lt;/a&gt; object at 0x7f52e477be90&amp;gt;
+pylons.routes_dict        {'action': u'read', 'controller': u'package', 'id': u'uk-postboxes'}
+repoze.who.logger        &amp;lt;logging.Logger object at 0x7f53127b2b50&amp;gt;
+repoze.who.plugins        {'openid': &amp;lt;&lt;a class="missing wiki"&gt;OpenIdIdentificationPlugin?&lt;/a&gt; 139994769488336&amp;gt;, 'friendlyform': &amp;lt;&lt;a class="missing wiki"&gt;FriendlyFormPlugin?&lt;/a&gt; 139994769488528&amp;gt;, 'ckan.lib.authenticator:UsernamePasswordAuthenticator': &amp;lt;ckan.lib.authenticator.&lt;a class="missing wiki"&gt;UsernamePasswordAuthenticator?&lt;/a&gt; object at 0x7f5312d893d0&amp;gt;, 'auth_tkt': &amp;lt;&lt;a class="missing wiki"&gt;AuthTktCookiePlugin?&lt;/a&gt; 139994771858704&amp;gt;, 'ckan.lib.authenticator:OpenIDAuthenticator': &amp;lt;ckan.lib.authenticator.OpenIDAuthenticator object at 0x7f5312d89350&amp;gt;}
+routes.route        &amp;lt;routes.route.Route object at 0x7f5312955a50&amp;gt;
+routes.url        &amp;lt;routes.util.URLGenerator object at 0x7f52eb8c9090&amp;gt;
+webob._parsed_query_vars        (GET([]), &lt;/em&gt;)
+webob.adhoc_attrs        {'language': 'en-us'}
+wsgi process        'Multi process AND threads (?)'
+wsgi.file_wrapper        &amp;lt;built-in method file_wrapper of mod_wsgi.Adapter object at 0x7f5308983a80&amp;gt;
+wsgi.version        (1, 1)
+wsgiorg.routing_args        (&amp;lt;routes.util.URLGenerator object at 0x7f52eb8c9090&amp;gt;, {'action': u'read', 'controller': u'package', 'id': u'uk-postboxes'})
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2870</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+ </channel>
+</rss>

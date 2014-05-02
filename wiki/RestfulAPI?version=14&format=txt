@@ -1,0 +1,209 @@
+= The CKAN RESTful API =
+
+== Design Questions ==
+
+ * What are the resources, and where are they located?
+ * What data formats are in use?
+ * What methods are supported at each resource location?
+ * What status codes could be returned?
+
+----
+
+= Current API =
+
+Suffers from a number of RESTful no-no's....
+
+== URIs ==
+
+ * !http://ckan.net/api/rest/package/list/:page
+ * !http://ckan.net/api/rest/package/create/:name
+ * !http://ckan.net/api/rest/package/update/:name
+ * !http://ckan.net/api/rest/package/read/:name
+
+== Data Formats ==
+
+|| '''Request''' || HTTP Parameters ||
+|| '''Response''' || JSON ||
+
+== POST Method Params ==
+
+==== Create POST ====
+
+|| '''Name''' || '''Value''' ||
+|| name || lower case  alphanumeric string, optionally with dashes and underscores, string length at least 2 characters ||
+
+==== Update POST ====
+
+|| '''Name''' || '''Value''' ||
+|| name || established name string (can't be updated) ||
+|| title || string ||
+|| url || string ||
+|| download_url || string ||
+|| licences || list of license ids ||
+|| tags || space-separated list of tag strings ||
+|| notes || multi-line string ||
+|| log_message || string ||
+
+
+== Methods ==
+ 
+|| '''Action''' || '''Methods''' || 
+|| list || GET ||
+|| create || POST ||
+|| update || POST ||
+|| read || GET ||
+
+== Status Codes ==
+ 
+|| '''Action-Method''' || '''Success''' || '''Exception''' ||
+|| list GET || 200 || 400 Invalid Request, 404 Not Found ||
+|| create POST || 200 || 400 Invalid Request, 409 Conflict ||
+|| update POST || 200 || 400 Invalid Request ||
+|| read GET || 200 || 404 Not Found ||
+
+
+----
+
+== Current Development Issues ==
+
+ * How does a machine client acquire and select from the package license options?
+ * Can the above POST parameter data types be specified more formally?
+
+----
+
+= Proposed API =
+
+== Resources ==
+
+|| '''Resource''' || '''Location''' ||
+|| All Licenses|| !http://ckan.net/api/rest/licenses ||
+|| Licence || !http://ckan.net/api/rest/license/:id ||
+|| All Packages || !http://ckan.net/api/rest/packages ||
+|| Package || !http://ckan.net/api/rest/package/:id ||
+|| All Tags || !http://ckan.net/api/rest/tags ||
+|| Tag || !http://ckan.net/api/rest/tag/:id ||
+
+== Data Formats ==
+
+''Todo: Decide how to identify objects (name, database ID, UUID), then fixup these data formats. Currently assumed to use the value of the object name attribute as the object's resource identifier.''
+
+==== Database ID Format ====
+
+{{{
+    An integer.
+}}}
+
+==== UUID Format ====
+
+{{{
+    ?
+}}}
+
+
+==== Name ID Format ====
+
+{{{
+    The value of the object's name attribute.
+}}}
+
+
+==== License List Format ====
+
+{{{
+{
+    "licence-list": [
+        {
+            "id": "BSD"
+
+        },{
+            "id": "MIT"
+        }
+    ]
+}
+}}}
+
+==== License Format ====
+
+{{{
+{
+    "licence": {
+        "name": "BSD"
+    }
+}
+}}}
+
+==== Package List Format ====
+
+{{{
+{
+    "package-list": [
+        {
+            "id": "dataset-1"
+
+        },{
+            "id": "dataset-2"
+        }
+    ]
+}
+}}}
+
+==== Package Format ====
+
+{{{
+{
+    "package": {
+        "name": "dataset-1",
+        "title": "My Title",
+        "url": "http://mylocation",
+        "download_url": "http://mydownloadlocation",
+        "licences": [5,7],
+        "tags": "this that other",
+        "notes": "Some notes."
+    }
+}
+}}}
+
+==== Tag List Format ====
+
+{{{
+{
+    "tag-list": [
+        {
+            "id": "this"
+
+        },{
+            "id": "that"
+        }
+    ]
+}
+}}}
+
+==== Tag Format ====
+
+{{{
+{
+    "tag": {
+        "name": "this"
+    }
+}
+}}}
+
+== Methods and Status Codes ==
+ 
+|| '''Resource''' || '''Method''' || '''Format''' || '''Status Codes''' ||
+|| All Licenses || GET || License List Format || 200, 301 ||
+|| All Licenses || POST || License Format || 201, 400 ||
+|| License || GET || License Format || 200, 301, 410 ||
+|| License || PUT || License Format || 200, 301, 400, 410 ||
+|| License || DELETE || N/A || 200, 204 ||
+|| All Packages || GET || Package List Format || 200, 301 ||
+|| All Packages || POST || Package Format || 201, 400 ||
+|| Package || GET || Package Format || 200, 301, 410 ||
+|| Package || PUT || Package Format || 200, 301, 400, 410 ||
+|| Package || DELETE || N/A || 200, 204 ||
+|| All Tags || GET || Tag List Format || 200, 301 ||
+|| All Tags || POST || Tag Format || 201, 400 ||
+|| Tags || GET || Tag Format || 200, 301, 410 ||
+|| Tags || PUT || Tag Format || 200, 301, 400, 410 ||
+|| Tags || DELETE || N/A || 200, 204 ||
+

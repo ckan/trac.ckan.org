@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1744: UX improvements to dataset edit as of Dec 2011</title>
+    <link>http://localhost/ticket/1744</link>
+    <description>&lt;p&gt;
+Super ticket: &lt;a class="closed ticket" href="http://localhost/ticket/1506" title="enhancement: [super] UX improvements to dataset edit, create and search + group + user ... (closed: fixed)"&gt;#1506&lt;/a&gt;
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Fix (i.e. allow / show) name editing on dataset edit.
+&lt;ul&gt;&lt;li&gt;Fix the slugify so it does not overwrite if i change title after fixing name.
+&lt;/li&gt;&lt;li&gt;Make slugify encourage people to use shorter names. Either by cutting off (not so good) or showing a warning and saying something like 'hey you may want to cut this down. Hit edit to customize the dataset name now'
+&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;Show edit summary form again, at least on edit pages (and prefill it for create to something sensible like: Creating dataset {title} {name})
+&lt;/li&gt;&lt;li&gt;Fix drop down for resource types in resource add/edit to limit to fixed set of options (as per &lt;a class="ext-link" href="http://wiki.ckan.org/Domain_Model/Resource"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://wiki.ckan.org/Domain_Model/Resource&lt;/a&gt;)
+&lt;ul&gt;&lt;li&gt;See also &lt;a class="ext-link" href="http://lists.okfn.org/pipermail/ckan-discuss/2011-December/001860.html"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://lists.okfn.org/pipermail/ckan-discuss/2011-December/001860.html&lt;/a&gt;
+&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;Allow reordering of resources (or: and this is somewhat more complex but possibly simpler: allow editing of a resource_order field and we use that to sort resources (this is more like wordpress page_order -- these two options could become the same if we just hijack the existing position field on the join table and get rid of ordereredlist extension))
+&lt;ul&gt;&lt;li&gt;Alternative/complement: forget ordering of resources and just allow for simple search on dataset page (do it in pure js). Would still need a default ordering (with editing of extra fields could allow users to add a position field to each resource)
+&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;Merge Groups and Tags into main Edit section (no point having them on their own and most people will miss this).
+&lt;/li&gt;&lt;li&gt;Radically simplify set of licenses - &lt;a class="closed ticket" href="http://localhost/ticket/1359" title="enhancement: Radically simplify standard list of licenses (closed: fixed)"&gt;#1359&lt;/a&gt;
+&lt;/li&gt;&lt;li&gt;Clarify that additional info = extra fields + add guidance - &lt;a class="closed ticket" href="http://localhost/ticket/1648" title="enhancement: Clarify that additional info = extra fields + add guidance (closed: fixed)"&gt;#1648&lt;/a&gt; (minor? wontfix?)
+&lt;/li&gt;&lt;li&gt;&lt;del&gt;"Unsaved changes" warning briefly when you click "Save" &lt;a class="closed ticket" href="http://localhost/ticket/1735" title="enhancement: &amp;#34;Unsaved changes&amp;#34; warning briefly when you click &amp;#34;Save&amp;#34; (closed: wontfix)"&gt;#1735&lt;/a&gt;&lt;/del&gt;
+&lt;/li&gt;&lt;li&gt;"Unsaved changed" typo on dataset edit page
+&lt;/li&gt;&lt;/ul&gt;</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1744</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Mon, 06 Feb 2012 11:05:58 GMT</pubDate>
+      <title>milestone changed</title>
+      <link>http://localhost/ticket/1744#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1744#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan-v1.6&lt;/em&gt; to &lt;em&gt;ckan-sprint-2012-02-20&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>zephod</dc:creator>
+
+      <pubDate>Mon, 06 Feb 2012 12:22:57 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/1744#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/1744#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1744?action=diff&amp;amp;version=2"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Tue, 07 Feb 2012 10:14:50 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/1744#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/1744#comment:3</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1744?action=diff&amp;amp;version=3"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>zephod</dc:creator>
+
+      <pubDate>Fri, 10 Feb 2012 12:53:41 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/1744#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/1744#comment:4</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1744?action=diff&amp;amp;version=4"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>zephod</dc:creator>
+
+      <pubDate>Fri, 10 Feb 2012 12:54:39 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/1744#comment:5</link>
+      <guid isPermaLink="false">http://localhost/ticket/1744#comment:5</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1744?action=diff&amp;amp;version=5"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>zephod</dc:creator>
+
+      <pubDate>Mon, 27 Feb 2012 13:21:17 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/1744#comment:6</link>
+      <guid isPermaLink="false">http://localhost/ticket/1744#comment:6</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1744?action=diff&amp;amp;version=6"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>zephod</dc:creator>
+
+      <pubDate>Mon, 27 Feb 2012 13:31:12 GMT</pubDate>
+      <title>status, description changed; resolution set</title>
+      <link>http://localhost/ticket/1744#comment:7</link>
+      <guid isPermaLink="false">http://localhost/ticket/1744#comment:7</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/1744?action=diff&amp;amp;version=7"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Massive refactor of parent ticket mean this is all done and can be closed off. See &lt;a class="closed ticket" href="http://localhost/ticket/1506" title="enhancement: [super] UX improvements to dataset edit, create and search + group + user ... (closed: fixed)"&gt;#1506&lt;/a&gt; for remaining UX work.
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

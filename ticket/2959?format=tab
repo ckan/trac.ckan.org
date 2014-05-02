@@ -1,0 +1,12 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2959	Changing a Group's name through the action api disassociates it from its datasets in the index	icmurray	icmurray	"Repro:
+
+ - Create a new Group, named ""test-group"".
+ - Add a dataset to it.
+ - Verify the dataset belongs to the group by visiting the Group's read-page
+ - Update the Group through the action api (group_update), using the uid in the ""id"" field, and a new name in the ""name"" field.
+ - Visit the group's read-page.  The list of datasets will be empty.
+
+This was an issue when editing a Group through the web interface, which was fixed in [1].  However it only fixes the issue in the group controller.
+
+[1] https://github.com/okfn/ckan/commit/dbe25d8b8d7fabfc40c5d794a920b91cec349335"	defect	new	minor	ckan 2.0	ckan		groups		ckan	none

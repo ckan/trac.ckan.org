@@ -1,0 +1,132 @@
+= About CKAN Releases =
+
+The OKF aims to make releases CKAN regularly - minor points every two months. Find releases at: [http://pypi.python.org/pypi/ckan PyPI]. See the changes at on the [http://knowledgeforge.net/ckan/doc/ckan/CHANGELOG.html Changelog].
+
+See also: VersioningPolicy
+
+= Branching for CKAN release - beta release =
+
+Branch and release a 'beta' when you have new features you want to burn in. We normally try out a beta release on ckan.net for a week before it is released properly.
+
+ 1. Run the most thorough tests on the code.
+ 1. Create the branch for the new version, named without the beta letter and according to the branch naming policy http://wiki.ckan.net/Mercurial :
+{{{
+$ hg branch release-v1.2
+}}}
+ 1. Change the version number to the new version, but 'beta' in ckan/__init__.py e.g. 1.2b (this will show-up in the web interface, bottom-right corner.)
+ 1. Change the pip-requirements.txt to refer to the new branch (buildbot will fail if you forget):
+{{{
+-e hg+https://bitbucket.org/okfn/ckan@release-v1.2#egg=ckan
+# CKAN dependencies
+-r https://bitbucket.org/okfn/ckan/raw/release-v1.2/requires/lucid_conflict.txt
+-r https://bitbucket.org/okfn/ckan/raw/release-v1.2/requires/lucid_present.txt
+-r https://bitbucket.org/okfn/ckan/raw/release-v1.2/requires/lucid_missing.txt
+}}}
+ 1. Commit these changes:
+{{{
+$ hg ci -m '[release] branch.'
+}}}
+
+= Doing a proper CKAN release =
+
+Once the beta has been tested manually on a live instance for a week you can do a release.
+
+ 1. Run the most thorough tests.
+ 1. Summarise the tickets going in this release in the ckan/doc/CHANGELOG.rst
+ 1. Remove the beta letter in the version number in ckan/__init__.py e.g. 1.1b -> 1.1
+ 1. Commit this change.
+ 1. Update the internationalization POT file and commit it:
+{{{
+$ python setup.py extract_messages
+$ hg ci -m '[i18n]: Updated POT ready for release.' ckan/i18n/ckan.pot
+}}}
+ 1. Compile the docs:
+{{{
+$ python setup.py build_sphinx
+}}}
+ 1. Upload docs to PyPI. If this is the first time you'll want sphinx-pypi-upload installed:
+{{{
+$ easy_install sphinx-pypi-upload
+}}}
+    then do the upload:
+{{{
+$ python setup.py upload_sphinx
+}}}
+    Check it is displayed at: http://packages.python.org/ckan/
+ 1. Tag the repo with the version number (commits change). (add -f to the tag if you want to overwrite a previous tag with this release) e.g.
+{{{
+$ hg tag ckan-1.1 -m 'Release 1.1'
+$ hg push
+}}} 
+ 1. Upload the release to PyPI (If you make a mistake, you can always go into http://pypi.python.org/pypi/ckan to remove the release file and then reupload it.) 
+{{{
+python setup.py sdist upload
+}}}
+ 1. Close branch and merge to default: 
+{{{
+$ hg ci -m '[branch] close.' --close-branch
+$ hg up default
+$ hg merge -r release-v1.3.2
+$ hg revert ckan/__init__.py pip-requirements.txt 
+$ nosetests --ckan ckan/tests
+$ hg ci -m '[merge] from release-v1.3.2.'
+$ hg push
+}}}
+ 1. If there have been any unreleased changes to OKF dependencies like vdm, ckanclient, datautil etc. make sure you release them too.
+
+
+= ckanclient releases =
+
+ 1. Increase version number in ckanclient/__init__.py
+ 1. Add a changelog for this new version in ckanclient/__init__.py
+ 1. Check-in the changes
+ 1. Tag the version:
+{{{
+ $ hg tag "ckanclient-v0.5"
+}}}
+ 1. Create a PYPI config file (~/.pypirc) if necessary:
+{{{
+[distutils]
+index-servers =
+  pypi
+
+[pypi]
+#repository: http://www.python.org/pypi
+username: joebloggs
+password: mypassword
+}}}
+ 1. Produce the distribution and upload to PYPI
+{{{
+$ python setup.py sdist upload
+}}}
+ 1. See the upload here: [[http://www.python.org/pypi/ckanclient]]
+ 1. Check that the setup.py for various branches of CKAN have the new version in their range (as appropriate).
+ 1. Check that the various pip-requirements.txt files also match the new version (as appropriate).
+
+= vdm releases =
+
+ 1. Increase version number in vdm/__init__.py
+ 1. Add a changelog for this new version in vdm/CHANGELOG.txt
+ 1. Check-in the changes
+ 1. Tag the version:
+{{{
+ $ hg tag "vdm-0.8"
+}}}
+ 1. Create a PYPI config file (~/.pypirc) if necessary:
+{{{
+[distutils]
+index-servers =
+  pypi
+
+[pypi]
+#repository: http://www.python.org/pypi
+username: joebloggs
+password: mypassword
+}}}
+ 1. Produce the distribution and upload to PYPI
+{{{
+$ python setup.py sdist upload
+}}}
+ 1. See the upload here: [[http://www.python.org/pypi/vdm]]
+ 1. Check that the setup.py for various branches of CKAN have the new version in their range (as appropriate).
+ 1. Check that the various pip-requirements.txt files also match the new version (as appropriate).

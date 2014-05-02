@@ -1,0 +1,52 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1122,JSON Extra data not searchable,dread,pudo,"It is possible to use the CKAN API to insert JSON format data into package extra values, but this data is not found on searching.
+
+Full text from Pascal:
+{{{
+we encountered a Problem concerning accessing Arrays/Lists.
+
+curl -XGET 'http://ckan.net/api/rest/package/hbz_unioncatalog'
+
+will get you amongst others:
+
+ ""extras"": {""publishingInstitution"":
+""[u'http://lobid.org/organisation/DE-605',
+u'http://lobid.org/organisation/DE-290',
+u'http://lobid.org/organisation/DE-38M',
+u'http://lobid.org/organisation/DE-98',
+u'http://lobid.org/organisation/DE-38',
+u'http://lobid.org/organisation/DE-Kn41',
+u'http://lobid.org/organisation/DE-82',
+u'http://lobid.org/organisation/DE-107',
+u'http://lobid.org/organisation/DE-929',
+u'http://lobid.org/organisation/DE-Zw1',
+u'http://lobid.org/organisation/DE-832']""}
+
+but if I try to query this:
+
+wget
+'http://ckan.net/api/search/package?q=lobid&publishingInstitution=""http://lobid.org/organisation/DE-605""'
+
+I get only two packages, among the package ""hbz_unioncatalog"" is
+missing. (These two packages have only one value for
+""publishingInstitution"").
+
+The ""extra/publishingInstitution""-Array was uploaded through a ""curl
+-XPUT ...
+ ""extras"": {
+   ""publishingInstitution"":[
+     ""http://lobid.org/organisation/DE-605"",
+     ""http://lobid.org/organisation/DE-290"",
+     ""http://lobid.org/organisation/DE-38M"",
+     ""http://lobid.org/organisation/DE-98"",
+     ""http://lobid.org/organisation/DE-38"",
+     ""http://lobid.org/organisation/DE-Kn41"",
+     ""http://lobid.org/organisation/DE-82"",
+     ""http://lobid.org/organisation/DE-107"",
+     ""http://lobid.org/organisation/DE-929"",
+     ""http://lobid.org/organisation/DE-Zw1"",
+     ""http://lobid.org/organisation/DE-832""
+   ]
+   },
+...
+}}}",enhancement,closed,minor,,ckan,wontfix,,pudo,ckan,none

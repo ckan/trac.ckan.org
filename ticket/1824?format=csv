@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1824,Add vocabulary pages,seanh,,"For a free tag foo you can visit the page at /tag/foo and see a list of all the datasets that have the tag foo, and when the tag appears on dataset view pages etc. it's linked to this tag page.
+
+We should do the same thing for vocabulary tags. A tag bar in vocabulary baz should be hyperlinked to a page /tag/baz/bar, or perhaps /vocab/baz/bar.",enhancement,new,awaiting triage,ckan-future,ckan,,taxonomies,,ckan,none

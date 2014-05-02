@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1288: Package edit/creation can't include 'relationships' field</title>
+    <link>http://localhost/ticket/1288</link>
+    <description>&lt;p&gt;
+When you create or edit a package (via the API), you aren't able to specify the relationships it has. (If you do you get 409 &lt;tt&gt; {"__junk": ["The input field __junk was not expected."]} &lt;/tt&gt;)
+&lt;/p&gt;
+&lt;p&gt;
+The normal way to create relationships is via /api/rest/relationships/ and this works. But when you GET a package, the dictionary lists all relationship details. So this bug creates a problem for editing a package that has relationships - you want to GET it, make any edits and then PUT it back. The work-around is to delete the 'relationships' key from the dict before you PUT it back.
+&lt;/p&gt;
+&lt;h2 id="Options"&gt;Options&lt;/h2&gt;
+&lt;p&gt;
+Ideally, CKAN would read the 'relationships' key and make the necessary changes. This is a chunk of work.
+&lt;/p&gt;
+&lt;p&gt;
+Another good option is to allow an unchanged 'relationships' value, but barf it is edited. This is also a chunk of work.
+&lt;/p&gt;
+&lt;p&gt;
+A bad option would be to just ignore the 'relationships' value, since users will get frustrated changing this value and wonder why it never saves, not understanding it is different to all the rest, without error message.
+&lt;/p&gt;
+&lt;p&gt;
+A final option is to get rid of relationships altogether.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1288</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>seanh</dc:creator>
+
+      <pubDate>Fri, 15 Jun 2012 15:28:18 GMT</pubDate>
+      <title>milestone set</title>
+      <link>http://localhost/ticket/1288#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1288#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                set to &lt;em&gt;ckan-backlog&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

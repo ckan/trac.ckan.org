@@ -1,0 +1,4 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+950	Move importer controller to ckanext-importer	dread	dread	"ckan/controllers/importer.py provides a Pylons UI for importing spreadsheet data into CKAN. This would better live in an extension than core CKAN.
+
+In the same move, ckan/tests/misc/test_spreadsheet_importer.py, which is used by importer.py as well as various dgu data importers, should move into ckanext."	enhancement	closed	minor	ckan-v1.3	ckan	fixed				

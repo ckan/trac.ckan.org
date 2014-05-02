@@ -1,0 +1,806 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      #1447 (disk space leakage)
+     – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="prev" href="1393.html" title="Ticket #1393" />
+        <link rel="last" href="1534.html" title="Ticket #1534" />
+        <link rel="help" href="../wiki/TracGuide.html" />
+        <link rel="alternate" href="1447%3Fformat=csv" type="text/csv" class="csv" title="Comma-delimited Text" /><link rel="alternate" href="1447%3Fformat=tab" type="text/tab-separated-values" class="tab" title="Tab-delimited Text" /><link rel="alternate" href="1447%3Fformat=rss" type="application/rss+xml" class="rss" title="RSS Feed" />
+        <link rel="up" href="../query%3Fstatus=assigned&amp;status=new&amp;status=accepted&amp;status=reopened&amp;milestone=ckan-backlog&amp;group=status&amp;order=time.html" />
+        <link rel="next" href="1489.html" title="Ticket #1489" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/ticket.css" type="text/css" />
+        <link rel="first" href="143.html" title="Ticket #143" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript">
+      var auto_preview_timeout=2.0;
+      var form_token="93d81ccf9a7bb1c456462f62";
+    </script>
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script><script type="text/javascript" src="../chrome/common/js/wikitoolbar.js"></script><script type="text/javascript" src="../chrome/common/js/resizer.js"></script><script type="text/javascript" src="../chrome/common/js/auto_preview.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("div.description").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $(".foldable").enableFolding(false, true);
+        var args = {realm: "ticket", id: 1447, escape_newlines: 0}
+        $("#comment").autoPreview("/wiki_render", args, function(textarea, text, rendered) {
+            $("#ticketchange div.comment").html(rendered);
+            if (rendered)
+              $("#ticketchange").show();
+            else if ($("#ticketchange ul.changes").length == 0)
+              $("#ticketchange").hide();
+        });
+        $("#trac-comment-editor textarea").autoPreview("/wiki_render", args,
+                                                       function(textarea, text, rendered) {
+          var comment = $("#trac-comment-editor").next("div.comment");
+          comment.html(rendered);
+          if (rendered)
+            comment.show();
+          else
+            comment.hide();
+        });
+        $("#modify").parent().toggleClass("collapsed");
+        $(".trac-topnav a").click(function() { $("#modify").parent().removeClass("collapsed"); });
+        /* only enable control elements for the currently selected action */
+        var actions = $("#action input[name='action']");
+        function updateActionFields() {
+          actions.each(function () {
+            $(this).siblings().find("*[id]").enable($(this).checked());
+            $(this).siblings().filter("*[id]").enable($(this).checked());
+          });
+        }
+        actions.click(updateActionFields);
+        updateActionFields();
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="../wiki/TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li class="active"><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="1393.html" title="Ticket #1393">Previous Ticket</a></span></li><li><a href="../query%3Fstatus=assigned&amp;status=new&amp;status=accepted&amp;status=reopened&amp;milestone=ckan-backlog&amp;group=status&amp;order=time.html">Back to Query</a></li><li class="last"><span><a class="next" href="1489.html" title="Ticket #1489">Next Ticket</a> &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="ticket">
+      <h1 id="trac-ticket-title">
+          <a href="1447.html">Ticket #1447</a>
+          <span class="status">(assigned defect)</span>
+      </h1>
+      <div id="ticket">
+  <div class="date">
+    <p>Opened <a class="timeline" href="../timeline%3Ffrom=2011-11-07T11:54:03Z&amp;precision=second.html" title="2011-11-07T11:54:03Z in Timeline">2 years</a> ago</p>
+    <p>Last modified <a class="timeline" href="../timeline%3Ffrom=2012-06-26T16:15:30Z&amp;precision=second.html" title="2012-06-26T16:15:30Z in Timeline">22 months</a> ago</p>
+  </div>
+  <h2 class="summary searchable">disk space leakage</h2>
+  <table class="properties">
+    <tr>
+      <th id="h_reporter">Reported by:</th>
+      <td headers="h_reporter" class="searchable">
+        <a href="../query%3Fstatus=!closed&amp;reporter=dread.html">dread</a>
+      </td>
+      <th id="h_owner">Owned by:</th>
+      <td headers="h_owner">
+        <a href="../query%3Fstatus=!closed&amp;owner=kindly.html">kindly</a>
+      </td>
+    </tr>
+    <tr>
+        <th id="h_priority">
+          Priority:
+        </th>
+        <td headers="h_priority">
+              <a href="../query%3Fstatus=!closed&amp;priority=major.html">major</a>
+        </td>
+        <th id="h_milestone">
+          Milestone:
+        </th>
+        <td headers="h_milestone">
+              <a class="milestone" href="../milestone/ckan-backlog.html">ckan-backlog</a>
+        </td>
+    </tr><tr>
+        <th id="h_component">
+          Component:
+        </th>
+        <td headers="h_component">
+              <a href="../query%3Fstatus=!closed&amp;component=ckan.html">ckan</a>
+        </td>
+        <th id="h_keywords">
+          Keywords:
+        </th>
+        <td headers="h_keywords" class="searchable">
+        </td>
+    </tr><tr>
+        <th id="h_cc">
+          Cc:
+        </th>
+        <td headers="h_cc" class="searchable">
+              nils.toedtmann@…, <a href="../query%3Fstatus=!closed&amp;cc=~pudo.html">pudo</a>
+        </td>
+        <th id="h_repo">
+          Repository:
+        </th>
+        <td headers="h_repo">
+              <a href="../query%3Fstatus=!closed&amp;repo=ckan.html">ckan</a>
+        </td>
+    </tr><tr>
+        <th id="h_theme">
+          Theme:
+        </th>
+        <td headers="h_theme">
+              <a href="../query%3Fstatus=!closed&amp;theme=none.html">none</a>
+        </td>
+        <th>
+        </th>
+        <td>
+        </td>
+    </tr>
+  </table>
+  <div class="description">
+    <h3 id="comment:description">
+      Description
+    </h3>
+    <div class="searchable">
+      <p>
+Periodically we see some CKAN servers fall over because they run out of disk space. We need to find out if there is a common cause and fix it.
+</p>
+<p>
+One problem in the past has been file handles running out when creating lots of tiny files in the data directory.
+</p>
+<p>
+Another problem has been several enourmous backups being created every day - pdeu on eu25.
+</p>
+
+    </div>
+  </div>
+</div>
+          
+
+        <div>
+          <h2 class="foldable">Change History</h2>
+          <div id="changelog">
+              <div class="change" id="trac-change-1">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:1" class="cnum">
+      <a href="1447.html#comment:1">comment:1</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-11-07T16:49:43Z&amp;precision=second.html" title="2011-11-07T16:49:43Z in Timeline">2 years</a> ago by nils.toedtmann
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Cc</strong>
+        <em>nils.toedtmann@…</em> added
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-2">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:2" class="cnum">
+      <a href="1447.html#comment:2">comment:2</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-11-25T11:31:30Z&amp;precision=second.html" title="2011-11-25T11:31:30Z in Timeline">2 years</a> ago by dread
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+This appears to have happened again today on test.ckan.net and someone has sorted it.
+</p>
+<p>
+The problem is visible on munin as inodes running out. 
+</p>
+<ul><li>eu25 seems ready to fall over in about a week: <a class="ext-link" href="http://munin.okfn.org/okfn.org/eu25.okfn.org-df_inode.html"><span class="icon">​</span>http://munin.okfn.org/okfn.org/eu25.okfn.org-df_inode.html</a>
+</li><li>thedatahub.org on s055 (and other fry instances) seem to have dynamically adjusted inode table size (by the kernel) so is less of a problem
+</li></ul>
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-3">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:3" class="cnum">
+      <a href="1447.html#comment:3">comment:3</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-11-30T10:27:53Z&amp;precision=second.html" title="2011-11-30T10:27:53Z in Timeline">2 years</a> ago by dread
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+As predicted, this happened again today. From the following analysis it confirms that the problem is the cache growing and growing.
+</p>
+<p>
+Disk usage in megabytes: 
+</p>
+<pre class="wiki">okfn@s025:~/var/srvc/publicdata.eu$ du -s -m /*
+7	/bin
+22	/boot
+1	/dev
+10	/etc
+4157	/home
+0	/initrd.img
+0	/initrd.img.old
+114	/lib
+1	/lost+found
+1	/media
+1	/mnt
+1	/opt
+0	/proc
+1	/root
+7	/sbin
+1	/selinux
+1	/srv
+0	/sys
+1	/tmp
+421	/usr
+443	/var
+0	/vmlinuz
+0	/vmlinuz.old
+</pre><pre class="wiki">okfn@s025:~/var/srvc/publicdata.eu$ du -s -m /home/okfn/var/srvc/publicdata.eu/*2173	/home/okfn/var/srvc/publicdata.eu/backup
+1	/home/okfn/var/srvc/publicdata.eu/backup_RENAMED_TO_AVOID_MAYHEM.sh
+1	/home/okfn/var/srvc/publicdata.eu/common.sh
+1893	/home/okfn/var/srvc/publicdata.eu/data
+1	/home/okfn/var/srvc/publicdata.eu/fetch.sh
+1	/home/okfn/var/srvc/publicdata.eu/gather.sh
+1	/home/okfn/var/srvc/publicdata.eu/pip-requirements.txt
+1	/home/okfn/var/srvc/publicdata.eu/publicdata.eu.ini
+86	/home/okfn/var/srvc/publicdata.eu/pyenv
+1	/home/okfn/var/srvc/publicdata.eu/run.sh
+1	/home/okfn/var/srvc/publicdata.eu/sstore
+0	/home/okfn/var/srvc/publicdata.eu/who.ini
+</pre><pre class="wiki">
+okfn@s025:~/var/srvc/publicdata.eu$ ls -l /home/okfn/var/srvc/publicdata.eu/backup
+total 2224588
+-rw-r--r-- 1 okfn okfn 343199744 2011-06-14 20:50 db-20110614-2050.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 20:51 db-20110614-2051.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 20:52 db-20110614-2052.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 20:53 db-20110614-2053.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 20:54 db-20110614-2054.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 20:55 db-20110614-2055.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 20:56 db-20110614-2056.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 20:57 db-20110614-2057.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 20:58 db-20110614-2058.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 20:59 db-20110614-2059.sql
+-rw-r--r-- 1 okfn okfn   1036288 2011-06-14 22:00 db-20110614-2200.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:01 db-20110614-2201.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:02 db-20110614-2202.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:03 db-20110614-2203.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:04 db-20110614-2204.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:05 db-20110614-2205.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:06 db-20110614-2206.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:07 db-20110614-2207.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:08 db-20110614-2208.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:09 db-20110614-2209.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:10 db-20110614-2210.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:11 db-20110614-2211.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:12 db-20110614-2212.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:13 db-20110614-2213.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:14 db-20110614-2214.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:15 db-20110614-2215.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:16 db-20110614-2216.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:17 db-20110614-2217.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:18 db-20110614-2218.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:19 db-20110614-2219.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:20 db-20110614-2220.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:21 db-20110614-2221.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:22 db-20110614-2222.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:23 db-20110614-2223.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:24 db-20110614-2224.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:25 db-20110614-2225.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:26 db-20110614-2226.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:27 db-20110614-2227.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:28 db-20110614-2228.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:29 db-20110614-2229.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:30 db-20110614-2230.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:31 db-20110614-2231.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:32 db-20110614-2232.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:33 db-20110614-2233.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:34 db-20110614-2234.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:35 db-20110614-2235.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:36 db-20110614-2236.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:37 db-20110614-2237.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:38 db-20110614-2238.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:39 db-20110614-2239.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:40 db-20110614-2240.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:41 db-20110614-2241.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:42 db-20110614-2242.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:43 db-20110614-2243.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:44 db-20110614-2244.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:45 db-20110614-2245.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:46 db-20110614-2246.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:47 db-20110614-2247.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:48 db-20110614-2248.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:49 db-20110614-2249.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:50 db-20110614-2250.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:51 db-20110614-2251.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:52 db-20110614-2252.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:53 db-20110614-2253.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:54 db-20110614-2254.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:55 db-20110614-2255.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:56 db-20110614-2256.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:57 db-20110614-2257.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:58 db-20110614-2258.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-14 22:59 db-20110614-2259.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:00 db-20110615-0000.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:01 db-20110615-0001.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:02 db-20110615-0002.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:03 db-20110615-0003.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:04 db-20110615-0004.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:05 db-20110615-0005.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:06 db-20110615-0006.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:07 db-20110615-0007.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:08 db-20110615-0008.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:09 db-20110615-0009.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:10 db-20110615-0010.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:11 db-20110615-0011.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:12 db-20110615-0012.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:13 db-20110615-0013.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:14 db-20110615-0014.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:15 db-20110615-0015.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:16 db-20110615-0016.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:17 db-20110615-0017.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:18 db-20110615-0018.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:19 db-20110615-0019.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:20 db-20110615-0020.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:21 db-20110615-0021.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:22 db-20110615-0022.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:23 db-20110615-0023.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:24 db-20110615-0024.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:25 db-20110615-0025.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:26 db-20110615-0026.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:27 db-20110615-0027.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:28 db-20110615-0028.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:29 db-20110615-0029.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:30 db-20110615-0030.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:31 db-20110615-0031.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:32 db-20110615-0032.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:33 db-20110615-0033.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:34 db-20110615-0034.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:35 db-20110615-0035.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:36 db-20110615-0036.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:37 db-20110615-0037.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:38 db-20110615-0038.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:39 db-20110615-0039.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:40 db-20110615-0040.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:41 db-20110615-0041.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:42 db-20110615-0042.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:43 db-20110615-0043.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:44 db-20110615-0044.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:45 db-20110615-0045.sql
+-rw-r--r-- 1 okfn okfn         0 2011-06-15 00:46 db-20110615-0046.sql
+-rw-r--r-- 1 okfn okfn 483144447 2011-06-15 10:00 db-20110615-1000.sql
+-rw-r--r-- 1 okfn okfn 482136064 2011-06-15 10:07 db-20110615-1007.sql
+-rw-r--r-- 1 okfn okfn 483144447 2011-06-15 10:50 db-20110615-1050.sql
+-rw-r--r-- 1 okfn okfn 483053568 2011-06-15 10:51 db-20110615-1051.sql
+</pre><pre class="wiki">
+okfn@s025:~/var/srvc/publicdata.eu$ du -s -m /home/okfn/var/srvc/publicdata.eu/data/sessions/container_file/*
+117	/home/okfn/var/srvc/publicdata.eu/data/sessions/container_file/0
+116	/home/okfn/var/srvc/publicdata.eu/data/sessions/container_file/1
+117	/home/okfn/var/srvc/publicdata.eu/data/sessions/container_file/2
+116	/home/okfn/var/srvc/publicdata.eu/data/sessions/container_file/3
+116	/home/okfn/var/srvc/publicdata.eu/data/sessions/container_file/4
+116	/home/okfn/var/srvc/publicdata.eu/data/sessions/container_file/5
+116	/home/okfn/var/srvc/publicdata.eu/data/sessions/container_file/6
+117	/home/okfn/var/srvc/publicdata.eu/data/sessions/container_file/7
+116	/home/okfn/var/srvc/publicdata.eu/data/sessions/container_file/8
+117	/home/okfn/var/srvc/publicdata.eu/data/sessions/container_file/9
+117	/home/okfn/var/srvc/publicdata.eu/data/sessions/container_file/a
+116	/home/okfn/var/srvc/publicdata.eu/data/sessions/container_file/b
+116	/home/okfn/var/srvc/publicdata.eu/data/sessions/container_file/c
+116	/home/okfn/var/srvc/publicdata.eu/data/sessions/container_file/d
+117	/home/okfn/var/srvc/publicdata.eu/data/sessions/container_file/e
+116	/home/okfn/var/srvc/publicdata.eu/data/sessions/container_file/f
+</pre>
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-4">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:4" class="cnum">
+      <a href="1447.html#comment:4">comment:4</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2011-12-20T09:45:24Z&amp;precision=second.html" title="2011-12-20T09:45:24Z in Timeline">2 years</a> ago by dread
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+Once again eu25 ran out of space again today.
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-5">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:5" class="cnum">
+      <a href="1447.html#comment:5">comment:5</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-01-11T10:58:15Z&amp;precision=second.html" title="2012-01-11T10:58:15Z in Timeline">2 years</a> ago by dread
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+eu25 ran out of space again this weekend and eu8 (at/it/us_co) today.
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-6">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:6" class="cnum">
+      <a href="1447.html#comment:6">comment:6</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-01-11T15:49:47Z&amp;precision=second.html" title="2012-01-11T15:49:47Z in Timeline">2 years</a> ago by nils.toedtmann
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+For time being, i created a cron script <a class="ext-link" href="https://bitbucket.org/okfn/sysadmin/src/default/etc/cron/remove_old_files"><span class="icon">​</span>remove_old_files</a>. 
+</p>
+<p>
+You could just copy it to /etc/cron.daily/, but i recommend to not run it as root: if it's misconfigured, it could wipe the system! 
+</p>
+<p>
+So you better copy it to /home/okfn/sbin/ (not /home/okfn/bin/ which often is the sysadmin HG repo), and add it to some unprivileged user's crontab. In most cases, the leftover files are owned by user "www-data", so
+</p>
+<pre class="wiki">$ sudo crontab -e -u www-data
+</pre><p>
+and then add something like
+</p>
+<pre class="wiki">37 4 * * *  /home/okfn/sbin/remove_old_files
+</pre><p>
+Don't forget to edit the script remove_old_files itself and list the directories you want to be cleaned up.
+</p>
+<p>
+This is already done on s008/eu8 and s019/eu19. dread, do you want to do this for s025/eu25 and see how this goes?
+</p>
+<hr />
+<p>
+Todo nils: verify tomorrow on s019 that it worked properly, e.g. this should show only a few files:
+</p>
+<pre class="wiki">find /var/lib/ckan/nederland/data/sessions/ -type f -amin +$((7*24*60)) -ls
+</pre>
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-7">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:7" class="cnum">
+      <a href="1447.html#comment:7">comment:7</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-02-24T11:23:56Z&amp;precision=second.html" title="2012-02-24T11:23:56Z in Timeline">2 years</a> ago by nils.toedtmann
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+I had forgotten to check s019 how well my cleanup script is working (and now s019 is gone), but at least it didn't destroy it :-)
+</p>
+<p>
+You might want to give it a try on s025/PDEU. (Tell me if you want me to do that).
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-8">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:8" class="cnum">
+      <a href="1447.html#comment:8">comment:8</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-02-24T11:26:48Z&amp;precision=second.html" title="2012-02-24T11:26:48Z in Timeline">2 years</a> ago by dread
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+Yes please Nils!
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-9">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:9" class="cnum">
+      <a href="1447.html#comment:9">comment:9</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-02-24T13:21:02Z&amp;precision=second.html" title="2012-02-24T13:21:02Z in Timeline">2 years</a> ago by nils.toedtmann
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Cc</strong>
+        <em>pudo</em> added
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+OK i fixed a bug in my script and refactored it so that it can now be dropped into /etc/cron.daily/ while still deleting as unprivileged user.
+</p>
+<p>
+It is now running on s025, removing everything older than 7 days. Please verify in 9 days or so that it's working.
+</p>
+<p>
+Consider to add <a class="ext-link" href="https://bitbucket.org/okfn/sysadmin/src/default/etc/cron/remove_old_files"><span class="icon">​</span>this cron job</a> to the ckan deb package e.g. as "/etc/cron.daily/ckan-cleanup"
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-10">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:10" class="cnum">
+      <a href="1447.html#comment:10">comment:10</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-03-23T13:53:10Z&amp;precision=second.html" title="2012-03-23T13:53:10Z in Timeline">2 years</a> ago by nils.toedtmann
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Status</strong>
+        changed from <em>new</em> to <em>closed</em>
+    </li><li>
+      <strong>Resolution</strong>
+        set to <em>fixed</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+Just checked s025 (which is depricated now), looks like my script is working fine - nothing older than a week in /home/okfn/var/srvc/publicdata.eu/data/sessions/.
+</p>
+<p>
+We should activate this script on other hosts as well, e.g. so55/thedatahub.
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-11">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:11" class="cnum">
+      <a href="1447.html#comment:11">comment:11</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-03-23T13:55:13Z&amp;precision=second.html" title="2012-03-23T13:55:13Z in Timeline">2 years</a> ago by nils.toedtmann
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+Just to add: the remove_old_files script is only a workaround, not a fix. CKAN should clean up after itself. Feel free to re-open this ticket for a proper solution ;-)
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-12">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:12" class="cnum">
+      <a href="1447.html#comment:12">comment:12</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-03-23T14:05:02Z&amp;precision=second.html" title="2012-03-23T14:05:02Z in Timeline">2 years</a> ago by rgrp
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Status</strong>
+        changed from <em>closed</em> to <em>reopened</em>
+    </li><li>
+      <strong>Resolution</strong>
+        <em>fixed</em> deleted
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-13">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:13" class="cnum">
+      <a href="1447.html#comment:13">comment:13</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-03-23T14:05:44Z&amp;precision=second.html" title="2012-03-23T14:05:44Z in Timeline">2 years</a> ago by rgrp
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Owner</strong>
+        set to <em>kindly</em>
+    </li><li>
+      <strong>Status</strong>
+        changed from <em>reopened</em> to <em>assigned</em>
+    </li><li>
+      <strong>Milestone</strong>
+        set to <em>ckan-v1.7</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      <p>
+@kindly: hope ok to assign to you (maybe just for review and thought on who would be best placed to look at ...)
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-14">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:14" class="cnum">
+      <a href="1447.html#comment:14">comment:14</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-03-23T16:10:29Z&amp;precision=second.html" title="2012-03-23T16:10:29Z in Timeline">2 years</a> ago by nils.toedtmann
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+Ticket <a class="ext-link" href="http://trac.okfn.org/ticket/1222"><span class="icon">​</span>http://trac.okfn.org/ticket/1222</a> tracks the effort to push the clean-up script onto CKAN hosts.
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-15">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:15" class="cnum">
+      <a href="1447.html#comment:15">comment:15</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-05-28T10:55:04Z&amp;precision=second.html" title="2012-05-28T10:55:04Z in Timeline">2 years</a> ago by kindly
+                </h3>
+                
+  <ul class="changes">
+    <li>
+      <strong>Milestone</strong>
+        changed from <em>ckan-v1.7</em> to <em>ckan-backlog</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+      
+      
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-16">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:16" class="cnum">
+      <a href="1447.html#comment:16">comment:16</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-06-26T15:58:03Z&amp;precision=second.html" title="2012-06-26T15:58:03Z in Timeline">22 months</a> ago by nils.toedtmann
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+This is becoming painful for the sysadmins. Please fix.
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-17">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:17" class="cnum">
+      <a href="1447.html#comment:17">comment:17</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="../timeline%3Ffrom=2012-06-26T16:15:30Z&amp;precision=second.html" title="2012-06-26T16:15:30Z in Timeline">22 months</a> ago by dread
+                </h3>
+                
+    <div class="comment searchable">
+      
+      <p>
+BTW on DGU I have set it up to use memcached for these sessions (v. easy) and I think it solves the problem.
+</p>
+
+    </div>
+
+              </div>
+          </div>
+        </div>
+      <div id="help"><strong>Note:</strong> See
+        <a href="../wiki/TracTickets.html">TracTickets</a> for help on using
+        tickets.</div>
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="first">
+          <a rel="nofollow" href="1447%3Fformat=csv" class="csv">Comma-delimited Text</a>
+        </li><li>
+          <a rel="nofollow" href="1447%3Fformat=tab" class="tab">Tab-delimited Text</a>
+        </li><li class="last">
+          <a rel="nofollow" href="1447%3Fformat=rss" class="rss">RSS Feed</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

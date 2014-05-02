@@ -1,0 +1,14 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1396	Improvements to user page UX - 1d	rgrp	rgrp	"Super ticket: #1506
+
+  * Show member since
+  * Display email (in obfuscated form)
+  * List all owned datasets (in standard manner)
+    * Will need change to logic layer to show datasets on user dict (this is useful for the API as well ...)
+  * (Re)move list of changes
+    * Should have activity (once activity available)
+
+WONTFIX:
+
+  * ?? Allow users to provide a home page, organization (requires migration)
+"	enhancement	closed	critical	ckan-sprint-2012-02-06	ckan	fixed	ux, 1d [a:1d]		ckan	none

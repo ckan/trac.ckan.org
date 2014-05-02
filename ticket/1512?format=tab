@@ -1,0 +1,7 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1512	Modifying user name makes you semi-log-out	rgrp	ross	"If you modify your user name, it looks like you are logged out, but you are actually logged in and therefore can't login. (Reported by Pablo)
+
+As a work around, you need to logout and log back in. 
+
+= implementation = 
+* We should force this by auto-logging you out (DR: maybe!)"	defect	closed	minor	ckan-v1.8	ckan	fixed			ckan	none

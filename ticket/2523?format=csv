@@ -1,0 +1,7 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2523,New package metadata form needs creating,toby,toby,"http://localhost:5000/dataset/new_metadata/dataset
+
+Controller : package
+Action : new_metadata
+
+template package/snippets/package_metadata_form.html",enhancement,closed,major,demo phase 1,ckan,fixed,demo-theme,,ckan,none

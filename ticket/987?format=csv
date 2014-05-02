@@ -1,0 +1,23 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+987,Common harvesting framework,pudo,pudo,"We are now harvesting metadata from other sources in various places around CKAN. Such harvesting can include: 
+
+ * CSW/WFS for INSPIRE/UKLII (yields CKAN packages)
+ * Catalogue scraping for LOD2 experiments (yields RDF graphs)
+ * Atom/DCat for LOD2 production (yields RDF graphs) 
+ * OAI-PMH for http://datadryad.org/ and other dspace (yields CKAN packages)
+
+We should aim to consolidate the harvesting clients into a common system that is easy to extend when needed and can be re-used in different scenarios. 
+
+In general, such a system would have the following stages: 
+
+ * Source selection: find what to download/scrape/harvest/parse
+ * Index retrieval (i.e. package index) 
+ * Item retrieval (i.e. package entity)
+ * (Optional: Serialization) 
+ * Normalisation 
+ * Loading/Merging into CKAN
+
+Exisiting harvesters are at: 
+
+ * CSW: https://bitbucket.org/okfn/ckanext-csw/src/
+ * Scraper+CKAN: https://bitbucket.org/pudo/dcat-tools/src/d5d96b06ec9a/dcat/crawl/",defect,closed,major,,lod2,duplicate,,,ckan,none

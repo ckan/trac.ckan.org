@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2906: Wrong flags in language dropdown</title>
+    <link>http://localhost/ticket/2906</link>
+    <description>&lt;p&gt;
+The flags in the dropdown on details pages are not right.
+&lt;/p&gt;
+&lt;p&gt;
+You can see the error on &lt;a class="ext-link" href="http://s031.okserver.org:2375/dataset/malawi-aid-projects/resource/b717c20e-2006-4ad4-82d2-59b57ebc1ab0"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://s031.okserver.org:2375/dataset/malawi-aid-projects/resource/b717c20e-2006-4ad4-82d2-59b57ebc1ab0&lt;/a&gt;.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2906</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>dominik</dc:creator>
+
+      <pubDate>Wed, 05 Sep 2012 16:06:12 GMT</pubDate>
+      <title>attachment set</title>
+      <link>http://localhost/ticket/2906</link>
+      <guid isPermaLink="false">http://localhost/ticket/2906</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;attachment&lt;/strong&gt;
+                set to &lt;em&gt;Screen Shot 2012-09-05 at 16.47.21 .PNG&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+Preview of error
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dominik</dc:creator>
+
+      <pubDate>Wed, 05 Sep 2012 16:07:10 GMT</pubDate>
+      <title>description changed</title>
+      <link>http://localhost/ticket/2906#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/2906#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;
+              modified (&lt;a href="/ticket/2906?action=diff&amp;amp;version=1"&gt;diff&lt;/a&gt;)
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>shevski</dc:creator>
+
+      <pubDate>Wed, 05 Sep 2012 16:09:40 GMT</pubDate>
+      <title>keywords changed</title>
+      <link>http://localhost/ticket/2906#comment:2</link>
+      <guid isPermaLink="false">http://localhost/ticket/2906#comment:2</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;keywords&lt;/strong&gt;
+              &lt;em&gt;demo-theme&lt;/em&gt; added; &lt;em&gt;s031&lt;/em&gt; removed
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>dominik</dc:creator>
+
+      <pubDate>Wed, 05 Sep 2012 16:20:41 GMT</pubDate>
+      <title>milestone changed</title>
+      <link>http://localhost/ticket/2906#comment:3</link>
+      <guid isPermaLink="false">http://localhost/ticket/2906#comment:3</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                changed from &lt;em&gt;ckan 2.0&lt;/em&gt; to &lt;em&gt;demo phase 5&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item><item>
+      
+        <dc:creator>shevski</dc:creator>
+
+      <pubDate>Wed, 05 Sep 2012 16:34:49 GMT</pubDate>
+      <title></title>
+      <link>http://localhost/ticket/2906#comment:4</link>
+      <guid isPermaLink="false">http://localhost/ticket/2906#comment:4</guid>
+      <description>
+        &lt;p&gt;
+fixed by removing custom css from the stylesheet, but should look into why it happened
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

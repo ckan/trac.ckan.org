@@ -1,0 +1,19 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+960	Support non-ascii character in internal error messages	rgrp	pudo	"Just saw an error like the following which looks like it is to do with having a user object with non-ascii characters in it. Either get rid of 'cast' to str type here or do it in a unicode aware way.
+
+Should do this not just here but everywhere we can find in the code base.
+
+{{{
+Module ckan.controllers.package:302 in edit
+<<          am_authz = self.authorizer.am_authorized(c, model.Action.EDIT, pkg)
+               if not am_authz:
+                   abort(401, str(gettext('User %r not authorized to edit %s') % (c.user, id)))
+       
+               auth_for_change_state = self.authorizer.am_authorized(c, model.Action.CHANGE_STATE, pkg)
+>>  abort(401, str(gettext('User %r not authorized to edit %s') % (c.user, id)))
+UnicodeDecodeError: 'ascii' codec can't decode byte 0xc3 in position 1: ordinal not in range(128)
+}}}
+
+== Estimate ==
+
+Cost: 1h"	defect	closed	critical	ckan-v1.4-sprint-1	ckan	fixed				

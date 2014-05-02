@@ -1,0 +1,13 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1311,Modal user register and login form,rgrp,rgrp,"Subticket of: #1294
+
+Rather than having to visit a dedicated page it would be good if registration and login could be done from a modal form (separate or combined ...).
+
+== Why ==
+
+ * It could be used from dataset creation page in situations where user needs to be registered / logged in to create a dataset (so we could allow someone to start creating a dataset and only get them to login at the end ...)
+ * It allows for quicker and easier logging in
+
+== Implementation ==
+
+ * See Friedrich's work on the datahub",enhancement,new,major,ckan-backlog,ckan,,,,ckan,none

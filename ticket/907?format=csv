@@ -1,0 +1,13 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+907,Data previews: preview package resource data in the WUI,rgrp,,"As a user I want to preview a dataset ('resource') before downloading it.
+
+== Implementation ==
+
+This will be implemented as an [wiki:Extensions Extension]
+
+NB: This ticket requires a way to get data out of a remote url (the dataset). We do '''not want to put this data load/streaming into ckan core''' due to a) complexity b) load problems (do not want to take ckan out by accidentally pulling in a 1GB file)
+
+  1. Need a 'data proxy' - see ticket:698 and ticket:888
+  2. Preview using javascript in WUI - do this in an extension http://bitbucket.org/okfn/ckanext-dataapi
+
+",enhancement,closed,major,ckan-v1.3-sprint-3,ckan,fixed,,,,

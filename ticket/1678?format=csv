@@ -1,0 +1,3 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1678,Make synchronous search the default behaviour,amercader,amercader,"Right now you need to explicitly load the synchronous_search plugin in your ini file, when this is probably the behaviour that all users expect by default.
+We could keep a config flag to deactivate it, but synchronous search should be the default behaviour.",enhancement,closed,awaiting merge,ckan-v1.8,ckan,fixed,search,johnglover,ckan,none

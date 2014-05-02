@@ -1,0 +1,6 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+430	Upgrade CKAN to Pylons 1.0	pudo	thejimmyg	"Pylons 1.0 has been out for a while and appears to be running stable on a few production sites. It also introduces a few new features, among them the ability to specifiy controllers using the entrypoint mechanism. 
+
+http://bitbucket.org/pudo/ckanextdeliverance/src/tip/ckanext/deliverance/pylonspatch.py
+
+This might be a bit ugly since the default behaviour of some pylons objects, such as tmpl_context, app_globals and redirect has changed. "	task	closed	awaiting triage		ckan	wontfix				

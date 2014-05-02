@@ -1,0 +1,4 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2513	Dataproxy should not default to utf8	ross		"Unless explicitly told by the source web server the dataproxy should not assume that the content it has can be encoded as UTF-8.  Even though the chars from 128 - 255 overlap an attempt to decode some byte array as utf8 will fail whenever a latin1 char whose bitpattern has the MSB set.
+
+This will mean that the UTF8Recoder can be more rigid in its acceptance of data, Postel aside."	enhancement	assigned	awaiting triage	ckan-backlog	ckan				ckan	none

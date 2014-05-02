@@ -1,0 +1,323 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+    <html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      TracAdmin (diff) – CKAN
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="../search.html" />
+        <link rel="help" href="TracGuide.html" />
+        <link rel="up" href="TracAdmin%3Faction=history.html" title="Page history" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/wiki.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/diff.css" type="text/css" />
+        <link rel="prev" href="TracAdmin%3Faction=diff&amp;version=3.html" title="Version 3" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search CKAN" />
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/messages/en_US.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/diff.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="../chrome/common/css/diff.css" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://ckan.org/"><img src="http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png" alt="CKAN Trac" height="70" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="../login.html">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="TracGuide.html">Help/Guide</a></li><li><a href="../about.html">About Trac</a></li><li class="last"><a href="../register.html">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last active"><a href="../wiki.1.html">Wiki</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="TracAdmin%3Faction=diff&amp;version=3.html" title="Version 3">Previous Change</a></span></li><li><a href="TracAdmin%3Faction=history.html" title="Page history">Wiki History</a></li><li class="last"><span class="missing">Next Change &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="wiki">
+      <h1>
+        Changes between
+          <a href="TracAdmin%3Fversion=3.html">Version 3</a> and
+          <a href="TracAdmin%3Fversion=4.html">Version 4</a> of
+          <a href="TracAdmin%3Fversion=4.html">TracAdmin</a>
+      </h1>
+      <form method="post" id="prefs" action="TracAdmin%3Fversion=4.html"><div><input type="hidden" name="__FORM_TOKEN" value="93d81ccf9a7bb1c456462f62" /></div>
+        <div>
+          <input type="hidden" name="action" value="diff" />
+          <input type="hidden" name="version" value="4" />
+          <input type="hidden" name="old_version" value="3" />
+          
+  <label for="style">View differences</label>
+  <select id="style" name="style">
+    <option selected="selected" value="inline">inline</option>
+    <option value="sidebyside">side by side</option>
+  </select>
+  <div class="field">
+    <label><input type="radio" name="contextall" value="0" checked="checked" />
+             Show</label>
+      <label><input type="text" name="contextlines" id="contextlines" size="2" maxlength="3" value="2" />
+             lines around each change</label><br />
+    <label><input type="radio" name="contextall" value="1" />
+           Show the changes in full context</label>
+  </div>
+  <fieldset id="ignore">
+    <legend>Ignore:</legend>
+    <div class="field">
+      <input type="checkbox" id="ignoreblanklines" name="ignoreblanklines" />
+      <label for="ignoreblanklines">Blank lines</label>
+    </div>
+    <div class="field">
+      <input type="checkbox" id="ignorecase" name="ignorecase" />
+      <label for="ignorecase">Case changes</label>
+    </div>
+    <div class="field">
+      <input type="checkbox" id="ignorewhitespace" name="ignorewhitespace" />
+      <label for="ignorewhitespace">White space changes</label>
+    </div>
+  </fieldset>
+  <div class="buttons">
+    <input type="submit" name="update" value="Update" />
+  </div>
+
+        </div>
+      </form>
+      <dl id="overview">
+        <dt class="property time">Timestamp:</dt>
+        <dd class="time">
+            05/02/14 01:33:04 (<a class="timeline" href="../timeline%3Ffrom=2014-05-02T01:33:04Z&amp;precision=second.html" title="2014-05-02T01:33:04Z in Timeline">7 minutes</a> ago)
+        </dd>
+        <dt class="property author">Author:</dt>
+        <dd class="author">
+          trac
+        </dd>
+        <dt class="property message">Comment:</dt>
+        <dd class="message">
+          
+          <p>
+--
+</p>
+
+        </dd>
+      </dl>
+      <div class="diff">
+        <div class="legend" id="diff-legend">
+          <h3>Legend:</h3>
+          <dl>
+            <dt class="unmod"></dt><dd>Unmodified</dd>
+            <dt class="add"></dt><dd>Added</dd>
+            <dt class="rem"></dt><dd>Removed</dd>
+            <dt class="mod"></dt><dd>Modified</dd>
+          </dl>
+        </div>
+        <div class="diff">
+  <ul class="entries">
+      <li class="entry">
+        <h2 id="file0">
+          <a href="TracAdmin%3Fversion=4.html">TracAdmin</a>
+        </h2>
+        <table class="trac-diff inline" summary="Differences" cellspacing="0">
+              <colgroup><col class="lineno" /><col class="lineno" /><col class="content" /></colgroup>
+              <thead>
+                <tr>
+                  <th title="Version 3">
+                    <a href="TracAdmin%3Fversion=3.html#L4">
+                      v3</a>
+                  </th>
+                  <th title="Version 4">
+                    <a href="TracAdmin%3Fversion=4.html#L4">
+                      v4</a>
+                  </th>
+                  <td> </td>
+                </tr>
+              </thead>
+            <tbody class="unmod">
+                  <tr>
+                          <th>4</th><th>4</th><td class="l"><span>Trac is distributed with a powerful command-line configuration tool. This tool can be used&nbsp; to configure and customize your Trac-installation to better fit your needs.</span> </td>
+                  </tr><tr>
+                          <th>5</th><th>5</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>6</th><th> </th><td class="l"><span>Some of those operations can also be performed via the ''Admin'' web interface, an updated version of the [<del>http://trac.edgewall.org/wiki/WebAdmin </del>WebAdmin] plugin now integrated within Trac (since version 0.11).</span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>6</th><td class="r"><span>Some of those operations can also be performed via the ''Admin'' web interface, an updated version of the [<ins>trac:</ins>WebAdmin] plugin now integrated within Trac (since version 0.11).</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>7</th><th>7</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>8</th><th>8</th><td class="l"><span>== Usage ==</span> </td>
+                  </tr><tr>
+                          <th>9</th><th>9</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>10</th><th> </th><td class="l"><span>You can get a comprehensive list of the available options, commands and sub-commands by invoking `trac-admin` with the `help` command:.</span> </td>
+                      </tr><tr>
+                        <th>11</th><th> </th><td class="l"><span>{{{</span> </td>
+                      </tr><tr>
+                        <th>12</th><th> </th><td class="l"><span>trac-admin help</span> </td>
+                      </tr><tr>
+                        <th>13</th><th> </th><td class="l"><span>}}}</span> </td>
+                      </tr><tr>
+                        <th>14</th><th> </th><td class="l"><span></span> </td>
+                      </tr><tr>
+                        <th>15</th><th> </th><td class="l"><span>Unless you're executing the `help`, `about` or `version` sub-commands, you'll need to specify the path to the TracEnvironment that you want to administer as the first argument, for example:</span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>10</th><td class="r"><span>For nearly every `trac-admin` command, you'll need to specify the path to the TracEnvironment that you want to administer as the first argument, for example:</span> </td>
+                      </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>16</th><th>11</th><td class="l"><span>{{{</span> </td>
+                  </tr><tr>
+                          <th>17</th><th>12</th><td class="l"><span>trac-admin /path/to/projenv wiki list</span> </td>
+                  </tr><tr>
+                          <th>18</th><th>13</th><td class="l"><span>}}}</span> </td>
+                  </tr>
+            </tbody><tbody class="add">
+                  <tr class="first">
+                          <th> </th><th>14</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>15</th><td class="r"><ins>The only exception is for the `help` command, but even in this case if you omit the environment, you'll only get a very succinct list of commands (`help` and `initenv`), the same list you'd get when invoking `trac-admin` alone.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>16</th><td class="r"><ins>Also, `trac-admin --version` will tell you about the Trac version (e.g. 0.12) corresponding to the program.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>17</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>18</th><td class="r"><ins>If you want to get a comprehensive list of the available commands and sub-commands, you need to specify an existing environment:</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>19</th><td class="r"><ins>{{{</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>20</th><td class="r"><ins>trac-admin /path/to/projenv help</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>21</th><td class="r"><ins>}}}</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>22</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>23</th><td class="r"><ins>Some commands have a more detailed help, which you can access by specifying the command's name as a subcommand for `help`:</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>24</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>25</th><td class="r"><ins>{{{</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>26</th><td class="r"><ins>trac-admin /path/to/projenv help &lt;command&gt;</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>27</th><td class="r"><ins>}}}</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>28</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>29</th><td class="r"><ins>=== `trac-admin &lt;targetdir&gt; initenv` === #initenv</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>30</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>31</th><td class="r"><ins>This subcommand is very important as it's the one used to create a TracEnvironment in the specified `&lt;targetdir&gt;`. That directory must not exist prior to the call.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>32</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>33</th><td class="r"><ins>[[TracAdminHelp(initenv)]]</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>34</th><td class="r"><ins></ins> </td>
+                  </tr><tr>
+                          <th> </th><th>35</th><td class="r"><ins>It supports an extra `--inherit` option, which can be used to specify a global configuration file which can be used share settings between several environments. You can also inherit from a shared configuration afterwards, by setting the `[inherit] file` option in the `conf/trac.ini` file in your newly created environment, but the advantage of specifying the inherited configuration file at environment creation time is that only the options ''not'' already specified in the global configuration file will be written in the created environment's `conf/trac.ini` file.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>36</th><td class="r"><ins>See TracIni#GlobalConfiguration.</ins> </td>
+                  </tr><tr>
+                          <th> </th><th>37</th><td class="r"><ins></ins> </td>
+                  </tr><tr class="last">
+                          <th> </th><th>38</th><td class="r"><ins>Note that in version 0.11 of Trac, `initenv` lost an extra last argument `&lt;templatepath&gt;`, which was used in previous versions to point to the `templates` folder. If you are using the one-liner '`trac-admin /path/to/trac/ initenv &lt;projectname&gt; &lt;db&gt; &lt;repostype&gt; &lt;repospath&gt;`' in the above and getting an error that reads ''''`Wrong number of arguments to initenv: 4`'''', then this is because you're using a `trac-admin` script from an '''older''' version of Trac.</ins> </td>
+                  </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>19</th><th>39</th><td class="l"><span></span> </td>
+                  </tr><tr>
+                          <th>20</th><th>40</th><td class="l"><span>== Interactive Mode ==</span> </td>
+                  </tr>
+            </tbody>
+              <tbody class="skipped">
+                <tr>
+                  <th><a href="TracAdmin%3Fversion=3.html#L38">…</a></th>
+                  <th><a href="TracAdmin%3Fversion=4.html#L58">…</a></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            <tbody class="unmod">
+                  <tr>
+                          <th>38</th><th>58</th><td class="l"><span>== Full Command Reference ==</span> </td>
+                  </tr><tr>
+                          <th>39</th><th>59</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="add">
+                  <tr class="first">
+                          <th> </th><th>60</th><td class="r"><ins>You'll find below the detailed help for all the commands available by default in `trac-admin`. Note that this may not match the list given by `trac-admin &lt;yourenv&gt; help`, as the commands&nbsp; pertaining to components disabled in that environment won't be available and conversely some plugins activated in the environment can add their own commands.</ins> </td>
+                  </tr><tr class="last">
+                          <th> </th><th>61</th><td class="r"><ins></ins> </td>
+                  </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>40</th><th>62</th><td class="l"><span>[[TracAdminHelp()]]</span> </td>
+                  </tr><tr>
+                          <th>41</th><th>63</th><td class="l"><span></span> </td>
+                  </tr>
+            </tbody><tbody class="rem">
+                  <tr class="first">
+                          <th>42</th><th> </th><td class="l"><del>=== Notes ===</del> </td>
+                  </tr><tr>
+                          <th>43</th><th> </th><td class="l"><del></del> </td>
+                  </tr><tr>
+                          <th>44</th><th> </th><td class="l"><del>The `initenv` also supports an extra `--inherit` option, which can be used to specify the `[inherit] file` option at environment creation time so that only the options ''not'' already specified in the global configuration file will be written in the conf/trac.ini file of the newly created environment.</del> </td>
+                  </tr><tr class="last">
+                          <th>45</th><th> </th><td class="l"><del>See TracIni#GlobalConfiguration.</del> </td>
+                  </tr>
+            </tbody><tbody class="unmod">
+                  <tr>
+                          <th>46</th><th>64</th><td class="l"><span>----</span> </td>
+                  </tr>
+            </tbody><tbody class="mod">
+                      <tr class="first">
+                        <th>47</th><th> </th><td class="l"><span>See also: TracGuide, TracBackup, TracPermissions, TracEnvironment, TracIni, <del>TracMigrate</del></span> </td>
+                      </tr>
+                      <tr class="last">
+                        <th> </th><th>65</th><td class="r"><span>See also: TracGuide, TracBackup, TracPermissions, TracEnvironment, TracIni, <ins>[trac:TracMigrate TracMigrate]</ins></span> </td>
+                      </tr>
+            </tbody>
+        </table>
+      </li>
+  </ul>
+</div>
+      </div>
+  </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.3</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

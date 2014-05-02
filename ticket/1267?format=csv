@@ -1,0 +1,81 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1267,Random exception: cannot set the body to a unicode value,dread,dread,"Occasionally see this problem when producing an error page. Here's an example
+{{{
+WebApp Error: <type 'exceptions.TypeError'>: You cannot set the body to a unicode value without a charset
+URL: http://at.ckan.net/authorizationgroup/new
+Module weberror.errormiddleware:162 in __call__
+<<              __traceback_supplement__ = Supplement, self, environ
+                   sr_checker = ResponseStartChecker(start_response)
+                   app_iter = self.application(environ, sr_checker)
+                   return self.make_catching_iter(app_iter, environ, sr_checker)
+               except:
+>>  app_iter = self.application(environ, sr_checker)
+Module beaker.middleware:73 in __call__
+<<                                                     self.cache_manager)
+               environ[self.environ_key] = self.cache_manager
+               return self.app(environ, start_response)
+>>  return self.app(environ, start_response)
+Module beaker.middleware:152 in __call__
+<<                          headers.append(('Set-cookie', cookie))
+                   return start_response(status, headers, exc_info)
+               return self.wrap_app(environ, session_start_response)
+           
+           def _get_session(self):
+>>  return self.wrap_app(environ, session_start_response)
+Module routes.middleware:130 in __call__
+<<                  environ['SCRIPT_NAME'] = environ['SCRIPT_NAME'][:-1]
+               
+               response = self.app(environ, start_response)
+               
+               # Wrapped in try as in rare cases the attribute will be gone already
+>>  response = self.app(environ, start_response)
+Module pylons.wsgiapp:125 in __call__
+<<          
+               controller = self.resolve(environ, start_response)
+               response = self.dispatch(controller, environ, start_response)
+               
+               if 'paste.testing_variables' in environ and hasattr(response,
+>>  response = self.dispatch(controller, environ, start_response)
+Module pylons.wsgiapp:324 in dispatch
+<<          if log_debug:
+                   log.debug(""Calling controller class with WSGI interface"")
+               return controller(environ, start_response)
+           
+           def load_test_env(self, environ):
+>>  return controller(environ, start_response)
+Module ckan.lib.base:117 in __call__
+<<          # available in environ['pylons.routes_dict']    
+               try:
+                   return WSGIController.__call__(self, environ, start_response)
+               finally:
+                   model.Session.remove()
+>>  return WSGIController.__call__(self, environ, start_response)
+Module pylons.controllers.core:284 in __call__
+<<              if log_debug:
+                       log.debug(""Calling Response object to return WSGI data"")
+                   return response(environ, self.start_response)
+               
+               if log_debug:
+>>  return response(environ, self.start_response)
+Module webob.exc:248 in __call__
+<<              return []
+               if not self.body and not self.empty_body:
+                   return self.generate_response(environ, start_response)
+               return Response.__call__(self, environ, start_response)
+>>  return self.generate_response(environ, start_response)
+Module webob.exc:239 in generate_response
+<<              status=self.status,
+                   headerlist=headerlist,
+                   content_type=content_type
+               )
+               return resp(environ, start_response)
+>>  content_type=content_type
+Module webob.response:94 in __init__
+<<                  if charset is None:
+                           raise TypeError(
+                               ""You cannot set the body to a unicode value without a charset"")
+                       body = body.encode(charset)
+                   self._body = body
+>>  ""You cannot set the body to a unicode value without a charset"")
+TypeError: You cannot set the body to a unicode value without a charset
+}}}",defect,closed,minor,,ckan,fixed,,,ckan,none

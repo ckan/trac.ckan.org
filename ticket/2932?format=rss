@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2932: Add docstring to system_info.py</title>
+    <link>http://localhost/ticket/2932</link>
+    <description>&lt;p&gt;
+What is the system_info table for? It looks like a way to override config file settings in the database, perhaps so that admins can use a web interface to change site title etc. Could do with a docstring explaining the intended purpose of the table.
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2932</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+ </channel>
+</rss>

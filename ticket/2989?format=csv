@@ -1,0 +1,4 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+2989,"""Add dataset to organization"" should auto-select the organization",seanh,,"'Add dataset to organization' button, when you get through to the third stage of the new dataset form the organization you came from is not selected.
+
+I don't see any option to choose the group when adding or updating a dataset, but if I add a dataset via the ""Add dataset to group"" button on a group's page, then the dataset seems to get added to that group. (And I can also add/remove existing datasets by editing the group.) I wonder if organizations should work the same way, instead of having an Organization drop-down when creating or updating a dataset. The add dataset page needs to somehow indicate that you're adding a dataset to a certain group or organization though, doesn't currently.",enhancement,new,awaiting triage,ckan 2.0,ckan,,organizations,,ckan,none

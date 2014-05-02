@@ -1,0 +1,8 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1464	Get RabbitMQ runnable with multiple instances	thejimmyg		"The current harvesting implementation can only have one instance per server.
+
+We could either:
+* Accept this
+* Change the RabbitMQ code to support multiple instances
+* Switch the entire harvesting to use Celery
+* Wait for James's redis based live feedback based system"	enhancement	new	awaiting triage	ckan-sprint-2011-11-21	ckan				ckan	none

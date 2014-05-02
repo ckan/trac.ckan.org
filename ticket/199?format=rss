@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #199: Fix failing tests and provide documentation on how to run tests in datapkg</title>
+    <link>http://localhost/ticket/199</link>
+    <description>&lt;p&gt;
+As of 80:099bdc5b07a6 datapkg has 4 test fails and 1 test error.
+&lt;/p&gt;
+&lt;p&gt;
+There is no documentation on how to run them, so I am using 'python setup.py test'.
+&lt;/p&gt;
+&lt;pre class="wiki"&gt;datapkg.tests.test_cli.TestCLI.test_ckan ... FAIL
+datapkg.tests.test_cli.TestCLI.test_walkthrough ... FAIL
+datapkg.tests.test_index.TestDbIndex.test_get ... /Users/james/Documents/virtualenvs/okfn/src/datapkg/datapkg/index.py:97: SADeprecationWarning: Use session.add()
+  self.session.update(pkg)
+FAIL
+datapkg.tests.test_index.TestDbIndex.test_get_when_loaded_as_new_and_init_not_called ... /Users/james/Documents/virtualenvs/okfn/src/datapkg/datapkg/tests/test_index.py:57: SADeprecationWarning: Use session.expunge_all()
+  self.index.session.clear()
+FAIL
+&lt;/pre&gt;</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/199</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>rgrp</dc:creator>
+
+      <pubDate>Wed, 03 Mar 2010 20:47:35 GMT</pubDate>
+      <title>status changed; resolution set</title>
+      <link>http://localhost/ticket/199#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/199#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;status&lt;/strong&gt;
+                changed from &lt;em&gt;new&lt;/em&gt; to &lt;em&gt;closed&lt;/em&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;resolution&lt;/strong&gt;
+                set to &lt;em&gt;fixed&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;p&gt;
+These tests are no longer failing afaict. To run tests you can just use nosetests -- documented in cset:ebdfc89ccd86/datapkg
+&lt;/p&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

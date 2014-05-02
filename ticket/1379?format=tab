@@ -1,0 +1,8 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1379	Markdown conversion of linked references broken	zephod	zephod	"eg. http://thedatahub.org/dataset/us-gov-tarp
+
+[This Paper][my-paper] is very interesting.
+
+[my-paper]: http://somelink.com/paper
+
+Write a test to check this markdown feature works - if not, use external markdown lib rather than webhelpers.markdown. Probably need to add markdown lib to list of requirements."	defect	closed	major	ckan-sprint-2011-11-07	ckan	fixed			ckan	none

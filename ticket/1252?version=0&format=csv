@@ -1,0 +1,7 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1252,Deprecate ckan.net in favour of thedatahub.org,rgrp,rgrp,"Deprecate ckan.net in favour of thedatahub.org
+
+ * Announce
+ * Create thedatahub.org and have it run same data as ckan.net
+ * Announce closing down of ckan.net with 302
+ * Implement 302 permanent",enhancement,new,major,ckan-v1.5,ckan,,,,ckan,none

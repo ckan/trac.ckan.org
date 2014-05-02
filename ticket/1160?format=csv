@@ -1,0 +1,8 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+1160,Havest CSW servers on PDEU,amercader,amercader,"It could be interesting for the publicdata.eu project to add some CSW datasources. Thanks to the INSPIRE directive, there are quite a few national catalogs of geodata that could be worth harvesting.
+Work on this should include:
+* Compose Endpoint List (1d)
+* Harvest on staging system and evaluate which sources have useful material (2d)
+
+First point is being performed in this GDoc:
+https://spreadsheets.google.com/spreadsheet/ccc?key=0Atp3cZFjuIOAdDBVQWRINnlfN1d0b2lleHVEdjBSb2c&authkey=CNu4hsEB&hl=en_US#gid=0",enhancement,closed,major,pdeu-1,pdeu,wontfix,,,ckan,none

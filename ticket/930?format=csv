@@ -1,0 +1,10 @@
+id,summary,reporter,owner,description,type,status,priority,milestone,component,resolution,keywords,cc,repo,theme
+930,call_timing files created for every request,dread,wwaites,"On a production server we produce literally millions of little files saying how long every single request took to process.
+
+They are here:
+{{{
+hmg.ckan.net.2/pylonsdata/call_timing
+}}}
+They were added by ckan/lib/base.py in cset:da438a9085d3.
+
+I don't believe anyone uses these stats.",defect,closed,major,,ckan,fixed,,,,

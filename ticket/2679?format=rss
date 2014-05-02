@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #2679: Change default behaviour of TemplateController.view to 404.</title>
+    <link>http://localhost/ticket/2679</link>
+    <description>&lt;p&gt;
+The current behaviour of &lt;a class="missing wiki"&gt;TemplateController?&lt;/a&gt;.view() (which is the fallback controller should all others fail) is to attempt to render (as a genshi template) the requested file.
+&lt;/p&gt;
+&lt;p&gt;
+Although this may be a feature that some instances want.  In general, it leads to:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;500s when attempting to access a normal template (eg - &lt;a class="ext-link" href="http://datahub.io/importer/preview"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://datahub.io/importer/preview&lt;/a&gt;)
+&lt;/li&gt;&lt;li&gt;A way of inadvertantly serving things you may not want to serve.  (Small risk, as it needs to be renderable as a genshi template).
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+Solution:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Change the controller to 404
+&lt;/li&gt;&lt;li&gt;Ensure there's a way for existing ckan instances to override that behaviour should they need it.
+&lt;/li&gt;&lt;/ul&gt;</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/2679</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+ </channel>
+</rss>

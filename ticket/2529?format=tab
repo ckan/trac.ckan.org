@@ -1,0 +1,14 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+2529	DataHub (or CKAN) widgets	rgrp		"Simple widgets in pure JS. For example:
+
+ * Count of datasets in a group (could generalise to a query but not sure how useful that is ...)
+ * Embeddable list of top X (5) datasets for a given query
+ * Embeddable list of *my* datasets
+
+Either these live at: {site}/widgets and we have some kind of generator (form where I choose my group, or my query).
+
+Or: we have this attached to areas of site where relevant.
+
+Can combine the 2 so that the latter links to the former. Think first will be easier to do and possibly more useful long-term (e.g. can just link people to that page).
+
+Cf. http://okfnlabs.org/ckanjs/"	enhancement	new	awaiting triage	ckan-v1.9	ckan				ckan	none

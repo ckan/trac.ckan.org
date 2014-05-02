@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CKAN: Ticket #1642: Extra link generators generate garbled HTML</title>
+    <link>http://localhost/ticket/1642</link>
+    <description>&lt;p&gt;
+I had a package descriptions with URLs that contain "group:foo". This produces garbled output as the system tries to generate two sets of links: the outer link and an inner link.
+&lt;/p&gt;
+&lt;p&gt;
+Need to fix the parser.
+&lt;/p&gt;
+&lt;p&gt;
+Text:
+&lt;/p&gt;
+&lt;p&gt;
+Webdienst basierende Bereitstellung von Geobasisdaten der Freien und Hansestadt Hamburg. Folgende Geobasisdaten werden als &lt;a class="missing wiki"&gt;WebMapTileService?&lt;/a&gt; (WMT-S) für die Dauer des Wettbewerbs netzbasiert unter der Creative Commons Lizenz zur Verfügung gestellt: Digitale Orthophotos 40 cm Auflösung (Layer: apps4d_DOP40), Digitale Stadtkarte (Layer: apps4d_DISK), Digitale Regionalkarte (Layer: apps4d_DIRK), Digitale Karte 1:5000 (Layer: apps4d_DK5).
+&lt;/p&gt;
+&lt;p&gt;
+Metadateneinträge zu den Daten im PortalU:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;[apps4d_DOP40](&lt;a class="ext-link" href="http://www.portalu.de/trefferanzeige?docuuid=D6082285-6CAC-49C5-B7ED-B5A72BC17DEC&amp;amp;plugid=/kug-group:kug-iplug-udk-db_hh"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://www.portalu.de/trefferanzeige?docuuid=D6082285-6CAC-49C5-B7ED-B5A72BC17DEC&amp;amp;plugid=/kug-group:kug-iplug-udk-db_hh&lt;/a&gt;)
+&lt;/li&gt;&lt;li&gt;[apps4d_DISK](&lt;a class="ext-link" href="http://www.portalu.de/trefferanzeige?docuuid=D2DA3359-3DC9-4CA4-AE9B-7C63D53B220F&amp;amp;plugid=/kug-group:kug-iplug-udk-db_hh"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://www.portalu.de/trefferanzeige?docuuid=D2DA3359-3DC9-4CA4-AE9B-7C63D53B220F&amp;amp;plugid=/kug-group:kug-iplug-udk-db_hh&lt;/a&gt;)
+&lt;/li&gt;&lt;li&gt;[apps4d_DIRK](&lt;a class="ext-link" href="http://www.portalu.de/trefferanzeige?docuuid=B7DDD599-F677-4C80-BED5-F11D82D5D1DD&amp;amp;plugid=/kug-group:kug-iplug-udk-db_hh"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://www.portalu.de/trefferanzeige?docuuid=B7DDD599-F677-4C80-BED5-F11D82D5D1DD&amp;amp;plugid=/kug-group:kug-iplug-udk-db_hh&lt;/a&gt;)
+&lt;/li&gt;&lt;li&gt;[apps4d_DK5](&lt;a class="ext-link" href="http://www.portalu.de/trefferanzeige?docuuid=2AE6D23E-48A5-4D85-BC0A-160737E0C8D2&amp;amp;plugid=/kug-group:kug-iplug-udk-db_hh"&gt;&lt;span class="icon"&gt;​&lt;/span&gt;http://www.portalu.de/trefferanzeige?docuuid=2AE6D23E-48A5-4D85-BC0A-160737E0C8D2&amp;amp;plugid=/kug-group:kug-iplug-udk-db_hh&lt;/a&gt;)
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+One fix is quoting the URLs
+&lt;/p&gt;
+</description>
+    <language>en-us</language>
+    <image>
+      <title>CKAN</title>
+      <url>http://assets.okfn.org/p/ckan/img/ckan_logo_shortname.png</url>
+      <link>http://localhost/ticket/1642</link>
+    </image>
+    <generator>Trac 0.12.3</generator>
+    <item>
+      
+        <dc:creator>seanh</dc:creator>
+
+      <pubDate>Fri, 15 Jun 2012 15:26:07 GMT</pubDate>
+      <title>milestone set</title>
+      <link>http://localhost/ticket/1642#comment:1</link>
+      <guid isPermaLink="false">http://localhost/ticket/1642#comment:1</guid>
+      <description>
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;milestone&lt;/strong&gt;
+                set to &lt;em&gt;ckan-backlog&lt;/em&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      </description>
+      <category>Ticket</category>
+    </item>
+ </channel>
+</rss>

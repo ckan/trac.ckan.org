@@ -1,0 +1,44 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	resolution	keywords	cc	repo	theme
+1397	[super] Resource archiving	rgrp	kindly	"We want to cache/archive data associated to a resource so it is available if the resource url disappears (and in order to support other processing we may wish to do e.g. webstorer ...)
+
+Etherpad: http://ckan.okfnpad.org/queue (most relevant parts inlined here)
+
+== Preliminaries ==
+
+ * Add task_status table to store qa/archiever/webstore information that does not need to be versioned. - #1363 (and #1371 - related logic functions)
+
+== Tasks ==
+
+ 1. Resource change notifications in core - Make an IResourceChange and IResourceUrlChange. [1d] [0.75d] -  #1383
+ 2. ckanext-archiver implements IResourceUrlChange and sends tasks to celery. [0.25d][0.25d] - ???
+ 3. Archiver daemon #891
+   1. implement link-check function and task (point 2 from Archiver.update above) [1d] [0.5d]
+   2. Rewrite archiver to use external storage. (decide how!)[3d][~2d]
+ 5. Write to resource and task status table.[1d][0.75d]
+ 6. Make archived data available in WUI - #892
+
+== Archiver process ==
+
+Archiver:
+
+ 0. A resource is added to CKAN
+ 1. IResourceCreate event generated
+ 2. IF: resource url points to ckan storage or falls within some other set of exclusion conditions then END else continue
+ 3. Generate a Archiver.Update task with resource.id
+
+Archiver.update
+
+ 1. [Archiver.Update checks queue (automated as part of celery)]
+ 2. Open url
+  1. If FAILURE status: update task_status table (could retry if not more than 3 failures so far). Report task failure in celery
+  2. Check headers for content-length and content-type ...
+    * IF: content-length > max_content_length: EXIT (store outcomes on task_status, and update resource with size and content-type and any other info we get?)
+    * ELSE: check content-type.
+      * IF: NOT data stuff (e.g. text/html) then EXIT. (store outcomes and info on resource)
+      * ELSE: archive it (compute md5 hash etc)
+ 3. Archive it: connect to storage system and store it. Bucket: from config, Key: /{timestamp}/{resourceid}/filename.ext
+  * Add cache url to resource and updated date
+  * Update task_status
+  * Add other relevant info to resource such as md5, content-type etc
+
+Link checker: same as Archiver.update up to 2.1"	enhancement	new	awaiting triage	ckan-v1.6	ckan				ckan	none
